@@ -1,0 +1,247 @@
+{
+  "slug": "lainie",
+  "name": "Lainie",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Perihelion",
+  "stats": {
+    "hp": 1859,
+    "atk": 844,
+    "def": 494
+  },
+  "weakness": "Hydro",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Victory Protocol",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 80% ATK to it\n\nIf Simulacrum is present, it will use Perplexed Reflex on the selected target after skill usage",
+      "icon": "assets/images/characters/lainie/skill1-icon.png",
+      "range_image": "assets/images/characters/lainie/skill1-range.png"
+    },
+    {
+      "name": "Simulated Partner",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an empty tile within a 7 tile radius and summons 1 Simulacrum. Applies Bonded Possibility on self and Simulacrum for 1 round (Duration decreases at the end of the current round)\n\nAt the end of the round, decreases Confectance Index by 3 points. If there is insufficient Confectance Index, the Simulacrum disappears. This skill cannot be used when Simulacrum is present",
+      "icon": "assets/images/characters/lainie/skill2-icon.png",
+      "range_image": "assets/images/characters/lainie/skill2-range.png"
+    },
+    {
+      "name": "Precognition Foresight",
+      "tags": [
+        "Passive",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "For each 12 points of initial max HP, increases CRIT by 0.1%, up to a maximum of 30%. Applies Precognition Foresight to all enemies within a 7 tile radius\n\nBefore using an active attack, applies 1 stack of Parapluie's Penetration on the target, and increases Confectance Index by 2 points after the attack. If the target's DEF is lower or equal to 0, increases damage multiplier equivalent to 10% of initial max HP, and additionally increases Confectance Index by 1 point. After using an active attack, no active attacks can be used on the same allied round",
+      "icon": "assets/images/characters/lainie/skill3-icon.png",
+      "range_image": "assets/images/characters/lainie/skill3-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Simulacrum",
+      "description": "Simulated partner created by Lainie that synchronizes actions with Victory Protocol.",
+      "stats": {
+        "hp": "100% of Lainie's initial HP",
+        "atk": "100% of Lainie's initial ATK",
+        "def": "100% of Lainie's initial DEF"
+      },
+      "stability_gauge": "9 points",
+      "movement_speed": "5 tiles",
+      "skills": [
+        {
+          "name": "Perplexed Reflex",
+          "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 80% ATK to it\n\nAfter skill usage, Lainie will use Victory Protocol on the selected target",
+          "icon": "assets/images/characters/lainie/summon1-skill1-icon.png",
+          "range_image": "assets/images/characters/lainie/summon1-skill1-range.png"
+        },
+        {
+          "name": "Precognition Awareness",
+          "description": "For each 12 points of initial max HP, increases CRIT by 0.1%, up to a maximum of 30%. Applies Precognition Awareness to all enemies within a 7 tile radius\n\nBefore using an active attack, applies 1 stack of Parapluie's Penetration on the target. If the target's DEF is lower or equal to 0, increases damage multiplier equivalent to 10% of initial max HP. After using an active attack, no active attacks can be used on the same allied round",
+          "icon": "assets/images/characters/lainie/summon1-passive1-icon.png",
+          "range_image": "assets/images/characters/lainie/summon1-passive1-range.png"
+        }
+      ],
+      "image": "assets/images/characters/lainie/summon1.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Simulated Partner",
+      "level": 2,
+      "effect": "Decreases cooldown by 1 turn and Confectance Index consumption by Simulacrum by 1 point\n\nIncreases the maximum stack of Parapluie's Penetration to 6. Applies 2 stacks of Parapluie's Penetration on all targets within a 3 tile radius of the selected tile, and increases Confectance Index by 3 points"
+    },
+    {
+      "tier": 2,
+      "skill": "Combat Algorithm",
+      "level": 2,
+      "effect": "Enhances the effects of Combat Algorithm and Offense Simulation - increases DEF ignored to 50%, and increases CRIT DMG dealt towards enemies whose DEF is lower or equal to 0 by 10%. Before attacking, applies 1 stack of Parapluie's Penetration on the target"
+    },
+    {
+      "tier": 3,
+      "skill": "Precognition Foresight",
+      "level": 2,
+      "effect": "Enhances the effects of Precognition Foresight and Precognition Awareness - for each 6 points of initial max HP, increases CRIT by 0.1%, up to a maximum of 60%. When attacking enemies whose DEF is lower or equal to 0, increases damage multiplier equivalent to 20% of initial max HP\n\nPrecognition Foresight and Precognition Awareness lowers DEF by 20% instead"
+    },
+    {
+      "tier": 4,
+      "skill": "Simulated Partner",
+      "level": 3,
+      "effect": "When Lainie or Simulacrum deals damage to enemies whose DEF is lower or equal to 0, the other half gains Power of Bonds\n\nEnhances the effects of Bonded Possibility - Increases Stability damage dealt by 6 points"
+    },
+    {
+      "tier": 5,
+      "skill": "Precognition Foresight",
+      "level": 3,
+      "effect": "Enhances the effects of Precognition Foresight and Precognition Awareness - when attacking enemies whose DEF is lower or equal to 0, increases damage multiplier equivalent to 30% of initial max HP\n\nWhen Simulacrum is present, if Lainie receives fatal damage, restores HP equivalent to 100% max HP. This effect can be triggered once per battle. Simulacrum disappears after effect is triggered"
+    },
+    {
+      "tier": 6,
+      "skill": "Combat Algorithm",
+      "level": 3,
+      "effect": "Enhances the effects of Combat Algorithm and Offense Simulation - increases damage multiplier to 160% ATK, increases the minimum damage multiplier of Offense Simulation to 100%, and removes the restriction of being unable to use the skill after skill usage"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +48\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +108\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +56\nDEF +37",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +140",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Neural Bonds",
+      "level": 20,
+      "effect": "When Lainie or Simulacrum receives healing, restores HP equivalent to 20% max HP for the other half. This effect cannot be repeatedly triggered",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/lainie/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Bad Things, Go Away!",
+      "level": 20,
+      "effect": "After Lainie uses Computational Crush or Simulacrum uses Hashrate Overclock, the other half's action knocks the target back by 2 tiles",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/lainie/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Parapluie's Protection",
+      "level": 30,
+      "effect": "At the end of the action, if the distance between Lainie and Simulacrum is larger or equal to 3 tiles, both gains AoE Defense II for 1 turn",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/lainie/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Friend's Return",
+      "level": 30,
+      "effect": "Simulated Partner: When Simulacrum disappears, resets the cooldown of this skill. This can be triggered once per battle",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/lainie/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Sunlight's Warmth",
+      "level": 40,
+      "effect": "When Lainie uses Combat Algorithm or Simulacrum uses Offense Simulation, if the target's DEF is lower or equal to 0, dispels 1 random buff",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/lainie/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - OGAS' Might",
+      "level": 40,
+      "effect": "Increases CRIT DMG dealt towards enemies whose DEF is lower or equal to 0 by 5%",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/lainie/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/lainie/affi.png"
+    },
+    {
+      "name": "Common Key - Complete Liberation",
+      "level": 40,
+      "effect": "ATK +5% / Increases damage dealt towards enemies whose DEF is lower or equal to 0 by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/lainie/common.png"
+    },
+    {
+      "name": "Expansion Key - Algorithmic Stack",
+      "level": 60,
+      "effect": "The effect of Parapluie's Penetration is improved: DEF reduced by an additional 6% per stack.\nWhen Lainie uses her skills Combat Algorithm, Computational Crush, or Simulated Partner, or when Lainie’s Simulacrum uses Offensive Simulation, Hashrate Overclock, or Queenside Castle, for every point of Confectance Index Lainie has the critical damage of Lainie and her Simulacrum is increased by 15%.\nWhile the Simulacrum is alive on the battlefield, Lainie and the Simulacrum have their mobility increased by two tiles of movement.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/lainie/expan.png"
+    },
+    {
+      "name": "Expansion Key tier 2",
+      "level": 60,
+      "effect": "At the end of the Simulacrum's turn, pull all enemy units on the field toward itself by 1 tile and deals 2 points of stability damage.\nAfter Lainie or the Simulacrum actively attacks, if the enemy target has 3 stacks of Parapluie's Penetration, applies Mirror Cache to it. If the enemy target has 6 stacks of Parapluie's Penetration, the final damage accumulated by Mirror Cache is increased to 25% and the damage dealt by Lainie or the Simulacrum's next active attack this turn is increased by 30% and critical damage increased by 30%.\nBefore Lainie or the Simulacrum active attacks, if the enemy target has Mirror Cache, trigger that effect, and the damage multiplier of active attacks are permanently increased by 15%, up to a maximum of 90%.",
+      "materials": "1\n\n\n10000",
+      "image": "assets/images/characters/lainie/expan2.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/lainie/portrait.png",
+    "avatar": "assets/images/characters/lainie/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

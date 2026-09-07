@@ -1,0 +1,23 @@
+dist/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+
+# Scratch / temporary work
+scratch/
+
+# Raw/intermediate image assets (not needed in repo)
+assets/images/raw/
+
+# Large binary / data files
+assets/LangPackageTableVtviData_decoded.json
+*.xlsx
+
+# Miscellaneous local files
+Hỏi đáp.txt
+image/

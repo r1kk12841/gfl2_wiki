@@ -1,0 +1,276 @@
+{
+  "slug": "papasha",
+  "name": "Papasha",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Svarog",
+  "stats": {
+    "hp": 1893,
+    "atk": 802,
+    "def": 528
+  },
+  "weakness": "Corrosion",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Warning Shot",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles, dealing Physical damage equal to 60% of attack to them.",
+      "icon": "assets/images/characters/papasha/skill1-icon.png",
+      "range_image": "assets/images/characters/papasha/skill1-range.png"
+    },
+    {
+      "name": "Honor Guard",
+      "tags": [
+        "Active",
+        "AoE",
+        "Buff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "range": 6,
+      "effect_area": "1",
+      "description": "Selects 1 enemy target within 6 tiles, dealing AoE Physical damage equal to 80% of attack to the target and all enemy targets within 1 tile. If the selected target's Stability Index remains greater than 0 after the attack, the City Warden gains Courage to Endure for 3 turns.",
+      "icon": "assets/images/characters/papasha/skill2-icon.png",
+      "range_image": "assets/images/characters/papasha/skill2-range.png"
+    },
+    {
+      "name": "Joint Breakthrough",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 6,
+      "effect_area": "Entire Map",
+      "description": "Selects 1 tile within 6 tiles, cleansing 2 debuffs from the user, as well as all control, Command Prohibition effects, and the Frigid effects from the City Warden. The City Warden moves to the selected tile and attacks the closest enemy to Papasha, dealing Physical damage equal to 150% of attack. This attack has an additional 50% damage boost against Large Targets.\n\nAfter using this skill, the City Warden will not move independently for the remainder of the turn. This skill cannot be used if City Warden is undergoing Self-Repair.",
+      "icon": "assets/images/characters/papasha/skill3-icon.png",
+      "range_image": "assets/images/characters/papasha/skill3-range.png"
+    },
+    {
+      "name": "Heart of Protection",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles, dealing Physical damage equal to 150% of attack. The City Warden gains Tenacity to Withstand for 2 turns.\n\nBefore the attack, for each buff the user has, the City Warden gains 1 random attack buff, up to a maximum of 2 buffs, lasting for 2 turns.",
+      "icon": "assets/images/characters/papasha/ult-icon.png",
+      "range_image": "assets/images/characters/papasha/ult-range.png"
+    },
+    {
+      "name": "United Guards",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of the battle, summons a City Warden near the user.\n\nAfter either the user or the City Warden attacks, the user gains 1 point of Confectance Index.\n\nWhen the user lands a critical hit, the City Warden's next attack receives a 20% critical rate boost. Similarly, when the City Warden lands a critical hit, the user's next attack gains a 20% critical rate boost.",
+      "icon": "assets/images/characters/papasha/passive.png",
+      "range_image": "assets/images/characters/papasha/passive-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "City Warden",
+      "description": "Automated security drone. Moves independently at the end of the turn to seek Cover.",
+      "stats": {
+        "hp": "80% of Papasha's initial HP",
+        "atk": "80% of Papasha's initial ATK",
+        "def": "80% of Papasha's initial DEF"
+      },
+      "stability_gauge": "9 points",
+      "movement_speed": "5 tiles",
+      "skills": [
+        {
+          "name": "Counter Terrorism Support",
+          "description": "After Papasha attacks an enemy target, the City Warden will follow up with a Support Attack on the same target, dealing Physical damage equal to 80% of attack.",
+          "icon": "assets/images/characters/papasha/summon1-skill1-icon.png",
+          "range_image": "assets/images/characters/papasha/summon1-skill1-range.png"
+        },
+        {
+          "name": "Explosion Prevention Measures",
+          "description": "At the end of the turn, City Warden will move independently to seek Cover.\n\nThe City Warden's healed received is reduced by 100% and it cannot receive shields. When Papasha is healed, the City Warden restores 10% of its max HP.\n\nWhen the City Warden takes fatal damage, it enters the Self-Repair state for 1 turn.",
+          "icon": "assets/images/characters/papasha/summon1-passive1-icon.png",
+          "range_image": "assets/images/characters/papasha/summon1-passive1-range.png"
+        },
+        {
+          "name": "Security Monitoring",
+          "icon": "assets/images/characters/papasha/summon1-passive2-icon.png"
+        }
+      ],
+      "image": "assets/images/characters/papasha/summon1.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Honor Guard",
+      "level": 2,
+      "effect": "The duration of the City Warden's Self-Repair is reduced by 1 turn. After the user is healed, the City Warden restores HP equal to 20% of its max HP.\n\nThe Stability requirement for the target has been removed. The effects of Courage to Endure is enhanced: Ignores 30% of defense when attacking Large Targets."
+    },
+    {
+      "tier": 2,
+      "skill": "Silent Breakthrough",
+      "level": 2,
+      "effect": "Tile casting range is expanded to the entire battlefield, and this attack is guaranteed to deal a critical hit. At the end of the turn, City Warden launches 1 more instance of Counter Terrorism Support on the nearest enemy target."
+    },
+    {
+      "tier": 3,
+      "skill": "United Guards",
+      "level": 2,
+      "effect": "When the City Warden is summoned, its critical rate is increased by 30% and critical damage by 20%. At the start of the battle, the user gains 3 stacks of Power of Unity. At the end of the action, the user gains 1 stack of Power of Unity."
+    },
+    {
+      "tier": 4,
+      "skill": "Heart of Protection",
+      "level": 2,
+      "effect": "The effects of Tenacity to Withstand are enhanced: Increases the damage taken by the target up to 80%. The potency of the random attack buffs is amplified, and the maximum number of attack buffs gained is increased to 3 buffs. For every more than 1 stack of Power of Unity, it counts as 1 independent buff."
+    },
+    {
+      "tier": 5,
+      "skill": "United Guards",
+      "level": 3,
+      "effect": "The City Warden gains Security Monitoring."
+    },
+    {
+      "tier": 6,
+      "skill": "Heart of Protection",
+      "level": 3,
+      "effect": "The City Warden gains Tenacity to Withstand permanently at the start of the battle. Heart of Protection now applies Resolve to Defend for 2 turns."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +37\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +80\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +45\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +110\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +53\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +61\nHP +143",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Glory With Us",
+      "level": 20,
+      "effect": "When using the active skill Honor Guard to attack a Large Target, increases damage dealt by 20%. The stability damage of the City Warden's active skill Counter Terrorism Support is increased by 2 points.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/papasha/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Vow to Defend",
+      "level": 20,
+      "effect": "When the City Warden is undergoing Self-Repair, Papasha's damage dealt is increased by 20%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/papasha/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Unwavering Conviction",
+      "level": 30,
+      "effect": "City Warden is unable to move independently, but its attack is increased by 10%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/papasha/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Final Assault",
+      "level": 30,
+      "effect": "When the active skill Joint Breakthrough deals damage, if there are no enemy units within 3 tiles around the City Warden, damage dealt is increased by 10%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/papasha/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - I'll Learn It",
+      "level": 40,
+      "effect": "At the start of the turn, if Papasha has less than or equal to 1 buff that can be dispelled, she gains 1 random buff that can be dispelled for 1 turn.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/papasha/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Strength in Unity",
+      "level": 40,
+      "effect": "At the start of the turn, the unit with the lower attack between the user and the City Warden gains Accolade's Brilliance for 1 turn.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/papasha/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Unbreakable Faith",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/papasha/affi.png"
+    },
+    {
+      "name": "Common Key - Brilliant Medal",
+      "level": 40,
+      "effect": "ATK +5.0% / Increases damage dealt by allied units' support skills (excluding self) by 10%. Can trigger at most once per turn.",
+      "materials": "None",
+      "image": "assets/images/characters/papasha/common.png"
+    },
+    {
+      "name": "Expansion Key - Unfallen City",
+      "level": 60,
+      "effect": "The damage dealt by the City Warden is increased by 50%. While the City Warden is present, all friendly summoned units deal 30% more damage, and at the end of their turn, they gain Damage Reduction III for 1 turn. Confectance Cost of active skill Silent Breakthrough is reduced by 3 points. When activated, the City Warden gains 2 stacks of Steel Forging.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/papasha/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/papasha/portrait.png",
+    "avatar": "assets/images/characters/papasha/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

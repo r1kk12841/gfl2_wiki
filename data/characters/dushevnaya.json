@@ -1,0 +1,244 @@
+{
+  "slug": "dushevnaya",
+  "name": "Dushevnaya",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Freeze",
+  "weapon_type": "Sniper Rifle",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Eulogistic Verse",
+  "stats": {
+    "hp": 1851,
+    "atk": 757,
+    "def": 585
+  },
+  "skill_attribute": "Freeze",
+  "weakness": "Electric",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Daybreak",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Heavy Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/dushevnaya/skill1-icon.png",
+      "range_image": "assets/images/characters/dushevnaya/skill1-range.png"
+    },
+    {
+      "name": "Hero's Code",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 110% of attack to them. If this kills an enemy unit with Freeze debuffs, gains 1 stack of Ice's Grace\n\n(TL Note: Ice's Grace stacks can be gained even if the enemy isn't killed with this skill)",
+      "icon": "assets/images/characters/dushevnaya/skill2-icon.png",
+      "range_image": "assets/images/characters/dushevnaya/skill2-range.png"
+    },
+    {
+      "name": "Marzanna's Sanction",
+      "tags": [
+        "Active",
+        "Debuff",
+        "AoE"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 6,
+      "effect_area": "2",
+      "description": "Selects 1 tile within 6 tiles, dealing AoE Freeze damage equal to 50% of attack to all enemy targets within 2 tiles of the selected tile, and generates Frost tiles for 2 turns.\n\nThe next use of this skill will be enhanced, increasing the damage multiplier to 70%, whilst applying Frigid for 1 turn. This enhancement cannot be enhanced again if the skill has already been enhanced.\n\nIf Confectance Index is full, Marzanna's Sanction can immediately be used again.",
+      "icon": "assets/images/characters/dushevnaya/skill3-icon.png",
+      "range_image": "assets/images/characters/dushevnaya/skill3-range.png"
+    },
+    {
+      "name": "Book of Prophecy",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "effect_area": "7",
+      "description": "Applies 1 stack of Arctic Benediction to all allied units within 7 tiles. Gains 2 points of Confectance Index, as well as Glacial Domain for 2 turns. While Glacial Domain is active, gains 2 points of Confectance Index if it is at 0 at the end of the action.",
+      "icon": "assets/images/characters/dushevnaya/ult-icon.png",
+      "range_image": "assets/images/characters/dushevnaya/ult-range.png"
+    },
+    {
+      "name": "Blessed Artwork",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Increases all allied units' damage by 10%, with an additional 10% boost specifically for Freeze damage. At the end of the action, gains 2 points of Confectance Index.\n\nWhen the user's HP is above 80%, reduces Stability Damage taken by 1 point and gains Insight. While under the effects of Insight, increases the range of active skills and Support Attacks (except Ultimates) by 1 tile.",
+      "icon": "assets/images/characters/dushevnaya/passive.png",
+      "range_image": "assets/images/characters/dushevnaya/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Book of Prophecy",
+      "level": 2,
+      "effect": "Increases the effective range by 2 tiles and applies 1 random powerful buff and Movement Up II to all allied units within range for 2 turns. Arctic Benediction increases damage dealt by an additional 10%."
+    },
+    {
+      "tier": 2,
+      "skill": "Blessed Artwork",
+      "level": 2,
+      "effect": "Attacks ignore 15% of the target's Cover damage reduction. At the start of the action, generates Frost tiles within a 1 tile radius around the user for 2 turns. If the user is standing on an allied Freeze tile, their Stability Damage is increased by 1 point."
+    },
+    {
+      "tier": 3,
+      "skill": "Marzanna's Sanction",
+      "level": 2,
+      "effect": "Effective range is increased by 1 tile. The initial damage multiplier is increased to 70%. This will be further increased to 90% for the enhanced skill."
+    },
+    {
+      "tier": 4,
+      "skill": "Hero's Code",
+      "level": 2,
+      "effect": "The number of Ice's Grace stacks gained increases by 1. When the number of stacks reaches 4, the skill's effect is enhanced, increasing the damage dealt to 140%. If the target is on an allied Freeze tile, the damage dealt increases to 160%."
+    },
+    {
+      "tier": 5,
+      "skill": "Book of Prophecy",
+      "level": 3,
+      "effect": "Dispels 1 buff from 4 random enemy units within range. Increases the number of Arctic Benediction stacks applied by 1. While Glacial Domain is active, ignores 30% of the target's defense, The maximum number of Support Attacks increases by 1."
+    },
+    {
+      "tier": 6,
+      "skill": "Blessed Artwork",
+      "level": 3,
+      "effect": "Increases the damage of active attacks by 20%, with an additional 40% boost for Freeze damage. After an active attack, dispels 1 defense buff from the target. If the user is standing on an allied Freeze tile, applies Vulnerable II to the target for 2 turns."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +35\nDEF +25",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +34",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +107\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +50\nDEF +44",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +140",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Lance of Longinus",
+      "level": 20,
+      "effect": "Each Ice's Grace stack gained above the maximum amount increases the critical rate of Hero's Code by 5%, up to a maximum increase of 30%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/dushevnaya/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Adventurer's Will",
+      "level": 20,
+      "effect": "When an active attack only hits 1 target, increases Freeze damage dealt by 20% and Stability Damage dealt by 2 points.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/dushevnaya/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Magical Support",
+      "level": 30,
+      "effect": "When an active skill generates Freeze tiles, if there are Freeze tiles within range, triggers a tile reaction, removes the tiles beneath the enemy targets and dispels 1 buff from them. For each tile removed, gains 1 stack of Ice's Grace, up to 3 stacks.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/dushevnaya/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Courageous Claymore",
+      "level": 30,
+      "effect": "When using Marzanna's Sanction, if it causes the target to enter Stability Break, applies Defense Down II to them for 2 turns.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/dushevnaya/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Heart of the Sage",
+      "level": 40,
+      "effect": "When under the effects of Glacial Domain, gains immunity to movement debuffs.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/dushevnaya/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Holy Light",
+      "level": 40,
+      "effect": "At the start of the turn, if this unit is standing on an allied Freeze tile, 2 debuffs are cleansed.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/dushevnaya/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Shining Memories",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/dushevnaya/affi.png"
+    },
+    {
+      "name": "Common Key -  Artistic Inspiration",
+      "level": 40,
+      "effect": "ATK +5.0% / For targets with mobility less than or equal to the user or that cannot move, increases Phase damage dealt by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/dushevnaya/common.png"
+    },
+    {
+      "name": "Expansion Key - Wintersong of the Hero",
+      "level": 60,
+      "effect": "When allies deal Freeze damage, gains 1 stack of Ice's Grace, and increases Freeze damage dealt for all allies by 5%, up to 15%\n\nDushevnaya's single target attacks now deals Freeze damage, ignores 30% of the enemy's DEF, and increases Freeze damage dealt to enemies by 30%\n\nAt the start of the battle, increases damage by 10% and increases Freeze damage by 10% for the 2 highest ATK allies (excluding self)",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/dushevnaya/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/dushevnaya/portrait.png",
+    "avatar": "assets/images/characters/dushevnaya/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

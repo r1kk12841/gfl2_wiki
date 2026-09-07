@@ -1,0 +1,245 @@
+{
+  "slug": "nemesis",
+  "name": "Nemesis",
+  "class": "Sentinel",
+  "rarity": "Standard",
+  "phase": "Corrosion",
+  "weapon_type": "Sniper Rifle",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": ".50 Nemesis",
+  "stats": {
+    "hp": 1656,
+    "atk": 703,
+    "def": 463
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Hydro",
+  "stability_gauge": "9 points",
+  "movement_speed": "4 tiles",
+  "skills": [
+    {
+      "name": "Victory Portent",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Heavy Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 9 tiles and deals Physical damage equal to 80% attack to them.",
+      "icon": "assets/images/characters/nemesis/skill1-icon.png",
+      "range_image": "assets/images/characters/nemesis/skill1-range.png"
+    },
+    {
+      "name": "Enlightened Star",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Select 1 enemy target within 9 tiles of the user and deal Physical damage equal to 130% of attack. When attacking near Cover, increases damage dealt by 20% and gain 2 points of Confectance Index.",
+      "icon": "assets/images/characters/nemesis/skill2-icon.png",
+      "range_image": "assets/images/characters/nemesis/skill2-range.png"
+    },
+    {
+      "name": "Penetrating Casket",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 9 tiles, applies Defense Down II for 1 turn, and deals Physical damage equal to 130% of attack to them.",
+      "icon": "assets/images/characters/nemesis/skill3-icon.png",
+      "range_image": "assets/images/characters/nemesis/skill3-range.png"
+    },
+    {
+      "name": "Constellation Pursuit",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 9 tiles, dealing Corrosion damage equal to 170% of attack. For each additional 1 point of Confectance Index, this attack's damage is increased by 10%.",
+      "icon": "assets/images/characters/nemesis/ult-icon.png",
+      "range_image": "assets/images/characters/nemesis/ult-range.png"
+    },
+    {
+      "name": "Remote Observation",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "9",
+      "description": "At the start of the action, marks the 2 nearest enemy targets within range with Prophecy of Mourning for 1 turn. Action Support deals Physical damage equal to 80% of attack and 2 points of Stability Damage. This unit gains Insight for 1 turn after using a Action Support.",
+      "icon": "assets/images/characters/nemesis/passive.png",
+      "range_image": "assets/images/characters/nemesis/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Remote Observation",
+      "level": 2,
+      "effect": "Increases the duration of Prophecy of Mourning by 1 turn."
+    },
+    {
+      "tier": 2,
+      "skill": "Enlightened Star",
+      "level": 2,
+      "effect": "If the target has Prophecy of Mourning, increase damage dealt by 10%."
+    },
+    {
+      "tier": 3,
+      "skill": "Penetrating Casket",
+      "level": 2,
+      "effect": "Gains 1 point of Confectance Index if the target has a defense debuff."
+    },
+    {
+      "tier": 4,
+      "skill": "Remote Observation",
+      "level": 3,
+      "effect": "When this unit is under the effects of Insight, further increases damage dealt by 10%."
+    },
+    {
+      "tier": 5,
+      "skill": "Constellation Pursuit",
+      "level": 2,
+      "effect": "When Insight is active, increases the damage multiplier by 10%."
+    },
+    {
+      "tier": 6,
+      "skill": "Constellation Pursuit",
+      "level": 3,
+      "effect": "For each debuff on the target, increases critical rate by 20%, up to 100%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +33\nDEF+19",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +70\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +40\nDEF +27",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +96\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +47\nDEF +35",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +53\nHP +125",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Potent Curse",
+      "level": 20,
+      "effect": "If the enemy target is marked with Prophecy of Mourning, apply Defense Down II before launching an active attack.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/nemesis/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Changing Fortune",
+      "level": 20,
+      "effect": "When this unit is under the effects of Insight, the range of the active skills Enlightened Star and Penetrating Casket are increased by 1 tile.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/nemesis/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Fortune's Call",
+      "level": 30,
+      "effect": "If there is Cover nearby while under the effects of Insight, reduce AoE damage taken by 20%.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/nemesis/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Silent Catastrophe",
+      "level": 30,
+      "effect": "When killing a target marked with Prophecy of Mourning, gain Attack Up I and Damage Up I for 1 turn.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/nemesis/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Fated Calamity",
+      "level": 40,
+      "effect": "When a target marked with Prophecy of Mourning is killed by this unit, gain 1 point of Confectance Index.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/nemesis/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Focused Gaze",
+      "level": 40,
+      "effect": "When this unit is under the effects of Insight, gain immunity to all displacement effects from enemy units.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/nemesis/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Soft Whispers",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/nemesis/affi.png"
+    },
+    {
+      "name": "Common Key - Blessing of the Morning Star",
+      "level": 40,
+      "effect": "ATK +3.0% / When this unit is under the effects of Insight, gains 3 tiles of Additional Movement after killing an enemy target.",
+      "materials": "None",
+      "image": "assets/images/characters/nemesis/common.png"
+    },
+    {
+      "name": "Expansion Key - Forecast Elegy",
+      "level": 60,
+      "effect": "At the start of the turn, applies Prophecy of Mourning to the enemy with the highest HP within Attack Range",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/nemesis/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/nemesis/portrait.png",
+    "avatar": "assets/images/characters/nemesis/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GFL2 Wiki — Guide Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app">
+
+  <!-- HEADER -->
+  <header id="header">
+    <h1>GFL2 WIKI &mdash; <span>Guide Editor</span></h1>
+    <div class="header-meta-row">
+      <select id="char-sel" class="header-char-sel">
+        <option value="">— Character —</option>
+      </select>
+      <input type="text" id="guide-title" class="header-title-inp" placeholder="Guide title…" autocomplete="off" />
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-secondary" id="btn-load-guide">📂 Load JSON</button>
+      <button class="btn btn-primary" id="btn-save-guide">💾 Save JSON</button>
+      <a class="btn btn-secondary" href="../data-entry/index.html" target="_blank" style="text-decoration:none;">← Data Entry</a>
+    </div>
+    <input type="file" id="file-load-guide" accept=".json" style="display:none" />
+  </header>
+
+  <!-- TOOLBAR -->
+  <div id="toolbar">
+    <button class="toolbar-btn" id="tb-heading" title="Insert Heading"><span class="tb-icon">H</span> Heading</button>
+    <button class="toolbar-btn" id="tb-paragraph" title="Insert Paragraph"><span class="tb-icon">¶</span> Paragraph</button>
+    <div class="toolbar-sep"></div>
+    <button class="toolbar-btn" id="tb-char-card" title="Insert Character Card"><span class="tb-icon">👤</span> Char Card</button>
+    <button class="toolbar-btn" id="tb-weapon-card" title="Insert Weapon Card"><span class="tb-icon">🔫</span> Weapon Card</button>
+    <div class="toolbar-sep"></div>
+    <button class="toolbar-btn" id="tb-skill-ref" title="Insert Skill Reference"><span class="tb-icon">⚡</span> Skill Ref</button>
+    <button class="toolbar-btn" id="tb-summon-ref" title="Insert Summon Skill Reference"><span class="tb-icon">🤖</span> Summon Skill</button>
+    <div class="toolbar-sep"></div>
+    <button class="toolbar-btn" id="tb-table" title="Insert Table"><span class="tb-icon">⊞</span> Table</button>
+    <button class="toolbar-btn" id="tb-image" title="Insert Image"><span class="tb-icon">🖼</span> Image</button>
+    <button class="toolbar-btn" id="tb-link" title="Insert Link Block"><span class="tb-icon">🔗</span> Link</button>
+  </div>
+
+  <!-- MAIN AREA -->
+  <div id="main-area">
+
+    <!-- EDITOR PANE -->
+    <div id="editor-pane">
+      <div id="blocks-list"></div>
+      <div id="editor-empty" style="text-align:center; padding:2.5rem; color: var(--text-muted);">
+        <p style="font-size:1.5rem; margin-bottom:0.5rem;">📝</p>
+        <p style="font-size:0.85rem;">Use the toolbar above to add content blocks</p>
+      </div>
+    </div>
+
+    <!-- PREVIEW PANE -->
+    <div id="preview-pane">
+      <div class="preview-header">
+        <div class="preview-live-dot"></div>
+        Preview
+      </div>
+      <div id="preview-content"></div>
+    </div>
+
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<!-- HEADING MODAL -->
+<div id="modal-heading" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title">📝 Insert Heading</div>
+    <div class="modal-field">
+      <label>Level</label>
+      <select id="modal-heading-level">
+        <option value="2">H2 — Section</option>
+        <option value="3">H3 — Sub-section</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>Text</label>
+      <input type="text" id="modal-heading-text" placeholder="Heading text…" autocomplete="off" />
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="modal-heading-cancel">Cancel</button>
+      <button class="btn btn-primary" id="modal-heading-ok">Insert</button>
+    </div>
+  </div>
+</div>
+
+<!-- TABLE MODAL -->
+<div id="modal-table" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title">⊞ Insert Table</div>
+    <div class="modal-field">
+      <label>Columns</label>
+      <input type="number" id="modal-table-cols" value="3" min="1" max="10" />
+    </div>
+    <div class="modal-field">
+      <label>Rows (data)</label>
+      <input type="number" id="modal-table-rows" value="3" min="1" max="20" />
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="modal-table-cancel">Cancel</button>
+      <button class="btn btn-primary" id="modal-table-ok">Insert</button>
+    </div>
+  </div>
+</div>
+
+<!-- SKILL REF MODAL -->
+<div id="modal-skill" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title" id="modal-skill-title">⚡ Insert Skill Reference</div>
+    <div class="modal-field">
+      <label>Character</label>
+      <select id="modal-skill-char"></select>
+    </div>
+    <div class="modal-field" id="modal-skill-summon-field" style="display:none">
+      <label>Summon</label>
+      <select id="modal-skill-summon"></select>
+    </div>
+    <div class="modal-field">
+      <label id="modal-skill-label">Skill</label>
+      <select id="modal-skill-pick"></select>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="modal-skill-cancel">Cancel</button>
+      <button class="btn btn-primary" id="modal-skill-ok">Insert</button>
+    </div>
+  </div>
+</div>
+
+<!-- CHAR CARD MODAL -->
+<div id="modal-char-card" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title">👤 Insert Character Card</div>
+    <div class="modal-field">
+      <label>Character</label>
+      <select id="modal-char-card-sel"></select>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="modal-char-card-cancel">Cancel</button>
+      <button class="btn btn-primary" id="modal-char-card-ok">Insert</button>
+    </div>
+  </div>
+</div>
+
+<!-- WEAPON CARD MODAL -->
+<div id="modal-weapon-card" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title">🔫 Insert Weapon Card</div>
+    <div class="modal-field">
+      <label>Weapon</label>
+      <select id="modal-weapon-card-sel"></select>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="modal-weapon-card-cancel">Cancel</button>
+      <button class="btn btn-primary" id="modal-weapon-card-ok">Insert</button>
+    </div>
+  </div>
+</div>
+
+<!-- LINK MODAL -->
+<div id="modal-link" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title">🔗 Insert Link Block</div>
+    <div class="modal-field">
+      <label>URL</label>
+      <input type="url" id="modal-link-url" placeholder="https://…" autocomplete="off" />
+    </div>
+    <div class="modal-field">
+      <label>Display Text</label>
+      <input type="text" id="modal-link-text" placeholder="Link label…" autocomplete="off" />
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="modal-link-cancel">Cancel</button>
+      <button class="btn btn-primary" id="modal-link-ok">Insert</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

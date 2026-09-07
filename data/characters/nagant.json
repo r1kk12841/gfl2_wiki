@@ -1,0 +1,248 @@
+{
+  "slug": "nagant",
+  "name": "Nagant",
+  "class": "Support",
+  "rarity": "Standard",
+  "phase": "Corrosion",
+  "weapon_type": "Handgun",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Nagant M1895",
+  "stats": {
+    "hp": 1656,
+    "atk": 609,
+    "def": 512
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Burn",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Point Shooting",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/nagant/skill1-icon.png",
+      "range_image": "assets/images/characters/nagant/skill1-range.png"
+    },
+    {
+      "name": "Senior's Admonishment",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 4,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deal Physical damage equal to 130% of attack to it. After activating if the target is under the effects of Stability Break, apply Acid Corrosion II to the target for 1 turn.",
+      "icon": "assets/images/characters/nagant/skill2-icon.png",
+      "range_image": "assets/images/characters/nagant/skill2-range.png"
+    },
+    {
+      "name": "Friend of Justice",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 70% of attack. If there are no enemy units within 4 tiles, performs an additional attack on the original target and applies Acid Corrosion II to them for 1 turn.",
+      "icon": "assets/images/characters/nagant/skill3-icon.png",
+      "range_image": "assets/images/characters/nagant/skill3-range.png"
+    },
+    {
+      "name": "Sanction Declaration",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Corrosion damage equal to 150% of attack to them. If the target has defense debuffs, applies Vulnerable I before attacking for 2 turns. Stability Damage dealt by this attack is increased by 2 points.",
+      "icon": "assets/images/characters/nagant/ult-icon.png",
+      "range_image": "assets/images/characters/nagant/ult-range.png"
+    },
+    {
+      "name": "Veteran's Skills",
+      "tags": [
+        "Passive",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "For each instance of damage dealt, gains 1 point of Confectance Index. If an enemy unit moves within Nagant's range, she deals Physical damage equal to 50% of attack and 2 points of Stability Damage. If the target has a defense debuff, applies Stun to the target for 1 turn. This effect can only be triggered once per turn.",
+      "icon": "assets/images/characters/nagant/passive.png",
+      "range_image": "assets/images/characters/nagant/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Friend of Justice",
+      "level": 2,
+      "effect": "If the target has a defense debuff, this skill's cooldown is reduced by 1 turn."
+    },
+    {
+      "tier": 2,
+      "skill": "Sanction Declaration",
+      "level": 2,
+      "effect": "If the target has defense debuffs, increases critical rate by 20%."
+    },
+    {
+      "tier": 3,
+      "skill": "Friend of Justice",
+      "level": 3,
+      "effect": "If there are no enemies within 3 tiles around self, perform an additional attack on the original target."
+    },
+    {
+      "tier": 4,
+      "skill": "Sanction Declaration",
+      "level": 3,
+      "effect": "Damage multiplier increased by 10%."
+    },
+    {
+      "tier": 5,
+      "skill": "Veteran's Skills",
+      "level": 2,
+      "effect": "Damage multiplier increases by 30% and deals 3 points of Stability Damage."
+    },
+    {
+      "tier": 6,
+      "skill": "Veteran's Skills",
+      "level": 3,
+      "effect": "Increase the trigger count by 1 every turn."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +28\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +70\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +34\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +96\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +40\nDEF +39",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +46\nHP +125",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Heroic Strike",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/nagant/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Veteran's Experience",
+      "level": 20,
+      "effect": "If attacking enemy targets with defensive debuffs, reduces the cooldown of all active skills by 1 turn.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/nagant/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Invisible Bulletproof Vest",
+      "level": 30,
+      "effect": "If attacked by enemy targets with debuffs, reduce damage taken by 10%.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/nagant/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Legend of Guardians",
+      "level": 30,
+      "effect": "When using Friend of Justice, if it hits 2 times, the first hit deals Physical damage equal to 10% of attack, and the second hit deals 130% of attack.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/nagant/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - One Shot, One Victory",
+      "level": 40,
+      "effect": "If the target has defense debuffs, increases critical rate and critical damage by 10%.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/nagant/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Bullet of Justice",
+      "level": 40,
+      "effect": "When using the active skill Senior's Admonishment, if it causes Stability Break on the enemy target, deal additional fixed damage equal to 50% of attack.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/nagant/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Hat Trick",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/nagant/affi.png"
+    },
+    {
+      "name": "Common Key - Veteran's Wisdom",
+      "level": 40,
+      "effect": "ATK +3.0% / If target's Stability Index is lower than this unit's, increases damage dealt to them by 7%.",
+      "materials": "None",
+      "image": "assets/images/characters/nagant/common.png"
+    },
+    {
+      "name": "Expansion Key - Senior's Intructions",
+      "level": 40,
+      "effect": "After using an active attack, applies Stun on the target for 2 turns. In the current battle, if Stun is applied on the same target multiple times, Stun lasts for 1 turn instead",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/nagant/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/nagant/portrait.png",
+    "avatar": "assets/images/characters/nagant/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

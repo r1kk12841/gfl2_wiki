@@ -1,0 +1,240 @@
+{
+  "slug": "sextans",
+  "name": "Sextans",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Electric",
+  "weapon_type": "Blade",
+  "ammo_type": "Melee",
+  "signature_weapon": "Twilight Rose",
+  "stats": {
+    "hp": 2014,
+    "atk": 740,
+    "def": 536
+  },
+  "skill_attribute": "Electric",
+  "weakness": "Freeze",
+  "stability_gauge": "9 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Dreamscape Garrote",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Melee",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "Target",
+      "description": "Selects 1 target within 1 tile, dealing melee Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/sextans/skill1-icon.png",
+      "range_image": "assets/images/characters/sextans/skill1-range.png"
+    },
+    {
+      "name": "Sanctuary Lauds",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "ammo_type": "Melee",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects a direction and deals melee AoE Electric damage equivalent to 90% ATK to all enemies within a 3x9 frontal area in the selected direction and apply Blood Kiss. The damage multiplier of this skill is increased increased by 10% based on the number of Coagulation stacks possessed by Sextans. Restores HP equalt to 90% ATK to all ally units within the area. After skill usage, Sextans gains 6 tiles of Additional Movement and can use the active skill Death Knell.",
+      "icon": "assets/images/characters/sextans/skill2-icon.png",
+      "range_image": "assets/images/characters/sextans/skill2-range.png"
+    },
+    {
+      "name": "Death Knell",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects a direction and deals melee AoE Electric damage equivalent to 90% ATK to all enemies within a 3x9 frontal area in the selected direction and generates Voltage tiles for 3 turns. The damage multiplier of this skill is increased increased by 10% based on the number of Coagulation stacks possessed by Sextans. Restores HP equalt to 90% ATK to all ally units within the area amd dispels 1 debuff from them. If the enemy target is afflicted with Blood Kiss, this skill deals an additional instance of melee Electric damage with the same multiplier after this skill resolves. Sextans gains Coagulation and removes the target's Blood Kiss. Additional stacks of Coagulation is gained based on the target's rank (Normal, Elite, Boss).",
+      "icon": "assets/images/characters/sextans/skill3-icon.png",
+      "range_image": "assets/images/characters/sextans/skill3-range.png"
+    },
+    {
+      "name": "Midnight Vesper",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Selects 1 tile within a cross-shaped area of 4-8 tiles, landing on the selected tile and dealing melee AoE Electric melee damage equal to 120% of attack to all enemy targets on the path and apply Blood Kiss to them. Generates Voltage tiles for 3 turns. The damage multiplier of this skill is increased increased by 10% based on the number of Coagulation stacks possessed by Sextans. Before the skill resolves, apply Laceration to enemy targets within the effective area, lasting 2 turns; apply Holy Blood Mark to all ally units within the area, lasting 2 turns. After the skill, gain 6 tiles of Additional Movement and can use the active skill Death Knell.",
+      "icon": "assets/images/characters/sextans/ult-icon.png",
+      "range_image": "assets/images/characters/sextans/ult-range.png"
+    },
+    {
+      "name": "Requiem",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Damage dealt is increased for all Dolls that use Blades by 10%. Mobility is increased by 1 tile for all Electric-attribute Dolls and all Dolls that use Blades (only applies once when multiple conditions (Electric or Melee) are met). When an enemy unit dies or suffers Stability Break, Sextans gains 1 stack of Coagulation. Based on the enemy unit's rank, Sextans gains additional stacks of Coagulation. When ally units (excluding Sextans) attacks with a Blade, consume 1 point of Confectance Index to unleash Blood Emblem. At the start of Sextans' turn, if her Confectance Index is not full, restore it to full. Applies Scarlet Insignia to enemy units ending their action on Electric-attributed tiles.",
+      "icon": "assets/images/characters/sextans/passive.png",
+      "range_image": "assets/images/characters/sextans/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Death Knell",
+      "level": 2,
+      "effect": "If the skill hits an enemy target, user casts Blood Emblem at it once and grants 1 point of Confectance Index. After using the skill, the user gains 2 stacks of Coagulation."
+    },
+    {
+      "tier": 2,
+      "skill": "Midnight Vesper",
+      "level": 2,
+      "effect": "Skill area width is increased by 2 tiles. The effect of Holy Blood Mark is enhanced, with the Stability damage and the amount of Stability Index ignored are increased by 5 points; when dealing Electric or Melee damage, damage is increased by 5% for each stack of Coagulation (only applies once when multiple conditions (Electric or Melee damage) are met)."
+    },
+    {
+      "tier": 3,
+      "skill": "Requiem",
+      "level": 2,
+      "effect": "All Electric-attribute Dolls and all Dolls that use Blades have their mobility is increased by 2 tiles (only applies once when multiple conditions (Electric or Melee) are met), and ignore enemy blocking. The Coagulation effect is enhanced; the maximum conversion of extra Critical Rate into ATK, healing, and Critical Damage is increased to 45%. The Blood Emblem effect is enhanced; for each stack of Coagulation, the damage multiplier is increased to 4%. The Scarlet Insignia effect is enhanced; Melee damage taken is increased to 10% ."
+    },
+    {
+      "tier": 4,
+      "skill": "Midnight Vesper",
+      "level": 3,
+      "effect": "Before using the skill, apply Electric Boost II to all friendly units for 2 turns. After using the skill, gain Concealment for 2 turns."
+    },
+    {
+      "tier": 5,
+      "skill": "Death Knell",
+      "level": 3,
+      "effect": "Damage and healing multipliers are increased by 30%; one more debuff will be dispelled; Blood Kiss is no longer removed."
+    },
+    {
+      "tier": 6,
+      "skill": "Requiem",
+      "level": 3,
+      "effect": "At the start of combat, gain 5 stacks of Coagulation, and the Critical Rate cap for Coagulation is increased to 75%. The damage multiplier of Blood Emblem is increased to 90%, ignoring 30% of the target's DEF when dealing damage. No longer consumes Confectance Index. When at full Confectance Index, all friendly units deal 15% increased Melee damage."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +34\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +65\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +42\nDEF +31",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +117\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +49\nDEF +41",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +56\nHP +152",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Contractor's Bond",
+      "level": 20,
+      "effect": "At the start of battle, Sextans gains 1 stack of Coagulation based on the number of Electric-attributed Dolls or Dolls using Blades on the field (only applies once when multiple conditions (Electric or Melee) are met).",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/sextans/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Silent Inscription",
+      "level": 20,
+      "effect": "Before an ally unit with Holy Blood Mark uses an active attack, inflicts Defense Down II to the target for 2 turns.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/sextans/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Pocket Watch Calibration",
+      "level": 30,
+      "effect": "Before Blood Emblem deals damage, cleanse 1 target's buff.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/sextans/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Withering Oath",
+      "level": 30,
+      "effect": "Enemy units under Stability Break take 7% more damage",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/sextans/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Keeper of the Boundary",
+      "level": 40,
+      "effect": "After an ally unit (excluding Sextans) attacks with a Blade, generates Voltage tiles within 1 tile radius around the target.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/sextans/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Black Swan's Feather",
+      "level": 40,
+      "effect": "Increase stability damage dealt by all ally units by 1.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/sextans/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key -  Silent Echo",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/sextans/affi.png"
+    },
+    {
+      "name": "Common Key - Stigmata in the Palm",
+      "level": 40,
+      "effect": "CRIT DMG +5.0% / Melee damage dealt is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/sextans/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/sextans/portrait.png",
+    "avatar": "assets/images/characters/sextans/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

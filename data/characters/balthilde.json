@@ -1,0 +1,262 @@
+{
+  "slug": "balthilde",
+  "name": "Balthilde",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "MG",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Njörðr",
+  "stats": {
+    "hp": 2006,
+    "atk": 670,
+    "def": 569
+  },
+  "weakness": "Hydro",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Quenching Strike",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/balthilde/skill1-icon.png",
+      "range_image": "assets/images/characters/balthilde/skill1-range.png"
+    },
+    {
+      "name": "Raging Chainblast",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 6,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects a direction and deals AoE Physical damage equivalent to 100% ATK to all enemies in a 6 tile fan shaped area towards the selected direction\n\nDecreases the cooldown of Reinforcement Protocol and Demolition Protocol by 1 turn",
+      "icon": "assets/images/characters/balthilde/skill2-icon.png",
+      "range_image": "assets/images/characters/balthilde/skill2-range.png"
+    },
+    {
+      "name": "Wrench Calibration",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "After performing a basic attack, increases Confectance Index by 1 point. When allies (excluding self) deals Physical damage using an active attack, increases Confectance Index by 1 point for self. This can be triggered up to 2 times per turn.\n\nFor each point of Confectance Index gained, applies 1 stack of Performance Breakthrough to all Construct. When a Construct with 10 stacks of Performance Breakthrough is destroyed, deals Physical damage equivalent to 100% of the Construct DEF to all enemies within a 3 tile radius. This will not trigger Interceptions, Counterattacks or Action Supports",
+      "icon": "assets/images/characters/balthilde/skill3-icon.png",
+      "range_image": "assets/images/characters/balthilde/skill3-range.png"
+    },
+    {
+      "name": "Safety Consciousness",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 3,
+      "effect_area": "Target",
+      "description": "Upon summoned, applies Defense Up I for 2 turns and restores HP equivalent to 100% DEF for all allies within a 3 tile radius",
+      "icon": "assets/images/characters/balthilde/ult-icon.png",
+      "range_image": "assets/images/characters/balthilde/ult-range.png"
+    },
+    {
+      "name": "Focused Maintenance",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 3,
+      "effect_area": "Target",
+      "description": "Cover within a 3 tile radius will not lose durability. Decreases damage received by 30% for allies within range that are not benefitting from damage reduction by Cover",
+      "icon": "assets/images/characters/balthilde/passive-icon.png",
+      "range_image": "assets/images/characters/balthilde/passive-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Construct",
+      "description": "Tactical defense construct deployed to provide cover and support.",
+      "stats": {
+        "hp": "100% of Balthilde's initial HP",
+        "atk": "80% of Balthilde's initial ATK",
+        "def": "80% of Balthilde's initial DEF"
+      },
+      "stability_gauge": "0 points",
+      "movement_speed": "0 tiles",
+      "skills": [
+        {
+          "name": "Disassembly Knack",
+          "description": "Selects the nearest enemy target within a 3 tile radius and deals Physical damage equivalent to 100% DEF to it. This can be used twice per turn",
+          "icon": "assets/images/characters/balthilde/summon1-passive1-icon.png",
+          "range_image": "assets/images/characters/balthilde/summon1-passive1-range.png"
+        }
+      ]
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Demolition Protocol",
+      "level": 2,
+      "effect": "Increases the range of Disassembly Knack to 5 tiles, and applies Stress Fracture on the target for 2 turns"
+    },
+    {
+      "tier": 2,
+      "skill": "Reinforcement Protocol",
+      "level": 2,
+      "effect": "Increases the range of Safety Consciousness and Focused Maintenance to 5 tiles\n\nNew effect is added for Safety Consciousness - Upon summoned, restores the durability of all Cover within a 5 tile radius\n\nNew effect is added for Focused Maintenance - Restores HP equivalent to 100% DEF and 2 Stability, and applies Defense Up I for all allies within a 5 tile radius at the end of their action"
+    },
+    {
+      "tier": 3,
+      "skill": "Raging Chainblast",
+      "level": 2,
+      "effect": "Resets the cooldown of Reinforcement Protocol and Demolition Protocol\n\nRestores HP equivalent to 100% ATK for all allies, and applies Load-Bearing Parts for 2 turns"
+    },
+    {
+      "tier": 4,
+      "skill": "Demolition Protocol",
+      "level": 2,
+      "effect": "Decreases the cooldown of this skill by 1 turn. Increases the ATK and DEF inherited by Offense Construct to 100%\n\nIncreases the number of times Disassembly Knack can be used per turn by 1"
+    },
+    {
+      "tier": 5,
+      "skill": "Reinforcement Protocol",
+      "level": 3,
+      "effect": "Decreases the cooldown of this skill by 1 turn. Increases the ATK and DEF inherited by Defense Construct to 100%\n\nEnhances the effects of Safety Consciousness - Upon summoned, restores HP equivalent to 200% DEF and 4 Stability\n\nEnhances the effects of Focused Maintenance - Damage reduction is applied to all allies instead"
+    },
+    {
+      "tier": 6,
+      "skill": "Wrench Calibration",
+      "level": 3,
+      "effect": "For each point of Confectance Index held, increases the damage multiplier of Quenching Strike by 5%\n\nEnhances the effects of Performance Breakthrough - Increases ATK and DEF by 5%"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +31\nDEF +24",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +85\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +38\nDEF +33",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +116\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +44\nDEF +43",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +51\nHP +151",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Cannot Spit It Out",
+      "level": 20,
+      "effect": "Before using an active attack, applies Stress Fracture on the enemy for 2 turns",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/balthilde/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Impatient",
+      "level": 20,
+      "effect": "At the start of the battle, increases Confectance Index by 3 points",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/balthilde/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Misunderstood Intention",
+      "level": 30,
+      "effect": "At the end of the action, applies Damage Reduction II for all allies not near to Cover for 1 turn",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/balthilde/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Fault Elimination Module",
+      "level": 30,
+      "effect": "At the end of the action, restores 3 Stability for the ally with the lowest Stability",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/balthilde/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Practical Modifications",
+      "level": 40,
+      "effect": "Before allies are attacked, Defense Construct restores 1 Stability for them",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/balthilde/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Mechanical Control",
+      "level": 40,
+      "effect": "When a Construct is on the field, increases Stability damage dealt by self by 3 points",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/balthilde/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/balthilde/affi.png"
+    },
+    {
+      "name": "Common Key - Adept Smith",
+      "level": 40,
+      "effect": "HP +5% / Increases DEF for the holder's Physical Summon by 7%",
+      "materials": "None",
+      "image": "assets/images/characters/balthilde/common.png"
+    },
+    {
+      "name": "Expansion Key - Steel Awakening",
+      "level": 60,
+      "effect": "After using ultimate skill Raging Chainblast, if the active skill Reinforcement Protocol or Demolition Protocol is not on cooldown, Balthilde may use this skill. The Confectance Index cost of the ultimate skill Raging Chainblast is reduced to 4 points.\nConstructs gain additional effects based on the number of Performance Breakthrough stacks:\n0: Balthilde gains 4 points of Confectance Index and Constructs cleanse 1 debuff from ally units withing 5 tiles.\n2: Defense of any ally units within 5 tiles from Constructs is increased by 20%. Does not stack.\n5: When using ultimate skill Raging Chainblast and there are Constructs fwithing the area of effect, trigger the damaging death effect of the passive skill Wrench Calibration for them. Each stack of Performance Breakthrough increases the damage multiplier of the death effect by 20%.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/balthilde/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/balthilde/portrait.png",
+    "avatar": "assets/images/characters/balthilde/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

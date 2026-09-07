@@ -1,0 +1,250 @@
+{
+  "slug": "basti",
+  "name": "Basti",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Corrosion",
+  "weapon_type": "Handgun",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Dona Eis Requiem",
+  "stats": {
+    "hp": 1997,
+    "atk": 731,
+    "def": 522
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Electric",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Reckless Provocation",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/basti/skill1-icon.png",
+      "range_image": "assets/images/characters/basti/skill1-range.png"
+    },
+    {
+      "name": "Bad Influence",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an ally within 6 tiles then selects 1 friendly Toxic Mist tile, teleport selected ally to that tile, restores HP equal to 100% of attack and 5 points of Stability Index for selected ally, cleanse 2 debuffs and apply Continuous Healing II for 2 turns for selected ally. Teleports Basti to an open space within 1 tile of the selected ally's location. After skill usage, Basti gains 6 tiles of Additional Movement.",
+      "icon": "assets/images/characters/basti/skill2-icon.png",
+      "range_image": "assets/images/characters/basti/skill2-range.png"
+    },
+    {
+      "name": "Landmine Gal",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an open tile within a 6 tile radius and summons Cutie Pie on it. After skill usage, Basti can use active skills Landmine Gal, Bad Influence or her ultimate skill Sugar-Coated Trap. This skill can be used up to 2 times per turn.\n\nCutie Pie: A summoned unit that inherits Basti’s base attributes. If enemy targets are present within a 3-tile radius upon summoning, or if enemy targets spawn, end their action, or are passively displaced into the area, Cutie Pie self-destructs within the area, dealing AoE Corrosion damage equal to 100% ATK and 2 points of Stability damage, and creating a Toxic Mist tiles within the area for 2 turns. Additionally, applies Toxic Inundation and Stun to all enemy targets in the area for 2 turns, and restores HP equal to 80% ATK and 1 point of Stability Index to Basti. A maximum of 2 such summons can exist on the field at the same time.",
+      "icon": "assets/images/characters/basti/skill3-icon.png",
+      "range_image": "assets/images/characters/basti/skill3-range.png"
+    },
+    {
+      "name": "Sugar-Coated Trap",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "8",
+      "description": "Selects 1 enemy target within 8 tiles and deals AoE Corrosion damage equal to 150% ATK to the target and all enemy targets within 8 tile radius around it, creates Toxic Mist tiles for 2 turns, and applies 1 stack of Grudge.",
+      "icon": "assets/images/characters/basti/ult-icon.png",
+      "range_image": "assets/images/characters/basti/ult-range.png"
+    },
+    {
+      "name": "The World of Graffiti",
+      "tags": [
+        "Passive",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "At the start of the turn, gains 1 point of Confectance Index.\nAt the start of battle, creates Toxic Mist tiles for 2 turns on the tiles where all allied Dolls are located. After moving, leaves Toxic Mist tiles within a 1-tile radius around herself for 2 turns.\nIf an enemy target is standing on an allied Toxic Mist tile, it gains Sloppy Grimace.\nWhen Cutie Pie is summoned and at the start of the turn, if allied units are on allied Toxic Mist tiles, they gain Mark of Comrades and Attack Up II for 2 turns.",
+      "icon": "assets/images/characters/basti/passive-icon.png",
+      "range_image": "assets/images/characters/basti/passive-rangre.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Landmine Gal",
+      "level": 2,
+      "effect": "Increased range by 2 tiles. This skill can be used up to 3 times per turn.\nCutie Pie effect is enchanced: The effective range is increased to 5 tiles, maximum number of summons on the field has been increased to 3."
+    },
+    {
+      "tier": 2,
+      "skill": "The World of Graffiti",
+      "level": 2,
+      "effect": "Basti's stability damage taken is reduced by 1 point.\nAt the start of battle, creates Toxic Mist tiles for 2 turns on the tiles where all allied Dolls are located and within a 3×3 area around them. After moving, leaves Toxic Mist tiles within a 3-tile radius around herself for 2 turns.\nBefore dealing damage, the caster and Cutie Pie gain 1 stack of Energy Drink."
+    },
+    {
+      "tier": 3,
+      "skill": "The World of Graffiti",
+      "level": 3,
+      "effect": "Energy Drink effect is enhanced: damage dealt increase per stack is increased to 24%, and healing done is increased to 6%.\nMark of Comrades effect is enhanced: damage dealt increase is increased to 30%.\nSloppy Grimace effect is enhanced: Corrosion damage taken increase is raised to 30%, and HP restored to the attacker when taking Corrosion damage is increased to 30% of the damage dealt."
+    },
+    {
+      "tier": 4,
+      "skill": "Sugar-Coated Trap",
+      "level": 2,
+      "effect": "Damage multiplier increased to 200%.\nApply 2 additional layers of Alleviation Dependence.\nAfter the skill usage, restores 50% of Basti's ATK as HP of all friendly units, dispelling 2 debuffs."
+    },
+    {
+      "tier": 5,
+      "skill": "Sugar-Coated Trap",
+      "level": 3,
+      "effect": "Number of Grudge stacks applied is increased to 3 layers, and its damage multiplier is increased to 200%.\nFor each target hit, the damage dealt is increased by 20%, up to a maximum of 100%.\nAfter skill usage, additionally removes Infatuated and Stun from all allied units."
+    },
+    {
+      "tier": 6,
+      "skill": "Landmine Gal",
+      "level": 3,
+      "effect": "After each Cutie Pie self-detonates, ATK of Basti and Cutie Pie is increased by 3%.\nCutie Pie effect is enchanced: Damage multiplier increased to 130%, and 1 random powerful debuff is applied when damage is dealt."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +34\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +84\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +41\nDEF +32",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +116\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +48\nDEF +42",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +56\nHP +151",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - A Moment of Inspiration",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/basti/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Street Art",
+      "level": 20,
+      "effect": "While allied Toxic Mist tiles are present on the field, all allied units deal 7% increased Corrosion damage.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/basti/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Pain Dependency",
+      "level": 30,
+      "effect": "When Fear, Taunt, Infatuated, Stun, or Immobilize is applied, the effect is immediately removed; this can trigger up to once per battle.\nAt the start of battle, gains Defense Up III for 3 turns.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/basti/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Genius of Calamity",
+      "level": 30,
+      "effect": "When Cutie Pie is summoned, restores HP equal to 100% ATK and 2 points of Stability Index to the allied target with the lowest current HP on the field; this can trigger up to once per turn.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/basti/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Scary Gift",
+      "level": 40,
+      "effect": "Before attacking, Cutie Pie dispels 1 buff from the target.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/basti/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Love Smear",
+      "level": 40,
+      "effect": "When Cutie Pie is summoned, creates a Toxic Mist tile on its current tile.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/basti/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Hat Trick",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/basti/affi.png"
+    },
+    {
+      "name": "Common Key - Deadly Possessiveness",
+      "level": 40,
+      "effect": "CRIT +5.0% / If an enemy target is standing on a Corrosion-type tile, phase damage dealt to them is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/basti/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/basti/portrait.png",
+    "avatar": "assets/images/characters/basti/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "summons": [
+    {
+      "name": "Cutie Pie",
+      "description": "A summoned unit that inherits Basti’s base attributes. If enemy targets are present within a 3-tile radius upon summoning, Cutie Pie self-destructs within the area.",
+      "stats": {
+        "hp": "100% of Basti's initial HP",
+        "atk": "100% of Basti's initial ATK",
+        "def": "100% of Basti's initial DEF"
+      },
+      "stability_gauge": "0 points",
+      "movement_speed": "0 tiles"
+    }
+  ],
+  "server": "global"
+}

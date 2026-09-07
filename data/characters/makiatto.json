@@ -1,0 +1,253 @@
+{
+  "slug": "makiatto",
+  "name": "Makiatto",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Freeze",
+  "weapon_type": "Sniper Rifle",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Bittersweet Caramel",
+  "stats": {
+    "hp": 1819,
+    "atk": 844,
+    "def": 504
+  },
+  "skill_attribute": "Freeze",
+  "weakness": "Burn",
+  "stability_gauge": "9 points",
+  "movement_speed": "4 tiles",
+  "skills": [
+    {
+      "name": "Lone Wolf Territory",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Heavy Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 9 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/makiatto/skill1-icon.png",
+      "range_image": "assets/images/characters/makiatto/skill1-range.png"
+    },
+    {
+      "name": "Cold Precision Shot",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 9 tiles and deals Freeze damage equal to 160% of attack. Increases the critical damage of this attack by 30%. Gains 1 stack of Cold Conviction for each instance of damage dealt.",
+      "icon": "assets/images/characters/makiatto/skill2-icon.png",
+      "range_image": "assets/images/characters/makiatto/skill2-range.png"
+    },
+    {
+      "name": "Professional Tactics",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 9 tiles of self, deal Physical damage equal to 130% of attack, gain 4 points of Confectance Index, and gain 2 stacks of Standard Approach.",
+      "icon": "assets/images/characters/makiatto/skill3-icon.png",
+      "range_image": "assets/images/characters/makiatto/skill3-range.png"
+    },
+    {
+      "name": "Absolute Mental Defense",
+      "tags": [
+        "Active",
+        "Buff",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Gains Frost Barier and Alert for 2 turns. The absorption amount of Frost Barrier is equal to 65% of the initial attack, but cannot exceed 60% of max HP.",
+      "icon": "assets/images/characters/makiatto/ult-icon.png",
+      "range_image": "assets/images/characters/makiatto/ult-range.png"
+    },
+    {
+      "name": "Battlefield Insight",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Increases critical rate by 40% and reduces critical damage by 10%.\n\nAt the start of the turn, if this unit's HP exceeds 80%, gains Insight and Steady Progress until the next turn. When attacking a target with Frozen, ignores 4 points of Stability Index and increases damage dealt to them by 20%. When attacking a target with Frigid, ignores 6 points of Stability Index and increases damage dealt to them by 30%. These effects cannot stack.",
+      "icon": "assets/images/characters/makiatto/passive.png",
+      "range_image": "assets/images/characters/makiatto/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Cold Precision Shot",
+      "level": 2,
+      "effect": "Perform two attacks, critical damage will no longer increase, and the damage dealt is decreased to 100% of attack. If the first attack crits, the critical rate of the second attack is increased by 100%, and the critical damage is increased by 80%."
+    },
+    {
+      "tier": 2,
+      "skill": "Absolute Mental Defence",
+      "level": 2,
+      "effect": "The absorption amount of Frost Barrier is increased to 80% of this unit's initial attack, and the cap is increased to 80% of max HP. The number of Interception triggered is increased by 1 time per turn."
+    },
+    {
+      "tier": 3,
+      "skill": "Battlefield Insight",
+      "level": 2,
+      "effect": "When dealing Freeze damage to an enemy target with Frozen, increases the Stability Index ignored to 6 points. When dealing Freeze damage to an enemy target with Frigid, increases the stability index ignored to 10 points."
+    },
+    {
+      "tier": 4,
+      "skill": "Professional Tactics",
+      "level": 2,
+      "effect": "Change Standard Approach to Emergency Plan."
+    },
+    {
+      "tier": 5,
+      "skill": "Battlefield Insight",
+      "level": 3,
+      "effect": "When dealing Freeze damage to an enemy target with Frozen or Frigid, increases the Stability Index ignored to 10 points and damage dealt by 30%."
+    },
+    {
+      "tier": 6,
+      "skill": "Absolute Mental Defence",
+      "level": 3,
+      "effect": "After using Absolute Mental Defense, gains 2 points of Confectance Index at the end of the action. This effect can be triggered 2 times.\n\nInterception can be triggered once more each turn. If the Interception deals a critical hit, gains Rapture for 1 turn."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +77\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +48\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +105\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +56\nDEF +38",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +137",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Additional Intelligence",
+      "level": 20,
+      "effect": "When the active skill Cold Precision Shot results in a kill, gains 1 point of Confectance Index.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/makiatto/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Freeze with Milk Foam",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/makiatto/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Indomitable Lone Wolf",
+      "level": 30,
+      "effect": "After using the active skill Professional Tactics, if there are no other allied units within 3 tiles, gains 1 stack of Lone Wolf.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/makiatto/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Time for a Break",
+      "level": 30,
+      "effect": "When using Lone Wolf Territory, Cold Precision Shot, or Professional Tactics on a Freeze tile, cleanses all Freeze debuffs from self and gains 3 tiles of Additional Movement.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/makiatto/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Heated Caramel",
+      "level": 40,
+      "effect": "At the start of the battle, applies Murderous Intent to the enemy unit with the highest HP.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/makiatto/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Absolute Concentration",
+      "level": 40,
+      "effect": "Increases attack by 10% at the start of the battle. This effect lasts until HP drops below 100% for the first time.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/makiatto/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Love So Sweet",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/makiatto/affi.png"
+    },
+    {
+      "name": "Common Key - Survival Instinct",
+      "level": 40,
+      "effect": "ATK +5.0% / At the start of the action, if own HP is greater than 80%, reduces Stability Damage taken from attacks by 2 points. This can trigger at most once per turn.",
+      "materials": "None",
+      "image": "assets/images/characters/makiatto/common.png"
+    },
+    {
+      "name": "Expansion Key - Sniper's Lock",
+      "level": 60,
+      "effect": "Critical damage of Interceptions is increased by 30%.\n\nWhen Absolute Mental Defence is active, gains Extra Command and refunds Confectance Index consumed by the attack with said Extra Command. If the target of extra attacks is a Boss unit, before the attack, inflicts Sugar Overdose for 2 turns.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/makiatto/expan.png"
+    },
+    {
+      "name": "Expansion Key tier 2",
+      "level": 60,
+      "effect": "At the start of the battle, increases own ATK by 30% and ignores 30% of enemy target's DEF when attacking; additionally creates 1 high ground on the nearest empty tile. While on high ground, damage dealt increases by 80% and critical damage increases by 30%.\nWhen Ambush hits a target, summons 1 Ice Construct nearby. When Ice Construct spawns and at the end its action, if inflicts Taunt on all enemy targets within 3-tile radius (targets that are ambushed and recieve Taunt will not have it take effect immediately), lasting 2 turns.",
+      "materials": "1\n\n\n10000",
+      "image": "assets/images/characters/makiatto/expan2.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/makiatto/portrait.png",
+    "avatar": "assets/images/characters/makiatto/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

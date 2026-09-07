@@ -1,0 +1,245 @@
+{
+  "slug": "suomi",
+  "name": "Suomi",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Freeze",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Unspoken Calling",
+  "stats": {
+    "hp": 1955,
+    "atk": 672,
+    "def": 617
+  },
+  "skill_attribute": "Freeze",
+  "weakness": "Corrosion",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Pelting Snowflake",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/suomi/skill1-icon.png",
+      "range_image": "assets/images/characters/suomi/skill1-range.png"
+    },
+    {
+      "name": "Winter's Wrath",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 4,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles, dealing Freeze damage equal to 100% of attack to them. This skill's critical rate is reduced by 100%, but additionally deals fixed damage equal to 50% of defense. For each allied unit within 6 tiles, increases Stability Damage dealt by 1 point.",
+      "icon": "assets/images/characters/suomi/skill2-icon.png",
+      "range_image": "assets/images/characters/suomi/skill2-range.png"
+    },
+    {
+      "name": "Snow's Grace",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Select 1 allied target (excluding self) within 6 tiles and apply Frost Barrier for 2 turns. Frost Barrier absorption amount is equal to 130% of Suomi's initial attack, but cannot exceed 100% of the target's max HP. Restore 2 Stability Index. For each enemy unit within 5 tiles of the selected target, apply 1 stack of Defensive Support for 2 turns.",
+      "icon": "assets/images/characters/suomi/skill3-icon.png",
+      "range_image": "assets/images/characters/suomi/skill3-range.png"
+    },
+    {
+      "name": "Snowfield's Radiance",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 5,
+      "range": 6,
+      "effect_area": "3",
+      "description": "Selects 1 empty tile within 6 tiles, dealing fixed damage equal to 50% of defense to all enemy targets within 3 tiles, applying 2 stacks of Avalanche.\n\nRestores 2 points of stability, cleanses 1 debuff, and cleanses the effect of Taunt from all allied units. Additionally, applies Frost Barrier and 1 stack of Wintry Bastion for three turns. Frost Barrier absorbs damage equal to 100% of Suomi's initial attack, up to a maximum of 100% of the target's max HP.\n\nAfter this skill is used, generates Frost tiles in a snowflake-shaped area within a 3 tile radius around the selected tile for 3 turns.",
+      "icon": "assets/images/characters/suomi/ult-icon.png",
+      "range_image": "assets/images/characters/suomi/ult-range.png"
+    },
+    {
+      "name": "Source of Warmth",
+      "tags": [
+        "Passive",
+        "Healing",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the end of the action, gains 2 points of Confectance Index, restores 5% of Suomi's max HP to other allied units within 6 tiles. If the target's HP is below 50%, increases the amount restored to 10%.\n\nWhen allied units (excluding Suomi) use basic attacks or skills, Suomi applies 1 stack of Avalanche to a random enemy target within 6 tiles of herself.\n\nWhen an enemy unit within range takes targeted damage from an ally, prioritizes using Action Support once, dealing Physical damage equal to 80% of attack and 3 Stability Damage. Applies Critical Damage Up I to the allied unit for 2 turns. This can be triggered twice per turn. When HP is above 80%, gains Sleepdrift Sprint.",
+      "icon": "assets/images/characters/suomi/passive.png",
+      "range_image": "assets/images/characters/suomi/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Snowfield's Radiance",
+      "level": 2,
+      "effect": "Increases the number of stacks of Avalanche by 1.\n\nRecovers HP equal to 30% of Suomi's maximum HP and restores Stability Index by 4 points to all allied units. All allied units (excluding self) gain an additional 1 stack of Wintery Bastion.\n\nIf an allied unit is at full HP before being healed, they gain an additional 1 stack of Shelter and Continuous Healing I for 3 turns."
+    },
+    {
+      "tier": 2,
+      "skill": "Source of Warmth",
+      "level": 2,
+      "effect": "If allied units have Frost Barrier, apply Warding Light to them.\n\nThe effect Speedrift Sprint is enhanced, support range is increased by 2 tiles."
+    },
+    {
+      "tier": 3,
+      "skill": "Snow's Grace",
+      "level": 2,
+      "effect": "Apply Impact Response I to the target for 2 turns. for each surrounding large enemy unit, apply 1 additional stack of Defensive Support."
+    },
+    {
+      "tier": 4,
+      "skill": "Winter's Wrath",
+      "level": 2,
+      "effect": "If it causes Stability Break, increases fixed damage to 125% of defense."
+    },
+    {
+      "tier": 5,
+      "skill": "Source of Warmth",
+      "level": 3,
+      "effect": "Additional effect Warding Light is added: when attacked, if Frost Barrier is not broken, inflict 1 point of Stability Damage to the attacker.\n\nSupport Actions now trigger an additional 1 time per turn, and recovers 1 point of Stability Index for other allied units within 4 tiles around the user."
+    },
+    {
+      "tier": 6,
+      "skill": "Snowfield's Radiance",
+      "level": 3,
+      "effect": "Applies Defense Up II to all allied units for 3 turns. Increases the number of cleansed debuffs by 2, and also cleanses the effects of Fear, Infatuated, and Stun. Increases restored HP by 50% of Suomi's max HP. Expand the radius of Frost by 1 tile.\n\nThe effect of Shield is enhanced by 30%, up to a maximum of 150% of the target's max HP."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +31\nDEF +26",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +82\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +38\nDEF +36",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +113\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +45\nDEF +46",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +51\nHP +148",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Unyielding Momentum",
+      "level": 20,
+      "effect": "After using the active skill Winter's Wrath, if the target goes into / is in Stability Break, restores 2 points of Soumi's Stability.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/suomi/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Little Guardian",
+      "level": 20,
+      "effect": "At the start of the battle, gain 3 points of Confectance Index.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/suomi/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Positive Feedback",
+      "level": 30,
+      "effect": "When using the active skill Snow's Grace, if the target's HP is below 80%, gain 1 point of Confectance Index.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/suomi/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Move Swiftly",
+      "level": 30,
+      "effect": "At the start of your turn, for each allied unit (excluding self) whose HP is below 80%, increase this unit's mobility by 1 tile.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/suomi/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Immovable",
+      "level": 40,
+      "effect": "When inflicted with Stun, Taunt, or Paralysis, immediately cleanse that effect and become immune to Stun, Taunt, or Paralysis for one turn. Simultaneously, gain Frost Barrier for 3 turns. Frost Barrier absorbs damage equal to 60% of base attack, up to a maximum of 100% of Suomi's max HP. This can trigger only 1 time per battle.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/suomi/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Logistics Support in Progress",
+      "level": 40,
+      "effect": "At the end of this unit's action, if this unit's stability is greater than 0, recovers 10% of this unit's maximum HP and 1 point of stability.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/suomi/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Rock and Roll",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/suomi/affi.png"
+    },
+    {
+      "name": "Common Key - Mission's Blessing",
+      "level": 40,
+      "effect": "DEF +5.0% / When HP drops below 80%, restore 15% of this unit's maximum HP and gain Defense Up III for 2 turns. Can trigger only once per battle.",
+      "materials": "None",
+      "image": "assets/images/characters/suomi/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "Action Support deals Freeze damage instead\n\nWhen allies have Frost Barrier, increases Freeze damage dealt by 15% and restores 4 Stability at the start of the round. Before allies attack, if they do not have Frost Barrier, Suomi immediately applies Frost Barrier on them for 2 turns. Frost Barrier absorbs damage equal to 60% of Suomi's initial attack, up to a maximum of 100% of the target's max HP\n\nSnowfield's Radiance: This skill applies Ice Seal for 2 turns",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/suomi/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/suomi/portrait.png",
+    "avatar": "assets/images/characters/suomi/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,282 @@
+{
+  "slug": "faelynn",
+  "name": "Faelynn",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Corrosion",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Bristlefang Beast",
+  "stats": {
+    "hp": 1948,
+    "atk": 820,
+    "def": 553
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Electric",
+  "stability_gauge": "9 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Cuspid Combo",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/faelynn/skill1-icon.png",
+      "range_image": "assets/images/characters/faelynn/skill1-range.png"
+    },
+    {
+      "name": "Triple Maul",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "3",
+      "description": "Selects 1 enemy unit within 8 tiles, dealing AoE Corrosion damage equal to 60% of attack to all enemies within 3 tile of the target, cleanses 1 buff, inflicts Infatuated and Scent Mark and create Toxic Mist tiles for 2 turns. The damage multiplier of this skill is increased by 5% based on the number of Hunter's Tracking stacks held by the target. After the skill resolves, Faelynn gains 3 points of Confectance Index and 1 random buff, lasting 2 rounds.",
+      "icon": "assets/images/characters/faelynn/skill2-icon.png",
+      "range_image": "assets/images/characters/faelynn/skill2-range.png"
+    },
+    {
+      "name": "Keen-Eared Hunt",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Faelynn gains Roving Bloodlust for 3 turns and Dog-Eared Radar for 2 turns. After the skill resolves, she gains Extra Command.",
+      "icon": "assets/images/characters/faelynn/skill3-icon.png",
+      "range_image": "assets/images/characters/faelynn/skill3-range.png"
+    },
+    {
+      "name": "Loyal Hunt",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects a direction and deals AoE Corrosion damage equivalent to 120% ATK to all enemies within a 3x9 frontal area in the selected direction and creates Toxic Mist for 2 rounds. The damage multiplier is increased by 5% based on the number of Hunter's Tracking stacks held by the target. After the skill resolves, if Faelynn has Combo Pounce, consumes 1 stack of it to trigger the additional active skill Hunting Instinct I and gain Additional Movement.",
+      "icon": "assets/images/characters/faelynn/ult-icon.png",
+      "range_image": "assets/images/characters/faelynn/ult-range.png"
+    },
+    {
+      "name": "Relentless Counterattack",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of battle, Faelynn gains 1 stack of Combo Pounce, stacking up to 3 times. Faelynn gains 1 stack of Combo Pounce stacks based on the number of active skills used (excluding Hunting Instinct).\nAt the start of the turn, if Faelynn is on a phase tile, she gains 1 mobility and 1 stack of Hunter's Tracking based on the tile's level, lasting 1 turn.\nIf Faelynn takes damage on a Corrosion-attribute tile, transfers 50% of the initial damage taken to the ally unit with the highest current HP (excluding Faelynn herself).\nFaelynn is immune to displacement, movement debuffs, and action prohibition effects.",
+      "icon": "assets/images/characters/faelynn/passive.png",
+      "range_image": "assets/images/characters/faelynn/passive-range.png"
+    },
+    {
+      "name": "Hunting Instinct I",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "3",
+      "description": "Selects 1 enemy unit within 6 tiles, dealing AoE Corrosion damage equal to 60% of attack that ignores cover to all enemies within 3 tile of the target, and applies Collar Brand. The damage multiplier increases by 5% based on the number of Hunter’s Tracking stacks possessed. \nIf only 1 target is hit, the damage multiplier is additionally increased by 30%.\nAfter using the skill, if Combo Pounce is possessed, 1 stack of this effect is consumed to trigger the extra active skill Hunting Instinct II and Additional Movement.",
+      "icon": "assets/images/characters/faelynn/skill6-icon.png",
+      "range_image": "assets/images/characters/faelynn/skill6-range.png"
+    },
+    {
+      "name": "Hunting Instinct II",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "3",
+      "description": "Selects 1 enemy unit within 6 tiles, dealing AoE Corrosion damage equal to 120% of attack that ignores cover to all enemies within 3 tile of the target. Damage dealt to targets with Collar Brand is increased by 50%. The damage multiplier increases by 5% based on the number of Hunter’s Tracking stacks possessed. \nIf only 1 target is hit, the damage multiplier is additionally increased by 30%.\nAfter using the skill, if Combo Pounce is possessed, 1 stack of this effect is consumed to trigger the extra active skill Hunting Instinct III and Additional Movement.",
+      "icon": "assets/images/characters/faelynn/skill7-icon.png",
+      "range_image": "assets/images/characters/faelynn/skill7-range.png"
+    },
+    {
+      "name": "Hunting Instinct III",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "3",
+      "description": "Selects 1 enemy unit within 6 tiles, dealing AoE Corrosion damage equal to 240% of attack that ignores cover to all enemies within 3 tile of the target. Damage dealt to targets with Collar Brand is increased by 100%. Before attacking, if target on a phase tile, for each level of the tile, its DEF is reduced by 14% and Faelynn Critical Damage is increaced by 5%. The damage multiplier increases by 5% based on the number of Hunter’s Tracking stacks possessed. \nIf only 1 target is hit, the damage multiplier is additionally increased by 30%.",
+      "icon": "assets/images/characters/faelynn/skill8-icon.png",
+      "range_image": "assets/images/characters/faelynn/skill8-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Keen-Eared Hunt",
+      "level": 2,
+      "effect": "Apply Dog-Eared Radar for 1 additional turn. The effect of Roving Bloodlust is enhanced, increasing attack power by 30%."
+    },
+    {
+      "tier": 2,
+      "skill": "Triple Maule",
+      "level": 2,
+      "effect": "Effective area is expanded to 5 tiles around the target, and the damage multiplier is increased by 10% for each stack of Hunter's Tracking. Scent Mark's damage multiplier is increased to 100%"
+    },
+    {
+      "tier": 3,
+      "skill": "Loyal Hunt",
+      "level": 2,
+      "effect": "For each stack of Hunter's Tracking, the damage multiplier of the Ultimate Skill and active skill Hunting Instinct increases by 10%. If the Hunting Instinct II kills a target afflicted with Collar Brand, the next use of Hunting Instinct this turn will apply Collar Brand. Collar Brand's effect is enhanced: Corrosion Damage taken is increased by 30%."
+    },
+    {
+      "tier": 4,
+      "skill": "Relentless Counterattack",
+      "level": 2,
+      "effect": "At the start of the turn, gain 4 stacks of Hunter's Tracking. The maximum stacks of Hunter's Tracking is increased to 6. Hunter's Tracking's effect is enhanced: Corrosion damage dealt is increased by an additional 5%."
+    },
+    {
+      "tier": 5,
+      "skill": "Triple Maule",
+      "level": 3,
+      "effect": "Damage multiplier increased to 120%. If more than 3 targets or a Boss unit are hit, an additional instance of AoE Corrosion damage equal to 120% of attack and 1 Stability Damage is dealt to the target. Scent Mark mark is enhanced, increasing damage taken from Faelynn by 30%."
+    },
+    {
+      "tier": 6,
+      "skill": "Loyal Hunt",
+      "level": 3,
+      "effect": "Damage multiplier increased to 150%; the damage multipliers of the three extra active skill uses of Hunting Instinct are increased to 90%, 170%, and 480% respectively. Each use of Hunting Instinct deals damage twice. If the Hunting Instinct III results in a kill, gain 1 additional stack of Combo Pounce, up to a maximum of 2 stacks."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +38\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +82\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +46\nDEF +32",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +113\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +54\nDEF +42",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +62\nHP +147",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Dango Finisher",
+      "level": 20,
+      "effect": "Increases damage dealt to enemy units that are not at full HP by 7%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/faelynn/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Piloerection",
+      "level": 20,
+      "effect": "Before using the additional active skill Hunting Instinct, cleanses 1 buff from the target.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/faelynn/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - One Last Kon",
+      "level": 30,
+      "effect": "When the user dies, deals fixed damage equal to 500% of ATK and 3 points of Stability Damage to all enemy units within 6 tile radius around self, generates Toxic Mist tiles, and applies One Last Kon for 2 turns. If the enemy units are non-boss units, additional fixed damage equal to 300% of maximum HP is dealt.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/faelynn/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Predator's Footwork",
+      "level": 30,
+      "effect": "At the start of the turn, generate Toxic Mist tiles within 1 tile around the user lasting 2 turns",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/faelynn/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Floof Armor",
+      "level": 40,
+      "effect": "While the user is on a Corrosion-attribute tile, damage taken is reduced by 15% and stability damage taken is reduced by 1 point.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/faelynn/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Scenting",
+      "level": 40,
+      "effect": "At the start of battle, applies Scent Mark to the enemy unit with the highest HP for 2 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/faelynn/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - A Romantic Journey",
+      "level": 40,
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/faelynn/affi.png"
+    },
+    {
+      "name": "Common Key - Canine Intimidation",
+      "level": 40,
+      "effect": "CRIT +5.0% / At the start of the turn, if the user is on a Level 3 phase tile, AoE damage dealt is increased by 10% for 1 round.",
+      "materials": "None",
+      "image": "assets/images/characters/faelynn/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/faelynn/portrait.png",
+    "avatar": "assets/images/characters/faelynn/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "cn"
+}

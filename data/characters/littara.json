@@ -1,0 +1,244 @@
+{
+  "slug": "littara",
+  "name": "Littara",
+  "class": "Sentinel",
+  "rarity": "Standard",
+  "phase": "Physical",
+  "weapon_type": "MG",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Model ARM",
+  "stats": {
+    "hp": 1656,
+    "atk": 670,
+    "def": 487
+  },
+  "weakness": "Burn",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Quick Writing",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/littara/skill1-icon.png",
+      "range_image": "assets/images/characters/littara/skill1-range.png"
+    },
+    {
+      "name": "Perfect Opportunity",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "2",
+      "description": "Selects 1 enemy target within 8 tiles to attack, dealing AoE Physical damage equal to 70% of attack to them and all enemy targets within a 2 tiles, applying Vulnerable I for 2 turns.",
+      "icon": "assets/images/characters/littara/skill2-icon.png",
+      "range_image": "assets/images/characters/littara/skill2-range.png"
+    },
+    {
+      "name": "Reliable Cover",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 1,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Select 1 direction  around self, deal AoE Physical damage equal to 65% of attack to all enemy targets within a 3x8 area, 2 tiles away in the selected direction and apply Defense Down II for 2 turns. Destroy all destructible Cover within that area, excluding a 3x3 area around self. For each target hit, reduce this skill's cooldown by 1 turn.",
+      "icon": "assets/images/characters/littara/skill3-icon.png",
+      "range_image": "assets/images/characters/littara/skill3-range.png"
+    },
+    {
+      "name": "Strategist's Plan",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 8,
+      "effect_area": "2",
+      "description": "Selects 1 tile within 8 tiles to launch an attack, dealing AoE Physical damage equal to 85% of attack to all enemy targets within 2 tiles. If the target has a defense debuff, change the damage dealt to AoE Physical damage equal to 95% of attack and 4 points of Stability Damage. Additionally, damage dealt to targets with defense debuffs is increased by 20%.",
+      "icon": "assets/images/characters/littara/ult-icon.png",
+      "range_image": "assets/images/characters/littara/ult-range.png"
+    },
+    {
+      "name": "Systematic Breakdown",
+      "tags": [
+        "Passive",
+        "AoE"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "8",
+      "description": "At the end of the action, deals AoE Physical damage equal to 30% of attack and 1 point of Stability Damage to the nearest target within range under a defense debuff, and gains 1 point of Confectance Index.",
+      "icon": "assets/images/characters/littara/passive.png",
+      "range_image": "assets/images/characters/littara/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Perfect Opportunity",
+      "level": 2,
+      "effect": "Damage multiplier increased by 10%."
+    },
+    {
+      "tier": 2,
+      "skill": "Reliable Cover Fire",
+      "level": 2,
+      "effect": "The effect range increases to 3x8 tiles in front."
+    },
+    {
+      "tier": 3,
+      "skill": "Systematic Breakdown",
+      "level": 2,
+      "effect": "Increase damage multiplier by 20%."
+    },
+    {
+      "tier": 4,
+      "skill": "Strategist's Plan",
+      "level": 2,
+      "effect": "Damage dealt to targets with defense debuffs is increased by 20%."
+    },
+    {
+      "tier": 5,
+      "skill": "Strategist's Plan",
+      "level": 3,
+      "effect": "Confectance Index consumption is reduced by 2 points."
+    },
+    {
+      "tier": 6,
+      "skill": "Systematic Breakdown",
+      "level": 3,
+      "effect": "Deals damage to 2 nearest enemy targets within range with a defense debuff."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +31\nDEF +20",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +70\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +38\nDEF +28",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +96\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +44\nDEF +36",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +51\nHP +125",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Strategic Planning",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/littara/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Gaining Experience",
+      "level": 20,
+      "effect": "Gain 1 point of Confectance Index for every 3 instances of damage dealt.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/littara/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Press the Advantage",
+      "level": 30,
+      "effect": "When exploiting a Phase Weakness, randomly applies 1 debuff to the target after attacking for 2 turns.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/littara/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Identifying Gaps",
+      "level": 30,
+      "effect": "If the target has defense debuffs, increases critical rate by 15%.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/littara/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Battle Analysis",
+      "level": 40,
+      "effect": "When using the active skill Perfect Opportunity. applies Attack Down I to all targets for 2 turns.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/littara/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Aggressive Attack",
+      "level": 40,
+      "effect": "Before using the active skill Reliable Cover, if no movement has been made, changes the type of damage dealt to AoE Burn damage.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/littara/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Scribbled Thoughts",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/littara/affi.png"
+    },
+    {
+      "name": "Common Key - Vulnerability Exploit",
+      "level": 40,
+      "effect": "CRIT +3.0% / damage dealt to targets with defense debuffs is increased by 7%.",
+      "materials": "None",
+      "image": "assets/images/characters/littara/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "If the target has Defense type debuffs, increases damage dealt by 10% and ignores 15% of the damage reduction from Cover",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/littara/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/littara/portrait.png",
+    "avatar": "assets/images/characters/littara/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,244 @@
+{
+  "slug": "cheeta",
+  "name": "Cheeta",
+  "class": "Support",
+  "rarity": "Standard",
+  "phase": "Burn",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "MP7H1",
+  "stats": {
+    "hp": 1842,
+    "atk": 591,
+    "def": 494
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Hydro",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Welcome Gift",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal of 80% of attack to them.",
+      "icon": "assets/images/characters/cheeta/skill1-icon.png",
+      "range_image": "assets/images/characters/cheeta/skill1-range.png"
+    },
+    {
+      "name": "Spicy Candy",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within a 6 tiles, dealing Burn damage equal to 130% of attack. If the user has Blazing Assault, this attack's damage is further increased by 20%.",
+      "icon": "assets/images/characters/cheeta/skill2-icon.png",
+      "range_image": "assets/images/characters/cheeta/skill2-range.png"
+    },
+    {
+      "name": "Fireworks Festival",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 6,
+      "effect_area": "2",
+      "description": "Selects 1 enemy target within 6 tiles to attack, dealing AoE Physical damage equal to 80% of attack to them and all enemy targets within 2 tiles. If only 1 target is hit, applies Overheating to them for 1 turn.",
+      "icon": "assets/images/characters/cheeta/skill3-icon.png",
+      "range_image": "assets/images/characters/cheeta/skill3-range.png"
+    },
+    {
+      "name": "Surprise Box",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "effect_area": "6",
+      "description": "Apply Blazing Assault II and 2 random buffs to all allied targets within 6 tiles for 2 turns. For each allied unit in range, gains 1 points of Confectance Index. Gain Support, which can be activated up to 2 times per turn for 2 turns.",
+      "icon": "assets/images/characters/cheeta/ult-icon.png",
+      "range_image": "assets/images/characters/cheeta/ult-range.png"
+    },
+    {
+      "name": "Invention of the Century",
+      "tags": [
+        "Passive",
+        "Healing"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "7",
+      "description": "When the user is under the effects of buffs, after attacking, restores HP equal to 45% of attack to the allied target with the lowest HP within 7 tiles. Each buff increases the healing multiplier by 5%, up to a maximum of 15%.",
+      "icon": "assets/images/characters/cheeta/passive-icon.png",
+      "range_image": "assets/images/characters/cheeta/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Surprise Box",
+      "level": 2,
+      "effect": "The number of random buffs granted increases by 1."
+    },
+    {
+      "tier": 2,
+      "skill": "Spicy Candy",
+      "level": 2,
+      "effect": "Damage multiplier increased by 10%."
+    },
+    {
+      "tier": 3,
+      "skill": "Fireworks Festival",
+      "level": 2,
+      "effect": "Reduces Confectance Index consumption by 1 point."
+    },
+    {
+      "tier": 4,
+      "skill": "Invention of the Century",
+      "level": 2,
+      "effect": "Increases the healing multiplier by 10% for each buff the user has, up to a maximum of 30%."
+    },
+    {
+      "tier": 5,
+      "skill": "Invention of the Century",
+      "level": 3,
+      "effect": "Increases the healing multiplier by 15%."
+    },
+    {
+      "tier": 6,
+      "skill": "Surprise Box",
+      "level": 3,
+      "effect": "Confectance Index gain increases by 1 point."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +28\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +33\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +107\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +39\nDEF+ 37",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +45\nHP +139",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Legitimate Research Expenses",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/cheeta/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Super Useful Invention",
+      "level": 20,
+      "effect": "Increases Action Support's range by 2 tiles.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/cheeta/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Goldfinger",
+      "level": 30,
+      "effect": "The active skill Spicy Candy gains a new effect: When the user has Blazing Assault, restores HP equal to 100% of attack to the nearest allied target (excluding the user).",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/cheeta/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Big Prank",
+      "level": 30,
+      "effect": "Attack is increased by 3% for each buff the user has, up to a maximum of 15%.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/cheeta/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Genius Support Plan",
+      "level": 40,
+      "effect": "The active skill Fireworks Festival no longer deals damage to enemy targets. Its effect is modified to restore HP equal to 90% of attack to allied targets within range and cleanses 1 debuff.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/cheeta/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Genius' Pride",
+      "level": 40,
+      "effect": "If Blazing Assault is present at the end of the action, restore HP equal to 20% of attack to self.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/cheeta/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Genius' Luck",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/cheeta/affi.png"
+    },
+    {
+      "name": "Common Key - Overengineered Invention",
+      "level": 40,
+      "effect": "ATK +3.0% / When using an active heal, there is a 50% chance to apply 1 random buff to the target for 1 turn.",
+      "materials": "None",
+      "image": "assets/images/characters/cheeta/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "Surprise Box: After using an active attack, reduces cooldown of this skill by 2 turns",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/cheeta/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/cheeta/portrait.png",
+    "avatar": "assets/images/characters/cheeta/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

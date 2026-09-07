@@ -1,0 +1,247 @@
+{
+  "slug": "faye",
+  "name": "Faye",
+  "class": "Vanguard",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "Handgun",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Hestia",
+  "stats": {
+    "hp": 1609,
+    "atk": 731,
+    "def": 528
+  },
+  "skill_attribute": "Melee",
+  "weakness": "Hydro",
+  "stability_gauge": "8 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Practice Shot",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Melee",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to it.",
+      "icon": "assets/images/characters/faye/skill1-icon.png",
+      "range_image": "assets/images/characters/faye/skill1-range.png"
+    },
+    {
+      "name": "Ruinous Whirl",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "effect_area": "3",
+      "description": "Expends all Confectance Index. For each point of Confectance Index expended, Faye applies 1 stack of Rend to all enemy units within 3 tiles, pulls them 2 tiles towards self, and deals AoE Physical damage equal to 80% of attack, while also applying Movement Denied for 1 turn.\n\nFaye gains 8 tiles of Additional Movement and Bypass for 1 turn.",
+      "icon": "assets/images/characters/faye/skill2-icon.png",
+      "range_image": "assets/images/characters/faye/skill2-range.png"
+    },
+    {
+      "name": "Fissioned Firelight",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 4,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Faye gains 2 points of Confectance Index. Selects an enemy target within 6 tiles, applies 2 stacks of Rend to it, and deals Physical damage equal to 120% of attack.",
+      "icon": "assets/images/characters/faye/skill3-icon.png",
+      "range_image": "assets/images/characters/faye/skill3-range.png"
+    },
+    {
+      "name": "No Survivors",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within 6 tiles. Applies a number of stacks of Gash equal to the stacks of Rend to all enemies holding Rend within 6 tiles, and deals Physical damage equal to 160% of attack.\n\nIf the enemy target holds 6 or more stacks of Rend, expends 6 stacks of Rend from the target to increase the damage that the target takes from this attack by 120%.",
+      "icon": "assets/images/characters/faye/ult-icon.png",
+      "range_image": "assets/images/characters/faye/ult-range.png"
+    },
+    {
+      "name": "Tomahawk Combo",
+      "tags": [
+        "Passive",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "When attacking, Faye ignores an amount of the target's defense equal to (2% x number of Rend stacks) and recovers HP equal to 10% of max HP + (2% x the number of Rend stacks).\n\nAt the end of an enemy unit's action, if it is within 6 tiles, Faye throws a tomahawk at it, gains 1 point of Confectance Index, applies 1 stack of Rend to it, and deals Physical damage equal to 80% of attack and 2 points of Stability damage. If the enemy is within 3 tiles, Faye performs an axe whirl instead; gains 1 point of Confectance Index, applies 2 stacks of Rend to all enemy units within 3 tiles, and deals AoE Physical damage equal to 60% of attack and 1 point of Stability damage. This effect can trigger up to 2 times per turn.",
+      "icon": "assets/images/characters/faye/passive.png",
+      "range_image": "assets/images/characters/faye/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Tomahawk Combo",
+      "level": 2,
+      "effect": "the amount of defense ignored by per stack of Rend is increased by 2%.\n\nAt the end of an enemy unit's action, if it holds 2 or more stacks of Rend, Faye applies 2 stacks of Rend to the nearest enemy unit."
+    },
+    {
+      "tier": 2,
+      "skill": "Fissioned Firelight",
+      "level": 2,
+      "effect": "Damage multiplier is increased by 20%. If the enemy target holds 4 or more stacks of Rend after Faye uses this skill, Faye additionally applies a number of stacks of Gash equal to the number of stacks of Rend to it."
+    },
+    {
+      "tier": 3,
+      "skill": "Tomahawk Combo",
+      "level": 3,
+      "effect": "At the end of Faye's action, performs an axe whirl and applies Movement Denied to all enemy units within the area for 1 turn. Damage dealt by this attack is increased by 30%."
+    },
+    {
+      "tier": 4,
+      "skill": "No Survivors",
+      "level": 2,
+      "effect": "The effect of applying Gash to all enemies around Faye with Rend is changed as follow: Applies 4 stacks of Gash to all enemy units on the field. For enemy units with stacks of Rend, applies an equal number of stacks of Gash to them.\n\nAt the end of Faye's action, triggers all stacks of Gash, but does not expend the stacks of Gash."
+    },
+    {
+      "tier": 5,
+      "skill": "Ruinous Whirl",
+      "level": 2,
+      "effect": "Damage multiplier is increased by 20%. Duration of Movement Denied and Bypass is increased by 1 turn.\n\nAfter this skill is used, Faye cleanses all Defense and Movement type debuffs on self."
+    },
+    {
+      "tier": 6,
+      "skill": "No Survivors",
+      "level": 3,
+      "effect": "The effects applied when the target holds 6 or more stacks of Rend is changed as follows: Expends 6 stacks of Rend. For each stack of Rend that the enemy target holds, damage taken from this attack is increased by 20%, to a maximum increase of 160%. Each stack of Rend increases Faye's critical rate for this attack by 5% and critical damage for this attack by 2%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +34\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +68\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +41\nDEF +31",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +93\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +48\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +56\nHP +121",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Tracking by Scent",
+      "level": 20,
+      "effect": "For every unit on the field with Rend increases Faye's mobility by 1 tile, to a maximum increase of 3 tiles.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/faye/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - All-In Slash",
+      "level": 20,
+      "effect": "When the active skill Ruinous Whirl only hits one enemy unit, damage dealt is increased by 20%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/faye/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Rescue Response Supplies",
+      "level": 30,
+      "effect": "At the start of the battle, gains 3 points of Confectance Index.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/faye/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Emergency Plans",
+      "level": 30,
+      "effect": "When Faye's HP is lower than 50%, healing effect received is increased by 30%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/faye/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Crisis Protection",
+      "level": 40,
+      "effect": "At the end of Faye's action, if there are enemy units with Rend within 2 tiles, Faye gains AoE Defense I for 1 turn.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/faye/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - In the Fracas",
+      "level": 40,
+      "effect": "When an enemy unit with Gash dies, Faye's attack is increased by 4%, to a maximum increase of 20%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/faye/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/faye/affi.png"
+    },
+    {
+      "name": "Common Key - Holmgang",
+      "level": 40,
+      "effect": "CRIT +5.0% / Physical damage taken by enemy units within 3 tiles is increased by 5%.",
+      "materials": "None",
+      "image": "assets/images/characters/faye/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "When dealing damage towards enemies with Gash, ignores 50% of the target's DEF and increases ATK by 15%\n\nNo Survivors: After skill usage, applies 2 stacks of Rend on the target\n\nAfter using Flying Axe or Revolving Axe, applies Movement Denied for 1 turn",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/faye/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/faye/portrait.png",
+    "avatar": "assets/images/characters/faye/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

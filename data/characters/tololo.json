@@ -1,0 +1,277 @@
+{
+  "slug": "tololo",
+  "name": "Tololo",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Hydro",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Planeta",
+  "stats": {
+    "hp": 1819,
+    "atk": 836,
+    "def": 528
+  },
+  "skill_attribute": "Hydro",
+  "weakness": "Electric",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Meteor",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/tololo/skill1-icon.png",
+      "range_image": "assets/images/characters/tololo/skill1-range.png"
+    },
+    {
+      "name": "Black Hole Inversion",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deal Hydro damage equal to 130% of attack to it. If Phase Weakness is exploited, gain 2 points of Confectance Index.",
+      "icon": "assets/images/characters/tololo/skill2-icon.png",
+      "range_image": "assets/images/characters/tololo/skill2-range.png"
+    },
+    {
+      "name": "Supernova Impact",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deal Physical damage equal to 130% of attack to it. If under the effects of 2 or more buffs, increase damage dealt by 20% and gain 2 points of Confectance Index.",
+      "icon": "assets/images/characters/tololo/skill3-icon.png",
+      "range_image": "assets/images/characters/tololo/skill3-range.png"
+    },
+    {
+      "name": "Morte Lumina",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 4,
+      "cooldown": "4 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Select 1 enemy target within 8 tiles and deals Hydro damage equal to 180% of attack to it. If under the effects of 3 or more buffs, increases damage dealt by 15% and reduce this skill's cooldown by 2 turns.",
+      "icon": "assets/images/characters/tololo/ult-icon.png",
+      "range_image": "assets/images/characters/tololo/ult-range.png"
+    },
+    {
+      "name": "Aurora Curtain",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Fills Confectance Index to maximum at the start of the battle. After attacking, if Confectance Index is at max, consumes all of it and gains 1 instance of an Extra Action. \n\nAt the start of each action, for every 2 points of Confectance Index, gains 1 random buff that lasts until the end of the action. Each time an allied unit delas Hydro damage, this unit gains 1 stack of Lightspike.",
+      "icon": "assets/images/characters/tololo/passive.png",
+      "range_image": "assets/images/characters/tololo/passive-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Stationary Satellite",
+      "description": "Orbital support satellite fixed in position. At the end of allied turn, deals Hydro damage to target with Gravitational Mark.",
+      "stats": {
+        "hp": "100% of Tololo's initial HP",
+        "atk": "100% of Tololo's initial ATK",
+        "def": "100% of Tololo's initial DEF"
+      },
+      "stability_gauge": "0 points",
+      "movement_speed": "0 tiles",
+      "skills": [
+        {
+          "name": "Call of the Stars",
+          "description": "At the end of allied turn, deals targetted Hydro damage equal to 130% of ATK to the enemy unit within 7 tile radius around the unit that has Gravitational Mark. If no unit has Gravitational Mark, targets the nearest enemy unit.",
+          "icon": "assets/images/characters/tololo/summon1-skill1-icon.png",
+          "range_image": "assets/images/characters/tololo/summon1-skill1-range.png"
+        },
+        {
+          "name": "Sync Standstill",
+          "description": "Immune to Control effects such as Stun, Taunt, and Command Prohibition.",
+          "range_image": "assets/images/characters/tololo/summon1-passive1-range.png"
+        }
+      ]
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Black Hole Inversion",
+      "level": 2,
+      "effect": "If a Phase Weakness is exploited, ignores 15% of Cover damage reduction for this attack."
+    },
+    {
+      "tier": 2,
+      "skill": "Supernova Impact",
+      "level": 2,
+      "effect": "If under the effects of 3 or more buffs, this attack deals Hydro damage. additionally gain 1 point of Confectance Index."
+    },
+    {
+      "tier": 3,
+      "skill": "Annihilation Star",
+      "level": 2,
+      "effect": "If under the effects of 3 or more buffs, increase damage dealt by 30% and reduce this skill's cooldown by 3 turns."
+    },
+    {
+      "tier": 4,
+      "skill": "Aurora Curtain",
+      "level": 2,
+      "effect": "During an Extra Action, this unit gains Targeted Attack Boost II, Critical Rate Boost II, Phase Boost II, and Piercing II for 2 turns."
+    },
+    {
+      "tier": 5,
+      "skill": "Aurora Curtain",
+      "level": 3,
+      "effect": "The effects of Lightspike are enhanced, increasing critical rate and critical damage by 2%."
+    },
+    {
+      "tier": 6,
+      "skill": "Annihilation Star",
+      "level": 3,
+      "effect": "If this kills the target, gain 1 point of Confectance Index."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +77\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +47\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +105\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +55\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +137",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Comet Tail Transit",
+      "level": 20,
+      "effect": "Extra Action increases mobility by 1 tile.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/tololo/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Principles of Observational Astronomy",
+      "level": 20,
+      "effect": "When using Black Hole Inversion, applies Congestion to the target for 2 turns.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/tololo/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Invisible Light",
+      "level": 30,
+      "effect": "When Extra Action is triggered, gains Attack Up II and Damage Up II for 1 turn.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/tololo/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Retrograde Motion",
+      "level": 30,
+      "effect": "When using Supernova Impact, if an allied unit performs a Support Attack before skill activation, applies Stun to the target for 1 turn.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/tololo/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Galactic Cruise",
+      "level": 40,
+      "effect": "When exploiting a Phase Weakness, dispels 2 buffs from target before attacking.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/tololo/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Stellar Eclipse",
+      "level": 40,
+      "effect": "When at max HP and Stability Index, ignore 10% of the target's Cover damage reduction.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/tololo/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Stardust's Whispers",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/tololo/affi.png"
+    },
+    {
+      "name": "Common Key - Afterglow",
+      "level": 40,
+      "effect": "ATK +5.0% / When Confectance Index is below max, increases damage dealt by 7%.",
+      "materials": "None",
+      "image": "assets/images/characters/tololo/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "After using an active skill, Tololo gains 2 points of Confectance Index. If an allied unit (apart from Tololo) deals Hydro damage, the cooldown of the active skill Black Hole Inversion is reduced by 1 turn.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/tololo/expan.png"
+    },
+    {
+      "name": "Expansion Key tier 2",
+      "level": 60,
+      "effect": "At the start of the battle, Tololo gains 3 stacks of Stellar Energy Reserve.\nAt the end of Tololo's action, she gains 1 stack of Observation Advantage for 1 round. If the number of Stationary Satellites on the field has not reached its maximum, consumes 1 stack of Stellar Energy Reserve to summon 1 Stationary Satellite by Tololo's side for 2 rounds.\nAt the start of every other round, Tololo gains 3 stacks of Stellar Energy Reserve.\nAfter Tololo performs an active attack, applies Gravitational Mark to the target. After a Stationary Satellite deals damage, applies 1 stack of Starlight Refraction to the target. Tololo then gains 1 stack of Orbital Resonance.",
+      "materials": "1\n\n\n10000",
+      "image": "assets/images/characters/tololo/expan2.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/tololo/portrait.png",
+    "avatar": "assets/images/characters/tololo/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

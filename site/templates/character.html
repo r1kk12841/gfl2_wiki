@@ -1,0 +1,360 @@
+{% extends "base.html" %}
+
+{% block title %}{{ doll.name }} — GFL2: Exilium Wiki{% endblock %}
+{% block description %}Complete profile, skills, fortification, and neural helix key stats for {{ doll.name }} ({{ doll.class }}, {{ doll.phase }}).{% endblock %}
+
+{% block content %}
+<!-- Breadcrumbs -->
+<nav style="margin-bottom: 1.25rem; font-size: 0.85rem; color: var(--text-muted);">
+  <a href="{{ rel_prefix }}index.html" data-i18n="breadcrumb_home">Home</a> &gt;
+  <a href="{{ rel_prefix }}characters/index.html" data-i18n="breadcrumb_dolls">Tactical Dolls</a> &gt;
+  <span style="color: var(--text-primary);">{{ doll.name }}</span>
+</nav>
+
+<!-- Doll Header Card -->
+<section class="char-header" data-char-slug="{{ doll.slug }}">
+  <div class="char-portrait-box">
+    <img src="{{ rel_prefix }}{{ doll.images.portrait if (doll.images and doll.images.portrait) else 'assets/images/characters/' + doll.slug + '/portrait.png' }}"
+         alt="{{ doll.name }}"
+         class="char-portrait-img"
+         onerror="this.src='{{ rel_prefix }}assets/images/characters/groza/portrait.png';">
+  </div>
+
+  <div class="char-main-info">
+    <div class="char-title-row">
+      <div class="char-tags-row">
+        <span class="badge badge-{{ doll.rarity|lower }}" data-doll-rarity="{{ doll.rarity }}">{{ doll.rarity }}</span>
+        <span class="badge badge-class" data-doll-class="{{ doll.class }}">
+          <img src="{{ rel_prefix }}assets/images/class/{{ doll.class }}.png" alt="" style="width:14px; height:14px; display:inline-block; vertical-align:middle; margin-right:4px;">
+          <span>{{ doll.class }}</span>
+        </span>
+        <span class="badge" data-doll-phase="{{ doll.phase }}" style="background:rgba(255,255,255,0.06); color:var(--text-primary);">
+          <img src="{{ rel_prefix }}assets/images/phase/{{ doll.phase }}.png" alt="" style="width:14px; height:14px; display:inline-block; vertical-align:middle; margin-right:4px;" onerror="this.style.display='none';">
+          <span>{{ doll.phase }}</span>
+        </span>
+        <span class="badge badge-server badge-server-{{ (doll.server or 'global')|lower }}" data-doll-server="{{ (doll.server or 'global')|lower }}">{{ 'CN' if (doll.server or 'global')|lower == 'cn' else 'Global' }}</span>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:0.9rem;">
+        {% if doll.images and doll.images.avatar %}
+        <img src="{{ rel_prefix }}{{ doll.images.avatar }}" alt="{{ doll.name }}" class="char-avatar-img" onerror="this.style.display='none';">
+        {% endif %}
+        <h1 class="char-name-heading" style="margin:0;">{{ doll.name }}</h1>
+      </div>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="char-stats-grid">
+      {% if doll.stats %}
+        <div class="stat-box">
+          <span class="stat-box-label" data-i18n="stat_hp">HP</span>
+          <span class="stat-box-val">{{ doll.stats.hp or '-' }}</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box-label" data-i18n="stat_atk">ATK</span>
+          <span class="stat-box-val">{{ doll.stats.atk or '-' }}</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box-label" data-i18n="stat_def">DEF</span>
+          <span class="stat-box-val">{{ doll.stats.def or '-' }}</span>
+        </div>
+      {% endif %}
+      <div class="stat-box">
+        <span class="stat-box-label" data-i18n="stat_stability">Stability</span>
+        <span class="stat-box-val" style="font-size:1rem;">{{ doll.stability_gauge or '-' }}</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-box-label" data-i18n="stat_mobility">Mobility</span>
+        <span class="stat-box-val val-highlight" style="font-size:1rem;">{{ doll.movement_speed or '-' }}</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-box-label" data-i18n="stat_weakness">Weakness</span>
+        <span class="stat-box-val" data-doll-weakness="{{ doll.weakness }}" style="font-size:1rem; color:var(--phase-burn);">{{ doll.weakness or '-' }}</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-box-label" data-i18n="stat_weapon_type">Weapon Type</span>
+        <span class="stat-box-val stat-box-weapon" data-doll-weapontype="{{ doll.weapon_type }}">{{ doll.weapon_type }}</span>
+      </div>
+      {% if doll.ammo_type %}
+      <div class="stat-box">
+        <span class="stat-box-label" data-i18n="stat_ammo_type">Ammo Type</span>
+        <div class="stat-box-val stat-box-ammo">
+          <img src="{{ rel_prefix }}assets/images/ammo/{{ doll.ammo_type|replace(' ', '') }}.png" alt="{{ doll.ammo_type }}" class="ammo-type-icon" onerror="this.style.display='none';">
+          <span data-doll-ammotype="{{ doll.ammo_type }}">{{ doll.ammo_type }}</span>
+        </div>
+      </div>
+      {% else %}
+      <div class="stat-box">
+        <span class="stat-box-label" data-i18n="stat_ammo_type">Ammo Type</span>
+        <span class="stat-box-val">-</span>
+      </div>
+      {% endif %}
+      {% if doll.signature_weapon %}
+      <div class="stat-box">
+        <span class="stat-box-label" data-i18n="stat_signature_weapon">Signature Weapon</span>
+        <div class="stat-box-val stat-box-sig">
+          <a href="{{ rel_prefix }}weapons/index.html#{{ doll.signature_weapon|lower|replace(' ', '-') }}" class="sig-weapon-link">
+            <span data-doll-sigweapon="{{ doll.signature_weapon }}">{{ doll.signature_weapon }}</span>
+          </a>
+        </div>
+      </div>
+      {% else %}
+      <div class="stat-box">
+        <span class="stat-box-label" data-i18n="stat_signature_weapon">Signature Weapon</span>
+        <span class="stat-box-val">-</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section style="margin-bottom: 3rem;">
+  <h2 class="detail-section-title" data-i18n="skills_section_title">Combat Skills</h2>
+  <div class="skills-grid">
+    {% for skill in doll.skills %}
+    <div class="skill-card" data-skill-idx="{{ loop.index0 }}">
+      <div class="skill-main">
+        <div class="skill-header">
+          <div style="display:flex; align-items:center; gap:0.9rem; flex:1; min-width:240px;">
+            {% if skill.icon %}
+            <img src="{{ rel_prefix }}{{ skill.icon }}" alt="" class="skill-icon-img" onerror="this.style.display='none';">
+            {% endif %}
+            <div style="display:flex; flex-direction:column; gap:0.35rem;">
+              <span class="skill-name" data-skill-name="{{ skill.name }}">{{ skill.name }}</span>
+              <div class="skill-tags">
+                {% for tag in skill.tags %}
+                <span class="skill-tag" data-tag="{{ tag }}">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-params">
+          {% if skill.ammo_type %}
+          <div><span data-i18n="stat_ammo_type">Ammo</span>: <span class="skill-param-val" data-doll-ammotype="{{ skill.ammo_type }}">{{ skill.ammo_type }}</span></div>
+          {% endif %}
+          {% if skill.stability_damage is not none %}
+          <div><span data-i18n="skill_stab_dmg">Stability Dmg:</span> <span class="skill-param-val">{{ skill.stability_damage }}</span></div>
+          {% endif %}
+          {% if skill.cooldown %}
+          <div><span data-i18n="skill_cd">Cooldown:</span> <span class="skill-param-val">{{ skill.cooldown }}</span></div>
+          {% endif %}
+          {% if skill.confectance_cost is not none %}
+          <div><span data-i18n="skill_cost">Cost:</span> <span class="skill-param-val">{{ skill.confectance_cost }}</span></div>
+          {% endif %}
+          {% if skill.range is not none %}
+          <div><span data-i18n="skill_range">Range:</span> <span class="skill-param-val">{{ skill.range }} tiles</span></div>
+          {% endif %}
+          {% if skill.effect_area %}
+          <div><span data-i18n="skill_area">Area:</span> <span class="skill-param-val">{{ skill.effect_area }}</span></div>
+          {% endif %}
+        </div>
+
+        <div class="skill-desc" data-skill-desc="{{ loop.index0 }}">{{ skill.description | render_effects }}</div>
+      </div>
+
+      {% if skill.range_image %}
+      <div class="skill-range-preview" title="Range Pattern">
+        <img src="{{ rel_prefix }}{{ skill.range_image }}" alt="Range Pattern" class="skill-range-img" onerror="this.parentElement.style.display='none';">
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Summons Section (if present) -->
+{% if doll.summons %}
+<section style="margin-bottom: 3rem;">
+  <h2 class="detail-section-title" data-i18n="summons_section_title">Entity Summons</h2>
+  <div class="skills-grid">
+    {% for summon in doll.summons %}
+    <div class="skill-card" data-summon-card="{{ loop.index0 }}" style="border-left: 3px solid var(--accent-cyan);">
+      <div class="skill-header">
+        <div style="display:flex; align-items:center; gap:1rem;">
+          {% if summon.image %}
+          <img src="{{ rel_prefix }}{{ summon.image }}" alt="{{ summon.name }}" class="summon-unit-img" onerror="this.style.display='none';">
+          {% endif %}
+          <div style="display:flex; flex-direction:column; gap:0.25rem;">
+            <span class="skill-name summon-name" data-summon-name style="font-size:1.3rem;">{{ summon.name }}</span>
+            <span class="badge" data-i18n="summoned_unit_badge" style="background:var(--accent-cyan-dim); color:var(--accent-cyan); width:fit-content;">Summoned Unit</span>
+          </div>
+        </div>
+      </div>
+
+      {% if summon.description %}
+      <div class="skill-desc summon-desc" data-summon-desc style="margin: 0.6rem 0; font-size: 0.92rem;">
+        {{ summon.description | render_effects }}
+      </div>
+      {% endif %}
+
+      {% if summon.stats or summon.stability_gauge or summon.movement_speed %}
+      <div class="char-stats-grid summon-stats-grid">
+        {% if summon.stats %}
+          {% if summon.stats.hp %}
+          <div class="stat-box">
+            <span class="stat-box-label">HP</span>
+            <span class="stat-box-val" data-summon-stat="hp">{{ summon.stats.hp | render_effects }}</span>
+          </div>
+          {% endif %}
+          {% if summon.stats.atk %}
+          <div class="stat-box">
+            <span class="stat-box-label">ATK</span>
+            <span class="stat-box-val" data-summon-stat="atk">{{ summon.stats.atk | render_effects }}</span>
+          </div>
+          {% endif %}
+          {% if summon.stats.def %}
+          <div class="stat-box">
+            <span class="stat-box-label">DEF</span>
+            <span class="stat-box-val" data-summon-stat="def">{{ summon.stats.def | render_effects }}</span>
+          </div>
+          {% endif %}
+        {% endif %}
+        {% if summon.stability_gauge %}
+        <div class="stat-box">
+          <span class="stat-box-label">Stability</span>
+          <span class="stat-box-val" data-summon-stat="stability">{{ summon.stability_gauge | render_effects }}</span>
+        </div>
+        {% endif %}
+        {% if summon.movement_speed %}
+        <div class="stat-box">
+          <span class="stat-box-label">Mobility</span>
+          <span class="stat-box-val" data-summon-stat="mobility">{{ summon.movement_speed | render_effects }}</span>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if summon.skills %}
+      <div style="margin-top:0.75rem; display:flex; flex-direction:column; gap:0.85rem;">
+        {% for s_skill in summon.skills %}
+        <div class="summon-skill-item" data-summon-skill-idx="{{ loop.index0 }}">
+          {% if s_skill.icon %}
+          <img src="{{ rel_prefix }}{{ s_skill.icon }}" alt="" class="summon-skill-icon" onerror="this.style.display='none';">
+          {% endif %}
+          <div style="flex:1;">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.35rem;">
+              <strong style="color:var(--text-primary); font-size:1rem;" data-summon-skill-name>{{ s_skill.name }}</strong>
+            </div>
+            <div class="skill-desc" style="font-size:0.88rem;" data-summon-skill-desc>{{ s_skill.description | render_effects }}</div>
+          </div>
+          {% if s_skill.range_image %}
+          <div class="skill-range-preview summon-skill-range-preview" title="Range Pattern">
+            <img src="{{ rel_prefix }}{{ s_skill.range_image }}" alt="Range Pattern" class="summon-skill-range-img" onerror="this.parentElement.style.display='none';">
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<!-- Fortification (Vertebrae Upgrade) -->
+{% if doll.fortification %}
+<section style="margin-bottom: 3rem;">
+  <h2 class="detail-section-title" data-i18n="fortifications_section_title">Fortification (Vertebrae Upgrades)</h2>
+  <div class="table-wrapper">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 80px;">Tier</th>
+          <th style="width: 220px;">Target Skill</th>
+          <th style="width: 100px;">Level</th>
+          <th>Upgrade Effect</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for fort in doll.fortification %}
+        <tr data-fort-tier="{{ fort.tier }}">
+          <td><strong style="color:var(--accent-cyan)">Tier {{ fort.tier }}</strong></td>
+          <td><strong data-fort-skill="{{ fort.tier }}">{{ fort.skill }}</strong></td>
+          <td>{{ fort.level if fort.level is not none else '-' }}</td>
+          <td style="line-height:1.5;" data-fort-effect="{{ fort.tier }}">{{ fort.effect | render_effects }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endif %}
+
+<!-- Neural Helix & Keys -->
+{% if doll.neural_helix or doll['keys'] %}
+<section style="margin-bottom: 3rem;">
+  <h2 class="detail-section-title" data-i18n="neural_helix_section_title">Neural Helix &amp; Keys</h2>
+
+  {% if doll.neural_helix %}
+  <h3 style="font-size:1.05rem; font-weight:700; margin-bottom:0.75rem; color:var(--text-secondary);" data-i18n="helix_stats_subtitle">Stat Enhancements</h3>
+  <div class="table-wrapper">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 180px;">Node</th>
+          <th style="width: 100px;">Req. Level</th>
+          <th>Stat Enhancement</th>
+          <th style="width: 200px;">Materials</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for node in doll.neural_helix %}
+        <tr data-helix-idx="{{ loop.index0 }}">
+          <td>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              {% if node.image %}
+              <img src="{{ rel_prefix }}{{ node.image }}" alt="" class="node-icon-img" onerror="this.style.display='none';">
+              {% endif %}
+              <strong data-helix-node="{{ loop.index0 }}">{{ node.node }}</strong>
+            </div>
+          </td>
+          <td>Lv. {{ node.level if node.level is not none else '-' }}</td>
+          <td style="white-space:pre-line;" data-helix-effect="{{ loop.index0 }}">{{ node.effect | render_effects }}</td>
+          <td style="font-size:0.8rem; color:var(--text-muted); white-space:pre-line;">{{ node.materials or '-' }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+
+  {% if doll['keys'] %}
+  <h3 style="font-size:1.05rem; font-weight:700; margin:1.5rem 0 0.75rem; color:var(--text-secondary);" data-i18n="keys_section_title">Helix Keys</h3>
+  <div class="table-wrapper">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 260px;">Key</th>
+          <th style="width: 110px;">Req. Level</th>
+          <th>Key Effect</th>
+          <th style="width: 180px;">Materials</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for key in doll['keys'] %}
+        <tr data-key-idx="{{ loop.index0 }}">
+          <td>
+            <div style="display:flex; align-items:center; gap:0.85rem;">
+              {% if key.image %}
+              <img src="{{ rel_prefix }}{{ key.image }}" alt="" class="key-icon-img" onerror="this.style.display='none';">
+              {% endif %}
+              <strong style="font-size:0.95rem;" data-key-name="{{ loop.index0 }}">{{ key.name }}</strong>
+            </div>
+          </td>
+          <td>{{ key.level if key.level is not none else '-' }}</td>
+          <td style="line-height:1.5;" data-key-effect="{{ loop.index0 }}">{{ key.effect | render_effects }}</td>
+          <td style="font-size:0.8rem; color:var(--text-muted); white-space:pre-line;" data-key-materials="{{ loop.index0 }}">{{ key.materials or '-' }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+{% endblock %}

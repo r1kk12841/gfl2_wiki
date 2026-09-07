@@ -1,0 +1,237 @@
+{
+  "slug": "asteria",
+  "name": "Asteria",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Compass of Repentance",
+  "stats": {
+    "hp": 2030,
+    "atk": 722,
+    "def": 577
+  },
+  "skill_attribute": "-",
+  "weakness": "Freeze",
+  "stability_gauge": "10 points",
+  "movement_speed": "8 tiles",
+  "skills": [
+    {
+      "name": "Silent Trigger",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/asteria/skill1-icon.png",
+      "range_image": "assets/images/characters/asteria/skill1-range.png"
+    },
+    {
+      "name": "Assault Focus",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 5,
+      "effect_area": "Target",
+      "description": "Selects 1 tile within 5 tiles, leaps to it, and gains Steady for 1 turn.\n\nIf there is Cover nearby when landing, the effects of Steady is increased to 40% and applies Sync to the unit with Bond for 1 round.",
+      "icon": "assets/images/characters/asteria/skill2-icon.png",
+      "range_image": "assets/images/characters/asteria/skill2-range.png"
+    },
+    {
+      "name": "Demolition Reckoning",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff",
+        "Buff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "effect_area": "3",
+      "description": "Select one tile within a cross-shaped area of 8 tiles to launch an attack, dealing AoE Physical damage equal to 80% of attack to all enemy targets within 3 tiles and applies Movement Down II for 2 turns. If 2 or more targets or a Boss is hit, Asteria gains 6 tiles of Extra Movement and applies Sync to units holding Bond for 1 round.",
+      "icon": "assets/images/characters/asteria/skill3-icon.png",
+      "range_image": "assets/images/characters/asteria/skill3-range.png"
+    },
+    {
+      "name": "Railgun Judgement",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 5,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects a direction, applies Vindicator's Mark for 2 rounds and Defense Down II for 3 turns to all enemy targets in a 3x8 area in front, and deals AoE Physical damage equal to 240% of attack that ignores Cover damage reduction. This attacks ignores 100% of the target's defense.",
+      "icon": "assets/images/characters/asteria/ult-icon.png",
+      "range_image": "assets/images/characters/asteria/ult-range.png"
+    },
+    {
+      "name": "Bond Connextion",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of battle, select 1 Physical attributed Doll and apply Bond to them.\n\nWhen allied units deal non-ammo type Physical damage, apply the ammo type of the weapon they are using.\n\nAt the start of battle, gain Crime and Punishment.\n\nAt the end of the round after using the Ultimate skill Railgun Judgement, the unit with Bond gains Crime and Punishment and their stat increase is reduced by 50% for 1 round.",
+      "icon": "assets/images/characters/asteria/passive.png",
+      "range_image": "assets/images/characters/asteria/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Railgun Judgement",
+      "level": 2,
+      "effect": "Damage multiplier increased to 300%.\n\nWhen attacking, ignore 200% of the target's defense and nullifies all defense buff effects on the target.\n\nVindicator's Mark is enhanced: When taking Phsyical damage, takes an additional 10% of final damage as fixed damage."
+    },
+    {
+      "tier": 2,
+      "skill": "Demolition Reckoning",
+      "level": 2,
+      "effect": "Applies Stun to the target for 1 turn.\n\nSync is enhanced: Units with Bond gain 30% of Asteria's initial critical damage."
+    },
+    {
+      "tier": 3,
+      "skill": "Bond Connextion",
+      "level": 2,
+      "effect": "While under the effects of Crime and Punishment, when attacking, nullifies 150% of the target's defense buff effect.\n\nThe damage multiplier of Blade of Sin launched by Crime and Punishment increased to 100% and ignores 50% of the target's defense.\n\nBlade of Sin triggered by Physical damage has no limit on the number of triggers, but can trigger up to 1 time per unit per turn.\n\nShield of Punishment can be triggered 1 additional time."
+    },
+    {
+      "tier": 4,
+      "skill": "Assault Focus",
+      "level": 2,
+      "effect": "Sync gains a new effect: When attacking, nullifies 100% of attack reduction debuff effect.\n\nWhen applying Sync, apply Damage Reduction II to all allied units for 2 turns."
+    },
+    {
+      "tier": 5,
+      "skill": "Bond Connextion",
+      "level": 3,
+      "effect": "When Blade of Sin is launched by Crime and Punishment, applies Absolution to the target for 3 turns.\n\nAfter using an active skill (excluding Bond Connextion) or basic attack, the unit with Bond gains Crime and Punishment and resets the number of attacks from Blade of Sin until the end of this round.\n\nAsteria gains Crime and Punishment which can only trigger Shield of Punishment."
+    },
+    {
+      "tier": 6,
+      "skill": "Railgun Judgement",
+      "level": 3,
+      "effect": "Applies Defense Down III to the target for 3 turns.\n\nWhen Asteria gains Crime and Punishment again, attack is increased by 80% this turn.\n\nFor each stack of Absolution that the target has, the damage multiplier of Asteria's Ultimate skill Railgun Judgement and Blade of Sin launched by Crime and Punishment is increased by 50%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +35\nDEF +25",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +34",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +107\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +50\nDEF +44",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +140",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Invisible Guardian",
+      "level": 20,
+      "effect": "Physical damage dealt by all allied unit's out-of-turn attacks are increased by 10%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/asteria/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Vindicator",
+      "level": 20,
+      "effect": "When applying Sync, refresh the duration of all Vindicator's Mark on the field.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/asteria/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Goliath Domain",
+      "level": 30,
+      "effect": "Before a allied unit attacks a target with Vindicator's Mark, they gain Reversed Assault for 3 turns.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/asteria/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Promise of Reunion",
+      "level": 30,
+      "effect": "When a unit with Vindicator's Mark dies, apply Vindicator's Mark to the nearest enemy unit for 2 rounds.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/asteria/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Result-Oriented",
+      "level": 40,
+      "effect": "For every different enemy unit attacked by Crime and Punishment, damage dealt increased by 5%, up to a maximum of 30%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/asteria/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Path of Pursuit",
+      "level": 40,
+      "effect": "Ultimate skill Railgun Judgement is changed to deal melee damage, and damage dealt to Paradeus units is increased by 80%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/asteria/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Silent Bond",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/asteria/affi.png"
+    },
+    {
+      "name": "Common Key - One Who Looks Up to the Sky",
+      "level": 40,
+      "effect": "ATK +5% / When using an Ultimate Skill, damage dealt this turn is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/asteria/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/asteria/portrait.png",
+    "avatar": "assets/images/characters/asteria/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "cn"
+}

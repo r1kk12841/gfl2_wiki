@@ -1,0 +1,259 @@
+{
+  "slug": "springfield",
+  "name": "Springfield",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Hydro",
+  "weapon_type": "Sniper Rifle",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Radiance",
+  "stats": {
+    "hp": 1909,
+    "atk": 696,
+    "def": 585
+  },
+  "skill_attribute": "Hydro",
+  "weakness": "Electric",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Gentle Approach",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Heavy Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 9 tiles and deals Physical damage equal to 80% of attack to it.",
+      "icon": "assets/images/characters/springfield/skill1-icon.png",
+      "range_image": "assets/images/characters/springfield/skill1-range.png"
+    },
+    {
+      "name": "Intel Manipulation",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within 9 tiles and applies False Intelligence to it for 2 turns. Deals Hydro damage equal to 130% of attack to the target and applies Congestion for 1 turn. Springfield gains 1 point of Confectance Index.",
+      "icon": "assets/images/characters/springfield/skill2-icon.png",
+      "range_image": "assets/images/characters/springfield/skill2-range.png"
+    },
+    {
+      "name": "Opportune Assistance",
+      "tags": [
+        "Active",
+        "Healing",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an allied unit within 9 tiles. Recovers HP equal to 100% of attack and 3 points of Stability, and applies Overflowing Care for 2 rounds (Duration decreases at the end of the current round) to the selected unit. Springfield gains 1 point of Confectance Index.",
+      "icon": "assets/images/characters/springfield/skill3-icon.png",
+      "range_image": "assets/images/characters/springfield/skill3-range.png"
+    },
+    {
+      "name": "Path of Protection",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 2,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within 9 tiles and summons Taryz to follow it for 2 rounds (Duration decreases at the end of the current round). Applies Damp and False Intelligence to the selected enemy target and all enemy units within 3 tiles of the target for 2 turns, and deals AoE Hydro damage equal to 80% of attack.\n\nApplies Deep-Rooted Bonds and Overflowing Care to all allied units for 2 rounds (Duration decreases at the end of the current round). Recovers HP equal to 100% of attack and 2 points of Stability for all allied units, cleanses 1 debuff from them, and removes Taunt and Fear from all allied units.\n\nWhen the target that Taryz is following dies, Taryz switches to following the enemy unit with the current highest HP. Springfield gains 2 points of Confectance Index.",
+      "icon": "assets/images/characters/springfield/ult-icon.png",
+      "range_image": "assets/images/characters/springfield/ult-range.png"
+    },
+    {
+      "name": "Eagle's Vigilance",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the end of Springfield's action, if Confectance Index is maxed out, expends all Confectance Index and gains Extra Action.\n\nAt the start of the turn, if Springfield's HP is higher than 80%, gains Insight for 2 turns. If the target that Taryz is following deals damage to an allied unit, Taryz performs Counterattack on it, dealing Hydro damage equal to 20% of Springfield's max HP and 1 point of Stability damage and healing the allied unit for 20% of Springfield's max HP. Can be triggered up to 2 times per turn.\n\nIf Taryz is on the field, Springfield recovers HP equal to 20% of max HP at the end of the action.",
+      "icon": "assets/images/characters/springfield/passive.png",
+      "range_image": "assets/images/characters/springfield/passive-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Taryz",
+      "description": "Guardian drone that follows the target ally or enemy, performing Counterattack and Action Support while healing allies.",
+      "stats": {
+        "hp": "200% of Springfield's initial HP",
+        "atk": "100% of Springfield's initial ATK",
+        "def": "100% of Springfield's initial DEF"
+      },
+      "stability_gauge": "0 points",
+      "movement_speed": "6 tiles"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Opportune Assistance",
+      "level": 2,
+      "effect": "HP recovery is increased to 130% of attack. The effect of Overflowing Care is increased, HP recovery is increased to 15% of attack. The maximum amount of converted enhancement to Hydro damage is increased to 70%. In addition, applies 6 stacks of Shared Telepathy to the selected unit."
+    },
+    {
+      "tier": 2,
+      "skill": "Path of Protection",
+      "level": 2,
+      "effect": "Confectance Index gain increases by 1 point. HP recovery is increased to 120% of attack, Stability recovery is increased by 4 points, 1 additional debuff is cleansed. Additionally, removes Stun and Infatuated."
+    },
+    {
+      "tier": 3,
+      "skill": "Eagle's Vigilance",
+      "level": 2,
+      "effect": "New effect is added for Taryz: Increases Hydro damage received for the target which Taryz is following and all enemy units within 3 tiles of the target is increased by 10%.\n\nWhen Taryz is on the field, Hydro damage dealt by all allied units' out-of-turn attacks is increased by 40%.\n\nSupport effect added: When an allied unit performs an active attack to deal Hydro damage to the target Taryz is following, Taryz performs Action Support, dealing Hydro damage equal to 20% of Springfield's max HP and 1 point of Stability damage and healing that allied unit for 20% of Springfield's max HP. Can be triggered up to 2 times per turn."
+    },
+    {
+      "tier": 4,
+      "skill": "Intel Manipulation",
+      "level": 2,
+      "effect": "Damage dealt is increased to 150% of attack. When the enemy target enter Stability break with False Intelligence on self, Hydro damage taken is increased to 20%. Congestion is changed to Cold Snap for 1 turn."
+    },
+    {
+      "tier": 5,
+      "skill": "Path of Protection",
+      "level": 3,
+      "effect": "Effect range increases by 1 tile. Deep-Rooted Bonds gains new effects: Damage is reduced by 15% and duration is increased by 1 round.\n\nIncreases the duration of Taryz by 1 round. When the target that Taryz is following dies, deals fixed damage equivalent to 40% of Springfield's ATK to all enemies within a 4 tile radius of the target"
+    },
+    {
+      "tier": 6,
+      "skill": "Eagle's Vigilance",
+      "level": 3,
+      "effect": "Taryz is upgraded to Assault Taryz. all multipliers for attacks by Assault Taryz are doubled. Hydro damage multipliers are increased by 20%, Stability damage is increased by 1 point, HP recovery multiplier is increased by 20% and the effect can be triggered 2 more times per turn. Before attacking, Assault Taryz applies Vulnerability Analysis to the enemy target for 2 turns."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +32\nDEF +25",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +80\nHP +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +39\nDEF +34",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +111\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +46\nDEF +44",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +53\nHP +144",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Coalesced Core",
+      "level": 20,
+      "effect": "When using the Ultimate skill Path of Protection, it pulls all targets 3 tiles toward the centre of the effect.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/springfield/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Intel Acquisition",
+      "level": 20,
+      "effect": "Before making an active attack, Springfield dispels 1 buff from the target.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/springfield/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Airborne Link",
+      "level": 30,
+      "effect": "When Taryz is on the field, all allied unit's defense is increased by 10%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/springfield/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Mind Reader",
+      "level": 30,
+      "effect": "If the target's HP is lower than 80%, healing effects are increased by 15%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/springfield/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Behind Her Smile",
+      "level": 40,
+      "effect": "Before making an active attack, Springfield applies Hydro weakness for 1 turn.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/springfield/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Gentle Ministrations",
+      "level": 40,
+      "effect": "When healing a target in Stability Break, recovers an additional 2 points of stability for the target.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/springfield/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/springfield/affi.png"
+    },
+    {
+      "name": "Common Key - Meticulous Attention",
+      "level": 40,
+      "effect": "HP +5.0% / At the start of the turn, if Stability is not full, gains Continuous Stability Regen II for 1 turn.",
+      "materials": "None",
+      "image": "assets/images/characters/springfield/common.png"
+    },
+    {
+      "name": "Expansion Key - Vigilant Bond",
+      "level": 60,
+      "effect": "The effect of the Opportune assistance applies to all allied units. After using the Guardian’s Path, summons Elsin around the target. If Elsin is already present, damage dealt by allied Entity Summons is increased by 50%. Each time other allied Entity Summon or Taryz deal Hydro Damage, applies 1 stack of Saturation to the target. When Elsin's Passive skill Peck is triggered, it consumes Saturation; for each stack consumed, the damage multiplier of Peck is increased by 5%.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/springfield/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/springfield/portrait.png",
+    "avatar": "assets/images/characters/springfield/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,244 @@
+{
+  "slug": "lotta",
+  "name": "Lotta",
+  "class": "Sentinel",
+  "rarity": "Standard",
+  "phase": "Freeze",
+  "weapon_type": "Shotgun",
+  "ammo_type": "Shotgun Ammo",
+  "signature_weapon": "M1 Super 90",
+  "stats": {
+    "hp": 1599,
+    "atk": 696,
+    "def": 487
+  },
+  "skill_attribute": "Freeze",
+  "weakness": "Burn",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Heartfelt Confession",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Shotgun Ammo",
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/lotta/skill1-icon.png",
+      "range_image": "assets/images/characters/lotta/skill1-range.png"
+    },
+    {
+      "name": "Cryo Rounds",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects 1 direction around self, deal AoE Freeze damage equal to 60% of attack to all enemy targets within a 3x5 area in the chosen direction. Simultaneously, destroy any destructible Cover outside a 3x3 area within range around self. Additionally, applies Cold Snap to targets for 1 turn.",
+      "icon": "assets/images/characters/lotta/skill2-icon.png",
+      "range_image": "assets/images/characters/lotta/skill2-range.png"
+    },
+    {
+      "name": "Neural Adjustment",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Fills Confectance Index and gains Attack Up I for 2 turns.",
+      "icon": "assets/images/characters/lotta/skill3-icon.png",
+      "range_image": "assets/images/characters/lotta/skill3-range.png"
+    },
+    {
+      "name": "Amplified Courage",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 6,
+      "effect_area": "3",
+      "description": "Select 1 enemy target within 6 tiles of the user to launch an attack, dealing AoE Freeze damage equal to 100% of attack to it and all enemy targets within 3 tiles that ignores Cover damage reduction. If it hits 2 or more targets, gains Extra Command.",
+      "icon": "assets/images/characters/lotta/ult-icon.png",
+      "range_image": "assets/images/characters/lotta/ult-range.png"
+    },
+    {
+      "name": "Bonds of Friendship",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "When an enemy target within range is affected by Cold Snap, performs 1 instance of Wise Support, dealing AoE Physical damage equal to 50% of attack and 1 point of Stability Damage to them. This can be triggered up to 2 times per turn.",
+      "icon": "assets/images/characters/lotta/passive.png",
+      "range_image": "assets/images/characters/lotta/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Amplified Courage",
+      "level": 2,
+      "effect": "If Phase Weakness is exploited, apply Cold Snap to the target for 1 turn."
+    },
+    {
+      "tier": 2,
+      "skill": "Bonds of Friendship",
+      "level": 2,
+      "effect": "Increases mobility of self by 1 point."
+    },
+    {
+      "tier": 3,
+      "skill": "Amplified Courage",
+      "level": 3,
+      "effect": "Change \"Select Enemy Target\" to \"Select Tile\""
+    },
+    {
+      "tier": 4,
+      "skill": "Bonds of Friendship",
+      "level": 3,
+      "effect": "Stability damage dealt by Wise Support increases by 1 point."
+    },
+    {
+      "tier": 5,
+      "skill": "Cryo Rounds",
+      "level": 2,
+      "effect": "Increases the duration of Cold Snap by 1 turn."
+    },
+    {
+      "tier": 6,
+      "skill": "Neural Adjustment",
+      "level": 2,
+      "effect": "Replaces Attack Up I with Attack Up II."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +32\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +67\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +39\nDEF +28",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +93\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +46\nDEF +37",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +53\nHP +121",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Silent Cheer",
+      "level": 20,
+      "effect": "At the start of the battle, gain 3 points of Confectance Index.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/lotta/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Confidence Booster",
+      "level": 20,
+      "effect": "Increases damage dealt to enemy targets with Freeze type debuffs by 10%.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/lotta/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Trembling Aim",
+      "level": 30,
+      "effect": "If Freeze damage is dealt, applies Frozen to the target for 2 turns.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/lotta/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Careful Evasion",
+      "level": 30,
+      "effect": "When Hp is greater than 50%, reduces AoE damage taken by 20%.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/lotta/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Bold Shout",
+      "level": 40,
+      "effect": "Add a new effect to the active skill Cryo Rounds. Knock back the target by 3 tiles.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/lotta/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Soothing Touch",
+      "level": 40,
+      "effect": "The active skill Neural Adjustment gains a new effect: Gains 1 stack of Quick Barrier.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/lotta/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - New Sprout",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/lotta/affi.png"
+    },
+    {
+      "name": "Common Key - Hunting Trap",
+      "level": 40,
+      "effect": "ATK +3.0% / Increases damage dealt against enemy targets with movement debuffs by 7%.",
+      "materials": "None",
+      "image": "assets/images/characters/lotta/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "Before attacking, if the target's Stability is more than 0, increases damage dealt by 10%",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/lotta/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/lotta/portrait.png",
+    "avatar": "assets/images/characters/lotta/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

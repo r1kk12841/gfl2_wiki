@@ -1,0 +1,246 @@
+{
+  "slug": "ots-14",
+  "name": "OTs-14",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Resonance",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Capitoline",
+  "stats": {
+    "hp": 1981,
+    "atk": 802,
+    "def": 553
+  },
+  "skill_attribute": "Resonance",
+  "weakness": "Electric",
+  "stability_gauge": "9 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Shooting Instinct",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 target within 8 tiles, dealing Resonance damage equal to 90% of attack to them.",
+      "icon": "assets/images/characters/ots-14/skill1-icon.png",
+      "range_image": "assets/images/characters/ots-14/skill1-range.png"
+    },
+    {
+      "name": "Total Suppression",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "3x3",
+      "description": "Selects 1 tile within an 8-tile radius and deals AoE Resonance Damage equal to 120% of attack to all enemy targets within a 3×3 area. If OTs-14 is under Cover Order, the damage accumulated by Command Mode is increased by 25% after skill usage. If OTs-14 is under Demolition Order, for every 15% initial Critical Damage, damage dealt is increased by 15%, and the damage multiplier is doubled.",
+      "icon": "assets/images/characters/ots-14/skill2-icon.png",
+      "range_image": "assets/images/characters/ots-14/skill2-range.png"
+    },
+    {
+      "name": "Perfect Adaptation",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Switches Command Mode between Cover Order and Demolition Order. After skill usage, gains Extra Command. This skill can be used up to 3 times per turn.",
+      "icon": "assets/images/characters/ots-14/skill3-icon.png",
+      "range_image": "assets/images/characters/ots-14/skill3-range.png"
+    },
+    {
+      "name": "Sundering Demolition",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects 1 direction and applies Movement Down III to all enemy targets in front within a range of 3 to 10 tiles for 2 turns, then converts the damage accumulated by Command Mode into 1 point of Overload Pulse and gains Reverse Assimilation for 1 turn. This skill can be used while under Demolition Order and having Overload Pulse, or when the damage accumulated by Command Mode is greater than 0.",
+      "icon": "assets/images/characters/ots-14/ult-icon.png",
+      "range_image": "assets/images/characters/ots-14/ult-range.png"
+    },
+    {
+      "name": "Boojum Effect",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of battle, performs Cellular Reconfiguration and enters Cover Order.\nAt the end of the turn, if the Ultimate skill Sundering Demolition was not used during this turn, the damage accumulated by Command Mode is converted into 1 point of Overload Pulse.\nAt the end of action, if the OTs-14 is under Demolition Order, switches to Cover Order.",
+      "icon": "assets/images/characters/ots-14/passive.png",
+      "range_image": "assets/images/characters/ots-14/passive-range.png"
+    },
+    {
+      "name": "Critical Blast",
+      "tags": [
+        "Basic Attack",
+        "Active"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "3",
+      "description": "Selects 1 tile within 3-10 tile radius in front of self, deal AOE Resonance damage equal to 150% of attack to all enemy units within 3 tile radius around the selected tile. Consumes 1 Overload Pulse to deal additional fixed damage equal to 10% of accumulated damage of consumed Overload Pulse.",
+      "icon": "assets/images/characters/ots-14/skill6-icon.png",
+      "range_image": "assets/images/characters/ots-14/skill6-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Perfect Adaptation",
+      "level": 2,
+      "effect": "Cover Order effect enhanced: the increase to critical damage of all allied units except the user is raised to 15% of the user's initial Critical Damage.\nDemolition Order effect enhanced: the increase to the user's attack is raised to 15% of the initial attack of all allied Dolls except the user."
+    },
+    {
+      "tier": 2,
+      "skill": "Total Suppression",
+      "level": 2,
+      "effect": "Increases damage multiplier to 150%.\nThe effective area has been increased to 5×5 tiles.\nCooldown reduced by 1 turn."
+    },
+    {
+      "tier": 3,
+      "skill": "Sundering Demolition",
+      "level": 2,
+      "effect": "Reverse Assimilation effect enhanced: the damage of Critical Blast is increased to 200%, and its effective range is increased by 2 tiles."
+    },
+    {
+      "tier": 4,
+      "skill": "Sundering Demolition",
+      "level": 3,
+      "effect": "Reverse Assimilation effect enhanced: each time Critical Blast is used during the current turn, the damage multiplier of Critical Blast is increased by 50%, and the multiplier of the fixed damage dealt by consuming Overload Pulse is increased by 10%."
+    },
+    {
+      "tier": 5,
+      "skill": "Total Suppression",
+      "level": 3,
+      "effect": "If the user is under Cover Order, the increase to damage accumulated by Command Mode after skill usage is raised to 33%.\nIf the user is under Demolition Order, then for every 15% initial Critical Damage, the damage multiplier is increased by 15%."
+    },
+    {
+      "tier": 6,
+      "skill": "Boojum Effect",
+      "level": 2,
+      "effect": "Total Suppression active skill creates Phase tiles lvl 1 for 2 turns in the effective area if any Phase Reconfiguration is active. Reconfiguration · Zero does not create tiles.\nThe effects of Cellular Reconfiguration are enhanced: \nReconfiguration · Burn - Dispels 1 debuff when teammates gain Embers;\nReconfiguration · Electro - When an enemy unit's enters Stability Break, all allies regain 1 point of Stability Index;\nReconfiguration · Freeze - When an ally deals damage, increases their ATK by 10% of their shield value;\nReconfiguration · Corrosion - Active skill Total Suppression triggers all Corrosion debuffs held by enemy units within effect range;\nReconfiguration · Hydro - For each friendly unit, all Entity Summons gain 1% ATK and 1% maximum HP increase;\nReconfiguration · Zero - Demolition Order increases attack power by 50% instead of 30%, ignore 5% defense for every 15% initial Critical Damage."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +37\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +84\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +45\nDEF +32",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +115\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +53\nDEF +42",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +61\nHP +150",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Plunderer's Pace",
+      "level": 20,
+      "effect": "After using the Active skill Total Suppression or Perfect Reaction, gains Additional Movement for 6 tiles. Can be triggered up to 1 time per turn.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/ots-14/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Self-Recognition",
+      "level": 20,
+      "effect": "When gaining Reverse Assimilation, dispels all debuffs from self.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/ots-14/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Single-Minded Obsession",
+      "level": 30,
+      "effect": "If an active attack hits only 1 enemy target, damage dealt is increased by 20%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/ots-14/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Perfect Plan",
+      "level": 30,
+      "effect": "Before using the active skill Total Suppression, dispels 1 buff from the targets.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/ots-14/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - At All Costs",
+      "level": 40,
+      "effect": "While OTs-14 is in the Cover Order state, damage taken is reduced by 20%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/ots-14/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Destructive Desire",
+      "level": 40,
+      "effect": "Cellular Reconfiguration always grants Reconfiguration · Zero.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/ots-14/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key -  Private style",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/ots-14/affi.png"
+    },
+    {
+      "name": "Common Key - Source of Pride",
+      "level": 40,
+      "effect": "CRIT DMG +5.0% / The user's fixed damage is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/ots-14/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/ots-14/portrait.png",
+    "avatar": "assets/images/characters/ots-14/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

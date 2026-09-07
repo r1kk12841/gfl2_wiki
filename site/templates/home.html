@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}GFL2: Exilium Wiki — Tactical Dolls & Armory{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-tag" data-i18n="hero_tag">OPERATIONAL DATABASE</div>
+  <h1 class="hero-title">Girls' Frontline 2: Exilium</h1>
+  <p class="hero-desc" data-i18n="hero_desc">
+    Complete tactical intelligence database covering Tactical Dolls, Armory statistics, Fortification upgrades, Neural Helix keys, and status mechanics.
+  </p>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <span class="stat-val">{{ dolls|length }}</span>
+      <span class="stat-label" data-i18n="hero_stat_dolls">Tactical Dolls</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">{{ weapons|length }}</span>
+      <span class="stat-label" data-i18n="hero_stat_weapons">Weapons</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">4</span>
+      <span class="stat-label" data-i18n="hero_stat_classes">Tactical Classes</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">7</span>
+      <span class="stat-label" data-i18n="hero_stat_phases">Elemental Phases</span>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Class Navigation -->
+<div style="margin-bottom: 3rem;">
+  <h2 class="detail-section-title" data-i18n="home_classes_title">Tactical Classes</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+    {% for cls in ['Bulwark', 'Vanguard', 'Support', 'Sentinel'] %}
+    <a href="{{ rel_prefix }}characters/index.html?class={{ cls }}" style="text-decoration:none;">
+      <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.25rem; display:flex; align-items:center; gap:1rem; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='var(--accent-cyan)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--border-subtle)'; this.style.transform='none';">
+        <img src="{{ rel_prefix }}assets/images/class/{{ cls }}.png" alt="{{ cls }}" style="width:44px; height:44px; object-fit:contain;">
+        <div>
+          <h3 style="color:var(--text-primary); font-size:1.1rem; font-weight:700;" data-doll-class="{{ cls }}">{{ cls }}</h3>
+          <p style="color:var(--text-muted); font-size:0.8rem;">
+            {% if cls == 'Bulwark' %}Defense & Stability Protection{% endif %}
+            {% if cls == 'Vanguard' %}High Mobility & Flanking Assault{% endif %}
+            {% if cls == 'Support' %}Tactical Utility & Healing{% endif %}
+            {% if cls == 'Sentinel' %}Precision Long-Range Firepower{% endif %}
+          </p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Featured / Recent Dolls Preview -->
+<div>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+    <h2 class="detail-section-title" style="margin:0;" data-i18n="home_featured_title">Featured Dolls</h2>
+    <a href="{{ rel_prefix }}characters/index.html" style="font-size:0.9rem; font-weight:600;" data-i18n="home_view_all_dolls">View All {{ dolls|length }} Dolls &rarr;</a>
+  </div>
+
+  <div class="doll-grid">
+    {% for doll in featured_dolls %}
+    <a href="{{ rel_prefix }}characters/{{ doll.slug }}.html" class="doll-card rarity-{{ doll.rarity|lower }}">
+      <div class="doll-thumb-wrapper">
+        <div class="doll-badges-overlay">
+          <div style="display:flex; gap:4px; align-items:center;">
+            <span class="badge badge-{{ doll.rarity|lower }}" data-doll-rarity="{{ doll.rarity }}">{{ doll.rarity }}</span>
+            <span class="badge badge-class" data-doll-class="{{ doll.class }}">{{ doll.class }}</span>
+          </div>
+          <span class="badge badge-server badge-server-{{ (doll.server or 'global')|lower }}" data-doll-server="{{ (doll.server or 'global')|lower }}">{{ 'CN' if (doll.server or 'global')|lower == 'cn' else 'Global' }}</span>
+        </div>
+        <img src="{{ rel_prefix }}{{ doll.images.portrait if (doll.images and doll.images.portrait) else 'assets/images/characters/' + doll.slug + '/portrait.png' }}" alt="{{ doll.name }}" class="doll-thumb" onerror="this.src='{{ rel_prefix }}assets/images/characters/groza/portrait.png';">
+      </div>
+      <div class="doll-card-body">
+        <div class="doll-name">{{ doll.name }}</div>
+        <div class="doll-meta">
+          <span style="color:var(--accent-cyan)">{{ doll.phase }}</span> &bull; <span>{{ doll.weapon_type }}</span>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

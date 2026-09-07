@@ -1,0 +1,245 @@
+{
+  "slug": "krolik",
+  "name": "Krolik",
+  "class": "Vanguard",
+  "rarity": "Standard",
+  "phase": "Burn",
+  "weapon_type": "Blade",
+  "ammo_type": "Melee",
+  "signature_weapon": "Hare",
+  "stats": {
+    "hp": 1397,
+    "atk": 618,
+    "def": 463
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Corrosion",
+  "stability_gauge": "8 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Instantaneous Slash",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Melee",
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "Enemy",
+      "description": "Selects 1 target within 1 tile, dealing melee Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/krolik/skill1-icon.png",
+      "range_image": "assets/images/characters/krolik/skill1-range.png"
+    },
+    {
+      "name": "Crushing Revolution",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "3x3",
+      "description": "Selects 1 enemy target within 1 tile, dealing melee AoE Physical damage equal to 120% of attack to the target and all enemy units within a 3x3 area, and gains 1 point of Confectance Index. After the attack, if there are no other allied units within 3 tiles around the user, gains 5 tiles of Additional Movement.",
+      "icon": "assets/images/characters/krolik/skill2-icon.png",
+      "range_image": "assets/images/characters/krolik/skill2-range.png"
+    },
+    {
+      "name": "Quenching Slash",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "Enemy",
+      "description": "Select 1 enemy target within 1 tile, apply Overburn to it for 2 turns, deal melee Burn damage equal to 150% of attack, and gain 2 points of Confectance Index. After the attack, return to the original position before the action.",
+      "icon": "assets/images/characters/krolik/skill3-icon.png",
+      "range_image": "assets/images/characters/krolik/skill3-range.png"
+    },
+    {
+      "name": "Slaughter Sequence",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 1,
+      "effect_area": "7",
+      "description": "Selects 1 direction and moves to the farthest tile within 7 tiles, dealing melee Burn damage equal to 130% of attack to the first enemy encountered. If the target is inflicted with Overburn, ignores their Cover damage reduction, and gains 5 tiles of Additional Movement.",
+      "icon": "assets/images/characters/krolik/ult-icon.png",
+      "range_image": "assets/images/characters/krolik/ult-range.png"
+    },
+    {
+      "name": "Embers",
+      "tags": [
+        "Passive",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "5",
+      "description": "When attacking a target with Overburn, increases damage dealt by 15%. At the end of the action, applies Overburn to the closest 2 enemy targets within 5 tiles for 2 turns.",
+      "icon": "assets/images/characters/krolik/passive.png",
+      "range_image": "assets/images/characters/krolik/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Crushing Revolution",
+      "level": 2,
+      "effect": "If the target is under the effects of Stability Break, ignore 30% its defense."
+    },
+    {
+      "tier": 2,
+      "skill": "Quenching Slash",
+      "level": 2,
+      "effect": "Damage multiplier increased by 10%."
+    },
+    {
+      "tier": 3,
+      "skill": "Slaughter Sequence",
+      "level": 2,
+      "effect": "If this kills the target, gain 2 points of Confectance Index."
+    },
+    {
+      "tier": 4,
+      "skill": "Embers",
+      "level": 2,
+      "effect": "Range increases by 2 tiles."
+    },
+    {
+      "tier": 5,
+      "skill": "Slaughter Sequence",
+      "level": 3,
+      "effect": "If the target is inflicted with Overburn, increases critical rate by 100%."
+    },
+    {
+      "tier": 6,
+      "skill": "Embers",
+      "level": 3,
+      "effect": "When attacking a target with Overburn, increases critical damage by 20%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +29\nDEF +19",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +59\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +35\nDEF +27",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +81\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +41\nDEF +35",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +47\nHP +106",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Momentary Focus",
+      "level": 20,
+      "effect": "Reduces the Confectance Index consumption of the active skill Slaughter Sequence by 1 point.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/krolik/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Fierce Predator",
+      "level": 20,
+      "effect": "The active skill Crushing Revolution deals 30% increased damage when hitting a single target.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/krolik/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Blazing Fury",
+      "level": 30,
+      "effect": "If there are no other allied units within 3 tiles of the user, increases damage dealt by 10%.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/krolik/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Proud Challenger",
+      "level": 30,
+      "effect": "When the active skill Quenching Slash kills an enemy target, reduces this skill's cooldown by 2 turns.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/krolik/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Instinctive Pursuit",
+      "level": 40,
+      "effect": "At the start of action, if there are enemy units with Overburn on the field, gains Blazing Assault II for 2 turns.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/krolik/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Hidden Poise",
+      "level": 40,
+      "effect": "Before attacking, if this unit moved more than 3 tiles, increases the user's critical rate by 10%.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/krolik/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Scorching Protection",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/krolik/affi.png"
+    },
+    {
+      "name": "Common Key - Art of Violence",
+      "level": 40,
+      "effect": "CRIT +3.0% / If under the effects of a Burn buff, gains immunity to Frozen and Frigid, and increases damage dealt by 5%.",
+      "materials": "None",
+      "image": "assets/images/characters/krolik/common.png"
+    },
+    {
+      "name": "Expansion Key - Aerial Bunny Assault",
+      "level": 60,
+      "effect": "Before attacking, for each tile moved, increases CRIT rate and CRIT DMG of this attack by 5%, up to 15%",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/krolik/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/krolik/portrait.png",
+    "avatar": "assets/images/characters/krolik/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

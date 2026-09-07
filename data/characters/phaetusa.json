@@ -1,0 +1,243 @@
+{
+  "slug": "phaetusa",
+  "name": "Phaetusa",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Corrosion",
+  "weapon_type": "Blade",
+  "ammo_type": "Melee",
+  "signature_weapon": "Cause and Effect",
+  "stats": {
+    "hp": 1989,
+    "atk": 802,
+    "def": 528
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Hydro",
+  "stability_gauge": "9 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Dual Slash",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Melee",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "Target",
+      "description": "Selects 1 target within 1 tile, dealing melee Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/phaetusa/skill1-icon.png",
+      "range_image": "assets/images/characters/phaetusa/skill1-range.png"
+    },
+    {
+      "name": "Descent of twin wings",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Selects 1 tile within a cross-shaped area of 8 tiles, landing on the selected tile and dealing AoE Corrosion melee damage equal to 90% of attack to all enemy targets on the path.",
+      "icon": "assets/images/characters/phaetusa/skill2-icon.png",
+      "range_image": "assets/images/characters/phaetusa/skill2-range.png"
+    },
+    {
+      "name": "Mirror Trap",
+      "tags": [
+        "Active",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 6,
+      "effect_area": "Target",
+      "description": "Gain 1 stack of Blade Resonance and apply Laceration to all enemy targets on the field for 2 turns. After skill usage, Phaetusa gains Extra Command.",
+      "icon": "assets/images/characters/phaetusa/skill3-icon.png",
+      "range_image": "assets/images/characters/phaetusa/skill3-range.png"
+    },
+    {
+      "name": "Twin paradise",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "5",
+      "description": "Deal AoE Melee Corrosion damage equal to 90% attack power to all enemies within a 5 tile radius. Consumes all stacks of Blade Resonance; for each stack consumed, increases damage multiplier of the skill by 10% and then additionally doubles on that basis.",
+      "icon": "assets/images/characters/phaetusa/ult-icon.png",
+      "range_image": "assets/images/characters/phaetusa/ult-range.png"
+    },
+    {
+      "name": "Companionship",
+      "tags": [
+        "Passive",
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Gains 1 point of Confectance Index each time Melee damage is dealt. This effect can be activated three times per round.\nWhen an enemy within range takes damage from an allied AoE attack, performs a Action support on that target, dealing AoE Melee Corrosion damage equal to 90% ATK and 1 point of Stability damage. This effect can be activated three times per round.\nAfter activation the skill Mirror Trap, active skill Companionship becomes available. Upon activation, gains the effects of True Form and Extra Command. Can be used once per battle.",
+      "icon": "assets/images/characters/phaetusa/passive.png",
+      "range_image": "assets/images/characters/phaetusa/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Mirror Trap",
+      "level": 2,
+      "effect": "Every 2 times of skill usage Phaetusa will gain an additional stack of Blade Resonance, and her critical damage will be permanently increased by 15%."
+    },
+    {
+      "tier": 2,
+      "skill": "Descent of twin wings",
+      "level": 2,
+      "effect": "Increases damage multiplier to 120% and width increases by 2 tiles."
+    },
+    {
+      "tier": 3,
+      "skill": "Companionship",
+      "level": 2,
+      "effect": "Increases the number of times Companionship can be used per battle by 1. After gaining the effect of True Form, increases ATK by 50% for 1 round."
+    },
+    {
+      "tier": 4,
+      "skill": "Twin paradise",
+      "level": 2,
+      "effect": "Increases damage multiplier to 120%, and the damage bonus per stack of Blade Resonance consumed is increased to 20%."
+    },
+    {
+      "tier": 5,
+      "skill": "Companionship",
+      "level": 3,
+      "effect": "Increases Support Action damage multiplier to 120%. During the current turn, each Support Action performed increases movement range by 1 tile."
+    },
+    {
+      "tier": 6,
+      "skill": "Mirror Trap",
+      "level": 3,
+      "effect": "After using skill usage Phaetusa will gain new buff: Tempered Blood - increases multiplier of next active attack by 200%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +37\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +84\nATK +10.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +45\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +115\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +53\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +61\nHP +150",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Frosted Veins",
+      "level": 20,
+      "effect": "Upon first reaching the maximum stacks of Blade Resonance, increases Critical Rate by 20%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/phaetusa/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Drifter’s Resolve",
+      "level": 20,
+      "effect": "At the start of the turn, applies Laceration to all enemies on the field for 1 turn. Can trigger once every 2 turns.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/phaetusa/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Blade of Doom",
+      "level": 30,
+      "effect": "If the active attack hits only one enemy target, damage dealt to it is increased by 15%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/phaetusa/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Gift of Vitality",
+      "level": 30,
+      "effect": "For each stack of Blade Resonance consumed, restores HP equal to 10% ATK and 1 point of Stability.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/phaetusa/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Keeper of the Boundary",
+      "level": 40,
+      "effect": "Before performing an Support Action, dispels 1 buff from the target.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/phaetusa/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Hunter's Acuity",
+      "level": 40,
+      "effect": "After activation the skill Mirror Trap, gains Additional Movement of 6 tiles.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/phaetusa/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key -  Integrated dual core",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/phaetusa/affi.png"
+    },
+    {
+      "name": "Common Key - Void Genesis",
+      "level": 40,
+      "effect": "CRIT +5.0% / If the Confectance Index equals 0 during the current round, damage dealt is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/phaetusa/common.png"
+    },
+    {
+      "name": "Expansion Key - Double Soul Resonance Sonata",
+      "level": 60,
+      "effect": "While posessing Blade Resonance, damage dealt is increased by 30%. After an active attack, deals Melee Corrosion Damage equal to 100% of ATK 1 time to the nearest enemy target withing 8 tile radius. After dealing out-of-turn damage, inflicts 3 stacks of Aichmophobia on the target for 2 rounds.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/phaetusa/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/phaetusa/portrait.png",
+    "avatar": "assets/images/characters/phaetusa/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

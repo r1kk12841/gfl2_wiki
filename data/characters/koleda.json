@@ -1,0 +1,289 @@
+{
+  "slug": "koleda",
+  "name": "Koleda",
+  "class": "Vanguard",
+  "rarity": "Elite",
+  "phase": "Hydro",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Chernobog",
+  "stats": {
+    "hp": 1988,
+    "atk": 767,
+    "def": 494
+  },
+  "skill_attribute": "Hydro",
+  "weakness": "Electric",
+  "stability_gauge": "8 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Hunting Instinct",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Hydro damage equal to 80% of attack to them. The Sinner switches to N Gear.",
+      "icon": "assets/images/characters/koleda/skill1-icon.png",
+      "range_image": "assets/images/characters/koleda/skill1-range.png"
+    },
+    {
+      "name": "Eye of the Snow Wolf",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deal Hydro damage equal to 150% of attack to it. Before the skill resolves, Koleda gains 1 stack of Upshift for 3 turns. After the skill resolves, Koleda gains 1 point of Confectance Index.\nThe Sinner switches to S+ Gear.",
+      "icon": "assets/images/characters/koleda/skill2-icon.png",
+      "range_image": "assets/images/characters/koleda/skill2-range.png"
+    },
+    {
+      "name": "Tactical Playbook",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "effect_area": "Target",
+      "description": "Koleda gains 2 stacks of Upshift for 3 turns. Koleda and The Sinner gain Kinetic Recovery for 3 turns.\nThe Sinner switches to S Gear.",
+      "icon": "assets/images/characters/koleda/skill3-icon.png",
+      "range_image": "assets/images/characters/koleda/skill3-range.png"
+    },
+    {
+      "name": "Hallucination",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 3,
+      "effect_area": "Target",
+      "description": "Selects one empty tile within 3 tile radius around self and summons The Sinner. Koleda gains Extra Command, and this skill is replaced with the active skill Winner!.",
+      "icon": "assets/images/characters/koleda/ult-icon.png",
+      "range_image": "assets/images/characters/koleda/ult-range.png"
+    },
+    {
+      "name": "The Sinner",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of the turn, Koleda gains 1 point of Confectance Index. A 50% of Initial damage taken by Koleda is shared by The Sinner. Koleda is not affected by other damage-sharing effects.\n\nAt the end of The Sinner's action, Koleda gains 1 stack of Upshift for 3 turns. If The Sinner is on S+ Gear, Koleda gains an additional 1 stack of Upshift. When Koleda and The Sinner are present on the field, they gain Mobile Support. The effect is removed when either dies.\n \nAfter Koleda uses the active skill Tactical Playbook and at the end of her action, Kinetic Release is triggered 1 time.\n \n When The Sinner uses the active skill Let's Go For a Spin!, Koleda gains The Sinner's base attack and critical damage. The effect is removed when The Sinner dies",
+      "icon": "assets/images/characters/koleda/passive.png",
+      "range_image": "assets/images/characters/koleda/passive-range.png"
+    },
+    {
+      "name": "Winner!",
+      "tags": [
+        "Active",
+        "Healing"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 6,
+      "effect_area": "Target",
+      "description": "Restores The Sinner's 50% of max HP and 5 points of stability.",
+      "icon": "assets/images/characters/koleda/skill6-icon.png",
+      "range_image": "assets/images/characters/koleda/skill6-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "The Sinner",
+      "description": "High-mobility combat vehicle. At the start of the turn, The Sinner switches to D Gear. Shares 50% of Initial damage taken by Koleda.",
+      "stats": {
+        "hp": "100% of Koleda's initial HP",
+        "atk": "100% of Koleda's initial ATK",
+        "def": "100% of Koleda's initial DEF"
+      },
+      "stability_gauge": "9 points",
+      "movement_speed": "6 tiles",
+      "skills": [
+        {
+          "name": "Let's Go For a Spin!",
+          "description": "Selects 1 friendly Doll (excluding Koleda) and applies Let's Go For a Spin! to them. \n \nAfter the skill resolves, The Sinner gains 9 tiles of Additional Movement and can use 1 command.",
+          "icon": "assets/images/characters/koleda/summon1-skill1-icon.png",
+          "range_image": "assets/images/characters/koleda/summon1-skill1-range.png"
+        },
+        {
+          "name": "KANSEI DORIFTO?!",
+          "description": "Deals AoE Hydro damage equal to 90% of ATK to all enemy units within 5 tile radius around the unit and Pull them 5 tiles towards the centre of The Sinner's position. After the skill resolves, The Sinner gains 9 tiles of Additional Movement and can use the active skill Speedy Speed Doll!.",
+          "icon": "assets/images/characters/koleda/summon1-skill2-icon.png",
+          "range_image": "assets/images/characters/koleda/summon1-skill2-range.png"
+        },
+        {
+          "name": "Speedy Speed Doll!",
+          "description": "Selects 1 tile within cross-shaped area of 4 to 8 tiles, lands on it, and deals AoE Hydro damage equal to 90% of ATK to all enemy targets within 3 tile width along the path. If The Sinner is on S Gear or S+ Gear, additional AoE Hydro damage is dealt equal to 60% and 90% of ATK.",
+          "icon": "assets/images/characters/koleda/summon1-skill3-icon.png",
+          "range_image": "assets/images/characters/koleda/summon1-skill3-range.png"
+        },
+        {
+          "name": "Gear Shift",
+          "description": "At the start of the turn, The Sinner switches to D Gear. At the end of the final action taken, removes all Gears except N Gear and switches to P Gear. Only 1 Gear can be set at a time. \n \nThe Sinner cannot be blocked by enemies, is immune to the status effects Stun, Taunt, and Incapacitation, as well as displacement and movement debuffs. In addition, damage taken by The Sinner is reduced by 35% and it recovers HP equal to 15% its Max HP when taking damage.\n\n At the end of The Sinner's action, if it is on S Gear, Kinetic Release is triggered, if it is on S+ Gear, Kinetic Release+ is triggered instead.",
+          "icon": "assets/images/characters/koleda/summon1-skill4-icon.png",
+          "range_image": "assets/images/characters/koleda/summon1-skill4-range.png"
+        }
+      ],
+      "image": "assets/images/characters/koleda/summon1.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Eye of the Snow Wolf",
+      "level": 2,
+      "effect": "The damage multiplier is increased to 180%, and for every level of Upshift, the damage multiplier is increased by 15%.\nUpshift effect is increased: Hydro damage increase is boosted to 15%. When holding 5 layers of Upshift, Critical Damage is increased by 30% and damage taken is reduced by 30%.\nBefore the skill, Koleda and The Sinner gain Turbo boost for 1 round."
+    },
+    {
+      "tier": 2,
+      "skill": "The Sinner",
+      "level": 2,
+      "effect": "The number of Confectance Index obtained at the start of the turn is increased by 1 point.\nAfter using the active skill Tactical Playbook and at the end of the action, casts Kinetic Release+ 1 time instead.\nThe damage multiplier of Kinetic Release and Kinetic Release+ is increased by 30%."
+    },
+    {
+      "tier": 3,
+      "skill": "The Sinner",
+      "level": 3,
+      "effect": "The damage shared by the The Sinner for Koleda has been increased to 80%, and the health recovered before taking damage has been increased to 25% of the max HP.\nP Gear effect increased: Target damage and AOE damage taken reduction is increased to 30%; N Gear effect increased: damage taken reduction is increased to 150%, Defense increase is boosted to 150%, and Healing recieved is increased by 150%; D gear, S gear, and S+ gear effect increased: Hydro damage increase is boosted to 30%; S gear, and S+ gear effect increased: Critical Damage increase is boosted to 30%; S+ gear effect increased: ignore of target's Defence is increased to 30%, and the damage multiplier of all damaging skills is increased by 30%."
+    },
+    {
+      "tier": 4,
+      "skill": "Tactical Playbook",
+      "level": 2,
+      "effect": "Kinetic Recovery effect is increased: attack power, Critical Damage, and healing recieved increase is boosted to 25%.\nThe Sinner active skill KANSEI DORIFTO?! damage multiplier is increased to 120%, its effective range is increased to 7 tiles, the Pull range is increased to 7 tiles, and it applies Immobilized for 2 turns."
+    },
+    {
+      "tier": 5,
+      "skill": "Hallucination",
+      "level": 2,
+      "effect": "Winner! effect is increased: Restores 100% Max HP and all Stability index of The Sinner, and dispels all debuffs from The Sinner.\nThe Sinner active skill Speedy Speed Doll! effect is increased: damage multiplier is increased to 120%, and the width is increased by 2 tiles.The additional damage multiplier of S Gear and S+ Gear have been increased to 90% and 120%."
+    },
+    {
+      "tier": 6,
+      "skill": "Eye of the Snow Wolf",
+      "level": 3,
+      "effect": "Turbo boost effect is increased: attack increase is boosted to 45%.\nThe Sinner active skill Let's Go For a Spin! effect is increased: Additional attributes obtained by The Sinner are increased to 70%. When The Sinner casts active skill Speedy Speed Doll!, it applies a Phase tile corresponding to Phase attribute of the Doll selected by Let's Go For a Spin! lasting 2 rounds."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +36\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +84\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +115\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +51\nDEF +37",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +150",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Creed",
+      "level": 20,
+      "effect": "At the start of the battle, Koleda gains 2 stacks of Upshift and Kinetic Recovery for 3 turns. When The Sinner is summoned at the start of the battle, Koleda and The Sinner gain Kinetic Recovery for 3 turns",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/koleda/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - No Time to Die",
+      "level": 20,
+      "effect": "When The Sinner takes lethal damage, its HP will not drop below 1 and this effect will last until the end of the round. Cooldown: 2 turns.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/koleda/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Dream of Ruin",
+      "level": 30,
+      "effect": "Before The Sinner uses an active skill, cleanse 1 buff from the target",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/koleda/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Desperate Measures",
+      "level": 30,
+      "effect": "At the start of the turn, if Koleda has 5 stacks of Upshift, movement debuffs and command-prohibition effects are cleansed",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/koleda/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Remember the Name",
+      "level": 40,
+      "effect": "Before Koleda and The Sinner uses a basic attack or active skill, applies Defense Down II to the enemy target for 2 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/koleda/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Those Who Cling to Life, Dies",
+      "level": 40,
+      "effect": "When The Sinner is on S Gear or S+ Gear, for each enemy unit that dies, attack of The Sinner is increased by 4% up to 20%",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/koleda/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Dancing with wolves",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/koleda/affi.png"
+    },
+    {
+      "name": "Common Key - A View to a Kill",
+      "level": 40,
+      "effect": "CRIT +5.0% / If the user or their summon has mobility greater than or equal to the target's, damage dealt is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/koleda/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/koleda/portrait.png",
+    "avatar": "assets/images/characters/koleda/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "cn"
+}

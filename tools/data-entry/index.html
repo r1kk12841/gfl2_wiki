@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GFL2 Wiki — Data Entry Tool</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- SheetJS: browser-side .xlsx parser (no build step required) -->
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+  <div id="app">
+
+    <!-- ══════════════════════ HEADER ══════════════════════ -->
+    <header id="header">
+      <h1><span data-i18n="app_title">GFL2: Exilium Wiki</span> &mdash; <span data-i18n="app_subtitle">Data Entry Tool</span></h1>
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="tab-character" id="tab-btn-character" data-i18n="tab_character">Character</button>
+        <button class="tab-btn" data-tab="tab-weapon" id="tab-btn-weapon" data-i18n="tab_weapon">Weapon</button>
+        <button class="tab-btn" data-tab="tab-faq" id="tab-btn-faq" data-i18n="tab_faq">FAQ</button>
+        <a class="tab-btn" href="../guide-editor/index.html" target="_blank" style="text-decoration:none;" data-i18n="tab_guide_editor">✍ Guide Editor ↗</a>
+      </div>
+      <button class="lang-switcher-btn" id="lang-toggle-btn" type="button" aria-label="Switch Language" title="Switch Language / Chuyển Ngôn Ngữ">
+        <span class="lang-icon">🌐</span>
+        <span id="lang-btn-text" class="lang-indicator">VI</span>
+      </button>
+    </header>
+
+    <!-- ══════════════════════ FORM PANE ══════════════════ -->
+    <main id="form-pane">
+
+      <!-- ─────────────────── CHARACTER TAB ─────────────────── -->
+      <div class="tab-content active" id="tab-character">
+
+        <!-- Load Existing Character -->
+        <div class="char-selector-bar">
+          <span class="char-selector-label" data-i18n="load_existing">📋 Load existing:</span>
+          <select id="char-selector" class="char-selector-select">
+            <option value="" data-i18n="select_char_placeholder">— Select a character —</option>
+          </select>
+          <button class="btn btn-secondary" id="btn-load-existing" data-i18n="btn_load">Load →</button>
+          <span class="char-selector-sep" data-i18n="or">or</span>
+          <button class="btn btn-secondary" id="btn-clear-char" data-i18n="btn_clear_char">✕ New / Clear</button>
+        </div>
+
+        <!-- Action bar -->
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btn-save-char" data-i18n="btn_save_disk">💾 Save to disk</button>
+          <button class="btn btn-secondary" id="btn-download-char" data-i18n="btn_download_json">⬇ Download JSON</button>
+          <button class="btn btn-secondary" id="btn-download-i18n" data-i18n="btn_download_i18n_vi" style="display:none;">⬇ Download i18n_vi.json</button>
+          <button class="btn btn-secondary" id="btn-load-char" data-i18n="btn_load_json">📂 Load JSON</button>
+          <button class="btn btn-excel" id="btn-excel-autofill" title="Parse an .xlsx character sheet with Gemini AI" data-i18n="btn_excel_autofill">✨ Auto-fill from Excel</button>
+          <input type="file" id="file-load-char" accept=".json" style="display:none" />
+          <input type="file" id="file-load-excel" accept=".xlsx,.xls" style="display:none" />
+        </div>
+
+        <!-- 1. Basic Info -->
+        <section class="section-card" id="sec-basic">
+          <div class="card-header">
+            <span class="card-title" data-i18n="sec_basic_title">Basic Info</span>
+          </div>
+          <div class="card-body">
+            <div class="field-row two">
+              <div class="field">
+                <label for="c-name"><span data-i18n="field_name">Name</span> <span class="req">*</span></label>
+                <input type="text" id="c-name" data-i18n-placeholder="placeholder_name" placeholder="e.g. Groza" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="c-slug"><span data-i18n="field_slug">Slug</span> <span class="req">*</span></label>
+                <input type="text" id="c-slug" data-i18n-placeholder="placeholder_slug" placeholder="auto-generated" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="c-class"><span data-i18n="field_class">Class</span> <span class="req">*</span></label>
+                <select id="c-class">
+                  <option value="" data-i18n="placeholder_select">— select —</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="c-rarity"><span data-i18n="field_rarity">Rarity</span> <span class="req">*</span></label>
+                <select id="c-rarity">
+                  <option value="" data-i18n="placeholder_select">— select —</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="c-phase"><span data-i18n="field_phase">Phase</span> <span class="req">*</span></label>
+                <select id="c-phase">
+                  <option value="" data-i18n="placeholder_select">— select —</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-row two">
+              <div class="field">
+                <label for="c-weapon-type"><span data-i18n="field_weapon_type">Weapon Type</span> <span class="req">*</span></label>
+                <select id="c-weapon-type">
+                  <option value="" data-i18n="placeholder_select">— select —</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="c-ammo-type"><span data-i18n="field_ammo_type">Ammo Type</span></label>
+                <select id="c-ammo-type">
+                  <option value="" data-i18n="placeholder_select">— select —</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="c-sig-weapon"><span data-i18n="field_sig_weapon">Signature Weapon (slug)</span></label>
+                <input type="text" id="c-sig-weapon" data-i18n-placeholder="placeholder_sig_weapon" placeholder="e.g. ots-14" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="c-skill-attr"><span data-i18n="field_skill_attr">Skill Attribute</span></label>
+                <input type="text" id="c-skill-attr" data-i18n-placeholder="placeholder_optional" placeholder="optional" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="c-weakness"><span data-i18n="field_weakness">Weakness</span></label>
+                <input type="text" id="c-weakness" data-i18n-placeholder="placeholder_optional" placeholder="optional" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="field-row three">
+              <div class="field">
+                <label for="c-hp"><span data-i18n="field_hp">HP</span></label>
+                <input type="number" id="c-hp" placeholder="e.g. 1981" min="0" />
+              </div>
+              <div class="field">
+                <label for="c-atk"><span data-i18n="field_atk">ATK</span></label>
+                <input type="number" id="c-atk" placeholder="e.g. 539" min="0" />
+              </div>
+              <div class="field">
+                <label for="c-def"><span data-i18n="field_def">DEF</span></label>
+                <input type="number" id="c-def" placeholder="e.g. 553" min="0" />
+              </div>
+            </div>
+
+            <div class="field-row two">
+              <div class="field">
+                <label for="c-stab-gauge"><span data-i18n="field_stab_gauge">Stability Gauge</span></label>
+                <input type="text" id="c-stab-gauge" data-i18n-placeholder="placeholder_stab_gauge" placeholder="e.g. 12 points" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="c-move-speed"><span data-i18n="field_move_speed">Movement Speed</span></label>
+                <input type="text" id="c-move-speed" data-i18n-placeholder="placeholder_move_speed" placeholder="e.g. 6 tiles" autocomplete="off" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Effects Glossary -->
+        <section class="section-card" id="sec-glossary">
+          <div class="card-header">
+            <span class="card-title" data-i18n="sec_glossary_title">Effects Glossary</span>
+          </div>
+          <div class="card-body">
+            <p class="text-muted" data-i18n="sec_glossary_desc">Status effects referenced on this character's tab. One entry per effect.</p>
+            <div class="repeat-list" id="glossary-list"></div>
+            <button class="btn-add" id="btn-add-glossary" data-i18n="btn_add_glossary">+ Add Status Effect</button>
+          </div>
+        </section>
+
+        <!-- 3. Skills -->
+        <section class="section-card" id="sec-skills">
+          <div class="card-header">
+            <span class="card-title" data-i18n="sec_skills_title">Skills</span>
+          </div>
+          <div class="card-body">
+            <div class="repeat-list" id="skills-list"></div>
+            <button class="btn-add" id="btn-add-skill" data-i18n="btn_add_skill">+ Add Skill</button>
+          </div>
+        </section>
+
+        <!-- 4. Summon Units -->
+        <section class="section-card" id="sec-summons">
+          <div class="card-header">
+            <span class="card-title" data-i18n="sec_summons_title">Summon Units</span>
+          </div>
+          <div class="card-body">
+            <p class="text-muted" data-i18n="sec_summons_desc">For units with separate stats and skills (e.g. drones, turrets).</p>
+            <div class="repeat-list" id="summons-list"></div>
+            <button class="btn-add" id="btn-add-summon" data-i18n="btn_add_summon">+ Add Summon Unit</button>
+          </div>
+        </section>
+
+        <!-- 5. Fortification -->
+        <section class="section-card" id="sec-fort">
+          <div class="card-header">
+            <span class="card-title" data-i18n="sec_fort_title">Fortification (Vertebrae Upgrade)</span>
+          </div>
+          <div class="card-body">
+            <p class="text-muted" data-i18n="sec_fort_desc">Transcribe from the Vertebrae Upgrade summary table at the bottom of the character tab (6 rows).</p>
+            <div class="repeat-list" id="fort-list"></div>
+          </div>
+        </section>
+
+        <!-- 6. Neural Helix -->
+        <section class="section-card" id="sec-nh">
+          <div class="card-header">
+            <span class="card-title" data-i18n="sec_nh_title">Neural Helix — Enhancement Nodes</span>
+          </div>
+          <div class="card-body">
+            <p class="text-muted" data-i18n="sec_nh_desc">Flat stat-boost nodes (Enhancement 1–6) unlocked at set character levels.</p>
+            <div class="repeat-list" id="nh-list"></div>
+          </div>
+        </section>
+
+        <!-- 7. Keys -->
+        <section class="section-card" id="sec-keys">
+          <div class="card-header">
+            <span class="card-title" data-i18n="sec_keys_title">Neural Helix — Keys</span>
+          </div>
+          <div class="card-body">
+            <p class="text-muted" data-i18n="sec_keys_desc">Fixed Keys 1–6, Affinity Key, Common Key, Expansion Key.</p>
+            <div class="repeat-list" id="keys-list"></div>
+          </div>
+        </section>
+
+        <!-- 8. Images -->
+        <section class="section-card" id="sec-images">
+          <div class="card-header">
+            <span class="card-title" data-i18n="sec_images_title">Images</span>
+          </div>
+          <div class="card-body">
+            <p class="text-muted mt-4" data-i18n="sec_images_desc">Expected asset paths (auto-update from slug). Use the file pickers below to upload images to the correct folders.</p>
+            <div class="image-checklist">
+              <div class="image-path-row">
+                <span class="path-label" data-i18n="img_portrait">Portrait</span>
+                <span class="path-value"><input type="text" id="c-img-portrait" readonly /></span>
+              </div>
+              <div class="image-path-row">
+                <span class="path-label" data-i18n="img_class_icon">Class Icon</span>
+                <span class="path-value"><input type="text" id="c-img-classicon" readonly /></span>
+              </div>
+            </div>
+
+            <!-- Image Upload Area -->
+            <div class="img-upload-section" id="img-upload-section">
+              <div class="img-upload-header">
+                <span class="card-title" style="font-size:0.85rem;" data-i18n="upload_section_title">Upload Images to Assets</span>
+                <span class="text-muted" style="font-size:0.72rem;" data-i18n="upload_section_subtitle">(Files are saved locally via browser picker)</span>
+              </div>
+              <div id="img-upload-slots"></div>
+              <button class="btn-add" id="btn-add-img-slot" type="button" data-i18n="btn_add_img_slot">+ Add Image Slot</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. Source Notes -->
+        <section class="section-card" id="sec-notes">
+          <div class="card-header">
+            <span class="card-title" data-i18n="sec_notes_title">Source Notes</span>
+          </div>
+          <div class="card-body">
+            <div class="field full">
+              <label for="c-source-notes" data-i18n="field_source_notes">Free notes (flags, irregularities, rework info…)</label>
+              <textarea id="c-source-notes" rows="3" data-i18n-placeholder="placeholder_source_notes" placeholder="e.g. pre-rework kit — see Jiangyu(old)"></textarea>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /tab-character -->
+
+      <!-- ─────────────────── WEAPON TAB ─────────────────── -->
+      <div class="tab-content" id="tab-weapon">
+
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btn-download-weapon" data-i18n="btn_download_weapon">⬇ Download JSON</button>
+          <button class="btn btn-secondary" id="btn-load-weapon" data-i18n="btn_load_weapon">📂 Load JSON</button>
+          <button class="btn btn-secondary" id="btn-clear-weapon" data-i18n="btn_clear_weapon">✕ Clear</button>
+          <input type="file" id="file-load-weapon" accept=".json" style="display:none" />
+        </div>
+
+        <section class="section-card">
+          <div class="card-header"><span class="card-title" data-i18n="sec_weapon_title">Weapon Info</span></div>
+          <div class="card-body">
+            <div class="field-row two">
+              <div class="field">
+                <label for="w-name"><span data-i18n="field_name">Name</span> <span class="req">*</span></label>
+                <input type="text" id="w-name" placeholder="e.g. OTs-14" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="w-slug"><span data-i18n="field_slug">Slug</span> <span class="req">*</span></label>
+                <input type="text" id="w-slug" placeholder="auto-generated" autocomplete="off" />
+              </div>
+            </div>
+            <div class="field-row two">
+              <div class="field">
+                <label for="w-weapon-type"><span data-i18n="field_weapon_type">Weapon Type</span></label>
+                <select id="w-weapon-type">
+                  <option value="" data-i18n="placeholder_select">— select —</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="w-rarity"><span data-i18n="field_rarity">Rarity</span></label>
+                <select id="w-rarity">
+                  <option value="" data-i18n="placeholder_select">— select —</option>
+                </select>
+              </div>
+            </div>
+            <div class="image-checklist">
+              <div class="image-path-row">
+                <span class="path-label" data-i18n="img_weapon">Weapon Image</span>
+                <span class="path-value"><input type="text" id="w-img-path" readonly /></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div><!-- /tab-weapon -->
+
+      <!-- ─────────────────── FAQ TAB ─────────────────── -->
+      <div class="tab-content" id="tab-faq">
+
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btn-download-faq" data-i18n="btn_download_faq">⬇ Download faq.json</button>
+          <button class="btn btn-secondary" id="btn-load-faq" data-i18n="btn_load_faq">📂 Load faq.json</button>
+          <button class="btn btn-secondary" id="btn-clear-faq" data-i18n="btn_clear_faq">✕ Clear</button>
+          <input type="file" id="file-load-faq" accept=".json" style="display:none" />
+        </div>
+
+        <section class="section-card">
+          <div class="card-header"><span class="card-title" data-i18n="sec_faq_title">FAQ Entries</span></div>
+          <div class="card-body">
+            <div class="repeat-list" id="faq-list"></div>
+            <button class="btn-add" id="btn-add-faq" data-i18n="btn_add_faq">+ Add Q&amp;A</button>
+          </div>
+        </section>
+      </div><!-- /tab-faq -->
+
+    </main><!-- /form-pane -->
+
+    <!-- ══════════════════════ PREVIEW PANE ══════════════════ -->
+    <aside id="preview-pane">
+      <div class="pane-header">
+        <span data-i18n="preview_title">JSON Preview</span>
+        <span class="text-muted" style="font-size:0.72rem;text-transform:none;letter-spacing:0" data-i18n="preview_status">live</span>
+      </div>
+      <div id="json-preview"></div>
+    </aside>
+
+  </div><!-- /app -->
+
+  <div id="toast"></div>
+
+  <!-- ══════════════════════ GEMINI API KEY MODAL ══════════════════ -->
+  <div id="apikey-overlay" class="modal-overlay" style="display:none" role="dialog" aria-modal="true" aria-labelledby="apikey-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span id="apikey-title" class="modal-title">🔑 Gemini API Key</span>
+        <button class="modal-close" id="btn-apikey-cancel" title="Cancel">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted" style="margin-bottom:12px">
+          Enter your <a href="https://aistudio.google.com/app/apikey" target="_blank" class="link">Google AI Studio</a>
+          API key. It is saved only in your browser's <code>localStorage</code> and never sent anywhere except Google's API.
+        </p>
+        <div class="field">
+          <label for="apikey-input">API Key</label>
+          <input type="password" id="apikey-input" placeholder="AIza…" autocomplete="off" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btn-apikey-cancel2">Cancel</button>
+        <button class="btn btn-primary" id="btn-apikey-save">Save &amp; Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ AI STATUS OVERLAY ══════════════════════ -->
+  <div id="ai-status-bar" class="ai-status-bar" style="display:none">
+    <span class="ai-spinner"></span>
+    <span id="ai-status-text">Analysing spreadsheet…</span>
+    <button class="ai-status-close" id="btn-ai-status-close" title="Dismiss">✕</button>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

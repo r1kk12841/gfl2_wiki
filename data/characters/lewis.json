@@ -1,0 +1,244 @@
+{
+  "slug": "lewis",
+  "name": "Lewis",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Burn",
+  "weapon_type": "MG",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Toysmith",
+  "stats": {
+    "hp": 1948,
+    "atk": 827,
+    "def": 504
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Corrosion",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Playtime",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/lewis/skill1-icon.png",
+      "range_image": "assets/images/characters/lewis/skill1-range.png"
+    },
+    {
+      "name": "Bad Guy Cleanup",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Select 1 direction around self, deal AoE Burn damage equal to 80% of attack to all enemy targets within a 3x5 frontal area and inflicts Overburn for 2 turns.",
+      "icon": "assets/images/characters/lewis/skill2-icon.png",
+      "range_image": "assets/images/characters/lewis/skill2-range.png"
+    },
+    {
+      "name": "Surprising FunBall",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius and deals Burn damage equal to 140% of attack to it. Deals fixed damage equal to 30% of attack to the target and all enemies within a 3 tile radius of it. Lewis gains 2 stacks of Tin Soldier's Order.",
+      "icon": "assets/images/characters/lewis/skill3-icon.png",
+      "range_image": "assets/images/characters/lewis/skill3-range.png"
+    },
+    {
+      "name": "Toy Carnival",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 5,
+      "cooldown": "0 turns",
+      "confectance_cost": 6,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius and deals Burn damage equal to 180% of attack to it. For each Tin Soldier on the battlefield, increases damage dealt by 15% per Rank and critical rate by 5% per Rank of this attack.",
+      "icon": "assets/images/characters/lewis/ult-icon.png",
+      "range_image": "assets/images/characters/lewis/ult-range.png"
+    },
+    {
+      "name": "Tin Soldiers on Parade",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "All field",
+      "description": "At the start of the battle, Lewis gains Thermal Conduction, and consumes all points of Confectance Index to assign Tin Soldier with Rank 1 to the 2 closest allied Burn attribute Dolls (excluding self).\n\nWhen allied units with Tin Soldier perform basic attacks or active attacks that deal Burn damage, Lewis commands the Tin Soldier to launch a Volley Fire at the target that took damage, and gains 3 points of Searing Flame and 1 Confectance Index. This effect can be triggered once per turn for each Tin Soldier.\n\nWhen the unit with Tin Soldier assigned deals Burn damage, said unit gains 1 Merit.\n\nAt the end of the round, Lewis consumes 4 Merit to increase the Rank of the Tin Soldier, maximum once per turn.",
+      "icon": "assets/images/characters/lewis/passive.png",
+      "range_image": "assets/images/characters/lewis/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Tin Soldiers on Parade",
+      "level": 2,
+      "effect": "Increases the base damage multiplier of a Volley Fire to 120% of Lewis attack.\nWhen Tin Soldier casts Volley Fire, if the enemy target has Overburn, the Overburn effect will be triggered a number of times corresponding to their Rank."
+    },
+    {
+      "tier": 2,
+      "skill": "Toy Carnival",
+      "level": 2,
+      "effect": "Reduces the Confectance Cost by 2 points. \nAdditional effects are added based on your highest current Rank. Higher-level effects include lower-level effects:\nRank 1: Gain Damage Up II before attacking, lasting for 2 turns.\nRank 2: This attack now ignores cover.\nRank 3: Increases the damage multiplier to 200% of your attack."
+    },
+    {
+      "tier": 3,
+      "skill": "Surprising FunBall",
+      "level": 2,
+      "effect": "Damage multiplier is increased to 160%, fixed damage multiplier is increased to 50%. \n\nTin Soldier's Order effect is modified: It no longer has stacks and no longer gets consumed by Volley Fire. Lasts for 3 rounds and increase Volley Fire damage by 50% instead."
+    },
+    {
+      "tier": 4,
+      "skill": "Bad Guy Cleanup",
+      "level": 2,
+      "effect": "Damage multiplier is increased to 120%. For each Burn debuff on the target, this attack deals 10% more damage, up to a maximum of 30%."
+    },
+    {
+      "tier": 5,
+      "skill": "Toy Carnival",
+      "level": 3,
+      "effect": "Each Tin Soldier additionally increases damage multiplier of this attack by 10% per Rank; critical damage is additionally increased by 5% per Rank."
+    },
+    {
+      "tier": 6,
+      "skill": "Tin Soldiers on Parade",
+      "level": 3,
+      "effect": "Assigned at the start of the battle Tin Soldier has Rank 2.\nRank effect enhancements:\nRank 2: Additionally increases Critical Damage by 15%.\nRank 3: At the end of assigned doll action, unleashes Volley Fire once on the nearest enemy target. This Volley Fire provides Searing Flame but does not restore Confectance Index."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +82\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +47\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +113\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +55\nDEF +38",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +63\nHP +147",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Idealistic Designer",
+      "level": 20,
+      "effect": "Before using Volley Fire, inflicts Overburn to the target for 2 turns.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/lewis/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Secret of Spreading Smiles",
+      "level": 20,
+      "effect": "Modifies the passive effect of Tin Soldiers on Parade, allowing it to apply Tin Soldiers even to non-Burn attribute Dolls. If a basic attack or active attack does not deal Burn damage, it can still trigger Volley Fire.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/lewis/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Protector of Innocence",
+      "level": 30,
+      "effect": "The active skill Surprising Funball and the Toy Carnival dispels 1 buff on the target before the attack resolves.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/lewis/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Sunny Imagination",
+      "level": 30,
+      "effect": "When attacking an enemy target with Overburn, damage dealt is increased by 15% and inflicts Defense Down II.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/lewis/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Cuteness is Justice",
+      "level": 40,
+      "effect": "At the start of the turn, if there are Tin Soldiers on the field with a Rank of 2 and higher, the range of the active skill Surprising Funball and the Ultimate skill Toy Carnival is increased by 2 for this battle.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/lewis/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Guardian From The Cloud",
+      "level": 40,
+      "effect": "Units with Tin Soldiers gain 2 Merit at the end of their action.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/lewis/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/lewis/affi.png"
+    },
+    {
+      "name": "Common Key - Mighty Miracle",
+      "level": 40,
+      "effect": "ATK +5% / Damage dealt by Ultimate skills is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/lewis/common.png"
+    },
+    {
+      "name": "Expansion Key - Tin Soldiers Assemble",
+      "level": 60,
+      "effect": "After applying Tin Soldiers, if there 4 or more friendly Burn Dolls on the field, increase Rank of Tin Soldiers by 1 level.\nOnce the Rank reaches level 3, at the start of each Round, Lewis consumes all Merit from dolls with Tin Soldiers assigned to. For each 1 Merit consumed, Lewis' Burn damage dealt this Round is increased by 6% and Critical Damage is increased by 6%, up to a maximum of 48%.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/lewis/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/lewis/portrait.png",
+    "avatar": "assets/images/characters/lewis/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,243 @@
+{
+  "slug": "peri",
+  "name": "Peri",
+  "class": "Bulwark",
+  "rarity": "Elite",
+  "phase": "Burn",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Amanita",
+  "stats": {
+    "hp": 2191,
+    "atk": 696,
+    "def": 560
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Freeze",
+  "stability_gauge": "12 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Passionate Gift",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/peri/skill1-icon.png",
+      "range_image": "assets/images/characters/peri/skill1-range.png"
+    },
+    {
+      "name": "Venture Capital",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 4,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Consumes HP equivalent to 30% of max HP, and gains 2 stacks of Hot Investment (this effect will not lower HP below 10%). Selects an enemy target within a 6 tile radius and deals Burn damage equivalent to 120% ATK to it.",
+      "icon": "assets/images/characters/peri/skill2-icon.png",
+      "range_image": "assets/images/characters/peri/skill2-range.png"
+    },
+    {
+      "name": "Excess Order",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "2",
+      "description": "Consumes HP equivalent to 40% of max HP, and gains 3 stacks of Hot Investment (this effect will not lower HP below 10%). Selects a tile within a 6 tile radius of tile and deals AoE Burn damage equivalent to 100% ATK to all enemies within a 2 tile radius of the specified tile, and applies Overburn for 2 turns.",
+      "icon": "assets/images/characters/peri/skill3-icon.png",
+      "range_image": "assets/images/characters/peri/skill3-range.png"
+    },
+    {
+      "name": "Final Bid",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 6,
+      "effect_area": "Target",
+      "description": "Gains 6 stacks of Hot Investment, gains Bargain and Capital Protection for 3 rounds (Duration decreases at the end of the current round). Capital Protection can absorb damage equivalent to 50% of Peri's max HP.",
+      "icon": "assets/images/characters/peri/ult-icon.png",
+      "range_image": "assets/images/characters/peri/ult-range.png"
+    },
+    {
+      "name": "Profit Maximization",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the end of the action, increases Confectance Index by 1 point. When allies (excluding self) activate Action Support that deals Burn damage, if Peri's Confectance Index is below 6 points, increases Confectance Index by 1 point. This effect can activate once per round\n\nAfter using an active skill, for every 3 stacks of Hot Investment held by self, Peri can 1 basic attack. The effects of this basic attack is changed to dealing Burn damage equivalent to 12% of Peri's initial max HP for each stack of Hot Investment held by self.",
+      "icon": "assets/images/characters/peri/passive.png",
+      "range_image": "assets/images/characters/peri/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Profit Maximization",
+      "level": 2,
+      "effect": "Decreases the number of Hot Investment stacks required to launch 1 basic attack by 1."
+    },
+    {
+      "tier": 2,
+      "skill": "Final Bid",
+      "level": 2,
+      "effect": "Enhanced the effect of Bargain - Increases damage dealt by 30% (From 30%→ 60%). When Bargain expires, restores Stability to maximum."
+    },
+    {
+      "tier": 3,
+      "skill": "Profit Maximization",
+      "level": 3,
+      "effect": "At the start of the battle, increases Stability by 6 points. For each stack of Hot Investment held by self, increases Burn damage dealt by self by 8%."
+    },
+    {
+      "tier": 4,
+      "skill": "Excess Order",
+      "level": 2,
+      "effect": "Decreases HP consumed by 10%. Increases AoE effect range by 1 tile. For each stack of Hot Investment held by self, increases damage multiplier by 5%."
+    },
+    {
+      "tier": 5,
+      "skill": "Venture Capital",
+      "level": 2,
+      "effect": "Decreases HP consumed by 10%. For each stack of Hot Investment held by self, increases damage multiplier by 10%. Before attacking, cleanse 1 buff from the target."
+    },
+    {
+      "tier": 6,
+      "skill": "Final Bid",
+      "level": 3,
+      "effect": "New effect is added for Bargain - Increases CRIT DMG dealt by normal attacks by 50%.\n\nNew effect is added for Capital Protection - Before being attacked, decreases ATK for the attacker by 30%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +32\nDEF +24",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +92\nHP +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +39\nDEF +33",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +127\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +46\nDEF +42",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +53\nHP +165",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Basis of Trade",
+      "level": 20,
+      "effect": "At the start of the battle, increases Confectance Index by 3 points",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/peri/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Cool and Reliable",
+      "level": 20,
+      "effect": "For each stack of Hot Investment held, increases DEF by 5%",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/peri/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Insider Information",
+      "level": 30,
+      "effect": "At the start of the turn, if the number of stacks of Hot Investment held is more than 2, gains 2 layers of Shelter",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/peri/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Independent Woman",
+      "level": 30,
+      "effect": "Final Bid: After usage, cleanses all debuffs from self",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/peri/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Mature Adult",
+      "level": 40,
+      "effect": "When Peri is inflicted with Stun, Taunt, or Paralysis, immediately cleanses the effect, and becomes immune to Stun, Taunt and Paralysis for 1 turn and restores HP equivalent to 20% max HP for self. This effect has a cooldown of 3 turns",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/peri/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Social Engineering",
+      "level": 40,
+      "effect": "Increases damage dealt to targets with Burn type debuffs by 10%",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/peri/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/peri/affi.png"
+    },
+    {
+      "name": "Common Key - Still growing",
+      "level": 40,
+      "effect": "HP +5.0% / When attacking the same target multiple times, increases elemental damage dealt towards it by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/peri/common.png"
+    },
+    {
+      "name": "Expansion Key - Broker Scheme",
+      "level": 60,
+      "effect": "Basic attacks now attack twice.\nHot Investment now no longer reduce healing efficacy.\nFor each stack of Hot Investment, reduces damage taken by all allied units (excluding Peri herself) by 5%.\nThe passive effects of Profit Maximization is changed: When allied units (excluding Peri herself) deal Burn damage, it triggers Peri's Confectance Index gain effect.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/peri/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/peri/portrait.png",
+    "avatar": "assets/images/characters/peri/avatar.png",
+    "class_icon": "assets/images/class/bulwark.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

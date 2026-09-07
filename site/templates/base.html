@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}GFL2: Exilium Wiki{% endblock %}</title>
+  <meta name="description" content="{% block description %}Comprehensive Tactical Doll and Weapon database for Girls' Frontline 2: Exilium.{% endblock %}">
+  <link rel="stylesheet" href="{{ rel_prefix }}static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="{{ rel_prefix }}index.html" class="brand">
+        <span style="color:var(--accent-cyan)">GFL2</span> WIKI
+        <span class="brand-badge">EXILIUM</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="{{ rel_prefix }}index.html" class="nav-link {% if active_page == 'home' %}active{% endif %}" data-i18n="nav_home">Home</a></li>
+        <li><a href="{{ rel_prefix }}characters/index.html" class="nav-link {% if active_page == 'characters' %}active{% endif %}" data-i18n="nav_dolls">Dolls</a></li>
+        <li><a href="{{ rel_prefix }}weapons/index.html" class="nav-link {% if active_page == 'weapons' %}active{% endif %}" data-i18n="nav_weapons">Weapons</a></li>
+        <li><a href="{{ rel_prefix }}faq.html" class="nav-link {% if active_page == 'faq' %}active{% endif %}" data-i18n="nav_faq">FAQ</a></li>
+        <li><a href="{{ rel_prefix }}guides/index.html" class="nav-link {% if active_page == 'guides' %}active{% endif %}">Guides</a></li>
+      </ul>
+
+      <div class="nav-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="global-search-input" placeholder="Search dolls, weapons…" autocomplete="off">
+        <div id="search-dropdown" class="search-results-dropdown"></div>
+      </div>
+
+      <!-- Language Switcher -->
+      <div class="nav-lang-switcher">
+        <button id="lang-toggle-btn" class="lang-switcher-btn" type="button" aria-label="Switch Language" title="Switch Language / Đổi Ngôn Ngữ">
+          <span class="lang-icon">🌐</span>
+          <span class="lang-opt" data-lang="en">EN</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-opt" data-lang="vi">VI</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <p><strong data-i18n="footer_title">Girls' Frontline 2: Exilium Wiki</strong> — Community data reference.</p>
+        <p style="margin-top:0.25rem; font-size:0.75rem; color:var(--text-muted);" data-i18n="footer_desc">
+          Data source compiled by the GFL2 Community. All game assets &copy; MICA Team / Sunborn Network.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ rel_prefix }}characters/index.html" data-i18n="footer_dolls">Tactical Dolls</a>
+        <a href="{{ rel_prefix }}weapons/index.html" data-i18n="footer_weapons">Armory</a>
+        <a href="{{ rel_prefix }}faq.html" data-i18n="footer_faq">FAQ</a>
+        <a href="https://dandegate.net/dolls" target="_blank" rel="noopener">Dandegate</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ rel_prefix }}static/js/effects-data.js"></script>
+  <script src="{{ rel_prefix }}static/js/i18n-vi.js"></script>
+  <script src="{{ rel_prefix }}static/js/i18n.js"></script>
+  <script src="{{ rel_prefix }}static/js/search.js"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

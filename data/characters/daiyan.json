@@ -1,0 +1,252 @@
+{
+  "slug": "daiyan",
+  "name": "Daiyan",
+  "class": "Vanguard",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Heavy Strings",
+  "stats": {
+    "hp": 1616,
+    "atk": 722,
+    "def": 504
+  },
+  "skill_attribute": "Light Ammo",
+  "weakness": "Burn",
+  "stability_gauge": "8 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Plucking Strings",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/daiyan/skill1-icon.png",
+      "range_image": "assets/images/characters/daiyan/skill1-range.png"
+    },
+    {
+      "name": "Absolute Tuning",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles, dispels 1 buff, and deals Physical damage equal to 150% of attack to them.",
+      "icon": "assets/images/characters/daiyan/skill2-icon.png",
+      "range_image": "assets/images/characters/daiyan/skill2-range.png"
+    },
+    {
+      "name": "Qing Shang Harmony",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "effect_area": "Target",
+      "description": "Gains 3 stacks of Tuning, as well as Pitch Perfect for 1 turn. Gains 1 instance of Extra Command.",
+      "icon": "assets/images/characters/daiyan/skill3-icon.png",
+      "range_image": "assets/images/characters/daiyan/skill3-range.png"
+    },
+    {
+      "name": "Ethereal Resonance",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "6 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles, dealing Physical damage equal to 190% of attack. For every 1 stack of Tuning, reduces this skill's cooldown by 1 turn.\n\nAfter attacking, consumes all stacks of Tuning and gains 1 stack of Tuning permanently, up to a maximum of 3 stacks.",
+      "icon": "assets/images/characters/daiyan/ult-icon.png",
+      "range_image": "assets/images/characters/daiyan/ult-range.png"
+    },
+    {
+      "name": "Swift Harmony",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "At the start of the action, gains 1 point of Confectance Index and 1 stack of Tuning. When performing an active attack against a target not protected by Cover, gains 1 point of Confectance Index.\n\nBefore taking targeted damage, if the number of Tuning stacks is greater than 2, launches Interception, dealing light ammo Physical damage equal to 150% of attack and 4 points of Stability Damage, and permanently gains 1 stack of Tuning. This can be triggered once per turn.\n\nIf the number of Tuning stacks is greater than 3, increases damage dealt by 20%.",
+      "icon": "assets/images/characters/daiyan/passive.png",
+      "range_image": "assets/images/characters/daiyan/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Absolute Tuning",
+      "level": 2,
+      "effect": "If the target has no buffs to dispel when during the attack, gains 1 stack of Tuning after the attack."
+    },
+    {
+      "tier": 2,
+      "skill": "Qing Shang Harmony",
+      "level": 2,
+      "effect": "Increases the number of Tuning stacks gained by 3."
+    },
+    {
+      "tier": 3,
+      "skill": "Ethereal Resonance",
+      "level": 2,
+      "effect": "Increases the stack limit of permanent Tuning by 3 stacks."
+    },
+    {
+      "tier": 4,
+      "skill": "Swift Harmony",
+      "level": 2,
+      "effect": "If the number of Tuning stacks is greater than 5, increases damage dealt by 40% instead. Additionally Stability Damage dealt by Interception increases by 2 points, and the initial damage multiplier increases by 30%."
+    },
+    {
+      "tier": 5,
+      "skill": "Swift Harmony",
+      "level": 3,
+      "effect": "When the number of permanent Tuning stacks reaches max, ignores 15% of Cover damage reduction when attacking Exposed enemies."
+    },
+    {
+      "tier": 6,
+      "skill": "Ethereal Resonance",
+      "level": 3,
+      "effect": "For every 1 enemy unit that dies on the field, gain 1 stack of Tuning permanently."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +34\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +68\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +41\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +94\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +48\nDEF +38",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +55\nHP +122",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Echoing Melody",
+      "level": 20,
+      "effect": "When Daiyan has Tuning, increases mobility by 1 tile.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/daiyan/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Unfulfilled Dreams",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/daiyan/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Hazewalker's Melody",
+      "level": 30,
+      "effect": "For each point of additional mobility before the attack, critical rate increases by 10%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/daiyan/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Serene Serenade",
+      "level": 30,
+      "effect": "If Daiyan's mobility is higher than the target's, gains 1 stack of Tuning before using an active attack.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/daiyan/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Squad Broken",
+      "level": 40,
+      "effect": "For every 3 stacks of Tuning, dispels 1 additional buff when using the active skill Absolute Tuning.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/daiyan/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Lasting Legacy",
+      "level": 40,
+      "effect": "After using Qing Shang Harmony, if a kill occurs in this turn, recovers 20% max HP and 2 points of Stability Index.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/daiyan/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Sweet Serenade",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/daiyan/affi.png"
+    },
+    {
+      "name": "Common Key - Shattering Stone and Silk",
+      "level": 40,
+      "effect": "CRIT +5.0% / At the start of the action, gains Movement Up I for 1 turn. This has a cooldown of 1 turn.",
+      "materials": "None",
+      "image": "assets/images/characters/daiyan/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "For each stack of Permanent Tuning held, ignores 10% of the target's DEF when attacking. At the end of the action, gains 2 stacks of Tuning, and for each stack of Permanent Tuning held, increases Confectance Index by 1 point",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/daiyan/expan.png"
+    },
+    {
+      "name": "Expansion Key tier 2",
+      "level": 60,
+      "effect": "When using the Ultimate skill Ethereal Resonance and launches Interception, gain 1 stack of permanent Tuning.\n\nAt the end of a round, if no Interception was performed, gain 2 stacks of permanent Tuning and increase the next active attack's damage multiplier by 150% and Stability damage by 4 points.\n\nAfter using the Ultimate skill Ethereal Resonance, perform 1 additional attack on the target. For each stack of permanent Tuning possessed, this attack deals Physical damage equal to 100% of attack and 1 point of Stability damage.",
+      "materials": "1\n\n\n10000",
+      "image": "assets/images/characters/daiyan/expan2.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/daiyan/portrait.png",
+    "avatar": "assets/images/characters/daiyan/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

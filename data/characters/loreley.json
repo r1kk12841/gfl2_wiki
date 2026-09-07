@@ -1,0 +1,223 @@
+{
+  "slug": "loreley",
+  "name": "Loreley",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Burn",
+  "weapon_type": "Sniper Rifle",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Nighttide Nocturne",
+  "stats": {
+    "hp": 1948,
+    "atk": 784,
+    "def": 536
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Electric",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Disciplinary Prelude",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Heavy Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 9 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/loreley/skill1-icon.png",
+      "range_image": "assets/images/characters/loreley/skill1-range.png"
+    },
+    {
+      "name": "Burning Touch\n(Active / Targeted / Buff)",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Burn damage equivalent to 130% ATK to it. If Loreley has Glowing Embers, the damage multiplier is doubled, and she gains Insight for 2 turns.",
+      "icon": "assets/images/characters/loreley/skill2-icon.png",
+      "range_image": "assets/images/characters/loreley/skill2-range.png"
+    },
+    {
+      "name": "Sultry Promise",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 1,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 4,
+      "effect_area": "Self",
+      "description": "Deals AoE Burn damage equivalent to 120% ATK to all enemies within a 4 tile radius. The total damage is evenly distributed among all targets within the area. If Loreley has Glowing Embers, the damage will not be evenly split, and Incineration tiles will be generated for 3 turns.",
+      "icon": "assets/images/characters/loreley/skill3-icon.png",
+      "range_image": "assets/images/characters/loreley/skill3-range.png"
+    },
+    {
+      "name": "Queen's Endowment",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Damage dealt by all Dolls who use Sniper Rifles is increased by 10%.\nAt the start of battle, gains Thermal Conduction. When Loreley is on the field, Embers from Thermal Conduction is upgraded into Glowing Embers, which lasts for 2 global rounds.\nAt the start of the round, Loreley gains 2 points of Confectance Index. At the end of her action, if Hunter - Type II is present, Loreley also gains Additional Command. Can be triggered once per round.\nBefore an allied unit takes damage, Loreley grants them Flawless Blaze, allowing them to nullify that instance of damage. Can be triggered up to 3 times per round.",
+      "icon": "assets/images/characters/loreley/ult-icon.png",
+      "range_image": "assets/images/characters/loreley/ult-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Pain's Benediction",
+      "level": 2,
+      "effect": "New Symbiotic Dance effect: when lethal damage taken, restore 25% of your maximum health and 5 Stability Index, cleanse all debuffs and reduce the damage taken within 1 round by 60%.\nAfter using general attack or active skills, the Hunter - Type II releases an additional Pyro Pulse.\nAdditionally dispels Stun from all allied units."
+    },
+    {
+      "tier": 2,
+      "skill": "Queen's Endowment",
+      "level": 2,
+      "effect": "The number of times Flawless Blaze can be applied is increased to 5 times.\nAdditional Command is replaced by Extra Action.\nGlowing Embers no longer increase Burn damage, but instead increase all damage caused by 45%."
+    },
+    {
+      "tier": 3,
+      "skill": "Pain's Benediction",
+      "level": 3,
+      "effect": "Hunter - Type II generates an additional 4 Searing Flame when summoned.\nThe damage coefficient of the Pyro Pulse is doubled, and for every Pyro Pulse released, the damage caused by Loreley is increased by 10%, up to 60%; critical damage is increased by 2%, up to 12%.\nApply Flawless Blaze to all friendly units."
+    },
+    {
+      "tier": 4,
+      "skill": "Sultry Promise",
+      "level": 2,
+      "effect": "Increases damage multiplier by 30% and increases the effective range by 1 tile.\nFor each Burn buff Loreley has, the damage dealt is increased by 10%, up to a maximum of 40%."
+    },
+    {
+      "tier": 5,
+      "skill": "Burning Touch",
+      "level": 2,
+      "effect": "Skill ignores 30% of the target's defense. If the target is on a Incineration tile, the damage dealt is increased by 60%."
+    },
+    {
+      "tier": 6,
+      "skill": "Queen's Endowment",
+      "level": 3,
+      "effect": "Searing Flame earned by all friendly units when Loreley is present are increased by an additional 1 point. For every Burn Doll on the field, Loreley ATK is increased by 6%.\nThe ATK of the Infernal Surge applied by the Hunter - Type II has been increased to 12%.\nIncreased effect of Glowing Embers: Damage reduction increased to 30%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +37\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +82\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +44\nDEF +31",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +113\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +52\nDEF +41",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +60\nHP +147",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Hidden Passion",
+      "level": 20,
+      "effect": "At the start of the battle, Loreley gains 1 Confectance Index and 10 Searing Flame",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/loreley/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Pain Threshold",
+      "level": 20,
+      "effect": "When Hunter - Type II passive skill Pyro Pulse deals damage, applies Overburn to the target for 1 turn.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/loreley/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Intertwined Dreams",
+      "level": 30,
+      "effect": "While Hunter - Type II is on the field, all allied unit's Burn damage is increased by 7%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/loreley/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - The Gentleness of an Angel",
+      "level": 30,
+      "effect": "Before using an active attack, dispel one target's buff",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/loreley/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - The Stride of a Devil",
+      "level": 40,
+      "effect": "At the start of the battle, Loreley gains Movement Up III",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/loreley/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Absolute Subjugator",
+      "level": 40,
+      "effect": "When a normal ELID enemy unit ends its action while standing within a radius of 3 tiles to Hunter - Type II, it is instantly executed. (Executions via this mechanic does not deal damage)",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/loreley/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/loreley/affi.png"
+    },
+    {
+      "name": "Common Key - Smoldering Breath",
+      "level": 40,
+      "effect": "ATK +5.0% / When the user has a Burn-type buff, critical rate is increased by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/loreley/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/loreley/portrait.png",
+    "avatar": "assets/images/characters/loreley/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

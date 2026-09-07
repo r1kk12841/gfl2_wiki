@@ -1,0 +1,247 @@
+{
+  "slug": "lenna",
+  "name": "Lenna",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Electric",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Löwenjunges",
+  "stats": {
+    "hp": 2081,
+    "atk": 689,
+    "def": 550
+  },
+  "skill_attribute": "Electric",
+  "weakness": "Freeze",
+  "stability_gauge": "10 points",
+  "movement_speed": "7 tiles",
+  "skills": [
+    {
+      "name": "Territory Awareness",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/lenna/skill1-icon.png",
+      "range_image": "assets/images/characters/lenna/skill1-range.png"
+    },
+    {
+      "name": "Wild Extinction",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Electric damage equivalent to 140% ATK to it. If Confectance Index has 3 points or more before skill activation, consumes 3 points and increases damage dealt by 30%",
+      "icon": "assets/images/characters/lenna/skill2-icon.png",
+      "range_image": "assets/images/characters/lenna/skill2-range.png"
+    },
+    {
+      "name": "Leaping Pursuit",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "7",
+      "description": "Selects a tile within a 3 tile cross area of self and lands on the selected tile, dealing Physical damage equivalent to 30% ATK and inflicting Stability Loss II to the nearest enemy target within a 7 tile radius for 1 turn. If Confectance Index has 3 points or more before skill activation, consumes 3 points and gains Extra Command",
+      "icon": "assets/images/characters/lenna/skill3-icon.png",
+      "range_image": "assets/images/characters/lenna/skill3-range.png"
+    },
+    {
+      "name": "Hunting Strategy",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff",
+        "Buff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "6 turns",
+      "confectance_cost": 0,
+      "effect_area": "5",
+      "description": "Deals AoE Electric damage equivalent to 80% ATK to all enemies within a 5 tile radius, and inflicts Conductivity for 1 turn. Creates a Voltage tiles for 3 turns. Lenna gains Electric Arc for 3 turns. If Confectance Index has 3 points or more before skill activation, consumes 3 points and gains Concealed for 1 turn",
+      "icon": "assets/images/characters/lenna/ult-icon.png",
+      "range_image": "assets/images/characters/lenna/ult-range.png"
+    },
+    {
+      "name": "King's Authority",
+      "tags": [
+        "Passive",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Lenna is immune from the negative effects of Electric type terrain. When an enemy gains Conductivity, increases Confectance Index by 1 point. When dealing single target damage, generates a Voltage tiles within a 1 tile radius around the target for 2 turns",
+      "icon": "assets/images/characters/lenna/passive.png",
+      "range_image": "assets/images/characters/lenna/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "King's Authority",
+      "level": 2,
+      "effect": "For every 3 points of Confectance Index consumed, reduces the cooldown of all skills by 1 turn"
+    },
+    {
+      "tier": 2,
+      "skill": "Wild Extinction",
+      "level": 2,
+      "effect": "If Confectance Index has 3 points or more before skill activation, increases damage dealt by 30% → 50%. If the target has Conductivity, increases Confectance Index by 3 points"
+    },
+    {
+      "tier": 3,
+      "skill": "Leaping Pursuit",
+      "level": 2,
+      "effect": "Increases effective range by 2 tiles"
+    },
+    {
+      "tier": 4,
+      "skill": "Hunting Strategy",
+      "level": 2,
+      "effect": "Increases effective range by 2 tiles, and inflicts 2 random debuffs on targets for 1 turn"
+    },
+    {
+      "tier": 5,
+      "skill": "King's Authority",
+      "level": 3,
+      "effect": "Increases the duration of Concealed by 1 turn"
+    },
+    {
+      "tier": 6,
+      "skill": "Hunting Strategy",
+      "level": 3,
+      "effect": "Electric Arc: At the end of Lenna's action, recovers Confectance Index fully. Skills no longer need to consume Confectance Index in order to be enhanced. Instead, when Confectance Index is consumed, increases damage dealt by 20%"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +31\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +89\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +38\nDEF +32",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +122\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +45\nDEF +42",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +51\nHP +159",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Skillful Strategem",
+      "level": 20,
+      "effect": "When attacking enemies with Conductivity and immunity to Paralysis, ignores 15% DEF",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/lenna/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - SSStylish Action",
+      "level": 20,
+      "effect": "Wild Extinction: When this skill kills the target, increases Confectance Index by 2 points",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/lenna/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - The Perfect Way",
+      "level": 30,
+      "effect": "When applying Conductivity, changes 1 random buff on the enemy to a random debuff",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/lenna/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - I Need More Power",
+      "level": 30,
+      "effect": "Leaping Pursuit: After this skill is used, applies Conductivity on the 2 nearest enemies within a 5 tile radius for 1 turn",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/lenna/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Driving Force",
+      "level": 40,
+      "effect": "When an enemy with Electric type debuffs is killed, increases Confectance Index by 1 point",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/lenna/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Top-Tier Intermediate Response",
+      "level": 40,
+      "effect": "When Lenna enters into Stability Break from being attacked, inflicts Paralysis on all enemy targets within a 5 tile radius for 1 turn. This effect can be triggered once per battle",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/lenna/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/lenna/affi.png"
+    },
+    {
+      "name": "Common Key - Razor-Sharp Claws",
+      "level": 40,
+      "effect": "CRIT +5.0% / When the user deals single target damage, applies Conductivity on the target for 1 turn. This effect can be activated up to twice per turn",
+      "materials": "None",
+      "image": "assets/images/characters/lenna/common.png"
+    },
+    {
+      "name": "Expansion Key- Lioness' Determination",
+      "level": 60,
+      "effect": "Hunting Strategy: After skill usage, Lenna gains Ultimate Briliance for 3 turns\n\nLeaping Pursuit: After skill usage, increases the damage multiplier of the attack executed during Extra Command by 100%\n\nFor each point of Confectance Index consumed during the round, increase Lenna's attack by 5% for the next round, up to a maximum of 30%",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/lenna/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/lenna/portrait.png",
+    "avatar": "assets/images/characters/lenna/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,247 @@
+{
+  "slug": "belka",
+  "name": "Belka",
+  "class": "Vanguard",
+  "rarity": "Elite",
+  "phase": "Electric",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Sylvan Elf",
+  "stats": {
+    "hp": 1770,
+    "atk": 757,
+    "def": 528
+  },
+  "skill_attribute": "Electric",
+  "weakness": "Freeze",
+  "stability_gauge": "8 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Nutcracker Shell",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/belka/skill1-icon.png",
+      "range_image": "assets/images/characters/belka/skill1-range.png"
+    },
+    {
+      "name": "Sylvan Vault",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 130% ATK to it. Increases the damage of this attack based on (3% x the number of Negative Charge) on the field, up to a maximum of 15%. If the target is a boss unit and has Negative Charge, increases damage immediately to 15% instead\n\nIf thie attack CRITs, increases Confectance Index by 1 point. After this skill is used, selects an empty tile within a 6 tile range and lands on the designated tile",
+      "icon": "assets/images/characters/belka/skill2-icon.png",
+      "range_image": "assets/images/characters/belka/skill2-range.png"
+    },
+    {
+      "name": "Crackling Core",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 6 tile radius and deals Electric damage equivalent to 130% ATK. For each movement point consumed, increases damage multiplier by 5%\n\nBelka gains 1 layer of Active Engagement. After this skill is used, Belka can use Sylvan Vault or Nutcracker Shell",
+      "icon": "assets/images/characters/belka/skill3-icon.png",
+      "range_image": "assets/images/characters/belka/skill3-range.png"
+    },
+    {
+      "name": "Leaping Arc",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius and deals Electric damage equivalent to 160% ATK, and applies Conductivity for 1 turn. For each movement point consumed, increases damage multiplier by 5%. Belka gains Continual Release for 2 turns",
+      "icon": "assets/images/characters/belka/ult-icon.png",
+      "range_image": "assets/images/characters/belka/ult-range.png"
+    },
+    {
+      "name": "Forest's Secrets",
+      "tags": [
+        "Passive",
+        "Debuff",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of the turn, increases Confectance Index by 1 point\n\nBefore attacking, applies Negative Charge on the target and the nearest enemy for 1 turn. If the target is killed, gains Concealment\n\nFor each Negative Charge applied by allies, increases CRIT rate by 5%, up to a maximum of 30%",
+      "icon": "assets/images/characters/belka/passive-icon.png",
+      "range_image": "assets/images/characters/belka/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Crackling Core",
+      "level": 2,
+      "effect": "For each movement point consumed, increases damage multiplier by 8% instead. Increases damage by 15% towards enemy targets with Negative Charge"
+    },
+    {
+      "tier": 2,
+      "skill": "Leaping Arc",
+      "level": 2,
+      "effect": "Gains one stack of Active Engagement\n\nNew effect is added for Continual Release - If the target of this skill is the same as the target of Continual Release this turn, applies Overflowing Electrons before attacking that lasts for 2 turns"
+    },
+    {
+      "tier": 3,
+      "skill": "Forest's Secrets",
+      "level": 2,
+      "effect": "Before attacking, applies Conductivity on the target for 1 turn. When attacking enemy targets with Negative Charge, ignores 10% DEF\n\nWhen Belka deals single target Electric damage towards enemy targets with Negative Charge, increases the damage multiplier of fixed damage dealt by Negative Charge to 40%. For each Electric damage dealt by allies, Belka gains 1 stack of Stored Charge"
+    },
+    {
+      "tier": 4,
+      "skill": "Forest's Secrets",
+      "level": 3,
+      "effect": "At the start of the battle, increases movement speed and attack range by 1 tile\n\nIncreases the upper limit of Stored Charge by 4 stacks. For each instance of Electric damage dealt by self, additionally gains 1 stack of Stored Charge"
+    },
+    {
+      "tier": 5,
+      "skill": "Sylvan Vault",
+      "level": 2,
+      "effect": "Increases Stability damage dealt by 2 points. Increases CRIT DMG of this attack by 30%\n\nIncreases the damage of this attack based on 6% x the number of Negative Charge on the field, up to a maximum of 30%. If the target is a boss unit and has Negative Charge, increases damage immediately to 30% instead"
+    },
+    {
+      "tier": 6,
+      "skill": "Leaping Arc",
+      "level": 3,
+      "effect": "For each movement point consumed, increases damage multiplier by 10% instead. Increases the damage multiplier of Continual Release by 30%\n\nIf the target has 2 or more Electric type debuffs, increases CRIT DMG by 30%"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +35\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +74\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +102\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +50\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +133",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Lively Energy",
+      "level": 20,
+      "effect": "When Concealment ends, Belka recovers HP equivalent to 30% max HP and 4 Stability",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/belka/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Offensive of Tears",
+      "level": 20,
+      "effect": "If Belka has Continual Release, she becomes immune to movement displacement effects",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/belka/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Atmosphere Booster",
+      "level": 30,
+      "effect": "At the start of the turn, if there are enemies within a 5 tile radius of self, gains Movement Up I for 2 turns",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/belka/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Raised Tail",
+      "level": 30,
+      "effect": "Crackling Core: When using this skill to attack a target with Negative Charge, increases ATK by 10%",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/belka/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Desired Praise",
+      "level": 40,
+      "effect": "At the end of the action, if there are boss units with Negative Charge, gains Critical Rate Boost I and Damage Up I for 1 turn",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/belka/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Deciding Motive",
+      "level": 40,
+      "effect": "Leaping Arc: Before this skill is used, dispels 2 buffs from the target",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/belka/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/belka/affi.png"
+    },
+    {
+      "name": "Common Key - The Will to Fight for Favor",
+      "level": 40,
+      "effect": "ATK +5% / If movement points are consumed, increases damage dealt by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/belka/common.png"
+    },
+    {
+      "name": "Expansion Key - Squirrel's Resolve",
+      "level": 60,
+      "effect": "Sylvan Vault deals Electric damage instead. Increases the CRIT DMG of this attack by 5% per allied unit with Positive Charge, up to a maximum of 25%\n\nWhen using Crackling Core or Leaping Arc, if Belkas has moved less than 10 times, the movement is treated as 10 tiles",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/belka/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/belka/portrait.png",
+    "avatar": "assets/images/characters/belka/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

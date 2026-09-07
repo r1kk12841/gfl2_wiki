@@ -1,0 +1,234 @@
+{
+  "slug": "soppo",
+  "name": "Soppo",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Freeze",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Skysunderer's Howl",
+  "stats": {
+    "hp": 1948,
+    "atk": 844,
+    "def": 504
+  },
+  "skill_attribute": "Freeze",
+  "weakness": "Corrosion",
+  "stability_gauge": "9 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Predator's Pursuit",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Freeze damage equal to 80% of attack to them. Soppo gains Confectance Index and 2 points of Predator Mark. If Soppo is in Feral Form, this attack deals Burn damage instead.",
+      "icon": "assets/images/characters/soppo/skill1-icon.png",
+      "range_image": "assets/images/characters/soppo/skill1-range.png"
+    },
+    {
+      "name": "Ferocious Bite",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "3",
+      "description": "Selects 1 enemy target within 6 tiles, dealing AoE Freeze damage equal to 80% of attack to the target and all enemy targets within a 3-tile radius around it, and creates Frost tiles for 2 turns. After skill usage, use the basic attack Predator's Pursuit on the nearest enemy target within 8 tiles and gains Extra Command.\nIf in Feral Form, deals AoE Burn damage instead, creates Incineration tiles, and no longer gains Extra Command.",
+      "icon": "assets/images/characters/soppo/skill2-icon.png",
+      "range_image": "assets/images/characters/soppo/skill2-range.png"
+    },
+    {
+      "name": "Midnight Howl",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 0,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "effect_area": "8",
+      "description": "Selects any empty Freeze-type or Burn-type tile anywhere on the battlefield, moves onto that tile, and applies Slaughter Trail to all allied Dolls within an 8-tile radius around the user (excluding self) for 3 turns. After skill usage, switches to Feral Form.\n\nIf in Feral Form, deals AoE Burn damage equal to 120% of attack to all enemy targets within a 4-tile radius instead. This damage is evenly split among all targets within the area. After skill usage, Soppo use the basic attack Predator's Pursuit on the nearest enemy target within 8 tiles and gains Extra Action.",
+      "icon": "assets/images/characters/soppo/skill3-icon.png",
+      "range_image": "assets/images/characters/soppo/skill3-range.png"
+    },
+    {
+      "name": "Deadly Pounce",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 5,
+      "cooldown": "2 turns",
+      "confectance_cost": 4,
+      "effect_area": "6",
+      "description": "Selects all enemy targets within a 6-tile radius, consumes all Predator Mark stacks, and deals AoE Freeze damage equal to number of Predator Mark stacks × 30% of attack. If this attack hits an enemy target standing on an phase tile, deals an additional 1 instance of Freeze damage equal to 50% of attack to that target. After skill usage, switches to Hunter Form.\n\nPassive: Before an enemy unit within 8 tiles performs an active attack, triggers Interception against it, dealing Freeze damage equal to 30% of attack and 4 points of stability damage. Can trigger at most once per turn.",
+      "icon": "assets/images/characters/soppo/ult-icon.png",
+      "range_image": "assets/images/characters/soppo/ult-range.png"
+    },
+    {
+      "name": "Mad Dog Syndrome",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of battle, enters Hunter Form; consumes 3 points of own Confectance Index and gains Frost Barrier for 3 turns. Frost Barrier absorbs damage equal to 65% of initial attack, up to a maximum of 60% of max HP.\n\nAt the start of battle, if there are 3 or more allied Burn Dolls (excluding self), then while in Hunter Form, the damage dealt by the basic attack Predator's Pursuit and the active skill Ferocious Bite to enemy targets afflicted with Burn-type debuffs is increased by 100%; if there are 3 or more allied Freeze Dolls (excluding self), then while in Feral Form, the damage dealt by the above skills as well as the active skill Midnight Howl to enemy targets afflicted with Freeze-type debuffs is increased by 100%.\nIf neither condition is met, gains 2 stacks of Permanent Predator Mark.\n\nAfter use an active skill, gains 1 stack of Berserk Factor, up to a maximum of 10 stacks. At 4 stacks of Berserk Factor, gains Berserk Factor I; at 6 stacks of Berserk Factor, gains Berserk Factor II; at 8 or more stacks of Berserk Factor, gains Berserk Factor III.",
+      "icon": "assets/images/characters/soppo/passive.png",
+      "range_image": "assets/images/characters/soppo/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Ferocious Bite",
+      "level": 2,
+      "effect": "The damage multiplier is increased to 130%. \nIf in Hunter Form, gains 2 stacks of Predator Mark after attacking, and gains Extra Action instead of Extra Command."
+    },
+    {
+      "tier": 2,
+      "skill": "Midnight Howl",
+      "level": 2,
+      "effect": "After moving onto the target tile, if that tile is an Freeze-type or Burn-type tile, deals Freeze damage or Burn damage equal to 80% of attack to the 3 nearest enemy targets within 8 tiles.\nIf that tile is an Ashen (Freeze-Burn) tile, instead deals 1 instance of Freeze damage and 1 instance of Burn damage, each equal to 80% of attack, to the 3 nearest enemy targets within 8 tiles.\nIf in Feral Form, gains 1 stack of Predator Mark after skill usage."
+    },
+    {
+      "tier": 3,
+      "skill": "Midnight Howl",
+      "level": 3,
+      "effect": "The effect of Slaughter Trail is enhanced: the range for creating Frost tiles is increased by 2 tiles; before performing an active attack, Soppo gains 1 stack of Berserk Factor.\nIf in Feral Form, the damage multiplier is increased to 150%. If the enemy target is standing on a Level 1 tile, the damage is increased by 10%; for every 1 tile level, the damage is further increased by 10%."
+    },
+    {
+      "tier": 4,
+      "skill": "Mad Dog Syndrome",
+      "level": 2,
+      "effect": "The damage increase from team conditions against enemy targets is raised to 150% and no longer requires the target to have any debuffs. The number of Permanent Predator Mark stacks gained is increased by 2."
+    },
+    {
+      "tier": 5,
+      "skill": "Deadly Pounce",
+      "level": 2,
+      "effect": "The multiplier is increased to number of Predator Mark stacks × 50% of attack. When using this skill, consumes all Confectance Index; for each additional 1 point of Confectance Index consumed, the base multiplier is increased by 5%. After skill usage, restores 2 points of Confectance Index.\nAfter triggering Interception, gains 2 stacks of Predator Mark. The damage multiplier of Interception is increased to 60%."
+    },
+    {
+      "tier": 6,
+      "skill": "Mad Dog Syndrome",
+      "level": 3,
+      "effect": "At the start of battle, gains 3 stacks of Berserk Factor.\nThe maximum number of Berserk Factor stacks is increased to 20, and after performing an active attack, the number of Berserk Factor stacks gained is additionally increased by 1.\nIn addition, when Berserk Factor reaches 20 stacks, its effects are enhanced:\nBerserk Factor I — when actively attacking an enemy target standing on an phase tile, defense ignore is increased to 20%;\nBerserk Factor II — the increase to Freeze damage and Burn damage is raised to 10%;\nBerserk Factor III — when attacking an enemy target standing on an phase tile, the damage increase is raised to 30%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +82\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +48\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +113\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +56\nDEF +38",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +147",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - This Is My Turf",
+      "level": 20,
+      "effect": "At the start of battle, gains 2 stacks of Berserk Factor.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/soppo/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Want Another Bite?",
+      "level": 20,
+      "effect": "After attacking an enemy target standing on an phase tile, dispels 1 buff from the target.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/soppo/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Frozen Hell",
+      "level": 30,
+      "effect": "At the start of the turn, creates Frost tiles within a 4-tile radius around the user for 2 turns.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/soppo/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Territorial Recovery",
+      "level": 30,
+      "effect": "When taking damage while standing on an phase tile, damage taken is reduced by 10%, and stability damage taken is reduced by 1 point.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/soppo/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Killing Frenzy",
+      "level": 40,
+      "effect": "While the Soppo has a shield, increases Burn damage and Freeze damage dealt by 10%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/soppo/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Pack Synergy",
+      "level": 40,
+      "effect": "After an allied unit (excluding Soppo) performs an out-of-turn attack, if the user does not have Blazing Assault I or Frost Assault, gains the corresponding effect for 2 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/soppo/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Frolic chord",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/soppo/affi.png"
+    },
+    {
+      "name": "Common Key - Call of the Wild",
+      "level": 40,
+      "effect": "CRIT +5.0% / When attacking an enemy target standing on an Freeze-type or Burn-type tile, phase damage dealt is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/soppo/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/soppo/portrait.png",
+    "avatar": "assets/images/characters/soppo/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "cn"
+}

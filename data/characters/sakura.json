@@ -1,0 +1,242 @@
+{
+  "slug": "sakura",
+  "name": "Sakura",
+  "class": "Vanguard",
+  "rarity": "Elite",
+  "phase": "Burn",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Crimson Covenant",
+  "stats": {
+    "hp": 1754,
+    "atk": 774,
+    "def": 528
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Freeze",
+  "stability_gauge": "8 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Sakura Chime",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/sakura/skill1-icon.png",
+      "range_image": "assets/images/characters/sakura/skill1-range.png"
+    },
+    {
+      "name": "Falling Blossom",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "effect_area": "2",
+      "description": "Selects an empty tile within a 2-tile radius of a friendly Doll or an enemy affected by Sakura Mark, then jumps to that tile, dealing AoE Burn damage equal to 60% ATK to all enemies within a 2-tile radius. Grants Extra Command.",
+      "icon": "assets/images/characters/sakura/skill2-icon.png",
+      "range_image": "assets/images/characters/sakura/skill2-range.png"
+    },
+    {
+      "name": "Misfortune Delivery",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Burn damage equivalent to 130% ATK to it, and applies 2 stacks of Sakura Mark.\nBefore attacking, additionally applies Bad Luck to the target for 3 turns.",
+      "icon": "assets/images/characters/sakura/skill3-icon.png",
+      "range_image": "assets/images/characters/sakura/skill3-range.png"
+    },
+    {
+      "name": "Grand Isekai Adventure",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 2,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects one direction and applies 3 stacks of Sakura Mark to all enemies within a 3×10 tile area in front, dealing AoE Burn damage equal to 90% ATK.\nAfter using this skill, triggers the effect of Sakura Mark, and gains Good Luck for 2 turns and 2 points of Confectance Index.",
+      "icon": "assets/images/characters/sakura/ult-icon.png",
+      "range_image": "assets/images/characters/sakura/ult-range.png"
+    },
+    {
+      "name": "Ferlicitous Prayer",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of battle, gains Thermal Conduction. When triggering the effect of Sakura Mark and if the ultimate skill Grand Isekai Adventure has not been used, gains 2 stacks of Searing Flame. At the start of each turn, gains 2 points of Confectance Index and applies 2 stacks of Sakura Mark to 3 random enemies on the field. If Sakura has Good Luck, her damage is increased by 20%.",
+      "icon": "assets/images/characters/sakura/passive.png",
+      "range_image": "assets/images/characters/sakura/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Ferlicitous Prayer",
+      "level": 2,
+      "effect": "Randomly applies Sakura Mark to up to 5 enemies; the damage multiplier of Sakura Mark increases to 90%, and its effective radius increases by 1 tile.\nIf an enemy unit is standing on a Burn-type tile, damage dealt by Sakura Mark is increased by 30%."
+    },
+    {
+      "tier": 2,
+      "skill": "Falling Blossom",
+      "level": 2,
+      "effect": "Increases range by 1 tile; increases effective area by 1 tile; increases damage multiplier by 15%; reduces Confectance Index consumption by 1 point."
+    },
+    {
+      "tier": 3,
+      "skill": "Ferlicitous Prayer",
+      "level": 2,
+      "effect": "If the user has Good Luck, increases damage dealt by 50% and Critical Damage by 25%.\nWhen an enemy gains Sakura Mark, creates Incineration tiles within a 1-tile radius around it for 3 turns; when Sakura Mark deals damage, it ignores 15% of the target’s DEF"
+    },
+    {
+      "tier": 4,
+      "skill": "Misfortune Delivery",
+      "level": 2,
+      "effect": "Increases the number of Sakura Mark stacks applied to 3; increases the damage bonus from Bad Luck to 30%."
+    },
+    {
+      "tier": 5,
+      "skill": "Grand Isekai Adventure",
+      "level": 3,
+      "effect": "Increases the damage multiplier by 30%; expands the effective area to a 5×10 tile zone in front; stack this effect to the limit on all enemy units across the entire field affected by Sakura Mark."
+    },
+    {
+      "tier": 6,
+      "skill": "Grand Isekai Adventure",
+      "level": 3,
+      "effect": "Good Luck gains an additional effect:\nBefore a friendly unit performs an active attack or an out-of-turn attack (excluding the user), Sakura applies 1 stack of Sakura Mark to that target.\nCan trigger up to 3 times per turn."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +36\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +74\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +44\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +102\nCRIT DMG +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +51\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +59\nHP +132",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Hard Work and Guts",
+      "level": 20,
+      "effect": "At the start of battle, applies 1 stack of Sakura Mark to any 3 enemy units on the field.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/sakura/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Just In Time Logistic",
+      "level": 20,
+      "effect": "When applying Sakura Mark with a non-Ultimate skill, also applies Overburn for 1 turn.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/sakura/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Apologize From The Heart",
+      "level": 30,
+      "effect": "When applying Bad Luck, dispels 1 buff from the target.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/sakura/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Jinxed by Nature",
+      "level": 30,
+      "effect": "At the start of battle, applies Bad Luck to the enemy unit with the highest HP on the field for 3 turns.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/sakura/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Flying Solo",
+      "level": 40,
+      "effect": "At the end of the action, if there are enemy units within a 3-tile radius, gains 1 stack of Quick Barrier.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/sakura/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Improving Everyday",
+      "level": 40,
+      "effect": "When an enemy affected by Sakura Mark dies, increases self ATK by 4%, up to a maximum of 20%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/sakura/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Mission Accomplished",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/sakura/affi.png"
+    },
+    {
+      "name": "Common Key - Ace Courier",
+      "level": 40,
+      "effect": "CRIT +5.0% / Increases AOE damage dealt to enemy targets with debuffs by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/sakura/common.png"
+    },
+    {
+      "name": "Expansion Key - Dance of the Fire Sakura",
+      "level": 60,
+      "effect": "When acquiting Extra Command by using the active skill Omnidirectional Shift, can move 6 tiles.\nThe damage miltiplier of Sakura Mark is increased by 15%. For every 3 times of effect Sakura Mark is triggered (excluding triggers by the Ultimate Skill Domain of Bad Luck), gains 1 Confectance Index, up to a maximum of 4 per turn.\nEach time the effect of Thermal Conduction is triggered, damage dealt by self permanently increases by 15% and Critical Damage permanently increases by 15% up to a maximum increase of 75%.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/sakura/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/sakura/portrait.png",
+    "avatar": "assets/images/characters/sakura/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,205 @@
+{
+  "slug": "voymastina",
+  "name": "Voymastina",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "6P71",
+  "stats": {
+    "hp": 1819,
+    "atk": 844,
+    "def": 528
+  },
+  "skill_attribute": "Medium Ammo",
+  "weakness": "Burn",
+  "stability_gauge": "12 points",
+  "movement_speed": "7 tiles",
+  "skills": [
+    {
+      "name": "Dread Ultimatum",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/voymastina/skill1-icon.png",
+      "range_image": "assets/images/characters/voymastina/skill1-range.png"
+    },
+    {
+      "name": "Pile Bunker",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 5,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "icon": "assets/images/characters/voymastina/skill2-icon.png",
+      "range_image": "assets/images/characters/voymastina/skill2-range.png"
+    },
+    {
+      "name": "Mastiff's Vow",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Voymastina is immune to movement displacement and movement debuffs, does not receive protection from Cover, but reduces damage taken by 30%. When Stability is more than 0, reduces damage taken by 80% instead\n\nWhen dealing Physical damage, ignores 50% of the target's DEF. After using active skills or basic attack, increases Confectance Index by 2 points. If Confectance Index is at max, consumes all of it and gains Predation Protocol",
+      "icon": "assets/images/characters/voymastina/skill3-icon.png",
+      "range_image": "assets/images/characters/voymastina/skill3-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Howl from the Firmament",
+      "level": 2,
+      "effect": "Increases damage multiplier to 180% ATK, increases Stability damage dealt by 2 points, increases effect area by 2 tiles\n\nPassive: Increases damage multiplier to 150% ATK, increases Stability damage dealt by 1 point, increases effect area by 2 tiles"
+    },
+    {
+      "tier": 2,
+      "skill": "Pile Bunker",
+      "level": 2,
+      "effect": "Before triggering the active or passive effects of this skill, increases ATK by 10% for 1 round (Duration decreases at the end of the current round), and applies Frightened on the target for 2 round (Duration decreases at the end of the current round)"
+    },
+    {
+      "tier": 3,
+      "skill": "Eye of the White Mastiff",
+      "level": 2,
+      "effect": "Wolf Eye System: Increases duration by 1 round (Duration decreases at the end of the current round), increases damage multiplier to 130% ATK, and removes the maximum trigger limit per round. If an enemy is spawned within Attack Range, deals targeted damage equivalent to 130% ATK and 1 Stability to the target\n\nPassive: Increases damage multiplier to 300% ATK, increases number of targets to 10, and applies Stun for 1 turn after attack\n\nBefore triggering the active or passive effects of this skill, applies Dismay on the target for 2 rounds"
+    },
+    {
+      "tier": 4,
+      "skill": "Howl from the Firmament",
+      "level": 3,
+      "effect": "New effect is added for Passive - When performing any Action Support, gains 1 stack of Coordinated Hunting"
+    },
+    {
+      "tier": 5,
+      "skill": "Pile Bunker",
+      "level": 3,
+      "effect": "Increases damage multplier to 300%. If Voymastina has Predation Protocol, increases ATK by 30%\n\nBefore triggering the active or passive effects of this skill, applies Defense Down II for 2 turns"
+    },
+    {
+      "tier": 6,
+      "skill": "Mastiff's Vow",
+      "level": 2,
+      "effect": "Increases movement speed by 2 tiles\n\nAt the start of the battle, gains Pursuer. For each round, if Voymastina used 2 or more active skills or their passive effects, gains Pursuer or refreshes its duration. For each Action Support performed, gains 1 stack of Hunting Rhythm\n\nWhen Voymastina's ATK is increased, her DEF is increased by 50% of the corresponding ATK increase value, up to a maximum of 30% of her initial DEF. When dealing Physical damage, ignores 125% of the target's DEF"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +77\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +48\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +105\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +56\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +137",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1",
+      "level": 20,
+      "effect": "Howl from the Firmament: If this skill or its passive effect hit a boss enemy or 3 or more enemies, gains Quick Barrier",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/voymastina/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2",
+      "level": 20,
+      "effect": "Pile Bunker: After triggering the passive effect of this skill, gains Movement Up II for 2 turns",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/voymastina/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3",
+      "level": 30,
+      "effect": "The range of all Action Support is extended to the entire field, and deals 30% more damage towards non boss enemies",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/voymastina/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4",
+      "level": 30,
+      "effect": "Howl from the Firmament: If this skill or its passive effect only hits 1 enemy, increases damage dealt by 20% and Stability damage dealt by 2 points",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/voymastina/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5",
+      "level": 40,
+      "effect": "Before attacking, gains Reversed Assault for 3 turns",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/voymastina/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6",
+      "level": 40,
+      "effect": "Pile Bunker: After being attacked, the next usage of this skill deals 15% more damage",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/voymastina/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/voymastina/affi.png"
+    },
+    {
+      "name": "Common Key",
+      "level": 40,
+      "effect": "ATK +5% / When dealing melee damage, increases Physical damage dealt by 10% for 1 round (Duration decreases at the end of the current round)",
+      "materials": "None",
+      "image": "assets/images/characters/voymastina/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/voymastina/portrait.png",
+    "avatar": "assets/images/characters/voymastina/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

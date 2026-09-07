@@ -1,0 +1,245 @@
+{
+  "slug": "vepley",
+  "name": "Vepley",
+  "class": "Vanguard",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "Shotgun",
+  "ammo_type": "Shotgun Ammo",
+  "signature_weapon": "Heart Seeker",
+  "stats": {
+    "hp": 1851,
+    "atk": 696,
+    "def": 528
+  },
+  "weakness": "Hydro",
+  "stability_gauge": "8 points",
+  "movement_speed": "8 tiles",
+  "skills": [
+    {
+      "name": "Live Interaction",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Shotgun Ammo",
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 5,
+      "effect_area": "Target",
+      "description": "Select 1 enemy target within 5 tiles and deal Physical damage equal to 80% of attack to it.",
+      "icon": "assets/images/characters/vepley/skill1-icon.png",
+      "range_image": "assets/images/characters/vepley/skill1-range.png"
+    },
+    {
+      "name": "All Out Performance",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 1,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects 1 direction, dealing Physical damage equal to 75% of attack to the first enemy target in each line within a 3x5 area in the selected direction, and knocks the target back by 4 tiles. Simultaneously, destroys any destructible Cover outside the 3x3 tile area around the user.",
+      "icon": "assets/images/characters/vepley/skill2-icon.png",
+      "range_image": "assets/images/characters/vepley/skill2-range.png"
+    },
+    {
+      "name": "Exclusive Stage",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "range": 5,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 5 tiles and deal Physical damage equal to 150% of attack to it. If the target has movement debuffs, ignore 10% of Cover damage reduction. If the target is not protected by Cover, dispels 2 of its buffs before attacking.",
+      "icon": "assets/images/characters/vepley/skill3-icon.png",
+      "range_image": "assets/images/characters/vepley/skill3-range.png"
+    },
+    {
+      "name": "Infectious Enthusiasm",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 5,
+      "effect_area": "2",
+      "description": "Selects 1 tile within 5 tiles to attack, dealing AoE Physical damage equal to 100% of attack to all enemy targets within 2 tiles. Additionally, this applies Overzealous and Vulnerable II to the targets for 2 turns.",
+      "icon": "assets/images/characters/vepley/ult-icon.png",
+      "range_image": "assets/images/characters/vepley/ult-range.png"
+    },
+    {
+      "name": "Idol Talent",
+      "tags": [
+        "Passive",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of the action, gains 1 point of Confectance Index. For each instance of damage dealt, gains 1 point of Confectance Index. Damage dealt to targets with movement debuffs is increased by 20%. If this unit moved 5 or more tiles, applies Movement Down II to the target for 2 turns before attacking.",
+      "icon": "assets/images/characters/vepley/passive.png",
+      "range_image": "assets/images/characters/vepley/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "All Out Performance",
+      "level": 2,
+      "effect": "If 2 or more targets are hit, gain 3 tiles of  Additional Movement."
+    },
+    {
+      "tier": 2,
+      "skill": "Exclusive Stage",
+      "level": 2,
+      "effect": "If the target has movement debuffs, increase critical rate by 100%."
+    },
+    {
+      "tier": 3,
+      "skill": "Infectious Enthusiasm",
+      "level": 2,
+      "effect": "Overzealous is now applied before the attack instead of after."
+    },
+    {
+      "tier": 4,
+      "skill": "Idol Talent",
+      "level": 2,
+      "effect": "If this unit moved 3 or more tiles, applies Movement Down II to the target before attacking."
+    },
+    {
+      "tier": 5,
+      "skill": "Idol Talent",
+      "level": 3,
+      "effect": "If the target has movement debuffs, applies Movement Denied to them for 1 turn."
+    },
+    {
+      "tier": 6,
+      "skill": "Infectious Enthusiasm",
+      "level": 3,
+      "effect": "If only 1 target is hit, applies Stun for 1 turn."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +32\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +39\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +107\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +46\nDEF + 40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +53\nHP +140",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Safe Distance Viewing",
+      "level": 20,
+      "effect": "Increases Stability Damage dealt against enemy targets with movement debuffs by 2 points.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/vepley/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Contamination Zone Tour",
+      "level": 20,
+      "effect": "The range of All Out Performance changes to 5x3 tiles, knockback distance changes to 1 tile.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/vepley/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Fortune of an Idol",
+      "level": 30,
+      "effect": "If there are no allied units within 6 tiles of the user, gain 1 stack of Quick Barrier at the end of the action.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/vepley/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Dino Dash",
+      "level": 30,
+      "effect": "When using Exclusive Stage, ignores 10% of Cover damage reduction against targets with movement debuffs.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/vepley/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Stress Resistance Training",
+      "level": 40,
+      "effect": "If there is Cover nearby, reduces AoE damage taken by 20%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/vepley/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Stage Commitment",
+      "level": 40,
+      "effect": "When applying a movement debuff to a large target, additionally deals 1 instance of fixed damage equal to 15% of attack.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/vepley/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Grand Debut",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/vepley/affi.png"
+    },
+    {
+      "name": "Common Key - Heart Melting Strike",
+      "level": 40,
+      "effect": "ATK +5.0% / If the user's Mobility is greater than or equal to the target's, increases damage dealt by 7%.",
+      "materials": "None",
+      "image": "assets/images/characters/vepley/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "Attacks ignore 15% of the target's DEF, if the target has movement debuffs, further ignores 15% DEF\n\nAll Out Performance: Applies Stun and Vulnerable II to targets for 2 turns",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/vepley/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/vepley/portrait.png",
+    "avatar": "assets/images/characters/vepley/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

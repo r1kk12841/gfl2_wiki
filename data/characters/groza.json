@@ -1,0 +1,244 @@
+{
+  "slug": "groza",
+  "name": "Groza",
+  "class": "Bulwark",
+  "rarity": "Standard",
+  "phase": "Physical",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "OTs-14",
+  "stats": {
+    "hp": 1981,
+    "atk": 539,
+    "def": 553
+  },
+  "weakness": "Burn",
+  "stability_gauge": "12 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Fire Command",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects 1 target within 7 tiles, dealing Physical damage equal to 80% of attack.",
+      "icon": "assets/images/characters/groza/skill1-icon.png",
+      "range_image": "assets/images/characters/groza/skill1-range.png"
+    },
+    {
+      "name": "Heavy Suppression",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 5,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 7 tiles, dealing Physical damage equal to 130% of attack, and applies Movement Down II to them for 1 turn.",
+      "icon": "assets/images/characters/groza/skill2-icon.png",
+      "range_image": "assets/images/characters/groza/skill2-range.png"
+    },
+    {
+      "name": "Perfect Cover",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "effect_area": "6",
+      "description": "Applies 2 stacks of Shelter and Defense Up II to all allied targets within 6 tiles for 2 turns. Gains 1 point of Confectance Index for each allied target within range. Increases the Counterattack count by 2 for the turn.",
+      "icon": "assets/images/characters/groza/skill3-icon.png",
+      "range_image": "assets/images/characters/groza/skill3-range.png"
+    },
+    {
+      "name": "Explosive Bombardment",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 7,
+      "effect_area": "3x3",
+      "description": "Select 1 tile within 7 tiles of the user to launch an attack, dealing AoE Physical damage equal to 90% of attack to all enemy targets within a 3x3 area and applying Movement Down II for 1 turn.",
+      "icon": "assets/images/characters/groza/ult-icon.png",
+      "range_image": "assets/images/characters/groza/ult-range.png"
+    },
+    {
+      "name": "Timely Maintenance",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "7",
+      "description": "when an allied unit (excluding this unit) ends their action within 7 tiles, gains 1 point of Confectance Index and applies 1 stack of Shelter to both the allied unit and this unit. For each stack of Shelter, Groza's damage increases by 5%. \n\nIf an enemy within 6 tiles deals Targeted damage to an allied unit, Groza launches a Counterattack, dealing Physical damage equal to 80% of attack to them, as well as 4 points of Stability Damage. This can be triggered at most once per turn.",
+      "icon": "assets/images/characters/groza/passive.png",
+      "range_image": "assets/images/characters/groza/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Heavy Suppression",
+      "level": 2,
+      "effect": "If this skill causes the enemy to enter into Stability Break, the user gains 1 point of Confectance Index and recovers 4 points of stability index."
+    },
+    {
+      "tier": 2,
+      "skill": "Perfect Cover",
+      "level": 2,
+      "effect": "Restores 5 points of stability index."
+    },
+    {
+      "tier": 3,
+      "skill": "Explosive Bombardment",
+      "level": 2,
+      "effect": "Damage multiplier increased by 10%."
+    },
+    {
+      "tier": 4,
+      "skill": "Timely Maintenance",
+      "level": 2,
+      "effect": "When Groza's action ends, applies Attack Down I on the enemy with the highest ATK within a 7 tile radius of self for 1 turn."
+    },
+    {
+      "tier": 5,
+      "skill": "Explosive Bombardment",
+      "level": 3,
+      "effect": "Extends the duration of Movement Down II increases by 1 turn."
+    },
+    {
+      "tier": 6,
+      "skill": "Timely Maintenance",
+      "level": 3,
+      "effect": "When having Shelter, reduces stability damage taken by 1 point."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +25\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +84\nHP +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +30\nDEF +32",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +115\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +35\nDEF +42",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +41\nHP +150",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Multidimensional Assessment",
+      "level": 20,
+      "effect": "When the user causes the enemy to enter into Stability Break, applies Defence Down I and Attack Down I on the enemy for 1 turn.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/groza/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Controlled Advance",
+      "level": 20,
+      "effect": "When using Perfect Cover, additionally applies Attack Up I for 1 turn.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/groza/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Adaptive Strategy",
+      "level": 30,
+      "effect": "When self HP is below 30%, increase healing received by 50%.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/groza/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Firepower Superiority",
+      "level": 30,
+      "effect": "If Heavy Suppression causes the enemy target to enter Stability Break, applies Taunt to them for 1 turn.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/groza/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Sustainable Operations",
+      "level": 40,
+      "effect": "When the user is under the effects of Shelter, reduces AoE damage taken by 20%.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/groza/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Principles of Evasion",
+      "level": 40,
+      "effect": "When Groza enters into Stability Break, restore 20% of self max HP, 5 points of stability index, and cleanse 4 debuffs from self. Triggers only once per battle.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/groza/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Midnight Reflection",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/groza/affi.png"
+    },
+    {
+      "name": "Common Key - Sustained Endurance",
+      "level": 40,
+      "effect": "HP +3.0% / When Shelter is active, immune to displacement for 1 time. Has a cooldown of 1 turn.",
+      "materials": "None",
+      "image": "assets/images/characters/groza/common.png"
+    },
+    {
+      "name": "Expansion Key - Absolute Defense's Essence",
+      "level": 60,
+      "effect": "When using the active skill Perfect Cover, gains Absolute Defense.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/groza/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/groza/portrait.png",
+    "avatar": "assets/images/characters/groza/avatar.png",
+    "class_icon": "assets/images/class/bulwark.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

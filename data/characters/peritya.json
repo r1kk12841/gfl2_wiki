@@ -1,0 +1,244 @@
+{
+  "slug": "peritya",
+  "name": "Peritya",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Corrosion",
+  "weapon_type": "MG",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Optical Illusion",
+  "stats": {
+    "hp": 1948,
+    "atk": 765,
+    "def": 536
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Hydro",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Rapid Overwrite",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Heavy Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to it.",
+      "icon": "assets/images/characters/peritya/skill1-icon.png",
+      "range_image": "assets/images/characters/peritya/skill1-range.png"
+    },
+    {
+      "name": "Fixed Erosion",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 1,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "3x3",
+      "description": "Selects 1 enemy within 8 tiles, dealing AoE Corrosion damage equal to 85% of attack to the target and all enemies within a 3x3 area, and dispels 1 buff.",
+      "icon": "assets/images/characters/peritya/skill2-icon.png",
+      "range_image": "assets/images/characters/peritya/skill2-range.png"
+    },
+    {
+      "name": "Domain Suppression",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "1",
+      "description": "Select a tile within 8 tiles as the center. Deal AoE Physical damage equal to 90% of attack to all enemy targets within 1 tile of the center and pull them 1 tile towards it. For each target hit, reduce this skill's cooldown by 1 turn.",
+      "icon": "assets/images/characters/peritya/skill3-icon.png",
+      "range_image": "assets/images/characters/peritya/skill3-range.png"
+    },
+    {
+      "name": "Multi-Compilation",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 6,
+      "effect_area": "9x9",
+      "description": "Deals AoE Corrosion damage equal to 100% of attck to all enemy targets within a 9x9 area centered on self, excluding the inner 5x5 area. For each target hit, increases damage dealt by 5%, up to 15%.",
+      "icon": "assets/images/characters/peritya/ult-icon.png",
+      "range_image": "assets/images/characters/peritya/ult-range.png"
+    },
+    {
+      "name": "Chain Reaction",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "When an enemy unit within range takes AoE damage from an allied unit, performs 1 instance of Action Support, dealing AoE Physical damage equal to 50% of attack and 1 point of Stability Damage, as well as gaining 1 point of Confectance Index. This effect can trigger up to 6 times per turn. \n\nBefore the attack, every 1 point of leftover mobility enhances the damage dealt by the attack by 10%, up to a maximum increase of 30%.",
+      "icon": "assets/images/characters/peritya/passive.png",
+      "range_image": "assets/images/characters/peritya/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Fixed Erosion",
+      "level": 2,
+      "effect": "The number of buffs that can be dispelled is increased by 2."
+    },
+    {
+      "tier": 2,
+      "skill": "Domain Suppression",
+      "level": 2,
+      "effect": "Effective range is increased by 1 tile."
+    },
+    {
+      "tier": 3,
+      "skill": "Multi-Compilation",
+      "level": 2,
+      "effect": "For each enemy target hit, increase additional damage by 5%, up to a 25% increase."
+    },
+    {
+      "tier": 4,
+      "skill": "Multi-Compilation",
+      "level": 3,
+      "effect": "The excluded area is reduced to 3x3 within the 9x9 area centered on self."
+    },
+    {
+      "tier": 5,
+      "skill": "Chain Reaction",
+      "level": 2,
+      "effect": "If no movement is made before performing an active attack, gain 2 points of Confectance Index after attacking."
+    },
+    {
+      "tier": 6,
+      "skill": "Chain Reaction",
+      "level": 3,
+      "effect": "Action Support can be triggered an additional 4 times per turn."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +36\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +82\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +31",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +113\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +51\nDEF +41",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +147",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Temporary System Maintenance",
+      "level": 20,
+      "effect": "Gains 1 point of Confectance Index for every 10 points of stability damage dealt.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/peritya/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Impromptu Cat and Mouse Game",
+      "level": 20,
+      "effect": "If there is remaining mobility before attacking, gains Movement Up II  at the end of the action for 1 turn.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/peritya/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Automatic Repair Program",
+      "level": 30,
+      "effect": "If no movement is made before attacking, cleanses 2 debuffs from self.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/peritya/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Lazy Resistance",
+      "level": 30,
+      "effect": "Increases damage dealt by the active skill Domain Suppression to targets immune to displacement effects by 15%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/peritya/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - A Brief Respite",
+      "level": 40,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/peritya/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Friendly Contact",
+      "level": 40,
+      "effect": "Increases Stability Damage dealt to the primary target by the active skill Fixed Erosion by 4 points.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/peritya/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Cat's Relaxation",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/peritya/affi.png"
+    },
+    {
+      "name": "Common Key - All Points to Damage",
+      "level": 40,
+      "effect": "CRIT +5.0% / If an active skill hits 2 or more enemy targets, damage dealt is increased by 7%.",
+      "materials": "None",
+      "image": "assets/images/characters/peritya/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "When dealing Corrosion damage, for each debuff held by the target, increases damage dealt by 5%, up to a maximum of 25%\n\nMulti-Compilation pulls all enemies hit towards self by 2 tiles\n\nIn a single round, for every 2 instances of Action Support performed, the next Action Support deals AoE Corrosion damage equivalent to 50% ATK and 2 Stability Damage to the target and all enemies within a 3x3 radius of the target",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/peritya/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/peritya/portrait.png",
+    "avatar": "assets/images/characters/peritya/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,235 @@
+{
+  "slug": "helen",
+  "name": "Helen",
+  "class": "Bulwark",
+  "rarity": "Elite",
+  "phase": "Freeze",
+  "weapon_type": "Shotgun",
+  "ammo_type": "Shotgun Ammo",
+  "signature_weapon": "Dulcet Defender",
+  "stats": {
+    "hp": 2233,
+    "atk": 645,
+    "def": 642
+  },
+  "skill_attribute": "Freeze",
+  "weakness": "Electric",
+  "stability_gauge": "12 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Sentinel",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 5,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Freeze damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/helen/skill1-icon.png",
+      "range_image": "assets/images/characters/helen/skill1-range.png"
+    },
+    {
+      "name": "Aegis Command",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an ally (excluding self) within a 6 tile radius and applies Aegis on it. If unit with Aegis takes damage within 6 tiles from Helen, she will share 100% of initial damage on their behalf, as well as cleansing Taunt and Fear. Aegis can be applied only to one target. After skill usage, gains Extra Command.",
+      "icon": "assets/images/characters/helen/skill2-icon.png",
+      "range_image": "assets/images/characters/helen/skill2-range.png"
+    },
+    {
+      "name": "Shield Charge",
+      "tags": [
+        "Active",
+        "Buff",
+        "AoE"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "effect_area": "Target",
+      "description": "Selects 1 tile within a cross-shaped area of 4 to 8 tiles and lands on the selected tile. All allied units along the path will have one debuff cleansed and gain Frost Shield that absorbs 100% of Helen's initial attack damage, up to a maximum of 100% of the target's maximum health. Generates Frost tiles along the path for 2 turns.\nFor each allied unit (excluding self) on the path, the effectiveness of this Frost Shield is increased by 30%, and restores 2 points of stability to Helen. After skill usage, Helen gains 6 tiles of Additional Movement and can use her basic attack.",
+      "icon": "assets/images/characters/helen/skill3-icon.png",
+      "range_image": "assets/images/characters/helen/skill3-range.png"
+    },
+    {
+      "name": "Banner Sentinel",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an ally (excluding self) within a 6 tile radius and applies Attack Up III and Defense Up III to them for 2 turns. In addition, reduces Ultimate cooldown of all Freeze-attribute Dolls (excluding self) on the field by 1 turn. After skill usage, Helen gains Additional Command.",
+      "icon": "assets/images/characters/helen/ult-icon.png",
+      "range_image": "assets/images/characters/helen/ult-range.png"
+    },
+    {
+      "name": "Fearless Valkyrie",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Helen is immune to the following effects: healing reduction, healing prevention or effects that convert healing into damage.\nAt the start of battle, increases Helen's defense and Max HP by 30%.\nAt the start of each turn, Helen gains 2 points of Confectance Index, restores 25% of HP, and cleanse all debuffs from self.\nFor every instance of damage taken, Helen gains 1 stack of Overedge.\nWhen Helen has Overedge, the damage multiplier of her basic attacks is increased to 180%.\nBefore Helen performs a basic attack, her attack is increased by 15% of her defence.",
+      "icon": "assets/images/characters/helen/passive.png",
+      "range_image": "assets/images/characters/helen/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Shield Charge",
+      "level": 2,
+      "effect": "Increases width by 2 tiles, cleanse 2 additional debuffs, and applies Critical Damage Up II for 2 turns."
+    },
+    {
+      "tier": 2,
+      "skill": "Fearless Valkyrie",
+      "level": 2,
+      "effect": "Increases the Stability Gauge to 16 points, reducing damage taken by 50%. Each time\nyou take damage, you gain an additional stack of Overedge. Before performing a basic attack, increase your attack power by 30% of your defense."
+    },
+    {
+      "tier": 3,
+      "skill": "Banner Sentinel",
+      "level": 2,
+      "effect": "Cooldown is reduced by 2 turns. Gain Attack Up III and Defense Up III for 2 turns. Gain 10 stacks of Overedge. Reduces Ultimate cooldown of Freeze-attribute Dolls by 2 turns ."
+    },
+    {
+      "tier": 4,
+      "skill": "Aegis Command",
+      "level": 2,
+      "effect": "Additionally removes Infatuated and Stun. If fatal damage is taken while sharing damage, Helen will not die and will recover HP equal to 150% of her defense. This effect can be triggered up to once per round. Friendly units with Aegis deal 30% more Freeze damage."
+    },
+    {
+      "tier": 5,
+      "skill": "Shield Charge",
+      "level": 3,
+      "effect": "For each allied unit (excluding self) on the path, an additional 2 points of stability are restored, and the corresponding number of layers of Frost Drive are gained."
+    },
+    {
+      "tier": 6,
+      "skill": "Fearless Valkyrie",
+      "level": 3,
+      "effect": "Before performing a basic attack, increase Helen attack by 70% of her defense .\nWhen a friendly unit takes damage, gain 2 stacks of Overedge. While having Overedge, the damage multiplier of basic attacks is increased to 300%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +30\nDEF +27",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +94\nHP +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +37\nDEF +39",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +129\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +43\nDEF +48",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +49\nHP +168",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - The Two-Headed Spy",
+      "level": 20,
+      "effect": "At the start of the turn, Helen gains 3 stacks of Overedge",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/helen/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Frostbite Bloom",
+      "level": 20,
+      "effect": "When performing basic attacks against boss units, Freeze damage dealt is increased by 20%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/helen/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Buried Memories",
+      "level": 30,
+      "effect": "Before performing a basic attack, dispel 2 buffs from the enemy target.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/helen/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Guardian's Resolve",
+      "level": 30,
+      "effect": "At the end of Helen's action, applies 2 stacks of Shelter to herself and all allied units with Aegis.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/helen/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Glory to Mommies",
+      "level": 40,
+      "effect": "At the start of the turn, if Helen's HP is above 30%, she gains Glory to Mommies, preventing her defense from being reduced below less than 100%. Cancels when Helen's HP is below 30%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/helen/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Enforcer of Order",
+      "level": 40,
+      "effect": "Reduces stability damage taken by 2 points, and grants immunity to Stun and Fear.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/helen/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - New Sprout",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, DEF +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/helen/affi.png"
+    },
+    {
+      "name": "Common Key - Immovable Defense",
+      "level": 40,
+      "effect": "DEF +5.0% / If the user's defense is greater than or equal to the target's Defense, their damage dealt is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/helen/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/helen/portrait.png",
+    "avatar": "assets/images/characters/helen/avatar.png",
+    "class_icon": "assets/images/class/bulwark.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

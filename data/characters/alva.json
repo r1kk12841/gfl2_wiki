@@ -1,0 +1,214 @@
+{
+  "slug": "alva",
+  "name": "Alva",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Freeze",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "6P33",
+  "stats": {
+    "hp": 1973,
+    "atk": 757,
+    "def": 512
+  },
+  "skill_attribute": "Freeze",
+  "weakness": "Corrosion",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Laceration",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/alva/skill1-icon.png",
+      "range_image": "assets/images/characters/alva/skill1-range.png"
+    },
+    {
+      "name": "Nix Requiem",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius, consumes all Confectance Index, for each Confectance Index consumed, deals Freeze damage equivalent to 30% ATK and 1 Stability Damage to it",
+      "icon": "assets/images/characters/alva/skill2-icon.png",
+      "range_image": "assets/images/characters/alva/skill2-range.png"
+    },
+    {
+      "name": "Freezing Touch",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Increases Shield amount applied by allies by 30%. When allies gain a Shield, the Shield is converted into Brumal Barrier with the same Shield HP. At the end of the action, increases Confectance Index by 3 points and gains 1 stack of Battle Prep. After launching Interception, increases Confectance Index by 1 point",
+      "icon": "assets/images/characters/alva/skill3-icon.png",
+      "range_image": "assets/images/characters/alva/skill3-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Frosted Echo",
+      "level": 2,
+      "effect": "Increases damage multiplier to 20% ATK. If Alva has 3 stacks of Battle Prep after skill usage, enters into Covering Mode for 3 rounds (Duration decreases at the end of the current round) and increases Confectance Index by 6 points"
+    },
+    {
+      "tier": 2,
+      "skill": "Nix Requiem",
+      "level": 2,
+      "effect": "Increases damage multiplier to 40% ATK\n\nAfter skill usage, increases Confectance Index by 1 point for all Freeze units (excluding self)"
+    },
+    {
+      "tier": 3,
+      "skill": "Freezing Touch",
+      "level": 2,
+      "effect": "Increases Shield amount applied by allies by 50%\n\nNew effect is added for Brumal Barrier - When the holder deals Freeze damage, for every 1000 Shield HP held, increases CRIT DMG by 1%"
+    },
+    {
+      "tier": 4,
+      "skill": "Snow Wolf's Heart",
+      "level": 2,
+      "effect": "Increases the conversion rate to Brumal Barrier dealt by Interception during Covering Mode by 30%\n\nIn Covering Mode, 20% of the damage dealt by Nix Requiem is converted into Brumal Barrier for all allies"
+    },
+    {
+      "tier": 5,
+      "skill": "Frosted Echo",
+      "level": 3,
+      "effect": "Enhances the effects of Liquid N2 Fang - Increases damage multiplier to 60% of the Shield HP\n\nEnhances the effects of Hypothermia - Increases Freeze damage received by 40%"
+    },
+    {
+      "tier": 6,
+      "skill": "Freezing Touch",
+      "level": 3,
+      "effect": "Increases absorption amount of Brumal Barrier to 300% of Alva's initial attack\n\nWhen the holder deals Freeze damage, for every 1000 Shield HP held, the damage increase and CRIT DMG increase bonus are doubled"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +35\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +83\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +114\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +50\nDEF +39",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +149",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Snowfield Strider",
+      "level": 20,
+      "effect": "When Hoarfrost is applied to enemies within a 4 tile radius of Liquid N2 Fang, generates Frost tiles within the area for 3 turns",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/alva/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Logistics Specialist",
+      "level": 20,
+      "effect": "At the start of the battle, increases Confectance Index by 3 points and gains 3 stacks of Battle Prep",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/alva/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Support Command",
+      "level": 30,
+      "effect": "Decreases Stability damage received for allies with Brumal Barrier by 1 point",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/alva/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Late Bloomer",
+      "level": 30,
+      "effect": "For each stack of Battle Prep consumed, increases ATK for self by 3%, up to 18%",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/alva/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Rise Anew",
+      "level": 40,
+      "effect": "Nix Requiem: Before skill usage, dispels 2 buffs from the target",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/alva/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Bonechill",
+      "level": 40,
+      "effect": "Increases Stability damage taken by enemies within a 4 tile radius of Liquid N2 Fang by 2 points",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/alva/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/alva/affi.png"
+    },
+    {
+      "name": "Common Key - Mind's Eye",
+      "level": 40,
+      "effect": "ATK +5% / Increases Phase damage towards enemies with Shield by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/alva/common.png"
+    },
+    {
+      "name": "Expansion Key - Inheriting the name of the Alpha Wolf",
+      "level": 60,
+      "effect": "The effect of Shield applied by this unit is increased by 80%.\nBrumal Barrier effect enchanced: When dealing Freeze damage, the Shield value required to increase the damage dealt and critical damage is reduced to 500.\nWhen frendly unit has Brumal Barrier and deals Freeze damage, they ignore 15% of target's defence.\nLiquid N2 Fang effect enchanced: When Alva attacks, the damage multiplier based on the accumulated Shield absorbtion is doubled.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/alva/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/alva/portrait.png",
+    "avatar": "assets/images/characters/alva/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

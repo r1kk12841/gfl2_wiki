@@ -1,0 +1,241 @@
+{
+  "slug": "mechty",
+  "name": "Mechty",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Corrosion",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Daydream",
+  "stats": {
+    "hp": 1876,
+    "atk": 723,
+    "def": 577
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Hydro",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Bedtime Warmup",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.\n\nWhen in Turbo Mode, damage type is changed to Corrosion damage, stability damage dealt is increased by 2 points, and Mechty gains 1 point of Confectance Index.",
+      "icon": "assets/images/characters/mechty/skill1-icon.png",
+      "range_image": "assets/images/characters/mechty/skill1-range.png"
+    },
+    {
+      "name": "Dreamquake",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "1",
+      "description": "Selects 1 enemy unit within 8 tiles, dealing AoE Corrosion damage equal to 130% of attack to all enemies within 1 tile of the target.\n\nGains Movement Up II for 1 turn when Turbo Mode is active and generates Toxic Mist tiles for 2 turns.",
+      "icon": "assets/images/characters/mechty/skill2-icon.png",
+      "range_image": "assets/images/characters/mechty/skill2-range.png"
+    },
+    {
+      "name": "Dreamless Night",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "effect_area": "Target",
+      "description": "Recovers 6 points of stability, cleanses all debuffs on self, and applies Dream Guardian to all allied units within 8 tiles for 2 turns.\n\nWhen in Turbo Mode, the active skill Dreamquake or the basic attack Bedtime Warmup can be used after using this skill. Gains 1 stack of Sleep Aid Kit for 2 turns.",
+      "icon": "assets/images/characters/mechty/skill3-icon.png",
+      "range_image": "assets/images/characters/mechty/skill3-range.png"
+    },
+    {
+      "name": "Dream Wonderland",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "4 turns",
+      "confectance_cost": 0,
+      "effect_area": "Entire Map",
+      "description": "Deactivates Patch Mode and enters Turbo Mode for 3 turns. After Turbo Mode ends, returns to Patch Mode.\n\nApplies Nightmarish Shroud to all allied units and inflicts Toxic Inundation to the closest enemy target for 1 turn.",
+      "icon": "assets/images/characters/mechty/ult-icon.png",
+      "range_image": "assets/images/characters/mechty/ult-range.png"
+    },
+    {
+      "name": "Mysterious Nap",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of battle, Mechty enters Patch Mode, and applies Nightmare Form to all allied units.",
+      "icon": "assets/images/characters/mechty/passive.png",
+      "range_image": "assets/images/characters/mechty/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Dream Wonderland",
+      "level": 2,
+      "effect": "No longer deactivates Patch Mode when entering Turbo Mode.\n\nNightmarish Shroud reduces the attacker's attack by 10% and increases the amount of debuffs cleansed by 1.\n\nTurbo Mode gains new effect: The critical rate of basic attacks is increased by 30%."
+    },
+    {
+      "tier": 2,
+      "skill": "Mysterious Nap",
+      "level": 2,
+      "effect": "Patch Mode gains new effects: Basic attacks deal 50% more damage. At the start of the turn, cleanses 2 debuffs on self."
+    },
+    {
+      "tier": 3,
+      "skill": "Dreamless Night",
+      "level": 2,
+      "effect": "The maximum stacks of Sleep Aid Kit is increased by 1. Mechty recovers HP equal to 30% of maximum HP and the allied unit with the lowest HP recovers 15% of Mechty's maximum HP and 3 points of stability.\n\nWhen in Turbo Mode, the number of Sleep Aid Kit stacks gained is increased by 1."
+    },
+    {
+      "tier": 4,
+      "skill": "Dreamquake",
+      "level": 2,
+      "effect": "Stability damage is increased by 2 points.\n\nWhen Turbo Mode is active, increases the damage of the next basic attack by 100%. Deals fixed damage equal to 50% of attack to all enemy units within range."
+    },
+    {
+      "tier": 5,
+      "skill": "Dream Wonderland",
+      "level": 3,
+      "effect": "Turbo Mode gains new effects: Mobility is increased by 2 tiles, applies Nightmarish Shroud to allied units without Nightmarish Shroud at the end of the action. Gains 1 more point of Confectance Index."
+    },
+    {
+      "tier": 6,
+      "skill": "Mysterious Nap",
+      "level": 3,
+      "effect": "Patch Mode gains new effects: Corrosion damage dealt by all allied units is increased by 25%, increases critical damage dealt by Mechty's basic attack by 80%.\n\nNightmare Form gains new effects: AoE damage dealt by Support Attacks is increased to 80%, Stability damage dealt is increased by 1 point, and AoE damage dealt is increased to 20%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +34\nDEF +24",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +79\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +41\nDEF +33",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +109\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +48\nDEF +44",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +55\nHP +142",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Dream Fragment",
+      "level": 20,
+      "effect": "After using the basic attack Bedtime Warmup, gains 1 random buff for 1 turn.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/mechty/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Rest Thee Well",
+      "level": 20,
+      "effect": "If any weakness is exploited, applies Toxic Inundation to the target after the attack resolves.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/mechty/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Horror Movie Night",
+      "level": 30,
+      "effect": "When using the active skill Dreamquake, applies Acid Corrosion II for 2 turns before the attack resolves against large targets.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/mechty/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Quickly, So We Can Sleep",
+      "level": 30,
+      "effect": "When using the active skill Dreamless Night, generates Toxic Mist tiles within 2 tiles around the closest enemy for 2 turns.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/mechty/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Loser's Spirit",
+      "level": 40,
+      "effect": "When using the basic attack Bedtime Warmup, dispels 2 buffs from the target before the attack resolves.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/mechty/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 Idler's Sofa Aura",
+      "level": 40,
+      "effect": "When Mechty has 2 or more buffs, targeted damage taken is reduced by 20%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/mechty/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": 40,
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/mechty/affi.png"
+    },
+    {
+      "name": "Common Key - Gaming Time",
+      "level": 40,
+      "effect": "ATK +5.0% / Basic Attack damage is increased by 20%.",
+      "materials": "None",
+      "image": "assets/images/characters/mechty/common.png"
+    },
+    {
+      "name": "Expansion Key - Sleepberserking Syndrome",
+      "level": 60,
+      "effect": "At the start of the battle, enters Sleepwalking state and gains an additional skill: Awakening Command\n\nIf Mechty is in Sleepwalking at the start of the round, consumes all Confectance Index and gains maximum stacks of Sleep Aid Kit for 2 turns. For each Confectance Index consumed, cleanses 1 debuff from self, and applies 1 stack of Dreamscape Exhilaration for 1 round (Duration decreases at the end of the current round)\n\nIf Mechty is in Sleepwalking at the end of her action, for each stack of Sleep Aid Kit held by self, activates an instance of Waking Ricochet on the closest enemy, recovers HP equivalent to 10% ATK and 1 Stability for all allies",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/mechty/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/mechty/portrait.png",
+    "avatar": "assets/images/characters/mechty/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

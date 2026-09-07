@@ -1,0 +1,247 @@
+{
+  "slug": "vector",
+  "name": "Vector",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Burn",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Banshee's Whisper",
+  "stats": {
+    "hp": 1819,
+    "atk": 748,
+    "def": 569
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Hydro",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Depressive Mentality",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/vector/skill1-icon.png",
+      "range_image": "assets/images/characters/vector/skill1-range.png"
+    },
+    {
+      "name": "Dead End Meltdown\n(Active / Targeted / Debuff)",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Burn damage equivalent to 120% ATK to it. If the target has Burn type debuffs, deals fixed damage equivalent to 50% ATK to the target and all enemies within a 3 tile radius of it, and applies Overburn for 2 turns. Vector gains 2 points of Confectance Index.",
+      "icon": "assets/images/characters/vector/skill2-icon.png",
+      "range_image": "assets/images/characters/vector/skill2-range.png"
+    },
+    {
+      "name": "Portent of Doom",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Burn damage equivalent to 100% ATK to it, and applies Smolder for 2 turns. Vector gains 2 points of Confectance Index.",
+      "icon": "assets/images/characters/vector/skill3-icon.png",
+      "range_image": "assets/images/characters/vector/skill3-range.png"
+    },
+    {
+      "name": "Searing Finale",
+      "tags": [
+        "Active",
+        "AoE",
+        "Buff"
+      ],
+      "stability_damage": 1,
+      "cooldown": "4 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "7",
+      "description": "Selects a tile within a 7 tile radius, deals AoE Burn damage equivalent to 60% ATK to all enemies and generates Incineration tiles that lasts for 2 turns within a 7 tile radius of the designated tile. Applies Accelerant to all allies for 2 turns. Vector gains Extra Command.",
+      "icon": "assets/images/characters/vector/ult-icon.png",
+      "range_image": "assets/images/characters/vector/ult-range.png"
+    },
+    {
+      "name": "Perception Block",
+      "tags": [
+        "Passive",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Vector is immune from the negative effects of Burn tiles.\n\nBefore dealing Burn damage, if the target has Overburn, applies Overheat Combustion on the target for 2 turns\n\nAt the start of the battle, increases the attack count of Support attack that deals Burn damage by 1\n\nAt the start of each turn, if Vector's Confectance Index is full, Vector consumes all points of Confectance Index, and increases ATK by 10% until the end of the round.",
+      "icon": "assets/images/characters/vector/passive.png",
+      "range_image": "assets/images/characters/vector/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Perception Block",
+      "level": 2,
+      "effect": "New effect is added for Overheat Combustion - Increases Burn damage taken by 30%, fixed damage is dealt to all enemies within a 3x3 tile radius of the target, and increases the attack count of Support attack that deals Burn damage by 2 instead."
+    },
+    {
+      "tier": 2,
+      "skill": "Searing Finale",
+      "level": 2,
+      "effect": "Enhances the effect for Accelerant - When dealing Burn damage, increases damage dealt by 20% (from 10% to 30%).\n\nApplies Blazing Assault II to all allied units for 2 turns, and cleanses 2 debuffs for all allies."
+    },
+    {
+      "tier": 3,
+      "skill": "Dead End Meltdown",
+      "level": 2,
+      "effect": "Increases damage multiplier of Burn and fixed damage by 30%.\n\nThe target does not need to have Burn type debuff to deal fixed damage. Additionally applies Overheat Combustion on the target for 2 turns.\n\nVector gains 2 more points of Confectance Index."
+    },
+    {
+      "tier": 4,
+      "skill": "Portent of Doom",
+      "level": 2,
+      "effect": "Increases damage multiplier by 30%\n\nNew effect is added for Smolder - for each Burn type debuff held, increases damage taken by 3%\n\nApplies Overheat for 1 turn. Vector gains 2 more points of Confectance Index."
+    },
+    {
+      "tier": 5,
+      "skill": "Perception Block",
+      "level": 3,
+      "effect": "New effect is added for Overheat Combustion - At the end of the action, generates Incineration tiles within a 1 tile radius of self. The fixed damage multiplier is increased by 10%.\n\nAt the start of each turn, for each excess Confectance Index point above the maximum, increases ATK by 10%, up to 20%."
+    },
+    {
+      "tier": 6,
+      "skill": "Searing Finale",
+      "level": 3,
+      "effect": "New effect is added for Accelerant - When dealing Burn damage, increases CRIT DMG by 15%. For each Burn type buff held, increases damage dealt by 5%\n\nVector gains Apathetic Resistance for 2 turns."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +35\nDEF +24",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +77\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +42\nDEF +33",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +105\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +49\nDEF +43",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +57\nHP +137",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Hospice Care",
+      "level": 20,
+      "effect": "Dead End Meltdown: If this skill killed the target, generates Incineration tiles within a 3 tile radius of the target for 2 turns",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/vector/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Splattering Pessimism",
+      "level": 20,
+      "effect": "At the start of the battle, increases Confectance Index by 3 points",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/vector/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Dispassionate Support",
+      "level": 30,
+      "effect": "Before using an active attack, dispels 2 buffs from the target",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/vector/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Proliferating Despair",
+      "level": 30,
+      "effect": "When an active attack deals damage against a large target, deals an additional instance of fixed damage equivalent to 15% ATK",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/vector/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Unfortunate Jinx",
+      "level": 40,
+      "effect": "When Vector is on a Burn type tile, decreases damage received by 20%, and recovers 2 Stability and 10% max HP at the end of the action",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/vector/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Negative Motivation",
+      "level": 40,
+      "effect": "If Overburn is applied on an enemy within attack range, undergoes an instance of Emergency Support, dealing Burn damage equivalent to 60% ATK and 1 Stability Damage. This effect can be activated once per turn",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/vector/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/vector/affi.png"
+    },
+    {
+      "name": "Common Key - Death Knell",
+      "level": 40,
+      "effect": "ATK +5.0% / At the start of the turn, if there are enemies with Burn type debuffs, increases ATK by 8%",
+      "materials": "None",
+      "image": "assets/images/characters/vector/common.png"
+    },
+    {
+      "name": "Expansion Key - Depression Empathy",
+      "level": 60,
+      "effect": "After every active attack cooldown of Searing Finale is reduced by 1 turn. \nAfter a friendly unit performs a support attack that deals Burn damage, Vector gains 1 point of Confectance Index and restores HP equal to 15% of Vector's ATK to all friendly units on the field. This can be triggered up to 4 times per round.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/vector/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/vector/portrait.png",
+    "avatar": "assets/images/characters/vector/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,246 @@
+{
+  "slug": "klukai",
+  "name": "Klukai",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Corrosion",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Skylla",
+  "stats": {
+    "hp": 1893,
+    "atk": 827,
+    "def": 504
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Electric",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Swift Strike",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/klukai/skill1-icon.png",
+      "range_image": "assets/images/characters/klukai/skill1-range.png"
+    },
+    {
+      "name": "Pinpoint Detonation",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles, dealing Corrosion damage equal to 80% of attack. Performs an additional attack, deals AoE Corrosion damage equal to 60% of attack to the target and all enemy targets within 3 tiles, pulling all affected enemy targets 1 tile towards the center.\n\nIf any enemy targets are killed, reduces the cooldown of the Ultimate skill Devastating Drift by 1 turn, and gains 2 points of Confectance Index.\n\nIf no enemy targets are killed, applies 1 stack of Corrosive Infusion to the target for 2 turns.",
+      "icon": "assets/images/characters/klukai/skill2-icon.png",
+      "range_image": "assets/images/characters/klukai/skill2-range.png"
+    },
+    {
+      "name": "Overpowering Corrosion",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 tile within a 8 tiles, dealing AoE Corrosion damage equal to 90% of attack to all enemy targets within 3 tiles, and applies Toxic Infiltration for 2 turns. Increases damage by 15% to targets already affected by Toxic Infiltration.",
+      "icon": "assets/images/characters/klukai/skill3-icon.png",
+      "range_image": "assets/images/characters/klukai/skill3-range.png"
+    },
+    {
+      "name": "Devastating Drift",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 2,
+      "cooldown": "6 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Selects 1 tile within a cross-shaped area of 4 to 8 tiles, landing on the selected tile and dealing AoE Corrosion damage equal to 100% of attack to all enemy targets in a 5 tiles wide path. Gains 6 tiles of Additional Movement. If 2 or more targets are killed, this skill can be used again. up to a maximum of 1 additional time.",
+      "icon": "assets/images/characters/klukai/ult-icon.png",
+      "range_image": "assets/images/characters/klukai/ult-range.png"
+    },
+    {
+      "name": "Elite's Pride",
+      "tags": [
+        "Passive",
+        "Debuff",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Immune to all negative Control-type tile effects. When dealing damage with active attacks, applies 1 stack of Corrosive Infusion to the target for 2 turns, and gains 1 stack of Competitive Spirit after skill usage.\n\nEach time Klukai performs an active attack or other allied units deal Corrosion damage, Klukai gains 1 point of Confectance Index. For every 3 points of Confectance Index gained, reduces the cooldown of her Ultimate skill by 1 turn.",
+      "icon": "assets/images/characters/klukai/passive.png",
+      "range_image": "assets/images/characters/klukai/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Overpowering Corrosion",
+      "level": 2,
+      "effect": "Increases damage dealt to targets that are already inflicted with Toxic Infiltration by 30%.\n\nIf the target is not killed from this damage, it can also trigger the on-death effect of Toxic Infiltration.\n\nToxic Infiltration has a new effect: At the end of the action of the unit which possesses this effect, the inflictor applies Toxic Infiltration to enemy units within 3 tiles that do not possess Toxic Infiltration for 2 turns."
+    },
+    {
+      "tier": 2,
+      "skill": "Elite's Pride",
+      "level": 2,
+      "effect": "At the start of the battle, gains 3 stacks of Competitive Spirit. When other allied units deal Corrosion damage, Klukai can gain 1 stack of Competitive Spirit. Increases the stack limit of Competitive Spirit by 4 stacks. \n\nFor every 3 points of Confectance Index gained, applies an additional 1 stack of Corrosive Infusion to enemy units with Corrosive Infusion, and reduces the cooldown of Klukai's Ultimate skill by 1 turn.\n\nCorrosive Infusion gains a new affect: When Klukai performs an active attack or other allied units deal Corrosion damage, applies an additional 1 stack of Corrosive Infusion to targets with Corrosive Infusion. Defense is reduced by 1%, and the stack limit is increased by 5 stacks."
+    },
+    {
+      "tier": 3,
+      "skill": "Devastating Drift",
+      "level": 2,
+      "effect": "For each enemy hit, increases damage dealt by an additional 10%, up to a maximum of 50%. If a Boss is hit, this increase will be immediately raised to the maximum value 50%. \n\nIf 2 or more targets or a Boss is hit, this skill can be used again, up to a maximum of 1 additional time. Before attacking, applies Defense Down II and Toxic Infiltration to the target for 2 turns."
+    },
+    {
+      "tier": 4,
+      "skill": "Pinpoint Detonation",
+      "level": 2,
+      "effect": "Increases damage dealt by the first damage instance to 100% of attack. For each stack of Corrosive Infusion on the target, the damage multiplier of the additional attack is increased by 5%. If a phase weakness is exploited, the attack ignores 15% of the target's Cover damage reduction."
+    },
+    {
+      "tier": 5,
+      "skill": "Overpowering Corrosion",
+      "level": 3,
+      "effect": "Effective range is increased by 2 tiles, damage increases to 110% of attack. Toxic Infiltration spread radius increases by 1 tile, and the damage it deals increases to 80% of attack. If the target is inflicted with a Corrosion debuffs, applies Toxic Infiltration for 2 turns before the attack.\n\nToxic Infiltration gains an additional effect: When receiving an active attack from Klukai, damage taken is increased by 30%."
+    },
+    {
+      "tier": 6,
+      "skill": "Devastating Drift",
+      "level": 3,
+      "effect": "Ignores Cover damage reduction.\n\nIncreases width by 2 tiles and applies Dismay for 2 turns.\n\nAfter the attack, triggers all enemies' effects of Corrosive Infusion and the on-death effects of Toxic Infiltration."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +80\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +47\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +110\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +55\nDEF +38",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +63\nHP +143",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Deadly Entwine",
+      "level": 20,
+      "effect": "At the start of the turn, if there is only one target, applies 1 stack of Corrosive Infusion to them for 2 turns. Additionally, gains 2 points of Confectance Index.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/klukai/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - One Fell Swoop",
+      "level": 20,
+      "effect": "If the Ultimate skill Devastating Drift only hits 1 target, increases the damage dealt by 30%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/klukai/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - No Mercy",
+      "level": 30,
+      "effect": "Corrosive Infusion gains a new effect, it increases damage to targets in Stability Break by 15%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/klukai/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Strong Support",
+      "level": 30,
+      "effect": "For every Support Attack performed by other allied units, gains 1 point of Confectance Index.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/klukai/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Limit Break",
+      "level": 40,
+      "effect": "Reduces the width of the Ultimate skill Devastating Drift's effective area to 3 tiles. For each tile reduced, increases damage dealt by 10%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/klukai/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Moment of Doom",
+      "level": 40,
+      "effect": "After the unit(s) afflicted with Toxic Infiltration take damage from its effect and survive, they are inflicted with 1 stack of Corrosive Infusion for 2 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/klukai/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/klukai/affi.png"
+    },
+    {
+      "name": "Common Key - Murderous Return",
+      "level": 40,
+      "effect": "ATK +5.0% / At the start of the turn, if the user's Confectance Index is full, the next instance of AoE damage inflicted by an active attack is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/klukai/common.png"
+    },
+    {
+      "name": "Expansion Key - The Pride of Elite Doll",
+      "level": 60,
+      "effect": "At the start of combat, summon Fang drone to follow Klukai. Fang is not targetable and not considered a separate summoned unit. \n\nAfter an active attack done by Klukai, Fang attacks 3 nearest enemy targets, dealing AoE Corrosion damage equal to 100% of Klukai ATK that ignores cover, and applies 1 stack of Toxic Infiltration. The damage multiplier is increased by 10% each time the Corrosive Infusion effect or the on-death effect of Toxic Infiltration is triggered.\n\nWhen Corrosive Infusion effect is triggered, the damage coefficient of Corrosive Infusion is increased for each stack of Competitive Spirit by an additional 1% .",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/klukai/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/klukai/portrait.png",
+    "avatar": "assets/images/characters/klukai/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

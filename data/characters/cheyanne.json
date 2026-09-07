@@ -1,0 +1,232 @@
+{
+  "slug": "cheyanne",
+  "name": "Cheyanne",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "Sniper Rifle",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Nightwalker Cardamom",
+  "stats": {
+    "hp": 1924,
+    "atk": 845,
+    "def": 512
+  },
+  "weakness": "Hydro",
+  "stability_gauge": "9 points",
+  "movement_speed": "4 tiles",
+  "skills": [
+    {
+      "name": "Playing to Potential",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within the entire field and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/cheyanne/skill1-icon.png",
+      "range_image": "assets/images/characters/cheyanne/skill1-range.png"
+    },
+    {
+      "name": "Wall of One's Self",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 0,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Cheyanne gains Sepal of Shyness and 1 instance of Extra Command.\n\nUpon receiving lethal damage while holding Sepal of Shyness, Cheyanne will not be defeated, instead deploying Smoke tiles in 1 tile radius around her position for 1 turn. When standing in these Smoke tiles, Cheyanne becomes invincible. Can be triggered once per battle.",
+      "icon": "assets/images/characters/cheyanne/skill2-icon.png",
+      "range_image": "assets/images/characters/cheyanne/skill2-range.png"
+    },
+    {
+      "name": "Steadfast Pursuit",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within the entire field, apply Bullseye to them and deal Physical damage equal to 80% of attack.",
+      "icon": "assets/images/characters/cheyanne/skill3-icon.png",
+      "range_image": "assets/images/characters/cheyanne/skill3-range.png"
+    },
+    {
+      "name": "Piercing the Clouds, Into the Sun",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 5,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within the entire field, dealing Physical damage equal to 200% of attack and reset its Analytical Value. If the target holds a Bullseye, critical damage is increased by 30%.",
+      "icon": "assets/images/characters/cheyanne/ult-icon.png",
+      "range_image": "assets/images/characters/cheyanne/ult-range.png"
+    },
+    {
+      "name": "Meticulous Planning",
+      "tags": [
+        "Passive",
+        "Targeted"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "When an enemy unit completes its turn, Cheyanne triggers Think Before You Act, dealing Physical damage equal to 120% of attack and 2 points of Stability damage to the enemy, and increasing Confectance Index by 1. If the target’s Analytical Value  exceeds 50%, the damage multiplier of this attack is increased to 180%. Can be triggered up to 2 times per round.\n\nApply 100% of Analytical Value to all enemy units at the start of the battle.\n\nDamage to flying units increased by 20%.",
+      "icon": "assets/images/characters/cheyanne/passive.png",
+      "range_image": "assets/images/characters/cheyanne/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Meticulous Planning",
+      "level": 2,
+      "effect": "For every 10% of Analytical Value held by the target when dealing damage, critical damage is increased by 5%.\nThe effect of Analytical Value is improved: The effect of ignoring the target Stability Index was increased to 10 points and 5 points respectively."
+    },
+    {
+      "tier": 2,
+      "skill": "Piercing the Clouds, Into the Sun",
+      "level": 2,
+      "effect": "The damage multplier increased to 280%. If the target holds a Bullseye, ignore 50% of its DEF."
+    },
+    {
+      "tier": 3,
+      "skill": "Steadfast Pursuit",
+      "level": 2,
+      "effect": "Bullseye effect improved: Defense reduction increased to 100%; when attacked by Cheyanne, Analytical Value is no longer consumed."
+    },
+    {
+      "tier": 4,
+      "skill": "Wall of One's Self",
+      "level": 2,
+      "effect": "For every 1 round under Sepal of Shyness, Cheyanne will gain a stack of Sense of Security at the end of the round.\nThe duration of the Smoke tiles is increased to 2 turns, and the range is increased by 1 tile.\nThe cooldown time is reduced by 2 turns."
+    },
+    {
+      "tier": 5,
+      "skill": "Piercing the Clouds, Into the Sun",
+      "level": 3,
+      "effect": "Damage multplier increased to 330%. When dealing damage, if there are 3 or fewer enemy units with Analytical Value less than 50% on the field, damage multplier increases to 380%."
+    },
+    {
+      "tier": 6,
+      "skill": "Meticulous Planning",
+      "level": 3,
+      "effect": "Damage multplier of Think Before You Act increased to 160%. If damage was dealt to enemy units with Analytical Value greater than or equal to 50% this turn, the damage multplier increases to 220%.\nWhen Think Before You Act deals damage, gain 1 stack of Accumulated Preheat, at most 1 time per turn."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +81\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +48\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +111\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +56\nDEF +39",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +145",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Don't Approach, I'm Shy",
+      "level": 20,
+      "effect": "When dealing Targeted Damage, knock back the target by 2 tiles and apply Movement Down II for 2 turns.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/cheyanne/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - The Free Me",
+      "level": 20,
+      "effect": "Cheyanne becomes immune to Taunt, Infatuated, and Fear debuffs.\nEvery 3 turns, grants immunity to AoE damage.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/cheyanne/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - A Brave Little Step",
+      "level": 30,
+      "effect": "At the start of battle, Mobility increased by 2 tiles, lasting 1 turn. Create 1 High Ground in the nearest empty tile around self.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/cheyanne/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Antisocial",
+      "level": 30,
+      "effect": "When an enemy unit holding Bullseye dies, apply Bullseye to 1 enemy unit with the highest current HP on the field.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/cheyanne/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Mental Resilience",
+      "level": 40,
+      "effect": "Damage dealt to targets holding Bullseye is increased by 10%, and is treated as Heavy Ammo weakness.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/cheyanne/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Full Attention",
+      "level": 40,
+      "effect": "Every round, only when a target holding Bullseye ends action, release Think Before You Act once on them. Its damage multplier and Stability Damage are increased by sum of Think Before You Act casts available this turn (default is 2). Restore 2 points of Confectance Index. Max 1 trigger per turn.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/cheyanne/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Breathless Anticipation",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/cheyanne/affi.png"
+    },
+    {
+      "name": "Common Key - Love is a Long-Awaited Reunion",
+      "level": 40,
+      "effect": "ATK +5.0% / Damage dealt to targets with current HP greater than self is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/cheyanne/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/cheyanne/portrait.png",
+    "avatar": "assets/images/characters/cheyanne/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

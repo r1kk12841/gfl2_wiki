@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}{{ weapon.name }} — Armory — GFL2: Exilium Wiki{% endblock %}
+{% block description %}Weapon statistics, trait, and imprint effects for {{ weapon.name }} ({{ weapon.rarity }} {{ weapon.weapon_type }}).{% endblock %}
+
+{% block content %}
+<!-- Breadcrumbs -->
+<nav style="margin-bottom: 1.25rem; font-size: 0.85rem; color: var(--text-muted);">
+  <a href="{{ rel_prefix }}index.html" data-i18n="breadcrumb_home">Home</a> &gt;
+  <a href="{{ rel_prefix }}weapons/index.html" data-i18n="breadcrumb_weapons">Armory</a> &gt;
+  <span style="color: var(--text-primary);" data-weapon-name="{{ weapon.name }}">{{ weapon.name }}</span>
+</nav>
+
+<section class="char-header" data-weapon-slug="{{ weapon.slug }}" style="grid-template-columns: 320px 1fr;">
+  <div class="weapon-img-box" style="height: 260px; background:rgba(0,0,0,0.3); border-radius:var(--radius-md);">
+    <img src="{{ rel_prefix }}{{ weapon.images.weapon }}"
+         alt="{{ weapon.name }}"
+         class="weapon-img"
+         style="max-height: 220px;"
+         onerror="this.src='{{ rel_prefix }}assets/images/weapons/guerno.png';">
+  </div>
+
+  <div class="char-main-info">
+    <div>
+      <div class="char-tags-row">
+        <span class="badge badge-{{ weapon.rarity|lower }}" data-weapon-rarity="{{ weapon.rarity }}">{{ weapon.rarity }}</span>
+        <span class="badge badge-class" data-weapon-type="{{ weapon.weapon_type }}">{{ weapon.weapon_type }}</span>
+        <span class="badge badge-server badge-server-{{ (weapon.server or 'global')|lower }}" data-weapon-server="{{ (weapon.server or 'global')|lower }}">{{ 'CN' if (weapon.server or 'global')|lower == 'cn' else 'Global' }}</span>
+      </div>
+
+      <h1 class="char-name-heading" data-weapon-name="{{ weapon.name }}">{{ weapon.name }}</h1>
+    </div>
+
+    {% if weapon.stats %}
+    <div style="background:rgba(0,0,0,0.25); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1rem; margin:1rem 0;">
+      <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;" data-i18n="base_stats_label">Base Stats (Lvl 60)</span>
+      <div class="weapon-stats-text" data-weapon-stats="{{ weapon.stats }}" style="color:var(--accent-cyan); font-weight:700; font-size:1.15rem; margin-top:0.35rem; white-space:pre-line;">{{ weapon.stats }}</div>
+    </div>
+    {% endif %}
+
+    {% if signature_doll %}
+    <div class="attr-row" style="margin-top:0.5rem;">
+      <span class="attr-label" data-i18n="sig_for_label">Signature For:</span>
+      <a href="{{ rel_prefix }}characters/{{ signature_doll.slug }}.html" style="font-weight:700; display:inline-flex; align-items:center; gap:0.5rem;">
+        <img src="{{ rel_prefix }}assets/images/characters/{{ signature_doll.slug }}/portrait.png" alt="" style="width:24px; height:24px; border-radius:var(--radius-sm); object-fit:cover;" onerror="this.style.display='none';">
+        {{ signature_doll.name }}
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Trait & Effects Section -->
+<div style="display:flex; flex-direction:column; gap:1.5rem; margin-bottom:3rem;">
+  {% if weapon.trait %}
+  <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.5rem;">
+    <h2 style="font-size:1.15rem; font-weight:700; color:var(--text-primary); margin-bottom:0.75rem; display:flex; align-items:center; gap:0.5rem;">
+      <span style="color:var(--accent-cyan)">◈</span> <span data-i18n="weapon_trait_title">Weapon Trait</span>
+    </h2>
+    <div class="weapon-trait-desc" style="font-size:0.95rem; color:#cbd5e1; line-height:1.6; white-space:pre-line;">
+      {{ weapon.trait | render_effects }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if weapon.effect %}
+  <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.5rem;">
+    <h2 style="font-size:1.15rem; font-weight:700; color:var(--text-primary); margin-bottom:0.75rem; display:flex; align-items:center; gap:0.5rem;">
+      <span style="color:var(--accent-cyan)">◈</span> <span data-i18n="weapon_effect_title">Imprint / Passive Effect</span>
+    </h2>
+    <div class="weapon-effect-desc" style="font-size:0.95rem; color:#cbd5e1; line-height:1.6; white-space:pre-line;">
+      {{ weapon.effect | render_effects }}
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,221 @@
+{
+  "slug": "florence",
+  "name": "Florence",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Hydro",
+  "weapon_type": "Handgun",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Iaso",
+  "stats": {
+    "hp": 2013,
+    "atk": 696,
+    "def": 553
+  },
+  "skill_attribute": "Hydro",
+  "weakness": "Corrosion",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Forced Injection",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/florence/skill1-icon.png",
+      "range_image": "assets/images/characters/florence/skill1-range.png"
+    },
+    {
+      "name": "Masochistic Hallucination",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects a direction, applies Chaos Compound for 2 turns and Infatuated for 1 turn for all enemies within a 3x5 area of the selected direction, and deals AoE Hydro damage equivalent to 80% ATK. After skill usage, increases Confectance Index by 6 points, and teleports Arios near self\n\nIf Arios is not on the field, summons Arios after skill usage",
+      "icon": "assets/images/characters/florence/skill2-icon.png",
+      "range_image": "assets/images/characters/florence/skill2-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Arios",
+      "description": "Has the ability to apply Taunt on the enemy, takes damage on behalf of Florence, and performs Counterattack when Florence or itself receives damage.",
+      "stats": {
+        "hp": "120% of Florence's initial HP",
+        "atk": "100% of Florence's initial ATK",
+        "def": "120% of Florence's initial DEF"
+      },
+      "stability_gauge": "0 points",
+      "movement_speed": "6 tiles",
+      "skills": [
+        {
+          "name": "No. 1 Assistant",
+          "description": "When Florence takes damage, Arios will take all damage on behalf of her\n\nIf the distance between Arios and Florence is 6 or more tiles, Arios will be teleported to near Florence\n\nWhen Arios or Florence receives damage, performs Counterattack, dealing Hydro damage equivalent to 80% ATK. This can be activated twice per round\n\nFor each damage instance received, gains 1 stack of Mark of Shame. When the number of stacks of Mark of Shame reaches 5, it is converted into Tremor of Despair",
+          "icon": "assets/images/characters/florence/summon1-skill1-icon.png",
+          "range_image": "assets/images/characters/florence/summon1-skill1-range.png"
+        }
+      ],
+      "image": "assets/images/characters/florence/summon1.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Pre-Op Preparation",
+      "level": 2,
+      "effect": "Decreases Confectance Index consumption by 1 point\n\nIncreases the number of Counterattack through passive skill No. 1 Assistant performed by Arios by 2 times"
+    },
+    {
+      "tier": 2,
+      "skill": "Masochistic Hallucination",
+      "level": 2,
+      "effect": "Enhances the effects of Chaos Compound: Increases Hydro damage received by 15%\n\nNew effect is added - Physical damage is dealt to all units at the start of the round"
+    },
+    {
+      "tier": 3,
+      "skill": "Pleasure Trigger",
+      "level": 2,
+      "effect": "Increases the duration of Stimulant by 1 round (Duration decreases at the end of the current round)\n\nNew effect is added - At the end of the action, if HP is below 30%, restores HP equivalent to 100% of Florence's ATK. This effect can only activate once during the duration of Stimulant"
+    },
+    {
+      "tier": 4,
+      "skill": "Masochistic Hallucination",
+      "level": 3,
+      "effect": "Increases damage multiplier by 20%. If Arios is present, restores HP equivalent to 100% ATK for Florence and applies Adrenaline for 1 round (Duration decreases at the end of the current round)"
+    },
+    {
+      "tier": 5,
+      "skill": "Pleasure Trigger",
+      "level": 3,
+      "effect": "Additionally cleanses Infatuated and Stun. This skill is also applied to Arios"
+    },
+    {
+      "tier": 6,
+      "skill": "Pre-Op Preparation",
+      "level": 3,
+      "effect": "Arios receives 30% less damage\n\nEnhances the effects of Tremor of Despair: Increases ATK by 35%, doubles the damage multiplier of Counterattack, and restores HP equivalent to 30% of damage dealt after dealing damage"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +32\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +85\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +39\nDEF +32",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +116\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +46\nDEF +42",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +53\nHP +152",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Fatal thrill",
+      "level": 20,
+      "effect": "At the start of the battle, increases Confectance Index by 3 points",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/florence/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Self-pleasure",
+      "level": 20,
+      "effect": "After using active skills, restores HP equivalent to 80% ATK for self and Arios",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/florence/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Sensitivity Boost",
+      "level": 30,
+      "effect": "After Florence or Arios attacks, applies Defense Down II on the enemy for 2 turns",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/florence/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Riposte's Reward",
+      "level": 30,
+      "effect": "After Arios performs a Counterattack, it gains Attack Up II for 1 turn",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/florence/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Bondage Urge",
+      "level": 40,
+      "effect": "Masochistic Hallucination: This skill will pull all targets towards self by 3 tiles",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/florence/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Sweet Temptation",
+      "level": 40,
+      "effect": "Special Care: This skill will no longer restore HP and cleanse debuffs, but instead deals AoE Physical damage equivalent to 30% ATK to all units (excluding self) within range",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/florence/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/florence/affi.png"
+    },
+    {
+      "name": "Common Key - Master's Command",
+      "level": 40,
+      "effect": "HP +5% / Increases ATK of holder's Entity Summons by 7%",
+      "materials": "None",
+      "image": "assets/images/characters/florence/common.png"
+    },
+    {
+      "name": "Expansion Key - Thrill Seeker",
+      "level": 60,
+      "effect": "After Florence uses the active skill Pleasure Trigger, applies Pleasure Trigger to all ally Entity Summons as well.\nWhen an ally unit gains Stimulant, Arios gains 1 stack of Euphoric Frenzy for 3 turn, this effect has a maximum of 6 stacks. \nAfter an ally unit with Stimulant receives healing, applies Soak I for 2 turn. \n \nEuphoric Frenzy: For every 1 stack of this effect, the damage caused by Arios' active skill Precision Anesthesia is increased by 10%; when 6 stacks of this effect are collected, owner's critical damage is increased by 20% and the ATK buffed by Tremor of Despair is increased to 2.5 times of the original effect.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/florence/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/florence/portrait.png",
+    "avatar": "assets/images/characters/florence/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,264 @@
+{
+  "slug": "liushih",
+  "name": "Liushih",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Hydro",
+  "weapon_type": "Sniper Rifle",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Transience",
+  "stats": {
+    "hp": 2028,
+    "atk": 195,
+    "def": 502
+  },
+  "skill_attribute": "Hydro",
+  "weakness": "Freeze",
+  "stability_gauge": "9 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Line Breaker",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Heavy Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 9 tile radius and deals Hydro damage equivalent to 90% ATK to it. This attack is considered a Loaded Attack.",
+      "icon": "assets/images/characters/liushih/skill1-icon.png",
+      "range_image": "assets/images/characters/liushih/skill1-range.png"
+    },
+    {
+      "name": "All or Nothing",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 9 tile radius and deals Hydro damage equivalent to 90% of ATK. Consumes all points of Confectance Index. Based on the number of points consumed, Liushih and Pegasus gain number of Precision stacks. After skill usage, Liushih gains Extra Action. This attack is considered a Loaded Attack. This skill can be only used while Pegasus is in the Coordinated Combat state.",
+      "icon": "assets/images/characters/liushih/skill2-icon.png",
+      "range_image": "assets/images/characters/liushih/skill2-range.png"
+    },
+    {
+      "name": "Strategic Masterstroke",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Selects 1 tile within a cross-shaped area of 4 to 8 tiles, landing on the selected tile and relocates Pegasus to a position near her. If Pegasus is in the Coordinated Combat or Standby state, remove that state. After skill usage, Liushih gains Extra Command.",
+      "icon": "assets/images/characters/liushih/skill3-icon.png",
+      "range_image": "assets/images/characters/liushih/skill3-range.png"
+    },
+    {
+      "name": "Leading the Charge",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 9 tile radius and deals Hydro damage equivalent to 90% of ATK. Pegasus gains the Coordinated Combat state and exits Standby state. This attack is considered a Loaded Attack.",
+      "icon": "assets/images/characters/liushih/ult-icon.png",
+      "range_image": "assets/images/characters/liushih/ult-range.png"
+    },
+    {
+      "name": "We Fight as One",
+      "tags": [
+        "Passive",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of battle, summons Pegasus close to Liushih.\nFor every 60 points of Liushih's initial attack, increase the basic attack damage multiplier of both herself and Pegasus by 5% up to 50%.\nBefore using the active attack All or Nothing or the Ultimate Leading the Charge, inflicts Lockdown to the target for 2 turns.\nAfter Pegasus uses Point-Defense Autocannon, Liushih gains 1 point of Confectance Index.",
+      "icon": "assets/images/characters/liushih/passive.png",
+      "range_image": "assets/images/characters/liushih/passive-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Pegasus",
+      "description": "Point-defense turret unit. Unable to move. When taking lethal damage, Pegasus enters Standby state.",
+      "stats": {
+        "hp": "100% of Liushih's initial HP",
+        "atk": "100% of Liushih's initial ATK",
+        "def": "100% of Liushih's initial DEF"
+      },
+      "stability_gauge": "9 points",
+      "movement_speed": "0 tiles",
+      "skills": [
+        {
+          "name": "Point-Defense Autocannon",
+          "description": "Deals Hydro damage equivalent to 110% of ATK. This is considered a Loaded Attack and a basic attack.",
+          "icon": "assets/images/characters/liushih/summon1-skill1-icon.png",
+          "range_image": "assets/images/characters/liushih/summon1-skill1-range.png"
+        },
+        {
+          "name": "Safety Protocol",
+          "description": "Unable to move. When taking lethal damage, Pegasus goes into the Standby state. If it is in the Coordinated Combat state, it is removed.",
+          "icon": "assets/images/characters/liushih/summon1-passive1-icon.png",
+          "range_image": "assets/images/characters/liushih/summon1-passive1-range.png"
+        }
+      ],
+      "image": "assets/images/characters/liushih/summon1.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "We Fight as One",
+      "level": 2,
+      "effect": "In the end of Liushih action Pegasus fires 1 Point-Defense Autocannon at the nearest enemy target within range."
+    },
+    {
+      "tier": 2,
+      "skill": "Strategic Masterstroke",
+      "level": 2,
+      "effect": "Creates Tideway tiles within the path for 2 turns. Pegasus no longer withdrew from the Coordinated Combat state."
+    },
+    {
+      "tier": 3,
+      "skill": "All or Nothing",
+      "level": 2,
+      "effect": "Damage multiplier increased to 120%.\nImprove the Precision effect: Increases the damage multiplier of basic attacks by 20% per stack."
+    },
+    {
+      "tier": 4,
+      "skill": "Leading the Charge",
+      "level": 2,
+      "effect": "Damage multiplier increased to 120%.\nCoordinated Combat gains new effect: Liushih and Pegasus critical damage increased by 30%."
+    },
+    {
+      "tier": 5,
+      "skill": "We Fight as One",
+      "level": 3,
+      "effect": "For every 1 point of Confectance Index obtained in the current round, before using the active skill All or Nothing in the next round, you and all friendly entity summons gain 1 stack of Sharpness, lasting 1 round."
+    },
+    {
+      "tier": 6,
+      "skill": "All or Nothing",
+      "level": 3,
+      "effect": "Double the number of Precision stacks obtained."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "HP +95\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "ATK +8\nHP +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "HP +115\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "ATK +11\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "HP +135\nDEF +38",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +15\nHP +155",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Perfect Synergy",
+      "level": 20,
+      "effect": "When Pegasus is in the Coordinated Combat state damage dealt by Liushih and Pegasus is increased by 20%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/liushih/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Deadeye",
+      "level": 20,
+      "effect": "Each stack of Precision additionally increases Critical Rate by 5%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/liushih/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - No Expense Spared",
+      "level": 30,
+      "effect": "Before Pegasus uses Point-Defense Autocannon, dispel 1 buff from the target",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/liushih/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Unbreakable Will",
+      "level": 30,
+      "effect": "Pegasus is immune to control effects",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/liushih/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Capital Expenditure",
+      "level": 40,
+      "effect": "After usaging Strategic Masterstroke Liushih gains Additional Movement.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/liushih/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Rallying Cry",
+      "level": 40,
+      "effect": "After a friendly entity summon other than Pegasus attacks, Liushih gains 1 point of Confectance Index. Can be triggered up to 1 time per unit per round.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/liushih/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Hall of Jewels",
+      "level": "-",
+      "effect": "CRIT +3%, HP +3%, DEF +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/liushih/affi.png"
+    },
+    {
+      "name": "Common Key - Financial Might",
+      "level": 40,
+      "effect": "HP +5% / Damage dealt by the holder's Entity Summons is increased by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/liushih/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/liushih/portrait.png",
+    "avatar": "assets/images/characters/liushih/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

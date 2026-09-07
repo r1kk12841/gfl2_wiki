@@ -1,0 +1,245 @@
+{
+  "slug": "qiongjiu",
+  "name": "Qiongjiu",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Burn",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Golden Melody",
+  "stats": {
+    "hp": 1893,
+    "atk": 802,
+    "def": 528
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Freeze",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Fuse",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/qiongjiu/skill1-icon.png",
+      "range_image": "assets/images/characters/qiongjiu/skill1-range.png"
+    },
+    {
+      "name": "Common Rail",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 8 tile, dealing Burn damage equal to 150% of attack. Additionaly, this unit gains Support Boost I.",
+      "icon": "assets/images/characters/qiongjiu/skill2-icon.png",
+      "range_image": "assets/images/characters/qiongjiu/skill2-range.png"
+    },
+    {
+      "name": "Guide to Victory",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "8",
+      "description": "Selects 1 direction and deals AoE Burn damage equal to 110% of attack to the first enemy target within 8 tiles in the selected direction. Applies Overburn for 2 turns.",
+      "icon": "assets/images/characters/qiongjiu/skill3-icon.png",
+      "range_image": "assets/images/characters/qiongjiu/skill3-range.png"
+    },
+    {
+      "name": "Pressing the Momentum",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "effect_area": "Target",
+      "description": "Gains 3 stacks of Support Boost II. At max Confectance Index, gains 1 additional stack and increases the maximum number of Action Support this turn by 1.",
+      "icon": "assets/images/characters/qiongjiu/ult-icon.png",
+      "range_image": "assets/images/characters/qiongjiu/ult-range.png"
+    },
+    {
+      "name": "Steady Plan",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Gains 1 point of Confectance Index each time after dealing damage. Increases damage dealt to targets not under the protection of Cover by 10%.\n\nWhen an enemy unit within range receives targeted damage from an ally, performs 1 instance of Action Support, dealing Physical damage equal to 90% of attack and 2 points of Stability Damage. This effect can be triggered up to 3 times per turn.",
+      "icon": "assets/images/characters/qiongjiu/passive.png",
+      "range_image": "assets/images/characters/qiongjiu/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Common Rail",
+      "level": 2,
+      "effect": "If a kill is scored, increases the damage bonus of Support Boost I to 30%."
+    },
+    {
+      "tier": 2,
+      "skill": "Guide to Victory",
+      "level": 2,
+      "effect": "If the target is inflicted with Overburn, increases the critical rate of this attack by 100%."
+    },
+    {
+      "tier": 3,
+      "skill": "Steady Plan",
+      "level": 2,
+      "effect": "After Action Support, apply Overburn to the target for 2 turns. Action Support's damage increases by 10%."
+    },
+    {
+      "tier": 4,
+      "skill": "Pressing the Momentum",
+      "level": 2,
+      "effect": "Applies Vulnerable I to targets that are not protected by Cover for 1 turn."
+    },
+    {
+      "tier": 5,
+      "skill": "Pressing the Momentum",
+      "level": 3,
+      "effect": "When performing Action Support, applies Damage Up II to self and the allied unit for 1 turn before the aforementioned allied unit makes their attack."
+    },
+    {
+      "tier": 6,
+      "skill": "Steady Plan",
+      "level": 3,
+      "effect": "Increases damage deat by 10% against targets without Cover protection."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +37\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +80\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +45\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +110\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +53\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +61\nHP +143",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Concentration",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/qiongjiu/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Efficient Planning",
+      "level": 20,
+      "effect": "Before Support Action, dispels 1 buff from the target.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/qiongjiu/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Targeted Training",
+      "level": 30,
+      "effect": "While in Support Mode, applies Defense Down II to the target for 1 turn before the allied unit's attack.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/qiongjiu/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Point of Vulnerability",
+      "level": 30,
+      "effect": "Modify the effects of the active skill Guide to Victory to deal damage to all enemy targets within 8 tiles in the selected direction. All enemy targets except the first receive 30% less damage.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/qiongjiu/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Necessary Adjustments",
+      "level": 40,
+      "effect": "When a Phase Weakness is exploited using the active skill Common Rail, gains Blazing Assault II for 2 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/qiongjiu/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Steadiness",
+      "level": 40,
+      "effect": "When under the effect of Support Boost, gain immunity to displacement effects applied by enemy units.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/qiongjiu/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Warm as Jade",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/qiongjiu/affi.png"
+    },
+    {
+      "name": "Common Key - Strategic Negotiation",
+      "level": 40,
+      "effect": "CRIT +5.0% / Increases damage dealt outside of the unit's own turn by 7%.",
+      "materials": "None",
+      "image": "assets/images/characters/qiongjiu/common.png"
+    },
+    {
+      "name": "Expansion Key - Ruined Gem",
+      "level": 60,
+      "effect": "Damage type dealt by Action Support is changed to Burn damage, and damage dealt to targets with Burn debuffs is increased by 15%.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/qiongjiu/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/qiongjiu/portrait.png",
+    "avatar": "assets/images/characters/qiongjiu/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,241 @@
+{
+  "slug": "robella",
+  "name": "Robella",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Freeze",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Wanderer's Magnum",
+  "stats": {
+    "hp": 1819,
+    "atk": 844,
+    "def": 504
+  },
+  "skill_attribute": "Freeze",
+  "weakness": "Burn",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Ultra Shot",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/robella/skill1-icon.png",
+      "range_image": "assets/images/characters/robella/skill1-range.png"
+    },
+    {
+      "name": "Light of Bond",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an ally (excluding self) within a 8 tile radius and applies Unity on it. Only 1 Unity can exist at the same time. After skill usage, Robella gains Extra Command. This skill can only be used once per round",
+      "icon": "assets/images/characters/robella/skill2-icon.png",
+      "range_image": "assets/images/characters/robella/skill2-range.png"
+    },
+    {
+      "name": "Radiant Memory",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Robella gains Radiant Rise for 2 rounds (Duration decreases at the end of the current round). After skill usage, Robella gains Frost Barrier for 2 turns, Frost Barrier absorbs damage equal to 65% of Robella's initial attack, up to a maximum of 60% of the target's max HP",
+      "icon": "assets/images/characters/robella/skill3-icon.png",
+      "range_image": "assets/images/characters/robella/skill3-range.png"
+    },
+    {
+      "name": "Howling Cyclone",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects 1 direction around self, and deals AoE Freeze damage equal to 120% of attack to all enemy targets in a 4 tile fan-shaped area",
+      "icon": "assets/images/characters/robella/ult-icon.png",
+      "range_image": "assets/images/characters/robella/ult-range.png"
+    },
+    {
+      "name": "Critical Insight",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the end of the action, increases Confectance Index by 1 point\n\nAfter using Frigid Infiltration, consumes all Inspection stacks from the target, and gains an equal number of stacks of Sense Weakness. When the number of stacks of Sense Weakness is more than 2, basic attacks deal Freeze damage instead, and increases CRIT rate by 20%",
+      "icon": "assets/images/characters/robella/passive.png",
+      "range_image": "assets/images/characters/robella/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Light of Bond",
+      "level": 2,
+      "effect": "Increases ATK by 20% of the selected ally's initial ATK for self"
+    },
+    {
+      "tier": 2,
+      "skill": "Radiant Memory",
+      "level": 2,
+      "effect": "Radiant Rise increases damage dealt by 50% instead\n\nEnhances the effects of Radiant Rise - when using Frigid Infiltration, applies 1 stack of Memory Shock on the target for 2 turns"
+    },
+    {
+      "tier": 3,
+      "skill": "Critical Insight",
+      "level": 2,
+      "effect": "When the number of stacks of Sense Weakness is more than 5, increases CRIT DMG by 30%, and increases damage dealt by Frigid Infiltration by 30%"
+    },
+    {
+      "tier": 4,
+      "skill": "Howling Cyclone",
+      "level": 2,
+      "effect": "Increases damage multiplier to 150% ATK. For each stack of Sense Weakness, increases damage multiplier by 9%"
+    },
+    {
+      "tier": 5,
+      "skill": "Radiant Memory",
+      "level": 3,
+      "effect": "Increases duration of Radiant Rise by 2 rounds (Duration decreases at the end of the current round)"
+    },
+    {
+      "tier": 6,
+      "skill": "Critical Insight",
+      "level": 3,
+      "effect": "Sense Weakness no longer has a stack limit"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +77\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +48\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +105\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +56\nDEF +38",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +137",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Guard Vent",
+      "level": 20,
+      "effect": "Before allies with Unity launches an active attack or Interception, applies Defense Down II on the target for 2 turns",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/robella/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Third-gen Neural Cloud",
+      "level": 20,
+      "effect": "At the end of the action, if Robella has Radiant Rise, gains Attack Up II for 1 turn",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/robella/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Extra Attention",
+      "level": 30,
+      "effect": "Ultra Shot: After skill usage, gains 2 stacks of Sense Weakness",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/robella/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Less Than A Dinergate",
+      "level": 30,
+      "effect": "If Robella or allies with Unity deals Freeze damage towards enemies with Shield, increases Shield Pierce Rate by 30% and damage by 20%",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/robella/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Cool Protection",
+      "level": 40,
+      "effect": "If Robella is on an allied Frost tile, gains 5 tiles of Additional Movement after using Ultra Shot or Howling Cyclone",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/robella/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Inner Calm",
+      "level": 40,
+      "effect": "Before using Frigid Infiltration, dispels 2 buffs from the target",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/robella/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/robella/affi.png"
+    },
+    {
+      "name": "Common Key - Justice is My Strenght",
+      "level": 40,
+      "effect": "ATK +5% / If the holder has Shield, increases Phase damage dealt by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/robella/common.png"
+    },
+    {
+      "name": "Expansion Key - Justice execution calculation",
+      "level": 60,
+      "effect": "If posessing Radiant Rise, using basic attack Super Shot grants Extra command. Can be triggered up to 1 time per round.\nWhen using active skill Radiant Memory or when enemy unit with Inspection is eliminated by an allied unit, gains 3 stacks of Sense Weakness.\nBefore using an active attack generate Frost tiles within 2 tile radius around self for 2 turns.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/robella/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/robella/portrait.png",
+    "avatar": "assets/images/characters/robella/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

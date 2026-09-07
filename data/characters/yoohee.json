@@ -1,0 +1,274 @@
+{
+  "slug": "yoohee",
+  "name": "Yoohee",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Sparkling Centerstage",
+  "stats": {
+    "hp": 1851,
+    "atk": 757,
+    "def": 585
+  },
+  "skill_attribute": "-",
+  "weakness": "Freeze",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Rhythmic Pulse",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/yoohee/skill1-icon.png",
+      "range_image": "assets/images/characters/yoohee/skill1-range.png"
+    },
+    {
+      "name": "Improv",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 120% ATK to it. If Yoohee has 3 or more points of Confectance Index, consumes 2 additional points of Confectance Index to ignore 30% of the target's defense on this attack",
+      "icon": "assets/images/characters/yoohee/skill2-icon.png",
+      "range_image": "assets/images/characters/yoohee/skill2-range.png"
+    },
+    {
+      "name": "Soul of Dance",
+      "tags": [
+        "Active",
+        "AoE",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "2",
+      "description": "Selects an ally within a 8 tile radius, and applies Targeted Attack Defense I to it and all allies within a 2 tile radius of the selected ally for 2 turns.\n\nDeals AoE Physical damage equal to 80% ATK to all enemies within range, and applies Stun for 1 turn. After the attack, Yoohee gains 1 use of active skill Graceful Piroulette or Passionate Resonance.",
+      "icon": "assets/images/characters/yoohee/skill3-icon.png",
+      "range_image": "assets/images/characters/yoohee/skill3-range.png"
+    },
+    {
+      "name": "Sparkling Finale",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "effect_area": "Entire Map",
+      "description": "Yoohee gains Troupe's Core for 3 turns. Applies Stability Offensive I for all allies for 2 turns. After skill usage, gains Extra Command.",
+      "icon": "assets/images/characters/yoohee/ult-icon.png",
+      "range_image": "assets/images/characters/yoohee/ult-range.png"
+    },
+    {
+      "name": "Main Dancer's Aura",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "When allies deal Physical damage, Yoohee gains 1 point of Confectance Index.\n\nAfter using basic attack or active skills, Graceful Pirouette or Passionate Resonance can be used (this effect cannot be triggered repeatedly).\n\nFor 3 or more Dance Steps applies, triggers an instance of Best Dancer, and gains 1 stack of Never Give Up, and refreshes the duration of all Dance Steps and Reversed Assault stacks across the entire battlefield.",
+      "icon": "assets/images/characters/yoohee/passive.png",
+      "range_image": "assets/images/characters/yoohee/passive-range.png"
+    },
+    {
+      "name": "Graceful Pirouette",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an ally (excluding self) within a 8 tile radius, and applies Graceful Spin and Reversed Assault for 3 turns.",
+      "icon": "assets/images/characters/yoohee/skill6-icon.png",
+      "range_image": "assets/images/characters/yoohee/skill6-range.png"
+    },
+    {
+      "name": "Passionate Resonance",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an ally (excluding self) within a 8 tile radius, and applies Passionate Spin and Reversed Assault for 3 turns.",
+      "icon": "assets/images/characters/yoohee/skill7-icon.png",
+      "range_image": "assets/images/characters/yoohee/skill7-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Sparkling Finale",
+      "level": 2,
+      "effect": "Stability Offensive II is applied instead of Stability Offensive I. Additionally applies Attack Up II for all allied units for 2 turns\n\nAfter skill usage, if Graceful Pirouette or Passionate Resonance is used on this turn, the effects are applied to all allies"
+    },
+    {
+      "tier": 2,
+      "skill": "Main Dancer's Aura",
+      "level": 2,
+      "effect": "The selection range of Graceful Pirouette and Passionate Resonance is expanded to the entire field\n\nNew effect is added for Graceful Pirouette- Restores HP equivalent to 15% max HP\n\nNew effect is added for Passionate Resonance - Cleanses 1 debuff from the target\n\nWhen Best Dancer is triggered, applies Defense Down II for the enemy with the highest initial DEF for 3 turns. if Yoohee has Troupe's Core, Never Give Up decreases damage taken by allies by 30%"
+    },
+    {
+      "tier": 3,
+      "skill": "Sparkling Finale",
+      "level": 3,
+      "effect": "Yoohee gains 1 stack of Never Give Up\n\nNew effect is added for Troupe's Core - When attacking, ignores 50% of the enemy's DEF. After triggering the effects of Best Dancer, immediately activates Improv on the enemy with the highest current HP within range. This effect can only trigger once per round, and Graceful Pirouette and Passionate Resonance cannot be used after that instance of the skill \n\nFor every 2 times Best Dancer is triggered, reduces the cooldown of this skill by 1 turn"
+    },
+    {
+      "tier": 4,
+      "skill": "Improv",
+      "level": 2,
+      "effect": "Increases the damage multiplier by 60%. For each Dance Steps applied, gains 1 stack of Fantastic Conception"
+    },
+    {
+      "tier": 5,
+      "skill": "Soul of Dance",
+      "level": 2,
+      "effect": "Increases the damage multiplier by 50%, and increases the effect range by 1 tile\n\nTargeted Attack Defense II is applied instead of Targeted Attack Defense I. Cleanses Taunt, Fear, Stun, and Infatuated for all allies"
+    },
+    {
+      "tier": 6,
+      "skill": "Main Dancer's Aura",
+      "level": 3,
+      "effect": "Doubles the effects of Dance Steps for self (Increases CRIT DMG by 20%, recovers HP equivalent to 40% ATK, gains 3 stacks of Shelter)\n\nFor each buff applies to other allies, increases ATK by 1.5% for self, up to a maximum of 45%. When triggering Best Dancer, applies Preshow Warmup for all allies for 2 turns"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +35\nDEF +25",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +34",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +107\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +50\nDEF +44",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +140",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Effort and Returns",
+      "level": 20,
+      "effect": "Improv: When additional points of Confectance Index is consumed, increases CRIT DMG dealt by 5%",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/yoohee/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Enjoy The Limelight",
+      "level": 20,
+      "effect": "Best Dancer: When this effect is triggered, restores HP equivalent to 20% max HP",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/yoohee/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Tempo Resonance",
+      "level": 30,
+      "effect": "Improv: Before skill usage, dispels 1 random buff from the target",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/yoohee/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Infectious Emotions",
+      "level": 30,
+      "effect": "Soul of Dance: After this skill applies Stun on the enemy, when Stun is removed, applies Movement Denied for 1 turn",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/yoohee/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Marvellous Shift",
+      "level": 40,
+      "effect": "If Yoohee did not move on this turn, increases attack range of basic attack and skills by 3 tiles on the next turn",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/yoohee/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Exquisite Choreography",
+      "level": 40,
+      "effect": "Never Give Up: When this effect is active, increases ATK by 10%",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/yoohee/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/yoohee/affi.png"
+    },
+    {
+      "name": "Common Key - Main Dancer's Might",
+      "level": 40,
+      "effect": "ATK +5% / When dealing Ammo-type damage, increases damage dealt by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/yoohee/common.png"
+    },
+    {
+      "name": "Expansion Key - Flawless Dance Moves",
+      "level": 60,
+      "effect": "After using Sparkling Finale, when using Graceful Pirouette or Passionate Resonance, the skill will also trigger on 2 allies with the highest ATK that were not selected by the skill (excluding self). These 2 skills can no longer be used on the current turn\n\nWhen dealing Physical damage from a passive skill, triggers the effects of Never Give Up. Its effects will no longer be nullified if allies dealt Phase damage\n\nIncreases healing received by allies by 50%. At the start of the battle, for each Physical attribute ally on the field, increases Physical damage dealt by allies by 3%, up to a maximum of 15%",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/yoohee/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/yoohee/portrait.png",
+    "avatar": "assets/images/characters/yoohee/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

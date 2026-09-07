@@ -1,0 +1,246 @@
+{
+  "slug": "mosin-nagant",
+  "name": "Mosin-Nagant",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Electric",
+  "weapon_type": "Sniper Rifle",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Samosek",
+  "stats": {
+    "hp": 1859,
+    "atk": 820,
+    "def": 528
+  },
+  "skill_attribute": "Electric",
+  "weakness": "Corrosion",
+  "stability_gauge": "9 points",
+  "movement_speed": "4 tiles",
+  "skills": [
+    {
+      "name": "Patrol Time",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Heavy Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 9 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/mosin-nagant/skill1-icon.png",
+      "range_image": "assets/images/characters/mosin-nagant/skill1-range.png"
+    },
+    {
+      "name": "Target Victory",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 9 tiles, dealing Physical damage equal to 130% of attack to them. After the attack, applies Conductivity for 1 turn.",
+      "icon": "assets/images/characters/mosin-nagant/skill2-icon.png",
+      "range_image": "assets/images/characters/mosin-nagant/skill2-range.png"
+    },
+    {
+      "name": "Positive Mindset",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "effect_area": "Target",
+      "description": "Gain 1 stack of Active Engagement, and Extra Command once. Every 3 times this skill is used, gain Shock. Cannot be used more than once per turn.",
+      "icon": "assets/images/characters/mosin-nagant/skill3-icon.png",
+      "range_image": "assets/images/characters/mosin-nagant/skill3-range.png"
+    },
+    {
+      "name": "Declaration of Victory",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 9 tiles, dealing Physical damage equal to 180% of attack to them. If a phase weakness is exploited, applies Paralysis to the target after the attack for 1 turn.",
+      "icon": "assets/images/characters/mosin-nagant/ult-icon.png",
+      "range_image": "assets/images/characters/mosin-nagant/ult-range.png"
+    },
+    {
+      "name": "Helping Others",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "When an allied unit attacks an enemy unit outside of turn but within range, if that enemy unit is in Stability Break, Mosin-Nagant performs 1 instance of Action Support, Physical damage equal to 80% of her attack and 2 points of Stability Damage. This effect can be triggered up to 2 times per turn. \n\nAfter a Support Attack, Mosin-Nagant gains 2 points of Confectance Index, and also gains Insight for 2 turns.",
+      "icon": "assets/images/characters/mosin-nagant/passive.png",
+      "range_image": "assets/images/characters/mosin-nagant/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Target Victory",
+      "level": 2,
+      "effect": "If a phase weakness is exploited, gains 1 point of Confectance Index."
+    },
+    {
+      "tier": 2,
+      "skill": "Declaration of Victory",
+      "level": 2,
+      "effect": "Gains 1 stack of Unshakable Confidence after each Support Action."
+    },
+    {
+      "tier": 3,
+      "skill": "Declaration of Victory",
+      "level": 3,
+      "effect": "Gains 1 point of Confectance Index for each stack of Unshakable Confidence after using an Ultimate skill."
+    },
+    {
+      "tier": 4,
+      "skill": "Helping Others",
+      "level": 2,
+      "effect": "Before performing a Support Attack, gains 1 stack of Active Engagement."
+    },
+    {
+      "tier": 5,
+      "skill": "Positive Mindset",
+      "level": 2,
+      "effect": "Increase damage dealt in Active Engagement by an additional 10%. Every 2 times this skill is used, gain Shock."
+    },
+    {
+      "tier": 6,
+      "skill": "Helping Others",
+      "level": 3,
+      "effect": "When an Electric debuff is applied to an enemy target outside of turn, gains Wise Support. The maximum number of Support Attack increases by 1."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +38\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +46\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +108\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +54\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +62\nHP +140",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Security Patrol Squad",
+      "level": 20,
+      "effect": "If the target has Paralysis, increases Stability Damage they take by 2 points.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/mosin-nagant/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Preprepared Defenses",
+      "level": 20,
+      "effect": "When Target Victory deals Electric damage, applies Paralysis for 1 turn instead of Conductivity.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/mosin-nagant/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Orderly Movement",
+      "level": 30,
+      "effect": "If the target has Paralysis, applies 2 debuffs to them before launching an attack.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/mosin-nagant/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Positive Mindset",
+      "level": 30,
+      "effect": "When using the active skill Positive Mindset, if the user has Shock, their attacks ignore 15% of Cover damage reduction.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/mosin-nagant/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Hard at Work",
+      "level": 40,
+      "effect": "When possessing Insight, reduce Stability Damage taken by 1 point.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/mosin-nagant/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Mobile Patrol",
+      "level": 40,
+      "effect": "If an active attack applies Paralysis to the target, this unit gains 3 tiles of Additional Movement.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/mosin-nagant/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Heart of Gold",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/mosin-nagant/affi.png"
+    },
+    {
+      "name": "Common Key - All Seeing Eye",
+      "level": 40,
+      "effect": "ATK +5.0% / When this unit is under the effects of Insight, increases damage dealt by 7%.",
+      "materials": "None",
+      "image": "assets/images/characters/mosin-nagant/common.png"
+    },
+    {
+      "name": "Expansion Key - White Reaper",
+      "level": 60,
+      "effect": "When allies attempt to apply Paralysis on the target, Mosin applies Electric Sparks on the target for 1 turn. This effect can only activate once per round",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/mosin-nagant/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/mosin-nagant/portrait.png",
+    "avatar": "assets/images/characters/mosin-nagant/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

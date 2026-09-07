@@ -1,0 +1,274 @@
+{
+  "slug": "nikketa",
+  "name": "Nikketa",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Hydro",
+  "weapon_type": "Sniper Rifle",
+  "ammo_type": "Heavy Ammo",
+  "signature_weapon": "Guardian Silverwing",
+  "stats": {
+    "hp": 1859,
+    "atk": 836,
+    "def": 519
+  },
+  "skill_attribute": "Hydro",
+  "weakness": "Electric",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Active Deterrence",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Heavy Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 9 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/nikketa/skill1-icon.png",
+      "range_image": "assets/images/characters/nikketa/skill1-range.png"
+    },
+    {
+      "name": "K9 Deployment",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "2",
+      "description": "Selects an empty tile within a 9 tile radius, and summons Kulich, then deals AoE Physical damage equivalent to 80% ATK to all enemies within a 2 tiles radius of the selected tile, and applies Guilt for 2 turns. If Kulich is already present, teleports Kulich to the selected tile instead. Nikketa gains 1 point of Confectance Index.",
+      "icon": "assets/images/characters/nikketa/skill2-icon.png",
+      "range_image": "assets/images/characters/nikketa/skill2-range.png"
+    },
+    {
+      "name": "Judgement Strike",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 9 tile radius, deals Hydro damage equivalent to 80% ATK to it, and applies Guilt for 2 turns. Nikketa gains 2 points of Confectance Index and Extra Command.",
+      "icon": "assets/images/characters/nikketa/skill3-icon.png",
+      "range_image": "assets/images/characters/nikketa/skill3-range.png"
+    },
+    {
+      "name": "Righteous Verdict",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 9,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 9 tile radius, deals Hydro damage equivalent to 130% ATK to it. If the target has Guilt, performs an additional attack, and removes Guilt\n\nConsumes all Confectance Index, for each additional point of Confectance Index consumed, increases the damage of this skill by 5%",
+      "icon": "assets/images/characters/nikketa/ult-icon.png",
+      "range_image": "assets/images/characters/nikketa/ult-range.png"
+    },
+    {
+      "name": "On-site Enforcement",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "If Kulich is present, Nikketa gains Insight. Before Nikketa and Kulich activates their skill, both gains 1 stack of Clue, if Phase Weakness is exploited, gains an additional stack of Clue\n\nKulich can only perform Counterattack once per round. After performing Counterattack, Nikketa will follow up by using her ultimate skill Righteous Verdict against the target (Righteous Verdict does not have a Confectance Cost requirement)",
+      "icon": "assets/images/characters/nikketa/passive.png",
+      "range_image": "assets/images/characters/nikketa/passive-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Kulich",
+      "description": "K9 police partner. Enemies will not select Kulich as the target of their attacks. Performs Counterattack when nearby allies take damage.",
+      "stats": {
+        "hp": "80% of Nikketa's initial HP",
+        "atk": "80% of Nikketa's initial ATK",
+        "def": "100% of Nikketa's initial DEF"
+      },
+      "stability_gauge": "0 points",
+      "movement_speed": "0 tiles",
+      "skills": [
+        {
+          "name": "Kulich's Loyalty",
+          "description": "Enemies will not select Kulich as the target of their attacks\n\nIf enemies within a 3 tile radius deal damage, performs Counterattack, dealing Hydro damage equivalent to 80% ATK and 2 Stability damage",
+          "icon": "assets/images/characters/nikketa/summon1-skill1-icon.png",
+          "range_image": "assets/images/characters/nikketa/summon1-skill1-range.png"
+        },
+        {
+          "name": "Kulich's Intimidation",
+          "description": "Decreases ATK for all enemies within a 5 tile radius by 10%\n\nThis passive is only unlocked after reaching Vertebrae 5",
+          "icon": "assets/images/characters/nikketa/summon1-passive1-icon.png",
+          "range_image": "assets/images/characters/nikketa/summon1-passive1-range.png"
+        }
+      ],
+      "image": "assets/images/characters/nikketa/summon1.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Judgement Strike",
+      "level": 2,
+      "effect": "Damage multiplier increased by 20%\n\nExtra Command is replaced with Extra Action"
+    },
+    {
+      "tier": 2,
+      "skill": "Righteous Verdict",
+      "level": 2,
+      "effect": "Damage multiplier increased by 20%. Decreases Confectance Cost by 1 point\n\nIf the target has Guilt, applies Monitoring on the target after skill activation for 1 turn"
+    },
+    {
+      "tier": 3,
+      "skill": "On-site Enforcement",
+      "level": 2,
+      "effect": "Doubles the maximum stack limit for Clue to 10 stacks. Kulich can perform an additional Counterattack per turn"
+    },
+    {
+      "tier": 4,
+      "skill": "K9 Deployment",
+      "level": 2,
+      "effect": "Increases Stability damage by 2 points\n\nEnhanced the effects of Guilt - Takes 10% more Hydro damage instead, and restores Kulich HP by 30% max HP after relocation"
+    },
+    {
+      "tier": 5,
+      "skill": "K9 Deployment",
+      "level": 3,
+      "effect": "Increases the range of Kulich's Loyalty by 2 tiles. Increases Kulich inherited HP to 100%\n\nKulich gains Kulich's Intimidation"
+    },
+    {
+      "tier": 6,
+      "skill": "Righteous Verdict",
+      "level": 3,
+      "effect": "For each additional point of Confectance Index consumed, increases damage by 10% instead. Guilt will no longer be removed"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +47\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +108\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +55\nDEF +39",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +140",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Righteous Doll",
+      "level": 20,
+      "effect": "After using basic attack or single target skills, increases Confectance Index by 1 point",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/nikketa/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Messenger of Justice",
+      "level": 20,
+      "effect": "If the target has Guilt, deals an additional 2 points of Stability damage to it",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/nikketa/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Valiant Aura",
+      "level": 30,
+      "effect": "Judgement Strike: This skill now deals AoE Hydro damage equivalent to 80% ATK to all enemies within a 2 tiles radius",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/nikketa/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Just Desserts",
+      "level": 30,
+      "effect": "K9 Deployment: After skill usage, generates Tideaway in the effective area for 2 turns",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/nikketa/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Stern Gaze",
+      "level": 40,
+      "effect": "After attacking, if the target is in Stability Break, applies Fear for 1 turn",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/nikketa/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Oppressive Air",
+      "level": 40,
+      "effect": "When gaining Clue, gains Attack Up II for 1 turn",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/nikketa/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/nikketa/affi.png"
+    },
+    {
+      "name": "Common Key - Defender",
+      "level": 40,
+      "effect": "ATK +5.0% / If the holder has Hydro type buffs, increases critical rate by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/nikketa/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "After ending an action, gains 1 stack of Righteousness.\nEach time Kulich performs 1 Counterattack, restores 1 point of Confectance Index for Nikita. The range of Kulich's Loyalty increases by 2 tiles.\n\nRighteousness: Increases own Critical Rate by 30% and Critical Damage by 30% (this effect is fixed and does not affected by stacks). When actively using the Ultimate Skill Righteous Judgment, consumes 5 stacks of this effect to cast the Ultimate Skill an additional time. Can stack up to 5 times. Cannot be dispelled.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/nikketa/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/nikketa/portrait.png",
+    "avatar": "assets/images/characters/nikketa/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

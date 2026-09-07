@@ -1,0 +1,207 @@
+{
+  "slug": "jiangyu",
+  "name": "Jiangyu",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Electric",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Leaping Tiger",
+  "stats": {
+    "hp": 2368,
+    "atk": 690,
+    "def": 650
+  },
+  "skill_attribute": "Electric",
+  "weakness": "Hydro",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Form-Intention Fist",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Melee",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects one enemy target within a 8 tile radius and deals Physical damage equivalent to 80% attack to it",
+      "icon": "assets/images/characters/jiangyu/skill1-icon.png",
+      "range_image": "assets/images/characters/jiangyu/skill1-range.png"
+    },
+    {
+      "name": "Thunderclap",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "ammo_type": "Melee",
+      "stability_damage": 5,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "effect_area": "3x3",
+      "description": "Selects one enemy target within 3x3 area around self, dealing AOE Melee Electric damage equal to 90% of attack to the target and all enemy units within a 3x3 area. Creates a Voltage terrain for 3 turns. If Phase Weakness is exploited, additionally deals 5 points of Stability Damage. After the attack, gains 6 tiles of Additional Movement and Extra Command.",
+      "icon": "assets/images/characters/jiangyu/skill2-icon.png",
+      "range_image": "assets/images/characters/jiangyu/skill2-range.png"
+    },
+    {
+      "name": "Lightning Smash",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects one enemy target within a 8-tile radius and deals Electric damage equal to 110% of attack to it. Jiangyu gains 2 points of Confectance Index. If the target is in Stability Break, Jiangyu gains 1 stack of Chi before attacking.",
+      "icon": "assets/images/characters/jiangyu/skill3-icon.png",
+      "range_image": "assets/images/characters/jiangyu/skill3-range.png"
+    },
+    {
+      "name": "Rolling Thunder",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 4,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "8",
+      "description": "Selects one enemy target within a 8-tile radius. Jiangyu gains 2 stacks of Chi and deals Electric damage equal to 130% of attack that ignores Cover to it. Applies Positive Charge to all allies for 3 turns, cleanse 1 debuff, and removes Stun and Taunt. Jiangyu gains 1 point of Confectance Index.",
+      "icon": "assets/images/characters/jiangyu/ult-icon.png",
+      "range_image": "assets/images/characters/jiangyu/ult-range.png"
+    },
+    {
+      "name": "Grand Aura",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of the round, Jiangyu gains 1 point of Confectance Index. \nAt the end of the action, if the Confectance Index of Jiangyu is full, all Confectance Index is consumed to reduce the cooldown of Rolling Thunder by 1 turn. When an enemy unit repeatedly gains Negative Charge, applies 1 stack of Voltage Sag for 2 turns. When an allied unit repeatedly gains Positive Charge, applies 1 stack of Power Surge for 3 turns. \n\nWhen an enemy unit within Jiangyu's range (8) takes Targeted Damage from an ally, the user prioritizes performing 1 Support Action and gains 1 stack of Chi. \n\nSupport Action: If the target has Stability greater than 0, deals Electric damage equivalent to 45% of attack and 3 points of Stability damage. If the target is in Stability Break, deals Electric damage equivalent to 75% of attack. Can trigger up to 2 times per round.",
+      "icon": "assets/images/characters/jiangyu/passive.png",
+      "range_image": "assets/images/characters/jiangyu/passive-range.png"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +32\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +85\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +39\nDEF +32",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +117\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +46\nDEF +42",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +53\nHP +152",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1",
+      "level": 20,
+      "effect": "At the start of battle, gains 4 stacks of Chi.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/jiangyu/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2",
+      "level": 20,
+      "effect": "Before an enemy unit within a radius of 8 tiles performs an active attack, Jiangyu performs 1 Interception against it, dealing Electric damage equivalent to 60% of attack and 2 points of Stability Damage. Before the attack, applies Conductivity to the target for 1 turn. Can trigger up to 2 times per turn.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/jiangyu/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3",
+      "level": 30,
+      "effect": "When inflicted with Taunt, Fear, Infatuated, or Stun, immediately cleanse the effect. Cooldown: 1 turn.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/jiangyu/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4",
+      "level": 30,
+      "effect": "At the start of the turn, applies Positive Charge to the ally with the highest ATK for 3 turns.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/jiangyu/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5",
+      "level": 40,
+      "effect": "Before an ally with Positive Charge (excluding self) uses an active skill, applies Defense Down II to the target for 2 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/jiangyu/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6",
+      "level": 40,
+      "effect": "All allies take 1 less point of Stability Damage.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/jiangyu/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/jiangyu/affi.png"
+    },
+    {
+      "name": "Common Key",
+      "level": 40,
+      "effect": "ATK +5.0% / Damage dealt to an enemy unit under Stability Break is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/jiangyu/common.png"
+    },
+    {
+      "name": "Expansion Key - Urge to Perform",
+      "level": 60,
+      "effect": "When an enemy unit goes into Stability Break, Jiangyu deals Electric damage equal to 90% of attack (does not trigger Negative Charge effects). When allies with 3 stacks of Power Surge deal damage, for each stack of Voltage Sag on the target, the ally’s Critical Rate increases by 2% and Critical Damage increases by 3%.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/jiangyu/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/jiangyu/portrait.png",
+    "avatar": "assets/images/characters/jiangyu/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

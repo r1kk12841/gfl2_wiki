@@ -1,0 +1,213 @@
+{
+  "slug": "lind",
+  "name": "Lind",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Corrosion",
+  "weapon_type": "Shotgun",
+  "ammo_type": "Shotgun Ammo",
+  "signature_weapon": "Thorn Criterion",
+  "stats": {
+    "hp": 1859,
+    "atk": 836,
+    "def": 519
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Electric",
+  "stability_gauge": "9 points",
+  "movement_speed": "5 tiles",
+  "skills": [
+    {
+      "name": "Repulsive Shot",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Shotgun Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/lind/skill1-icon.png",
+      "range_image": "assets/images/characters/lind/skill1-range.png"
+    },
+    {
+      "name": "Glucose Overload",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 0,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "effect_area": "8",
+      "description": "Applies Ketoacidemia to all enemies within a 8 tile radius. Upon skill activation, triggers all Corrosion debuffs held by enemy units within effect range. After skill usage, Lind can use Repulsive Shot, Assault Spray, or Overwhelming Burst",
+      "icon": "assets/images/characters/lind/skill2-icon.png",
+      "range_image": "assets/images/characters/lind/skill2-range.png"
+    },
+    {
+      "name": "Sweets Stockpile",
+      "tags": [
+        "Passive",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the end of the action, increases Confectance Index by 1 point\n\nAt the start of the round, applies Honey Trap to all enemies. This has a cooldown of 1 round\n\nWhen enemies with Honey Trap dies or when allies deal Corrosion damage, Lind gains 1 stack of Candyglaze. When the number of stacks of Candyglaze held by self exceeds 5, before attacking enemies with Honey Trap, triggers the effects of Honey Trap. Afterwards, Honey Trap is consumed",
+      "icon": "assets/images/characters/lind/skill3-icon.png",
+      "range_image": "assets/images/characters/lind/skill3-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Sweet Stockpile",
+      "level": 2,
+      "effect": "At the start of the battle, for each ally present, Lind gains 1 stack of Candyglaze. Increases the maximum stacks of Candyglaze to 30\n\nEnhances the effect of Candyglaze - Increases Corrosion damage dealt by 2%"
+    },
+    {
+      "tier": 2,
+      "skill": "Glucose Overload",
+      "level": 2,
+      "effect": "Increases damage dealt by the next active skill by 15%\n\nEnhances the effects of Ketoacidemia - The holder receives 12% more Corrosion damage from Lind, up to a maximum of 72%"
+    },
+    {
+      "tier": 3,
+      "skill": "Sweets Stockpile",
+      "level": 3,
+      "effect": "Removes the cooldown for applying Honey Trap at the start of the round\n\nWhen Honey Trap is triggered, increases the number of random powerful debuffs applied by 3, increases damage multiplier to 120% ATK, and increases CRIT DMG by 15%"
+    },
+    {
+      "tier": 4,
+      "skill": "Assault Spray",
+      "level": 2,
+      "effect": "Applies 2 stacks of Alleviation Dependence\n\nIncreases the effect range of the skill from a small fan-shaped area to a fan-shaped area (2x6 tiles expansion to the left and right of the original area)\n\nFor each debuff held by the enemy, increases damage dealt by 10%, up to a maximum of 60%"
+    },
+    {
+      "tier": 5,
+      "skill": "Overwhelming Burst",
+      "level": 2,
+      "effect": "Increases damage multiplier to 120% ATK and increases Stability damage dealt by 1 point\n\nBefore skill usage, if Confectance Index is at max, increases CRIT DMG by 20%, for each stack of Candyglaze, increases damage multiplier by 10%"
+    },
+    {
+      "tier": 6,
+      "skill": "Glucose Overload",
+      "level": 3,
+      "effect": "After skill usage, increases Confectance Index by 3 points. If Lind has 10 stacks of Candyglaze, reduces the cooldown of this skill by 1 round"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +47\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +108\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +55\nDEF +39",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +140",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Nociception",
+      "level": 20,
+      "effect": "At the start of the round, gains Quick Barrier",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/lind/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Night owl's Keenness",
+      "level": 20,
+      "effect": "Assault Spray/Overwhelming Burst: After skill usage, gains 5 tiles of Additional Movement",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/lind/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Radio Invitation",
+      "level": 30,
+      "effect": "Selects one ally on the field. The selected ally will be unable to move or use any skill for the entire battle, but decreases DEF for all enemies by 15%. This lasts till the selected ally dies. Lind gains 1 instance of an Extra Action",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/lind/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Civilized Judgement",
+      "level": 30,
+      "effect": "Overwhelming Burst: If this skill only hits 1 enemy, increases damage dealt by 30%",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/lind/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Dessert Therapy",
+      "level": 40,
+      "effect": "If Lind has Candyglaze, cleanses 1 debuff from self before attacking",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/lind/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Withdrawal Reaction",
+      "level": 40,
+      "effect": "Glucose Overload: Before skill usage, gains Critical Rate Boost II for 2 turns",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/lind/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/lind/affi.png"
+    },
+    {
+      "name": "Common Key - Endless Night",
+      "level": 40,
+      "effect": "ATK +5% / Increases Phase damage dealt towards enemies with debuffs by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/lind/common.png"
+    },
+    {
+      "name": "Expansion Key - Sugar-Coated Bullet",
+      "level": 60,
+      "effect": "At the start of the battle, Lind gains 5 stacks of Candyglaze.\nWhen the Ultimate skill Glucose Overload's effect is applied to enemy units with Corrosion debuffs, damage taken by said enemy units is increased by 50%.\nThe damage multiplier of the active skill Overwhelming Burst is additionally increased by 65% and stability damage is additionally increased by 2 points.\nDamage dealt by Honey Trap is increased by 100%, stability damage dealt is increased to 3 points",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/lind/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/lind/portrait.png",
+    "avatar": "assets/images/characters/lind/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

@@ -1,0 +1,245 @@
+{
+  "slug": "sabrina",
+  "name": "Sabrina",
+  "class": "Bulwark",
+  "rarity": "Elite",
+  "phase": "Hydro",
+  "weapon_type": "Shotgun",
+  "ammo_type": "Shotgun Ammo",
+  "signature_weapon": "Mezzaluna",
+  "stats": {
+    "hp": 2249,
+    "atk": 609,
+    "def": 642
+  },
+  "skill_attribute": "Hydro",
+  "weakness": "Electric",
+  "stability_gauge": "12 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "My Treat",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/sabrina/skill1-icon.png",
+      "range_image": "assets/images/characters/sabrina/skill1-range.png"
+    },
+    {
+      "name": "Delicious Feast",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "range": 6,
+      "effect_area": "2",
+      "description": "Selects 1 enemy target within 6 tiles to attack, dealing AoE Hydro damage equal to 80% of attack to them and all enemy targets within 2 tiles, applying Movement Down II for 2 turns. Recovers 2 points of stability for each target hit.",
+      "icon": "assets/images/characters/sabrina/skill2-icon.png",
+      "range_image": "assets/images/characters/sabrina/skill2-range.png"
+    },
+    {
+      "name": "Meal Preparation",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects 1 direction and deals AoE Hydro damage equal to 70% of attack to all enemy targets within a 3x6 area in the selected direction, and applies Movement Down II for 2 turns. Destroys any destructible Cover outside a 3x3 area around self.",
+      "icon": "assets/images/characters/sabrina/skill3-icon.png",
+      "range_image": "assets/images/characters/sabrina/skill3-range.png"
+    },
+    {
+      "name": "Gourmet Spirit",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 5,
+      "effect_area": "Entire Map",
+      "description": "Apply 2 stacks of Shelter to all allied targets and gain Feeling Full for 3 turns. While having Feeling Full, if an enemy target within range deals targeted damage to an allied unit, use Counterattack against it, dealing Physical damage equal to 80% of attack and 4 points of Stability Damage. This can be triggered up to 3 times per turn.",
+      "icon": "assets/images/characters/sabrina/ult-icon.png",
+      "range_image": "assets/images/characters/sabrina/ult-range.png"
+    },
+    {
+      "name": "Flexible Modification",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Before an allied unit is attacked, if they are within 7 tiles of Sabrina, applies 1 stack of Shelter to the ally. This can be triggered up to 4 times per turn. Sabrina gains 1 point of Confectance Index for each instance of damage she deals.\n\nAfter using a skill to attack, she generates Tideaway within the area. If Hydro tiles are already present in the area, a tile reaction is triggered, removing the tile and dealing fixed damage equal to 20% of attack to the enemy on the tile.",
+      "icon": "assets/images/characters/sabrina/passive.png",
+      "range_image": "assets/images/characters/sabrina/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Flexible Modification",
+      "level": 2,
+      "effect": "Increases the number of times Shelter can be applied by 2."
+    },
+    {
+      "tier": 2,
+      "skill": "Meal Preparation",
+      "level": 2,
+      "effect": "Damage multiplier increased by 10%."
+    },
+    {
+      "tier": 3,
+      "skill": "Delicious Feast",
+      "level": 2,
+      "effect": "If only 1 target is hit, restores 6 points of Stability Index."
+    },
+    {
+      "tier": 4,
+      "skill": "Gourmet Spirit",
+      "level": 2,
+      "effect": "Increases attack of Feeling Full by 10%. Increases Stability Damage of Counterattack by 2 points."
+    },
+    {
+      "tier": 5,
+      "skill": "Gourmet Spirit",
+      "level": 3,
+      "effect": "No longer consumes Confectance Index, gain Extra Command once."
+    },
+    {
+      "tier": 6,
+      "skill": "Flexible Modification",
+      "level": 3,
+      "effect": "When Confectance is full, additionally consume 4 points of Confectance Index to increase skill damage by 30%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +28\nDEF +27",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +95\nHP +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +34\nDEF +37",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +130\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +40\nDEF +49",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +46\nHP +169",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Eating is a Blessing",
+      "level": 20,
+      "effect": "When under attack, defense is increased by 20%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/sabrina/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Delicious Sharing",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/sabrina/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Let Everything Simmer",
+      "level": 30,
+      "effect": "While on Hydro tiles, defense is increased by 30%, gaining immunity to displacement effects from enemy units and all abnormal Hydro terrain effects.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/sabrina/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Eat Well, Sleep Well",
+      "level": 30,
+      "effect": "When Confectance Index is not full, recovers 2 points of Stability Index for each point of Confectance Index gained.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/sabrina/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Calorie Overload",
+      "level": 40,
+      "effect": "The effective range of Delicious Feast changes to 1 tile, the skill targets tiles instead of units and pulls all enemies 1 tile toward the center. Damage dealt increases to 100% of attack.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/sabrina/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Weird-Tasting Health Recipe",
+      "level": 40,
+      "effect": "The active skill Meal Preparation is modified to affect 5 tiles around self, and no longer applies Movement Down II. It now applies Taunt to up to 2 targets for 1 turn. The cooldown is increased to 3 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/sabrina/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Dessert Time",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/sabrina/affi.png"
+    },
+    {
+      "name": "Common Key -  Hot Oil Protection",
+      "level": 40,
+      "effect": "DEF +5.0% / When dealing targeted damage, applies Movement Down II to the target for 1 turn.",
+      "materials": "None",
+      "image": "assets/images/characters/sabrina/common.png"
+    },
+    {
+      "name": "Expansion Key - Recipe of Legend",
+      "level": 60,
+      "effect": "Counterattack is changed to Hydro damage instead. If this triggers any Hydro type tile effect, the effects of the tile will not be removed. Every time Counterattack is performed, damage taken by Sabrina is reduced by 5%, stacking up to 30%, lasting for 2 turns.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/sabrina/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/sabrina/portrait.png",
+    "avatar": "assets/images/characters/sabrina/avatar.png",
+    "class_icon": "assets/images/class/bulwark.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

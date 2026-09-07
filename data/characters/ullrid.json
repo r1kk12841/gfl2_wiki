@@ -1,0 +1,248 @@
+{
+  "slug": "ullrid",
+  "name": "Ullrid",
+  "class": "Vanguard",
+  "rarity": "Elite",
+  "phase": "Physical",
+  "weapon_type": "Blade",
+  "ammo_type": "Melee",
+  "signature_weapon": "Rectrix",
+  "stats": {
+    "hp": 1519,
+    "atk": 740,
+    "def": 528
+  },
+  "skill_attribute": "Light Ammo",
+  "weakness": "Freeze",
+  "stability_gauge": "8 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Warning Shot",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Melee",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 5,
+      "effect_area": "Target",
+      "description": "Select 1 enemy target within 5 tiles and deal Physical damage equal to 80% of attack to it.",
+      "icon": "assets/images/characters/ullrid/skill1-icon.png",
+      "range_image": "assets/images/characters/ullrid/skill1-range.png"
+    },
+    {
+      "name": "Hunter's Sight",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 1,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 1 tile, dealing melee Physical damage equal to 120% of attack and gains 6 tiles of Additional Movement. If the target is not killed, applies Mark of Prey for 2 turns.",
+      "icon": "assets/images/characters/ullrid/skill2-icon.png",
+      "range_image": "assets/images/characters/ullrid/skill2-range.png"
+    },
+    {
+      "name": "Blade Whirlwind",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 1 tile and deal melee Physical damage equal to 90% of attack to it. Gains Whirlwind after attacking.",
+      "icon": "assets/images/characters/ullrid/skill3-icon.png",
+      "range_image": "assets/images/characters/ullrid/skill3-range.png"
+    },
+    {
+      "name": "Hidden Pursuit",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "effect_area": "1",
+      "description": "Select a tile in a cross-shaped area within 5 tiles, move to that tile and deal melee Physical damage equal to 180% of attack to the enemy target with the highest HP within 1 tile.\n\nConsumes all stacks of Hunter's Talent, for each stack consumed, increase damage dealt by this attack by 10%, up to a 30% increase. If there are 2 stacks of Hunter's Talent or more, gain 2 stacks of Camouflage for 1 turn.",
+      "icon": "assets/images/characters/ullrid/ult-icon.png",
+      "range_image": "assets/images/characters/ullrid/ult-range.png"
+    },
+    {
+      "name": "Optical Camouflage",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Gain 1 stack of Hunter's Talent and 1 point of Confectance Index after active attacks.\n\nAt the end of an enemy unit’s action, if Ullrid's HP is below 30%, gain 1 stack of Camouflage for 1 turn. Cooldown: 3 turns.",
+      "icon": "assets/images/characters/ullrid/passive.png",
+      "range_image": "assets/images/characters/ullrid/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Blade Whirlwind",
+      "level": 2,
+      "effect": "If attacking the same target within one action, increases damage dealt by 30%. The effects of Whirlwind are enhanced: Ignores Cover damage reduction when attacking."
+    },
+    {
+      "tier": 2,
+      "skill": "Optical Camouflage",
+      "level": 2,
+      "effect": "At the start of the battle, for each allied target on the field (excluding self), gain 1 stack of Hunter's Talent and 1 point of Confectance Index."
+    },
+    {
+      "tier": 3,
+      "skill": "Hunter's Sight",
+      "level": 2,
+      "effect": "If target is not killed, applies Movement Down II to enemy target for 2 turns. When Ullrid is attacked by a target with Mark of Prey, reduces damage taken by 20%."
+    },
+    {
+      "tier": 4,
+      "skill": "Hidden Pursuit",
+      "level": 2,
+      "effect": "Increase range by 2 tiles. Raise the damage increase cap to 60% by consuming Hunter's Talent."
+    },
+    {
+      "tier": 5,
+      "skill": "Optical Camouflage",
+      "level": 3,
+      "effect": "Before attacking, if this unit has moved 2 tiles or more, increase attack by 20%. if Ullrid's HP is below 50%, gain Camouflage and reduce the effect's cooldown by 1 turn."
+    },
+    {
+      "tier": 6,
+      "skill": "Hidden Pursuit",
+      "level": 3,
+      "effect": "For every 2% of the enemy target's missing HP, increase self-attack by 1% for this skill. If this kills the target, increase damage dealt by the next active attack by 30%. \n\nIf there are 2 stacks of Hunter's Talent or more, gain only 1 stack of Camouflage, but Camouflage is no longer consumed after taking damage."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +34\nDEF +22",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +64\nCRIT +10.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +42\nDEF +30",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +88\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +49\nDEF +40",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +56\nHP +115",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Swift Action",
+      "level": 20,
+      "effect": "When the user possess Whirlwind, basic attacks and other active skills can be used, but it consumes an additional 2 points of Confectance Index.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/ullrid/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Predation",
+      "level": 20,
+      "effect": "Ignores 30% of the target enemy's defense when there are no other enemy units within 3 tiles of the target.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/ullrid/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Appropriate Caution",
+      "level": 30,
+      "effect": "At the start of the battle, gains 3 points of Confectance Index.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/ullrid/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Ideal State",
+      "level": 30,
+      "effect": "When there are no allied units within 3 tiles of self (excluding summoned units), increase own critical rate by 20%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/ullrid/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Oppression",
+      "level": 40,
+      "effect": "When at full health, damage dealt is increased by 15%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/ullrid/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Hunter's Acuity",
+      "level": 40,
+      "effect": "When exploiting Phase Weakness, gain Attack Up I for 2 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/ullrid/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key -  Stress Ball Terminator",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/ullrid/affi.png"
+    },
+    {
+      "name": "Common Key - Mangle",
+      "level": 40,
+      "effect": "CRIT +5.0% / If the enemy target's HP is not full before the attack, increase damage dealt to them by 7%.",
+      "materials": "None",
+      "image": "assets/images/characters/ullrid/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "After using Blade Whirlwind, if the target is still alive, follow up with 1 extra instance of Physical damage equal to 90% of attack and deals 1 point of Stability. The damage of this attack is increased by 30%. This effect can be triggered up to 3 times per turn.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/ullrid/expan.png"
+    },
+    {
+      "name": "Expansion Key tier 2",
+      "level": 60,
+      "effect": "Inflicts Mark of Prey before each instance of using the active skill Blade Whirlwind. After using said skill, the cooldown of the Ultimate skill Hidden Pursuit is reduced by 1 turn. If Ullrid hits the same target continuously, she gains 1 point of Confectance Index. This effect can only be triggered once per round.\nBefore using the Ultimate skill Hidden Pursuit, Ullrid gains maximum stacks of Hunter's Talent.\nHunter's Talent's effect is enhanced: If Ullrid's critical rate is higher than 100%, for every 1% critical rate of overflow, her critical damage is increased by 0.3%. Increases damage dealt by all allied units that deal melee damage by 10%. For every stack of Hunter's Talent consumed, Ullrid gains 1 point of Confectance Index.\nMark of Prey apply new effect: Lacerating Wound - when taking damage, if the attacker is a blade user, for every instance of damage dealt, they deal additional damage equal to 40% of the original damage. Debuff, cannot be dispelled.",
+      "materials": "1\n\n\n10000",
+      "image": "assets/images/characters/ullrid/expan2.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/ullrid/portrait.png",
+    "avatar": "assets/images/characters/ullrid/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

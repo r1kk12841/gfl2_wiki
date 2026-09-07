@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Tactical Dolls Database — GFL2: Exilium Wiki{% endblock %}
+{% block description %}Browse all playable Tactical Dolls in Girls' Frontline 2: Exilium. Filter by class, elemental phase, weapon type, and rarity.{% endblock %}
+
+{% block content %}
+<div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+  <div>
+    <h1 style="font-size:2.2rem; font-weight:800; color:var(--text-primary);" data-i18n="dolls_page_title">Tactical Dolls</h1>
+    <p style="color:var(--text-secondary); font-size:0.95rem;" data-i18n="dolls_page_subtitle">Browse and filter operational combat Dolls.</p>
+  </div>
+  <div id="filter-count" style="color:var(--accent-cyan); font-weight:700; font-size:0.9rem;">
+    {{ dolls|length }} dolls
+  </div>
+</div>
+
+<!-- Filter Section -->
+<section class="filter-section">
+  <!-- Class Filter -->
+  <div class="filter-group">
+    <span class="filter-label" data-i18n="label_class">Class</span>
+    <div class="filter-chips">
+      <span class="chip active" data-filter="class" data-value="all" data-i18n="filter_all_classes">All Classes</span>
+      {% for cls in ['Bulwark', 'Vanguard', 'Support', 'Sentinel'] %}
+      <span class="chip" data-filter="class" data-value="{{ cls }}" data-cls="{{ cls }}">{{ cls }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Rarity Filter -->
+  <div class="filter-group">
+    <span class="filter-label" data-i18n="label_rarity">Rarity</span>
+    <div class="filter-chips">
+      <span class="chip active" data-filter="rarity" data-value="all" data-i18n="filter_all_rarities">All Rarities</span>
+      <span class="chip" data-filter="rarity" data-value="Elite" data-rarity="Elite">Elite (SSR)</span>
+      <span class="chip" data-filter="rarity" data-value="Standard" data-rarity="Standard">Standard (SR)</span>
+    </div>
+  </div>
+
+  <!-- Phase Filter -->
+  <div class="filter-group">
+    <span class="filter-label" data-i18n="label_phase">Phase</span>
+    <div class="filter-chips">
+      <span class="chip active" data-filter="phase" data-value="all" data-i18n="filter_all_phases">All Phases</span>
+      {% for ph in ['Physical', 'Burn', 'Hydro', 'Electric', 'Freeze', 'Corrosion', 'Resonance'] %}
+      <span class="chip" data-filter="phase" data-value="{{ ph }}" data-phase="{{ ph }}">{{ ph }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Weapon Type Filter -->
+  <div class="filter-group">
+    <span class="filter-label" data-i18n="label_weapon">Weapon</span>
+    <div class="filter-chips">
+      <span class="chip active" data-filter="weapon_type" data-value="all" data-i18n="filter_all_weapons">All Weapons</span>
+      {% for wt in ['Assault Rifle', 'SMG', 'Shotgun', 'MG', 'Sniper Rifle', 'Handgun', 'Blade'] %}
+      <span class="chip" data-filter="weapon_type" data-value="{{ wt }}" data-weapontype="{{ wt }}">{{ wt }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Server Filter -->
+  <div class="filter-group">
+    <span class="filter-label" data-i18n="label_server">Server</span>
+    <div class="filter-chips">
+      <span class="chip active" data-filter="server" data-value="all" data-i18n="filter_all_servers">All Servers</span>
+      <span class="chip" data-filter="server" data-value="global" data-server="global">Global</span>
+      <span class="chip" data-filter="server" data-value="cn" data-server="cn">CN Server</span>
+    </div>
+  </div>
+</section>
+
+<!-- Dolls Grid -->
+<div class="doll-grid" id="dolls-container">
+  {% for doll in dolls %}
+  <a href="{{ rel_prefix }}characters/{{ doll.slug }}.html"
+     class="doll-card rarity-{{ doll.rarity|lower }}"
+     data-card-item
+     data-slug="{{ doll.slug }}"
+     data-class="{{ doll.class }}"
+     data-rarity="{{ doll.rarity }}"
+     data-phase="{{ doll.phase }}"
+     data-weapon_type="{{ doll.weapon_type }}"
+     data-server="{{ (doll.server or 'global')|lower }}">
+    <div class="doll-thumb-wrapper">
+      <div class="doll-badges-overlay">
+        <div style="display:flex; gap:4px; align-items:center;">
+          <span class="badge badge-{{ doll.rarity|lower }}" data-doll-rarity="{{ doll.rarity }}">{{ doll.rarity }}</span>
+          <span class="badge badge-class" data-doll-class="{{ doll.class }}">{{ doll.class }}</span>
+        </div>
+        <span class="badge badge-server badge-server-{{ (doll.server or 'global')|lower }}" data-doll-server="{{ (doll.server or 'global')|lower }}">{{ 'CN' if (doll.server or 'global')|lower == 'cn' else 'Global' }}</span>
+      </div>
+      <img src="{{ rel_prefix }}{{ doll.images.portrait if (doll.images and doll.images.portrait) else 'assets/images/characters/' + doll.slug + '/portrait.png' }}"
+
+           alt="{{ doll.name }}"
+           class="doll-thumb"
+           loading="lazy"
+           onerror="this.src='{{ rel_prefix }}assets/images/characters/groza/portrait.png';">
+    </div>
+    <div class="doll-card-body">
+      <div class="doll-name">{{ doll.name }}</div>
+      <div class="doll-meta">
+        <span data-doll-phase="{{ doll.phase }}" style="color:var(--accent-cyan); font-weight:600;">{{ doll.phase }}</span>
+        <span>&bull;</span>
+        <span data-doll-weapontype="{{ doll.weapon_type }}">{{ doll.weapon_type }}</span>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

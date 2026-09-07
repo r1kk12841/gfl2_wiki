@@ -1,0 +1,264 @@
+{
+  "slug": "eagletta",
+  "name": "Eagletta",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Freeze",
+  "weapon_type": "Handgun",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Silver-Winged Pistis",
+  "stats": {
+    "hp": 1801,
+    "atk": 837,
+    "def": 577
+  },
+  "skill_attribute": "Freeze",
+  "weakness": "Corrosion",
+  "stability_gauge": "9 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Rapid Pursuit",
+      "tags": [
+        "Basic Attack"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Depending on her Combat Stance, Eagletta uses the basic attack Swift Eagle Strike or Rending Talons.",
+      "icon": "assets/images/characters/eagletta/skill1-icon.png",
+      "range_image": "assets/images/characters/eagletta/skill1-range.png"
+    },
+    {
+      "name": "Swift Eagle Strike",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Melee",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Consumes 2 Feathers of War to select 1 enemy target within a 6-tile radius, dealing Freeze damage equal to 100% of ATK. Damage dealt is increased by 15% and Critical Damage is increased by 5%. \nAfter the skill resolves, Eagletta gains 6 tiles of Additional Movement and can use one command. \nIf the target is killed, the skills and effects that would trigger upon its death is nullified. \nThis skill can only be used when Eagletta has 2 or more Feathers of War.",
+      "icon": "assets/images/characters/eagletta/skill2-icon.png",
+      "range_image": "assets/images/characters/eagletta/skill2-range.png"
+    },
+    {
+      "name": "Rending Talons",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 1,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Select 1 enemy target within a 3x3 area, dealing Freeze damage equal to 60% of ATK and recovers HP equal to 20% of damage dealt. \nIf the target is killed, the skills and effects that would trigger upon its death is nullified, Eagletta gains 8 tiles Additional Movement and can use one command. The range of this skill cannot be modified.",
+      "icon": "assets/images/characters/eagletta/skill3-icon.png",
+      "range_image": "assets/images/characters/eagletta/skill3-range.png"
+    },
+    {
+      "name": "Deterrence Tactics",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Switches Combat Stance. After the skill resolves, Eagletta gains Extra Command. This skill can be used up to 1 time per round.\n\nPassive: At the start of the round, Eagletta switches to the Eagle Strike stance.",
+      "icon": "assets/images/characters/eagletta/ult-icon.png",
+      "range_image": "assets/images/characters/eagletta/ult-range.png"
+    },
+    {
+      "name": "Stoop Strike",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 2,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 tile within a 6-tile radius of self and lands on it, dealing Freeze damage equal to 100% of ATK to the nearest enemy target within 4-tile radius and applies Vulnerable II for 2 turns. \nAfter the skill resolves, applies Taunt and Queen of the Skies to all non-Boss enemy units within 4-tile radius around self for 2 turns. In addition, Eagletta gains Extra Command.",
+      "icon": "assets/images/characters/eagletta/passive.png",
+      "range_image": "assets/images/characters/eagletta/passive-range.png"
+    },
+    {
+      "name": "Featherstorm Feast",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Select 1 enemy target within a 6-tile radius, dealing Freeze damage equal to 120% of ATK and consumes all Feathers of War. \n\nWhen 1 Feather of War is consumed, the damage dealt is increased by 20%.\nWhen 2 Feathers of War are consumed, critical damage is increased by 35% and Stability Damage dealt is increased by 4.\nWhen 3 Feathers of War are consumed, the damage multiplier is increased by 50% and attack is increased by 10%.\n\nIf the target is killed, the skills and effects that would trigger upon its death is nullified. \nAfter the skill resolves, Eagletta switches to the Heavy Talons stance.\nAt the end of the round, Eagletta gains 7 Feathers of War.",
+      "icon": "assets/images/characters/eagletta/skill6-icon.png",
+      "range_image": "assets/images/characters/eagletta/skill6-range.png"
+    },
+    {
+      "name": "The Wild Within",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Eagletta does not gain Confectance Index.\nAt the start of the battle, Eagletta gains 7 Feathers of War. \nAt the end of the allied phase, Frost tiles are generated within 3-tile radius around Eagletta, lasting for 2 rounds.\nDamage dealt is increased by 20% and critical damage is increased by 12%.\n\nIf the target is not within a 3x3 tiles around Eagletta, the damage dealt is reduced by 5% and critical damage is reduced by 3% per 1 tile of distance up to a maximum of 20% and 12% respectively.\nIf the target is inflicted with a Control effect, under effects of Frozen, Paralysis, or is a Large unit, then the damage dealt and critical damage reduction effect is nullified.\n\nWhile Eagletta is in the Heavy Talons stance, if an enemy unit is about to move, is about to attack, or ends their action within a 3x3 area around Eagletta and does not have Shock, the passive skill Predation is triggered to perform a Lock on Attack, up to 2 per round.\nFor every 7 stacks of Feathers of War consumed, Eagletta gains 1 stack of Invasive Threat. \nWhile Eagletta has 1 or more stacks of Invasive Threat, her critical rate is increased by 25% and using the basic attack Rending Talons and the passive skill Predation, Eagletta gains 1 stack of Feathers of War. \n\nWhen Eagletta has 4 or more stacks of Invasive Threat and uses the basic attack Swift Eagle Strike, consumes 2 Feathers of War to produce the skill effect of the Ultimate skill Featherstorm Feast, gaining all the effects of that skill's Feathers of War consumption.\nFeatherstorm Feast triggered by this method is treated only as a basic attack and will not trigger the transition to Heavy Talons or gaining of Feathers of War. Can be triggered up to once per round.",
+      "icon": "assets/images/characters/eagletta/skill7-icon.png",
+      "range_image": "assets/images/characters/eagletta/skill7-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "The Wild Within",
+      "level": 2,
+      "effect": "At the start of battle, gains 1 stack of Invasive Threat. With 1 stack of Invasive Threat, using basic attack Rending Talons and passive skill Predation grants 1 extra Feather of War. With 2 stacks or more of Invasive Threat, at the end of the round, cooldown of ultimate Featherstorm Feast is reduced by 1 turn. If basic attack Swift Eagle Strike eliminates a target, gains 2 Feathers of War."
+    },
+    {
+      "tier": 2,
+      "skill": "Deterrence Tactics",
+      "level": 2,
+      "effect": "Passive effect added: At the end of the round, if the number of Lock on Attack for the passive skill The Wild Within has not reached the limit, gain 2 Feathers of War for each remaining use. The damage multiplier of basic attack Swift Eagle Strike is increased to 120%, damage dealt increase is raised to 25% and the critical damage increase is raised to 10%. The damage multipliers of basic attack Rending Talons and passive skill Predation are increased to 80%"
+    },
+    {
+      "tier": 3,
+      "skill": "Stoop Strike",
+      "level": 2,
+      "effect": "The damage multiplier increased to 120%. The range for applying Queen of the Skies is increased to within 5-tile radius around self. The effect of Queen of the Skies is enhanced: The damage reduction of the first attack against Eagletta is increased to 40%"
+    },
+    {
+      "tier": 4,
+      "skill": "Featherstorm Feast",
+      "level": 2,
+      "effect": "When 1 Feather of War is consumed, the increase of damage dealt is raised to 30%.\nWhen 2 Feathers of War are consumed, the increase of critical damage is raised to 45%.\nWhen 3 Feathers of War are consumed, the damage multiplier increase is raised to 80% and attack increase is raised to 20%."
+    },
+    {
+      "tier": 5,
+      "skill": "The Wild Within",
+      "level": 3,
+      "effect": "The number of Feathers of War required to obtain Invasive Threat is reduced to 3."
+    },
+    {
+      "tier": 6,
+      "skill": "Deterrence Tactics",
+      "level": 3,
+      "effect": "Passive effect added: When the ultimate Featherstorm Feast consumes 3 Feathers of War, the damage multiplier is additionally increased by 30%. This effect is also applies to the skill effect of Featherstorm Feast triggered by using basic attack Swift Eagle Strike while having 4 stacks of Invasive Threat. For each stack of Invasive Threat, own damage dealt is increased by 10%: when an enemy unit takes damage from an allied unit, if its on Freeze-type tile, the damage it takes is increased by 10% for each stack of Invasive Threat.\nThe ATK boost from Eagle Strike stance is increased by 20%.\nThe damage multiplier of basic attack Swift Eagle Strike is increased to 150%, the damage dealt increase is raised to 40% and critical damage increase is rased to 15%.\nThe DEF ignored by basic attack Rending Talons and passive skill Predation is increased to 10%. When Feathers of War are consumed by Heavy Talons stance, the damage multiplier increase for basic attack Rending Talons and passive skill Predation is raised to 10%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +39\nDEF +24",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +76\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +47\nDEF +34",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +104\nATK +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +56\nDEF +44",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +64\nHP +136",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Predator's Intimidation",
+      "level": 20,
+      "effect": "After using the basic attack Rending Talons or the passive skill Predation on a non-Boss unit, applies Shock to it.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/eagletta/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Lord of the Sky",
+      "level": 20,
+      "effect": "Before an active attack, cleanse 1 buff from the target.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/eagletta/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Watch from on High",
+      "level": 30,
+      "effect": "At the end of allied turn, Eagletta recovers 1 point of stability for each stack of Invasive Threat she has.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/eagletta/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Ruler of the Firmament",
+      "level": 30,
+      "effect": "Damage dealt to non-boss units with HP less than or equal to 50% is increased by 20%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/eagletta/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Wings Against the Wind",
+      "level": 40,
+      "effect": "Before using the basic attack Swift Eagle Strike, applies Defense Down II to the target for 2 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/eagletta/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Into Uncharted Ground",
+      "level": 40,
+      "effect": "The basic attack Swift Eagle Strike deals 30% more damage to mechanical non-Boss units.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/eagletta/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Unadorned sincerity",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/eagletta/affi.png"
+    },
+    {
+      "name": "Common Key - An Actor's Work on Herself",
+      "level": 40,
+      "effect": "ATK +5.0% / If a skill does not consume Confectance Index, the damage dealt is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/eagletta/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/eagletta/portrait.png",
+    "avatar": "assets/images/characters/eagletta/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "cn"
+}

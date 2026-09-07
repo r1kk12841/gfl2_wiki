@@ -1,0 +1,248 @@
+{
+  "slug": "centaureissi",
+  "name": "Centaureissi",
+  "class": "Support",
+  "rarity": "Elite",
+  "phase": "Burn",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Maid's Rules",
+  "stats": {
+    "hp": 1893,
+    "atk": 696,
+    "def": 585
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Hydro",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Cleaning Time",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects 1 target within 7 tiles, dealing Physical damage equal to 80% of attack.",
+      "icon": "assets/images/characters/centaureissi/skill1-icon.png",
+      "range_image": "assets/images/characters/centaureissi/skill1-range.png"
+    },
+    {
+      "name": "Careful Hospitality",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Healing",
+        "Buff"
+      ],
+      "stability_damage": 6,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 7 tiles and deals Burn damage equal to 130% of attack to them. After attacking, restores HP equal to 100% of attack to the nearest allied target (excluding the user) and gains Heat Recovery. If the enemy target is inflicted with Overburn, heals 1 additional allied target.",
+      "icon": "assets/images/characters/centaureissi/skill2-icon.png",
+      "range_image": "assets/images/characters/centaureissi/skill2-range.png"
+    },
+    {
+      "name": "Zucchero's Special Drink",
+      "tags": [
+        "Active",
+        "AoE",
+        "Healing",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "3",
+      "description": "Select 1 allied target within 7 tiles, restoring HP equal to 150% of attack to the target and all allied units within 3 tiles. The healing is distributed evenly among all targets. Additionally, deals AoE Physical damage equal to 50% of attack to all enemies within range. If the enemy target have Overburn, dispels 2 of their buffs.",
+      "icon": "assets/images/characters/centaureissi/skill3-icon.png",
+      "range_image": "assets/images/characters/centaureissi/skill3-range.png"
+    },
+    {
+      "name": "Afternoon Tea Break",
+      "tags": [
+        "Active",
+        "Healing",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 6,
+      "effect_area": "Entire Map",
+      "description": "Restores HP equal to 100% of attack to all allies, cleanses 2 debuffs, removes Fear and Stun, and restores up to 7 points of Stability Index to the ally with the lowest Stability Index. After healing, applies Heat Recovery.",
+      "icon": "assets/images/characters/centaureissi/ult-icon.png",
+      "range_image": "assets/images/characters/centaureissi/ult-range.png"
+    },
+    {
+      "name": "Maid's Duty",
+      "tags": [
+        "Passive",
+        "Buff",
+        "Debuff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "At the start of the battle, gains Heat Recovery.\n\nWhen the user is under the effects of Heat Recovery: Increases damage dealt by 20%. When healing, additionally heals 10% of the user's max HP. After active attacks applies Overburn for 2 turns.\n\nWhen an enemy unit within attack range receives targeted damage from an ally, prioritize performing 1 instance of Action Support, dealing Physical damage equal to 80% of attack and 3 points of Stability Damage to them, and applies Heat Recovery to the allied unit. Gains 1 point of Confectance Index. This can be triggered up to 2 times per turn.",
+      "icon": "assets/images/characters/centaureissi/passive-icon.png",
+      "range_image": "assets/images/characters/centaureissi/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Maid's Duty",
+      "level": 2,
+      "effect": "When Action Support is activated, additionally applies Blazing Assault II and Damage Up II to the allied unit for 1 turn."
+    },
+    {
+      "tier": 2,
+      "skill": "Maid's Duty",
+      "level": 3,
+      "effect": "When Heat Recovery is active: increases healing by 20% and damage dealt by 40%. If the healing target has Heat Recovery, the healing increase is raised to 50%; if the enemy target has Overburn, the damage dealt is increased by 50%."
+    },
+    {
+      "tier": 3,
+      "skill": "Careful Hospitality",
+      "level": 2,
+      "effect": "If the user has Heat Recovery, gain Thermal Cycling."
+    },
+    {
+      "tier": 4,
+      "skill": "Afternoon Tea Break",
+      "level": 2,
+      "effect": "The number of debuffs cleansed increases by 1, and removes  Taunt, Fear, Infatuated, and Stun."
+    },
+    {
+      "tier": 5,
+      "skill": "Zucchero's Special Drink",
+      "level": 2,
+      "effect": "Each allied target restores at least 75% of Centaureissi's attack as HP."
+    },
+    {
+      "tier": 6,
+      "skill": "Afternoon Tea Break",
+      "level": 3,
+      "effect": "Restores Stability Index for 2 allies with the lowest Stability, then further increases it by 1 point."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +32\nDEF +25",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +80\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +39\nDEF +34",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +110\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +46\nDEF +44",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +53\nHP +143",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Pre-Meal Dessert",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/centaureissi/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Maid's Resolve",
+      "level": 20,
+      "effect": "If an allied unit within 7 tiles enters Stability Break after taking damage, removes Heat Recovery from self and applies Heat Recovery to the allied unit.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/centaureissi/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Efficient Processing",
+      "level": 30,
+      "effect": "When Heat Recovery is triggered, randomly dispels 1 buff from the attacker. Before Heat Recovery is triggered, cleanses 2 debuffs from allies possessing Heat Recovery.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/centaureissi/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Comforting Blend",
+      "level": 30,
+      "effect": "Increses the healing multiplier of the active skill Zucchero's Special Drink by 75%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/centaureissi/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Thorough Preperation",
+      "level": 40,
+      "effect": "When healing an allied target with an active skill, cleanses 1 debuff. For targets with Heat Recovery, cleanses 1 additional debuff.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/centaureissi/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Lucky Menu",
+      "level": 40,
+      "effect": "When healing an allied target with an active skill, if the target has Heat Recovery, randomly applies 1 powerful buff to them for 1 turn.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/centaureissi/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/centaureissi/affi.png"
+    },
+    {
+      "name": "Common Key - Essential Hot Beverages",
+      "level": 40,
+      "effect": "HP +5.0% / At the end of the action, applies Heat Recovery to the closest allied unit without Heat Recovery. This effect has a 2-turn cooldown.",
+      "materials": "None",
+      "image": "assets/images/characters/centaureissi/common.png"
+    },
+    {
+      "name": "Expansion Key - Will to Protect",
+      "level": 60,
+      "effect": "At the start of the battle and after activating Afternoon Tea Break, applies Hot Sobering Tea on self for 2 rounds (Duration decreases at the end of the current round)\n\nAfter activating Zucchero's Special Drink, applies Perfect Defense for all allies for 2 turns. When allies deal Burn damage or when Centaureissi activates Action Support, increases Confectance Index by 1 point. This can be activated once per round",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/centaureissi/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/centaureissi/portrait.png",
+    "avatar": "assets/images/characters/centaureissi/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

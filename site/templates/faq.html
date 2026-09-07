@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ & Mechanics — GFL2: Exilium Wiki{% endblock %}
+{% block description %}Frequently asked questions and gameplay mechanics overview for Girls' Frontline 2: Exilium.{% endblock %}
+
+{% block content %}
+<div style="text-align:center; max-width:680px; margin:0 auto 2.5rem;">
+  <h1 style="font-size:2.2rem; font-weight:800; color:var(--text-primary); margin-bottom:0.5rem;">Frequently Asked Questions</h1>
+  <p style="color:var(--text-secondary); font-size:1rem;">Essential tactical concepts and gameplay mechanics in Girls' Frontline 2: Exilium.</p>
+</div>
+
+<div class="faq-list">
+  {% for entry in faq_entries %}
+  <div class="faq-card">
+    <div class="faq-question">
+      <span>{{ entry.question }}</span>
+      <span class="faq-arrow" style="font-size:0.75rem; color:var(--text-muted);">▼</span>
+    </div>
+    <div class="faq-answer">
+      {{ entry.answer }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

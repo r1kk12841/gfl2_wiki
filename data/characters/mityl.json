@@ -1,0 +1,263 @@
+{
+  "slug": "mityl",
+  "name": "Mityl",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Hydro",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Chinchilla Nova",
+  "stats": {
+    "hp": 2014,
+    "atk": 809,
+    "def": 494
+  },
+  "skill_attribute": "Hydro",
+  "weakness": "Freeze",
+  "stability_gauge": "9 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Assault Shot",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to it.",
+      "icon": "assets/images/characters/mityl/skill1-icon.png",
+      "range_image": "assets/images/characters/mityl/skill1-range.png"
+    },
+    {
+      "name": "Arc Shadow of the Gray Mouse",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within a 6-tile radius, excluding summons, then selects 1 empty tile within 3 tiles around that target, summons 1 Mimic Hologram of the target on that tile, and creates Tideway tiles within 5 tiles around the summoned Hologram for 2 turns. Up to 2 Holograms can exist at the same time. If the target is a Doll, Boss, or Large unit, summons 1 Personal Hologram instead.\n\nCan also select 1 Hologram within a 6-tile radius and teleport it to 1 empty tile within a 5-tile radius.\n\nAfter using the skill, gains Extra Command. Can trigger once per turn.",
+      "icon": "assets/images/characters/mityl/skill2-icon.png",
+      "range_image": "assets/images/characters/mityl/skill2-range.png"
+    },
+    {
+      "name": "Aerial Dash",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "effect_area": "Target",
+      "description": "Selects 1 tile within a 3- to 6-tile cross-shaped range and lands on that tile, dealing Hydro damage equal to 130% ATK to the nearest enemy target within a 6-tile radius.\n\nIf both before using this skill and when dealing damage, Mityl is on a Hydro type tile, she can use the active skill Aerial Dash 1 additional time, and its damage dealt is increased by 30%. Can trigger once per turn.",
+      "icon": "assets/images/characters/mityl/skill3-icon.png",
+      "range_image": "assets/images/characters/mityl/skill3-range.png"
+    },
+    {
+      "name": "Void Fitting",
+      "tags": [
+        "Active",
+        "AoE",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "effect_area": "5",
+      "description": "Gains Saturation Overflow for 2 turns. Creates Tideway tiles within a 5-tile radius around self for 2 turns. After using the skill, gains Extra Command.",
+      "icon": "assets/images/characters/mityl/ult-icon.png",
+      "range_image": "assets/images/characters/mityl/ult-range.png"
+    },
+    {
+      "name": "Stunt Montage",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Self",
+      "description": "At the end of the allied turn, all Holograms cast Fitting Resonance 1 time. After Mityl or a Hologram deals Hydro damage, gains 1 point of Confectance Index. If the attacker or the attack target is on a Hydro type tile, gains 1 additional point of Confectance Index. Can gain up to 6 points of Confectance Index per turn.\n\nAt the start of battle, gains Mimic Rookie. For every 6 points of Confectance Index gained, including overflow Confectance Index, gains a higher level of Cinematic Title.",
+      "icon": "assets/images/characters/mityl/passive.png",
+      "range_image": "assets/images/characters/mityl/passive-range.png"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Personal Hologram",
+      "description": "Holographic projection that mimics actions and triggers Fitting Resonance at the end of allied turn.",
+      "stats": {
+        "hp": "100% of Mityl's initial HP",
+        "atk": "100% of Mityl's initial ATK",
+        "def": "100% of Mityl's initial DEF"
+      },
+      "stability_gauge": "9 points",
+      "movement_speed": "6 tiles",
+      "skills": [
+        {
+          "name": "Arc Shadow Assault",
+          "description": "Selects 1 enemy target within 6 tiles and deals Hydro damage equal to 100% of attack to it.",
+          "icon": "assets/images/characters/mityl/summon1-skill1-icon.png",
+          "range_image": "assets/images/characters/mityl/summon1-skill1-range.png"
+        },
+        {
+          "name": "Data Regression",
+          "description": "When casting Fitting Resonance, recovers 50% of current maximum HP and increases maximum HP by 5%, up to maximum of 20%.",
+          "icon": "assets/images/characters/mityl/summon1-passive1-icon.png",
+          "range_image": "assets/images/characters/mityl/summon1-passive1-range.png"
+        }
+      ],
+      "image": "assets/images/characters/mityl/summon1.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Stunt Montage",
+      "level": 2,
+      "effect": "The damage of Fitting Resonance is increased to 60% ATK. When Cinematic Title is upgraded, Holograms cast Fitting Resonance 1 time. The Confectance Index required to upgrade the Title is reduced to 4 points. Fitting Resonance applies Defense Down II to the target for 2 turns."
+    },
+    {
+      "tier": 2,
+      "skill": "Arc Shadow of the Gray Mouse",
+      "level": 2,
+      "effect": "Each time Fitting Resonance is cast, Holograms gain 1 stack of Untouchable. The damage multiplier of Personal Hologram’s basic attack Arc Shadow Assault is increased to 120% ATK."
+    },
+    {
+      "tier": 3,
+      "skill": "Void Fitting",
+      "level": 2,
+      "effect": "The range of created Tideway tiles is expanded to a 7-tile radius. The ATK increase from Saturation Overflow is increased to 40% and also applies to Holograms. If Fitting Resonance triggers a total of 4 or more times during the current turn, Saturation Overflow does not consume its duration."
+    },
+    {
+      "tier": 4,
+      "skill": "Aerial Dash",
+      "level": 2,
+      "effect": "The condition for using the active skill again is changed: Mityl only needs to be on a Hydro type tile either before using the skill or when dealing damage. The damage is increased to 160% ATK. Damage dealt by the active skill used again is increased by 50%."
+    },
+    {
+      "tier": 5,
+      "skill": "Aerial Dash",
+      "level": 3,
+      "effect": "After the skill cast, Personal Hologram performs 1 Action Support against the target, dealing Hydro damage equal to 60% ATK and 2 points of Stability damage. Can trigger up to once per turn. Damage dealt by Mimic Hologram during this current turn is increased by 100%. This effect cannot stack."
+    },
+    {
+      "tier": 6,
+      "skill": "Stunt Montage",
+      "level": 3,
+      "effect": "Legendary Star gains a new effect: for every 4 points of Confectance Index gained, all Holograms cast Fitting Resonance 1 time.\n\nWhen a Hologram casts Fitting Resonance, it gains 1 stack of Fitting Amplification."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +35\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +71\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +29",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +97\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +50\nDEF +38",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +127",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Cinematic Presentation",
+      "level": 20,
+      "effect": "When the active skill Aerial Dash deals damage, cleanses 1 buff from the target.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/mityl/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Disguised Performance",
+      "level": 20,
+      "effect": "Personal Hologram can be manually controlled and can move.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/mityl/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Triple somersault and interception",
+      "level": 30,
+      "effect": "At the end of Mityl’s action, if she is on a Hydro type tile, gains Movement Up II for 2 turns.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/mityl/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Crying Scene",
+      "level": 30,
+      "effect": "When Mityl and Holograms deal Hydro damage, applies Emotional Contagion to the target.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/mityl/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Hop on the Hype Train",
+      "level": 40,
+      "effect": "At the start of battle, Mityl summons 1 Hologram. Both Mityl and this Hologram are considered both a Doll and a summon. This Hologram has no skills and cannot act.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/mityl/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Truth or Lie?",
+      "level": 40,
+      "effect": "When Mityl or Holograms deal damage, if the attacker is on a Hydro tile, increases damage dealt by 10%. For each increase in that Hydro tile’s tile level, increases damage dealt by an additional 5%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/mityl/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": 40,
+      "effect": "ATK +3%, CRIT +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/mityl/affi.png"
+    },
+    {
+      "name": "Common Key - Clever Mitty",
+      "level": 40,
+      "effect": "CRIT +5.0% / When dealing damage, if user is on a Hydro tile, increases damage dealt by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/mityl/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/mityl/portrait.png",
+    "avatar": "assets/images/characters/mityl/avatar.png",
+    "class_icon": "assets/images/class/sentinel.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "cn"
+}

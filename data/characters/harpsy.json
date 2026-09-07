@@ -1,0 +1,242 @@
+{
+  "slug": "harpsy",
+  "name": "Harpsy",
+  "class": "Vanguard",
+  "rarity": "Elite",
+  "phase": "Corrosion",
+  "weapon_type": "SMG",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Antinomy",
+  "stats": {
+    "hp": 1754,
+    "atk": 757,
+    "def": 545
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Burn",
+  "stability_gauge": "8 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Targeted attack ♂Dominant Aim♂",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/harpsy/skill1-icon.png",
+      "range_image": "assets/images/characters/harpsy/skill1-range.png"
+    },
+    {
+      "name": "Wide area Boost ♂Wide Muscle Boost♂",
+      "tags": [
+        "Active"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 ally target within 6 tiles and apply an Alpha Process to them for 2 global rounds, and extend the Alpha Process held by all ally targets by 1 global rounds. After the skill usage, Harpsy gains Extra Command. If the target already had Alpha Process, Harpsy recovers 3 points of Confectance Index. This skill can be used up to 1 time per turn.",
+      "icon": "assets/images/characters/harpsy/skill2-icon.png",
+      "range_image": "assets/images/characters/harpsy/skill2-range.png"
+    },
+    {
+      "name": "Beat poison with poison ♂Swallow My Virus♂",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles, deals Aoe Corrosion damage equal to 90% of attack, knocks the target back by 3 tiles and apply 2 stacks of Kill Process.",
+      "icon": "assets/images/characters/harpsy/skill3-icon.png",
+      "range_image": "assets/images/characters/harpsy/skill3-range.png"
+    },
+    {
+      "name": "Online punch ゴStarForce Platinumゴ",
+      "tags": [
+        "Active",
+        "AoE"
+      ],
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 3,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals AOE Corrosion damage equal to 90% of attack to them. If the number of friendly Dolls holding the Alpha Process on the field is greater than 2, the damage dealt by the Kill Process is increased by 30% for 1 global round.",
+      "icon": "assets/images/characters/harpsy/ult-icon.png",
+      "range_image": "assets/images/characters/harpsy/ult-range.png"
+    },
+    {
+      "name": "Macro virus ♂Virus Master♂",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Self",
+      "description": "After an active attack Harpsy recovers 2 points of Confectance Index.\nFor every 1 Confectance Index spent with a Ultimate skill, the effect of 1 Alpha Process is triggered.",
+      "icon": "assets/images/characters/harpsy/passive.png",
+      "range_image": "assets/images/characters/harpsy/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Wide area Boost ♂Wide Muscle Boost♂",
+      "level": 2,
+      "effect": "Reduces the cost of the Confectance Index by 1 point, and increases the number of times it can be used by 1 per turn."
+    },
+    {
+      "tier": 2,
+      "skill": "Online punch ゴStarForce Platinumゴ",
+      "level": 2,
+      "effect": "If Harpsy has more than 3 Confectance Index, consume all Confectance Index, and increase the damage multiplier by 20% for each additional Confectance Index consumed."
+    },
+    {
+      "tier": 3,
+      "skill": "Macro virus ♂Virus Master♂",
+      "level": 2,
+      "effect": "For each trigger of the Alpha Process, increases your ATK and Critical Damage by 3%, up to a maximum of 15%."
+    },
+    {
+      "tier": 4,
+      "skill": "Beat poison with poison ♂Swallow My Virus♂",
+      "level": 2,
+      "effect": "Damage multiplier increased to 120%.\nKill Process effect has been upgraded: after the holder dies, the number of effect stacks will be transferred to a random friendly unit"
+    },
+    {
+      "tier": 5,
+      "skill": "Online punch ゴStarForce Platinumゴ",
+      "level": 3,
+      "effect": "Damage multiplier increased to 120%.\nNew effect has been added: when there is a friendly Doll with a Alpha Process on the field, the damage multiplier of this skill is doubled."
+    },
+    {
+      "tier": 6,
+      "skill": "Beat poison with poison ♂Swallow My Virus♂",
+      "level": 3,
+      "effect": "Kill Process effect has been upgraded: consuming 70% of the stacks (rounded up) when it takes effect, and the damage multiplier of each layer is increased to 30%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +35\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +74\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +32",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +102\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +50\nDEF +41",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +132",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Portable Relay Unit",
+      "level": 20,
+      "effect": "After using the active skill Wide area Boost ♂Wide Muscle Boost♂, Harpsy gains 6 tiles of Additional Movement.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/harpsy/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Brutal Overhaul",
+      "level": 20,
+      "effect": "When the Kill Process is applied, additionally apply Retrograde for 1 turn.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/harpsy/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Backup Strategy",
+      "level": 30,
+      "effect": "After their own actions are over, allies holding Alpha Process will receive Movement Up II for 1 turn.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/harpsy/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Ally’s Power",
+      "level": 30,
+      "effect": "For every ally holding the Alpha Process on the field, each stack of Kill Process damage multiplier is increased by 2% when activated.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/harpsy/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Courage Unleashed",
+      "level": 40,
+      "effect": "After using the active skill Wide area Boost ♂Wide Muscle Boost♂ on ally holding the Alpha Process, Harpsy's critical strike rate is increased by 20% for 1 round.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/harpsy/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - \nDistance Listen-In",
+      "level": 40,
+      "effect": "Increases the range of active skills and basic attacks by 2 tiles.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/harpsy/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Coward's distress",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/harpsy/affi.png"
+    },
+    {
+      "name": "Common Key - Dependable Tech Tips",
+      "level": 40,
+      "effect": "CRIT +5.0% / After applying a debuff, the damage dealt is increased by 10% for 1 large turn.",
+      "materials": "None",
+      "image": "assets/images/characters/harpsy/common.png"
+    },
+    {
+      "name": "Expansion Key - Lytic Invasion",
+      "level": 60,
+      "effect": "After using the Ultimate Skill Cyber Punch, applies Retrograde to the target for 1 turn. After an active skill attack, if the target has Retrograde, applies Movement Down III for 1 turn.\nAfter an active attack, applies 3 stacks of Antivirus Program.\nWhen self deals damage, for each friendly unit with Priority Process, self's Corrosion damage dealt increases by 5%.",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/harpsy/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/harpsy/portrait.png",
+    "avatar": "assets/images/characters/harpsy/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

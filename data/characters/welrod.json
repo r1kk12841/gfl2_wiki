@@ -1,0 +1,237 @@
+{
+  "slug": "welrod",
+  "name": "Welrod",
+  "class": "Bulwark",
+  "rarity": "Elite",
+  "phase": "Corrosion",
+  "weapon_type": "Handgun",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Silent Conviction",
+  "stats": {
+    "hp": 2338,
+    "atk": 671,
+    "def": 577
+  },
+  "skill_attribute": "Corrosion",
+  "weakness": "Burn",
+  "stability_gauge": "12 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Silent Takedown",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/welrod/skill1-icon.png",
+      "range_image": "assets/images/characters/welrod/skill1-range.png"
+    },
+    {
+      "name": "Joint Investigation",
+      "tags": [
+        "Active",
+        "AoE",
+        "Buff"
+      ],
+      "stability_damage": 5,
+      "cooldown": "1 turns",
+      "confectance_cost": 3,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Corrosion damage equal to 100% ATK to it and gains Deductive Obsession for 3 turns, you get 2 stacks of Shelter and 4 points of Confectance Index.",
+      "icon": "assets/images/characters/welrod/skill2-icon.png",
+      "range_image": "assets/images/characters/welrod/skill2-range.png"
+    },
+    {
+      "name": "Conviction and Punishment",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 5,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": 6,
+      "effect_area": "5",
+      "description": "Selects a tile within a 6 tile radius, deal AoE Corrosion damage equal to 120% ATK to all enemies within 5 tile radius and creates Toxic Mist tiles for 2 rounds. For every 1% increase in max HP compared to initial HP, the damage multiplier is increased by 1%, up to 60%. For every enemy target hit, the accumulated damage value of Detective's Immunity is reduced by 10%. If the target is the Boss unit, it is reduced by 30%, up to maximum reduction of 50%.",
+      "icon": "assets/images/characters/welrod/skill3-icon.png",
+      "range_image": "assets/images/characters/welrod/skill3-range.png"
+    },
+    {
+      "name": "Hour of Reckoning",
+      "tags": [
+        "Active",
+        "Debuff",
+        "Healing"
+      ],
+      "stability_damage": 5,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects a direction and deals AoE Corrosion damage equivalent to 120% ATK to all enemies within a 3x9 frontal area in the selected direction, pull them 3 tiles towards self and apply Crime Backlash for 1 round and Suspect for 2 rounds. Welrod recovers her HP equal to 20% of Detective's Immunity's accumulated damage value and gains V3 Protection for 1 round. After using this skill, Welrod can use basic attack Silent Takedown, active skill Joint Investigation or active skill Conviction and Punishment.",
+      "icon": "assets/images/characters/welrod/ult-icon.png",
+      "range_image": "assets/images/characters/welrod/ult-range.png"
+    },
+    {
+      "name": "Case Detective",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "Welrod does not receive Cover protection and her Crit is reduced by 100%, her max HP is increased by 50% and damage taken reduced by 20%.\nGain Detective's Immunity at the start of battle. In the end of Welrod action she deals 1 instance of AOE Corrosion damage equal to 30% of Detective's Immunity's accumulated damage value to all enemy targets within 6 tiles radius, and applies Suspect for 2 rounds. When action ends, applies Taunt to all enemy targets within 6 tile radius for 1 round.",
+      "icon": "assets/images/characters/welrod/passive.png",
+      "range_image": "assets/images/characters/welrod/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Joint Investigation",
+      "level": 2,
+      "effect": "Healing effect boost of Deductive Obsession is increased to 30%, damage taken reduction increased to 30%, and the effect is added: Corrosion damage dealt increased by 30%.\nAfter the skill usage, restores HP equal to 100% of ATK to friendly unit with the lowest HP within a radius of 5 tiles around self (excluding self) and applies 2 stacks of Shelter."
+    },
+    {
+      "tier": 2,
+      "skill": "Case Detective",
+      "level": 2,
+      "effect": "At the end of another friendly Doll action, Welrod also triggers 1 instance of AOE Corrosion damage equal to 30% of Detective's Immunity's accumulated damage value.\nDetective's Immunity effect enchanced: The upper limit of absorption value increased to the sum of 250% of own max HP and 150% of ATK at the start of the battle (no more than 800% of own initial max HP)."
+    },
+    {
+      "tier": 3,
+      "skill": "Hour of Reckoning",
+      "level": 2,
+      "effect": "Damage multiplier increased to 120%.\nCrime Backlash effect enchanced: Damage taken is increased to the sum of 50% of Detective's Immunity's accumulated damage value and 30% of Welrod's max HP.\nCooldown of V3 Protection is reduced by 1 round."
+    },
+    {
+      "tier": 4,
+      "skill": "Conviction and Punishment",
+      "level": 2,
+      "effect": "The damage multiplier increased to 120%.\nFor every 1% increase in max HP compared to the initial HP, the damage multiplier is increased by 1.5%, up to 150%."
+    },
+    {
+      "tier": 5,
+      "skill": "Hour of Reckoning",
+      "level": 3,
+      "effect": "For every 1 instance of damage taken, damage dealt is increased by 40%, up to 80%.\nFor every enemy target hit, the damage dealt is increased by 20%, up to 100%.\nSuspect effect enchanced: The fixed damage received at the end of the round is increased to 16% of its maximum HP. If the target is the Boss unit, the damage is increased to 360% of Welrod ATK.\nCooldown is reduced by 1 round."
+    },
+    {
+      "tier": 6,
+      "skill": "Case Detective",
+      "level": 3,
+      "effect": "At the start of the battle, the max HP increase is boosted to 150%.\nFor every instance of damage taken (including damage caused by Detective's Immunity), own ATK is increased by 1%, up to 50%"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +31\nDEF +24",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +99\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +38\nDEF +33",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +136\nHP +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +45\nDEF +44",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +51\nHP +177",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Master Detective's Aura",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/welrod/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Preliminary Evidence Gathering",
+      "level": 20,
+      "effect": "Before an active attack, cleanse 1 buff from the target.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/welrod/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Honkaku Logic",
+      "level": 30,
+      "effect": "The absorption limit of Detective's Immunity is increased to 90%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/welrod/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Hellhound Hunt",
+      "level": 30,
+      "effect": "When attacking a Boss unit, Corrosion damage dealt is increased by 20%.",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/welrod/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - The Final Problem",
+      "level": 40,
+      "effect": "Gains immunity to Stun and Fear. Healing effects are increased by 30%",
+      "image": "assets/images/characters/welrod/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Two-in-One Detective",
+      "level": 40,
+      "effect": "Detective's Immunity's fixed damage Welrod takes at the end of her action is changed to 2 times, and the fixed damage taken is reduced by 15%.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/welrod/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Tracking Oath",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, DEF +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/welrod/affi.png"
+    },
+    {
+      "name": "Common Key - Van Dine's Rules",
+      "level": 40,
+      "effect": "HP +5.0% / When the user attacks, if their HP percentage is greater than or equal to the target's, the phase damage dealt is increased by 10%.",
+      "materials": "None",
+      "image": "assets/images/characters/welrod/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/welrod/portrait.png",
+    "avatar": "assets/images/characters/welrod/avatar.png",
+    "class_icon": "assets/images/class/bulwark.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "cn"
+}

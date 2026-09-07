@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Armory Database — GFL2: Exilium Wiki{% endblock %}
+{% block description %}Browse all weapons in Girls' Frontline 2: Exilium. Filter by rarity (SSR, SR, R) and weapon type.{% endblock %}
+
+{% block content %}
+<div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+  <div>
+    <h1 style="font-size:2.2rem; font-weight:800; color:var(--text-primary);" data-i18n="weapons_page_title">Armory</h1>
+    <p style="color:var(--text-secondary); font-size:0.95rem;" data-i18n="weapons_page_subtitle">Tactical weapon systems and armaments database.</p>
+  </div>
+  <div id="filter-count" style="color:var(--accent-cyan); font-weight:700; font-size:0.9rem;">
+    {{ weapons|length }} weapons
+  </div>
+</div>
+
+<!-- Filters -->
+<section class="filter-section">
+  <!-- Rarity Filter -->
+  <div class="filter-group">
+    <span class="filter-label" data-i18n="label_rarity">Rarity</span>
+    <div class="filter-chips">
+      <span class="chip active" data-filter="rarity" data-value="all" data-i18n="filter_all_rarities">All Rarities</span>
+      <span class="chip" data-filter="rarity" data-value="SSR">SSR (5★)</span>
+      <span class="chip" data-filter="rarity" data-value="SR">SR (4★)</span>
+      <span class="chip" data-filter="rarity" data-value="R">R (3★)</span>
+    </div>
+  </div>
+
+  <!-- Weapon Type Filter -->
+  <div class="filter-group">
+    <span class="filter-label" data-i18n="label_weapon_type">Weapon Type</span>
+    <div class="filter-chips">
+      <span class="chip active" data-filter="weapon_type" data-value="all" data-i18n="filter_all_types">All Types</span>
+      {% for wt in ['Assault Rifle', 'SMG', 'Shotgun', 'MG', 'Sniper Rifle', 'Handgun', 'Blade'] %}
+      <span class="chip" data-filter="weapon_type" data-value="{{ wt }}" data-weapontype="{{ wt }}">{{ wt }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Server Filter -->
+
+  <div class="filter-group">
+    <span class="filter-label" data-i18n="label_server">Server</span>
+    <div class="filter-chips">
+      <span class="chip active" data-filter="server" data-value="all" data-i18n="filter_all_servers">All Servers</span>
+      <span class="chip" data-filter="server" data-value="global" data-server="global">Global</span>
+      <span class="chip" data-filter="server" data-value="cn" data-server="cn">CN Server</span>
+    </div>
+  </div>
+</section>
+
+<!-- Weapons Grid -->
+<div class="weapon-grid" id="weapons-container">
+  {% for w in weapons %}
+  <a href="{{ rel_prefix }}weapons/{{ w.slug }}.html"
+     class="weapon-card"
+     id="{{ w.slug }}"
+     data-card-item
+     data-slug="{{ w.slug }}"
+     data-rarity="{{ w.rarity }}"
+     data-weapon_type="{{ w.weapon_type }}"
+     data-server="{{ (w.server or 'global')|lower }}">
+    <div class="weapon-img-box">
+      <img src="{{ rel_prefix }}{{ w.images.weapon }}"
+           alt="{{ w.name }}"
+           class="weapon-img"
+           loading="lazy"
+           onerror="this.src='{{ rel_prefix }}assets/images/weapons/guerno.png';">
+    </div>
+
+    <div class="weapon-title-row">
+      <span class="weapon-name" data-weapon-name="{{ w.name }}">{{ w.name }}</span>
+      <div style="display:flex; gap:4px; align-items:center;">
+        <span class="badge badge-{{ w.rarity|lower }}" data-weapon-rarity="{{ w.rarity }}">{{ w.rarity }}</span>
+        <span class="badge badge-server badge-server-{{ (w.server or 'global')|lower }}" data-weapon-server="{{ (w.server or 'global')|lower }}">{{ 'CN' if (w.server or 'global')|lower == 'cn' else 'Global' }}</span>
+      </div>
+    </div>
+
+
+    <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-muted);">
+      <span data-weapon-type="{{ w.weapon_type }}">{{ w.weapon_type }}</span>
+    </div>
+
+    {% if w.stats %}
+    <div class="weapon-stats-text" data-weapon-stats="{{ w.stats }}">{{ w.stats }}</div>
+    {% endif %}
+
+    {% if w.trait %}
+    <div class="weapon-trait-text" title="{{ w.trait }}">
+      <strong style="color:var(--text-primary)" data-i18n="label_trait_prefix">Trait:</strong> <span class="weapon-trait-body" data-weapon-card-trait>{{ w.trait }}</span>
+    </div>
+    {% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,2370 @@
+[
+  {
+    "slug": "guerno",
+    "name": "Guerno",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +320\nAttack Boost +15%",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random buff for 1 turn.",
+    "effect": "For each allied unit (excluding self) within 5 tiles, increases healing and damage dealt by 5%/6%/7%/8%/9%/15%, up to 15%/18%/21%/24%/27%/30%.\n\nIf there are more than 2/1/1/0/0/0 allied units, gains 2/2/3/3/3/4 tiles of Additional Movement after the active attack.",
+    "images": {
+      "weapon": "image/weapons/Guerno.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-st-ar-15",
+    "name": "Retired ST AR-15",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired ST AR-15.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "st-ar-15",
+    "name": "ST AR-15",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +244",
+    "trait": "When dealing Ammo Physical damage, ignores 10% of the target's defense.",
+    "effect": "When dealing damage with ammo type, the damage dealt is increased by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/ST AR-15.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "compass-of-repentance",
+    "name": "Compass of Repentance",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +341\nCRIT DMG +25%",
+    "trait": "When dealing Ammo Physical damage, ignores 10% of the target's defense.",
+    "effect": "On even-number rounds, when dealing Physical damage, ignore 5%/7%/9%/11%/13%/15% of the target's defense and increase Physical damage dealt by 15%/17%/19%/21%/23%/25%.\nOn odd-numbered rounds, effect is doubled.\n\nImprint Skill: Damage dealt to targets with defense debuffs is increased by 2.5%, and damage dealt to Paradeus is increased by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Compass of Repentance.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "retired-ak12",
+    "name": "Retired AK12",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +181",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired AK12.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "ak12",
+    "name": "AK12",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +258",
+    "trait": "Increases Critical damage dealt by user and her summons by 5%. If they deal Hydro damage, increases it by 10%.",
+    "effect": "Increased damage by 10%/12%/14%/16%/18%/20% when having Hydro buff",
+    "images": {
+      "weapon": "image/weapons/AK12.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "chernobog",
+    "name": "Chernobog",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +362\nAttack Boost +15%",
+    "trait": "Increases Critical damage dealt by user and her summons by 5%. If they deal Hydro damage, increases it by 10%.",
+    "effect": "Increases Hydro damage dealt by user and her summons by 20/25/30/35/40/45%. Before using a normal attack or active skill, this unit and its summons gain Piercing I and Domain Penetration I for 2 turns. Increases Crit Damage by 5% of all allied Entity Summons\n\nImprint Skill: Increases damage dealt to targets with Hydro type debuffs by 2.5%. Increases damage dealt to the Paradeus by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Chernobog.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "retired-g41",
+    "name": "Retired G41",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired G41.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "g41",
+    "name": "G41",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +272",
+    "trait": "Increases AOE damage by 5%. If Corrosion damage was dealt, AOE damage is increased by an additional 5% .",
+    "effect": "Increased damage to enemy targets on Corrosion tiles by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/G41.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "bristlefang-beast",
+    "name": "Bristlefang Beast",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +383\nCRIT DMG +25%",
+    "trait": "Increases AOE damage by 5%. If Corrosion damage was dealt, AOE damage is increased by an additional 5% .",
+    "effect": "If an active skill deals no damage, Corrosion damage is increased by 20%/24%/28%/32%/36%/40% for 3 turns. Each time an active skill is used to perform an attack, Corrosion damage is increased by 5%/8%/11%/14%/17%/20% up to 15%/24%/33%/42%/51%/60% for 1 turn. Within a single turn, after each attack, the damage dealt by the next skill is increased by 4% up to 16%.\n\nImprint Skill: If the target has Corrosion type debuffs increases damage dealt by 2.5%. If the target is Paradeus, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Bristlefang Beast.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "retired-sopmod-2-tactical-rifle",
+    "name": "Retired SOPMOD 2 tactical rifle",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired SOPMOD 2 tactical rifle.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "sopmod-2-tactical-rifle",
+    "name": "SOPMOD 2 tactical rifle",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "Damage dealt to enemy targets standing on Burn-type or Freeze-type tiles is increased by 5%. If that damage is Burn damage or Freeze damage, the increase is raised to 10%.",
+    "effect": "Aoe damage dealt is increased by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/SOPMOD 2 tactical rifle.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "skysunderer-s-howl",
+    "name": "Skysunderer's Howl",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +390\nAttack Boost +15%",
+    "trait": "Damage dealt to enemy targets standing on Burn-type or Freeze-type tiles is increased by 5%. If that damage is Burn damage or Freeze damage, the increase is raised to 10%.",
+    "effect": "AoE damage dealt is increased by 20/24/28/32/36/40%. After creating an Freeze-type or Burn-type tile, Freeze damage and Burn damage dealt are increased by 10/12/14/16/18/20% for 1 turn.\n\nImprint Skill: Damage dealt to targets with Burn-type debuffs or Freeze-type debuffs is increased by 2.5%. Damage dealt to ELID is increased by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Skysunderer's Howl.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "retired-groza-3",
+    "name": "Retired Groza-3",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Groza-3.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "groza-3",
+    "name": "Groza-3",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +265",
+    "trait": "If any weakness is exploited, ignore 20% of the target's defense",
+    "effect": "Basis Attacks deal 10%/12%/14%/16%/18%/20% more damage",
+    "images": {
+      "weapon": "image/weapons/Groza-3.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "capitoline",
+    "name": "Capitoline",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +369\nCRIT DMG +25%",
+    "trait": "If any weakness is exploited, ignore 20% of the target's defense",
+    "effect": "Damage dealt by active attacks is increased by 20%/24%/28%/32%/36%/40%. If the active skill deals no damage, attack is increased by 10%/12%/14%/16%/18%/20% for the current round\n\nImprint Skill: Damage dealt to targets with debuffs is increased by 2.5%, and damage dealt to Orlog Conglomerate is increased by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Capitoline.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-kalashnikov-assault-rifle-15",
+    "name": "Retired Kalashnikov Assault Rifle 15",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Kalashnikov Assault Rifle 15.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "kalashnikov-assault-rifle-15",
+    "name": "Kalashnikov Assault Rifle 15",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "When attacking enemies whose DEF is lower or equal to 0, deals 1 fixed point of Stability damage",
+    "effect": "Active Physical attacks ignore 20%/22%/24%/26%/28%/30% of the target's DEF",
+    "images": {
+      "weapon": "image/weapons/Kalashnikov Assault Rifle 15.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "6p71",
+    "name": "6P71",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +390\nCRIT DMG +25%",
+    "trait": "When attacking enemies whose DEF is lower or equal to 0, deals 1 fixed point of Stability damage",
+    "effect": "Increases Physical damage dealt by 10%/12%/14%/16%/18%/20%, when dealing Physical damage, ignores 20%/25%/30%/35%/40%/45% of the target's DEF\n\nImprint Skill: Increases damage dealt towards Girard Group units by 2.5%. If the target has Defense type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/6P71.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-nikonova-94",
+    "name": "Retired Nikonova 94",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Nikonova 94.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "nikonova-94",
+    "name": "Nikonova 94",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "If the unit has full HP at the end of the action, they gain a random buff, lasting for 1 turn.",
+    "effect": "When the holder has a Shield, increases damage dealt by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/Nikonova 94.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "6p33",
+    "name": "6P33",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +348\nCRIT DMG +25%",
+    "trait": "If the unit has full HP at the end of the action, they gain a random buff, lasting for 1 turn.",
+    "effect": "When allies deal Freeze damage, increases CRIT DMG by 10%/12%/14%/16%/18%/20%. When the holder has a Shield, increases damage dealt by 10%/12%/14%/16%/18%/20%\n\nImprint Skill: Increases damage dealt towards Girard Group units by 2.5%. If the target has Freeze type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/6P33.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-k2",
+    "name": "Retired K2",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired K2.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "k2",
+    "name": "K2",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "If the unit has full HP at the end of the action, they gain a random buff, lasting for 1 turn.",
+    "effect": "Increases damage dealt by active Physical attacks by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/K2.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "dazzling-sparkles",
+    "name": "Dazzling Sparkles",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +348\nAttack Boost +15%",
+    "trait": "If the unit has full HP at the end of the action, they gain a random buff, lasting for 1 turn.",
+    "effect": "When allies deal Physical damage using active attack, ignores 10% of the enemy's DEF. For each buff applies to allies (excluding self), increases the amount of enemy's DEF ignore when dealing Physical damage by 4% for self, up to a maximum of 20%/24%/28%/32%/36%/40%\n\nImprint Skill: Increases damage dealt towards Sica Technology units by 2.5%. If the target has Defense type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Dazzling Sparkles.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-g36k-ksk",
+    "name": "Retired G36K-KSK",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +160",
+    "effect": "Reduce damage taken by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired G36K-KSK.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "g36k-ksk",
+    "name": "G36K-KSK",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +223",
+    "trait": "When receiving damage, for each Electric type debuff present on the attacker, decreases damage received by 2%, up to a maximum of 6%",
+    "effect": "When attacking enemies with Negative Charge, increases damage by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/G36K-KSK.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "aglaea",
+    "name": "Aglaea",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +348\nAttack Boost +15%",
+    "trait": "When receiving damage, for each Electric type debuff present on the attacker, decreases damage received by 2%, up to a maximum of 6%",
+    "effect": "Increases Electric damage dealt by all allies by 10%. At the end of the action, restores HP equivalent to 5% max HP. \n\nIf the holder has Positive Charge, increases Electric damage for self and summoned objects by 20%/24%/28%/32%/36%/40%\n\nImprint Skill: Increases damage dealt towards URNC units by 2.5%. If the target has Electric debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Aglaea.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-sturmgewhr-28",
+    "name": "Retired Sturmgewhr 28",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Sturmgewhr 28.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "sturmgewhr-28",
+    "name": "Sturmgewhr 28",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "If the unit has full HP at the end of the action, they gain a random buff, lasting for 1 turn.",
+    "effect": "When attacking enemies with Electric type debuffs, increases damage dealt by 5%/6%/7%/8%/9%/10%, up to a maximum of 2 stacks",
+    "images": {
+      "weapon": "image/weapons/Sturmgewhr 28.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "sylvan-elf",
+    "name": "Sylvan Elf",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +348\nCrit DMG +25%",
+    "trait": "If the unit has full HP at the end of the action, they gain a random buff, lasting for 1 turn.",
+    "effect": "Before attacking, for each movement point consumed, increases damage dealt by 5%/6%/7%/8%/9%/10%, up to a maximum of 10%/12%/14%/16%/18%/20%. If the target has Negative Charge, increases Electric damage dealt by 15%/17%/19%/21%/23%/25%\n\nImprint Skill: Increases damage dealt towards URNC units by 2.5%. If the target has Electric type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Sylvan Elf.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-g11",
+    "name": "Retired G11",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired G11.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "heckler-koch-g11",
+    "name": "Heckler & Koch G11",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +244",
+    "trait": "If the unit has full HP at the end of the action, they gain a random buff, lasting for 1 turn.",
+    "effect": "Damage is increased by 5%/6%/7%/8%/9%/10% when attacking targets with Corrosion debuffs. Maximum of 2 stacks.",
+    "images": {
+      "weapon": "image/weapons/Heckler & Koch G11.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "daydream",
+    "name": "Daydream",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +341\nAttack Boost +15%",
+    "trait": "Basic attacks ignore 20% of the target's defense.",
+    "effect": "After performing a basic attack, Corrosion damage is increased by 15%/19%/23%/27%/31%/35%. All Corrosion damage dealt by allied units is increased by 10%.\n\nImprint Skill: Damage dealt to URNC units is increased by 2.5%. If the target has Corrosion debuffs, increases damage by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Daydream.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-416",
+    "name": "Retired 416",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired 416.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "416-0",
+    "name": "416.0",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "If any weakness is exploited, ignores 10% of the target's defense. If it was a Corrosion phase weakness, ignores another 10% defense.",
+    "effect": "When an active attack hits 2 or more targets, the damage dealt is increased by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/416.0.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "skylla",
+    "name": "Skylla",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +390\nAttack Boost +15%",
+    "trait": "If any weakness is exploited, ignores 10% of the target's defense. If it was a Corrosion phase weakness, ignores another 10% defense.",
+    "effect": "AoE damage dealt is increased by 15%/17%/19%/21%/23%/25%. Each time Corrosion damage is dealt, damage is increased by 2%/2.4%/2.8%/3.2%/3.6%/4%, up to a maximum of 10%/12%/14%/16%/18%/20%.\n\nImprint Skill: Damage dealt to URNC units is increased by 2.5%. If the target has Corrosion debuffs, increases damage by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Skylla.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-qbz-97",
+    "name": "Retired QBZ-97",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired QBZ-97.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "qbz-97",
+    "name": "QBZ-97",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +265",
+    "trait": "After applying elemental debuff, gains 1 random buff for self for 1 turn",
+    "effect": "If the target does not have any buffs, increases damage dealt to it by 10%. If the damage is dealt outside of one's turn, further increases damage dealt by 5%/6%/7%/8%/9%/10%",
+    "images": {
+      "weapon": "image/weapons/QBZ-97.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "leaping-tiger",
+    "name": "Leaping Tiger",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +348\nCrit DMG +25%",
+    "trait": "After activating Ultimate, gains 3 tiles of Extra Movement. This effect can be activated once per turn",
+    "effect": "Phase damage dealt is increased by 10%/15%/15%/15%/20%/20%. \n\nAfter dealing phase damage, phase damage is permanently increased by 2%/2%/4%/6%/6%/10%. When dealing Electric damage, additionally gain 1 stack, maximum of 6/6/4/3/3/2 stacks.\nWhen the permanent phase damage increase reaches its limit, targeted Physical damage from the user will deal Electric damage instead. This has a cooldown of 4/3/3/3/2 turns. \n\nThe user's Electric damage dealt is permanently increased by 5%, stability damage dealt is also permanently increased by 1 point.",
+    "images": {
+      "weapon": "image/weapons/Leaping Tiger.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-sturmgewehr-g36",
+    "name": "Retired Sturmgewehr G36",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +160",
+    "effect": "Increase healing effectiveness by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Sturmgewehr G36.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "sturmgewehr-g36",
+    "name": "Sturmgewehr G36",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +230",
+    "trait": "Restores 2 points of Stability to the user after healing allied units. This effect can be triggered at most once per turn.",
+    "effect": "When performing an attack or an active heal, increases damage and healing by 10%/12%/14%/16%/18%/20% for targets with less than 50%/60%/70%/80%/90%/100% HP.",
+    "images": {
+      "weapon": "image/weapons/Sturmgewehr G36.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "maid-s-rules",
+    "name": "Maid's Rules",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +320\nAttack Boost +15%",
+    "trait": "Restores 2 points of Stability to the user after healing allied units. This effect can be triggered at most once per turn.",
+    "effect": "When healing with active skills, if the target's Stability is less than 1/2/3/4/4/4, restores an additional 2 points of Stability to them. This can trigger at most 1/1/1/1/1/2 times per turn. When the user's Stability is full, healing and damage dealt are increased by 20%/25%/30%/35%/40%/40%.\n\nImprint Skill: Increase damage dealt to Paradeus units by 2.5%. If using a skill with a Phase element, increase it by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Maid's Rules.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-type-95",
+    "name": "Retired Type 95",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Type 95.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "type-95",
+    "name": "Type 95",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +244",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random buff for 1 turn.",
+    "effect": "At the start of the unit's action, if there is leftover movement points, increases next instance of damage dealt by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Type 95.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "heavy-strings",
+    "name": "Heavy Strings",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +341\nCrit DMG +25%",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random buff for 1 turn.",
+    "effect": "Before attacking, there is a 20%/36%/52%/68%/84%/100% chance to dispel 1 buff from the target. For every 3/3/3/2/2/1 tiles moved, damage is increased by 5%/7.5%/10%/10%/10%/10%, up to a maximum of 10%/15%/20%/20%/20%/20%. Critical damage against targets not protected by Cover is increased by 10%/10%/10%/10%/15%/20%.\n\nImprint Skill: Increases damage dealt to PMCs by 2.5%, increase critical damage by 5%.",
+    "images": {
+      "weapon": "image/weapons/Heavy Strings.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-qbz-191",
+    "name": "Retired QBZ-191",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired QBZ-191.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "qbz-191",
+    "name": "QBZ-191",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +265",
+    "trait": "If the unit has full HP at the end of the action, they gain a random buff, lasting for 1 turn.",
+    "effect": "When receiving a buff, increases damage dealt by 10%/12%/14%/16%/18%/20% unitl the start of the next action.",
+    "images": {
+      "weapon": "image/weapons/QBZ-191.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "golden-melody",
+    "name": "Golden Melody",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +369\nAttack Boost +15%",
+    "trait": "If the unit has full HP at the end of the action, they gain a random buff, lasting for 1 turn.",
+    "effect": "Increase damage dealt by 10%/10%/15%/20%/20%/20%. When gaining buffs, increase damage dealt by the next Support Attack by 10%/15%/15%/15%/20%/20%, gains 1/1/1/1/1/2 stacks, up to a maximum of 2/2/3/3/4/4 stacks.\n\nImprint Skill: Increase damage dealt to ELIDs by 2.5%. If the target is not protected by Cover, increase it by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Golden Melody.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-model-alpha",
+    "name": "Retired Model Alpha",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Model Alpha.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "model-alpha",
+    "name": "Model Alpha",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +272",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random buff for 1 turn.",
+    "effect": "When the user gains Extra Action (includes Extra Action, Additional Movement, and Extra Command), targeted active skill damage is increased by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Model Alpha.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "planeta",
+    "name": "Planeta",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +376\nCrit DMG +25%",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random attack buff for 1 turn.",
+    "effect": "When a kill is made or after this unit's Extra Action (includes Extra Action, Additional Movement, and Extra Command) ends, damage dealt by active skills is increased by 4%/5%/5%/5%/5%/5% 1/1/2/2/2/3 times, stacking up to 5/5/6/7/8/8 times. After reaching 5/5/6/7/8/8 stacks, gains 2/3/3/3/3/4 tiles of Additional Movement after an active attack.\n\nImprint Skill: Increases damage dealt to ELIDs by 2.5%. If the unit is at max Stability, increases it by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Planeta.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-robinson-modular-rifle",
+    "name": "Retired Robinson Modular Rifle",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Robinson Modular Rifle.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "robinson-modular-rifle",
+    "name": "Robinson Modular Rifle",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +272",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random buff for 1 turn.",
+    "effect": "For every 3 points of Confectance Index consumed, the targeted damage of the next active skill is increased by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Robinson Modular Rifle.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-ots-14",
+    "name": "Retired OTs-14",
+    "weapon_type": "Assault Rifle",
+    "rarity": "R",
+    "stats": "Attack +153",
+    "effect": "Reduce damage taken by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired OTs-14.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "ots-14",
+    "name": "OTs-14",
+    "weapon_type": "Assault Rifle",
+    "rarity": "SR",
+    "stats": "Attack +216",
+    "trait": "At the end of the action, if under the effects of 3 or more stacks of Shelter, restores 1 point of Stability Index.",
+    "effect": "Every 4/3/3/3/2/1 Shelter is applied, increases damage dealt by the next active skill by 10%/12%/15%/18%/20%/20%.",
+    "images": {
+      "weapon": "image/weapons/OTs-14.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "crowned-jackelope",
+    "name": "Crowned Jackelope",
+    "weapon_type": "Blade",
+    "rarity": "SSR",
+    "stats": "Attack +313\nAttack Boost +15%",
+    "trait": "For every 3 kills caused by active attacks, gains 1 instance of Extra Action. Activates only once per turn.",
+    "effect": "Increases damage by 15%/18%/21%/24%/27%/30% to enemy units with full HP or a lower HP percentage than the user. If there is no Cover near the target, deals 2 points of Stability Damage to the target before the attack.",
+    "images": {
+      "weapon": "image/weapons/Crowned Jackelope.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-night-serpent",
+    "name": "Retired Night Serpent",
+    "weapon_type": "Blade",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Night Serpent.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "night-serpent",
+    "name": "Night Serpent",
+    "weapon_type": "Blade",
+    "rarity": "SR",
+    "stats": "Attack +244",
+    "trait": "Before ally units (excluding the user) uses an active skill, if the user's Confectance Index is 5 points or fewer, the user gains 1 point of Confectance Index after the skill resolves. Can trigger a maximum of once per turn.",
+    "effect": "Increases Electric damage by 5%/6%/7%/8%/9%/10% and melee damage by 5%/6%/7%/8%/9%/10%.",
+    "images": {
+      "weapon": "image/weapons/Night Serpent.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "twilight-rose",
+    "name": "Twilight Rose",
+    "weapon_type": "Blade",
+    "rarity": "SSR",
+    "stats": "Attack +341\nAttack Boost +15%",
+    "trait": "Before ally units (excluding the user) uses an active skill, if the user's Confectance Index is 5 points or fewer, the user gains 1 point of Confectance Index after the skill resolves. Can trigger a maximum of once per turn.",
+    "effect": "When ally units deal Electric damage or Melee damage, Critical Damage is increased by 10%/12%/14%/16%/18%/20% and damage dealt is increased by 10%/12%/14%/16%/18%/20% (only applies once when multiple conditions (Electric or Melee damage) are met).\n\nImprint Skill: Increases damage dealt towards target with Electric debuffs by 2.5% and damage dealt to ELID by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Twilight Rose.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-gray-thorns",
+    "name": "Retired Gray Thorns",
+    "weapon_type": "Blade",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Gray Thorns.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "gray-thorns",
+    "name": "Gray Thorns",
+    "weapon_type": "Blade",
+    "rarity": "SR",
+    "stats": "Attack +265",
+    "trait": "The AoE damage is increased by 5%. If the Corrosion AoE damage is dealt, the AoE damage caused is increased by additional 5%.",
+    "effect": "Ultimate skill Corrosion damage is increased by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Gray Thorns.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "law-of-causality",
+    "name": "Law of Causality",
+    "weapon_type": "Blade",
+    "rarity": "SSR",
+    "stats": "Attack +369\nCrit Damage +25%",
+    "trait": "The AoE damage is increased by 5%. If the Corrosion AoE damage is dealt, the AoE damage caused is increased by additional 5%.",
+    "effect": "Increases Corrosion damage by 15%/18%/21%/24%/27%/30%. If the active skill deals no damage, the next attack’s Critical Damage is increased by 15%/18%/21%/24%/27%/30%.\n\nImprint Skill: Increases damage dealt towards target with Corrosion debuffs by 2.5%. If target is PMC unit, further increases damage dealt by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Law of Causality.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-pluma-edge",
+    "name": "Retired Pluma Edge",
+    "weapon_type": "Blade",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Pluma Edge.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "pluma-edge",
+    "name": "Pluma Edge",
+    "weapon_type": "Blade",
+    "rarity": "SR",
+    "stats": "Attack +244",
+    "trait": "After using an active attack, gain 1 point of Confectance Index, can trigger a maximum of once per turn.",
+    "effect": "Increases damage dealt to enemy targets not protected by Cover by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Pluma Edge.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "rectrix",
+    "name": "Rectrix",
+    "weapon_type": "Blade",
+    "rarity": "SSR",
+    "stats": "Attack +341\nCrit Rate +25%",
+    "trait": "After using an active attack, gain 1 point of Confectance Index, can trigger a maximum of once per turn.",
+    "effect": "When using an active attack, deal additional fixed damage equal to 10%/12%/14%/16%/18%/20% of attack to the targets not at full HP. For targets with lower HP percentage than the user, increase critical damage by 20%.\n\nImprint Skill: Increase damage dealt to Marley Thermal Power Plant is increased by 2.5%. If the target's HP is not at max, it increases by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Rectrix.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-hare",
+    "name": "Retired Hare",
+    "weapon_type": "Blade",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Hare.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "hare",
+    "name": "Hare",
+    "weapon_type": "Blade",
+    "rarity": "SR",
+    "stats": "Attack +244",
+    "trait": "For every 3 kills caused by active attacks, gains 1 instance of Extra Action. Activates only once per turn.",
+    "effect": "Before attacking, if the user moved more than 6/6/6/5/4/3 tiles, increases this attack's damage by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Hare.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "papa-figo",
+    "name": "Papa-Figo",
+    "weapon_type": "Handgun",
+    "rarity": "SSR",
+    "stats": "Attack +285\nAttack Boost +15%",
+    "trait": "Basic attack range is increased by 1 tile, gains 1 point of Confectance Index after attacking.",
+    "effect": "If the user is at 100%/more than 90%/80%/70%/60%/50% HP, healing and damage is increased by 15%/18%/21%/24%/27%/30%.",
+    "images": {
+      "weapon": "image/weapons/Papa-Figo.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-desert-eagle",
+    "name": "Retired Desert Eagle",
+    "weapon_type": "Handgun",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Desert Eagle.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "desert-eagle",
+    "name": "Desert Eagle",
+    "weapon_type": "Handgun",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "If a skill does not consume Confectance Index, critical damage is increased by 10%",
+    "effect": "Freeze damage dealt is increased by by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Desert Eagle.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "argent-wing-pisty",
+    "name": "Argent Wing Pisty",
+    "weapon_type": "Handgun",
+    "rarity": "SSR",
+    "stats": "Attack +390\nCrit DMG +25%",
+    "trait": "If a skill does not consume Confectance Index, critical damage is increased by 10%",
+    "effect": "Freeze damage dealt is increased by 20%/25%/30%/35%/40%/45%. If a skill does not consume Confectance Index, and when dealing damage to an enemy target on a Freeze tile, ignores 5% of the target's defense.\n\nImprint Skill: Increases damage dealt towards target with Freeze type debuffs by 2.5%. If the target is Varjager, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Argent Wing Pisty.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "retired-welrod-mk-ii",
+    "name": "Retired Welrod MK II",
+    "weapon_type": "Handgun",
+    "rarity": "R",
+    "stats": "Attack +153",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Welrod MK II.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "welrod-mk-ii",
+    "name": "Welrod MK II",
+    "weapon_type": "Handgun",
+    "rarity": "SR",
+    "stats": "Attack +223",
+    "trait": "When accumulated damage taken reaches 30% of initial max HP, damage dealt is increased by 10%.",
+    "effect": "If the health is full before the attack, the damage dealt is increased by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Welrod MK II.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "themis-game",
+    "name": "Themis’ Game",
+    "weapon_type": "Handgun",
+    "rarity": "SSR",
+    "stats": "Attack +313\nAttack Boost +15%",
+    "trait": "When accumulated damage taken reaches 30% of initial max HP, damage dealt is increased by 10%.",
+    "effect": "The user's max HP is increased by 15%/20%/25%/30%/35%/40%, damage dealt is increased by 20%/25%/30%/35%/40%/45%, and damage dealt to enemy units afflicted with Corrosion debuffs is increased by 10%.\n\nImprint Skill: Increases damage dealt towards Sycca Technologies by 2.5%. If the target has Corrosion type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Themis’ Game.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-mark-23-pistol",
+    "name": "Retired Mark 23 Pistol",
+    "weapon_type": "Handgun",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Mark 23 Pistol.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "mark-23-pistol",
+    "name": "Mark 23 Pistol",
+    "weapon_type": "Handgun",
+    "rarity": "SR",
+    "stats": "Attack +244",
+    "trait": "AoE damage dealt by the caster and their summons is increased by 5%.\nIf the damage is Corrosion AoE damage, the AoE damage is further increased by 5%.",
+    "effect": "Damage is increased by 10%/12%/14%/16%/18%/20% while on an Corrosion-type grid.",
+    "images": {
+      "weapon": "image/weapons/Mark 23 Pistol.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "requiem-of-doom",
+    "name": "Requiem of Doom",
+    "weapon_type": "Handgun",
+    "rarity": "SSR",
+    "stats": "Attack +341\nAttack Boost +15%",
+    "trait": "AoE damage dealt by the caster and their summons is increased by 5%.\nIf the damage is Corrosion AoE damage, the AoE damage is further increased by 5%.",
+    "effect": "All allied units deal 10% increased Corrosion damage.\nEach time the caster summons a unit, Corrosion damage dealt by the caster and their summons is increased by 5/7/9/11/13/15%, up to a maximum of 15/21/27/33/39/45%.\n\nImprint Skill: Damage dealt to targets with Corrosion-type debuffs is increased by 2.5%. Damage dealt to the Orlog Conglomerate is increased by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Requiem of Doom.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-pistolet-15",
+    "name": "Retired Pistolet 15",
+    "weapon_type": "Handgun",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase healing effectiveness by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Pistolet 15.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "pistolet-15",
+    "name": "Pistolet 15",
+    "weapon_type": "Handgun",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "Before using an active skill, cleanses 1 debuff from self. If cleanse is successful, gains 1 random buff for 1 turn",
+    "effect": "Increases damage dealt by the holder's Entity Summon by 5%/6%/7%/8%/9%/10%. If Hydro damage is dealt, further increases damage deat by 5%/6%/7%/8%/9%/10%\n\nEntity Summon: Summons that occupies tiles on the field and has their own attributes (e.g. Papasha's City Guard, Andoris' Auto-Turrets, Nikketa's Kulich etc)",
+    "images": {
+      "weapon": "image/weapons/Pistolet 15.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "iaso",
+    "name": "Iaso",
+    "weapon_type": "Handgun",
+    "rarity": "SSR",
+    "stats": "Attack +355\nAttack Boost +15%",
+    "trait": "Before using an active skill, cleanses 1 debuff from self. If cleanse is successful, gains 1 random buff for 1 turn",
+    "effect": "Increases damage dealt by all Entity Summon by 10%. Before an ally attacks, if the target has Hydro type debuffs, increases Hydro damage dealt by 10%/12%/14%/16%/18%/20%. If this attack is a Counterattack, further increases damage dealt by 10%/12%/14%/16%/18%/20%\n\nEntity Summon: Summons that occupies tiles on the field and has their own attributes (e.g. Papasha's City Guard, Andoris' Auto-Turrets, Nikketa's Kulich etc)\n\nImprint Skill: Increases damage dealt towards PMC units by 2.5%. If the target has Hydro type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Iaso.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-cz75",
+    "name": "Retired CZ75",
+    "weapon_type": "Handgun",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired CZ75.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "cz75",
+    "name": "CZ75",
+    "weapon_type": "Handgun",
+    "rarity": "SR",
+    "stats": "Attack +244",
+    "trait": "Stability damage taken by enemy units within 3 tiles is increased by 1 point.",
+    "effect": "Damage is increased by 10%/12%/14%/16%/18%/20% against targets with defense debuffs.",
+    "images": {
+      "weapon": "image/weapons/CZ75.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "hestia",
+    "name": "Hestia",
+    "weapon_type": "Handgun",
+    "rarity": "SSR",
+    "stats": "Attack +341\nCrit DMG +25%",
+    "trait": "Stability damage taken by enemy units within 3 tiles is increased by 1 point.",
+    "effect": "Physical damage is increased by 10%/12%/14%/16%/18%/20%. When attacking, if the distance to the enemy target is 3 or less tiles, damage dealt is increased by 10%/12%/14%/16%/18%/20%.\n\nImprint Skill: Increases damage dealt to Sycca Technologies by 2.5%. If the target has Defense debuffs, increases it by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Hestia.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-stechkin",
+    "name": "Retired Stechkin",
+    "weapon_type": "Handgun",
+    "rarity": "R",
+    "stats": "Attack +153",
+    "effect": "Increase healing effectiveness by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Stechkin.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "stechkin",
+    "name": "Stechkin",
+    "weapon_type": "Handgun",
+    "rarity": "SR",
+    "stats": "Attack +216",
+    "trait": "Basic attack range is increased by 1 tile, gains 1 point of Confectance Index after attacking.",
+    "effect": "When applying a buff to an allied target, increases healing and damage dealt by the next active skill by 5%/7%/9%/11%/13%/15%.\n\nIf this is an attack buff, gain an additional 5% increase, with a 50%/60%/70%/80%/90%/100% chance to apply 1 additional buff. This effect can trigger at most once per turn.",
+    "images": {
+      "weapon": "image/weapons/Stechkin.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-nagant-m1895",
+    "name": "Retired Nagant M1895",
+    "weapon_type": "Handgun",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Nagant M1895.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "nagant-m1895",
+    "name": "Nagant M1895",
+    "weapon_type": "Handgun",
+    "rarity": "SR",
+    "stats": "Attack +244",
+    "trait": "Outside of the user's turn, attack range is increased by 1 tile, and stability damage is increased by 1 point.",
+    "effect": "When applying a debuff, the damage of the next active skill is increased by 5%/5%/5%/10%/10%/10%.\n\nIf the debuff is a defense debuff, an additional 1 debuff is applied for 1 turn, and the damage od the next skill is further increased by an additional 5%/6%/7%/8%/9%/10%. This effect can only be triggered once per turn.",
+    "images": {
+      "weapon": "image/weapons/Nagant M1895.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-380-curva",
+    "name": "Retired .380 Curva",
+    "weapon_type": "Handgun",
+    "rarity": "R",
+    "stats": "Attack +146",
+    "effect": "Increase healing effectiveness by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired .380 Curva.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "380-curva",
+    "name": ".380 Curva",
+    "weapon_type": "Handgun",
+    "rarity": "SR",
+    "stats": "Attack +209",
+    "trait": "Basic attack range is increased by 1 tile, gains 1 point of Confectance Index after attacking.",
+    "effect": "After dealing damage, the next active healing is increased by 10%/12%/14%/16%/18%/20%\n\nIf an allied unit goes into Stability Break, the next active healing additionally restores 1/1/1/1/2/2 points of Stability Index.",
+    "images": {
+      "weapon": "image/weapons/.380 Curva.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "classified-manuscript",
+    "name": "Classified Manuscript",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +292\nAttack Boost +15%",
+    "trait": "Gains Movement Up II at the start of the next action for 1 turn if the user moves 5 tiles or more.",
+    "effect": "For every 1 tile moved, ignores 5%/6%/7%/8%/9%/10% of the target's defense, up to a maximum of 25%/30%/35%/40%/45%/50%.\n\nIf movement exceeds 5/5/4/4/4/3 tiles, dispels 1/1/2/2/2/3 random buff from the target before attacking.",
+    "images": {
+      "weapon": "image/weapons/Classified Manuscript.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-p90",
+    "name": "Retired P90",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired P90.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "p90",
+    "name": "P90",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +272",
+    "trait": "Increases damage dealt by user and her summons by 5%. If they deal Hydro damage, increases damage dealt by an additional 5%.",
+    "effect": "When attacking, if the target is on a Hydro type tile, increases damage dealt by 10/12/14/16/18/20%.",
+    "images": {
+      "weapon": "image/weapons/P90.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "fluffy-nova",
+    "name": "Fluffy Nova",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +383\nAttack Boost +15%",
+    "trait": "Increases damage dealt by user and her summons by 5%. If they deal Hydro damage, increases damage dealt by an additional 5%.",
+    "effect": "Increases damage dealt by user and her summons by 10/12/14/16/18/20%. When attacking, if the target is on a Hydro type tile, increases damage dealt by an additional 10/12/14/16/18/20%. Increases Crit Damage by 10/12/14/16/18/20%.\n\nImprint Skill: Increases damage dealt to targets with Hydro type debuffs by 2.5%. Increases damage dealt to the Varyag Gang by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Fluffy Nova.png"
+    },
+    "server": "cn"
+  },
+  {
+    "slug": "retired-tmp",
+    "name": "Retired TMP",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired TMP.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "tmp",
+    "name": "TMP",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "Increases AOE damage dealt by 5%, and increases AOE damage dealt by an additional 5% if Corrosion damage is dealt.",
+    "effect": "Increases out-of-turn Corrosion damage dealt by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/TMP.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "antinomy",
+    "name": "Antinomy",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +348\nCRIT DMG +25%",
+    "trait": "Increases AOE damage dealt by 5%, and increases AOE damage dealt by an additional 5% if Corrosion damage is dealt.",
+    "effect": "Corrosion damage increased by 25%/28%/31%/34%/37%/40%. After using an Active Skill on the ally, the Critical Damage dealt is increased by 5%/7%/9%/11%/13%/15% for 1 global round.\n\nImprint Skill: Increases damage dealt towards Mokosh by 2.5%. If the target has Corrosion debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Antinomy.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-model-100",
+    "name": "Retired Model 100",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +181",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Model 100.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "model-100",
+    "name": "Model 100",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +258",
+    "trait": "When exploiting a weakness, ignores 10% of the target's defense. When exploiting a Burn weakness, additionally ignores 10% of the target's defense.",
+    "effect": "When an out-of-turn attack deals Burn damage, the damage dealt is increased by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/Model 100.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "crimson-covenant",
+    "name": "Crimson Covenant",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +362\nCRIT DMG +25%",
+    "trait": "When exploiting a weakness, ignores 10% of the target's defense. When exploiting a Burn weakness, additionally ignores 10% of the target's defense.",
+    "effect": "Increases Burn damage by 15%/18%/21%/24%/27%/30%.\nEach time an out-of-turn attack is performed, increases out-of-turn attack damage by 7%/8%/9%/10%/11%/12%, up to a maximum of 14%/16/%18%/20%/22%/24%\n\nImprint Skill: Increases damage dealt to targets with Burn debuffs by 2.5% and damage dealt to PMC by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Crimson Covenant.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-heckler-koch-ump40",
+    "name": "Retired Heckler & Koch UMP40",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Heckler & Koch UMP40.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "heckler-koch-ump40",
+    "name": "Heckler & Koch UMP40",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "When attacking enemies whose DEF is lower or equal to 0, deals 1 fixed point of Stability damage",
+    "effect": "Increases damage dealt by the holder's Entity Summon by 10%/12%/14%/16%/18%/20%\n\nEntity Summon: Summons that occupies tiles on the field and has their own attributes (e.g. Papasha's City Guard, Andoris' Auto-Turrets, Nikketa's Kulich etc)",
+    "images": {
+      "weapon": "image/weapons/Heckler & Koch UMP40.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "perihelion",
+    "name": "Perihelion",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +390\nCRIT DMG +25%",
+    "trait": "When attacking enemies whose DEF is lower or equal to 0, deals 1 fixed point of Stability damage",
+    "effect": "When using active Physical attacks, ignores 20%/24%/28%/32%/36%/40% of the target's DEF. If other allies have the same effect, additionally ignores 15%/17%/19%/21%/23%/25% DEF. This cannot be stacked\n\nImprint Skill: Increases damage dealt towards PMCs by 2.5%. If the target has Defense type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Perihelion.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-ro635",
+    "name": "Retired RO635",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired RO635.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "ro635",
+    "name": "RO635",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random buff for 1 turn.",
+    "effect": "When an out-of-turn attack deals Freeze damage, increases damage dealt by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/RO635.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "wanderer-s-magnum",
+    "name": "Wanderer's Magnum",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +390\nAttack Boost +15%",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random buff for 1 turn.",
+    "effect": "Increases Freeze damage dealt by 15%/18%/21%/24%/27%/30%. After launching an out-of-turn attack, increases damage of out-of-turn attacks by 7%/8%/9%/10%/11%/12%, up to a maximum of 14%/16%/18%/20%/22%/24%\n\nImprint Skill: Increases damage dealt towards Girard Group units by 2.5%. If the target has Freeze type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Wanderer's Magnum.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-ump45",
+    "name": "Retired UMP45",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired UMP45.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "ump45",
+    "name": "UMP45",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "Increases Stability damage dealt by 1 point. If the target is a Boss enemy, further increases Stability damage dealt by 1 point",
+    "effect": "Increases damage dealt towards enemies on Electric type tiles by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/UMP45.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "schlitzohr",
+    "name": "Schlitzohr",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +390\nAttack Boost +15%",
+    "trait": "Increases Stability damage dealt by 1 point. If the target is a Boss enemy, further increases Stability damage dealt by 1 point",
+    "effect": "Increases Electric damage dealt towards enemies with Negative Charge by 10%/12%/14%/16%/18%/20%. Increases Electric damage dealt towards enemies in Stability Break by 15%/18%/21%/24%/27%/30%\n\nImprint Skill: Increases damage dealt towards Girard Group units by 2.5%. If the target has Electric type debuffs, further Increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Schlitzohr.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-mp5h1",
+    "name": "Retired MP5H1",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +160",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired MP5H1.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "mp5h1",
+    "name": "MP5H1",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +230",
+    "trait": "When receiving damage, for each Burn debuff held by the attacker, decreases damage received by self by 2%, up to a maximum of 6%",
+    "effect": "If the user's HP is below 75%, increases damage dealt by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/MP5H1.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "amanita",
+    "name": "Amanita",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +320\nAttack Boost +15%",
+    "trait": "When receiving damage, for each Burn debuff held by the attacker, decreases damage received by self by 2%, up to a maximum of 6%",
+    "effect": "Increases CRIT DMG dealt by normal attack by 15%. For each normal attack used, increases CRIT DMG by 2%/3%/4%/5%/6%/7%, up to a maximum of 25%/30%/35%/40%/45%/50%\n\nImprint Skill: Increases damage dealt towards Sica Technology units by 2.5%. If the target has Burn type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Amanita.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-ksvec-45-acp",
+    "name": "Retired Ksvec .45 ACP",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Ksvec .45 ACP.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "ksvec-45-acp",
+    "name": "Ksvec .45 ACP",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random buff for 1 turn.",
+    "effect": "Increases damage dealt towards enemies with debuff by 5%/6%/7%/8%/9%/10%. If the debuff is a Burn type debuff, additionally increases damage dealt by 5%/6%/7%/8%/9%/10%",
+    "images": {
+      "weapon": "image/weapons/Ksvec .45 ACP.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "banshee-s-whisper",
+    "name": "Banshee's Whisper",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +348\nAttack Boost +15%",
+    "trait": "If the unit has full HP at the start of the action, they gain 1 random buff for 1 turn.",
+    "effect": "Before an ally attacks, if the target has Burn type debuffs, increases damage dealt by 10%/12%/14%/16%/18%/20%\n\nIf Burn damage was dealt, further increases damage dealt by 10%/12%/14%/16%/18%/20%\n\nIf the target has Overheat Combustion, increases damage dealt by single target Support attacks by 5%\n\nImprint Skill: Increases damage dealt towards URNC units by 2.5%. If the target has Burn type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Banshee's Whisper.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-ppsh-41",
+    "name": "Retired PPSh-41",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired PPSh-41.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "ppsh-41",
+    "name": "PPSh-41",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +265",
+    "trait": "When dealing damage, for each debuff on the target, ignore 5% of its defense, up to 20%.",
+    "effect": "Increases targeted damage dealt to Large Targets by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/PPSh-41.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "svarog",
+    "name": "Svarog",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +369\nAttack Boost +15%",
+    "trait": "When dealing damage, for each debuff on the target, ignore 5% of its defense, up to 20%.",
+    "effect": "Targeted damage dealt by City Warden is increased by 15%/18%/21%/24%/27%/30%. After the unit or an allied unit launches a Support Attacks, the critical rate of its next active attack is increased by 10%, up to a maximum of 30%.\n\nImprint Skill: Damage dealt to PMC units is increased by 2.5%. Damage dealt to Large Targets is increased by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Svarog.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-cs-ls06",
+    "name": "Retired CS/LS06",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired CS-LS06.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "cs-ls06",
+    "name": "CS/LS06",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "Gains Movement Up II at the start of the next action for 1 turn if the user moves 5 tiles or more.",
+    "effect": "If a target is eliminated, damage dealt is increased by 5%/6%/7%/8%/9%/10%, up to 2 stacks.",
+    "images": {
+      "weapon": "image/weapons/CS-LS06.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "juggernaut",
+    "name": "Juggernaut",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +348\nCrit DMG +25%",
+    "trait": "Gains Movement Up II at the start of the next action for 1 turn if the user moves 5 tiles or more.",
+    "effect": "When any weakness is exploited, damage dealt is increased by 10%/12%/14%/16%/18%/20%. Critical damage against targets affected by Hydro debuffs is increased by 10%/12%/14%/16%/18%/20%.\n\nImprint Skill: Damage dealt to PMC units is increased by 2.5%. If the target has any Hydro debuff, the damage is further increased by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Juggernaut.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-suomi",
+    "name": "Retired Suomi",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +153",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Suomi.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "suomi",
+    "name": "Suomi",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +223",
+    "trait": "Gains Movement Up II at the start of the next action for 1 turn if the user moves 5 tiles or more.",
+    "effect": "Increases the effect of applying Shield by 5%/6%/7%/8%/9%/10%. When applying buffs to allied units (excluding self), increases healing effect by 5%/6%/7%/8%/9%/10% for 2 turns.",
+    "images": {
+      "weapon": "image/weapons/Suomi.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "unspoken-calling",
+    "name": "Unspoken Calling",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +313\nAttack Boost +15%",
+    "trait": "Gains Movement Up II at the start of the next action for 1 turn if the user moves 5 tiles or more.",
+    "effect": "Freeze damage dealt by all allied units is increased by 10%/12%/14%/16%/18%/20%. The value of applied Shield is increased by 10%/12%/14%16%/18%/20%. If the user's Stability Index is greater than 0 before using Ultimate skill, the value of applied Shield is increased by another 10%/12%/14%/16%/18%/20%.\n\nImprint Skill: Increase damage dealt to Marley Thermal Power Plant by 2.5%. If the target has Frigid, increase the damage dealt by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Unspoken Calling.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-ump9",
+    "name": "Retired UMP9",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +153",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired UMP9.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "ump9",
+    "name": "UMP9",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +223",
+    "trait": "When dealing damage, for each debuff on the target, ignores 5% DEF, up to a maximum of 20%",
+    "effect": "Increases damage dealt towards enemies with debuff by 5%/6%/7%/8%/9%/10%. If the debuff is an Electric type debuff, increases damage dealt by 5%/6%/7%/8%/9%/10%",
+    "images": {
+      "weapon": "image/weapons/UMP9.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "l-wenjunges",
+    "name": "Löwenjunges",
+    "weapon_type": "SMG",
+    "rarity": "SSR",
+    "stats": "Attack +313\nAttack Boost +15%",
+    "trait": "When dealing damage, for each debuff on the target, ignore 5% of its defense, up to 20%",
+    "effect": "When applying Conductivity, deals additional fixed damage equivalent to 9%/12%/15%/18%/21%/25% ATK, and has a 15%/20%/25%/30%/35%/50% chance of applying Paralysis for 1 turn\n\nImprint Skill: Increases damage dealt towards Varjagers units by 2.5%. If the target has Paralysis, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Löwenjunges.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-mp7h1",
+    "name": "Retired MP7H1",
+    "weapon_type": "SMG",
+    "rarity": "R",
+    "stats": "Attack +167",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired MP7H1.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "mp7h1",
+    "name": "MP7H1",
+    "weapon_type": "SMG",
+    "rarity": "SR",
+    "stats": "Attack +237",
+    "trait": "Gains Movement Up II at the start of the next action for 1 turn if the user moves 5 tiles or more.",
+    "effect": "When applying a buff to an allied target, increases damage dealt by the next active skill by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/MP7H1.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "expeditionary-pigeon",
+    "name": "Expeditionary Pigeon",
+    "weapon_type": "Shotgun",
+    "rarity": "SSR",
+    "stats": "Attack +306\nAttack Boost +15%",
+    "trait": "Gains Quick Barrier when destroying Cover.",
+    "effect": "If the target is at max Stability or is Exposed, increase the damage it takes by 15%/18%/21%/24%/27%/30%.\n\nWhen dealing damage, applies Stability Loss I/Stability Loss I/Stability Loss II/Stability Loss II/Stability Loss II/Stability Loss II to the target for 1/2/2/2/2/3 turns. Cooldown: 3/3/3/3/2/2 turns.",
+    "images": {
+      "weapon": "image/weapons/Expeditionary Pigeon.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-12-gauge-double-barrel-shotgun",
+    "name": "Retired 12-gauge double-barrel shotgun",
+    "weapon_type": "Shotgun",
+    "rarity": "R",
+    "stats": "Attack +153",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired 12-gauge double-barrel shotgun.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "12-gauge-double-barrel-shotgun",
+    "name": "12-gauge double-barrel shotgun",
+    "weapon_type": "Shotgun",
+    "rarity": "SR",
+    "stats": "Attack +216",
+    "trait": "Increases stability damage dealt by 1",
+    "effect": "Increases damage dealt towards enemies with Freeze debuffs by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/12-gauge double-barrel shotgun.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "silent-aegis",
+    "name": "Silent Aegis",
+    "weapon_type": "Shotgun",
+    "rarity": "SSR",
+    "stats": "Attack +299\nAttack Boost +15%",
+    "trait": "Physical damage taken is reduced by 8%",
+    "effect": "The user's defense is increased by 15%/20%/25%/30%/35%/40%. Damage dealt from basic attacks is increased by 25%/30%/35%/40%45%/50%. At the end of the action, restores 5% of HP to the user.\n\nImprint Skill: Increases damage dealt towards Sica Technology units by 2.5%. If the target has Freeze debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Silent Aegis.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-auto-12",
+    "name": "Retired Auto-12",
+    "weapon_type": "Shotgun",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Auto-12.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "auto-12",
+    "name": "Auto-12",
+    "weapon_type": "Shotgun",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "Increases AoE damage dealt by 5%. If AoE Corrosion damage was dealt, further increases AoE damage dealt by 5%",
+    "effect": "Increases damage dealt towards enemies with Corrosion debuffs by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/Auto-12.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "thorn-criterion",
+    "name": "Thorn Criterion",
+    "weapon_type": "Shotgun",
+    "rarity": "SSR",
+    "stats": "Attack +390\nAttack Boost +15%",
+    "trait": "Increases AoE damage dealt by 5%. If AoE Corrosion damage was dealt, further increases AoE damage dealt by 5%",
+    "effect": "Before attacking, for each debuff held by the enemy, increases damage dealt by 3%/4%/5%/7%/8%/9%, up to a maximum of 18%/24%/30%/35%/40%/45%. If Corrosion damage was dealt, increases Corrosion damage dealt by 10%\n\nImprint Skill: Increases damage dealt towards PMC units by 2.5%. If the target has Corrosion debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Thorn Criterion.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-type-97-shotgun",
+    "name": "Retired Type 97 Shotgun",
+    "weapon_type": "Shotgun",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Type 97 Shotgun.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "type-97-shotgun",
+    "name": "Type 97 Shotgun",
+    "weapon_type": "Shotgun",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "Before using active skill, cleanses 1 debuff from self. If the cleanse is successful, gains a random offensive buff for 1 turn",
+    "effect": "Increases damage dealt to targets with Burn type debuffs by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/Type 97 Shotgun.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "trailblazer",
+    "name": "Trailblazer",
+    "weapon_type": "Shotgun",
+    "rarity": "SSR",
+    "stats": "Attack +348\nCrit DMG +25%",
+    "trait": "Before using active skill, cleanses 1 debuff from self. If the cleanse is successful, gains a random attack buff for 1 turn",
+    "effect": "Increases Burn damage dealt by 10%/11%/12%/13%/14%/15%. For each instance of Burn damage dealt, increases Burn damage dealt by 2%/3%/4%/5%/6%/7%, up to 10%/15%/20%/25%/30%/35%\n\nImprint Skill: Increases damage dealt towards Sica Technology units by 2.5%. If the target has Burn debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Trailblazer.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-m1-super-90",
+    "name": "Retired M1 Super 90",
+    "weapon_type": "Shotgun",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired M1 Super 90.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "m1-super-90",
+    "name": "M1 Super 90",
+    "weapon_type": "Shotgun",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "Gains Quick Barrier when destroying Cover.",
+    "effect": "For every 2/2/2/2/2/1 points of Contaimination Index consumed, increase damage dealt by 2%/3%/4%/5%/10%/10%, up to 10%/12%/16%/20%/20%/20%.",
+    "images": {
+      "weapon": "image/weapons/M1 Super 90.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-sportivo-calibro-12",
+    "name": "Retired Sportivo Calibro 12",
+    "weapon_type": "Shotgun",
+    "rarity": "R",
+    "stats": "Attack +160",
+    "effect": "Reduce damage taken by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Sportivo Calibro 12.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "sportivo-calibro-12",
+    "name": "Sportivo Calibro 12",
+    "weapon_type": "Shotgun",
+    "rarity": "SR",
+    "stats": "Attack +230",
+    "trait": "Gains Quick Barrier when destroying Cover.",
+    "effect": "After receiving healing, the damage dealt by the user's next active skill is increased by 5%/5%/5%/5%/5%/10%.\n\nIf the user's HP is fully restored after healing, the damage dealt by the active skill is further increased by an additional 5%/6%/7%/8%/9%/10%.",
+    "images": {
+      "weapon": "image/weapons/Sportivo Calibro 12.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "mezzaluna",
+    "name": "Mezzaluna",
+    "weapon_type": "Shotgun",
+    "rarity": "SSR",
+    "stats": "Attack +327\nAttack Boost +15%",
+    "trait": "Gains Quick Barrier when destroying Cover.",
+    "effect": "During Stability Break, whenever Stability is recovered, additionally restores 2 points of Stability Index. If Stability Index is above 10/10/10/10/8/6 points, increases damage dealt by 20%/25%/30%/35%/40%/40%. At the end of the action, applies Attack Down I/Attack Down I/Attack Down I/Attack Down I/Attack Down II/Attack Down II to the 1/1/1/1/1/2 enemy targets with the highest attack within a 6/7/8/9/10/10 tiles for 1 turn.\n\nImprint Skill: Increases damage dealt to Varjagers by 2.5%. If the skill used consumes Confectance Index, the damage is further increased by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Mezzaluna.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-vepr-12",
+    "name": "Retired Vepr-12",
+    "weapon_type": "Shotgun",
+    "rarity": "R",
+    "stats": "Attack +160",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Vepr-12.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "vepr-12",
+    "name": "Vepr-12",
+    "weapon_type": "Shotgun",
+    "rarity": "SR",
+    "stats": "Attack +230",
+    "trait": "Gains Quick Barrier when destroying Cover.",
+    "effect": "At the start of the action, randomly gains 2 types of effects, thie being either targeted or AoE damage boosts, and Confectance or basic damage boosts. Damage from selected sources is increased by 5%/6%/7%/8%/9%/10%.",
+    "images": {
+      "weapon": "image/weapons/Vepr-12.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "heart-seeker",
+    "name": "Heart Seeker",
+    "weapon_type": "Shotgun",
+    "rarity": "SSR",
+    "stats": "Attack +320\nDamage dealt by skills that consume Confectance Index +30.0%",
+    "trait": "Gains Quick Barrier when destroying Cover.",
+    "effect": "Deals additional fixed damage equal to 10%/15%/15%/20%/20%/20% of attack each time an active skill deals damage. Damage to targets with movement debuffs is increased by 10%/10%/15%/15%/20%/20%. When taking targeted damage, if the attacker has movement type debuffs, applies Damage Reduction I/Damage Reduction I/Damage Reduction I/Damage Reduction II/Damage Reduction II/Damage Reduction II to them for 1/1/1/1/1/2 turn before the damage is dealt. This can only be triggered once/once/once/once/once/with no restrictions per turn.\n\nImprint Skill: Increase damage dealt to Paradeus by 2.5%. If the target has no buffs, increases it by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Heart Seeker.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "arcana",
+    "name": "Arcana",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +327\nAttack Boost +15%",
+    "trait": "Attacks ignore 1 point of Stability Index. When possessing Insight, additionally ignore another 1 point of Stability Index.",
+    "effect": "When dealing damage, if there are no other enemy units within 4/4/3/3/3/2 tiles of the target, increases damage dealt to the target by 15%/18%/21%/24%/27%/30%.",
+    "images": {
+      "weapon": "image/weapons/Arcana.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "sybil",
+    "name": "Sybil",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +383\nCrit DMG +25%",
+    "trait": "Damage dealt by Action Support is increased by 10%.",
+    "effect": "Corrosion damage is increased by 20/24/28/32/36/40%, and Critical Damage dealt by Action Support is increased by 10%.\n\nImprint Skill: Damage dealt to targets with Corrosion-type debuffs is increased by 2.5%, and damage dealt to Paradeus is increased by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Sybil.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-general-liu-rifle",
+    "name": "Retired General Liu Rifle",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "R",
+    "stats": "HP +473",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired General Liu Rifle.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "general-liu-rifle",
+    "name": "General Liu Rifle",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SR",
+    "stats": "HP +675",
+    "trait": "At the end of the action, the user's entity summons gains 1 random buff for 2 turns",
+    "effect": "The damage done by user and user's entity summons is increased by 7%/9%/11%/13%/15%/17%.",
+    "images": {
+      "weapon": "image/weapons/General Liu Rifle.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "shadow-runner",
+    "name": "Shadow Runner",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "HP +946\nCrit DMG +25%",
+    "trait": "At the end of the action, the user's entity summons gains 1 random buff for 2 turns",
+    "effect": "Hydro damage dealt by both the user and their entity summons is increased by 20%/24%/28%/32%/36%/40%. Critical damage of basic attacks is increased by 15%/18%/21%/24%/27%/30%\n\nImprint Skill: If the target has Hydro type debuffs, further increases damage dealt by 2.5%. Increases damage dealt towards units with no faction by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Shadow Runner.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-intervention-200",
+    "name": "Retired Intervention 200",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "R",
+    "stats": "Attack +202",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Intervention 200.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "intervention-200",
+    "name": "Intervention 200",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SR",
+    "stats": "Attack +285",
+    "trait": "When attacking enemies whose DEF is lower or equal to 0, deals 1 fixed point of Stability damage",
+    "effect": "Increase damage to enemy targets further than 7 tiles around the user by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/Intervention 200.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "night-wayfaring-cardamom",
+    "name": "Night-Wayfaring Cardamom",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +397\nAttack Boost +15%",
+    "trait": "When attacking enemies whose DEF is lower or equal to 0, deals 1 fixed point of Stability damage",
+    "effect": "The first two attacks of each round deal 20%/24%/28%/32%/36%/40% more Physical damage and ignore 10%/14%/18%/22%/26%/30% of the target's defense.\n\nImprint Skill: Increases damage dealt to targets with defense debuffs by 2.5%, and increases damage dealt to Mokosh by 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Night-Wayfaring Cardamom.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-dsr-50",
+    "name": "Retired DSR-50",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired DSR-50.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "dsr-50",
+    "name": "DSR-50",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SR",
+    "stats": "Attack +265",
+    "trait": "At the end of the action, if your Confectance index is below max, gain 1 random buff for 1 turn.",
+    "effect": "If user has a buff, the damage dealt is increased by 5%/6%/7%/8%/9%/10%, and if its a Burn buff, damage is increased by an additional 5%/6%/7%/8%/9%/10%.",
+    "images": {
+      "weapon": "image/weapons/DSR-50.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "tidal-nocturne",
+    "name": "Tidal Nocturne",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +369\nAttack Boost +15%",
+    "trait": "At the end of the action, if your Confectance index is below max, gain 1 random buff for 1 turn.",
+    "effect": "Increases Burn damage dealt by all friendly units by 5%. If user owns Embers or Glowing Embers, increases Burn damage dealt by 20%/25%/30%/35%/40%/45%.\nWhen a friendly unit gains a Burn buff, they obtain Attack Boost II, lasting 2 rounds.\n\nImprint Skill: Increases damage dealt to target under Burn type debuffs by 2.5%. If the target is ELID, further increases damage by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Tidal Nocturne.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-vsk-94",
+    "name": "Retired VSK-94",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired VSK-94.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "vsk-94",
+    "name": "VSK-94",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "Attacks ignore 1 point of Stability Index. When possessing Insight, additionally ignore another 1 point of Stability Index.",
+    "effect": "Increases damage dealt by Ultimate by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/VSK-94.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "guardian-silverwing",
+    "name": "Guardian Silverwing",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +390\nAttack Boost +15%",
+    "trait": "Attacks ignore 1 point of Stability Index. When possessing Insight, additionally ignore another 1 point of Stability Index.",
+    "effect": "At the end of the action, applies Soak I for the holder and the holder's Physical Summon for 2 turns. Increases damage dealt by Ultimate by 15%/20%/25%/30%/35%/40%\n\nPhysical Summon: Summons that occupies tiles on the field and has their own attributes (e.g. Papasha's City Guard, Andoris' Auto-Turrets, Nikketa's Kulich etc)\n\nSoak I: Increases Hydro damage dealt by 10%. This is considered as a Hydro type buff\n\nImprint Skill: Increases damage dealt to Sica Technology units by 2.5%. If the target has Hydro type debuffs, further increases damage by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Guardian Silverwing.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-m1903-springfield",
+    "name": "Retired M1903 Springfield",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "R",
+    "stats": "Attack +160",
+    "effect": "Increase healing effectiveness by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired M1903 Springfield.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "m1903-springfield",
+    "name": "M1903 Springfield",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SR",
+    "stats": "Attack +230",
+    "trait": "After healing an ally, restores 2 Stability for self. This can be activated once per round",
+    "effect": "When using an active attack or before using an active healing skill, if the target has Hydro type buffs or debuffs, increases damage dealt and healing by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/M1903 Springfield.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "radiance",
+    "name": "Radiance",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +320\nAttack Boost +15%",
+    "trait": "After healing an ally, restores 2 Stability for self. This can be activated once per round",
+    "effect": "Increases Hydro damage dealt for all allies by 5%. Increases max HP for self by 15%/20%/25%/30%/35%/40%. When using an active healing skill, applies Attack Up II for 2 turns\n\nImprint Skill: Increases damage dealt towards Sica Technology units by 2.5%. If the target has Hydro type debuffs, further increases damage dealt by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Radiance.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-ksvk",
+    "name": "Retired KSVK",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired KSVK.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "ksvk",
+    "name": "KSVK",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "If any weakness is exploited, ignore 10% of the target's defense. If it is a Freeze Phase Weakness, ignores another 10% of defense.",
+    "effect": "Damage dealt to enemy targets on Freeze tiles is increased by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/KSVK.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "eulogistic-verse",
+    "name": "Eulogistic Verse",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +348\nAttack Boost +15%",
+    "trait": "If any weakness is exploited, ignores 10% of the target's defense. If it is a Freeze Phase Weakness, ignores another 10% of defense.",
+    "effect": "When the user has Insight, increases damage dealt by 10%/12%/14%/16%/18%/20%. Before an allied unit makes an active attack, if the target has Freeze debuffs, increases the Freeze damage dealt by 5%/6%/7%/8%/9%/10%. If the target has Frigid, this damage increase is enhanced to 10%/12%/14%/16%/18%/20%.\n\nImprint Skill: Increase damage dealt to Marley Thermal Power Plant by 2.5%. If the target has Frozen, increase the damage dealt by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Eulogistic Verse.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-w-2000",
+    "name": "Retired W 2000",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired W 2000.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "w-2000",
+    "name": "W 2000",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "Attacks ignore 10% of the target's defense. If the target has Freeze debuffs, ignore an additional 10% of its defense.",
+    "effect": "If HP is above 80%, out-of-turn damage is increased by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/W 2000.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "bittersweet-caramel",
+    "name": "Bittersweet Caramel",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +390\nCrit DMG +25%",
+    "trait": "Attacks ignore 10% of the target's defense. If the target has Freeze debuffs, ignore an additional 10% of its defense.",
+    "effect": "Increase Freeze damage  dealt by 10%/12%/14%/16%/18%/20%. For every 4/4/3/3/2/2 instances of damage dealt outside of own turn, increase damage dealt by the next active attack by 10%/12%/14%/16%/18%/20%.\n\nImprint Skill: Increase damage dealt to Paradeus units by 2.5%. If the target has Frozen, increase it by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Bittersweet Caramel.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-three-line-rifle-m1891",
+    "name": "Retired Three-Line Rifle M1891",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Three-Line Rifle M1891.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "three-line-rifle-m1891",
+    "name": "Three-Line Rifle M1891",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SR",
+    "stats": "Attack +272",
+    "trait": "Attacks ignore 1 point of Stability Index. When possessing Insight, additionally ignore another 1 point of Stability Index.",
+    "effect": "If the target is affected by a Phase debuff, damage dealt to them is increased by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Three-Line Rifle M1891.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "samosek",
+    "name": "Samosek",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SSR",
+    "stats": "Attack +383\nCrit DMG +25%",
+    "trait": "Attacks ignore 1 point of Stability Index. When possessing Insight, additionally ignore another 1 point of Stability Index.",
+    "effect": "Phase damage is increased by 10%/12%/14%/16%/18%/20%. Electric damage is increased by another 10%/12%/14%/16%/18%/20%.\n\nImprint Skill: Increase damage dealt to PMCs by 2.5%. If the target has Paralysis, increase it by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Samosek.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-50-nemesis",
+    "name": "Retired .50 Nemesis",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired .50 Nemesis.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "50-nemesis",
+    "name": ".50 Nemesis",
+    "weapon_type": "Sniper Rifle",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "Attacks ignore 1 point of Stability Index. When possessing Insight, additionally ignore another 1 point of Stability Index.",
+    "effect": "If the target's current HP percentage is above 90%/70%/50%/30%/30%/30%, increases damage dealt to them by 10%/12%/15%/15%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/.50 Nemesis.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "mj-lnir",
+    "name": "Mjölnir",
+    "weapon_type": "MG",
+    "rarity": "SSR",
+    "stats": "Attack +327\nAttack Boost +15%",
+    "trait": "If AoE damage is dealt, apply 1 debuff for 1 turn.",
+    "effect": "If no movement has been made, increases damage dealt by 15%/18%/21%/24%/27%/30%, and at the end of the action, restores 10%/12%/14%/16%/18%/20% of max HP and 1/1/2/2/2/3 points Stability Index.",
+    "images": {
+      "weapon": "image/weapons/Mjölnir.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-lewis-gun",
+    "name": "Retired Lewis gun",
+    "weapon_type": "MG",
+    "rarity": "R",
+    "stats": "Attack +195",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Lewis gun.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "lewis-gun",
+    "name": "Lewis gun",
+    "weapon_type": "MG",
+    "rarity": "SR",
+    "stats": "Attack +278",
+    "trait": "When exploiting a weakness, ignores 10% of the target's defense. When exploiting a Burn weakness, additionally ignores 10% of the target's defense.",
+    "effect": "Active skills and basic attacks deal  10%/12%/14%/16%/18%/20% more Burn damage.",
+    "images": {
+      "weapon": "image/weapons/Lewis gun.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "toysmith",
+    "name": "Toysmith",
+    "weapon_type": "MG",
+    "rarity": "SSR",
+    "stats": "Attack +390\nAttack Boost +15%",
+    "trait": "When exploiting a weakness, ignores 10% of the target's defense. When exploiting a Burn weakness, additionally ignores 10% of the target's defense.",
+    "effect": "Burn damage is increased by 15%/18%/21%/24%/27%/30%. If 3 or more instances of Burn damage is dealt this turn, Burn damage in the next turn is further increased by 10%/11%/12%/13%/14%/15%. \n\nImprint Skill: Increases damage dealt to targets with Burn debuffs by 2.5% and damage dealt to Entropy Virus by 2.5%",
+    "images": {
+      "weapon": "image/weapons/Toysmith.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-lahti-saloranta-m-26",
+    "name": "Retired Lahti-Saloranta M/26",
+    "weapon_type": "MG",
+    "rarity": "R",
+    "stats": "Attack +153",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Lahti-Saloranta M-26.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "lahti-saloranta-m-26",
+    "name": "Lahti-Saloranta M/26",
+    "weapon_type": "MG",
+    "rarity": "SR",
+    "stats": "Attack +223",
+    "trait": "After attacking enemies whose DEF is lower or equal to 0, deals 1 fixed Stability damage",
+    "effect": "Increases damage dealt and healing of the holder's Physical Summon by 10%/12%/14%/16%/18%/20%",
+    "images": {
+      "weapon": "image/weapons/Lahti-Saloranta M-26.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "nj-r-r",
+    "name": "Njörðr",
+    "weapon_type": "MG",
+    "rarity": "SSR",
+    "stats": "Attack +313\nAttack Boost +15%",
+    "trait": "After attacking enemies whose DEF is lower or equal to 0, deals 1 fixed Stability damage",
+    "effect": "Increases damage dealt towards enemies with Defense type debuffs for all allies by 10%. Inceases damage dealt and healing of the holder's Physical Summon by 15%/18%/21%/24%/27%/30%\n\nImprint Skill: Increases damage dealt to Girard Group units by 2.5%. If the target has Defense type debuffs, increase it by an additional 2.5%",
+    "images": {
+      "weapon": "image/weapons/Njörðr.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-pecheneg-sp",
+    "name": "Retired Pecheneg-SP",
+    "weapon_type": "MG",
+    "rarity": "R",
+    "stats": "Attack +174",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Pecheneg-SP.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "pecheneg-sp",
+    "name": "Pecheneg-SP",
+    "weapon_type": "MG",
+    "rarity": "SR",
+    "stats": "Attack +251",
+    "trait": "If AoE damage is dealt, apply 1 debuff for 1 turn.",
+    "effect": "If attacks hit 4/3/3/3/2/1 targets, the next instance of damage dealt with skills is increased by 10%/12%/14%/16%/18%/20%.",
+    "images": {
+      "weapon": "image/weapons/Pecheneg-SP.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "optical-illusion",
+    "name": "Optical Illusion",
+    "weapon_type": "MG",
+    "rarity": "SSR",
+    "stats": "Attack +348\nCrit Rate +25%",
+    "trait": "If AoE damage is dealt, apply 1 debuff for 1 turn. If the target has 3 or more debuffs, this attack ignores 15% of their Cover damage reduction.",
+    "effect": "Each time an attack successfully hits 3/3/3/3/2/2 targets, the damage of the next active skill is increased by 10%/15%/20%/20%/20%/20%, with an additional increase of 10%/10%/10%/15%/20%/20% damage for AoE skills. After dealing damage, there is a 20%/36%/54%/68%/84%/100% chance to apply 1/1/1/1/1/2 debuff to the target.\n\nImprint Skill: Increase damage dealt to Varjagerss by 2.5%. If using a basic skill, increases the damage by an additional 2.5%.",
+    "images": {
+      "weapon": "image/weapons/Optical Illusion.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "retired-model-arm",
+    "name": "Retired Model ARM",
+    "weapon_type": "MG",
+    "rarity": "R",
+    "stats": "Attack +188",
+    "effect": "Increase damage by 1%/2%/3%/4%/5%/6%.",
+    "images": {
+      "weapon": "image/weapons/Retired Model ARM.png"
+    },
+    "server": "global"
+  },
+  {
+    "slug": "model-arm",
+    "name": "Model ARM",
+    "weapon_type": "MG",
+    "rarity": "SR",
+    "stats": "Attack +265",
+    "trait": "If AoE damage is dealt, apply 1 debuff for 1 turn.",
+    "effect": "If remaining mobility is greater than 3 tiles when performing an active attack, increase damage dealt by 5%/7%/9%/11%/13%/15%. If the target has a debuff, damage is increased by an additional 5%.",
+    "images": {
+      "weapon": "image/weapons/Model ARM.png"
+    },
+    "server": "global"
+  }
+]

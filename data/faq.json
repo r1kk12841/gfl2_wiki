@@ -1,0 +1,30 @@
+[
+  {
+    "question": "What is Girls' Frontline 2: Exilium?",
+    "answer": "Girls' Frontline 2: Exilium (GFL2) is a 3D tactical turn-based strategy RPG developed by MICA Team (Sunborn Network). Players command Tactical Dolls across grid-based battlefields featuring elevation, full cover mechanics, and elemental phase interactions."
+  },
+  {
+    "question": "What are the Character Classes and their roles?",
+    "answer": "Playable Dolls are categorized into 4 distinct tactical classes:\n• Bulwark: Durable frontline defenders that draw enemy fire, provide Stability protection, and protect teammates with shields and cover.\n• Vanguard: High-mobility assault units excelling in close-range skirmishes and ambushing priority targets.\n• Sentinel: Long-range precision damage dealers and crowd controllers specializing in targeting high-threat enemies.\n• Support: Tactical utility specialists providing team healing, buffs, enemy debuffs, and action-economy manipulation."
+  },
+  {
+    "question": "How do Elemental Phases and Weaknesses work?",
+    "answer": "Every Doll and enemy interacts with elemental damage phases: Physical, Burn, Hydro, Electric, Freeze, Corrosion, and Resonance. Exploiting an enemy's elemental weakness deals increased damage, bypasses cover reduction, and accelerates enemy Stability Break."
+  },
+  {
+    "question": "What is the Stability Gauge and Stability Break?",
+    "answer": "Each unit possesses a Stability Gauge in addition to HP. When taking Stability damage, the gauge depletes. When reduced to 0, the unit enters Stability Break—losing cover bonuses, suffering increased incoming damage, and often becoming stunned or incapacitated for a turn."
+  },
+  {
+    "question": "How does Fortification (Vertebrae Upgrade) work?",
+    "answer": "Fortification unlocks up to 6 upgrade tiers for a Doll by obtaining duplicate copies or resonance cores. Each tier upgrades and enhances specific active or passive skills, significantly boosting multipliers, reducing cooldowns, or adding unique tactical secondary effects."
+  },
+  {
+    "question": "What are Neural Helix nodes and Keys?",
+    "answer": "Neural Helix is the Doll progression tree consisting of 6 base stat Enhancement nodes (unlocked at levels 1 through 40) and specialized Keys (Fixed Keys 1-6, Affinity Key, Common Key, and Expansion Key). Keys confer passive combat perks and unique skill modifications."
+  },
+  {
+    "question": "What are Signature Weapons?",
+    "answer": "Signature Weapons are customized 5-star (SSR) armaments tailor-made for specific Dolls. While any Doll of the appropriate weapon type can equip them, the weapon's exclusive imprint trait triggers powerful bonuses when wielded by its intended owner."
+  }
+]

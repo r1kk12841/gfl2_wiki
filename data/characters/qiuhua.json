@@ -1,0 +1,245 @@
+{
+  "slug": "qiuhua",
+  "name": "Qiuhua",
+  "class": "Vanguard",
+  "rarity": "Elite",
+  "phase": "Burn",
+  "weapon_type": "Shotgun",
+  "ammo_type": "Shotgun Ammo",
+  "signature_weapon": "Trailblazer",
+  "stats": {
+    "hp": 1713,
+    "atk": 757,
+    "def": 536
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Corrosion",
+  "stability_gauge": "8 points",
+  "movement_speed": "9 tiles",
+  "skills": [
+    {
+      "name": "Trailblaze",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Shotgun Ammo",
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 80% ATK to it",
+      "icon": "assets/images/characters/qiuhua/skill1-icon.png",
+      "range_image": "assets/images/characters/qiuhua/skill1-range.png"
+    },
+    {
+      "name": "Searing Sizzle",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 4,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 6 tile radius and deals Burn damage equivalent to 120% ATK to it. If the distance between Qiuhua and the target is less or equal to 4 tiles, increases damage dealt by 5% and Stability damage dealt by 1 point",
+      "icon": "assets/images/characters/qiuhua/skill2-icon.png",
+      "range_image": "assets/images/characters/qiuhua/skill2-range.png"
+    },
+    {
+      "name": "Soaring Leap",
+      "tags": [
+        "Active",
+        "Targeted"
+      ],
+      "stability_damage": 2,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects a tile within a 6 tile radius of self and lands on the selected tile, dealing Burn damage equivalent to 30% ATK to the nearest enemy target within a 6 tile radius. After attacking, gains Extra Command. Reduces the cooldown of Ultimate by 1 turn",
+      "icon": "assets/images/characters/qiuhua/skill3-icon.png",
+      "range_image": "assets/images/characters/qiuhua/skill3-range.png"
+    },
+    {
+      "name": "Boil and Reduce",
+      "tags": [
+        "Active",
+        "AoE",
+        "Debuff"
+      ],
+      "stability_damage": 3,
+      "cooldown": "3 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "3",
+      "description": "Selects a tile within a 6 tile radius of self, dealing AoE Burn damage equivalent to 90% ATK and applying Scorch Mark to all enemies within a 3 tile radius of the specified tile. This skill consumes all Confectance Index, for each point of Confectance Index consumed, increases damage multiplier by 5%",
+      "icon": "assets/images/characters/qiuhua/ult-icon.png",
+      "range_image": "assets/images/characters/qiuhua/ult-range.png"
+    },
+    {
+      "name": "Zao Jun's Rule\n(Passive / Support)",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "When there are no allies within a 2 tile radius of self, increases Burn damage dealt by 5%\n\nIf Overburn is applied on an enemy within attack range, Qiuhua launches one instance of Emergency Support to the target, dealing Burn damage equivalent to 60% ATK and 1 Stability Damage, and increases Confectance Index by 1 point. This effect can be activated once per turn\n\nIncreases CRIT rate by 30% when dealing Burn damage towards targets with Scorch Mark",
+      "icon": "assets/images/characters/qiuhua/passive.png",
+      "range_image": "assets/images/characters/qiuhua/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Boil and Reduce",
+      "level": 2,
+      "effect": "Reduces cooldown by 1 turn. When dealing damage, immediately triggers the effect of Scorch Mark that are triggered at the end of the holder's action once"
+    },
+    {
+      "tier": 2,
+      "skill": "Zao Jun's Rule",
+      "level": 2,
+      "effect": "Emergency Support can be activated 1 → 2 times per turn\n\nIncreases Burn damage dealt by 5% → 15%. Removes the condition required to activate this effect\n\nWhen dealing damage, if CRIT rate is above 100%, each 1% additional CRIT rate is converted into 1% CRIT DMG"
+    },
+    {
+      "tier": 3,
+      "skill": "Zao Jun's Rule",
+      "level": 3,
+      "effect": "Scorch Mark no longer has a maximum stack limit\n\nNew effect is added when dealing Burn damage towards targets with Scorch Mark - if the number of stacks of Scorch Mark is more than 10, for each additional stack, increases ATK by 1%"
+    },
+    {
+      "tier": 4,
+      "skill": "Soaring Leap",
+      "level": 2,
+      "effect": "Increases damage multiplier by 50%\n\nIf the target has Scorch Mark, deals an additional instance of fixed damage equivalent to 50% ATK\n\nAfter attacking, gains Phase Boost II and Stability Offensive II for 1 turn"
+    },
+    {
+      "tier": 5,
+      "skill": "Searing Sizzle",
+      "level": 2,
+      "effect": "After attacking, gains 6 tiles of Additional Movement\n\nIf the target has Scorch Mark, increases damage dealt by 30%\n\nIf the distance between Qiuhua and the target is less or equal to 4 tiles, increases damage dealt by 5% → 15% and Stability damage dealt by 1 → 2 points"
+    },
+    {
+      "tier": 6,
+      "skill": "Boil and Reduce",
+      "level": 3,
+      "effect": "If this skill hit 1 target, increases damage dealt by 15%\n\nEnhanced the effects of Scorch Mark - increases damage dealt per stack to 10% of the caster's ATK, and increases the number of stack gained when receiving Burn damage to 2"
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +35\nDEF +23",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +72\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +43\nDEF +31",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +99\nCRIT DMG +10.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +50\nDEF +41",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +58\nHP +129",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Meal Prep",
+      "level": 20,
+      "effect": "At the start of the battle, increases Confectance Index by 3 points",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/qiuhua/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Roaring Stove",
+      "level": 20,
+      "effect": "At the start of the turn, applies Scorch Mark to the enemy with the highest HP. This has a cooldown of 2 turns",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/qiuhua/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Slice and Dice",
+      "level": 30,
+      "effect": "Becomes immune to all debuffs inflicted by Burn tiles and all Burn type debuffs. At the end of the action, if Qiuhua is on a Burn tile, restores 2 Stability and HP equivalent to 10% max HP",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/qiuhua/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Fragrant Stir-Fry",
+      "level": 30,
+      "effect": "Before using an active attack, applies Overburn on the target for 1 turn",
+      "materials": "3\n\n\n8000",
+      "image": "assets/images/characters/qiuhua/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Cooking Smoke",
+      "level": 40,
+      "effect": "After moving, gains 1 stack of Quick Barrier",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/qiuhua/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Bloated Belly",
+      "level": 40,
+      "effect": "Before undergoing Emergency Support, dispels 1 buff from the target",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/qiuhua/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key",
+      "level": "-",
+      "effect": "ATK +3%, HP +3%, CRIT DMG +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/qiuhua/affi.png"
+    },
+    {
+      "name": "Common Key",
+      "level": 40,
+      "effect": "CRIT +5.0% / When Out-of-Turn attack deals Burn damage, increases damage dealt by 10%",
+      "materials": "None",
+      "image": "assets/images/characters/qiuhua/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "Emergency Support damage multiplier is increased by 30% and when dealing damage, ignores 15% of target's defense; for each Emergency Support performed, gain 1 stack of Wok Aura for 2 rounds.\n\nWok Aura: Burn damage dealt increased by 7%, damage taken reduced by 7%, stacks up to 4 times. Considered a Burn buff, cannot be cleansed.\n\nWhen a unit with Scorch Mark dies, deals AoE Burn damage equal to 130% of Qiuhua's attack to all allied units within a radius of 3 tiles.\n\nWhen the active skill Soaring Leap deals damage, creates Incineration tiles within a radius of 1 tile around the target, lasting for 2 turns.",
+      "materials": "3\n\n\n12000",
+      "image": "assets/images/characters/qiuhua/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/qiuhua/portrait.png",
+    "avatar": "assets/images/characters/qiuhua/avatar.png",
+    "class_icon": "assets/images/class/vanguard.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}

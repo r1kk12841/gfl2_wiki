@@ -1,0 +1,247 @@
+{
+  "slug": "ksenia",
+  "name": "Ksenia",
+  "class": "Support",
+  "rarity": "Standard",
+  "phase": "Burn",
+  "weapon_type": "Handgun",
+  "ammo_type": "Light Ammo",
+  "signature_weapon": "Stechkin",
+  "stats": {
+    "hp": 1842,
+    "atk": 539,
+    "def": 463
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Burn",
+  "stability_gauge": "10 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Special Discount",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
+      "icon": "assets/images/characters/ksenia/skill1-icon.png",
+      "range_image": "assets/images/characters/ksenia/skill1-range.png"
+    },
+    {
+      "name": "Favorable Cycle",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Debuff"
+      ],
+      "stability_damage": 4,
+      "cooldown": "2 turns",
+      "confectance_cost": 2,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 enemy target within 6 tiles, deal Physical damage equal to 75% of attack to it and apply 2 stacks of Flammable, as well as Overburn for 1 turn. If under the effects of 2 or more Burn buffs, performs an additional attack on the original target, dealing Burn damage equal to 75% of attack and 2 Stability Damage.",
+      "icon": "assets/images/characters/ksenia/skill2-icon.png",
+      "range_image": "assets/images/characters/ksenia/skill2-range.png"
+    },
+    {
+      "name": "Comprehensive Rescue",
+      "tags": [
+        "Active",
+        "Healing",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 2,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects 1 allied target within 6 tiles, restoring HP equal to 130% of attack, 2 points of Stability Index, and applies Heat Recovery. If the target's HP is fully restored after healing, applies Blazing Assault II for 2 turns.",
+      "icon": "assets/images/characters/ksenia/skill3-icon.png",
+      "range_image": "assets/images/characters/ksenia/skill3-range.png"
+    },
+    {
+      "name": "The Secret of Making Money",
+      "tags": [
+        "Active",
+        "Targeted",
+        "Buff"
+      ],
+      "stability_damage": 5,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "The user gains Heat Recovery and Blazing Assault II for 2 turns. Select 1 enemy target within 6 tiles and deal Burn damage equal to 160% of attack to it.",
+      "icon": "assets/images/characters/ksenia/ult-icon.png",
+      "range_image": "assets/images/characters/ksenia/ult-range.png"
+    },
+    {
+      "name": "Passion for Shopping",
+      "tags": [
+        "Passive",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "effect_area": "Target",
+      "description": "When an enemy unit within range receives targeted damage from an allied unit, prioritizes performing 1 instance of Action Support, dealing Physical damage equal to 80% of attack and 3 points of Stability Damage to the enemy unit, and applies Blazing Assault II to the allied unit for 2 turns. This can be triggered up to once per turn.\n\nWhen under the effects of Heat Recovery, Stability Damage is increased by 1 point respectively. At the end of the action, gains 1 point of Confectance Index for each Burn buff.",
+      "icon": "assets/images/characters/ksenia/passive.png",
+      "range_image": "assets/images/characters/ksenia/passive-range.png"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Favorable Cycle",
+      "level": 2,
+      "effect": "Apply Overburn for 1 turn after the first attack."
+    },
+    {
+      "tier": 2,
+      "skill": "Passion for Shopping",
+      "level": 2,
+      "effect": "When under the effects of Blazing Assault, increases Stability Damage dealt by 1 point."
+    },
+    {
+      "tier": 3,
+      "skill": "The Secret of Making Money",
+      "level": 2,
+      "effect": "If a phase weakness is exploited, increases damage dealt by 20%."
+    },
+    {
+      "tier": 4,
+      "skill": "Passion for Shopping",
+      "level": 3,
+      "effect": "The maximum amount of times that Action Support can trigger increases by 1."
+    },
+    {
+      "tier": 5,
+      "skill": "Comprehensive Rescue",
+      "level": 2,
+      "effect": "If the target's HP is fully restored after healing and wasn't full before that, additionally restores 2 points of their Stability Index."
+    },
+    {
+      "tier": 6,
+      "skill": "The Secret of Making Money",
+      "level": 3,
+      "effect": "When attacking targets with Overburn, increase critical rate by 100%."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +25\nDEF +19",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 20,
+      "effect": "HP +78\nATK +5.0%",
+      "materials": "20\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 25,
+      "effect": "ATK +31\nDEF +27",
+      "materials": "40\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 30,
+      "effect": "HP +107\nHP +5.0%",
+      "materials": "80\n\n\n8000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 35,
+      "effect": "ATK +36\nDEF +35",
+      "materials": "120\n\n\n10000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 40,
+      "effect": "ATK +41\nHP +139",
+      "materials": "160\n\n\n12000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Win-Win Partnership",
+      "level": 20,
+      "effect": "When healing an allied target other than the user, applies 1 random buff to them and the user.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/ksenia/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Equivalent Exchange",
+      "level": 20,
+      "effect": "When using Favorable Cycle, for each kill made, increases the maximum number of Action Support uses this turn by 1.",
+      "materials": "1\n\n\n3000",
+      "image": "assets/images/characters/ksenia/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Steady Income",
+      "level": 30,
+      "effect": "After dealing Burn damage, restores HP equal to 10% of damage and 1 point of Stability Index.",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/ksenia/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Mutual Benefit",
+      "level": 30,
+      "effect": "When using Comprehensive Rescue, the user gains the same buffs",
+      "materials": "1\n\n\n8000",
+      "image": "assets/images/characters/ksenia/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Friendship Gift",
+      "level": 40,
+      "effect": "When applying a Burn buff, additiionally cleanses 1 debuff.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/ksenia/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Discount Guide",
+      "level": 40,
+      "effect": "If the user possesses Heat Recovery at the end of the action, gains 1 point of Confectance Index.",
+      "materials": "2\n\n\n12000",
+      "image": "assets/images/characters/ksenia/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - Making Money",
+      "level": "-",
+      "effect": "ATK +3%, DEF +3%, HP +3%",
+      "materials": "Unlocked at Affinity Lvl 5",
+      "image": "assets/images/characters/ksenia/affi.png"
+    },
+    {
+      "name": "Common Key - Blazing Inferno",
+      "level": 40,
+      "effect": "HP +3.0% / When applying a Burn buff, there is a 50% chance to apply 1 additional buff to the target for 1 turn.",
+      "materials": "None",
+      "image": "assets/images/characters/ksenia/common.png"
+    },
+    {
+      "name": "Expansion Key",
+      "level": 60,
+      "effect": "At the end of the action, restores 2 Stability for the ally with the lowest Stability",
+      "materials": "3\n\n\n15000",
+      "image": "assets/images/characters/ksenia/expan.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/ksenia/portrait.png",
+    "avatar": "assets/images/characters/ksenia/avatar.png",
+    "class_icon": "assets/images/class/support.png"
+  },
+  "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
+  "server": "global"
+}
