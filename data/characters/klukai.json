@@ -47,7 +47,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles, dealing Corrosion damage equal to 80% of attack. Performs an additional attack, deals AoE Corrosion damage equal to 60% of attack to the target and all enemy targets within 3 tiles, pulling all affected enemy targets 1 tile towards the center.\n\nIf any enemy targets are killed, reduces the cooldown of the Ultimate skill Devastating Drift by 1 turn, and gains 2 points of Confectance Index.\n\nIf no enemy targets are killed, applies 1 stack of Corrosive Infusion to the target for 2 turns.",
       "icon": "assets/images/characters/klukai/skill2-icon.png",
-      "range_image": "assets/images/characters/klukai/skill2-range.png"
+      "range_image": "assets/images/characters/klukai/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Overpowering Corrosion",
@@ -63,12 +64,13 @@
       "effect_area": "Target",
       "description": "Selects 1 tile within a 8 tiles, dealing AoE Corrosion damage equal to 90% of attack to all enemy targets within 3 tiles, and applies Toxic Infiltration for 2 turns. Increases damage by 15% to targets already affected by Toxic Infiltration.",
       "icon": "assets/images/characters/klukai/skill3-icon.png",
-      "range_image": "assets/images/characters/klukai/skill3-range.png"
+      "range_image": "assets/images/characters/klukai/skill3-range.png",
+      "ammo_type": "Corrosion"
     },
     {
       "name": "Devastating Drift",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE"
       ],
       "stability_damage": 2,
@@ -77,7 +79,9 @@
       "effect_area": "Target",
       "description": "Selects 1 tile within a cross-shaped area of 4 to 8 tiles, landing on the selected tile and dealing AoE Corrosion damage equal to 100% of attack to all enemy targets in a 5 tiles wide path. Gains 6 tiles of Additional Movement. If 2 or more targets are killed, this skill can be used again. up to a maximum of 1 additional time.",
       "icon": "assets/images/characters/klukai/ult-icon.png",
-      "range_image": "assets/images/characters/klukai/ult-range.png"
+      "range_image": "assets/images/characters/klukai/ult-range.png",
+      "ammo_type": "Corrosion",
+      "range": "--"
     },
     {
       "name": "Elite's Pride",
@@ -92,7 +96,8 @@
       "effect_area": "Target",
       "description": "Immune to all negative Control-type tile effects. When dealing damage with active attacks, applies 1 stack of Corrosive Infusion to the target for 2 turns, and gains 1 stack of Competitive Spirit after skill usage.\n\nEach time Klukai performs an active attack or other allied units deal Corrosion damage, Klukai gains 1 point of Confectance Index. For every 3 points of Confectance Index gained, reduces the cooldown of her Ultimate skill by 1 turn.",
       "icon": "assets/images/characters/klukai/passive.png",
-      "range_image": "assets/images/characters/klukai/passive-range.png"
+      "range_image": "assets/images/characters/klukai/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -239,7 +244,8 @@
   "images": {
     "portrait": "assets/images/characters/klukai/portrait.png",
     "avatar": "assets/images/characters/klukai/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/klukai/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

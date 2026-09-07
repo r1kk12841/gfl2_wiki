@@ -46,7 +46,8 @@
       "effect_area": "Target",
       "description": "Consumes HP equivalent to 30% of max HP, and gains 2 stacks of Hot Investment (this effect will not lower HP below 10%). Selects an enemy target within a 6 tile radius and deals Burn damage equivalent to 120% ATK to it.",
       "icon": "assets/images/characters/peri/skill2-icon.png",
-      "range_image": "assets/images/characters/peri/skill2-range.png"
+      "range_image": "assets/images/characters/peri/skill2-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Excess Order",
@@ -62,12 +63,13 @@
       "effect_area": "2",
       "description": "Consumes HP equivalent to 40% of max HP, and gains 3 stacks of Hot Investment (this effect will not lower HP below 10%). Selects a tile within a 6 tile radius of tile and deals AoE Burn damage equivalent to 100% ATK to all enemies within a 2 tile radius of the specified tile, and applies Overburn for 2 turns.",
       "icon": "assets/images/characters/peri/skill3-icon.png",
-      "range_image": "assets/images/characters/peri/skill3-range.png"
+      "range_image": "assets/images/characters/peri/skill3-range.png",
+      "ammo_type": "Burn"
     },
     {
       "name": "Final Bid",
       "tags": [
-        "Active",
+        "Ultimate",
         "Buff"
       ],
       "stability_damage": 0,
@@ -76,7 +78,8 @@
       "effect_area": "Target",
       "description": "Gains 6 stacks of Hot Investment, gains Bargain and Capital Protection for 3 rounds (Duration decreases at the end of the current round). Capital Protection can absorb damage equivalent to 50% of Peri's max HP.",
       "icon": "assets/images/characters/peri/ult-icon.png",
-      "range_image": "assets/images/characters/peri/ult-range.png"
+      "range_image": "assets/images/characters/peri/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Profit Maximization",
@@ -89,7 +92,8 @@
       "effect_area": "Target",
       "description": "At the end of the action, increases Confectance Index by 1 point. When allies (excluding self) activate Action Support that deals Burn damage, if Peri's Confectance Index is below 6 points, increases Confectance Index by 1 point. This effect can activate once per round\n\nAfter using an active skill, for every 3 stacks of Hot Investment held by self, Peri can 1 basic attack. The effects of this basic attack is changed to dealing Burn damage equivalent to 12% of Peri's initial max HP for each stack of Hot Investment held by self.",
       "icon": "assets/images/characters/peri/passive.png",
-      "range_image": "assets/images/characters/peri/passive-range.png"
+      "range_image": "assets/images/characters/peri/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -236,7 +240,8 @@
   "images": {
     "portrait": "assets/images/characters/peri/portrait.png",
     "avatar": "assets/images/characters/peri/avatar.png",
-    "class_icon": "assets/images/class/bulwark.png"
+    "class_icon": "assets/images/class/bulwark.png",
+    "portrait_webp": "assets/images/characters/peri/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

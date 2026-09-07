@@ -38,6 +38,7 @@
       "tags": [
         "Active",
         "AoE",
+        "Summon",
         "Debuff"
       ],
       "stability_damage": 3,
@@ -47,7 +48,8 @@
       "effect_area": "2",
       "description": "Selects an empty tile within a 9 tile radius, and summons Kulich, then deals AoE Physical damage equivalent to 80% ATK to all enemies within a 2 tiles radius of the selected tile, and applies Guilt for 2 turns. If Kulich is already present, teleports Kulich to the selected tile instead. Nikketa gains 1 point of Confectance Index.",
       "icon": "assets/images/characters/nikketa/skill2-icon.png",
-      "range_image": "assets/images/characters/nikketa/skill2-range.png"
+      "range_image": "assets/images/characters/nikketa/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Judgement Strike",
@@ -63,12 +65,13 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 9 tile radius, deals Hydro damage equivalent to 80% ATK to it, and applies Guilt for 2 turns. Nikketa gains 2 points of Confectance Index and Extra Command.",
       "icon": "assets/images/characters/nikketa/skill3-icon.png",
-      "range_image": "assets/images/characters/nikketa/skill3-range.png"
+      "range_image": "assets/images/characters/nikketa/skill3-range.png",
+      "ammo_type": "Hydro"
     },
     {
       "name": "Righteous Verdict",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted"
       ],
       "stability_damage": 2,
@@ -78,7 +81,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 9 tile radius, deals Hydro damage equivalent to 130% ATK to it. If the target has Guilt, performs an additional attack, and removes Guilt\n\nConsumes all Confectance Index, for each additional point of Confectance Index consumed, increases the damage of this skill by 5%",
       "icon": "assets/images/characters/nikketa/ult-icon.png",
-      "range_image": "assets/images/characters/nikketa/ult-range.png"
+      "range_image": "assets/images/characters/nikketa/ult-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "On-site Enforcement",
@@ -92,7 +96,8 @@
       "effect_area": "Target",
       "description": "If Kulich is present, Nikketa gains Insight. Before Nikketa and Kulich activates their skill, both gains 1 stack of Clue, if Phase Weakness is exploited, gains an additional stack of Clue\n\nKulich can only perform Counterattack once per round. After performing Counterattack, Nikketa will follow up by using her ultimate skill Righteous Verdict against the target (Righteous Verdict does not have a Confectance Cost requirement)",
       "icon": "assets/images/characters/nikketa/passive.png",
-      "range_image": "assets/images/characters/nikketa/passive-range.png"
+      "range_image": "assets/images/characters/nikketa/passive-range.png",
+      "range": "Self"
     }
   ],
   "summons": [
@@ -111,13 +116,31 @@
           "name": "Kulich's Loyalty",
           "description": "Enemies will not select Kulich as the target of their attacks\n\nIf enemies within a 3 tile radius deal damage, performs Counterattack, dealing Hydro damage equivalent to 80% ATK and 2 Stability damage",
           "icon": "assets/images/characters/nikketa/summon1-skill1-icon.png",
-          "range_image": "assets/images/characters/nikketa/summon1-skill1-range.png"
+          "range_image": "assets/images/characters/nikketa/summon1-skill1-range.png",
+          "tags": [
+            "Passive",
+            "Counterattack"
+          ],
+          "ammo_type": "Hydro",
+          "stability_damage": 2,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 3,
+          "effect_area": "Target"
         },
         {
           "name": "Kulich's Intimidation",
           "description": "Decreases ATK for all enemies within a 5 tile radius by 10%\n\nThis passive is only unlocked after reaching Vertebrae 5",
           "icon": "assets/images/characters/nikketa/summon1-passive1-icon.png",
-          "range_image": "assets/images/characters/nikketa/summon1-passive1-range.png"
+          "range_image": "assets/images/characters/nikketa/summon1-passive1-range.png",
+          "tags": [
+            "Passive"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 5,
+          "effect_area": "Target"
         }
       ],
       "image": "assets/images/characters/nikketa/summon1.png"
@@ -267,7 +290,8 @@
   "images": {
     "portrait": "assets/images/characters/nikketa/portrait.png",
     "avatar": "assets/images/characters/nikketa/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/nikketa/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

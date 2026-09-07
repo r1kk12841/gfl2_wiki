@@ -21,7 +21,8 @@
       "name": "Dreamscape Garrote",
       "tags": [
         "Basic Attack",
-        "Targeted"
+        "Targeted",
+        "Melee"
       ],
       "ammo_type": "Melee",
       "stability_damage": 2,
@@ -37,7 +38,8 @@
       "name": "Sanctuary Lauds",
       "tags": [
         "Active",
-        "AoE"
+        "Aoe",
+        "Melee"
       ],
       "ammo_type": "Melee",
       "stability_damage": 3,
@@ -53,7 +55,8 @@
       "name": "Death Knell",
       "tags": [
         "Active",
-        "AoE"
+        "AoE",
+        "Melee"
       ],
       "stability_damage": 3,
       "cooldown": "0 turns",
@@ -62,13 +65,16 @@
       "effect_area": "--",
       "description": "Selects a direction and deals melee AoE Electric damage equivalent to 90% ATK to all enemies within a 3x9 frontal area in the selected direction and generates Voltage tiles for 3 turns. The damage multiplier of this skill is increased increased by 10% based on the number of Coagulation stacks possessed by Sextans. Restores HP equalt to 90% ATK to all ally units within the area amd dispels 1 debuff from them. If the enemy target is afflicted with Blood Kiss, this skill deals an additional instance of melee Electric damage with the same multiplier after this skill resolves. Sextans gains Coagulation and removes the target's Blood Kiss. Additional stacks of Coagulation is gained based on the target's rank (Normal, Elite, Boss).",
       "icon": "assets/images/characters/sextans/skill3-icon.png",
-      "range_image": "assets/images/characters/sextans/skill3-range.png"
+      "range_image": "assets/images/characters/sextans/skill3-range.png",
+      "ammo_type": "Melee"
     },
     {
       "name": "Midnight Vesper",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE",
+        "Melee",
+        "Tile",
         "Debuff",
         "Buff"
       ],
@@ -78,7 +84,9 @@
       "effect_area": "Target",
       "description": "Selects 1 tile within a cross-shaped area of 4-8 tiles, landing on the selected tile and dealing melee AoE Electric melee damage equal to 120% of attack to all enemy targets on the path and apply Blood Kiss to them. Generates Voltage tiles for 3 turns. The damage multiplier of this skill is increased increased by 10% based on the number of Coagulation stacks possessed by Sextans. Before the skill resolves, apply Laceration to enemy targets within the effective area, lasting 2 turns; apply Holy Blood Mark to all ally units within the area, lasting 2 turns. After the skill, gain 6 tiles of Additional Movement and can use the active skill Death Knell.",
       "icon": "assets/images/characters/sextans/ult-icon.png",
-      "range_image": "assets/images/characters/sextans/ult-range.png"
+      "range_image": "assets/images/characters/sextans/ult-range.png",
+      "ammo_type": "Melee",
+      "range": "--"
     },
     {
       "name": "Requiem",
@@ -233,7 +241,8 @@
   "images": {
     "portrait": "assets/images/characters/sextans/portrait.png",
     "avatar": "assets/images/characters/sextans/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/sextans/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

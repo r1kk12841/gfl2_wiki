@@ -12,11 +12,11 @@
 <div class="faq-list">
   {% for entry in faq_entries %}
   <div class="faq-card">
-    <div class="faq-question">
+    <button type="button" class="faq-question" id="faq-q-{{ loop.index }}" aria-expanded="false" aria-controls="faq-a-{{ loop.index }}">
       <span>{{ entry.question }}</span>
-      <span class="faq-arrow" style="font-size:0.75rem; color:var(--text-muted);">▼</span>
-    </div>
-    <div class="faq-answer">
+      <span class="faq-arrow" style="font-size:0.75rem; color:var(--text-muted);" aria-hidden="true">▼</span>
+    </button>
+    <div class="faq-answer" id="faq-a-{{ loop.index }}" role="region" aria-labelledby="faq-q-{{ loop.index }}" hidden>
       {{ entry.answer }}
     </div>
   </div>

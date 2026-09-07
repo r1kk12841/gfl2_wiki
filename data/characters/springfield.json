@@ -47,7 +47,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within 9 tiles and applies False Intelligence to it for 2 turns. Deals Hydro damage equal to 130% of attack to the target and applies Congestion for 1 turn. Springfield gains 1 point of Confectance Index.",
       "icon": "assets/images/characters/springfield/skill2-icon.png",
-      "range_image": "assets/images/characters/springfield/skill2-range.png"
+      "range_image": "assets/images/characters/springfield/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Opportune Assistance",
@@ -68,8 +69,9 @@
     {
       "name": "Path of Protection",
       "tags": [
-        "Active",
-        "AoE"
+        "Ultimate",
+        "AoE",
+        "Summon"
       ],
       "stability_damage": 2,
       "cooldown": "3 turns",
@@ -84,7 +86,8 @@
       "name": "Eagle's Vigilance",
       "tags": [
         "Passive",
-        "Buff"
+        "Buff",
+        "Counterattack"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -92,7 +95,8 @@
       "effect_area": "Target",
       "description": "At the end of Springfield's action, if Confectance Index is maxed out, expends all Confectance Index and gains Extra Action.\n\nAt the start of the turn, if Springfield's HP is higher than 80%, gains Insight for 2 turns. If the target that Taryz is following deals damage to an allied unit, Taryz performs Counterattack on it, dealing Hydro damage equal to 20% of Springfield's max HP and 1 point of Stability damage and healing the allied unit for 20% of Springfield's max HP. Can be triggered up to 2 times per turn.\n\nIf Taryz is on the field, Springfield recovers HP equal to 20% of max HP at the end of the action.",
       "icon": "assets/images/characters/springfield/passive.png",
-      "range_image": "assets/images/characters/springfield/passive-range.png"
+      "range_image": "assets/images/characters/springfield/passive-range.png",
+      "range": "Self"
     }
   ],
   "summons": [
@@ -105,7 +109,8 @@
         "def": "100% of Springfield's initial DEF"
       },
       "stability_gauge": "0 points",
-      "movement_speed": "6 tiles"
+      "movement_speed": "6 tiles",
+      "skills": []
     }
   ],
   "fortification": [
@@ -252,7 +257,8 @@
   "images": {
     "portrait": "assets/images/characters/springfield/portrait.png",
     "avatar": "assets/images/characters/springfield/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/springfield/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

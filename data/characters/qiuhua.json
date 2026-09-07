@@ -46,7 +46,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 6 tile radius and deals Burn damage equivalent to 120% ATK to it. If the distance between Qiuhua and the target is less or equal to 4 tiles, increases damage dealt by 5% and Stability damage dealt by 1 point",
       "icon": "assets/images/characters/qiuhua/skill2-icon.png",
-      "range_image": "assets/images/characters/qiuhua/skill2-range.png"
+      "range_image": "assets/images/characters/qiuhua/skill2-range.png",
+      "ammo_type": "Shotgun Ammo"
     },
     {
       "name": "Soaring Leap",
@@ -61,12 +62,13 @@
       "effect_area": "Target",
       "description": "Selects a tile within a 6 tile radius of self and lands on the selected tile, dealing Burn damage equivalent to 30% ATK to the nearest enemy target within a 6 tile radius. After attacking, gains Extra Command. Reduces the cooldown of Ultimate by 1 turn",
       "icon": "assets/images/characters/qiuhua/skill3-icon.png",
-      "range_image": "assets/images/characters/qiuhua/skill3-range.png"
+      "range_image": "assets/images/characters/qiuhua/skill3-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Boil and Reduce",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE",
         "Debuff"
       ],
@@ -77,13 +79,14 @@
       "effect_area": "3",
       "description": "Selects a tile within a 6 tile radius of self, dealing AoE Burn damage equivalent to 90% ATK and applying Scorch Mark to all enemies within a 3 tile radius of the specified tile. This skill consumes all Confectance Index, for each point of Confectance Index consumed, increases damage multiplier by 5%",
       "icon": "assets/images/characters/qiuhua/ult-icon.png",
-      "range_image": "assets/images/characters/qiuhua/ult-range.png"
+      "range_image": "assets/images/characters/qiuhua/ult-range.png",
+      "ammo_type": "Burn"
     },
     {
-      "name": "Zao Jun's Rule\n(Passive / Support)",
+      "name": "Zao Jun's Rule",
       "tags": [
         "Passive",
-        "Buff"
+        "Support"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -91,7 +94,8 @@
       "effect_area": "Target",
       "description": "When there are no allies within a 2 tile radius of self, increases Burn damage dealt by 5%\n\nIf Overburn is applied on an enemy within attack range, Qiuhua launches one instance of Emergency Support to the target, dealing Burn damage equivalent to 60% ATK and 1 Stability Damage, and increases Confectance Index by 1 point. This effect can be activated once per turn\n\nIncreases CRIT rate by 30% when dealing Burn damage towards targets with Scorch Mark",
       "icon": "assets/images/characters/qiuhua/passive.png",
-      "range_image": "assets/images/characters/qiuhua/passive-range.png"
+      "range_image": "assets/images/characters/qiuhua/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -238,7 +242,8 @@
   "images": {
     "portrait": "assets/images/characters/qiuhua/portrait.png",
     "avatar": "assets/images/characters/qiuhua/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/qiuhua/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

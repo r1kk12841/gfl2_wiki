@@ -17,7 +17,7 @@
   "movement_speed": "6 tiles",
   "skills": [
     {
-      "name": "Quenching Strike",
+      "name": "Cryoshatter Strike",
       "tags": [
         "Basic Attack",
         "Targeted"
@@ -29,12 +29,44 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 80% ATK to it",
       "icon": "assets/images/characters/balthilde/skill1-icon.png",
-      "range_image": "assets/images/characters/balthilde/skill1-range.png"
+      "range_image": "assets/images/characters/balthilde/skill1-range.png",
+      "ammo_type": "Heavy Ammo"
+    },
+    {
+      "name": "Reinforcement Protocol",
+      "tags": [
+        "Skill",
+        "Summon",
+        "Defense"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an empty tile within a 8 tile radius and summons Defense Construct on the selected tile. If Defense Construct is already summoned, it is moved to the selected tile\n\nIf Demolition Protocol hasn't been used on this turn, Balthilde can use Demolition Protocol once\n\nWhen Defense Construct is destroyed, this skill enters into a 3 turn cooldown",
+      "icon": "assets/images/characters/balthilde/skill2-icon.png",
+      "range_image": "assets/images/characters/balthilde/skill2-range.png"
+    },
+    {
+      "name": "Demolition Protocol",
+      "tags": [
+        "Skill",
+        "Summon"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an empty tile within a 8 tile radius and summons Offense Construct on the selected tile. If Offense Construct is already summoned, it is moved to the selected tile\n\nIf Reinforcement Protocol hasn't been used on this turn, Balthilde can use Reinforcement Protocol once\n\nWhen Offense Construct is destroyed, this skill enters into a 3 turn cooldown",
+      "icon": "assets/images/characters/balthilde/skill3-icon.png",
+      "range_image": "assets/images/characters/balthilde/skill3-range.png"
     },
     {
       "name": "Raging Chainblast",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE"
       ],
       "stability_damage": 3,
@@ -43,8 +75,9 @@
       "range": 1,
       "effect_area": "--",
       "description": "Selects a direction and deals AoE Physical damage equivalent to 100% ATK to all enemies in a 6 tile fan shaped area towards the selected direction\n\nDecreases the cooldown of Reinforcement Protocol and Demolition Protocol by 1 turn",
-      "icon": "assets/images/characters/balthilde/skill2-icon.png",
-      "range_image": "assets/images/characters/balthilde/skill2-range.png"
+      "icon": "assets/images/characters/balthilde/ult-icon.png",
+      "range_image": "assets/images/characters/balthilde/ult-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Wrench Calibration",
@@ -56,44 +89,58 @@
       "confectance_cost": 0,
       "effect_area": "Target",
       "description": "After performing a basic attack, increases Confectance Index by 1 point. When allies (excluding self) deals Physical damage using an active attack, increases Confectance Index by 1 point for self. This can be triggered up to 2 times per turn.\n\nFor each point of Confectance Index gained, applies 1 stack of Performance Breakthrough to all Construct. When a Construct with 10 stacks of Performance Breakthrough is destroyed, deals Physical damage equivalent to 100% of the Construct DEF to all enemies within a 3 tile radius. This will not trigger Interceptions, Counterattacks or Action Supports",
-      "icon": "assets/images/characters/balthilde/skill3-icon.png",
-      "range_image": "assets/images/characters/balthilde/skill3-range.png"
-    },
-    {
-      "name": "Safety Consciousness",
-      "tags": [
-        "Passive",
-        "Buff"
-      ],
-      "stability_damage": 0,
-      "cooldown": "0 turns",
-      "confectance_cost": 0,
-      "range": 3,
-      "effect_area": "Target",
-      "description": "Upon summoned, applies Defense Up I for 2 turns and restores HP equivalent to 100% DEF for all allies within a 3 tile radius",
-      "icon": "assets/images/characters/balthilde/ult-icon.png",
-      "range_image": "assets/images/characters/balthilde/ult-range.png"
-    },
-    {
-      "name": "Focused Maintenance",
-      "tags": [
-        "Passive",
-        "Buff"
-      ],
-      "stability_damage": 0,
-      "cooldown": "0 turns",
-      "confectance_cost": 0,
-      "range": 3,
-      "effect_area": "Target",
-      "description": "Cover within a 3 tile radius will not lose durability. Decreases damage received by 30% for allies within range that are not benefitting from damage reduction by Cover",
       "icon": "assets/images/characters/balthilde/passive-icon.png",
-      "range_image": "assets/images/characters/balthilde/passive-range.png"
+      "range_image": "assets/images/characters/balthilde/passive-range.png",
+      "range": "Self"
     }
   ],
   "summons": [
     {
-      "name": "Construct",
-      "description": "Tactical defense construct deployed to provide cover and support.",
+      "name": "Defense Construct",
+      "description": "Inherits Balthilde's attributes and protects allies and Cover within a 3 tile radius.",
+      "stats": {
+        "hp": "100% of Balthilde's initial HP",
+        "atk": "80% of Balthilde's initial ATK",
+        "def": "80% of Balthilde's initial DEF"
+      },
+      "stability_gauge": "0 points",
+      "movement_speed": "0 tiles",
+      "skills": [
+        {
+          "name": "Safety Consciousness",
+          "tags": [
+            "Passive",
+            "Buff"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 3,
+          "effect_area": "Target",
+          "description": "Upon summoned, applies Defense Up I for 2 turns and restores HP equivalent to 100% DEF for all allies within a 3 tile radius",
+          "icon": "assets/images/characters/balthilde/summon1-passive1-icon.png",
+          "range_image": "assets/images/characters/balthilde/summon1-passive1-range.png"
+        },
+        {
+          "name": "Focused Maintenance",
+          "tags": [
+            "Passive",
+            "Buff"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 3,
+          "effect_area": "Target",
+          "description": "Cover within a 3 tile radius will not lose durability. Decreases damage received by 30% for allies within range that are not benefitting from damage reduction by Cover",
+          "icon": "assets/images/characters/balthilde/summon1-passive2-icon.png",
+          "range_image": "assets/images/characters/balthilde/summon1-passive2-range.png"
+        }
+      ]
+    },
+    {
+      "name": "Offense Construct",
+      "description": "Inherits Balthilde's attributes and attacks the nearest enemy within a 3 tile radius.",
       "stats": {
         "hp": "100% of Balthilde's initial HP",
         "atk": "80% of Balthilde's initial ATK",
@@ -104,9 +151,19 @@
       "skills": [
         {
           "name": "Disassembly Knack",
+          "tags": [
+            "Basic Attack",
+            "Targeted"
+          ],
+          "ammo_type": "Light Ammo",
+          "stability_damage": 3,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 3,
+          "effect_area": "Target",
           "description": "Selects the nearest enemy target within a 3 tile radius and deals Physical damage equivalent to 100% DEF to it. This can be used twice per turn",
-          "icon": "assets/images/characters/balthilde/summon1-passive1-icon.png",
-          "range_image": "assets/images/characters/balthilde/summon1-passive1-range.png"
+          "icon": "assets/images/characters/balthilde/summon2-skill1-icon.png",
+          "range_image": "assets/images/characters/balthilde/summon2-skill1-range.png"
         }
       ]
     }
@@ -146,7 +203,7 @@
       "tier": 6,
       "skill": "Wrench Calibration",
       "level": 3,
-      "effect": "For each point of Confectance Index held, increases the damage multiplier of Quenching Strike by 5%\n\nEnhances the effects of Performance Breakthrough - Increases ATK and DEF by 5%"
+      "effect": "For each point of Confectance Index held, increases the damage multiplier of Cryoshatter Strike by 5%\n\nEnhances the effects of Performance Breakthrough - Increases ATK and DEF by 5%"
     }
   ],
   "neural_helix": [
@@ -255,7 +312,8 @@
   "images": {
     "portrait": "assets/images/characters/balthilde/portrait.png",
     "avatar": "assets/images/characters/balthilde/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/balthilde/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

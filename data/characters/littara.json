@@ -29,7 +29,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.",
       "icon": "assets/images/characters/littara/skill1-icon.png",
-      "range_image": "assets/images/characters/littara/skill1-range.png"
+      "range_image": "assets/images/characters/littara/skill1-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Perfect Opportunity",
@@ -52,7 +53,8 @@
       "tags": [
         "Active",
         "AoE",
-        "Debuff"
+        "Debuff",
+        "Cover Destruction"
       ],
       "stability_damage": 1,
       "cooldown": "3 turns",
@@ -61,12 +63,13 @@
       "effect_area": "--",
       "description": "Select 1 direction  around self, deal AoE Physical damage equal to 65% of attack to all enemy targets within a 3x8 area, 2 tiles away in the selected direction and apply Defense Down II for 2 turns. Destroy all destructible Cover within that area, excluding a 3x3 area around self. For each target hit, reduce this skill's cooldown by 1 turn.",
       "icon": "assets/images/characters/littara/skill3-icon.png",
-      "range_image": "assets/images/characters/littara/skill3-range.png"
+      "range_image": "assets/images/characters/littara/skill3-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Strategist's Plan",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE"
       ],
       "stability_damage": 3,
@@ -90,7 +93,8 @@
       "effect_area": "8",
       "description": "At the end of the action, deals AoE Physical damage equal to 30% of attack and 1 point of Stability Damage to the nearest target within range under a defense debuff, and gains 1 point of Confectance Index.",
       "icon": "assets/images/characters/littara/passive.png",
-      "range_image": "assets/images/characters/littara/passive-range.png"
+      "range_image": "assets/images/characters/littara/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -237,7 +241,8 @@
   "images": {
     "portrait": "assets/images/characters/littara/portrait.png",
     "avatar": "assets/images/characters/littara/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/littara/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

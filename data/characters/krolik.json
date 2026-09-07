@@ -21,7 +21,8 @@
       "name": "Instantaneous Slash",
       "tags": [
         "Basic Attack",
-        "Targeted"
+        "Targeted",
+        "Melee"
       ],
       "ammo_type": "Melee",
       "stability_damage": 1,
@@ -37,7 +38,8 @@
       "name": "Crushing Revolution",
       "tags": [
         "Active",
-        "AoE"
+        "AoE",
+        "Melee"
       ],
       "stability_damage": 1,
       "cooldown": "0 turns",
@@ -46,13 +48,15 @@
       "effect_area": "3x3",
       "description": "Selects 1 enemy target within 1 tile, dealing melee AoE Physical damage equal to 120% of attack to the target and all enemy units within a 3x3 area, and gains 1 point of Confectance Index. After the attack, if there are no other allied units within 3 tiles around the user, gains 5 tiles of Additional Movement.",
       "icon": "assets/images/characters/krolik/skill2-icon.png",
-      "range_image": "assets/images/characters/krolik/skill2-range.png"
+      "range_image": "assets/images/characters/krolik/skill2-range.png",
+      "ammo_type": "Melee"
     },
     {
       "name": "Quenching Slash",
       "tags": [
         "Active",
         "Targeted",
+        "Melee",
         "Debuff"
       ],
       "stability_damage": 2,
@@ -62,13 +66,15 @@
       "effect_area": "Enemy",
       "description": "Select 1 enemy target within 1 tile, apply Overburn to it for 2 turns, deal melee Burn damage equal to 150% of attack, and gain 2 points of Confectance Index. After the attack, return to the original position before the action.",
       "icon": "assets/images/characters/krolik/skill3-icon.png",
-      "range_image": "assets/images/characters/krolik/skill3-range.png"
+      "range_image": "assets/images/characters/krolik/skill3-range.png",
+      "ammo_type": "Melee"
     },
     {
       "name": "Slaughter Sequence",
       "tags": [
-        "Active",
-        "Targeted"
+        "Ultimate",
+        "Targeted",
+        "Melee"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -77,7 +83,8 @@
       "effect_area": "7",
       "description": "Selects 1 direction and moves to the farthest tile within 7 tiles, dealing melee Burn damage equal to 130% of attack to the first enemy encountered. If the target is inflicted with Overburn, ignores their Cover damage reduction, and gains 5 tiles of Additional Movement.",
       "icon": "assets/images/characters/krolik/ult-icon.png",
-      "range_image": "assets/images/characters/krolik/ult-range.png"
+      "range_image": "assets/images/characters/krolik/ult-range.png",
+      "ammo_type": "Melee"
     },
     {
       "name": "Embers",
@@ -91,7 +98,8 @@
       "effect_area": "5",
       "description": "When attacking a target with Overburn, increases damage dealt by 15%. At the end of the action, applies Overburn to the closest 2 enemy targets within 5 tiles for 2 turns.",
       "icon": "assets/images/characters/krolik/passive.png",
-      "range_image": "assets/images/characters/krolik/passive-range.png"
+      "range_image": "assets/images/characters/krolik/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -238,7 +246,8 @@
   "images": {
     "portrait": "assets/images/characters/krolik/portrait.png",
     "avatar": "assets/images/characters/krolik/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/krolik/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

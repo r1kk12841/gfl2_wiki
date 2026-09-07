@@ -30,13 +30,16 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to it.",
       "icon": "assets/images/characters/mityl/skill1-icon.png",
-      "range_image": "assets/images/characters/mityl/skill1-range.png"
+      "range_image": "assets/images/characters/mityl/skill1-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Arc Shadow of the Gray Mouse",
       "tags": [
         "Active",
-        "AoE"
+        "Tile",
+        "Summon",
+        "Teleport"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -51,7 +54,8 @@
       "name": "Aerial Dash",
       "tags": [
         "Active",
-        "Targeted"
+        "Targeted",
+        "Displacement"
       ],
       "stability_damage": 3,
       "cooldown": "0 turns",
@@ -59,13 +63,15 @@
       "effect_area": "Target",
       "description": "Selects 1 tile within a 3- to 6-tile cross-shaped range and lands on that tile, dealing Hydro damage equal to 130% ATK to the nearest enemy target within a 6-tile radius.\n\nIf both before using this skill and when dealing damage, Mityl is on a Hydro type tile, she can use the active skill Aerial Dash 1 additional time, and its damage dealt is increased by 30%. Can trigger once per turn.",
       "icon": "assets/images/characters/mityl/skill3-icon.png",
-      "range_image": "assets/images/characters/mityl/skill3-range.png"
+      "range_image": "assets/images/characters/mityl/skill3-range.png",
+      "ammo_type": "Light Ammo",
+      "range": "--"
     },
     {
       "name": "Void Fitting",
       "tags": [
-        "Active",
-        "AoE",
+        "Ultimate",
+        "Tile",
         "Buff"
       ],
       "stability_damage": 0,
@@ -74,7 +80,8 @@
       "effect_area": "5",
       "description": "Gains Saturation Overflow for 2 turns. Creates Tideway tiles within a 5-tile radius around self for 2 turns. After using the skill, gains Extra Command.",
       "icon": "assets/images/characters/mityl/ult-icon.png",
-      "range_image": "assets/images/characters/mityl/ult-range.png"
+      "range_image": "assets/images/characters/mityl/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Stunt Montage",
@@ -88,7 +95,8 @@
       "effect_area": "Self",
       "description": "At the end of the allied turn, all Holograms cast Fitting Resonance 1 time. After Mityl or a Hologram deals Hydro damage, gains 1 point of Confectance Index. If the attacker or the attack target is on a Hydro type tile, gains 1 additional point of Confectance Index. Can gain up to 6 points of Confectance Index per turn.\n\nAt the start of battle, gains Mimic Rookie. For every 6 points of Confectance Index gained, including overflow Confectance Index, gains a higher level of Cinematic Title.",
       "icon": "assets/images/characters/mityl/passive.png",
-      "range_image": "assets/images/characters/mityl/passive-range.png"
+      "range_image": "assets/images/characters/mityl/passive-range.png",
+      "range": "Self"
     }
   ],
   "summons": [
@@ -107,13 +115,31 @@
           "name": "Arc Shadow Assault",
           "description": "Selects 1 enemy target within 6 tiles and deals Hydro damage equal to 100% of attack to it.",
           "icon": "assets/images/characters/mityl/summon1-skill1-icon.png",
-          "range_image": "assets/images/characters/mityl/summon1-skill1-range.png"
+          "range_image": "assets/images/characters/mityl/summon1-skill1-range.png",
+          "tags": [
+            "Passive",
+            "Targeted"
+          ],
+          "ammo_type": "Light Ammo",
+          "stability_damage": 2,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 6,
+          "effect_area": "Target"
         },
         {
           "name": "Data Regression",
           "description": "When casting Fitting Resonance, recovers 50% of current maximum HP and increases maximum HP by 5%, up to maximum of 20%.",
           "icon": "assets/images/characters/mityl/summon1-passive1-icon.png",
-          "range_image": "assets/images/characters/mityl/summon1-passive1-range.png"
+          "range_image": "assets/images/characters/mityl/summon1-passive1-range.png",
+          "tags": [
+            "Passive"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "Target"
         }
       ],
       "image": "assets/images/characters/mityl/summon1.png"
@@ -256,7 +282,8 @@
   "images": {
     "portrait": "assets/images/characters/mityl/portrait.png",
     "avatar": "assets/images/characters/mityl/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/mityl/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "cn"

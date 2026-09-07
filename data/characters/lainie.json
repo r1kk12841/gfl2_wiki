@@ -33,9 +33,37 @@
       "range_image": "assets/images/characters/lainie/skill1-range.png"
     },
     {
+      "name": "Combat Algorithm",
+      "tags": [
+        "Skill",
+        "Targeted"
+      ],
+      "ammo_type": "Light Ammo",
+      "stability_damage": 5,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 140% ATK to it. This skill cannot be used after skill usage, lasting till the end of the next allied round\n\nIf Simulacrum is present, it will use Offense Simulation centered on itself after skill usage. If Offense Simulation did not hit any targets that were hit by Combat Algorithm, it ignores 30% of the target's DEF"
+    },
+    {
+      "name": "Computational Crush",
+      "tags": [
+        "Skill",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 7,
+      "effect_area": "3",
+      "description": "Selects a tile within a 7 tile radius and deals AoE Physical damage equivalent to 120% ATK to all enemies within a 3 tile radius of the selected tile. This skill cannot be used after skill usage, lasting till the end of the next allied round\n\nIf Simulacrum is present, it will use Hashrate Overclock centered on itself after skill usage, and applies Movement Down I for 2 turns"
+    },
+    {
       "name": "Simulated Partner",
       "tags": [
-        "Active"
+        "Ultimate",
+        "Summon"
       ],
       "stability_damage": 0,
       "cooldown": "2 turns",
@@ -58,7 +86,8 @@
       "effect_area": "Target",
       "description": "For each 12 points of initial max HP, increases CRIT by 0.1%, up to a maximum of 30%. Applies Precognition Foresight to all enemies within a 7 tile radius\n\nBefore using an active attack, applies 1 stack of Parapluie's Penetration on the target, and increases Confectance Index by 2 points after the attack. If the target's DEF is lower or equal to 0, increases damage multiplier equivalent to 10% of initial max HP, and additionally increases Confectance Index by 1 point. After using an active attack, no active attacks can be used on the same allied round",
       "icon": "assets/images/characters/lainie/skill3-icon.png",
-      "range_image": "assets/images/characters/lainie/skill3-range.png"
+      "range_image": "assets/images/characters/lainie/skill3-range.png",
+      "range": "Self"
     }
   ],
   "summons": [
@@ -77,13 +106,71 @@
           "name": "Perplexed Reflex",
           "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 80% ATK to it\n\nAfter skill usage, Lainie will use Victory Protocol on the selected target",
           "icon": "assets/images/characters/lainie/summon1-skill1-icon.png",
-          "range_image": "assets/images/characters/lainie/summon1-skill1-range.png"
+          "range_image": "assets/images/characters/lainie/summon1-skill1-range.png",
+          "tags": [
+            "Basic Attack",
+            "Targeted"
+          ],
+          "ammo_type": "Light Ammo",
+          "stability_damage": 2,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 7,
+          "effect_area": "Target"
+        },
+        {
+          "name": "Offense Simulation",
+          "tags": [
+            "Skill",
+            "AoE"
+          ],
+          "ammo_type": "Light Ammo",
+          "stability_damage": 3,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 7,
+          "effect_area": "3",
+          "description": "Selects an enemy target within a 7 tile radius and deals AoE Physical damage equivalent to 140% ATK to all enemies within a 3 tile radius of the enemy. For each additional target hit, decreases damage multiplier by 20%, down to a minimum of 80%. This skill cannot be used after skill usage, lasting till the end of the next allied round\n\nIf this skill hits enemies whose DEF is lower or equal to 0, Combat Algorithm will ignore 30% of the target's DEF. After skill usage, Lainie will use Combat Algorithm on the selected target"
+        },
+        {
+          "name": "Hashrate Overclock",
+          "tags": [
+            "Skill",
+            "AoE"
+          ],
+          "stability_damage": 3,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 7,
+          "effect_area": "3",
+          "description": "Selects an empty tile within a 7 tile radius and deals AoE Physical damage equivalent to 120% ATK to all enemies within a 3 tile radius of the selected tile. This skill cannot be used after skill usage, lasting till the end of the next allied round\n\nIf this skill hit 2 or fewer enemies, increases Stability damage dealt by Computational Crush by 5 points. After skill usage, Lainie will use Computational Crush on the selected tile"
+        },
+        {
+          "name": "Queenside Castle",
+          "tags": [
+            "Skill"
+          ],
+          "stability_damage": 0,
+          "cooldown": "2 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "Entire Map",
+          "description": "Swaps position with Lainie and gains Extra Command for self"
         },
         {
           "name": "Precognition Awareness",
           "description": "For each 12 points of initial max HP, increases CRIT by 0.1%, up to a maximum of 30%. Applies Precognition Awareness to all enemies within a 7 tile radius\n\nBefore using an active attack, applies 1 stack of Parapluie's Penetration on the target. If the target's DEF is lower or equal to 0, increases damage multiplier equivalent to 10% of initial max HP. After using an active attack, no active attacks can be used on the same allied round",
           "icon": "assets/images/characters/lainie/summon1-passive1-icon.png",
-          "range_image": "assets/images/characters/lainie/summon1-passive1-range.png"
+          "range_image": "assets/images/characters/lainie/summon1-passive1-range.png",
+          "tags": [
+            "Passive",
+            "Debuff"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "Target"
         }
       ],
       "image": "assets/images/characters/lainie/summon1.png"
@@ -240,7 +327,8 @@
   "images": {
     "portrait": "assets/images/characters/lainie/portrait.png",
     "avatar": "assets/images/characters/lainie/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/lainie/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

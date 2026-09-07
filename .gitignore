@@ -1,4 +1,6 @@
 dist/
+.dist_staging/
+.dist_backup/
 __pycache__/
 *.pyc
 *.pyo

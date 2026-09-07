@@ -30,13 +30,42 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 80% ATK to it",
       "icon": "assets/images/characters/florence/skill1-icon.png",
-      "range_image": "assets/images/characters/florence/skill1-range.png"
+      "range_image": "assets/images/characters/florence/skill1-range.png",
+      "ammo_type": "Light Ammo"
+    },
+    {
+      "name": "Special Care",
+      "tags": [
+        "Skill",
+        "Healing"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "2",
+      "description": "Selects a tile within a 6 tile radius, cleanses 2 debuffs for all allies within a 2 tile radius of the selected tile and restores HP equivalent to 120% ATK"
+    },
+    {
+      "name": "Pleasure Trigger",
+      "tags": [
+        "Skill",
+        "Buff"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 6,
+      "effect_area": "Target",
+      "description": "Selects an ally within a 6 tile radius, cleanses Fear and Taunt from it, applies Stimulant for 1 round (Duration decreases at the end of the current round) and consumes HP equivalent to 20% initial HP"
     },
     {
       "name": "Masochistic Hallucination",
       "tags": [
-        "Active",
-        "AoE"
+        "Ultimate",
+        "AoE",
+        "Summon",
+        "Control"
       ],
       "stability_damage": 3,
       "cooldown": "0 turns",
@@ -45,7 +74,20 @@
       "effect_area": "--",
       "description": "Selects a direction, applies Chaos Compound for 2 turns and Infatuated for 1 turn for all enemies within a 3x5 area of the selected direction, and deals AoE Hydro damage equivalent to 80% ATK. After skill usage, increases Confectance Index by 6 points, and teleports Arios near self\n\nIf Arios is not on the field, summons Arios after skill usage",
       "icon": "assets/images/characters/florence/skill2-icon.png",
-      "range_image": "assets/images/characters/florence/skill2-range.png"
+      "range_image": "assets/images/characters/florence/skill2-range.png",
+      "ammo_type": "Light Ammo"
+    },
+    {
+      "name": "Surgical Preparation",
+      "tags": [
+        "Passive"
+      ],
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": "Self",
+      "effect_area": "Target",
+      "description": "At the start of the battle, summons Arios near self. At the start of the allied turn, decreases Confectance Index by 3 points. If there is insufficient Confectance Index, Arios disappears\n\nAt the end of the action, cleanses Taunt, Fear, Infatuated, and Stun from Arios"
     }
   ],
   "summons": [
@@ -61,10 +103,34 @@
       "movement_speed": "6 tiles",
       "skills": [
         {
+          "name": "Precision Anesthesia",
+          "tags": [
+            "Skill",
+            "Targeted",
+            "Control",
+            "Debuff"
+          ],
+          "stability_damage": 4,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 6,
+          "effect_area": "Target",
+          "description": "Applies Chaos Compound on the enemy closest to Florence for 2 turns, deals Hydro damage equivalent to 80% ATK, and applies Taunt for 1 turn"
+        },
+        {
           "name": "No. 1 Assistant",
           "description": "When Florence takes damage, Arios will take all damage on behalf of her\n\nIf the distance between Arios and Florence is 6 or more tiles, Arios will be teleported to near Florence\n\nWhen Arios or Florence receives damage, performs Counterattack, dealing Hydro damage equivalent to 80% ATK. This can be activated twice per round\n\nFor each damage instance received, gains 1 stack of Mark of Shame. When the number of stacks of Mark of Shame reaches 5, it is converted into Tremor of Despair",
           "icon": "assets/images/characters/florence/summon1-skill1-icon.png",
-          "range_image": "assets/images/characters/florence/summon1-skill1-range.png"
+          "range_image": "assets/images/characters/florence/summon1-skill1-range.png",
+          "tags": [
+            "Passive",
+            "Counter"
+          ],
+          "stability_damage": 4,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Entire Map",
+          "effect_area": "Target"
         }
       ],
       "image": "assets/images/characters/florence/summon1.png"
@@ -214,7 +280,8 @@
   "images": {
     "portrait": "assets/images/characters/florence/portrait.png",
     "avatar": "assets/images/characters/florence/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/florence/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

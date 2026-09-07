@@ -44,9 +44,10 @@
       "confectance_cost": 0,
       "range": 9,
       "effect_area": "Target",
-      "description": "Select 1 enemy target within 9 tiles of the user and deal Corrosion damage equal to 100% of attack, then gains Doom Mark for 2 turns, Insight for 2 turns, and Extra Command. \nIf Nemesis has Fifth Prophecy: Startrack, the range of Action Support from Doom Mark is changed to the entire battlefield.",
+      "description": "Select 1 enemy target within 9 tiles of the user and deal Corrosion damage equal to 100% of attack, then gains Doom Mark for 2 turns, Insight for 2 turns, and Extra Command.\nIf Nemesis has Fifth Prophecy: Startrack, the range of Action Support from Doom Mark is changed to the entire battlefield.",
       "icon": "assets/images/characters/nemesis-gnosis/skill2-icon.png",
-      "range_image": "assets/images/characters/nemesis-gnosis/skill2-range.png"
+      "range_image": "assets/images/characters/nemesis-gnosis/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Prismatic Refraction",
@@ -61,13 +62,14 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within a 9-tile radius and deals Corrosion Damage equal to 120% of attack.\nIf Nemesis has First Prophecy: Resonance, damage multiplier is increased by 20%, and gains 1 stack of Focus before skill usage.\nIf Nemesis has Second Prophecy: Solitude, damage dealt is increased by 20% when there are no allied units within a 4-tile radius of the user. After skill usage, restores HP equal to 15% of max HP.",
       "icon": "assets/images/characters/nemesis-gnosis/skill3-icon.png",
-      "range_image": "assets/images/characters/nemesis-gnosis/skill3-range.png"
+      "range_image": "assets/images/characters/nemesis-gnosis/skill3-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Destiny Unfolding",
       "tags": [
-        "Active",
-        "AoE"
+        "Ultimate",
+        "Aoe"
       ],
       "stability_damage": 0,
       "cooldown": "1 turns",
@@ -76,7 +78,8 @@
       "effect_area": "1",
       "description": "Selects 1 enemy target within a 9-tile radius and deals AoE Corrosion Damage equal to 140% of attack to the target and all enemy units within a 1-tile radius around it, consuming all Confectance Index. For each 1 point of Confectance Index consumed, the damage is increased by 10%, and deals 1 point of stability damage.\nIf the user has Sixth Prophecy: Event Horizon, then for each 1 point of Confectance Index consumed, damage dealt is additionally increased by 10%, and all enemy targets within a 3-tile radius around the target additionally take AoE Corrosion Damage equal to 100% of attack and 1 point of stability damage.",
       "icon": "assets/images/characters/nemesis-gnosis/ult-icon.png",
-      "range_image": "assets/images/characters/nemesis-gnosis/ult-range.png"
+      "range_image": "assets/images/characters/nemesis-gnosis/ult-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Whispers of Nirvana",
@@ -87,9 +90,10 @@
       "cooldown": "0 turns",
       "confectance_cost": 0,
       "effect_area": "Target",
-      "description": "Damage dealt to Paradeus enemies is increased is increased by 20%.\nUpon the first use of the Active skill Calamity Resonance, if there are allied units within a 4-tile radius of Nemesis, gains First Prophecy: Resonance; if there are no allied units within a 4-tile radius of Nemesis, gains Second Prophecy: Solitude.\nAt the start of battle, if there are normal enemy units on the field, gains Third Prophecy: Calamity; if there are no normal enemy units on the field, gains Fourth Prophecy: Judgment. \nIf there are 2 allied Dolls using sniper rifles or 2 allied Corrosion Dolls on the field, Nemesis gains Fifth Prophecy: Startrack. If there are 4 allied Dolls using sniper rifles on the field, all allied Dolls using sniper rifles gain Sixth Prophecy: Event Horizon.",
+      "description": "Damage dealt to Paradeus enemies is increased is increased by 20%.\nUpon the first use of the Active skill Calamity Resonance, if there are allied units within a 4-tile radius of Nemesis, gains First Prophecy: Resonance; if there are no allied units within a 4-tile radius of Nemesis, gains Second Prophecy: Solitude.\nAt the start of battle, if there are normal enemy units on the field, gains Third Prophecy: Calamity; if there are no normal enemy units on the field, gains Fourth Prophecy: Judgment.\nIf there are 2 allied Dolls using sniper rifles or 2 allied Corrosion Dolls on the field, Nemesis gains Fifth Prophecy: Startrack. If there are 4 allied Dolls using sniper rifles on the field, all allied Dolls using sniper rifles gain Sixth Prophecy: Event Horizon.",
       "icon": "assets/images/characters/nemesis-gnosis/passive.png",
-      "range_image": "assets/images/characters/nemesis-gnosis/passive-range.png"
+      "range_image": "assets/images/characters/nemesis-gnosis/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -229,7 +233,8 @@
   "images": {
     "portrait": "assets/images/characters/nemesis-gnosis/portrait.png",
     "avatar": "assets/images/characters/nemesis-gnosis/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/nemesis-gnosis/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

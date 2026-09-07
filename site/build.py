@@ -8,7 +8,9 @@ and emits search-index.json for client-side search.
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 import html
+from html.parser import HTMLParser
 import json
 import os
 import re
@@ -27,13 +29,16 @@ from tools.validate import validate_all
 
 DATA_DIR = ROOT / "data"
 ASSETS_DIR = ROOT / "assets"
-IMAGE_DIR = ROOT / "image"
 STATIC_DIR = ROOT / "site" / "static"
 TEMPLATES_DIR = ROOT / "site" / "templates"
 DIST_DIR = ROOT / "dist"
 
+DEFAULT_SITE_URL = "https://r1kk12841.github.io/gfl2_wiki"
+SITE_URL = os.environ.get("GFL2_SITE_URL", DEFAULT_SITE_URL).rstrip("/")
+
 EFFECTS_DATA: dict[str, str] = {}
 EFFECTS_PATTERN: re.Pattern | None = None
+
 
 
 def load_effects() -> None:
@@ -51,19 +56,18 @@ def load_effects() -> None:
             print(f"Warning: Failed to load effects.json: {e}")
 
 
-def generate_effects_js() -> None:
-    """Generate site/static/js/effects-data.js with dual-language effects data and sub-effect relationships."""
+def generate_effects_js(output_file: Path) -> None:
+    """Generate effects-data.js with dual-language effects data and sub-effect relationships."""
     effects_vi_file = DATA_DIR / "effects_vi.json"
     effects_file = ASSETS_DIR / "effects.json"
+
+    output_file.parent.mkdir(parents=True, exist_ok=True)
 
     if effects_vi_file.exists():
         try:
             data = json.loads(effects_vi_file.read_text(encoding="utf-8"))
-            js_dir = STATIC_DIR / "js"
-            js_dir.mkdir(parents=True, exist_ok=True)
-            out_file = js_dir / "effects-data.js"
-            out_file.write_text(f"// Auto-generated GFL2 dual-language effects database\nwindow.GFL2_EFFECTS = {json.dumps(data, ensure_ascii=False, indent=2)};\n", encoding="utf-8")
-            print(f"Generated {out_file.name} with {len(data)} dual-index effect entries.")
+            output_file.write_text(f"// Auto-generated GFL2 dual-language effects database\nwindow.GFL2_EFFECTS = {json.dumps(data, ensure_ascii=False, indent=2)};\n", encoding="utf-8")
+            print(f"Generated {output_file.name} with {len(data)} dual-index effect entries.")
             return
         except Exception as e:
             print(f"Warning: Failed to load effects_vi.json: {e}")
@@ -105,11 +109,8 @@ def generate_effects_js() -> None:
                 "sub_effects": subs
             }
 
-        js_dir = STATIC_DIR / "js"
-        js_dir.mkdir(parents=True, exist_ok=True)
-        out_file = js_dir / "effects-data.js"
-        out_file.write_text(f"// Auto-generated GFL2 effects database\nwindow.GFL2_EFFECTS = {json.dumps(data, ensure_ascii=False, indent=2)};\n", encoding="utf-8")
-        print(f"Generated {out_file.name} with {len(data)} effect entries.")
+        output_file.write_text(f"// Auto-generated GFL2 effects database\nwindow.GFL2_EFFECTS = {json.dumps(data, ensure_ascii=False, indent=2)};\n", encoding="utf-8")
+        print(f"Generated {output_file.name} with {len(data)} effect entries.")
     except Exception as e:
         print(f"Warning: Failed to generate effects-data.js: {e}")
 
@@ -226,53 +227,99 @@ def load_data() -> tuple[list[dict], list[dict], list[dict]]:
     return dolls, weapons, faq_entries
 
 
+ALLOWED_GUIDE_TAGS = {"b", "strong", "i", "em", "u", "span", "code", "br", "a"}
+ALLOWED_GUIDE_ATTRS = {"class", "href", "target", "rel", "title", "data-effect", "data-type", "data-desc", "tabindex"}
+
+
+class GuideHTMLSanitizer(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.result = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() in ALLOWED_GUIDE_TAGS:
+            safe_attrs = []
+            for k, v in attrs:
+                k_lower = k.lower()
+                if k_lower.startswith("on"):
+                    continue
+                if k_lower == "href" and (v.strip().lower().startswith("javascript:") or v.strip().lower().startswith("data:") or v.strip().lower().startswith("vbscript:")):
+                    continue
+                if k_lower in ALLOWED_GUIDE_ATTRS or k_lower.startswith("data-"):
+                    safe_attrs.append(f'{k}="{html.escape(v)}"')
+            attr_str = (" " + " ".join(safe_attrs)) if safe_attrs else ""
+            self.result.append(f"<{tag}{attr_str}>")
+
+    def handle_endtag(self, tag):
+        if tag.lower() in ALLOWED_GUIDE_TAGS and tag.lower() != "br":
+            self.result.append(f"</{tag}>")
+
+    def handle_data(self, data):
+        self.result.append(html.escape(data))
+
+    def handle_entityref(self, name):
+        self.result.append(f"&{name};")
+
+    def handle_charref(self, name):
+        self.result.append(f"&#{name};")
+
+    def get_html(self):
+        return "".join(self.result)
+
+
+def sanitize_guide_html(html_str: str) -> str:
+    if not html_str:
+        return ""
+    sanitizer = GuideHTMLSanitizer()
+    sanitizer.feed(html_str)
+    return sanitizer.get_html()
+
+
 def load_guides(dolls: list[dict]) -> list[dict]:
-    """Load guides from data/guides/*.json."""
+    """Load guides from data/guides/*.json. Fails build if any guide fails to parse."""
     guides_dir = DATA_DIR / "guides"
     guides = []
     if not guides_dir.exists():
         return guides
     for p in sorted(guides_dir.glob("*.json")):
+        if p.name.startswith("."):
+            continue
         try:
             g = json.loads(p.read_text(encoding="utf-8"))
+            for block in g.get("blocks", []):
+                if block.get("type") == "paragraph" and "html" in block:
+                    block["html"] = sanitize_guide_html(block["html"])
             guides.append(g)
         except Exception as e:
-            print(f"Warning: Failed to parse guide {p.name}: {e}")
+            raise RuntimeError(f"Failed to parse guide {p.name}: {e}") from e
     return guides
 
 
 
-def copy_static_assets() -> None:
-    """Copy assets/, image/, and site/static/ to dist/."""
-    # Ensure dist exists
-    DIST_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Copy site/static -> dist/static
-    dist_static = DIST_DIR / "static"
+def copy_static_assets(output_dir: Path) -> None:
+    """Copy assets/ and site/static/ to output_dir/."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Copy site/static -> output_dir/static
+    dist_static = output_dir / "static"
     if dist_static.exists():
         shutil.rmtree(dist_static)
     if STATIC_DIR.exists():
-        shutil.copytree(STATIC_DIR, dist_static)
+        shutil.copytree(STATIC_DIR, dist_static, ignore=shutil.ignore_patterns("effects-data.js"))
 
-    # Copy assets -> dist/assets (excluding huge raw dumps)
-    dist_assets = DIST_DIR / "assets"
+    # Copy assets -> output_dir/assets (excluding huge raw dumps and LangPackage)
+    dist_assets = output_dir / "assets"
     if dist_assets.exists():
         shutil.rmtree(dist_assets)
     if ASSETS_DIR.exists():
         shutil.copytree(ASSETS_DIR, dist_assets, ignore=shutil.ignore_patterns("raw", "*LangPackage*"))
 
-    # Copy image -> dist/image
-    dist_image = DIST_DIR / "image"
-    if dist_image.exists():
-        shutil.rmtree(dist_image)
-    if IMAGE_DIR.exists():
-        shutil.copytree(IMAGE_DIR, dist_image)
-
-    print("Static assets copied to dist/.")
+    print(f"Static assets copied to {output_dir.name}/.")
 
 
-def generate_search_index(dolls: list[dict], weapons: list[dict], guides: list[dict] | None = None) -> None:
-    """Generate dist/search-index.json for client-side search."""
+def generate_search_index(dolls: list[dict], weapons: list[dict], guides: list[dict] | None = None, output_dir: Path = DIST_DIR) -> None:
+    """Generate search-index.json in output_dir for client-side search."""
     guides = guides or []
     search_records = []
 
@@ -312,13 +359,72 @@ def generate_search_index(dolls: list[dict], weapons: list[dict], guides: list[d
         })
 
 
-    out_file = DIST_DIR / "search-index.json"
+    out_file = output_dir / "search-index.json"
     out_file.write_text(json.dumps(search_records, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Generated search index with {len(search_records)} entries.")
 
 
-def build_site() -> int:
-    """Main build entry point."""
+def generate_sitemap(rendered_pages: list[str], output_dir: Path, site_url: str) -> None:
+    """Generate sitemap.xml listing all rendered public pages."""
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    urls = []
+    for page in sorted(rendered_pages):
+        loc = f"{site_url}/{page}"
+        priority = "1.0" if page == "index.html" else ("0.8" if page.endswith("index.html") else "0.6")
+        changefreq = "weekly"
+        urls.append(f"""  <url>
+    <loc>{loc}</loc>
+    <lastmod>{now}</lastmod>
+    <changefreq>{changefreq}</changefreq>
+    <priority>{priority}</priority>
+  </url>""")
+    sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{"\n".join(urls)}
+</urlset>
+"""
+    (output_dir / "sitemap.xml").write_text(sitemap_xml, encoding="utf-8")
+    print(f"Generated sitemap.xml with {len(rendered_pages)} pages.")
+
+
+def generate_robots_txt(output_dir: Path, site_url: str) -> None:
+    """Generate robots.txt referencing the sitemap."""
+    robots_content = f"""User-agent: *
+Allow: /
+
+Sitemap: {site_url}/sitemap.xml
+"""
+    (output_dir / "robots.txt").write_text(robots_content, encoding="utf-8")
+    print("Generated robots.txt.")
+
+
+def _safe_swap_dist(staging_dir: Path, target_dir: Path) -> None:
+
+    """Safely replace target_dir with staging_dir on Windows/POSIX."""
+    target_dir = target_dir.resolve()
+    if not (target_dir == DIST_DIR.resolve() or target_dir.is_relative_to(ROOT)):
+        raise ValueError(f"Target dir {target_dir} is not inside project root")
+
+    backup_dir = target_dir.parent / f".{target_dir.name}_backup"
+    if backup_dir.exists():
+        shutil.rmtree(backup_dir, ignore_errors=True)
+
+    if target_dir.exists():
+        target_dir.rename(backup_dir)
+
+    try:
+        staging_dir.rename(target_dir)
+    except Exception:
+        if backup_dir.exists() and not target_dir.exists():
+            backup_dir.rename(target_dir)
+        raise
+    finally:
+        if backup_dir.exists():
+            shutil.rmtree(backup_dir, ignore_errors=True)
+
+
+def build_site(output_dir: Path | None = None) -> int:
+    """Main build entry point. Supports custom output_dir for isolated testing."""
     print("=== GFL2: Exilium Wiki — Static Site Builder ===")
 
     # 1. Validation check
@@ -327,139 +433,195 @@ def build_site() -> int:
         print("Build aborted due to validation errors.")
         return 1
 
-    # 2. Load data
-    print(f"\n[2/5] Loading data records...")
-    dolls, weapons, faq_entries = load_data()
-    guides = load_guides(dolls)
-    load_effects()
-    generate_effects_js()
-    print(f"Loaded: {len(dolls)} dolls, {len(weapons)} weapons, {len(faq_entries)} FAQ entries, {len(guides)} guides.")
+    is_custom_output = output_dir is not None
+    final_dir = (output_dir or DIST_DIR).resolve()
 
-    # 3. Copy static assets
-    print("\n[3/5] Copying static assets...")
-    copy_static_assets()
+    if is_custom_output:
+        target_dir = final_dir
+        target_dir.mkdir(parents=True, exist_ok=True)
+    else:
+        # Build into staging directory first for atomic swap
+        target_dir = ROOT / ".dist_staging"
+        if target_dir.exists():
+            shutil.rmtree(target_dir, ignore_errors=True)
+        target_dir.mkdir(parents=True, exist_ok=True)
 
-    # 4. Setup Jinja2 Environment
-    print("\n[4/5] Rendering Jinja2 templates...")
-    env = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(str(TEMPLATES_DIR)),
-        autoescape=jinja2.select_autoescape(["html", "xml"])
-    )
-    env.filters["render_effects"] = render_effects_filter
+    try:
+        # 2. Load data
+        print(f"\n[2/5] Loading data records...")
+        dolls, weapons, faq_entries = load_data()
+        guides = load_guides(dolls)
+        load_effects()
+        print(f"Loaded: {len(dolls)} dolls, {len(weapons)} weapons, {len(faq_entries)} FAQ entries, {len(guides)} guides.")
 
-    # Build lookup dicts for guide rendering
-    chars_by_slug = {d.get("slug"): d for d in dolls}
-    weapons_by_slug = {w.get("slug"): w for w in weapons}
+        # 3. Copy static assets & generate effects js
+        print(f"\n[3/5] Copying static assets...")
+        copy_static_assets(target_dir)
+        generate_effects_js(target_dir / "static" / "js" / "effects-data.js")
 
-    # Subdirectories in dist
-    (DIST_DIR / "characters").mkdir(parents=True, exist_ok=True)
-    (DIST_DIR / "weapons").mkdir(parents=True, exist_ok=True)
-    (DIST_DIR / "guides").mkdir(parents=True, exist_ok=True)
+        # 4. Setup Jinja2 Environment
+        print("\n[4/5] Rendering Jinja2 templates...")
+        env = jinja2.Environment(
+            loader=jinja2.FileSystemLoader(str(TEMPLATES_DIR)),
+            autoescape=jinja2.select_autoescape(["html", "xml"])
+        )
+        env.filters["render_effects"] = render_effects_filter
 
-    # Mapping from weapon name/slug to doll for signature weapon links
-    weapon_to_doll = {}
-    for d in dolls:
-        if d.get("signature_weapon"):
-            sig = d["signature_weapon"].strip().lower()
-            weapon_to_doll[sig] = d
+        # Build lookup dicts for guide rendering
+        chars_by_slug = {d.get("slug"): d for d in dolls}
+        weapons_by_slug = {w.get("slug"): w for w in weapons}
 
-    # Render Home (index.html)
-    home_tmpl = env.get_template("home.html")
-    home_html = home_tmpl.render(
-        active_page="home",
-        rel_prefix="",
-        dolls=dolls,
-        weapons=weapons,
-        featured_dolls=dolls[:8]
-    )
-    (DIST_DIR / "index.html").write_text(home_html, encoding="utf-8")
+        # Subdirectories in target_dir
+        (target_dir / "characters").mkdir(parents=True, exist_ok=True)
+        (target_dir / "weapons").mkdir(parents=True, exist_ok=True)
+        (target_dir / "guides").mkdir(parents=True, exist_ok=True)
 
-    # Render Character Index (characters/index.html)
-    char_index_tmpl = env.get_template("character_index.html")
-    char_index_html = char_index_tmpl.render(
-        active_page="characters",
-        rel_prefix="../",
-        dolls=dolls
-    )
-    (DIST_DIR / "characters" / "index.html").write_text(char_index_html, encoding="utf-8")
+        # Mapping from weapon name/slug to doll for signature weapon links
+        weapon_to_doll = {}
+        for d in dolls:
+            if d.get("signature_weapon"):
+                sig = d["signature_weapon"].strip().lower()
+                weapon_to_doll[sig] = d
 
-    # Render Each Character Detail (characters/{slug}.html)
-    char_tmpl = env.get_template("character.html")
-    for d in dolls:
-        char_html = char_tmpl.render(
+        rendered_pages: list[str] = []
+
+        # Render Home (index.html)
+        home_tmpl = env.get_template("home.html")
+        home_html = home_tmpl.render(
+            active_page="home",
+            rel_prefix="",
+            site_url=SITE_URL,
+            canonical_url=f"{SITE_URL}/index.html",
+            dolls=dolls,
+            weapons=weapons,
+            featured_dolls=dolls[:8]
+        )
+        (target_dir / "index.html").write_text(home_html, encoding="utf-8")
+        rendered_pages.append("index.html")
+
+        # Render Character Index (characters/index.html)
+        char_index_tmpl = env.get_template("character_index.html")
+        char_index_html = char_index_tmpl.render(
             active_page="characters",
             rel_prefix="../",
-            doll=d
+            site_url=SITE_URL,
+            canonical_url=f"{SITE_URL}/characters/index.html",
+            dolls=dolls
         )
-        (DIST_DIR / "characters" / f"{d['slug']}.html").write_text(char_html, encoding="utf-8")
+        (target_dir / "characters" / "index.html").write_text(char_index_html, encoding="utf-8")
+        rendered_pages.append("characters/index.html")
 
-    # Render Weapons Index (weapons/index.html)
-    weapons_index_tmpl = env.get_template("weapons_index.html")
-    weapons_index_html = weapons_index_tmpl.render(
-        active_page="weapons",
-        rel_prefix="../",
-        weapons=weapons
-    )
-    (DIST_DIR / "weapons" / "index.html").write_text(weapons_index_html, encoding="utf-8")
+        # Render Each Character Detail (characters/{slug}.html)
+        char_tmpl = env.get_template("character.html")
+        for d in dolls:
+            char_html = char_tmpl.render(
+                active_page="characters",
+                rel_prefix="../",
+                site_url=SITE_URL,
+                canonical_url=f"{SITE_URL}/characters/{d['slug']}.html",
+                doll=d
+            )
+            (target_dir / "characters" / f"{d['slug']}.html").write_text(char_html, encoding="utf-8")
+            rendered_pages.append(f"characters/{d['slug']}.html")
 
-    # Render Each Weapon Detail (weapons/{slug}.html)
-    weapon_tmpl = env.get_template("weapon.html")
-    for w in weapons:
-        sig_doll = weapon_to_doll.get(w.get("name", "").strip().lower()) or weapon_to_doll.get(w.get("slug", "").strip().lower())
-        weapon_html = weapon_tmpl.render(
+        # Render Weapons Index (weapons/index.html)
+        weapons_index_tmpl = env.get_template("weapons_index.html")
+        weapons_index_html = weapons_index_tmpl.render(
             active_page="weapons",
             rel_prefix="../",
-            weapon=w,
-            signature_doll=sig_doll
+            site_url=SITE_URL,
+            canonical_url=f"{SITE_URL}/weapons/index.html",
+            weapons=weapons
         )
-        (DIST_DIR / "weapons" / f"{w['slug']}.html").write_text(weapon_html, encoding="utf-8")
+        (target_dir / "weapons" / "index.html").write_text(weapons_index_html, encoding="utf-8")
+        rendered_pages.append("weapons/index.html")
 
-    # Render FAQ (faq.html)
-    faq_tmpl = env.get_template("faq.html")
-    faq_html = faq_tmpl.render(
-        active_page="faq",
-        rel_prefix="",
-        faq_entries=faq_entries
-    )
-    (DIST_DIR / "faq.html").write_text(faq_html, encoding="utf-8")
+        # Render Each Weapon Detail (weapons/{slug}.html)
+        weapon_tmpl = env.get_template("weapon.html")
+        for w in weapons:
+            sig_doll = weapon_to_doll.get(w.get("name", "").strip().lower()) or weapon_to_doll.get(w.get("slug", "").strip().lower())
+            weapon_html = weapon_tmpl.render(
+                active_page="weapons",
+                rel_prefix="../",
+                site_url=SITE_URL,
+                canonical_url=f"{SITE_URL}/weapons/{w['slug']}.html",
+                weapon=w,
+                signature_doll=sig_doll
+            )
+            (target_dir / "weapons" / f"{w['slug']}.html").write_text(weapon_html, encoding="utf-8")
+            rendered_pages.append(f"weapons/{w['slug']}.html")
 
-    # Render Guides Index (guides/index.html)
-    try:
-        guides_index_tmpl = env.get_template("guides_index.html")
-        guides_index_html = guides_index_tmpl.render(
-            active_page="guides",
-            rel_prefix="../",
-            guides=guides,
-            chars_by_slug=chars_by_slug,
+        # Render FAQ (faq.html)
+        faq_tmpl = env.get_template("faq.html")
+        faq_html = faq_tmpl.render(
+            active_page="faq",
+            rel_prefix="",
+            site_url=SITE_URL,
+            canonical_url=f"{SITE_URL}/faq.html",
+            faq_entries=faq_entries
         )
-        (DIST_DIR / "guides" / "index.html").write_text(guides_index_html, encoding="utf-8")
-    except jinja2.TemplateNotFound:
-        pass
+        (target_dir / "faq.html").write_text(faq_html, encoding="utf-8")
+        rendered_pages.append("faq.html")
 
-    # Render Each Guide (guides/{slug}.html)
-    guide_tmpl = env.get_template("guide.html")
-    for g in guides:
-        char_slug = g.get("char_slug", "")
-        guide_char = chars_by_slug.get(char_slug)
-        guide_html_out = guide_tmpl.render(
-            active_page="guides",
-            rel_prefix="../",
-            guide=g,
-            char=guide_char,
-            chars_by_slug=chars_by_slug,
-            weapons_by_slug=weapons_by_slug,
-        )
-        (DIST_DIR / "guides" / f"{g['slug']}.html").write_text(guide_html_out, encoding="utf-8")
-    if guides:
-        print(f"Rendered {len(guides)} guide(s) to dist/guides/.")
+        # Render Guides Index (guides/index.html)
+        try:
+            guides_index_tmpl = env.get_template("guides_index.html")
+            guides_index_html = guides_index_tmpl.render(
+                active_page="guides",
+                rel_prefix="../",
+                site_url=SITE_URL,
+                canonical_url=f"{SITE_URL}/guides/index.html",
+                guides=guides,
+                chars_by_slug=chars_by_slug,
+            )
+            (target_dir / "guides" / "index.html").write_text(guides_index_html, encoding="utf-8")
+            rendered_pages.append("guides/index.html")
+        except jinja2.TemplateNotFound:
+            pass
 
-    # 5. Search Index
-    print("\n[5/5] Generating search index...")
-    generate_search_index(dolls, weapons, guides)
+        # Render Each Guide (guides/{slug}.html)
+        guide_tmpl = env.get_template("guide.html")
+        for g in guides:
+            char_slug = g.get("char_slug", "")
+            guide_char = chars_by_slug.get(char_slug)
+            guide_html_out = guide_tmpl.render(
+                active_page="guides",
+                rel_prefix="../",
+                site_url=SITE_URL,
+                canonical_url=f"{SITE_URL}/guides/{g['slug']}.html",
+                guide=g,
+                char=guide_char,
+                chars_by_slug=chars_by_slug,
+                weapons_by_slug=weapons_by_slug,
+            )
+            (target_dir / "guides" / f"{g['slug']}.html").write_text(guide_html_out, encoding="utf-8")
+            rendered_pages.append(f"guides/{g['slug']}.html")
+        if guides:
+            print(f"Rendered {len(guides)} guide(s) to {target_dir.name}/guides/.")
 
-    total_pages = 1 + 1 + len(dolls) + 1 + len(weapons) + 1 + len(guides)
-    print(f"\n✅ Build complete! {total_pages} HTML pages rendered in /dist.")
-    return 0
+        # 5. Search Index
+        print("\n[5/5] Generating search index...")
+        generate_search_index(dolls, weapons, guides, output_dir=target_dir)
+
+        # 6. SEO Assets: sitemap.xml & robots.txt
+        print("\nGenerating SEO files (sitemap.xml, robots.txt)...")
+        generate_sitemap(rendered_pages, target_dir, SITE_URL)
+        generate_robots_txt(target_dir, SITE_URL)
+
+        # Atomic swap if default output
+        if not is_custom_output:
+            _safe_swap_dist(target_dir, final_dir)
+
+        total_pages = len(rendered_pages)
+        print(f"\n✅ Build complete! {total_pages} HTML pages rendered in {final_dir.name}.")
+
+        return 0
+
+    except Exception as e:
+        print(f"\n❌ Build failed: {e}")
+        if not is_custom_output and target_dir.exists():
+            shutil.rmtree(target_dir, ignore_errors=True)
+        return 1
 
 
 if __name__ == "__main__":

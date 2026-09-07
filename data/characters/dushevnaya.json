@@ -46,14 +46,15 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 110% of attack to them. If this kills an enemy unit with Freeze debuffs, gains 1 stack of Ice's Grace\n\n(TL Note: Ice's Grace stacks can be gained even if the enemy isn't killed with this skill)",
       "icon": "assets/images/characters/dushevnaya/skill2-icon.png",
-      "range_image": "assets/images/characters/dushevnaya/skill2-range.png"
+      "range_image": "assets/images/characters/dushevnaya/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Marzanna's Sanction",
       "tags": [
         "Active",
         "Debuff",
-        "AoE"
+        "Tile"
       ],
       "stability_damage": 2,
       "cooldown": "0 turns",
@@ -62,13 +63,15 @@
       "effect_area": "2",
       "description": "Selects 1 tile within 6 tiles, dealing AoE Freeze damage equal to 50% of attack to all enemy targets within 2 tiles of the selected tile, and generates Frost tiles for 2 turns.\n\nThe next use of this skill will be enhanced, increasing the damage multiplier to 70%, whilst applying Frigid for 1 turn. This enhancement cannot be enhanced again if the skill has already been enhanced.\n\nIf Confectance Index is full, Marzanna's Sanction can immediately be used again.",
       "icon": "assets/images/characters/dushevnaya/skill3-icon.png",
-      "range_image": "assets/images/characters/dushevnaya/skill3-range.png"
+      "range_image": "assets/images/characters/dushevnaya/skill3-range.png",
+      "ammo_type": "Freeze"
     },
     {
       "name": "Book of Prophecy",
       "tags": [
-        "Active",
-        "Buff"
+        "Ultimate",
+        "Buff",
+        "Support"
       ],
       "stability_damage": 0,
       "cooldown": "3 turns",
@@ -76,7 +79,8 @@
       "effect_area": "7",
       "description": "Applies 1 stack of Arctic Benediction to all allied units within 7 tiles. Gains 2 points of Confectance Index, as well as Glacial Domain for 2 turns. While Glacial Domain is active, gains 2 points of Confectance Index if it is at 0 at the end of the action.",
       "icon": "assets/images/characters/dushevnaya/ult-icon.png",
-      "range_image": "assets/images/characters/dushevnaya/ult-range.png"
+      "range_image": "assets/images/characters/dushevnaya/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Blessed Artwork",
@@ -90,7 +94,8 @@
       "effect_area": "Target",
       "description": "Increases all allied units' damage by 10%, with an additional 10% boost specifically for Freeze damage. At the end of the action, gains 2 points of Confectance Index.\n\nWhen the user's HP is above 80%, reduces Stability Damage taken by 1 point and gains Insight. While under the effects of Insight, increases the range of active skills and Support Attacks (except Ultimates) by 1 tile.",
       "icon": "assets/images/characters/dushevnaya/passive.png",
-      "range_image": "assets/images/characters/dushevnaya/passive-range.png"
+      "range_image": "assets/images/characters/dushevnaya/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -237,7 +242,8 @@
   "images": {
     "portrait": "assets/images/characters/dushevnaya/portrait.png",
     "avatar": "assets/images/characters/dushevnaya/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/dushevnaya/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

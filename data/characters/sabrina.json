@@ -30,14 +30,16 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
       "icon": "assets/images/characters/sabrina/skill1-icon.png",
-      "range_image": "assets/images/characters/sabrina/skill1-range.png"
+      "range_image": "assets/images/characters/sabrina/skill1-range.png",
+      "ammo_type": "Shotgun Ammo"
     },
     {
       "name": "Delicious Feast",
       "tags": [
         "Active",
         "AoE",
-        "Debuff"
+        "Debuff",
+        "Stability Regen"
       ],
       "stability_damage": 3,
       "cooldown": "0 turns",
@@ -46,14 +48,16 @@
       "effect_area": "2",
       "description": "Selects 1 enemy target within 6 tiles to attack, dealing AoE Hydro damage equal to 80% of attack to them and all enemy targets within 2 tiles, applying Movement Down II for 2 turns. Recovers 2 points of stability for each target hit.",
       "icon": "assets/images/characters/sabrina/skill2-icon.png",
-      "range_image": "assets/images/characters/sabrina/skill2-range.png"
+      "range_image": "assets/images/characters/sabrina/skill2-range.png",
+      "ammo_type": "Hydro"
     },
     {
       "name": "Meal Preparation",
       "tags": [
         "Active",
         "AoE",
-        "Debuff"
+        "Debuff",
+        "Cover Destruction"
       ],
       "stability_damage": 2,
       "cooldown": "2 turns",
@@ -62,13 +66,16 @@
       "effect_area": "--",
       "description": "Selects 1 direction and deals AoE Hydro damage equal to 70% of attack to all enemy targets within a 3x6 area in the selected direction, and applies Movement Down II for 2 turns. Destroys any destructible Cover outside a 3x3 area around self.",
       "icon": "assets/images/characters/sabrina/skill3-icon.png",
-      "range_image": "assets/images/characters/sabrina/skill3-range.png"
+      "range_image": "assets/images/characters/sabrina/skill3-range.png",
+      "ammo_type": "Shotgun Ammo"
     },
     {
       "name": "Gourmet Spirit",
       "tags": [
-        "Active",
-        "Buff"
+        "Ultimate",
+        "Buff",
+        "Defense",
+        "Counter"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -76,7 +83,8 @@
       "effect_area": "Entire Map",
       "description": "Apply 2 stacks of Shelter to all allied targets and gain Feeling Full for 3 turns. While having Feeling Full, if an enemy target within range deals targeted damage to an allied unit, use Counterattack against it, dealing Physical damage equal to 80% of attack and 4 points of Stability Damage. This can be triggered up to 3 times per turn.",
       "icon": "assets/images/characters/sabrina/ult-icon.png",
-      "range_image": "assets/images/characters/sabrina/ult-range.png"
+      "range_image": "assets/images/characters/sabrina/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Flexible Modification",
@@ -238,7 +246,8 @@
   "images": {
     "portrait": "assets/images/characters/sabrina/portrait.png",
     "avatar": "assets/images/characters/sabrina/avatar.png",
-    "class_icon": "assets/images/class/bulwark.png"
+    "class_icon": "assets/images/class/bulwark.png",
+    "portrait_webp": "assets/images/characters/sabrina/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

@@ -6,7 +6,7 @@
   "phase": "Corrosion",
   "weapon_type": "Handgun",
   "ammo_type": "Light Ammo",
-  "signature_weapon": "Silent Conviction",
+  "signature_weapon": "Silent Aegis",
   "stats": {
     "hp": 2338,
     "atk": 671,
@@ -38,7 +38,8 @@
       "tags": [
         "Active",
         "AoE",
-        "Buff"
+        "Buff",
+        "Defense"
       ],
       "stability_damage": 5,
       "cooldown": "1 turns",
@@ -47,13 +48,15 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles and deals Corrosion damage equal to 100% ATK to it and gains Deductive Obsession for 3 turns, you get 2 stacks of Shelter and 4 points of Confectance Index.",
       "icon": "assets/images/characters/welrod/skill2-icon.png",
-      "range_image": "assets/images/characters/welrod/skill2-range.png"
+      "range_image": "assets/images/characters/welrod/skill2-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Conviction and Punishment",
       "tags": [
         "Active",
-        "Targeted"
+        "Targeted",
+        "Displacement"
       ],
       "stability_damage": 5,
       "cooldown": "0 turns",
@@ -62,13 +65,15 @@
       "effect_area": "5",
       "description": "Selects a tile within a 6 tile radius, deal AoE Corrosion damage equal to 120% ATK to all enemies within 5 tile radius and creates Toxic Mist tiles for 2 rounds. For every 1% increase in max HP compared to initial HP, the damage multiplier is increased by 1%, up to 60%. For every enemy target hit, the accumulated damage value of Detective's Immunity is reduced by 10%. If the target is the Boss unit, it is reduced by 30%, up to maximum reduction of 50%.",
       "icon": "assets/images/characters/welrod/skill3-icon.png",
-      "range_image": "assets/images/characters/welrod/skill3-range.png"
+      "range_image": "assets/images/characters/welrod/skill3-range.png",
+      "ammo_type": "Corrosion"
     },
     {
       "name": "Hour of Reckoning",
       "tags": [
-        "Active",
+        "Ultimate",
         "Debuff",
+        "Displacement",
         "Healing"
       ],
       "stability_damage": 5,
@@ -78,12 +83,14 @@
       "effect_area": "--",
       "description": "Selects a direction and deals AoE Corrosion damage equivalent to 120% ATK to all enemies within a 3x9 frontal area in the selected direction, pull them 3 tiles towards self and apply Crime Backlash for 1 round and Suspect for 2 rounds. Welrod recovers her HP equal to 20% of Detective's Immunity's accumulated damage value and gains V3 Protection for 1 round. After using this skill, Welrod can use basic attack Silent Takedown, active skill Joint Investigation or active skill Conviction and Punishment.",
       "icon": "assets/images/characters/welrod/ult-icon.png",
-      "range_image": "assets/images/characters/welrod/ult-range.png"
+      "range_image": "assets/images/characters/welrod/ult-range.png",
+      "ammo_type": "Corrosion"
     },
     {
       "name": "Case Detective",
       "tags": [
-        "Passive"
+        "Passive",
+        "Control"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -91,7 +98,8 @@
       "effect_area": "Target",
       "description": "Welrod does not receive Cover protection and her Crit is reduced by 100%, her max HP is increased by 50% and damage taken reduced by 20%.\nGain Detective's Immunity at the start of battle. In the end of Welrod action she deals 1 instance of AOE Corrosion damage equal to 30% of Detective's Immunity's accumulated damage value to all enemy targets within 6 tiles radius, and applies Suspect for 2 rounds. When action ends, applies Taunt to all enemy targets within 6 tile radius for 1 round.",
       "icon": "assets/images/characters/welrod/passive.png",
-      "range_image": "assets/images/characters/welrod/passive-range.png"
+      "range_image": "assets/images/characters/welrod/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -230,7 +238,8 @@
   "images": {
     "portrait": "assets/images/characters/welrod/portrait.png",
     "avatar": "assets/images/characters/welrod/avatar.png",
-    "class_icon": "assets/images/class/bulwark.png"
+    "class_icon": "assets/images/class/bulwark.png",
+    "portrait_webp": "assets/images/characters/welrod/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "cn"

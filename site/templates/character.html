@@ -2,6 +2,19 @@
 
 {% block title %}{{ doll.name }} — GFL2: Exilium Wiki{% endblock %}
 {% block description %}Complete profile, skills, fortification, and neural helix key stats for {{ doll.name }} ({{ doll.class }}, {{ doll.phase }}).{% endblock %}
+{% block og_image %}{% if site_url %}{{ site_url }}/{{ doll.images.portrait_webp or doll.images.portrait }}{% else %}{{ rel_prefix }}{{ doll.images.portrait_webp or doll.images.portrait }}{% endif %}{% endblock %}
+{% block json_ld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemPage",
+  "name": "{{ doll.name }}",
+  "description": "Complete profile, skills, fortification, and neural helix key stats for {{ doll.name }} ({{ doll.class }}, {{ doll.phase }}).",
+  "url": "{{ canonical_url }}"
+}
+</script>
+{% endblock %}
+
 
 {% block content %}
 <!-- Breadcrumbs -->
@@ -14,10 +27,17 @@
 <!-- Doll Header Card -->
 <section class="char-header" data-char-slug="{{ doll.slug }}">
   <div class="char-portrait-box">
-    <img src="{{ rel_prefix }}{{ doll.images.portrait if (doll.images and doll.images.portrait) else 'assets/images/characters/' + doll.slug + '/portrait.png' }}"
-         alt="{{ doll.name }}"
-         class="char-portrait-img"
-         onerror="this.src='{{ rel_prefix }}assets/images/characters/groza/portrait.png';">
+    <picture>
+      {% if doll.images and doll.images.portrait_webp %}
+      <source srcset="{{ rel_prefix }}{{ doll.images.portrait_webp }}" type="image/webp">
+      {% endif %}
+      <img src="{{ rel_prefix }}{{ doll.images.portrait if (doll.images and doll.images.portrait) else 'assets/images/characters/' + doll.slug + '/portrait.png' }}"
+           alt="{{ doll.name }}"
+           class="char-portrait-img"
+           width="260"
+           height="340"
+           onerror="this.src='{{ rel_prefix }}assets/images/characters/groza/portrait.png';">
+    </picture>
   </div>
 
   <div class="char-main-info">

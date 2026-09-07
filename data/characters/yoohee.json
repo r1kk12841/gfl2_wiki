@@ -46,14 +46,16 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 120% ATK to it. If Yoohee has 3 or more points of Confectance Index, consumes 2 additional points of Confectance Index to ignore 30% of the target's defense on this attack",
       "icon": "assets/images/characters/yoohee/skill2-icon.png",
-      "range_image": "assets/images/characters/yoohee/skill2-range.png"
+      "range_image": "assets/images/characters/yoohee/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Soul of Dance",
       "tags": [
         "Active",
         "AoE",
-        "Buff"
+        "Buff",
+        "Control"
       ],
       "stability_damage": 0,
       "cooldown": "3 turns",
@@ -67,7 +69,7 @@
     {
       "name": "Sparkling Finale",
       "tags": [
-        "Active",
+        "Ultimate",
         "Buff"
       ],
       "stability_damage": 0,
@@ -76,7 +78,8 @@
       "effect_area": "Entire Map",
       "description": "Yoohee gains Troupe's Core for 3 turns. Applies Stability Offensive I for all allies for 2 turns. After skill usage, gains Extra Command.",
       "icon": "assets/images/characters/yoohee/ult-icon.png",
-      "range_image": "assets/images/characters/yoohee/ult-range.png"
+      "range_image": "assets/images/characters/yoohee/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Main Dancer's Aura",
@@ -90,7 +93,8 @@
       "effect_area": "Target",
       "description": "When allies deal Physical damage, Yoohee gains 1 point of Confectance Index.\n\nAfter using basic attack or active skills, Graceful Pirouette or Passionate Resonance can be used (this effect cannot be triggered repeatedly).\n\nFor 3 or more Dance Steps applies, triggers an instance of Best Dancer, and gains 1 stack of Never Give Up, and refreshes the duration of all Dance Steps and Reversed Assault stacks across the entire battlefield.",
       "icon": "assets/images/characters/yoohee/passive.png",
-      "range_image": "assets/images/characters/yoohee/passive-range.png"
+      "range_image": "assets/images/characters/yoohee/passive-range.png",
+      "range": "Self"
     },
     {
       "name": "Graceful Pirouette",
@@ -267,7 +271,8 @@
   "images": {
     "portrait": "assets/images/characters/yoohee/portrait.png",
     "avatar": "assets/images/characters/yoohee/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/yoohee/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

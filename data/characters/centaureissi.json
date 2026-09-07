@@ -30,7 +30,8 @@
       "effect_area": "Target",
       "description": "Selects 1 target within 7 tiles, dealing Physical damage equal to 80% of attack.",
       "icon": "assets/images/characters/centaureissi/skill1-icon.png",
-      "range_image": "assets/images/characters/centaureissi/skill1-range.png"
+      "range_image": "assets/images/characters/centaureissi/skill1-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Careful Hospitality",
@@ -47,7 +48,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 7 tiles and deals Burn damage equal to 130% of attack to them. After attacking, restores HP equal to 100% of attack to the nearest allied target (excluding the user) and gains Heat Recovery. If the enemy target is inflicted with Overburn, heals 1 additional allied target.",
       "icon": "assets/images/characters/centaureissi/skill2-icon.png",
-      "range_image": "assets/images/characters/centaureissi/skill2-range.png"
+      "range_image": "assets/images/characters/centaureissi/skill2-range.png",
+      "ammo_type": "Burn"
     },
     {
       "name": "Zucchero's Special Drink",
@@ -55,7 +57,7 @@
         "Active",
         "AoE",
         "Healing",
-        "Debuff"
+        "Dispel"
       ],
       "stability_damage": 0,
       "cooldown": "2 turns",
@@ -69,8 +71,10 @@
     {
       "name": "Afternoon Tea Break",
       "tags": [
-        "Active",
+        "Ultimate",
         "Healing",
+        "Stability Regen",
+        "Cleanse",
         "Buff"
       ],
       "stability_damage": 0,
@@ -79,14 +83,16 @@
       "effect_area": "Entire Map",
       "description": "Restores HP equal to 100% of attack to all allies, cleanses 2 debuffs, removes Fear and Stun, and restores up to 7 points of Stability Index to the ally with the lowest Stability Index. After healing, applies Heat Recovery.",
       "icon": "assets/images/characters/centaureissi/ult-icon.png",
-      "range_image": "assets/images/characters/centaureissi/ult-range.png"
+      "range_image": "assets/images/characters/centaureissi/ult-range.png",
+      "range": "Entire Map"
     },
     {
       "name": "Maid's Duty",
       "tags": [
         "Passive",
         "Buff",
-        "Debuff"
+        "Debuff",
+        "Support"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -94,7 +100,8 @@
       "effect_area": "Target",
       "description": "At the start of the battle, gains Heat Recovery.\n\nWhen the user is under the effects of Heat Recovery: Increases damage dealt by 20%. When healing, additionally heals 10% of the user's max HP. After active attacks applies Overburn for 2 turns.\n\nWhen an enemy unit within attack range receives targeted damage from an ally, prioritize performing 1 instance of Action Support, dealing Physical damage equal to 80% of attack and 3 points of Stability Damage to them, and applies Heat Recovery to the allied unit. Gains 1 point of Confectance Index. This can be triggered up to 2 times per turn.",
       "icon": "assets/images/characters/centaureissi/passive-icon.png",
-      "range_image": "assets/images/characters/centaureissi/passive-range.png"
+      "range_image": "assets/images/characters/centaureissi/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -241,7 +248,8 @@
   "images": {
     "portrait": "assets/images/characters/centaureissi/portrait.png",
     "avatar": "assets/images/characters/centaureissi/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/centaureissi/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

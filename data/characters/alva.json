@@ -34,9 +34,38 @@
       "range_image": "assets/images/characters/alva/skill1-range.png"
     },
     {
+      "name": "Snow Wolf's Heart",
+      "tags": [
+        "Skill",
+        "Targeted"
+      ],
+      "ammo_type": "Medium Ammo",
+      "stability_damage": 2,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Enters into Covering Mode for 3 rounds (Duration decreases at the end of the current round). Selects an enemy target within a 8 tile radius and deals Freeze damage equivalent to 100% ATK to it"
+    },
+    {
+      "name": "Frosted Echo",
+      "tags": [
+        "Skill",
+        "AoE",
+        "Summon"
+      ],
+      "ammo_type": "Freeze",
+      "stability_damage": 0,
+      "cooldown": "0 turns",
+      "confectance_cost": 1,
+      "range": 8,
+      "effect_area": "4",
+      "description": "Selects an empty tile within a 8 tile radius, consumes all Confectance Index, for each Confectance Index consumed, deals AoE Freeze damage equivalent to 15% ATK and 1 Stability Damage to all enemies within a 4 tile radius of the selected tile, and summons Liquid N2 Fang for 3 rounds (Duration decreases at the end of the current round)\n\nIf Alva has 3 stacks of Battle Prep after skill usage, consumes 3 stacks of Battle Prep and gains Extra Command"
+    },
+    {
       "name": "Nix Requiem",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted"
       ],
       "stability_damage": 0,
@@ -46,7 +75,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 8 tile radius, consumes all Confectance Index, for each Confectance Index consumed, deals Freeze damage equivalent to 30% ATK and 1 Stability Damage to it",
       "icon": "assets/images/characters/alva/skill2-icon.png",
-      "range_image": "assets/images/characters/alva/skill2-range.png"
+      "range_image": "assets/images/characters/alva/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Freezing Touch",
@@ -60,7 +90,8 @@
       "effect_area": "Target",
       "description": "Increases Shield amount applied by allies by 30%. When allies gain a Shield, the Shield is converted into Brumal Barrier with the same Shield HP. At the end of the action, increases Confectance Index by 3 points and gains 1 stack of Battle Prep. After launching Interception, increases Confectance Index by 1 point",
       "icon": "assets/images/characters/alva/skill3-icon.png",
-      "range_image": "assets/images/characters/alva/skill3-range.png"
+      "range_image": "assets/images/characters/alva/skill3-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -207,7 +238,8 @@
   "images": {
     "portrait": "assets/images/characters/alva/portrait.png",
     "avatar": "assets/images/characters/alva/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/alva/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

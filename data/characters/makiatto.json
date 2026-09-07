@@ -46,7 +46,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 9 tiles and deals Freeze damage equal to 160% of attack. Increases the critical damage of this attack by 30%. Gains 1 stack of Cold Conviction for each instance of damage dealt.",
       "icon": "assets/images/characters/makiatto/skill2-icon.png",
-      "range_image": "assets/images/characters/makiatto/skill2-range.png"
+      "range_image": "assets/images/characters/makiatto/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Professional Tactics",
@@ -62,13 +63,15 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 9 tiles of self, deal Physical damage equal to 130% of attack, gain 4 points of Confectance Index, and gain 2 stacks of Standard Approach.",
       "icon": "assets/images/characters/makiatto/skill3-icon.png",
-      "range_image": "assets/images/characters/makiatto/skill3-range.png"
+      "range_image": "assets/images/characters/makiatto/skill3-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Absolute Mental Defense",
       "tags": [
-        "Active",
+        "Ultimate",
         "Buff",
+        "Counter",
         "Debuff"
       ],
       "stability_damage": 0,
@@ -92,7 +95,8 @@
       "effect_area": "Target",
       "description": "Increases critical rate by 40% and reduces critical damage by 10%.\n\nAt the start of the turn, if this unit's HP exceeds 80%, gains Insight and Steady Progress until the next turn. When attacking a target with Frozen, ignores 4 points of Stability Index and increases damage dealt to them by 20%. When attacking a target with Frigid, ignores 6 points of Stability Index and increases damage dealt to them by 30%. These effects cannot stack.",
       "icon": "assets/images/characters/makiatto/passive.png",
-      "range_image": "assets/images/characters/makiatto/passive-range.png"
+      "range_image": "assets/images/characters/makiatto/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -246,7 +250,8 @@
   "images": {
     "portrait": "assets/images/characters/makiatto/portrait.png",
     "avatar": "assets/images/characters/makiatto/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/makiatto/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

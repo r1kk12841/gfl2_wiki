@@ -20,9 +20,9 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_class">Class</span>
     <div class="filter-chips">
-      <span class="chip active" data-filter="class" data-value="all" data-i18n="filter_all_classes">All Classes</span>
+      <button type="button" class="chip active" data-filter="class" data-value="all" aria-pressed="true" data-i18n="filter_all_classes">All Classes</button>
       {% for cls in ['Bulwark', 'Vanguard', 'Support', 'Sentinel'] %}
-      <span class="chip" data-filter="class" data-value="{{ cls }}" data-cls="{{ cls }}">{{ cls }}</span>
+      <button type="button" class="chip" data-filter="class" data-value="{{ cls }}" aria-pressed="false" data-cls="{{ cls }}">{{ cls }}</button>
       {% endfor %}
     </div>
   </div>
@@ -31,9 +31,9 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_rarity">Rarity</span>
     <div class="filter-chips">
-      <span class="chip active" data-filter="rarity" data-value="all" data-i18n="filter_all_rarities">All Rarities</span>
-      <span class="chip" data-filter="rarity" data-value="Elite" data-rarity="Elite">Elite (SSR)</span>
-      <span class="chip" data-filter="rarity" data-value="Standard" data-rarity="Standard">Standard (SR)</span>
+      <button type="button" class="chip active" data-filter="rarity" data-value="all" aria-pressed="true" data-i18n="filter_all_rarities">All Rarities</button>
+      <button type="button" class="chip" data-filter="rarity" data-value="Elite" aria-pressed="false" data-rarity="Elite">Elite (SSR)</button>
+      <button type="button" class="chip" data-filter="rarity" data-value="Standard" aria-pressed="false" data-rarity="Standard">Standard (SR)</button>
     </div>
   </div>
 
@@ -41,9 +41,9 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_phase">Phase</span>
     <div class="filter-chips">
-      <span class="chip active" data-filter="phase" data-value="all" data-i18n="filter_all_phases">All Phases</span>
+      <button type="button" class="chip active" data-filter="phase" data-value="all" aria-pressed="true" data-i18n="filter_all_phases">All Phases</button>
       {% for ph in ['Physical', 'Burn', 'Hydro', 'Electric', 'Freeze', 'Corrosion', 'Resonance'] %}
-      <span class="chip" data-filter="phase" data-value="{{ ph }}" data-phase="{{ ph }}">{{ ph }}</span>
+      <button type="button" class="chip" data-filter="phase" data-value="{{ ph }}" aria-pressed="false" data-phase="{{ ph }}">{{ ph }}</button>
       {% endfor %}
     </div>
   </div>
@@ -52,9 +52,9 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_weapon">Weapon</span>
     <div class="filter-chips">
-      <span class="chip active" data-filter="weapon_type" data-value="all" data-i18n="filter_all_weapons">All Weapons</span>
+      <button type="button" class="chip active" data-filter="weapon_type" data-value="all" aria-pressed="true" data-i18n="filter_all_weapons">All Weapons</button>
       {% for wt in ['Assault Rifle', 'SMG', 'Shotgun', 'MG', 'Sniper Rifle', 'Handgun', 'Blade'] %}
-      <span class="chip" data-filter="weapon_type" data-value="{{ wt }}" data-weapontype="{{ wt }}">{{ wt }}</span>
+      <button type="button" class="chip" data-filter="weapon_type" data-value="{{ wt }}" aria-pressed="false" data-weapontype="{{ wt }}">{{ wt }}</button>
       {% endfor %}
     </div>
   </div>
@@ -63,9 +63,9 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_server">Server</span>
     <div class="filter-chips">
-      <span class="chip active" data-filter="server" data-value="all" data-i18n="filter_all_servers">All Servers</span>
-      <span class="chip" data-filter="server" data-value="global" data-server="global">Global</span>
-      <span class="chip" data-filter="server" data-value="cn" data-server="cn">CN Server</span>
+      <button type="button" class="chip active" data-filter="server" data-value="all" aria-pressed="true" data-i18n="filter_all_servers">All Servers</button>
+      <button type="button" class="chip" data-filter="server" data-value="global" aria-pressed="false" data-server="global">Global</button>
+      <button type="button" class="chip" data-filter="server" data-value="cn" aria-pressed="false" data-server="cn">CN Server</button>
     </div>
   </div>
 </section>
@@ -90,12 +90,18 @@
         </div>
         <span class="badge badge-server badge-server-{{ (doll.server or 'global')|lower }}" data-doll-server="{{ (doll.server or 'global')|lower }}">{{ 'CN' if (doll.server or 'global')|lower == 'cn' else 'Global' }}</span>
       </div>
-      <img src="{{ rel_prefix }}{{ doll.images.portrait if (doll.images and doll.images.portrait) else 'assets/images/characters/' + doll.slug + '/portrait.png' }}"
-
-           alt="{{ doll.name }}"
-           class="doll-thumb"
-           loading="lazy"
-           onerror="this.src='{{ rel_prefix }}assets/images/characters/groza/portrait.png';">
+      <picture>
+        {% if doll.images and doll.images.portrait_webp %}
+        <source srcset="{{ rel_prefix }}{{ doll.images.portrait_webp }}" type="image/webp">
+        {% endif %}
+        <img src="{{ rel_prefix }}{{ doll.images.portrait if (doll.images and doll.images.portrait) else 'assets/images/characters/' + doll.slug + '/portrait.png' }}"
+             alt="{{ doll.name }}"
+             class="doll-thumb"
+             width="200"
+             height="260"
+             loading="lazy"
+             onerror="this.src='{{ rel_prefix }}assets/images/characters/groza/portrait.png';">
+      </picture>
     </div>
     <div class="doll-card-body">
       <div class="doll-name">{{ doll.name }}</div>

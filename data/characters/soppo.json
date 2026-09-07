@@ -37,7 +37,8 @@
       "name": "Ferocious Bite",
       "tags": [
         "Active",
-        "AoE"
+        "AoE",
+        "Tile"
       ],
       "stability_damage": 3,
       "cooldown": "1 turns",
@@ -46,7 +47,8 @@
       "effect_area": "3",
       "description": "Selects 1 enemy target within 6 tiles, dealing AoE Freeze damage equal to 80% of attack to the target and all enemy targets within a 3-tile radius around it, and creates Frost tiles for 2 turns. After skill usage, use the basic attack Predator's Pursuit on the nearest enemy target within 8 tiles and gains Extra Command.\nIf in Feral Form, deals AoE Burn damage instead, creates Incineration tiles, and no longer gains Extra Command.",
       "icon": "assets/images/characters/soppo/skill2-icon.png",
-      "range_image": "assets/images/characters/soppo/skill2-range.png"
+      "range_image": "assets/images/characters/soppo/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Midnight Howl",
@@ -60,13 +62,15 @@
       "effect_area": "8",
       "description": "Selects any empty Freeze-type or Burn-type tile anywhere on the battlefield, moves onto that tile, and applies Slaughter Trail to all allied Dolls within an 8-tile radius around the user (excluding self) for 3 turns. After skill usage, switches to Feral Form.\n\nIf in Feral Form, deals AoE Burn damage equal to 120% of attack to all enemy targets within a 4-tile radius instead. This damage is evenly split among all targets within the area. After skill usage, Soppo use the basic attack Predator's Pursuit on the nearest enemy target within 8 tiles and gains Extra Action.",
       "icon": "assets/images/characters/soppo/skill3-icon.png",
-      "range_image": "assets/images/characters/soppo/skill3-range.png"
+      "range_image": "assets/images/characters/soppo/skill3-range.png",
+      "range": "Full map"
     },
     {
       "name": "Deadly Pounce",
       "tags": [
-        "Active",
-        "AoE"
+        "Ultimate",
+        "AoE",
+        "Interception"
       ],
       "stability_damage": 5,
       "cooldown": "2 turns",
@@ -74,7 +78,9 @@
       "effect_area": "6",
       "description": "Selects all enemy targets within a 6-tile radius, consumes all Predator Mark stacks, and deals AoE Freeze damage equal to number of Predator Mark stacks × 30% of attack. If this attack hits an enemy target standing on an phase tile, deals an additional 1 instance of Freeze damage equal to 50% of attack to that target. After skill usage, switches to Hunter Form.\n\nPassive: Before an enemy unit within 8 tiles performs an active attack, triggers Interception against it, dealing Freeze damage equal to 30% of attack and 4 points of stability damage. Can trigger at most once per turn.",
       "icon": "assets/images/characters/soppo/ult-icon.png",
-      "range_image": "assets/images/characters/soppo/ult-range.png"
+      "range_image": "assets/images/characters/soppo/ult-range.png",
+      "ammo_type": "Medium Ammo",
+      "range": "Self"
     },
     {
       "name": "Mad Dog Syndrome",
@@ -87,7 +93,8 @@
       "effect_area": "Target",
       "description": "At the start of battle, enters Hunter Form; consumes 3 points of own Confectance Index and gains Frost Barrier for 3 turns. Frost Barrier absorbs damage equal to 65% of initial attack, up to a maximum of 60% of max HP.\n\nAt the start of battle, if there are 3 or more allied Burn Dolls (excluding self), then while in Hunter Form, the damage dealt by the basic attack Predator's Pursuit and the active skill Ferocious Bite to enemy targets afflicted with Burn-type debuffs is increased by 100%; if there are 3 or more allied Freeze Dolls (excluding self), then while in Feral Form, the damage dealt by the above skills as well as the active skill Midnight Howl to enemy targets afflicted with Freeze-type debuffs is increased by 100%.\nIf neither condition is met, gains 2 stacks of Permanent Predator Mark.\n\nAfter use an active skill, gains 1 stack of Berserk Factor, up to a maximum of 10 stacks. At 4 stacks of Berserk Factor, gains Berserk Factor I; at 6 stacks of Berserk Factor, gains Berserk Factor II; at 8 or more stacks of Berserk Factor, gains Berserk Factor III.",
       "icon": "assets/images/characters/soppo/passive.png",
-      "range_image": "assets/images/characters/soppo/passive-range.png"
+      "range_image": "assets/images/characters/soppo/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -227,7 +234,8 @@
   "images": {
     "portrait": "assets/images/characters/soppo/portrait.png",
     "avatar": "assets/images/characters/soppo/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/soppo/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "cn"

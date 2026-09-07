@@ -30,7 +30,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
       "icon": "assets/images/characters/harpsy/skill1-icon.png",
-      "range_image": "assets/images/characters/harpsy/skill1-range.png"
+      "range_image": "assets/images/characters/harpsy/skill1-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Wide area Boost ♂Wide Muscle Boost♂",
@@ -50,8 +51,9 @@
       "name": "Beat poison with poison ♂Swallow My Virus♂",
       "tags": [
         "Active",
-        "AoE",
-        "Debuff"
+        "Aoe",
+        "Debuff",
+        "Displacement"
       ],
       "stability_damage": 3,
       "cooldown": "0 turns",
@@ -60,13 +62,14 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles, deals Aoe Corrosion damage equal to 90% of attack, knocks the target back by 3 tiles and apply 2 stacks of Kill Process.",
       "icon": "assets/images/characters/harpsy/skill3-icon.png",
-      "range_image": "assets/images/characters/harpsy/skill3-range.png"
+      "range_image": "assets/images/characters/harpsy/skill3-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Online punch ゴStarForce Platinumゴ",
       "tags": [
-        "Active",
-        "AoE"
+        "Ultimate",
+        "Aoe"
       ],
       "stability_damage": 4,
       "cooldown": "0 turns",
@@ -75,7 +78,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles and deals AOE Corrosion damage equal to 90% of attack to them. If the number of friendly Dolls holding the Alpha Process on the field is greater than 2, the damage dealt by the Kill Process is increased by 30% for 1 global round.",
       "icon": "assets/images/characters/harpsy/ult-icon.png",
-      "range_image": "assets/images/characters/harpsy/ult-range.png"
+      "range_image": "assets/images/characters/harpsy/ult-range.png",
+      "ammo_type": "Corrosion"
     },
     {
       "name": "Macro virus ♂Virus Master♂",
@@ -88,7 +92,8 @@
       "effect_area": "Self",
       "description": "After an active attack Harpsy recovers 2 points of Confectance Index.\nFor every 1 Confectance Index spent with a Ultimate skill, the effect of 1 Alpha Process is triggered.",
       "icon": "assets/images/characters/harpsy/passive.png",
-      "range_image": "assets/images/characters/harpsy/passive-range.png"
+      "range_image": "assets/images/characters/harpsy/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -235,7 +240,8 @@
   "images": {
     "portrait": "assets/images/characters/harpsy/portrait.png",
     "avatar": "assets/images/characters/harpsy/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/harpsy/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

@@ -72,7 +72,18 @@
           </div>
           <span class="badge badge-server badge-server-{{ (doll.server or 'global')|lower }}" data-doll-server="{{ (doll.server or 'global')|lower }}">{{ 'CN' if (doll.server or 'global')|lower == 'cn' else 'Global' }}</span>
         </div>
-        <img src="{{ rel_prefix }}{{ doll.images.portrait if (doll.images and doll.images.portrait) else 'assets/images/characters/' + doll.slug + '/portrait.png' }}" alt="{{ doll.name }}" class="doll-thumb" onerror="this.src='{{ rel_prefix }}assets/images/characters/groza/portrait.png';">
+        <picture>
+          {% if doll.images and doll.images.portrait_webp %}
+          <source srcset="{{ rel_prefix }}{{ doll.images.portrait_webp }}" type="image/webp">
+          {% endif %}
+          <img src="{{ rel_prefix }}{{ doll.images.portrait if (doll.images and doll.images.portrait) else 'assets/images/characters/' + doll.slug + '/portrait.png' }}"
+               alt="{{ doll.name }}"
+               class="doll-thumb"
+               width="200"
+               height="260"
+               loading="lazy"
+               onerror="this.src='{{ rel_prefix }}assets/images/characters/groza/portrait.png';">
+        </picture>
       </div>
       <div class="doll-card-body">
         <div class="doll-name">{{ doll.name }}</div>

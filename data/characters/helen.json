@@ -30,13 +30,15 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles and deals Freeze damage equal to 80% of attack to them.",
       "icon": "assets/images/characters/helen/skill1-icon.png",
-      "range_image": "assets/images/characters/helen/skill1-range.png"
+      "range_image": "assets/images/characters/helen/skill1-range.png",
+      "ammo_type": "Shotgun Ammo"
     },
     {
       "name": "Aegis Command",
       "tags": [
         "Active",
-        "Buff"
+        "Buff",
+        "Damage Share"
       ],
       "stability_damage": 0,
       "cooldown": "1 turns",
@@ -52,7 +54,8 @@
       "tags": [
         "Active",
         "Buff",
-        "AoE"
+        "Tile",
+        "Defense"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -60,12 +63,13 @@
       "effect_area": "Target",
       "description": "Selects 1 tile within a cross-shaped area of 4 to 8 tiles and lands on the selected tile. All allied units along the path will have one debuff cleansed and gain Frost Shield that absorbs 100% of Helen's initial attack damage, up to a maximum of 100% of the target's maximum health. Generates Frost tiles along the path for 2 turns.\nFor each allied unit (excluding self) on the path, the effectiveness of this Frost Shield is increased by 30%, and restores 2 points of stability to Helen. After skill usage, Helen gains 6 tiles of Additional Movement and can use her basic attack.",
       "icon": "assets/images/characters/helen/skill3-icon.png",
-      "range_image": "assets/images/characters/helen/skill3-range.png"
+      "range_image": "assets/images/characters/helen/skill3-range.png",
+      "range": "--"
     },
     {
       "name": "Banner Sentinel",
       "tags": [
-        "Active",
+        "Ultimate",
         "Buff"
       ],
       "stability_damage": 2,
@@ -88,7 +92,8 @@
       "effect_area": "Target",
       "description": "Helen is immune to the following effects: healing reduction, healing prevention or effects that convert healing into damage.\nAt the start of battle, increases Helen's defense and Max HP by 30%.\nAt the start of each turn, Helen gains 2 points of Confectance Index, restores 25% of HP, and cleanse all debuffs from self.\nFor every instance of damage taken, Helen gains 1 stack of Overedge.\nWhen Helen has Overedge, the damage multiplier of her basic attacks is increased to 180%.\nBefore Helen performs a basic attack, her attack is increased by 15% of her defence.",
       "icon": "assets/images/characters/helen/passive.png",
-      "range_image": "assets/images/characters/helen/passive-range.png"
+      "range_image": "assets/images/characters/helen/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -228,7 +233,8 @@
   "images": {
     "portrait": "assets/images/characters/helen/portrait.png",
     "avatar": "assets/images/characters/helen/avatar.png",
-    "class_icon": "assets/images/class/bulwark.png"
+    "class_icon": "assets/images/class/bulwark.png",
+    "portrait_webp": "assets/images/characters/helen/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

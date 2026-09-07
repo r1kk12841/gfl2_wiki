@@ -23,7 +23,7 @@
         "Basic Attack",
         "Targeted"
       ],
-      "ammo_type": "Melee",
+      "ammo_type": "Light Ammo",
       "stability_damage": 2,
       "cooldown": "0 turns",
       "confectance_cost": 0,
@@ -46,7 +46,9 @@
       "effect_area": "3",
       "description": "Expends all Confectance Index. For each point of Confectance Index expended, Faye applies 1 stack of Rend to all enemy units within 3 tiles, pulls them 2 tiles towards self, and deals AoE Physical damage equal to 80% of attack, while also applying Movement Denied for 1 turn.\n\nFaye gains 8 tiles of Additional Movement and Bypass for 1 turn.",
       "icon": "assets/images/characters/faye/skill2-icon.png",
-      "range_image": "assets/images/characters/faye/skill2-range.png"
+      "range_image": "assets/images/characters/faye/skill2-range.png",
+      "ammo_type": "Melee",
+      "range": "Self"
     },
     {
       "name": "Fissioned Firelight",
@@ -62,12 +64,13 @@
       "effect_area": "Target",
       "description": "Faye gains 2 points of Confectance Index. Selects an enemy target within 6 tiles, applies 2 stacks of Rend to it, and deals Physical damage equal to 120% of attack.",
       "icon": "assets/images/characters/faye/skill3-icon.png",
-      "range_image": "assets/images/characters/faye/skill3-range.png"
+      "range_image": "assets/images/characters/faye/skill3-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "No Survivors",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted",
         "Debuff"
       ],
@@ -78,7 +81,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within 6 tiles. Applies a number of stacks of Gash equal to the stacks of Rend to all enemies holding Rend within 6 tiles, and deals Physical damage equal to 160% of attack.\n\nIf the enemy target holds 6 or more stacks of Rend, expends 6 stacks of Rend from the target to increase the damage that the target takes from this attack by 120%.",
       "icon": "assets/images/characters/faye/ult-icon.png",
-      "range_image": "assets/images/characters/faye/ult-range.png"
+      "range_image": "assets/images/characters/faye/ult-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Tomahawk Combo",
@@ -240,7 +244,8 @@
   "images": {
     "portrait": "assets/images/characters/faye/portrait.png",
     "avatar": "assets/images/characters/faye/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/faye/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

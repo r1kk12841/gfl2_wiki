@@ -46,7 +46,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles and deal Hydro damage equal to 130% of attack to it. If Phase Weakness is exploited, gain 2 points of Confectance Index.",
       "icon": "assets/images/characters/tololo/skill2-icon.png",
-      "range_image": "assets/images/characters/tololo/skill2-range.png"
+      "range_image": "assets/images/characters/tololo/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Supernova Impact",
@@ -61,12 +62,13 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles and deal Physical damage equal to 130% of attack to it. If under the effects of 2 or more buffs, increase damage dealt by 20% and gain 2 points of Confectance Index.",
       "icon": "assets/images/characters/tololo/skill3-icon.png",
-      "range_image": "assets/images/characters/tololo/skill3-range.png"
+      "range_image": "assets/images/characters/tololo/skill3-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Morte Lumina",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted"
       ],
       "stability_damage": 4,
@@ -76,7 +78,8 @@
       "effect_area": "Target",
       "description": "Select 1 enemy target within 8 tiles and deals Hydro damage equal to 180% of attack to it. If under the effects of 3 or more buffs, increases damage dealt by 15% and reduce this skill's cooldown by 2 turns.",
       "icon": "assets/images/characters/tololo/ult-icon.png",
-      "range_image": "assets/images/characters/tololo/ult-range.png"
+      "range_image": "assets/images/characters/tololo/ult-range.png",
+      "ammo_type": "Hydro"
     },
     {
       "name": "Aurora Curtain",
@@ -88,9 +91,10 @@
       "cooldown": "0 turns",
       "confectance_cost": 0,
       "effect_area": "Target",
-      "description": "Fills Confectance Index to maximum at the start of the battle. After attacking, if Confectance Index is at max, consumes all of it and gains 1 instance of an Extra Action. \n\nAt the start of each action, for every 2 points of Confectance Index, gains 1 random buff that lasts until the end of the action. Each time an allied unit delas Hydro damage, this unit gains 1 stack of Lightspike.",
+      "description": "Fills Confectance Index to maximum at the start of the battle. After attacking, if Confectance Index is at max, consumes all of it and gains 1 instance of an Extra Action.\n\nAt the start of each action, for every 2 points of Confectance Index, gains 1 random buff that lasts until the end of the action. Each time an allied unit delas Hydro damage, this unit gains 1 stack of Lightspike.",
       "icon": "assets/images/characters/tololo/passive.png",
-      "range_image": "assets/images/characters/tololo/passive-range.png"
+      "range_image": "assets/images/characters/tololo/passive-range.png",
+      "range": "Self"
     }
   ],
   "summons": [
@@ -109,12 +113,29 @@
           "name": "Call of the Stars",
           "description": "At the end of allied turn, deals targetted Hydro damage equal to 130% of ATK to the enemy unit within 7 tile radius around the unit that has Gravitational Mark. If no unit has Gravitational Mark, targets the nearest enemy unit.",
           "icon": "assets/images/characters/tololo/summon1-skill1-icon.png",
-          "range_image": "assets/images/characters/tololo/summon1-skill1-range.png"
+          "range_image": "assets/images/characters/tololo/summon1-skill1-range.png",
+          "tags": [
+            "Passive"
+          ],
+          "ammo_type": "Medium Ammo",
+          "stability_damage": 2,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Map",
+          "effect_area": "7"
         },
         {
           "name": "Sync Standstill",
           "description": "Immune to Control effects such as Stun, Taunt, and Command Prohibition.",
-          "range_image": "assets/images/characters/tololo/summon1-passive1-range.png"
+          "range_image": "assets/images/characters/tololo/summon1-passive1-range.png",
+          "tags": [
+            "Passive"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "Target"
         }
       ]
     }
@@ -270,7 +291,8 @@
   "images": {
     "portrait": "assets/images/characters/tololo/portrait.png",
     "avatar": "assets/images/characters/tololo/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/tololo/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

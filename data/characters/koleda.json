@@ -46,7 +46,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles and deal Hydro damage equal to 150% of attack to it. Before the skill resolves, Koleda gains 1 stack of Upshift for 3 turns. After the skill resolves, Koleda gains 1 point of Confectance Index.\nThe Sinner switches to S+ Gear.",
       "icon": "assets/images/characters/koleda/skill2-icon.png",
-      "range_image": "assets/images/characters/koleda/skill2-range.png"
+      "range_image": "assets/images/characters/koleda/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Tactical Playbook",
@@ -60,12 +61,14 @@
       "effect_area": "Target",
       "description": "Koleda gains 2 stacks of Upshift for 3 turns. Koleda and The Sinner gain Kinetic Recovery for 3 turns.\nThe Sinner switches to S Gear.",
       "icon": "assets/images/characters/koleda/skill3-icon.png",
-      "range_image": "assets/images/characters/koleda/skill3-range.png"
+      "range_image": "assets/images/characters/koleda/skill3-range.png",
+      "range": "Self"
     },
     {
       "name": "Hallucination",
       "tags": [
-        "Active"
+        "Ultimate",
+        "Summon"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -86,15 +89,17 @@
       "cooldown": "0 turns",
       "confectance_cost": 0,
       "effect_area": "Target",
-      "description": "At the start of the turn, Koleda gains 1 point of Confectance Index. A 50% of Initial damage taken by Koleda is shared by The Sinner. Koleda is not affected by other damage-sharing effects.\n\nAt the end of The Sinner's action, Koleda gains 1 stack of Upshift for 3 turns. If The Sinner is on S+ Gear, Koleda gains an additional 1 stack of Upshift. When Koleda and The Sinner are present on the field, they gain Mobile Support. The effect is removed when either dies.\n \nAfter Koleda uses the active skill Tactical Playbook and at the end of her action, Kinetic Release is triggered 1 time.\n \n When The Sinner uses the active skill Let's Go For a Spin!, Koleda gains The Sinner's base attack and critical damage. The effect is removed when The Sinner dies",
+      "description": "At the start of the turn, Koleda gains 1 point of Confectance Index. A 50% of Initial damage taken by Koleda is shared by The Sinner. Koleda is not affected by other damage-sharing effects.\n\nAt the end of The Sinner's action, Koleda gains 1 stack of Upshift for 3 turns. If The Sinner is on S+ Gear, Koleda gains an additional 1 stack of Upshift. When Koleda and The Sinner are present on the field, they gain Mobile Support. The effect is removed when either dies.\n\nAfter Koleda uses the active skill Tactical Playbook and at the end of her action, Kinetic Release is triggered 1 time.\n\n When The Sinner uses the active skill Let's Go For a Spin!, Koleda gains The Sinner's base attack and critical damage. The effect is removed when The Sinner dies",
       "icon": "assets/images/characters/koleda/passive.png",
-      "range_image": "assets/images/characters/koleda/passive-range.png"
+      "range_image": "assets/images/characters/koleda/passive-range.png",
+      "range": "Self"
     },
     {
       "name": "Winner!",
       "tags": [
         "Active",
-        "Healing"
+        "Healing",
+        "Stability Recovery"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -102,7 +107,8 @@
       "effect_area": "Target",
       "description": "Restores The Sinner's 50% of max HP and 5 points of stability.",
       "icon": "assets/images/characters/koleda/skill6-icon.png",
-      "range_image": "assets/images/characters/koleda/skill6-range.png"
+      "range_image": "assets/images/characters/koleda/skill6-range.png",
+      "range": "Self"
     }
   ],
   "summons": [
@@ -119,27 +125,64 @@
       "skills": [
         {
           "name": "Let's Go For a Spin!",
-          "description": "Selects 1 friendly Doll (excluding Koleda) and applies Let's Go For a Spin! to them. \n \nAfter the skill resolves, The Sinner gains 9 tiles of Additional Movement and can use 1 command.",
+          "description": "Selects 1 friendly Doll (excluding Koleda) and applies Let's Go For a Spin! to them.\n\nAfter the skill resolves, The Sinner gains 9 tiles of Additional Movement and can use 1 command.",
           "icon": "assets/images/characters/koleda/summon1-skill1-icon.png",
-          "range_image": "assets/images/characters/koleda/summon1-skill1-range.png"
+          "range_image": "assets/images/characters/koleda/summon1-skill1-range.png",
+          "tags": [
+            "Active",
+            "Summon Skill"
+          ],
+          "stability_damage": 0,
+          "cooldown": "99 turns",
+          "confectance_cost": 0,
+          "range": 3,
+          "effect_area": "Target"
         },
         {
           "name": "KANSEI DORIFTO?!",
           "description": "Deals AoE Hydro damage equal to 90% of ATK to all enemy units within 5 tile radius around the unit and Pull them 5 tiles towards the centre of The Sinner's position. After the skill resolves, The Sinner gains 9 tiles of Additional Movement and can use the active skill Speedy Speed Doll!.",
           "icon": "assets/images/characters/koleda/summon1-skill2-icon.png",
-          "range_image": "assets/images/characters/koleda/summon1-skill2-range.png"
+          "range_image": "assets/images/characters/koleda/summon1-skill2-range.png",
+          "tags": [
+            "Active",
+            "AoE",
+            "Summon Skill"
+          ],
+          "stability_damage": 1,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "5"
         },
         {
           "name": "Speedy Speed Doll!",
           "description": "Selects 1 tile within cross-shaped area of 4 to 8 tiles, lands on it, and deals AoE Hydro damage equal to 90% of ATK to all enemy targets within 3 tile width along the path. If The Sinner is on S Gear or S+ Gear, additional AoE Hydro damage is dealt equal to 60% and 90% of ATK.",
           "icon": "assets/images/characters/koleda/summon1-skill3-icon.png",
-          "range_image": "assets/images/characters/koleda/summon1-skill3-range.png"
+          "range_image": "assets/images/characters/koleda/summon1-skill3-range.png",
+          "tags": [
+            "Active",
+            "Summon Skill"
+          ],
+          "stability_damage": 3,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "--",
+          "effect_area": "Target"
         },
         {
           "name": "Gear Shift",
-          "description": "At the start of the turn, The Sinner switches to D Gear. At the end of the final action taken, removes all Gears except N Gear and switches to P Gear. Only 1 Gear can be set at a time. \n \nThe Sinner cannot be blocked by enemies, is immune to the status effects Stun, Taunt, and Incapacitation, as well as displacement and movement debuffs. In addition, damage taken by The Sinner is reduced by 35% and it recovers HP equal to 15% its Max HP when taking damage.\n\n At the end of The Sinner's action, if it is on S Gear, Kinetic Release is triggered, if it is on S+ Gear, Kinetic Release+ is triggered instead.",
+          "description": "At the start of the turn, The Sinner switches to D Gear. At the end of the final action taken, removes all Gears except N Gear and switches to P Gear. Only 1 Gear can be set at a time.\n\nThe Sinner cannot be blocked by enemies, is immune to the status effects Stun, Taunt, and Incapacitation, as well as displacement and movement debuffs. In addition, damage taken by The Sinner is reduced by 35% and it recovers HP equal to 15% its Max HP when taking damage.\n\n At the end of The Sinner's action, if it is on S Gear, Kinetic Release is triggered, if it is on S+ Gear, Kinetic Release+ is triggered instead.",
           "icon": "assets/images/characters/koleda/summon1-skill4-icon.png",
-          "range_image": "assets/images/characters/koleda/summon1-skill4-range.png"
+          "range_image": "assets/images/characters/koleda/summon1-skill4-range.png",
+          "tags": [
+            "Passive",
+            "Summon Skill"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "Target"
         }
       ],
       "image": "assets/images/characters/koleda/summon1.png"
@@ -282,7 +325,8 @@
   "images": {
     "portrait": "assets/images/characters/koleda/portrait.png",
     "avatar": "assets/images/characters/koleda/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/koleda/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "cn"

@@ -38,7 +38,9 @@
       "tags": [
         "Active",
         "AoE",
-        "Debuff"
+        "Tile",
+        "Debuff",
+        "Control"
       ],
       "stability_damage": 3,
       "cooldown": "1 turns",
@@ -47,7 +49,8 @@
       "effect_area": "3",
       "description": "Selects 1 enemy unit within 8 tiles, dealing AoE Corrosion damage equal to 60% of attack to all enemies within 3 tile of the target, cleanses 1 buff, inflicts Infatuated and Scent Mark and create Toxic Mist tiles for 2 turns. The damage multiplier of this skill is increased by 5% based on the number of Hunter's Tracking stacks held by the target. After the skill resolves, Faelynn gains 3 points of Confectance Index and 1 random buff, lasting 2 rounds.",
       "icon": "assets/images/characters/faelynn/skill2-icon.png",
-      "range_image": "assets/images/characters/faelynn/skill2-range.png"
+      "range_image": "assets/images/characters/faelynn/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Keen-Eared Hunt",
@@ -61,13 +64,15 @@
       "effect_area": "Target",
       "description": "Faelynn gains Roving Bloodlust for 3 turns and Dog-Eared Radar for 2 turns. After the skill resolves, she gains Extra Command.",
       "icon": "assets/images/characters/faelynn/skill3-icon.png",
-      "range_image": "assets/images/characters/faelynn/skill3-range.png"
+      "range_image": "assets/images/characters/faelynn/skill3-range.png",
+      "range": "Self"
     },
     {
       "name": "Loyal Hunt",
       "tags": [
-        "Active",
-        "AoE"
+        "Ultimate",
+        "AoE",
+        "Tile"
       ],
       "stability_damage": 3,
       "cooldown": "0 turns",
@@ -76,7 +81,8 @@
       "effect_area": "--",
       "description": "Selects a direction and deals AoE Corrosion damage equivalent to 120% ATK to all enemies within a 3x9 frontal area in the selected direction and creates Toxic Mist for 2 rounds. The damage multiplier is increased by 5% based on the number of Hunter's Tracking stacks held by the target. After the skill resolves, if Faelynn has Combo Pounce, consumes 1 stack of it to trigger the additional active skill Hunting Instinct I and gain Additional Movement.",
       "icon": "assets/images/characters/faelynn/ult-icon.png",
-      "range_image": "assets/images/characters/faelynn/ult-range.png"
+      "range_image": "assets/images/characters/faelynn/ult-range.png",
+      "ammo_type": "Corrosion"
     },
     {
       "name": "Relentless Counterattack",
@@ -90,7 +96,8 @@
       "effect_area": "Target",
       "description": "At the start of battle, Faelynn gains 1 stack of Combo Pounce, stacking up to 3 times. Faelynn gains 1 stack of Combo Pounce stacks based on the number of active skills used (excluding Hunting Instinct).\nAt the start of the turn, if Faelynn is on a phase tile, she gains 1 mobility and 1 stack of Hunter's Tracking based on the tile's level, lasting 1 turn.\nIf Faelynn takes damage on a Corrosion-attribute tile, transfers 50% of the initial damage taken to the ally unit with the highest current HP (excluding Faelynn herself).\nFaelynn is immune to displacement, movement debuffs, and action prohibition effects.",
       "icon": "assets/images/characters/faelynn/passive.png",
-      "range_image": "assets/images/characters/faelynn/passive-range.png"
+      "range_image": "assets/images/characters/faelynn/passive-range.png",
+      "range": "Self"
     },
     {
       "name": "Hunting Instinct I",
@@ -103,9 +110,10 @@
       "confectance_cost": 0,
       "range": 6,
       "effect_area": "3",
-      "description": "Selects 1 enemy unit within 6 tiles, dealing AoE Corrosion damage equal to 60% of attack that ignores cover to all enemies within 3 tile of the target, and applies Collar Brand. The damage multiplier increases by 5% based on the number of Hunter’s Tracking stacks possessed. \nIf only 1 target is hit, the damage multiplier is additionally increased by 30%.\nAfter using the skill, if Combo Pounce is possessed, 1 stack of this effect is consumed to trigger the extra active skill Hunting Instinct II and Additional Movement.",
+      "description": "Selects 1 enemy unit within 6 tiles, dealing AoE Corrosion damage equal to 60% of attack that ignores cover to all enemies within 3 tile of the target, and applies Collar Brand. The damage multiplier increases by 5% based on the number of Hunter’s Tracking stacks possessed.\nIf only 1 target is hit, the damage multiplier is additionally increased by 30%.\nAfter using the skill, if Combo Pounce is possessed, 1 stack of this effect is consumed to trigger the extra active skill Hunting Instinct II and Additional Movement.",
       "icon": "assets/images/characters/faelynn/skill6-icon.png",
-      "range_image": "assets/images/characters/faelynn/skill6-range.png"
+      "range_image": "assets/images/characters/faelynn/skill6-range.png",
+      "ammo_type": "Corrosion"
     },
     {
       "name": "Hunting Instinct II",
@@ -118,9 +126,10 @@
       "confectance_cost": 0,
       "range": 6,
       "effect_area": "3",
-      "description": "Selects 1 enemy unit within 6 tiles, dealing AoE Corrosion damage equal to 120% of attack that ignores cover to all enemies within 3 tile of the target. Damage dealt to targets with Collar Brand is increased by 50%. The damage multiplier increases by 5% based on the number of Hunter’s Tracking stacks possessed. \nIf only 1 target is hit, the damage multiplier is additionally increased by 30%.\nAfter using the skill, if Combo Pounce is possessed, 1 stack of this effect is consumed to trigger the extra active skill Hunting Instinct III and Additional Movement.",
+      "description": "Selects 1 enemy unit within 6 tiles, dealing AoE Corrosion damage equal to 120% of attack that ignores cover to all enemies within 3 tile of the target. Damage dealt to targets with Collar Brand is increased by 50%. The damage multiplier increases by 5% based on the number of Hunter’s Tracking stacks possessed.\nIf only 1 target is hit, the damage multiplier is additionally increased by 30%.\nAfter using the skill, if Combo Pounce is possessed, 1 stack of this effect is consumed to trigger the extra active skill Hunting Instinct III and Additional Movement.",
       "icon": "assets/images/characters/faelynn/skill7-icon.png",
-      "range_image": "assets/images/characters/faelynn/skill7-range.png"
+      "range_image": "assets/images/characters/faelynn/skill7-range.png",
+      "ammo_type": "Corrosion"
     },
     {
       "name": "Hunting Instinct III",
@@ -133,9 +142,10 @@
       "confectance_cost": 0,
       "range": 6,
       "effect_area": "3",
-      "description": "Selects 1 enemy unit within 6 tiles, dealing AoE Corrosion damage equal to 240% of attack that ignores cover to all enemies within 3 tile of the target. Damage dealt to targets with Collar Brand is increased by 100%. Before attacking, if target on a phase tile, for each level of the tile, its DEF is reduced by 14% and Faelynn Critical Damage is increaced by 5%. The damage multiplier increases by 5% based on the number of Hunter’s Tracking stacks possessed. \nIf only 1 target is hit, the damage multiplier is additionally increased by 30%.",
+      "description": "Selects 1 enemy unit within 6 tiles, dealing AoE Corrosion damage equal to 240% of attack that ignores cover to all enemies within 3 tile of the target. Damage dealt to targets with Collar Brand is increased by 100%. Before attacking, if target on a phase tile, for each level of the tile, its DEF is reduced by 14% and Faelynn Critical Damage is increaced by 5%. The damage multiplier increases by 5% based on the number of Hunter’s Tracking stacks possessed.\nIf only 1 target is hit, the damage multiplier is additionally increased by 30%.",
       "icon": "assets/images/characters/faelynn/skill8-icon.png",
-      "range_image": "assets/images/characters/faelynn/skill8-range.png"
+      "range_image": "assets/images/characters/faelynn/skill8-range.png",
+      "ammo_type": "Corrosion"
     }
   ],
   "fortification": [
@@ -275,7 +285,8 @@
   "images": {
     "portrait": "assets/images/characters/faelynn/portrait.png",
     "avatar": "assets/images/characters/faelynn/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/faelynn/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "cn"

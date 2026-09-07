@@ -38,17 +38,43 @@
     }
   }
 
-  // Search input handler
+  // Search input handler with accessibility & keyboard navigation
   function initSearchInput() {
     const input = document.getElementById('global-search-input');
     const dropdown = document.getElementById('search-dropdown');
     if (!input || !dropdown) return;
 
+    let selectedIndex = -1;
+
+    function closeDropdown() {
+      dropdown.innerHTML = '';
+      dropdown.classList.remove('open');
+      input.setAttribute('aria-expanded', 'false');
+      input.removeAttribute('aria-activedescendant');
+      selectedIndex = -1;
+    }
+
+    function updateActiveDescendant(items) {
+      items.forEach((item, idx) => {
+        if (idx === selectedIndex) {
+          item.classList.add('selected');
+          item.setAttribute('aria-selected', 'true');
+          input.setAttribute('aria-activedescendant', item.id);
+          item.scrollIntoView({ block: 'nearest' });
+        } else {
+          item.classList.remove('selected');
+          item.setAttribute('aria-selected', 'false');
+        }
+      });
+      if (selectedIndex === -1) {
+        input.removeAttribute('aria-activedescendant');
+      }
+    }
+
     input.addEventListener('input', () => {
       const q = input.value.trim().toLowerCase();
       if (!q || q.length < 1) {
-        dropdown.innerHTML = '';
-        dropdown.classList.remove('open');
+        closeDropdown();
         return;
       }
 
@@ -75,21 +101,28 @@
 
       if (results.length === 0) {
         const emptyMsg = isVi ? 'Không tìm thấy nhân vật hoặc vũ khí phù hợp' : 'No matching dolls or weapons found';
-        dropdown.innerHTML = `<div class="search-result-item" style="color:var(--text-muted);font-size:0.85rem">${emptyMsg}</div>`;
+        dropdown.innerHTML = `<div class="search-result-item search-empty" role="status" aria-live="polite" style="color:var(--text-muted);font-size:0.85rem">${emptyMsg}</div>`;
         dropdown.classList.add('open');
+        input.setAttribute('aria-expanded', 'true');
+        selectedIndex = -1;
         return;
       }
 
       dropdown.innerHTML = '';
-      results.forEach(r => {
+      selectedIndex = -1;
+      results.forEach((r, idx) => {
         const a = document.createElement('a');
         a.className = 'search-result-item';
+        a.id = `search-result-${idx}`;
+        a.setAttribute('role', 'option');
+        a.setAttribute('aria-selected', 'false');
         a.href = r.url.startsWith('/') ? `${rootPath}${r.url.substring(1)}` : `${rootPath}${r.url}`;
 
         const thumb = document.createElement('img');
         thumb.className = 'search-thumb';
         thumb.src = r.image ? (r.image.startsWith('/') ? `${rootPath}${r.image.substring(1)}` : `${rootPath}${r.image}`) : `${rootPath}assets/images/characters/groza/portrait.png`;
-        thumb.alt = r.name;
+        thumb.alt = '';
+        thumb.setAttribute('aria-hidden', 'true');
 
         const info = document.createElement('div');
         info.className = 'search-info';
@@ -115,11 +148,42 @@
         dropdown.append(a);
       });
       dropdown.classList.add('open');
+      input.setAttribute('aria-expanded', 'true');
+    });
+
+    input.addEventListener('keydown', (e) => {
+      if (!dropdown.classList.contains('open')) return;
+      const items = [...dropdown.querySelectorAll('a.search-result-item')];
+      if (!items.length) {
+        if (e.key === 'Escape') {
+          closeDropdown();
+          e.preventDefault();
+        }
+        return;
+      }
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        selectedIndex = (selectedIndex + 1) % items.length;
+        updateActiveDescendant(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+        updateActiveDescendant(items);
+      } else if (e.key === 'Enter') {
+        if (selectedIndex >= 0 && items[selectedIndex]) {
+          e.preventDefault();
+          items[selectedIndex].click();
+        }
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        closeDropdown();
+      }
     });
 
     document.addEventListener('click', (e) => {
       if (!input.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('open');
+        closeDropdown();
       }
     });
   }
@@ -144,10 +208,14 @@
         const filterType = chip.dataset.filter;
         const filterVal = chip.dataset.value;
 
-        // Toggle within same group
+        // Toggle within same group and update ARIA states
         const groupChips = document.querySelectorAll(`.chip[data-filter="${filterType}"]`);
-        groupChips.forEach(c => c.classList.remove('active'));
+        groupChips.forEach(c => {
+          c.classList.remove('active');
+          c.setAttribute('aria-pressed', 'false');
+        });
         chip.classList.add('active');
+        chip.setAttribute('aria-pressed', 'true');
 
         activeFilters[filterType] = filterVal;
 
@@ -186,19 +254,33 @@
 
   }
 
-  // FAQ Accordion
+  // FAQ Accordion with semantic HTML & ARIA
   function initFaq() {
     document.querySelectorAll('.faq-question').forEach(q => {
       q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
+        const answerId = q.getAttribute('aria-controls');
+        const answer = answerId ? document.getElementById(answerId) : q.nextElementSibling;
         if (!answer) return;
-        const isHidden = answer.style.display === 'none';
-        answer.style.display = isHidden ? 'block' : 'none';
+        const isExpanded = q.getAttribute('aria-expanded') === 'true';
+        q.setAttribute('aria-expanded', String(!isExpanded));
+        answer.hidden = isExpanded;
         const arrow = q.querySelector('.faq-arrow');
         if (arrow) {
-          arrow.textContent = isHidden ? '▲' : '▼';
+          arrow.textContent = isExpanded ? '▼' : '▲';
         }
       });
+    });
+  }
+
+  // Mobile menu toggle
+  function initMobileMenu() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+    if (!btn || !navLinks) return;
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      navLinks.classList.toggle('open', !isOpen);
     });
   }
 
@@ -458,6 +540,33 @@
     }, { passive: true });
   }
 
+  function initMobileMenu() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+    if (!btn || !navLinks) return;
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('open', !expanded);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('open')) {
+        btn.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('open');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        btn.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('open');
+        btn.focus();
+      }
+    });
+  }
+
   // Boot
   document.addEventListener('DOMContentLoaded', () => {
     initRootPath();
@@ -466,6 +575,6 @@
     initFilters();
     initFaq();
     initEffectPopovers();
+    initMobileMenu();
   });
 })();
-

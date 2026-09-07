@@ -23,7 +23,7 @@
         "Basic Attack",
         "Targeted"
       ],
-      "ammo_type": "Melee",
+      "ammo_type": "Medium Ammo",
       "stability_damage": 3,
       "cooldown": "0 turns",
       "confectance_cost": 0,
@@ -37,6 +37,7 @@
       "name": "Thunderclap",
       "tags": [
         "Active",
+        "Melee",
         "AoE"
       ],
       "ammo_type": "Melee",
@@ -46,7 +47,8 @@
       "effect_area": "3x3",
       "description": "Selects one enemy target within 3x3 area around self, dealing AOE Melee Electric damage equal to 90% of attack to the target and all enemy units within a 3x3 area. Creates a Voltage terrain for 3 turns. If Phase Weakness is exploited, additionally deals 5 points of Stability Damage. After the attack, gains 6 tiles of Additional Movement and Extra Command.",
       "icon": "assets/images/characters/jiangyu/skill2-icon.png",
-      "range_image": "assets/images/characters/jiangyu/skill2-range.png"
+      "range_image": "assets/images/characters/jiangyu/skill2-range.png",
+      "range": "Melee"
     },
     {
       "name": "Lightning Smash",
@@ -66,7 +68,7 @@
     {
       "name": "Rolling Thunder",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted",
         "Buff"
       ],
@@ -77,21 +79,23 @@
       "effect_area": "8",
       "description": "Selects one enemy target within a 8-tile radius. Jiangyu gains 2 stacks of Chi and deals Electric damage equal to 130% of attack that ignores Cover to it. Applies Positive Charge to all allies for 3 turns, cleanse 1 debuff, and removes Stun and Taunt. Jiangyu gains 1 point of Confectance Index.",
       "icon": "assets/images/characters/jiangyu/ult-icon.png",
-      "range_image": "assets/images/characters/jiangyu/ult-range.png"
+      "range_image": "assets/images/characters/jiangyu/ult-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Grand Aura",
       "tags": [
         "Passive",
-        "Buff"
+        "Support"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
       "confectance_cost": 0,
       "effect_area": "Target",
-      "description": "At the start of the round, Jiangyu gains 1 point of Confectance Index. \nAt the end of the action, if the Confectance Index of Jiangyu is full, all Confectance Index is consumed to reduce the cooldown of Rolling Thunder by 1 turn. When an enemy unit repeatedly gains Negative Charge, applies 1 stack of Voltage Sag for 2 turns. When an allied unit repeatedly gains Positive Charge, applies 1 stack of Power Surge for 3 turns. \n\nWhen an enemy unit within Jiangyu's range (8) takes Targeted Damage from an ally, the user prioritizes performing 1 Support Action and gains 1 stack of Chi. \n\nSupport Action: If the target has Stability greater than 0, deals Electric damage equivalent to 45% of attack and 3 points of Stability damage. If the target is in Stability Break, deals Electric damage equivalent to 75% of attack. Can trigger up to 2 times per round.",
+      "description": "At the start of the round, Jiangyu gains 1 point of Confectance Index.\nAt the end of the action, if the Confectance Index of Jiangyu is full, all Confectance Index is consumed to reduce the cooldown of Rolling Thunder by 1 turn. When an enemy unit repeatedly gains Negative Charge, applies 1 stack of Voltage Sag for 2 turns. When an allied unit repeatedly gains Positive Charge, applies 1 stack of Power Surge for 3 turns.\n\nWhen an enemy unit within Jiangyu's range (8) takes Targeted Damage from an ally, the user prioritizes performing 1 Support Action and gains 1 stack of Chi.\n\nSupport Action: If the target has Stability greater than 0, deals Electric damage equivalent to 45% of attack and 3 points of Stability damage. If the target is in Stability Break, deals Electric damage equivalent to 75% of attack. Can trigger up to 2 times per round.",
       "icon": "assets/images/characters/jiangyu/passive.png",
-      "range_image": "assets/images/characters/jiangyu/passive-range.png"
+      "range_image": "assets/images/characters/jiangyu/passive-range.png",
+      "range": "Self"
     }
   ],
   "neural_helix": [
@@ -200,8 +204,47 @@
   "images": {
     "portrait": "assets/images/characters/jiangyu/portrait.png",
     "avatar": "assets/images/characters/jiangyu/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/jiangyu/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
-  "server": "global"
+  "server": "global",
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Unyielding Chi",
+      "level": 2,
+      "effect": "Increases the number of Support Actions by 1.\nAt the start of battle, deals 4 fixed Stability Damage to all enemy units within a radius of 8 tiles.\nVoltage Sag gains a new effect: When gained, deals fixed damage equal to current stacks × 10% of the caster’s attack.\nPower Surge gains a new effect: Upon gaining this effect, restores HP equal to 10% of Max HP."
+    },
+    {
+      "tier": 2,
+      "skill": "Rolling Thunder",
+      "level": 2,
+      "effect": "Cooldown is reduced by 1 turn, and Confectance Index gained is increased by 1.\nRestores 2 Stability Index to all allies, increases the number of cleansed debuffs by 1, and removes Fear and Infatuated."
+    },
+    {
+      "tier": 3,
+      "skill": "Lightning Smash",
+      "level": 2,
+      "effect": "Damage multiplier increased to 140%.\nDamage dealt to targets with Voltage Sag is increased by 30%.\nBefore dealing damage, dispels 1 Buff from the target."
+    },
+    {
+      "tier": 4,
+      "skill": "Thunderclap",
+      "level": 2,
+      "effect": "Before attacking, gains Attack Up II for 3 turns. When dealing Stability Damage, deals an additional 5 points of fixed Stability Damage to all enemy units with Negative Charge."
+    },
+    {
+      "tier": 5,
+      "skill": "Lightning Smash",
+      "level": 3,
+      "effect": "Increases the amount of dispelled buffs by 1. If\nthe target has 0 stability, perform an additional attack."
+    },
+    {
+      "tier": 6,
+      "skill": "Grand Aura",
+      "level": 3,
+      "effect": "Fixed Stability Damage dealt at the start of battle is increased by 4 points.\nWhen Jiangyu has Chi, Electric damage dealt is increased by 15%.\nThe maximum stack limit of Voltage Sag is increased by 3.\nPower Surge effect changed: When dealing Electric damage, ignored DEF is increased to 10%, and healing received is increased to 10%."
+    }
+  ]
 }

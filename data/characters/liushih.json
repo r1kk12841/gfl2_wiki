@@ -47,7 +47,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 9 tile radius and deals Hydro damage equivalent to 90% of ATK. Consumes all points of Confectance Index. Based on the number of points consumed, Liushih and Pegasus gain number of Precision stacks. After skill usage, Liushih gains Extra Action. This attack is considered a Loaded Attack. This skill can be only used while Pegasus is in the Coordinated Combat state.",
       "icon": "assets/images/characters/liushih/skill2-icon.png",
-      "range_image": "assets/images/characters/liushih/skill2-range.png"
+      "range_image": "assets/images/characters/liushih/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Strategic Masterstroke",
@@ -60,12 +61,13 @@
       "effect_area": "Target",
       "description": "Selects 1 tile within a cross-shaped area of 4 to 8 tiles, landing on the selected tile and relocates Pegasus to a position near her. If Pegasus is in the Coordinated Combat or Standby state, remove that state. After skill usage, Liushih gains Extra Command.",
       "icon": "assets/images/characters/liushih/skill3-icon.png",
-      "range_image": "assets/images/characters/liushih/skill3-range.png"
+      "range_image": "assets/images/characters/liushih/skill3-range.png",
+      "range": "--"
     },
     {
       "name": "Leading the Charge",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted"
       ],
       "stability_damage": 2,
@@ -75,12 +77,14 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 9 tile radius and deals Hydro damage equivalent to 90% of ATK. Pegasus gains the Coordinated Combat state and exits Standby state. This attack is considered a Loaded Attack.",
       "icon": "assets/images/characters/liushih/ult-icon.png",
-      "range_image": "assets/images/characters/liushih/ult-range.png"
+      "range_image": "assets/images/characters/liushih/ult-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "We Fight as One",
       "tags": [
         "Passive",
+        "Summon",
         "Debuff"
       ],
       "stability_damage": 0,
@@ -89,7 +93,8 @@
       "effect_area": "Target",
       "description": "At the start of battle, summons Pegasus close to Liushih.\nFor every 60 points of Liushih's initial attack, increase the basic attack damage multiplier of both herself and Pegasus by 5% up to 50%.\nBefore using the active attack All or Nothing or the Ultimate Leading the Charge, inflicts Lockdown to the target for 2 turns.\nAfter Pegasus uses Point-Defense Autocannon, Liushih gains 1 point of Confectance Index.",
       "icon": "assets/images/characters/liushih/passive.png",
-      "range_image": "assets/images/characters/liushih/passive-range.png"
+      "range_image": "assets/images/characters/liushih/passive-range.png",
+      "range": "Self"
     }
   ],
   "summons": [
@@ -108,13 +113,31 @@
           "name": "Point-Defense Autocannon",
           "description": "Deals Hydro damage equivalent to 110% of ATK. This is considered a Loaded Attack and a basic attack.",
           "icon": "assets/images/characters/liushih/summon1-skill1-icon.png",
-          "range_image": "assets/images/characters/liushih/summon1-skill1-range.png"
+          "range_image": "assets/images/characters/liushih/summon1-skill1-range.png",
+          "tags": [
+            "Passive",
+            "Targeted"
+          ],
+          "ammo_type": "Heavy Ammo",
+          "stability_damage": 2,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 9,
+          "effect_area": "Target"
         },
         {
           "name": "Safety Protocol",
           "description": "Unable to move. When taking lethal damage, Pegasus goes into the Standby state. If it is in the Coordinated Combat state, it is removed.",
           "icon": "assets/images/characters/liushih/summon1-passive1-icon.png",
-          "range_image": "assets/images/characters/liushih/summon1-passive1-range.png"
+          "range_image": "assets/images/characters/liushih/summon1-passive1-range.png",
+          "tags": [
+            "Passive"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "Target"
         }
       ],
       "image": "assets/images/characters/liushih/summon1.png"
@@ -257,7 +280,8 @@
   "images": {
     "portrait": "assets/images/characters/liushih/portrait.png",
     "avatar": "assets/images/characters/liushih/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/liushih/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

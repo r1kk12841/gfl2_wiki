@@ -29,7 +29,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles, dealing Physical damage equal to 60% of attack to them.",
       "icon": "assets/images/characters/papasha/skill1-icon.png",
-      "range_image": "assets/images/characters/papasha/skill1-range.png"
+      "range_image": "assets/images/characters/papasha/skill1-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Honor Guard",
@@ -52,7 +53,7 @@
       "tags": [
         "Active",
         "Targeted",
-        "Buff"
+        "Cleanse"
       ],
       "stability_damage": 3,
       "cooldown": "0 turns",
@@ -66,7 +67,7 @@
     {
       "name": "Heart of Protection",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted",
         "Buff"
       ],
@@ -77,12 +78,14 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles, dealing Physical damage equal to 150% of attack. The City Warden gains Tenacity to Withstand for 2 turns.\n\nBefore the attack, for each buff the user has, the City Warden gains 1 random attack buff, up to a maximum of 2 buffs, lasting for 2 turns.",
       "icon": "assets/images/characters/papasha/ult-icon.png",
-      "range_image": "assets/images/characters/papasha/ult-range.png"
+      "range_image": "assets/images/characters/papasha/ult-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "United Guards",
       "tags": [
-        "Passive"
+        "Passive",
+        "Summon"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -90,7 +93,8 @@
       "effect_area": "Target",
       "description": "At the start of the battle, summons a City Warden near the user.\n\nAfter either the user or the City Warden attacks, the user gains 1 point of Confectance Index.\n\nWhen the user lands a critical hit, the City Warden's next attack receives a 20% critical rate boost. Similarly, when the City Warden lands a critical hit, the user's next attack gains a 20% critical rate boost.",
       "icon": "assets/images/characters/papasha/passive.png",
-      "range_image": "assets/images/characters/papasha/passive-range.png"
+      "range_image": "assets/images/characters/papasha/passive-range.png",
+      "range": "Self"
     }
   ],
   "summons": [
@@ -109,17 +113,44 @@
           "name": "Counter Terrorism Support",
           "description": "After Papasha attacks an enemy target, the City Warden will follow up with a Support Attack on the same target, dealing Physical damage equal to 80% of attack.",
           "icon": "assets/images/characters/papasha/summon1-skill1-icon.png",
-          "range_image": "assets/images/characters/papasha/summon1-skill1-range.png"
+          "range_image": "assets/images/characters/papasha/summon1-skill1-range.png",
+          "tags": [
+            "Passive",
+            "Support"
+          ],
+          "ammo_type": "Light Ammo",
+          "stability_damage": 3,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Entire Map",
+          "effect_area": "Target"
         },
         {
           "name": "Explosion Prevention Measures",
           "description": "At the end of the turn, City Warden will move independently to seek Cover.\n\nThe City Warden's healed received is reduced by 100% and it cannot receive shields. When Papasha is healed, the City Warden restores 10% of its max HP.\n\nWhen the City Warden takes fatal damage, it enters the Self-Repair state for 1 turn.",
           "icon": "assets/images/characters/papasha/summon1-passive1-icon.png",
-          "range_image": "assets/images/characters/papasha/summon1-passive1-range.png"
+          "range_image": "assets/images/characters/papasha/summon1-passive1-range.png",
+          "tags": [
+            "Passive",
+            "Healing"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "Target"
         },
         {
           "name": "Security Monitoring",
-          "icon": "assets/images/characters/papasha/summon1-passive2-icon.png"
+          "icon": "assets/images/characters/papasha/summon1-passive2-icon.png",
+          "tags": [
+            "Passive"
+          ],
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "WIP",
+          "effect_area": "WIP",
+          "description": "At the end of this unit's action, perform Surveillance on the entire map. When an enemy unit uses a basic attack or an active attack, damage them for 40% of own attack. This effect can trigger 1 time per turn.\n\nThis passive is only unlocked after reaching Vertebrae 5"
         }
       ],
       "image": "assets/images/characters/papasha/summon1.png"
@@ -269,7 +300,8 @@
   "images": {
     "portrait": "assets/images/characters/papasha/portrait.png",
     "avatar": "assets/images/characters/papasha/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/papasha/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

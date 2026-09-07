@@ -34,7 +34,7 @@
       "range_image": "assets/images/characters/vector/skill1-range.png"
     },
     {
-      "name": "Dead End Meltdown\n(Active / Targeted / Debuff)",
+      "name": "Dead End Meltdown",
       "tags": [
         "Active",
         "Targeted",
@@ -47,7 +47,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 7 tile radius and deals Burn damage equivalent to 120% ATK to it. If the target has Burn type debuffs, deals fixed damage equivalent to 50% ATK to the target and all enemies within a 3 tile radius of it, and applies Overburn for 2 turns. Vector gains 2 points of Confectance Index.",
       "icon": "assets/images/characters/vector/skill2-icon.png",
-      "range_image": "assets/images/characters/vector/skill2-range.png"
+      "range_image": "assets/images/characters/vector/skill2-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Portent of Doom",
@@ -63,13 +64,15 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 7 tile radius and deals Burn damage equivalent to 100% ATK to it, and applies Smolder for 2 turns. Vector gains 2 points of Confectance Index.",
       "icon": "assets/images/characters/vector/skill3-icon.png",
-      "range_image": "assets/images/characters/vector/skill3-range.png"
+      "range_image": "assets/images/characters/vector/skill3-range.png",
+      "ammo_type": "Burn"
     },
     {
       "name": "Searing Finale",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE",
+        "Tile",
         "Buff"
       ],
       "stability_damage": 1,
@@ -79,7 +82,8 @@
       "effect_area": "7",
       "description": "Selects a tile within a 7 tile radius, deals AoE Burn damage equivalent to 60% ATK to all enemies and generates Incineration tiles that lasts for 2 turns within a 7 tile radius of the designated tile. Applies Accelerant to all allies for 2 turns. Vector gains Extra Command.",
       "icon": "assets/images/characters/vector/ult-icon.png",
-      "range_image": "assets/images/characters/vector/ult-range.png"
+      "range_image": "assets/images/characters/vector/ult-range.png",
+      "ammo_type": "Burn"
     },
     {
       "name": "Perception Block",
@@ -93,7 +97,8 @@
       "effect_area": "Target",
       "description": "Vector is immune from the negative effects of Burn tiles.\n\nBefore dealing Burn damage, if the target has Overburn, applies Overheat Combustion on the target for 2 turns\n\nAt the start of the battle, increases the attack count of Support attack that deals Burn damage by 1\n\nAt the start of each turn, if Vector's Confectance Index is full, Vector consumes all points of Confectance Index, and increases ATK by 10% until the end of the round.",
       "icon": "assets/images/characters/vector/passive.png",
-      "range_image": "assets/images/characters/vector/passive-range.png"
+      "range_image": "assets/images/characters/vector/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -240,7 +245,8 @@
   "images": {
     "portrait": "assets/images/characters/vector/portrait.png",
     "avatar": "assets/images/characters/vector/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/vector/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

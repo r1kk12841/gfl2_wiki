@@ -30,12 +30,14 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 80% ATK to it",
       "icon": "assets/images/characters/andoris/skill1-icon.png",
-      "range_image": "assets/images/characters/andoris/skill1-range.png"
+      "range_image": "assets/images/characters/andoris/skill1-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Gentle Offensive",
       "tags": [
-        "Active"
+        "Active",
+        "Summon"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -60,12 +62,14 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 7 tile radius, applies Electro-Charge before attacking for 2 turns, then deals Electric damage equivalent to 110% ATK to it",
       "icon": "assets/images/characters/andoris/skill3-icon.png",
-      "range_image": "assets/images/characters/andoris/skill3-range.png"
+      "range_image": "assets/images/characters/andoris/skill3-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Fortification Protocol",
       "tags": [
-        "Active",
+        "Ultimate",
+        "Defense",
         "Buff"
       ],
       "stability_damage": 0,
@@ -74,12 +78,14 @@
       "effect_area": "Entire Map",
       "description": "Restores 8 Stability and gains Fortified Stance for self for 2 rounds (Duration decreases at the end of the current round). Applies 2 stacks of Shelter and 3 turns of Positive Charge for all allies",
       "icon": "assets/images/characters/andoris/ult-icon.png",
-      "range_image": "assets/images/characters/andoris/ult-range.png"
+      "range_image": "assets/images/characters/andoris/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Delayed Response",
       "tags": [
         "Passive",
+        "Shared",
         "Buff"
       ],
       "stability_damage": 0,
@@ -87,7 +93,8 @@
       "confectance_cost": 0,
       "effect_area": "Target",
       "description": "At the start of the battle, gains Self-Diagnosis. This effect can be reactivated again after 3 rounds\n\nWhen allies with Positive Charge receives damage, Andoris shares 45% of the Initial Damage. When using an active attack against an enemy with Negative Charge, Andoris restores HP equivalent to 20% of self's max HP\n\nWhen receiving damage, restores HP equivalent to 5% of self's max HP, increases Confectance Index by 1 point, and applies 1 stack of Blunted Nerves for self and all Auto-Turret on the field. If Andoris is not under the protection of Cover, decreases Confectance Index by 1 point and decreases damage received by 20%",
-      "icon": "assets/images/characters/andoris/passive.png"
+      "icon": "assets/images/characters/andoris/passive.png",
+      "range": "Self"
     }
   ],
   "summons": [
@@ -106,25 +113,61 @@
           "name": "Charged Shot",
           "description": "Selects an enemy target within a 6 tile radius, applies Negative Charge for 2 turns, and deals Electric damage equivalent to 100% ATK to it",
           "icon": "assets/images/characters/andoris/summon1-skill1-icon.png",
-          "range_image": "assets/images/characters/andoris/summon1-skill1-range.png"
+          "range_image": "assets/images/characters/andoris/summon1-skill1-range.png",
+          "tags": [
+            "Basic Attack",
+            "Targeted",
+            "Debuff"
+          ],
+          "ammo_type": "Electric",
+          "stability_damage": 1,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 6,
+          "effect_area": "Target"
         },
         {
           "name": "Info Relay",
           "description": "At the end of the action, applies Negative Charge on 2 targets within a 6 tile radius for 2 turns",
           "icon": "assets/images/characters/andoris/summon1-passive1-icon.png",
-          "range_image": "assets/images/characters/andoris/summon1-passive1-range.png"
+          "range_image": "assets/images/characters/andoris/summon1-passive1-range.png",
+          "tags": [
+            "Passive",
+            "Debuff"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": 6,
+          "effect_area": "Target"
         },
         {
           "name": "Crash Mimicry",
           "description": "Auto-Turret cannot be healed or have a Shield applied on it, but is immune to Crowd control effects",
           "icon": "assets/images/characters/andoris/summon1-passive2-icon.png",
-          "range_image": "assets/images/characters/andoris/summon1-passive2-range.png"
+          "range_image": "assets/images/characters/andoris/summon1-passive2-range.png",
+          "tags": [
+            "Passive"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "Target"
         },
         {
           "name": "En Passant",
           "description": "When enemies within attack range receives single target Electric damage from allies' active attacks, Auto-Turret activates Action Support against the enemy first, dealing Electric damage equivalent to 100% ATK and 1 Stability Damage to it, and applies Negative Charge for 2 turns\n\nThis passive is only unlocked after reaching Vertebrae 1",
           "icon": "assets/images/characters/andoris/summon1-passive3-icon.png",
-          "range_image": "assets/images/characters/andoris/summon1-passive3-range.png"
+          "range_image": "assets/images/characters/andoris/summon1-passive3-range.png",
+          "tags": [
+            "Passive"
+          ],
+          "stability_damage": 0,
+          "cooldown": "0 turns",
+          "confectance_cost": 0,
+          "range": "Self",
+          "effect_area": "Target"
         }
       ],
       "image": "assets/images/characters/andoris/summon1.png"
@@ -274,7 +317,8 @@
   "images": {
     "portrait": "assets/images/characters/andoris/portrait.png",
     "avatar": "assets/images/characters/andoris/avatar.png",
-    "class_icon": "assets/images/class/bulwark.png"
+    "class_icon": "assets/images/class/bulwark.png",
+    "portrait_webp": "assets/images/characters/andoris/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

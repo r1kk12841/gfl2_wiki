@@ -46,7 +46,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 130% ATK to it. Increases the damage of this attack based on (3% x the number of Negative Charge) on the field, up to a maximum of 15%. If the target is a boss unit and has Negative Charge, increases damage immediately to 15% instead\n\nIf thie attack CRITs, increases Confectance Index by 1 point. After this skill is used, selects an empty tile within a 6 tile range and lands on the designated tile",
       "icon": "assets/images/characters/belka/skill2-icon.png",
-      "range_image": "assets/images/characters/belka/skill2-range.png"
+      "range_image": "assets/images/characters/belka/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Crackling Core",
@@ -62,12 +63,13 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 6 tile radius and deals Electric damage equivalent to 130% ATK. For each movement point consumed, increases damage multiplier by 5%\n\nBelka gains 1 layer of Active Engagement. After this skill is used, Belka can use Sylvan Vault or Nutcracker Shell",
       "icon": "assets/images/characters/belka/skill3-icon.png",
-      "range_image": "assets/images/characters/belka/skill3-range.png"
+      "range_image": "assets/images/characters/belka/skill3-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Leaping Arc",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted",
         "Debuff"
       ],
@@ -78,7 +80,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 8 tile radius and deals Electric damage equivalent to 160% ATK, and applies Conductivity for 1 turn. For each movement point consumed, increases damage multiplier by 5%. Belka gains Continual Release for 2 turns",
       "icon": "assets/images/characters/belka/ult-icon.png",
-      "range_image": "assets/images/characters/belka/ult-range.png"
+      "range_image": "assets/images/characters/belka/ult-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Forest's Secrets",
@@ -93,7 +96,8 @@
       "effect_area": "Target",
       "description": "At the start of the turn, increases Confectance Index by 1 point\n\nBefore attacking, applies Negative Charge on the target and the nearest enemy for 1 turn. If the target is killed, gains Concealment\n\nFor each Negative Charge applied by allies, increases CRIT rate by 5%, up to a maximum of 30%",
       "icon": "assets/images/characters/belka/passive-icon.png",
-      "range_image": "assets/images/characters/belka/passive-range.png"
+      "range_image": "assets/images/characters/belka/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -240,7 +244,8 @@
   "images": {
     "portrait": "assets/images/characters/belka/portrait.png",
     "avatar": "assets/images/characters/belka/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/belka/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

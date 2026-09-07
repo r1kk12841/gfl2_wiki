@@ -78,13 +78,13 @@ def test_weapon_template_has_i18n_hooks():
     assert 'data-i18n="weapon_effect_title"' in weapon_html
 
 
-def test_dist_rendered_pages_contain_switcher():
-    dist_home = (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
+def test_dist_rendered_pages_contain_switcher(built_site: Path):
+    dist_home = (built_site / "index.html").read_text(encoding="utf-8")
     assert 'id="lang-toggle-btn"' in dist_home
     assert "i18n-vi.js" in dist_home
     assert "i18n.js" in dist_home
 
-    dist_andoris = (ROOT / "dist" / "characters" / "andoris.html").read_text(encoding="utf-8")
+    dist_andoris = (built_site / "characters" / "andoris.html").read_text(encoding="utf-8")
     assert 'data-char-slug="andoris"' in dist_andoris
     assert 'id="lang-toggle-btn"' in dist_andoris
 
@@ -219,7 +219,7 @@ def test_effects_zero_english_contamination():
     assert len(seen) == 381, f"Expected 381 unique effects, checked {len(seen)}"
 
 
-def test_summon_skill_template_and_js_hooks():
+def test_summon_skill_template_and_js_hooks(built_site: Path):
     char_tmpl = (ROOT / "site" / "templates" / "character.html").read_text(encoding="utf-8")
     assert "data-summon-skill-idx" in char_tmpl
     assert "data-summon-skill-name" in char_tmpl
@@ -230,7 +230,7 @@ def test_summon_skill_template_and_js_hooks():
     assert "data-summon-skill-name" in i18n_js
     assert "data-summon-skill-desc" in i18n_js
 
-    tololo_html = (ROOT / "dist" / "characters" / "tololo.html").read_text(encoding="utf-8")
+    tololo_html = (built_site / "characters" / "tololo.html").read_text(encoding="utf-8")
     assert 'data-summon-skill-idx="0"' in tololo_html
     assert "data-summon-skill-name" in tololo_html
     assert "Call of the Stars" in tololo_html
@@ -249,7 +249,7 @@ def test_search_js_vietnamese_highlighting():
     assert "ô" in search_js
 
 
-def test_card_badge_selectors_do_not_clobber_rarity():
+def test_card_badge_selectors_do_not_clobber_rarity(built_site: Path):
     i18n_js = (ROOT / "site" / "static" / "js" / "i18n.js").read_text(encoding="utf-8")
     # Must explicitly guard against doll-card and weapon-card container elements
     assert "el.classList.contains('doll-card')" in i18n_js
@@ -257,7 +257,7 @@ def test_card_badge_selectors_do_not_clobber_rarity():
     assert "document.querySelectorAll('.filter-chip[data-server]')" in i18n_js
     assert "document.querySelectorAll('[data-doll-server], [data-weapon-server]')" in i18n_js
     
-    char_index_html = (ROOT / "dist" / "characters" / "index.html").read_text(encoding="utf-8")
+    char_index_html = (built_site / "characters" / "index.html").read_text(encoding="utf-8")
     assert 'data-doll-rarity="Elite"' in char_index_html
     assert 'data-doll-server="global"' in char_index_html
 

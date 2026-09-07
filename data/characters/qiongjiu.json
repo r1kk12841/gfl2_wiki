@@ -47,7 +47,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tile, dealing Burn damage equal to 150% of attack. Additionaly, this unit gains Support Boost I.",
       "icon": "assets/images/characters/qiongjiu/skill2-icon.png",
-      "range_image": "assets/images/characters/qiongjiu/skill2-range.png"
+      "range_image": "assets/images/characters/qiongjiu/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Guide to Victory",
@@ -63,12 +64,13 @@
       "effect_area": "8",
       "description": "Selects 1 direction and deals AoE Burn damage equal to 110% of attack to the first enemy target within 8 tiles in the selected direction. Applies Overburn for 2 turns.",
       "icon": "assets/images/characters/qiongjiu/skill3-icon.png",
-      "range_image": "assets/images/characters/qiongjiu/skill3-range.png"
+      "range_image": "assets/images/characters/qiongjiu/skill3-range.png",
+      "ammo_type": "Burn"
     },
     {
       "name": "Pressing the Momentum",
       "tags": [
-        "Active",
+        "Ultimate",
         "Buff"
       ],
       "stability_damage": 0,
@@ -77,12 +79,14 @@
       "effect_area": "Target",
       "description": "Gains 3 stacks of Support Boost II. At max Confectance Index, gains 1 additional stack and increases the maximum number of Action Support this turn by 1.",
       "icon": "assets/images/characters/qiongjiu/ult-icon.png",
-      "range_image": "assets/images/characters/qiongjiu/ult-range.png"
+      "range_image": "assets/images/characters/qiongjiu/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Steady Plan",
       "tags": [
         "Passive",
+        "Support",
         "Buff"
       ],
       "stability_damage": 0,
@@ -91,7 +95,8 @@
       "effect_area": "Target",
       "description": "Gains 1 point of Confectance Index each time after dealing damage. Increases damage dealt to targets not under the protection of Cover by 10%.\n\nWhen an enemy unit within range receives targeted damage from an ally, performs 1 instance of Action Support, dealing Physical damage equal to 90% of attack and 2 points of Stability Damage. This effect can be triggered up to 3 times per turn.",
       "icon": "assets/images/characters/qiongjiu/passive.png",
-      "range_image": "assets/images/characters/qiongjiu/passive-range.png"
+      "range_image": "assets/images/characters/qiongjiu/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -238,7 +243,8 @@
   "images": {
     "portrait": "assets/images/characters/qiongjiu/portrait.png",
     "avatar": "assets/images/characters/qiongjiu/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/qiongjiu/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

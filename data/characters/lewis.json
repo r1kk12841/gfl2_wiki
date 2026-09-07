@@ -30,7 +30,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.",
       "icon": "assets/images/characters/lewis/skill1-icon.png",
-      "range_image": "assets/images/characters/lewis/skill1-range.png"
+      "range_image": "assets/images/characters/lewis/skill1-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Bad Guy Cleanup",
@@ -46,7 +47,8 @@
       "effect_area": "--",
       "description": "Select 1 direction around self, deal AoE Burn damage equal to 80% of attack to all enemy targets within a 3x5 frontal area and inflicts Overburn for 2 turns.",
       "icon": "assets/images/characters/lewis/skill2-icon.png",
-      "range_image": "assets/images/characters/lewis/skill2-range.png"
+      "range_image": "assets/images/characters/lewis/skill2-range.png",
+      "ammo_type": "Burn"
     },
     {
       "name": "Surprising FunBall",
@@ -62,12 +64,13 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 8 tile radius and deals Burn damage equal to 140% of attack to it. Deals fixed damage equal to 30% of attack to the target and all enemies within a 3 tile radius of it. Lewis gains 2 stacks of Tin Soldier's Order.",
       "icon": "assets/images/characters/lewis/skill3-icon.png",
-      "range_image": "assets/images/characters/lewis/skill3-range.png"
+      "range_image": "assets/images/characters/lewis/skill3-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Toy Carnival",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted"
       ],
       "stability_damage": 5,
@@ -77,7 +80,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 8 tile radius and deals Burn damage equal to 180% of attack to it. For each Tin Soldier on the battlefield, increases damage dealt by 15% per Rank and critical rate by 5% per Rank of this attack.",
       "icon": "assets/images/characters/lewis/ult-icon.png",
-      "range_image": "assets/images/characters/lewis/ult-range.png"
+      "range_image": "assets/images/characters/lewis/ult-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Tin Soldiers on Parade",
@@ -90,7 +94,8 @@
       "effect_area": "All field",
       "description": "At the start of the battle, Lewis gains Thermal Conduction, and consumes all points of Confectance Index to assign Tin Soldier with Rank 1 to the 2 closest allied Burn attribute Dolls (excluding self).\n\nWhen allied units with Tin Soldier perform basic attacks or active attacks that deal Burn damage, Lewis commands the Tin Soldier to launch a Volley Fire at the target that took damage, and gains 3 points of Searing Flame and 1 Confectance Index. This effect can be triggered once per turn for each Tin Soldier.\n\nWhen the unit with Tin Soldier assigned deals Burn damage, said unit gains 1 Merit.\n\nAt the end of the round, Lewis consumes 4 Merit to increase the Rank of the Tin Soldier, maximum once per turn.",
       "icon": "assets/images/characters/lewis/passive.png",
-      "range_image": "assets/images/characters/lewis/passive-range.png"
+      "range_image": "assets/images/characters/lewis/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -237,7 +242,8 @@
   "images": {
     "portrait": "assets/images/characters/lewis/portrait.png",
     "avatar": "assets/images/characters/lewis/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/lewis/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

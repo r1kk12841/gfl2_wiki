@@ -37,7 +37,8 @@
       "name": "Shadow Snare",
       "tags": [
         "Active",
-        "AoE"
+        "AoE",
+        "Control"
       ],
       "stability_damage": 3,
       "cooldown": "1 turns",
@@ -46,13 +47,15 @@
       "effect_area": "4",
       "description": "Selects a direction and deals AoE Physical damage equal to 110% of attack to all enemy targets within 4 tiles in the selected direction. If the target has any Hydro debuff, applies Stun to the target for 1 turn. Zhaohui gains 1 point of Confectance Index for each target hit, and increases critical rate of the next active attack by 10%.",
       "icon": "assets/images/characters/zhaohui/skill2-icon.png",
-      "range_image": "assets/images/characters/zhaohui/skill2-range.png"
+      "range_image": "assets/images/characters/zhaohui/skill2-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Wanderer's Acumen",
       "tags": [
         "Active",
         "AoE",
+        "Summon",
         "Debuff"
       ],
       "stability_damage": 1,
@@ -62,12 +65,13 @@
       "effect_area": "2",
       "description": "Selects 1 empty tile within 6 tiles and summons 1 Imperturbable Arrow, dealing AoE Hydro damage equal to 90% of attack to all enemy targets within 2 tiles of the Imperturbable Arrow, and applies Presence of Mind for 2 turns.",
       "icon": "assets/images/characters/zhaohui/skill3-icon.png",
-      "range_image": "assets/images/characters/zhaohui/skill3-range.png"
+      "range_image": "assets/images/characters/zhaohui/skill3-range.png",
+      "ammo_type": "Hydro"
     },
     {
       "name": "Skybound Leap",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted",
         "Debuff"
       ],
@@ -78,13 +82,14 @@
       "effect_area": "Target",
       "description": "Selects any Imperturbable Arrow within 9 tiles, and lands on the selected tile within 2 tiles around it. Deals Hydro damage equal to 160% of attack to the nearest enemy target within 6 tiles and applies Congestion for 2 turns.",
       "icon": "assets/images/characters/zhaohui/ult-icon.png",
-      "range_image": "assets/images/characters/zhaohui/ult-range.png"
+      "range_image": "assets/images/characters/zhaohui/ult-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Shadow Strike",
       "tags": [
         "Passive",
-        "Buff",
+        "Support",
         "Debuff"
       ],
       "stability_damage": 0,
@@ -93,7 +98,8 @@
       "effect_area": "Target",
       "description": "At the end of the action, Zhaohui may select any Imperturbable Arrow within 9 tiles and land on the selected tile within 2 tiles of the Imperturbable Arrow, gaining 1 point of Confectance Index.\n\nWhen an enemy unit within attack range takes targeted damage from an allied unit, Zhaohui launches Action Support once, dealing Hydro damage equal to 80% of attack, 2 points of Stability Damage, and applies Damp for 2 turns to the enemy unit. This effect can be triggered up to once per turn.",
       "icon": "assets/images/characters/zhaohui/passive.png",
-      "range_image": "assets/images/characters/zhaohui/passive-range.png"
+      "range_image": "assets/images/characters/zhaohui/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -240,7 +246,8 @@
   "images": {
     "portrait": "assets/images/characters/zhaohui/portrait.png",
     "avatar": "assets/images/characters/zhaohui/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/zhaohui/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

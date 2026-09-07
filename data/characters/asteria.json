@@ -30,12 +30,14 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 80% ATK to it",
       "icon": "assets/images/characters/asteria/skill1-icon.png",
-      "range_image": "assets/images/characters/asteria/skill1-range.png"
+      "range_image": "assets/images/characters/asteria/skill1-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Assault Focus",
       "tags": [
         "Active",
+        "Displacement",
         "Buff"
       ],
       "stability_damage": 0,
@@ -61,12 +63,13 @@
       "effect_area": "3",
       "description": "Select one tile within a cross-shaped area of 8 tiles to launch an attack, dealing AoE Physical damage equal to 80% of attack to all enemy targets within 3 tiles and applies Movement Down II for 2 turns. If 2 or more targets or a Boss is hit, Asteria gains 6 tiles of Extra Movement and applies Sync to units holding Bond for 1 round.",
       "icon": "assets/images/characters/asteria/skill3-icon.png",
-      "range_image": "assets/images/characters/asteria/skill3-range.png"
+      "range_image": "assets/images/characters/asteria/skill3-range.png",
+      "range": "--"
     },
     {
       "name": "Railgun Judgement",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE",
         "Debuff"
       ],
@@ -90,7 +93,8 @@
       "effect_area": "Target",
       "description": "At the start of battle, select 1 Physical attributed Doll and apply Bond to them.\n\nWhen allied units deal non-ammo type Physical damage, apply the ammo type of the weapon they are using.\n\nAt the start of battle, gain Crime and Punishment.\n\nAt the end of the round after using the Ultimate skill Railgun Judgement, the unit with Bond gains Crime and Punishment and their stat increase is reduced by 50% for 1 round.",
       "icon": "assets/images/characters/asteria/passive.png",
-      "range_image": "assets/images/characters/asteria/passive-range.png"
+      "range_image": "assets/images/characters/asteria/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -230,7 +234,8 @@
   "images": {
     "portrait": "assets/images/characters/asteria/portrait.png",
     "avatar": "assets/images/characters/asteria/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/asteria/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "cn"

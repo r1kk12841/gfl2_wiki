@@ -47,7 +47,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 9 tiles, dealing Physical damage equal to 130% of attack to them. After the attack, applies Conductivity for 1 turn.",
       "icon": "assets/images/characters/mosin-nagant/skill2-icon.png",
-      "range_image": "assets/images/characters/mosin-nagant/skill2-range.png"
+      "range_image": "assets/images/characters/mosin-nagant/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Positive Mindset",
@@ -61,12 +62,13 @@
       "effect_area": "Target",
       "description": "Gain 1 stack of Active Engagement, and Extra Command once. Every 3 times this skill is used, gain Shock. Cannot be used more than once per turn.",
       "icon": "assets/images/characters/mosin-nagant/skill3-icon.png",
-      "range_image": "assets/images/characters/mosin-nagant/skill3-range.png"
+      "range_image": "assets/images/characters/mosin-nagant/skill3-range.png",
+      "range": "Self"
     },
     {
       "name": "Declaration of Victory",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted",
         "Buff"
       ],
@@ -77,12 +79,14 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 9 tiles, dealing Physical damage equal to 180% of attack to them. If a phase weakness is exploited, applies Paralysis to the target after the attack for 1 turn.",
       "icon": "assets/images/characters/mosin-nagant/ult-icon.png",
-      "range_image": "assets/images/characters/mosin-nagant/ult-range.png"
+      "range_image": "assets/images/characters/mosin-nagant/ult-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Helping Others",
       "tags": [
         "Passive",
+        "Support",
         "Buff"
       ],
       "stability_damage": 0,
@@ -90,7 +94,7 @@
       "confectance_cost": 0,
       "range": 9,
       "effect_area": "Target",
-      "description": "When an allied unit attacks an enemy unit outside of turn but within range, if that enemy unit is in Stability Break, Mosin-Nagant performs 1 instance of Action Support, Physical damage equal to 80% of her attack and 2 points of Stability Damage. This effect can be triggered up to 2 times per turn. \n\nAfter a Support Attack, Mosin-Nagant gains 2 points of Confectance Index, and also gains Insight for 2 turns.",
+      "description": "When an allied unit attacks an enemy unit outside of turn but within range, if that enemy unit is in Stability Break, Mosin-Nagant performs 1 instance of Action Support, Physical damage equal to 80% of her attack and 2 points of Stability Damage. This effect can be triggered up to 2 times per turn.\n\nAfter a Support Attack, Mosin-Nagant gains 2 points of Confectance Index, and also gains Insight for 2 turns.",
       "icon": "assets/images/characters/mosin-nagant/passive.png",
       "range_image": "assets/images/characters/mosin-nagant/passive-range.png"
     }
@@ -239,7 +243,8 @@
   "images": {
     "portrait": "assets/images/characters/mosin-nagant/portrait.png",
     "avatar": "assets/images/characters/mosin-nagant/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/mosin-nagant/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

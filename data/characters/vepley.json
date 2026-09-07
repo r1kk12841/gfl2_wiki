@@ -36,7 +36,9 @@
       "name": "All Out Performance",
       "tags": [
         "Active",
-        "AoE"
+        "AoE",
+        "Cover Destruction",
+        "Displacement"
       ],
       "stability_damage": 1,
       "cooldown": "2 turns",
@@ -45,14 +47,15 @@
       "effect_area": "--",
       "description": "Selects 1 direction, dealing Physical damage equal to 75% of attack to the first enemy target in each line within a 3x5 area in the selected direction, and knocks the target back by 4 tiles. Simultaneously, destroys any destructible Cover outside the 3x3 tile area around the user.",
       "icon": "assets/images/characters/vepley/skill2-icon.png",
-      "range_image": "assets/images/characters/vepley/skill2-range.png"
+      "range_image": "assets/images/characters/vepley/skill2-range.png",
+      "ammo_type": "Shotgun Ammo"
     },
     {
       "name": "Exclusive Stage",
       "tags": [
         "Active",
         "Targeted",
-        "Debuff"
+        "Dispel"
       ],
       "stability_damage": 2,
       "cooldown": "0 turns",
@@ -91,7 +94,8 @@
       "effect_area": "Target",
       "description": "At the start of the action, gains 1 point of Confectance Index. For each instance of damage dealt, gains 1 point of Confectance Index. Damage dealt to targets with movement debuffs is increased by 20%. If this unit moved 5 or more tiles, applies Movement Down II to the target for 2 turns before attacking.",
       "icon": "assets/images/characters/vepley/passive.png",
-      "range_image": "assets/images/characters/vepley/passive-range.png"
+      "range_image": "assets/images/characters/vepley/passive-range.png",
+      "range": "Entire Map"
     }
   ],
   "fortification": [
@@ -238,7 +242,8 @@
   "images": {
     "portrait": "assets/images/characters/vepley/portrait.png",
     "avatar": "assets/images/characters/vepley/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/vepley/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

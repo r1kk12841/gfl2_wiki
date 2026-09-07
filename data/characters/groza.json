@@ -46,13 +46,15 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 7 tiles, dealing Physical damage equal to 130% of attack, and applies Movement Down II to them for 1 turn.",
       "icon": "assets/images/characters/groza/skill2-icon.png",
-      "range_image": "assets/images/characters/groza/skill2-range.png"
+      "range_image": "assets/images/characters/groza/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Perfect Cover",
       "tags": [
         "Active",
-        "Buff"
+        "Buff",
+        "Defense"
       ],
       "stability_damage": 0,
       "cooldown": "2 turns",
@@ -60,12 +62,13 @@
       "effect_area": "6",
       "description": "Applies 2 stacks of Shelter and Defense Up II to all allied targets within 6 tiles for 2 turns. Gains 1 point of Confectance Index for each allied target within range. Increases the Counterattack count by 2 for the turn.",
       "icon": "assets/images/characters/groza/skill3-icon.png",
-      "range_image": "assets/images/characters/groza/skill3-range.png"
+      "range_image": "assets/images/characters/groza/skill3-range.png",
+      "range": "Self"
     },
     {
       "name": "Explosive Bombardment",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE",
         "Debuff"
       ],
@@ -82,15 +85,17 @@
       "name": "Timely Maintenance",
       "tags": [
         "Passive",
-        "Buff"
+        "Buff",
+        "Counterattack"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
       "confectance_cost": 0,
       "effect_area": "7",
-      "description": "when an allied unit (excluding this unit) ends their action within 7 tiles, gains 1 point of Confectance Index and applies 1 stack of Shelter to both the allied unit and this unit. For each stack of Shelter, Groza's damage increases by 5%. \n\nIf an enemy within 6 tiles deals Targeted damage to an allied unit, Groza launches a Counterattack, dealing Physical damage equal to 80% of attack to them, as well as 4 points of Stability Damage. This can be triggered at most once per turn.",
+      "description": "when an allied unit (excluding this unit) ends their action within 7 tiles, gains 1 point of Confectance Index and applies 1 stack of Shelter to both the allied unit and this unit. For each stack of Shelter, Groza's damage increases by 5%.\n\nIf an enemy within 6 tiles deals Targeted damage to an allied unit, Groza launches a Counterattack, dealing Physical damage equal to 80% of attack to them, as well as 4 points of Stability Damage. This can be triggered at most once per turn.",
       "icon": "assets/images/characters/groza/passive.png",
-      "range_image": "assets/images/characters/groza/passive-range.png"
+      "range_image": "assets/images/characters/groza/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -237,7 +242,8 @@
   "images": {
     "portrait": "assets/images/characters/groza/portrait.png",
     "avatar": "assets/images/characters/groza/avatar.png",
-    "class_icon": "assets/images/class/bulwark.png"
+    "class_icon": "assets/images/class/bulwark.png",
+    "portrait_webp": "assets/images/characters/groza/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

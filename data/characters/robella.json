@@ -30,7 +30,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 6 tile radius and deals Physical damage equivalent to 80% ATK to it",
       "icon": "assets/images/characters/robella/skill1-icon.png",
-      "range_image": "assets/images/characters/robella/skill1-range.png"
+      "range_image": "assets/images/characters/robella/skill1-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Light of Bond",
@@ -58,12 +59,13 @@
       "effect_area": "Target",
       "description": "Robella gains Radiant Rise for 2 rounds (Duration decreases at the end of the current round). After skill usage, Robella gains Frost Barrier for 2 turns, Frost Barrier absorbs damage equal to 65% of Robella's initial attack, up to a maximum of 60% of the target's max HP",
       "icon": "assets/images/characters/robella/skill3-icon.png",
-      "range_image": "assets/images/characters/robella/skill3-range.png"
+      "range_image": "assets/images/characters/robella/skill3-range.png",
+      "range": "Self"
     },
     {
       "name": "Howling Cyclone",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE"
       ],
       "stability_damage": 3,
@@ -73,7 +75,8 @@
       "effect_area": "--",
       "description": "Selects 1 direction around self, and deals AoE Freeze damage equal to 120% of attack to all enemy targets in a 4 tile fan-shaped area",
       "icon": "assets/images/characters/robella/ult-icon.png",
-      "range_image": "assets/images/characters/robella/ult-range.png"
+      "range_image": "assets/images/characters/robella/ult-range.png",
+      "ammo_type": "Freeze"
     },
     {
       "name": "Critical Insight",
@@ -87,7 +90,8 @@
       "effect_area": "Target",
       "description": "At the end of the action, increases Confectance Index by 1 point\n\nAfter using Frigid Infiltration, consumes all Inspection stacks from the target, and gains an equal number of stacks of Sense Weakness. When the number of stacks of Sense Weakness is more than 2, basic attacks deal Freeze damage instead, and increases CRIT rate by 20%",
       "icon": "assets/images/characters/robella/passive.png",
-      "range_image": "assets/images/characters/robella/passive-range.png"
+      "range_image": "assets/images/characters/robella/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -234,7 +238,8 @@
   "images": {
     "portrait": "assets/images/characters/robella/portrait.png",
     "avatar": "assets/images/characters/robella/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/robella/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

@@ -46,7 +46,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles, dealing Freeze damage equal to 100% of attack to them. This skill's critical rate is reduced by 100%, but additionally deals fixed damage equal to 50% of defense. For each allied unit within 6 tiles, increases Stability Damage dealt by 1 point.",
       "icon": "assets/images/characters/suomi/skill2-icon.png",
-      "range_image": "assets/images/characters/suomi/skill2-range.png"
+      "range_image": "assets/images/characters/suomi/skill2-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Snow's Grace",
@@ -66,8 +67,8 @@
     {
       "name": "Snowfield's Radiance",
       "tags": [
-        "Active",
-        "AoE"
+        "Ultimate",
+        "Tile"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -83,7 +84,7 @@
       "tags": [
         "Passive",
         "Healing",
-        "Buff"
+        "Support"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -91,7 +92,8 @@
       "effect_area": "Target",
       "description": "At the end of the action, gains 2 points of Confectance Index, restores 5% of Suomi's max HP to other allied units within 6 tiles. If the target's HP is below 50%, increases the amount restored to 10%.\n\nWhen allied units (excluding Suomi) use basic attacks or skills, Suomi applies 1 stack of Avalanche to a random enemy target within 6 tiles of herself.\n\nWhen an enemy unit within range takes targeted damage from an ally, prioritizes using Action Support once, dealing Physical damage equal to 80% of attack and 3 Stability Damage. Applies Critical Damage Up I to the allied unit for 2 turns. This can be triggered twice per turn. When HP is above 80%, gains Sleepdrift Sprint.",
       "icon": "assets/images/characters/suomi/passive.png",
-      "range_image": "assets/images/characters/suomi/passive-range.png"
+      "range_image": "assets/images/characters/suomi/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -238,7 +240,8 @@
   "images": {
     "portrait": "assets/images/characters/suomi/portrait.png",
     "avatar": "assets/images/characters/suomi/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/suomi/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

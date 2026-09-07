@@ -80,7 +80,17 @@ pytest tests/
 
 ## Deploy (GitHub Pages)
 
-Push to `main`. The GitHub Action in `.github/workflows/deploy.yml` runs `validate.py` → `build.py` → deploys `dist/` to the `gh-pages` branch automatically.
+Push to `main`. The GitHub Action in `.github/workflows/deploy.yml` runs `validate.py` → `pytest` → `build.py` → deploys `dist/` directly via GitHub Pages artifact deployment. Pull requests and commits run automated validation, testing, and build checks via `.github/workflows/ci.yml`.
+
+## Dependency Management
+
+Direct dependencies are tracked in `requirements.in`. Pinned and transitive dependencies are locked in `requirements.txt` via `pip-tools`.
+
+To recompile or upgrade the lock file:
+```bash
+python -m pip install pip-tools
+python -m piptools compile requirements.in -o requirements.txt
+```
 
 ## Adding a New Character
 

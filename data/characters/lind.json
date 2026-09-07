@@ -34,9 +34,38 @@
       "range_image": "assets/images/characters/lind/skill1-range.png"
     },
     {
+      "name": "Assault Spray",
+      "tags": [
+        "Skill",
+        "AoE",
+        "Debuff"
+      ],
+      "ammo_type": "Shotgun Ammo",
+      "stability_damage": 2,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": 1,
+      "effect_area": "--",
+      "description": "Selects a direction and deals AoE Corrosion damage equivalent to 100% ATK to all enemies within a 6 tile narrow-angle fan-shaped area in the selected direction. For each debuff held by the enemy, increases damage dealt by 5%, up to a maximum of 30%. Before skill usage, applies 1 random powerful debuff to all enemies within effect range. After skill usage, increases Confectance Index by 2 points"
+    },
+    {
+      "name": "Overwhelming Burst",
+      "tags": [
+        "Skill",
+        "AoE"
+      ],
+      "ammo_type": "Shotgun Ammo",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 4,
+      "range": "Self",
+      "effect_area": "6",
+      "description": "Deals AoE Corrosion damage equivalent to 100% ATK to all enemies within a 6 tile radius. Before skill usage, if Confectance Index is at max, for each stack of Candyglaze, increases damage multiplier by 5%"
+    },
+    {
       "name": "Glucose Overload",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE"
       ],
       "stability_damage": 0,
@@ -45,7 +74,8 @@
       "effect_area": "8",
       "description": "Applies Ketoacidemia to all enemies within a 8 tile radius. Upon skill activation, triggers all Corrosion debuffs held by enemy units within effect range. After skill usage, Lind can use Repulsive Shot, Assault Spray, or Overwhelming Burst",
       "icon": "assets/images/characters/lind/skill2-icon.png",
-      "range_image": "assets/images/characters/lind/skill2-range.png"
+      "range_image": "assets/images/characters/lind/skill2-range.png",
+      "range": "Self"
     },
     {
       "name": "Sweets Stockpile",
@@ -59,7 +89,8 @@
       "effect_area": "Target",
       "description": "At the end of the action, increases Confectance Index by 1 point\n\nAt the start of the round, applies Honey Trap to all enemies. This has a cooldown of 1 round\n\nWhen enemies with Honey Trap dies or when allies deal Corrosion damage, Lind gains 1 stack of Candyglaze. When the number of stacks of Candyglaze held by self exceeds 5, before attacking enemies with Honey Trap, triggers the effects of Honey Trap. Afterwards, Honey Trap is consumed",
       "icon": "assets/images/characters/lind/skill3-icon.png",
-      "range_image": "assets/images/characters/lind/skill3-range.png"
+      "range_image": "assets/images/characters/lind/skill3-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -206,7 +237,8 @@
   "images": {
     "portrait": "assets/images/characters/lind/portrait.png",
     "avatar": "assets/images/characters/lind/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/lind/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

@@ -18,7 +18,7 @@
   "movement_speed": "6 tiles",
   "skills": [
     {
-      "name": "Disciplinary Prelude",
+      "name": "Punishment Prelude",
       "tags": [
         "Basic Attack",
         "Targeted"
@@ -34,7 +34,7 @@
       "range_image": "assets/images/characters/loreley/skill1-range.png"
     },
     {
-      "name": "Burning Touch\n(Active / Targeted / Buff)",
+      "name": "Searing Brand",
       "tags": [
         "Active",
         "Targeted",
@@ -47,13 +47,15 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 7 tile radius and deals Burn damage equivalent to 130% ATK to it. If Loreley has Glowing Embers, the damage multiplier is doubled, and she gains Insight for 2 turns.",
       "icon": "assets/images/characters/loreley/skill2-icon.png",
-      "range_image": "assets/images/characters/loreley/skill2-range.png"
+      "range_image": "assets/images/characters/loreley/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
-      "name": "Sultry Promise",
+      "name": "Red-Bound Declaration",
       "tags": [
         "Active",
-        "AoE"
+        "AoE",
+        "Tile"
       ],
       "stability_damage": 1,
       "cooldown": "1 turns",
@@ -62,10 +64,29 @@
       "effect_area": "Self",
       "description": "Deals AoE Burn damage equivalent to 120% ATK to all enemies within a 4 tile radius. The total damage is evenly distributed among all targets within the area. If Loreley has Glowing Embers, the damage will not be evenly split, and Incineration tiles will be generated for 3 turns.",
       "icon": "assets/images/characters/loreley/skill3-icon.png",
-      "range_image": "assets/images/characters/loreley/skill3-range.png"
+      "range_image": "assets/images/characters/loreley/skill3-range.png",
+      "ammo_type": "Burn"
     },
     {
-      "name": "Queen's Endowment",
+      "name": "Dolorous Grace",
+      "tags": [
+        "AoE",
+        "Buff",
+        "Tile",
+        "Summon"
+      ],
+      "ammo_type": "Burn",
+      "stability_damage": 2,
+      "cooldown": "0 turns",
+      "confectance_cost": 6,
+      "range": 5,
+      "effect_area": "3",
+      "description": "Selects an open tile within a 5 tile radius, summons Hunter - Type II on it, deals 90% ATK AoE Burn damage to all enemies within 3 tiles around it and generates Incineration tiles within 3 tiles for 2 turns. If Hunter - Type II is already present on the field, it is resummoned at the new location. CleanseTaunt from all allied units. Applies Symbiotic Dance to Loreley and the closest allied Doll, preventing death when taking lethal damage. If another ally dies while this effect is active, the protected unit will die in its place.",
+      "icon": "assets/images/characters/loreley/ult-icon.png",
+      "range_image": "assets/images/characters/loreley/ult-range.png"
+    },
+    {
+      "name": "Queen’s Largesse",
       "tags": [
         "Passive",
         "Buff"
@@ -75,44 +96,43 @@
       "confectance_cost": 0,
       "effect_area": "Target",
       "description": "Damage dealt by all Dolls who use Sniper Rifles is increased by 10%.\nAt the start of battle, gains Thermal Conduction. When Loreley is on the field, Embers from Thermal Conduction is upgraded into Glowing Embers, which lasts for 2 global rounds.\nAt the start of the round, Loreley gains 2 points of Confectance Index. At the end of her action, if Hunter - Type II is present, Loreley also gains Additional Command. Can be triggered once per round.\nBefore an allied unit takes damage, Loreley grants them Flawless Blaze, allowing them to nullify that instance of damage. Can be triggered up to 3 times per round.",
-      "icon": "assets/images/characters/loreley/ult-icon.png",
-      "range_image": "assets/images/characters/loreley/ult-range.png"
+      "range": "Self"
     }
   ],
   "fortification": [
     {
       "tier": 1,
-      "skill": "Pain's Benediction",
+      "skill": "Dolorous Grace",
       "level": 2,
       "effect": "New Symbiotic Dance effect: when lethal damage taken, restore 25% of your maximum health and 5 Stability Index, cleanse all debuffs and reduce the damage taken within 1 round by 60%.\nAfter using general attack or active skills, the Hunter - Type II releases an additional Pyro Pulse.\nAdditionally dispels Stun from all allied units."
     },
     {
       "tier": 2,
-      "skill": "Queen's Endowment",
+      "skill": "Queen’s Largesse",
       "level": 2,
       "effect": "The number of times Flawless Blaze can be applied is increased to 5 times.\nAdditional Command is replaced by Extra Action.\nGlowing Embers no longer increase Burn damage, but instead increase all damage caused by 45%."
     },
     {
       "tier": 3,
-      "skill": "Pain's Benediction",
+      "skill": "Dolorous Grace",
       "level": 3,
       "effect": "Hunter - Type II generates an additional 4 Searing Flame when summoned.\nThe damage coefficient of the Pyro Pulse is doubled, and for every Pyro Pulse released, the damage caused by Loreley is increased by 10%, up to 60%; critical damage is increased by 2%, up to 12%.\nApply Flawless Blaze to all friendly units."
     },
     {
       "tier": 4,
-      "skill": "Sultry Promise",
+      "skill": "Red-Bound Declaration",
       "level": 2,
       "effect": "Increases damage multiplier by 30% and increases the effective range by 1 tile.\nFor each Burn buff Loreley has, the damage dealt is increased by 10%, up to a maximum of 40%."
     },
     {
       "tier": 5,
-      "skill": "Burning Touch",
+      "skill": "Searing Brand",
       "level": 2,
       "effect": "Skill ignores 30% of the target's defense. If the target is on a Incineration tile, the damage dealt is increased by 60%."
     },
     {
       "tier": 6,
-      "skill": "Queen's Endowment",
+      "skill": "Queen’s Largesse",
       "level": 3,
       "effect": "Searing Flame earned by all friendly units when Loreley is present are increased by an additional 1 point. For every Burn Doll on the field, Loreley ATK is increased by 6%.\nThe ATK of the Infernal Surge applied by the Hunter - Type II has been increased to 12%.\nIncreased effect of Glowing Embers: Damage reduction increased to 30%."
     }
@@ -216,7 +236,8 @@
   "images": {
     "portrait": "assets/images/characters/loreley/portrait.png",
     "avatar": "assets/images/characters/loreley/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/loreley/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

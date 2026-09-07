@@ -23,7 +23,7 @@
         "Basic Attack",
         "Targeted"
       ],
-      "ammo_type": "Melee",
+      "ammo_type": "Light Ammo",
       "stability_damage": 2,
       "cooldown": "0 turns",
       "confectance_cost": 0,
@@ -38,6 +38,7 @@
       "tags": [
         "Active",
         "Targeted",
+        "Melee",
         "Debuff"
       ],
       "stability_damage": 1,
@@ -46,13 +47,16 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 1 tile, dealing melee Physical damage equal to 120% of attack and gains 6 tiles of Additional Movement. If the target is not killed, applies Mark of Prey for 2 turns.",
       "icon": "assets/images/characters/ullrid/skill2-icon.png",
-      "range_image": "assets/images/characters/ullrid/skill2-range.png"
+      "range_image": "assets/images/characters/ullrid/skill2-range.png",
+      "ammo_type": "Melee",
+      "range": "3x3"
     },
     {
       "name": "Blade Whirlwind",
       "tags": [
         "Active",
-        "Targeted"
+        "Targeted",
+        "Melee"
       ],
       "stability_damage": 1,
       "cooldown": "0 turns",
@@ -60,13 +64,16 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 1 tile and deal melee Physical damage equal to 90% of attack to it. Gains Whirlwind after attacking.",
       "icon": "assets/images/characters/ullrid/skill3-icon.png",
-      "range_image": "assets/images/characters/ullrid/skill3-range.png"
+      "range_image": "assets/images/characters/ullrid/skill3-range.png",
+      "ammo_type": "Melee",
+      "range": "3x3"
     },
     {
       "name": "Hidden Pursuit",
       "tags": [
-        "Active",
-        "Targeted"
+        "Ultimate",
+        "Targeted",
+        "Melee"
       ],
       "stability_damage": 2,
       "cooldown": "3 turns",
@@ -74,7 +81,9 @@
       "effect_area": "1",
       "description": "Select a tile in a cross-shaped area within 5 tiles, move to that tile and deal melee Physical damage equal to 180% of attack to the enemy target with the highest HP within 1 tile.\n\nConsumes all stacks of Hunter's Talent, for each stack consumed, increase damage dealt by this attack by 10%, up to a 30% increase. If there are 2 stacks of Hunter's Talent or more, gain 2 stacks of Camouflage for 1 turn.",
       "icon": "assets/images/characters/ullrid/ult-icon.png",
-      "range_image": "assets/images/characters/ullrid/ult-range.png"
+      "range_image": "assets/images/characters/ullrid/ult-range.png",
+      "ammo_type": "Melee",
+      "range": "--"
     },
     {
       "name": "Optical Camouflage",
@@ -87,7 +96,8 @@
       "effect_area": "Target",
       "description": "Gain 1 stack of Hunter's Talent and 1 point of Confectance Index after active attacks.\n\nAt the end of an enemy unit’s action, if Ullrid's HP is below 30%, gain 1 stack of Camouflage for 1 turn. Cooldown: 3 turns.",
       "icon": "assets/images/characters/ullrid/passive.png",
-      "range_image": "assets/images/characters/ullrid/passive-range.png"
+      "range_image": "assets/images/characters/ullrid/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -241,7 +251,8 @@
   "images": {
     "portrait": "assets/images/characters/ullrid/portrait.png",
     "avatar": "assets/images/characters/ullrid/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/ullrid/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

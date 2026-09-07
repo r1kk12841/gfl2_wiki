@@ -30,13 +30,15 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 80% ATK to it",
       "icon": "assets/images/characters/leva/skill1-icon.png",
-      "range_image": "assets/images/characters/leva/skill1-range.png"
+      "range_image": "assets/images/characters/leva/skill1-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Rational Suppression",
       "tags": [
         "Active",
-        "AoE"
+        "AoE",
+        "Tile"
       ],
       "stability_damage": 2,
       "cooldown": "1 turns",
@@ -45,7 +47,8 @@
       "effect_area": "--",
       "description": "Selects 1 direction, dealing AoE Electric damage equivalent to 120% ATK to all targets within a 7x3 area in the selected direction, applies Negative Charge for 2 turns, and generates Voltage tiles that lasts for 3 turns",
       "icon": "assets/images/characters/leva/skill2-icon.png",
-      "range_image": "assets/images/characters/leva/skill2-range.png"
+      "range_image": "assets/images/characters/leva/skill2-range.png",
+      "ammo_type": "Electric"
     },
     {
       "name": "Ordered Disruption",
@@ -60,13 +63,15 @@
       "effect_area": "3",
       "description": "Selects a tile within a 7 tile radius and deals AoE Electric damage equivalent to 100% ATK to all targets within a 3 tile radius of the selected tile. Increases damage dealt by 30% and Stability damage dealt by 1 point against targets with Negative Charge",
       "icon": "assets/images/characters/leva/skill3-icon.png",
-      "range_image": "assets/images/characters/leva/skill3-range.png"
+      "range_image": "assets/images/characters/leva/skill3-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Quantum Calculation",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE",
+        "Tile",
         "Buff"
       ],
       "stability_damage": 1,
@@ -75,26 +80,31 @@
       "effect_area": "7",
       "description": "Deals AoE Electric damage equivalent to 60% ATK to all targets within a 7 tile radius and generates Voltage tiles that lasts for 3 turns. Leva gains Overclock Strike for 3 turns. After attacking, Superconductive Strike can be used once",
       "icon": "assets/images/characters/leva/ult-icon.png",
-      "range_image": "assets/images/characters/leva/ult-range.png"
+      "range_image": "assets/images/characters/leva/ult-range.png",
+      "ammo_type": "Electric",
+      "range": "Self"
     },
     {
       "name": "Fox's Scheme",
       "tags": [
         "Passive",
-        "Buff"
+        "Support"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
       "confectance_cost": 0,
       "effect_area": "Target",
       "icon": "assets/images/characters/leva/passive.png",
-      "range_image": "assets/images/characters/leva/passive-range.png"
+      "range_image": "assets/images/characters/leva/passive-range.png",
+      "range": "Self",
+      "description": "At the start of the round or when triggering Tile Reaction for Voltage tiles, gains 1 stack of Superconductive Code. If Leva has Positive Charge, increases Electric damage dealt by 10%. If an enemy within Attack Range is applied with Negative Charge, performs one instance of Emergency Support, dealing melee Electric damage equivalent to 60% ATK and 1 Stability damage, and increases Confectance Index by 1 point. This effect can be triggered up to twice per round"
     },
     {
       "name": "Superconductive Strike",
       "tags": [
         "Active",
-        "AoE"
+        "Melee",
+        "Tile"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -103,7 +113,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy within a 7 tile radius, generates Voltage tiles within a 1 tile radius of the selected enemy for 3 turns, then deals melee Electric damage equivalent to 50% ATK to it\n\nConsumes all stacks of Superconductive Code. Damage multiplier and Stability damage dealt is as follows:\n\n1 stack - 60% ATK + 1 Stability damage\n2 stacks - 70% ATK + 2 Stability damage\n3 stacks - 85% ATK + 3 Stability damage\n4 stacks - 120% ATK + 6 Stability damage",
       "icon": "assets/images/characters/leva/skill6-icon.png",
-      "range_image": "assets/images/characters/leva/skill6-range.png"
+      "range_image": "assets/images/characters/leva/skill6-range.png",
+      "ammo_type": "Melee"
     }
   ],
   "fortification": [
@@ -250,7 +261,8 @@
   "images": {
     "portrait": "assets/images/characters/leva/portrait.png",
     "avatar": "assets/images/characters/leva/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/leva/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

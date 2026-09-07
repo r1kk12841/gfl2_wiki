@@ -47,7 +47,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles, applies Overburn for 1 turns, and deals Burn damage equal to 140% of attack to them. If the user is under the effects of Zoom in, increases Stability Damage dealt by 1 point.",
       "icon": "assets/images/characters/sharkry/skill2-icon.png",
-      "range_image": "assets/images/characters/sharkry/skill2-range.png"
+      "range_image": "assets/images/characters/sharkry/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Perfect Rising Tone",
@@ -64,12 +65,13 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles, dealing Physical damage equal to 150% of attack to them. Gains Zoom In. If the target is inflicted with Overburn, applies 2 stacks of Flammable before the attack, and changes the damage type to Burn damage.",
       "icon": "assets/images/characters/sharkry/skill3-icon.png",
-      "range_image": "assets/images/characters/sharkry/skill3-range.png"
+      "range_image": "assets/images/characters/sharkry/skill3-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Highlight Moment",
       "tags": [
-        "Active",
+        "Ultimate",
         "Buff"
       ],
       "stability_damage": 0,
@@ -78,7 +80,8 @@
       "effect_area": "Target",
       "description": "Gains 1 stack of Zoom In and 1 instance of Extra Command.",
       "icon": "assets/images/characters/sharkry/ult-icon.png",
-      "range_image": "assets/images/characters/sharkry/ult-range.png"
+      "range_image": "assets/images/characters/sharkry/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Makeup Organization",
@@ -91,7 +94,8 @@
       "effect_area": "Target",
       "description": "At the start of action, gains 1 point of Confectance Index. When Overburn is applied to an enemy target, gains 1 point of Confectance Index. Critical rate increases by 20% against targets with Overburn.",
       "icon": "assets/images/characters/sharkry/passive.png",
-      "range_image": "assets/images/characters/sharkry/passive-range.png"
+      "range_image": "assets/images/characters/sharkry/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -238,7 +242,8 @@
   "images": {
     "portrait": "assets/images/characters/sharkry/portrait.png",
     "avatar": "assets/images/characters/sharkry/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/sharkry/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

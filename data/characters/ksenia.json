@@ -47,13 +47,15 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles, deal Physical damage equal to 75% of attack to it and apply 2 stacks of Flammable, as well as Overburn for 1 turn. If under the effects of 2 or more Burn buffs, performs an additional attack on the original target, dealing Burn damage equal to 75% of attack and 2 Stability Damage.",
       "icon": "assets/images/characters/ksenia/skill2-icon.png",
-      "range_image": "assets/images/characters/ksenia/skill2-range.png"
+      "range_image": "assets/images/characters/ksenia/skill2-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Comprehensive Rescue",
       "tags": [
         "Active",
         "Healing",
+        "Stability Regen",
         "Buff"
       ],
       "stability_damage": 0,
@@ -68,7 +70,7 @@
     {
       "name": "The Secret of Making Money",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted",
         "Buff"
       ],
@@ -79,12 +81,14 @@
       "effect_area": "Target",
       "description": "The user gains Heat Recovery and Blazing Assault II for 2 turns. Select 1 enemy target within 6 tiles and deal Burn damage equal to 160% of attack to it.",
       "icon": "assets/images/characters/ksenia/ult-icon.png",
-      "range_image": "assets/images/characters/ksenia/ult-range.png"
+      "range_image": "assets/images/characters/ksenia/ult-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Passion for Shopping",
       "tags": [
         "Passive",
+        "Support",
         "Buff"
       ],
       "stability_damage": 0,
@@ -93,7 +97,8 @@
       "effect_area": "Target",
       "description": "When an enemy unit within range receives targeted damage from an allied unit, prioritizes performing 1 instance of Action Support, dealing Physical damage equal to 80% of attack and 3 points of Stability Damage to the enemy unit, and applies Blazing Assault II to the allied unit for 2 turns. This can be triggered up to once per turn.\n\nWhen under the effects of Heat Recovery, Stability Damage is increased by 1 point respectively. At the end of the action, gains 1 point of Confectance Index for each Burn buff.",
       "icon": "assets/images/characters/ksenia/passive.png",
-      "range_image": "assets/images/characters/ksenia/passive-range.png"
+      "range_image": "assets/images/characters/ksenia/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -240,7 +245,8 @@
   "images": {
     "portrait": "assets/images/characters/ksenia/portrait.png",
     "avatar": "assets/images/characters/ksenia/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/ksenia/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

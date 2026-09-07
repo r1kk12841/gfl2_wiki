@@ -38,7 +38,7 @@
       "tags": [
         "Active",
         "AoE",
-        "Debuff"
+        "Dispel"
       ],
       "stability_damage": 1,
       "cooldown": "2 turns",
@@ -47,13 +47,15 @@
       "effect_area": "3x3",
       "description": "Selects 1 enemy within 8 tiles, dealing AoE Corrosion damage equal to 85% of attack to the target and all enemies within a 3x3 area, and dispels 1 buff.",
       "icon": "assets/images/characters/peritya/skill2-icon.png",
-      "range_image": "assets/images/characters/peritya/skill2-range.png"
+      "range_image": "assets/images/characters/peritya/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Domain Suppression",
       "tags": [
         "Active",
-        "AoE"
+        "AoE",
+        "Displacement"
       ],
       "stability_damage": 3,
       "cooldown": "3 turns",
@@ -67,7 +69,7 @@
     {
       "name": "Multi-Compilation",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE"
       ],
       "stability_damage": 2,
@@ -76,21 +78,24 @@
       "effect_area": "9x9",
       "description": "Deals AoE Corrosion damage equal to 100% of attck to all enemy targets within a 9x9 area centered on self, excluding the inner 5x5 area. For each target hit, increases damage dealt by 5%, up to 15%.",
       "icon": "assets/images/characters/peritya/ult-icon.png",
-      "range_image": "assets/images/characters/peritya/ult-range.png"
+      "range_image": "assets/images/characters/peritya/ult-range.png",
+      "ammo_type": "Heavy Ammo",
+      "range": "Self"
     },
     {
       "name": "Chain Reaction",
       "tags": [
         "Passive",
-        "Buff"
+        "Support"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
       "confectance_cost": 0,
       "effect_area": "Target",
-      "description": "When an enemy unit within range takes AoE damage from an allied unit, performs 1 instance of Action Support, dealing AoE Physical damage equal to 50% of attack and 1 point of Stability Damage, as well as gaining 1 point of Confectance Index. This effect can trigger up to 6 times per turn. \n\nBefore the attack, every 1 point of leftover mobility enhances the damage dealt by the attack by 10%, up to a maximum increase of 30%.",
+      "description": "When an enemy unit within range takes AoE damage from an allied unit, performs 1 instance of Action Support, dealing AoE Physical damage equal to 50% of attack and 1 point of Stability Damage, as well as gaining 1 point of Confectance Index. This effect can trigger up to 6 times per turn.\n\nBefore the attack, every 1 point of leftover mobility enhances the damage dealt by the attack by 10%, up to a maximum increase of 30%.",
       "icon": "assets/images/characters/peritya/passive.png",
-      "range_image": "assets/images/characters/peritya/passive-range.png"
+      "range_image": "assets/images/characters/peritya/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -237,7 +242,8 @@
   "images": {
     "portrait": "assets/images/characters/peritya/portrait.png",
     "avatar": "assets/images/characters/peritya/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/peritya/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

@@ -46,7 +46,8 @@
       "effect_area": "Target",
       "description": "Select 1 enemy target within 9 tiles of the user and deal Physical damage equal to 130% of attack. When attacking near Cover, increases damage dealt by 20% and gain 2 points of Confectance Index.",
       "icon": "assets/images/characters/nemesis/skill2-icon.png",
-      "range_image": "assets/images/characters/nemesis/skill2-range.png"
+      "range_image": "assets/images/characters/nemesis/skill2-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Penetrating Casket",
@@ -62,12 +63,13 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 9 tiles, applies Defense Down II for 1 turn, and deals Physical damage equal to 130% of attack to them.",
       "icon": "assets/images/characters/nemesis/skill3-icon.png",
-      "range_image": "assets/images/characters/nemesis/skill3-range.png"
+      "range_image": "assets/images/characters/nemesis/skill3-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Constellation Pursuit",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted"
       ],
       "stability_damage": 4,
@@ -77,7 +79,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 9 tiles, dealing Corrosion damage equal to 170% of attack. For each additional 1 point of Confectance Index, this attack's damage is increased by 10%.",
       "icon": "assets/images/characters/nemesis/ult-icon.png",
-      "range_image": "assets/images/characters/nemesis/ult-range.png"
+      "range_image": "assets/images/characters/nemesis/ult-range.png",
+      "ammo_type": "Heavy Ammo"
     },
     {
       "name": "Remote Observation",
@@ -91,7 +94,8 @@
       "effect_area": "9",
       "description": "At the start of the action, marks the 2 nearest enemy targets within range with Prophecy of Mourning for 1 turn. Action Support deals Physical damage equal to 80% of attack and 2 points of Stability Damage. This unit gains Insight for 1 turn after using a Action Support.",
       "icon": "assets/images/characters/nemesis/passive.png",
-      "range_image": "assets/images/characters/nemesis/passive-range.png"
+      "range_image": "assets/images/characters/nemesis/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -238,7 +242,8 @@
   "images": {
     "portrait": "assets/images/characters/nemesis/portrait.png",
     "avatar": "assets/images/characters/nemesis/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/nemesis/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

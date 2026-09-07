@@ -23,7 +23,7 @@
         "Basic Attack",
         "Targeted"
       ],
-      "ammo_type": "Light Ammo",
+      "ammo_type": "Medium Ammo",
       "stability_damage": 1,
       "cooldown": "0 turns",
       "confectance_cost": 0,
@@ -38,7 +38,7 @@
       "tags": [
         "Active",
         "Targeted",
-        "Debuff"
+        "Dispel"
       ],
       "stability_damage": 2,
       "cooldown": "0 turns",
@@ -47,7 +47,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles, dispels 1 buff, and deals Physical damage equal to 150% of attack to them.",
       "icon": "assets/images/characters/daiyan/skill2-icon.png",
-      "range_image": "assets/images/characters/daiyan/skill2-range.png"
+      "range_image": "assets/images/characters/daiyan/skill2-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Qing Shang Harmony",
@@ -61,12 +62,13 @@
       "effect_area": "Target",
       "description": "Gains 3 stacks of Tuning, as well as Pitch Perfect for 1 turn. Gains 1 instance of Extra Command.",
       "icon": "assets/images/characters/daiyan/skill3-icon.png",
-      "range_image": "assets/images/characters/daiyan/skill3-range.png"
+      "range_image": "assets/images/characters/daiyan/skill3-range.png",
+      "range": "Self"
     },
     {
       "name": "Ethereal Resonance",
       "tags": [
-        "Active",
+        "Ultimate",
         "Targeted",
         "Buff"
       ],
@@ -77,12 +79,14 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles, dealing Physical damage equal to 190% of attack. For every 1 stack of Tuning, reduces this skill's cooldown by 1 turn.\n\nAfter attacking, consumes all stacks of Tuning and gains 1 stack of Tuning permanently, up to a maximum of 3 stacks.",
       "icon": "assets/images/characters/daiyan/ult-icon.png",
-      "range_image": "assets/images/characters/daiyan/ult-range.png"
+      "range_image": "assets/images/characters/daiyan/ult-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Swift Harmony",
       "tags": [
-        "Passive"
+        "Passive",
+        "Ambush"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -245,7 +249,8 @@
   "images": {
     "portrait": "assets/images/characters/daiyan/portrait.png",
     "avatar": "assets/images/characters/daiyan/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/daiyan/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

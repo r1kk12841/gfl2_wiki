@@ -30,7 +30,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 7 tile radius and deals Physical damage equivalent to 80% ATK to it",
       "icon": "assets/images/characters/sakura/skill1-icon.png",
-      "range_image": "assets/images/characters/sakura/skill1-range.png"
+      "range_image": "assets/images/characters/sakura/skill1-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Falling Blossom",
@@ -44,7 +45,9 @@
       "effect_area": "2",
       "description": "Selects an empty tile within a 2-tile radius of a friendly Doll or an enemy affected by Sakura Mark, then jumps to that tile, dealing AoE Burn damage equal to 60% ATK to all enemies within a 2-tile radius. Grants Extra Command.",
       "icon": "assets/images/characters/sakura/skill2-icon.png",
-      "range_image": "assets/images/characters/sakura/skill2-range.png"
+      "range_image": "assets/images/characters/sakura/skill2-range.png",
+      "ammo_type": "Burn",
+      "range": "Full map"
     },
     {
       "name": "Misfortune Delivery",
@@ -60,12 +63,13 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 7 tile radius and deals Burn damage equivalent to 130% ATK to it, and applies 2 stacks of Sakura Mark.\nBefore attacking, additionally applies Bad Luck to the target for 3 turns.",
       "icon": "assets/images/characters/sakura/skill3-icon.png",
-      "range_image": "assets/images/characters/sakura/skill3-range.png"
+      "range_image": "assets/images/characters/sakura/skill3-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Grand Isekai Adventure",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE"
       ],
       "stability_damage": 2,
@@ -75,7 +79,8 @@
       "effect_area": "--",
       "description": "Selects one direction and applies 3 stacks of Sakura Mark to all enemies within a 3×10 tile area in front, dealing AoE Burn damage equal to 90% ATK.\nAfter using this skill, triggers the effect of Sakura Mark, and gains Good Luck for 2 turns and 2 points of Confectance Index.",
       "icon": "assets/images/characters/sakura/ult-icon.png",
-      "range_image": "assets/images/characters/sakura/ult-range.png"
+      "range_image": "assets/images/characters/sakura/ult-range.png",
+      "ammo_type": "Burn"
     },
     {
       "name": "Ferlicitous Prayer",
@@ -88,7 +93,8 @@
       "effect_area": "Target",
       "description": "At the start of battle, gains Thermal Conduction. When triggering the effect of Sakura Mark and if the ultimate skill Grand Isekai Adventure has not been used, gains 2 stacks of Searing Flame. At the start of each turn, gains 2 points of Confectance Index and applies 2 stacks of Sakura Mark to 3 random enemies on the field. If Sakura has Good Luck, her damage is increased by 20%.",
       "icon": "assets/images/characters/sakura/passive.png",
-      "range_image": "assets/images/characters/sakura/passive-range.png"
+      "range_image": "assets/images/characters/sakura/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -235,7 +241,8 @@
   "images": {
     "portrait": "assets/images/characters/sakura/portrait.png",
     "avatar": "assets/images/characters/sakura/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png"
+    "class_icon": "assets/images/class/vanguard.png",
+    "portrait_webp": "assets/images/characters/sakura/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

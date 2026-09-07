@@ -6,7 +6,7 @@
   "phase": "Physical",
   "weapon_type": "Sniper Rifle",
   "ammo_type": "Heavy Ammo",
-  "signature_weapon": "Nightwalker Cardamom",
+  "signature_weapon": "Night-Wayfaring Cardamom",
   "stats": {
     "hp": 1924,
     "atk": 845,
@@ -28,13 +28,15 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within the entire field and deals Physical damage equal to 80% of attack to them.",
       "icon": "assets/images/characters/cheyanne/skill1-icon.png",
-      "range_image": "assets/images/characters/cheyanne/skill1-range.png"
+      "range_image": "assets/images/characters/cheyanne/skill1-range.png",
+      "ammo_type": "Heavy Ammo",
+      "range": "Full map"
     },
     {
       "name": "Wall of One's Self",
       "tags": [
         "Active",
-        "AoE"
+        "Tile"
       ],
       "stability_damage": 0,
       "cooldown": "2 turns",
@@ -42,7 +44,8 @@
       "effect_area": "Target",
       "description": "Cheyanne gains Sepal of Shyness and 1 instance of Extra Command.\n\nUpon receiving lethal damage while holding Sepal of Shyness, Cheyanne will not be defeated, instead deploying Smoke tiles in 1 tile radius around her position for 1 turn. When standing in these Smoke tiles, Cheyanne becomes invincible. Can be triggered once per battle.",
       "icon": "assets/images/characters/cheyanne/skill2-icon.png",
-      "range_image": "assets/images/characters/cheyanne/skill2-range.png"
+      "range_image": "assets/images/characters/cheyanne/skill2-range.png",
+      "range": "Self"
     },
     {
       "name": "Steadfast Pursuit",
@@ -57,7 +60,9 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within the entire field, apply Bullseye to them and deal Physical damage equal to 80% of attack.",
       "icon": "assets/images/characters/cheyanne/skill3-icon.png",
-      "range_image": "assets/images/characters/cheyanne/skill3-range.png"
+      "range_image": "assets/images/characters/cheyanne/skill3-range.png",
+      "ammo_type": "Heavy Ammo",
+      "range": "Full map"
     },
     {
       "name": "Piercing the Clouds, Into the Sun",
@@ -71,7 +76,9 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within the entire field, dealing Physical damage equal to 200% of attack and reset its Analytical Value. If the target holds a Bullseye, critical damage is increased by 30%.",
       "icon": "assets/images/characters/cheyanne/ult-icon.png",
-      "range_image": "assets/images/characters/cheyanne/ult-range.png"
+      "range_image": "assets/images/characters/cheyanne/ult-range.png",
+      "ammo_type": "Heavy Ammo",
+      "range": "Full map"
     },
     {
       "name": "Meticulous Planning",
@@ -85,7 +92,8 @@
       "effect_area": "Target",
       "description": "When an enemy unit completes its turn, Cheyanne triggers Think Before You Act, dealing Physical damage equal to 120% of attack and 2 points of Stability damage to the enemy, and increasing Confectance Index by 1. If the target’s Analytical Value  exceeds 50%, the damage multiplier of this attack is increased to 180%. Can be triggered up to 2 times per round.\n\nApply 100% of Analytical Value to all enemy units at the start of the battle.\n\nDamage to flying units increased by 20%.",
       "icon": "assets/images/characters/cheyanne/passive.png",
-      "range_image": "assets/images/characters/cheyanne/passive-range.png"
+      "range_image": "assets/images/characters/cheyanne/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -225,7 +233,8 @@
   "images": {
     "portrait": "assets/images/characters/cheyanne/portrait.png",
     "avatar": "assets/images/characters/cheyanne/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/cheyanne/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

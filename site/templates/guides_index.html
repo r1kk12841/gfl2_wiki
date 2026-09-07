@@ -1,4 +1,4 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 
 {% block title %}Guides — GFL2: Exilium Wiki{% endblock %}
 {% block description %}Character guides for Girls' Frontline 2: Exilium.{% endblock %}
@@ -29,6 +29,6 @@
   {% endfor %}
 </div>
 {% else %}
-<p style="color:var(--text-muted); text-align:center; padding:3rem;">No guides yet. Use the <a href="../tools/guide-editor/index.html">Guide Editor</a> to create one!</p>
+<p style="color:var(--text-muted); text-align:center; padding:3rem;" data-i18n="guides_empty">No guides yet.</p>
 {% endif %}
 {% endblock %}

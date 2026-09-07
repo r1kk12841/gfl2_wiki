@@ -12,7 +12,7 @@
     "atk": 844,
     "def": 528
   },
-  "skill_attribute": "Medium Ammo",
+  "skill_attribute": "Melee",
   "weakness": "Burn",
   "stability_gauge": "12 points",
   "movement_speed": "7 tiles",
@@ -30,13 +30,41 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 8 tile radius and deals Physical damage equivalent to 80% ATK to it",
       "icon": "assets/images/characters/voymastina/skill1-icon.png",
-      "range_image": "assets/images/characters/voymastina/skill1-range.png"
+      "range_image": "assets/images/characters/voymastina/skill1-range.png",
+      "ammo_type": "Medium Ammo"
+    },
+    {
+      "name": "Sirius Fall",
+      "tags": [
+        "Skill",
+        "AoE",
+        "Support"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "3",
+      "description": "Selects an enemy target within a 8 tile radius and deals AoE Physical damage equivalent to 120% ATK to all enemies within a 3 tile radius of the target\n\nPassive: When enemies within Attack Range receives Targeted damage from allies, performs an instance of Action Support, dealing AoE Physical damage equivalent to 100% ATK and 3 Stability to all enemies within a 3 tile radius of the target. This effect can be triggered once per round"
+    },
+    {
+      "name": "Eye of the White Mastiff",
+      "tags": [
+        "Skill"
+      ],
+      "stability_damage": 0,
+      "cooldown": "1 turns",
+      "confectance_cost": 0,
+      "range": "Self",
+      "effect_area": "8",
+      "description": "Voymastina gains Wolf Eye System for 2 rounds (Duration decreases at the end of the current round). After skill usage, gains Extra Command\n\nPassive: At the start of the battle, deals Physical damage equivalent to 100% ATK that ignores Cover and 3 Stability to the 5 nearest enemies on the entire field. Voymastina is immune to all damage and fixed damage, lasting till the effects of the Passive has been triggered"
     },
     {
       "name": "Pile Bunker",
       "tags": [
-        "Active",
-        "AoE"
+        "Ultimate",
+        "AoE",
+        "Displacement"
       ],
       "stability_damage": 5,
       "cooldown": "1 turns",
@@ -44,10 +72,12 @@
       "range": 1,
       "effect_area": "--",
       "icon": "assets/images/characters/voymastina/skill2-icon.png",
-      "range_image": "assets/images/characters/voymastina/skill2-range.png"
+      "range_image": "assets/images/characters/voymastina/skill2-range.png",
+      "ammo_type": "Melee",
+      "description": "Selects a direction and deals AoE melee Physical damage equivalent to 200% ATK to all enemies within a 1x2 tile radius in the selected direction. After skill usage, gains Additional Movement\n\nPassive: When enemies within Attack Range receives Targeted damage from allies, performs an instance of Action Support, charging to an empty tile within a 2 tile radius of the target, and dealing targeted melee Physical damage equivalent to 150% ATK that ignores Cover and 3 Stability to the target. If there are no empty tiles, shoots at the target to deal damage instead. This effect can be triggered once per round"
     },
     {
-      "name": "Mastiff's Vow",
+      "name": "Mastiff’s Pledge",
       "tags": [
         "Passive",
         "Buff"
@@ -58,13 +88,14 @@
       "effect_area": "Target",
       "description": "Voymastina is immune to movement displacement and movement debuffs, does not receive protection from Cover, but reduces damage taken by 30%. When Stability is more than 0, reduces damage taken by 80% instead\n\nWhen dealing Physical damage, ignores 50% of the target's DEF. After using active skills or basic attack, increases Confectance Index by 2 points. If Confectance Index is at max, consumes all of it and gains Predation Protocol",
       "icon": "assets/images/characters/voymastina/skill3-icon.png",
-      "range_image": "assets/images/characters/voymastina/skill3-range.png"
+      "range_image": "assets/images/characters/voymastina/skill3-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
     {
       "tier": 1,
-      "skill": "Howl from the Firmament",
+      "skill": "Sirius Fall",
       "level": 2,
       "effect": "Increases damage multiplier to 180% ATK, increases Stability damage dealt by 2 points, increases effect area by 2 tiles\n\nPassive: Increases damage multiplier to 150% ATK, increases Stability damage dealt by 1 point, increases effect area by 2 tiles"
     },
@@ -82,7 +113,7 @@
     },
     {
       "tier": 4,
-      "skill": "Howl from the Firmament",
+      "skill": "Sirius Fall",
       "level": 3,
       "effect": "New effect is added for Passive - When performing any Action Support, gains 1 stack of Coordinated Hunting"
     },
@@ -94,7 +125,7 @@
     },
     {
       "tier": 6,
-      "skill": "Mastiff's Vow",
+      "skill": "Mastiff’s Pledge",
       "level": 2,
       "effect": "Increases movement speed by 2 tiles\n\nAt the start of the battle, gains Pursuer. For each round, if Voymastina used 2 or more active skills or their passive effects, gains Pursuer or refreshes its duration. For each Action Support performed, gains 1 stack of Hunting Rhythm\n\nWhen Voymastina's ATK is increased, her DEF is increased by 50% of the corresponding ATK increase value, up to a maximum of 30% of her initial DEF. When dealing Physical damage, ignores 125% of the target's DEF"
     }
@@ -141,7 +172,7 @@
     {
       "name": "Fixed Key 1",
       "level": 20,
-      "effect": "Howl from the Firmament: If this skill or its passive effect hit a boss enemy or 3 or more enemies, gains Quick Barrier",
+      "effect": "Sirius Fall: If this skill or its passive effect hit a boss enemy or 3 or more enemies, gains Quick Barrier",
       "materials": "3\n\n\n3000",
       "image": "assets/images/characters/voymastina/fixed (1).png"
     },
@@ -162,7 +193,7 @@
     {
       "name": "Fixed Key 4",
       "level": 30,
-      "effect": "Howl from the Firmament: If this skill or its passive effect only hits 1 enemy, increases damage dealt by 20% and Stability damage dealt by 2 points",
+      "effect": "Sirius Fall: If this skill or its passive effect only hits 1 enemy, increases damage dealt by 20% and Stability damage dealt by 2 points",
       "materials": "3\n\n\n8000",
       "image": "assets/images/characters/voymastina/fixed (4).png"
     },
@@ -198,7 +229,8 @@
   "images": {
     "portrait": "assets/images/characters/voymastina/portrait.png",
     "avatar": "assets/images/characters/voymastina/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/voymastina/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

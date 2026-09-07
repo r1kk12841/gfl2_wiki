@@ -21,7 +21,8 @@
       "name": "Dual Slash",
       "tags": [
         "Basic Attack",
-        "Targeted"
+        "Targeted",
+        "Melee"
       ],
       "ammo_type": "Melee",
       "stability_damage": 2,
@@ -37,7 +38,8 @@
       "name": "Descent of twin wings",
       "tags": [
         "Active",
-        "AoE"
+        "Aoe",
+        "Displacement"
       ],
       "stability_damage": 2,
       "cooldown": "0 turns",
@@ -45,7 +47,9 @@
       "effect_area": "Target",
       "description": "Selects 1 tile within a cross-shaped area of 8 tiles, landing on the selected tile and dealing AoE Corrosion melee damage equal to 90% of attack to all enemy targets on the path.",
       "icon": "assets/images/characters/phaetusa/skill2-icon.png",
-      "range_image": "assets/images/characters/phaetusa/skill2-range.png"
+      "range_image": "assets/images/characters/phaetusa/skill2-range.png",
+      "ammo_type": "Melee",
+      "range": "--"
     },
     {
       "name": "Mirror Trap",
@@ -59,13 +63,15 @@
       "effect_area": "Target",
       "description": "Gain 1 stack of Blade Resonance and apply Laceration to all enemy targets on the field for 2 turns. After skill usage, Phaetusa gains Extra Command.",
       "icon": "assets/images/characters/phaetusa/skill3-icon.png",
-      "range_image": "assets/images/characters/phaetusa/skill3-range.png"
+      "range_image": "assets/images/characters/phaetusa/skill3-range.png",
+      "range": "Self"
     },
     {
       "name": "Twin paradise",
       "tags": [
-        "Active",
-        "AoE"
+        "Ultimate",
+        "Aoe",
+        "Melee"
       ],
       "stability_damage": 2,
       "cooldown": "0 turns",
@@ -73,14 +79,16 @@
       "effect_area": "5",
       "description": "Deal AoE Melee Corrosion damage equal to 90% attack power to all enemies within a 5 tile radius. Consumes all stacks of Blade Resonance; for each stack consumed, increases damage multiplier of the skill by 10% and then additionally doubles on that basis.",
       "icon": "assets/images/characters/phaetusa/ult-icon.png",
-      "range_image": "assets/images/characters/phaetusa/ult-range.png"
+      "range_image": "assets/images/characters/phaetusa/ult-range.png",
+      "ammo_type": "Melee",
+      "range": "Self"
     },
     {
       "name": "Companionship",
       "tags": [
         "Passive",
         "Active",
-        "Buff"
+        "Support"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -236,7 +244,8 @@
   "images": {
     "portrait": "assets/images/characters/phaetusa/portrait.png",
     "avatar": "assets/images/characters/phaetusa/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/phaetusa/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

@@ -20,10 +20,10 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_rarity">Rarity</span>
     <div class="filter-chips">
-      <span class="chip active" data-filter="rarity" data-value="all" data-i18n="filter_all_rarities">All Rarities</span>
-      <span class="chip" data-filter="rarity" data-value="SSR">SSR (5★)</span>
-      <span class="chip" data-filter="rarity" data-value="SR">SR (4★)</span>
-      <span class="chip" data-filter="rarity" data-value="R">R (3★)</span>
+      <button type="button" class="chip active" data-filter="rarity" data-value="all" aria-pressed="true" data-i18n="filter_all_rarities">All Rarities</button>
+      <button type="button" class="chip" data-filter="rarity" data-value="SSR" aria-pressed="false">SSR (5★)</button>
+      <button type="button" class="chip" data-filter="rarity" data-value="SR" aria-pressed="false">SR (4★)</button>
+      <button type="button" class="chip" data-filter="rarity" data-value="R" aria-pressed="false">R (3★)</button>
     </div>
   </div>
 
@@ -31,21 +31,20 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_weapon_type">Weapon Type</span>
     <div class="filter-chips">
-      <span class="chip active" data-filter="weapon_type" data-value="all" data-i18n="filter_all_types">All Types</span>
+      <button type="button" class="chip active" data-filter="weapon_type" data-value="all" aria-pressed="true" data-i18n="filter_all_types">All Types</button>
       {% for wt in ['Assault Rifle', 'SMG', 'Shotgun', 'MG', 'Sniper Rifle', 'Handgun', 'Blade'] %}
-      <span class="chip" data-filter="weapon_type" data-value="{{ wt }}" data-weapontype="{{ wt }}">{{ wt }}</span>
+      <button type="button" class="chip" data-filter="weapon_type" data-value="{{ wt }}" aria-pressed="false" data-weapontype="{{ wt }}">{{ wt }}</button>
       {% endfor %}
     </div>
   </div>
 
   <!-- Server Filter -->
-
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_server">Server</span>
     <div class="filter-chips">
-      <span class="chip active" data-filter="server" data-value="all" data-i18n="filter_all_servers">All Servers</span>
-      <span class="chip" data-filter="server" data-value="global" data-server="global">Global</span>
-      <span class="chip" data-filter="server" data-value="cn" data-server="cn">CN Server</span>
+      <button type="button" class="chip active" data-filter="server" data-value="all" aria-pressed="true" data-i18n="filter_all_servers">All Servers</button>
+      <button type="button" class="chip" data-filter="server" data-value="global" aria-pressed="false" data-server="global">Global</button>
+      <button type="button" class="chip" data-filter="server" data-value="cn" aria-pressed="false" data-server="cn">CN Server</button>
     </div>
   </div>
 </section>

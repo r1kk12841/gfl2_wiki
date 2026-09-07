@@ -47,7 +47,8 @@
       "effect_area": "Target",
       "description": "Selects an enemy target within a 7 tile radius and deals Electric damage equivalent to 140% ATK to it. If Confectance Index has 3 points or more before skill activation, consumes 3 points and increases damage dealt by 30%",
       "icon": "assets/images/characters/lenna/skill2-icon.png",
-      "range_image": "assets/images/characters/lenna/skill2-range.png"
+      "range_image": "assets/images/characters/lenna/skill2-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Leaping Pursuit",
@@ -63,12 +64,13 @@
       "effect_area": "7",
       "description": "Selects a tile within a 3 tile cross area of self and lands on the selected tile, dealing Physical damage equivalent to 30% ATK and inflicting Stability Loss II to the nearest enemy target within a 7 tile radius for 1 turn. If Confectance Index has 3 points or more before skill activation, consumes 3 points and gains Extra Command",
       "icon": "assets/images/characters/lenna/skill3-icon.png",
-      "range_image": "assets/images/characters/lenna/skill3-range.png"
+      "range_image": "assets/images/characters/lenna/skill3-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Hunting Strategy",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE",
         "Debuff",
         "Buff"
@@ -79,7 +81,9 @@
       "effect_area": "5",
       "description": "Deals AoE Electric damage equivalent to 80% ATK to all enemies within a 5 tile radius, and inflicts Conductivity for 1 turn. Creates a Voltage tiles for 3 turns. Lenna gains Electric Arc for 3 turns. If Confectance Index has 3 points or more before skill activation, consumes 3 points and gains Concealed for 1 turn",
       "icon": "assets/images/characters/lenna/ult-icon.png",
-      "range_image": "assets/images/characters/lenna/ult-range.png"
+      "range_image": "assets/images/characters/lenna/ult-range.png",
+      "ammo_type": "Electric",
+      "range": "Self"
     },
     {
       "name": "King's Authority",
@@ -93,7 +97,8 @@
       "effect_area": "Target",
       "description": "Lenna is immune from the negative effects of Electric type terrain. When an enemy gains Conductivity, increases Confectance Index by 1 point. When dealing single target damage, generates a Voltage tiles within a 1 tile radius around the target for 2 turns",
       "icon": "assets/images/characters/lenna/passive.png",
-      "range_image": "assets/images/characters/lenna/passive-range.png"
+      "range_image": "assets/images/characters/lenna/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -240,7 +245,8 @@
   "images": {
     "portrait": "assets/images/characters/lenna/portrait.png",
     "avatar": "assets/images/characters/lenna/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/lenna/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

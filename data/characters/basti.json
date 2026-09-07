@@ -30,12 +30,14 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 6 tiles and deals Physical damage equal to 80% of attack to them.",
       "icon": "assets/images/characters/basti/skill1-icon.png",
-      "range_image": "assets/images/characters/basti/skill1-range.png"
+      "range_image": "assets/images/characters/basti/skill1-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Bad Influence",
       "tags": [
-        "Active"
+        "Active",
+        "Teleport"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -49,7 +51,8 @@
     {
       "name": "Landmine Gal",
       "tags": [
-        "Active"
+        "Active",
+        "Summon"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -63,8 +66,9 @@
     {
       "name": "Sugar-Coated Trap",
       "tags": [
-        "Active",
+        "Ultimate",
         "AoE",
+        "Tile",
         "Debuff"
       ],
       "stability_damage": 2,
@@ -74,13 +78,14 @@
       "effect_area": "8",
       "description": "Selects 1 enemy target within 8 tiles and deals AoE Corrosion damage equal to 150% ATK to the target and all enemy targets within 8 tile radius around it, creates Toxic Mist tiles for 2 turns, and applies 1 stack of Grudge.",
       "icon": "assets/images/characters/basti/ult-icon.png",
-      "range_image": "assets/images/characters/basti/ult-range.png"
+      "range_image": "assets/images/characters/basti/ult-range.png",
+      "ammo_type": "Corrosion"
     },
     {
       "name": "The World of Graffiti",
       "tags": [
         "Passive",
-        "AoE",
+        "Tile",
         "Debuff"
       ],
       "stability_damage": 0,
@@ -230,7 +235,8 @@
   "images": {
     "portrait": "assets/images/characters/basti/portrait.png",
     "avatar": "assets/images/characters/basti/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/basti/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "summons": [
@@ -243,7 +249,8 @@
         "def": "100% of Basti's initial DEF"
       },
       "stability_gauge": "0 points",
-      "movement_speed": "0 tiles"
+      "movement_speed": "0 tiles",
+      "skills": []
     }
   ],
   "server": "global"

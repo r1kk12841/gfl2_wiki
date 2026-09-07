@@ -2,6 +2,19 @@
 
 {% block title %}{{ weapon.name }} — Armory — GFL2: Exilium Wiki{% endblock %}
 {% block description %}Weapon statistics, trait, and imprint effects for {{ weapon.name }} ({{ weapon.rarity }} {{ weapon.weapon_type }}).{% endblock %}
+{% block og_image %}{% if site_url and weapon.images and weapon.images.weapon %}{{ site_url }}/{{ weapon.images.weapon }}{% elif weapon.images and weapon.images.weapon %}{{ rel_prefix }}{{ weapon.images.weapon }}{% endif %}{% endblock %}
+{% block json_ld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemPage",
+  "name": "{{ weapon.name }}",
+  "description": "Weapon statistics, trait, and imprint effects for {{ weapon.name }} ({{ weapon.rarity }} {{ weapon.weapon_type }}).",
+  "url": "{{ canonical_url }}"
+}
+</script>
+{% endblock %}
+
 
 {% block content %}
 <!-- Breadcrumbs -->

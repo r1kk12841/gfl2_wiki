@@ -30,13 +30,14 @@
       "effect_area": "Target",
       "description": "Selects 1 target within 8 tiles, dealing Resonance damage equal to 90% of attack to them.",
       "icon": "assets/images/characters/ots-14/skill1-icon.png",
-      "range_image": "assets/images/characters/ots-14/skill1-range.png"
+      "range_image": "assets/images/characters/ots-14/skill1-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Total Suppression",
       "tags": [
         "Active",
-        "AoE"
+        "Aoe"
       ],
       "stability_damage": 3,
       "cooldown": "1 turns",
@@ -45,7 +46,8 @@
       "effect_area": "3x3",
       "description": "Selects 1 tile within an 8-tile radius and deals AoE Resonance Damage equal to 120% of attack to all enemy targets within a 3×3 area. If OTs-14 is under Cover Order, the damage accumulated by Command Mode is increased by 25% after skill usage. If OTs-14 is under Demolition Order, for every 15% initial Critical Damage, damage dealt is increased by 15%, and the damage multiplier is doubled.",
       "icon": "assets/images/characters/ots-14/skill2-icon.png",
-      "range_image": "assets/images/characters/ots-14/skill2-range.png"
+      "range_image": "assets/images/characters/ots-14/skill2-range.png",
+      "ammo_type": "Resonance"
     },
     {
       "name": "Perfect Adaptation",
@@ -58,12 +60,13 @@
       "effect_area": "Target",
       "description": "Switches Command Mode between Cover Order and Demolition Order. After skill usage, gains Extra Command. This skill can be used up to 3 times per turn.",
       "icon": "assets/images/characters/ots-14/skill3-icon.png",
-      "range_image": "assets/images/characters/ots-14/skill3-range.png"
+      "range_image": "assets/images/characters/ots-14/skill3-range.png",
+      "range": "Self"
     },
     {
       "name": "Sundering Demolition",
       "tags": [
-        "Active"
+        "Ultimate"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -85,7 +88,8 @@
       "effect_area": "Target",
       "description": "At the start of battle, performs Cellular Reconfiguration and enters Cover Order.\nAt the end of the turn, if the Ultimate skill Sundering Demolition was not used during this turn, the damage accumulated by Command Mode is converted into 1 point of Overload Pulse.\nAt the end of action, if the OTs-14 is under Demolition Order, switches to Cover Order.",
       "icon": "assets/images/characters/ots-14/passive.png",
-      "range_image": "assets/images/characters/ots-14/passive-range.png"
+      "range_image": "assets/images/characters/ots-14/passive-range.png",
+      "range": "Self"
     },
     {
       "name": "Critical Blast",
@@ -99,7 +103,9 @@
       "effect_area": "3",
       "description": "Selects 1 tile within 3-10 tile radius in front of self, deal AOE Resonance damage equal to 150% of attack to all enemy units within 3 tile radius around the selected tile. Consumes 1 Overload Pulse to deal additional fixed damage equal to 10% of accumulated damage of consumed Overload Pulse.",
       "icon": "assets/images/characters/ots-14/skill6-icon.png",
-      "range_image": "assets/images/characters/ots-14/skill6-range.png"
+      "range_image": "assets/images/characters/ots-14/skill6-range.png",
+      "ammo_type": "Resonance",
+      "range": "2026-10-03 00:00:00"
     }
   ],
   "fortification": [
@@ -239,7 +245,8 @@
   "images": {
     "portrait": "assets/images/characters/ots-14/portrait.png",
     "avatar": "assets/images/characters/ots-14/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png"
+    "class_icon": "assets/images/class/sentinel.png",
+    "portrait_webp": "assets/images/characters/ots-14/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

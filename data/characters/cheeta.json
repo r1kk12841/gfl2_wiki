@@ -46,7 +46,8 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within a 6 tiles, dealing Burn damage equal to 130% of attack. If the user has Blazing Assault, this attack's damage is further increased by 20%.",
       "icon": "assets/images/characters/cheeta/skill2-icon.png",
-      "range_image": "assets/images/characters/cheeta/skill2-range.png"
+      "range_image": "assets/images/characters/cheeta/skill2-range.png",
+      "ammo_type": "Light Ammo"
     },
     {
       "name": "Fireworks Festival",
@@ -67,8 +68,9 @@
     {
       "name": "Surprise Box",
       "tags": [
-        "Active",
-        "Buff"
+        "Ultimate",
+        "Buff",
+        "Support"
       ],
       "stability_damage": 0,
       "cooldown": "3 turns",
@@ -76,7 +78,8 @@
       "effect_area": "6",
       "description": "Apply Blazing Assault II and 2 random buffs to all allied targets within 6 tiles for 2 turns. For each allied unit in range, gains 1 points of Confectance Index. Gain Support, which can be activated up to 2 times per turn for 2 turns.",
       "icon": "assets/images/characters/cheeta/ult-icon.png",
-      "range_image": "assets/images/characters/cheeta/ult-range.png"
+      "range_image": "assets/images/characters/cheeta/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Invention of the Century",
@@ -90,7 +93,8 @@
       "effect_area": "7",
       "description": "When the user is under the effects of buffs, after attacking, restores HP equal to 45% of attack to the allied target with the lowest HP within 7 tiles. Each buff increases the healing multiplier by 5%, up to a maximum of 15%.",
       "icon": "assets/images/characters/cheeta/passive-icon.png",
-      "range_image": "assets/images/characters/cheeta/passive-range.png"
+      "range_image": "assets/images/characters/cheeta/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -237,7 +241,8 @@
   "images": {
     "portrait": "assets/images/characters/cheeta/portrait.png",
     "avatar": "assets/images/characters/cheeta/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/cheeta/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"

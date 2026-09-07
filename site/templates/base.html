@@ -5,12 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}GFL2: Exilium Wiki{% endblock %}</title>
   <meta name="description" content="{% block description %}Comprehensive Tactical Doll and Weapon database for Girls' Frontline 2: Exilium.{% endblock %}">
+  {% if canonical_url %}
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  {% endif %}
+  <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{{ self.description() }}{% endblock %}">
+  <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+  <meta property="og:image" content="{% block og_image %}{% if site_url %}{{ site_url }}/assets/images/characters/groza/portrait.webp{% else %}{{ rel_prefix }}assets/images/characters/groza/portrait.webp{% endif %}{% endblock %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ self.og_title() }}">
+  <meta name="twitter:description" content="{{ self.og_description() }}">
+  <meta name="twitter:image" content="{{ self.og_image() }}">
   <link rel="stylesheet" href="{{ rel_prefix }}static/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   {% block extra_head %}{% endblock %}
+  {% block json_ld %}{% endblock %}
 </head>
+
 <body>
   <!-- Navigation Bar -->
   <header class="navbar">
@@ -20,7 +34,9 @@
         <span class="brand-badge">EXILIUM</span>
       </a>
 
-      <ul class="nav-links">
+      <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="{{ rel_prefix }}index.html" class="nav-link {% if active_page == 'home' %}active{% endif %}" data-i18n="nav_home">Home</a></li>
         <li><a href="{{ rel_prefix }}characters/index.html" class="nav-link {% if active_page == 'characters' %}active{% endif %}" data-i18n="nav_dolls">Dolls</a></li>
         <li><a href="{{ rel_prefix }}weapons/index.html" class="nav-link {% if active_page == 'weapons' %}active{% endif %}" data-i18n="nav_weapons">Weapons</a></li>
@@ -29,9 +45,19 @@
       </ul>
 
       <div class="nav-search">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="global-search-input" placeholder="Search dolls, weapons…" autocomplete="off">
-        <div id="search-dropdown" class="search-results-dropdown"></div>
+        <label for="global-search-input" class="sr-only">Search dolls, weapons…</label>
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="text"
+               id="global-search-input"
+               placeholder="Search dolls, weapons…"
+               autocomplete="off"
+               role="combobox"
+               aria-autocomplete="list"
+               aria-controls="search-dropdown"
+               aria-expanded="false"
+               aria-haspopup="listbox"
+               aria-label="Search dolls, weapons…">
+        <div id="search-dropdown" class="search-results-dropdown" role="listbox" aria-live="polite"></div>
       </div>
 
       <!-- Language Switcher -->

@@ -30,13 +30,15 @@
       "effect_area": "Target",
       "description": "Selects 1 enemy target within 8 tiles and deals Physical damage equal to 80% of attack to them.\n\nWhen in Turbo Mode, damage type is changed to Corrosion damage, stability damage dealt is increased by 2 points, and Mechty gains 1 point of Confectance Index.",
       "icon": "assets/images/characters/mechty/skill1-icon.png",
-      "range_image": "assets/images/characters/mechty/skill1-range.png"
+      "range_image": "assets/images/characters/mechty/skill1-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Dreamquake",
       "tags": [
         "Active",
-        "AoE"
+        "AoE",
+        "Tile"
       ],
       "stability_damage": 3,
       "cooldown": "2 turns",
@@ -45,13 +47,15 @@
       "effect_area": "1",
       "description": "Selects 1 enemy unit within 8 tiles, dealing AoE Corrosion damage equal to 130% of attack to all enemies within 1 tile of the target.\n\nGains Movement Up II for 1 turn when Turbo Mode is active and generates Toxic Mist tiles for 2 turns.",
       "icon": "assets/images/characters/mechty/skill2-icon.png",
-      "range_image": "assets/images/characters/mechty/skill2-range.png"
+      "range_image": "assets/images/characters/mechty/skill2-range.png",
+      "ammo_type": "Medium Ammo"
     },
     {
       "name": "Dreamless Night",
       "tags": [
         "Active",
-        "Buff"
+        "Buff",
+        "Stability Regen"
       ],
       "stability_damage": 0,
       "cooldown": "0 turns",
@@ -59,12 +63,13 @@
       "effect_area": "Target",
       "description": "Recovers 6 points of stability, cleanses all debuffs on self, and applies Dream Guardian to all allied units within 8 tiles for 2 turns.\n\nWhen in Turbo Mode, the active skill Dreamquake or the basic attack Bedtime Warmup can be used after using this skill. Gains 1 stack of Sleep Aid Kit for 2 turns.",
       "icon": "assets/images/characters/mechty/skill3-icon.png",
-      "range_image": "assets/images/characters/mechty/skill3-range.png"
+      "range_image": "assets/images/characters/mechty/skill3-range.png",
+      "range": "Self"
     },
     {
       "name": "Dream Wonderland",
       "tags": [
-        "Active",
+        "Ultimate",
         "Buff"
       ],
       "stability_damage": 0,
@@ -73,7 +78,8 @@
       "effect_area": "Entire Map",
       "description": "Deactivates Patch Mode and enters Turbo Mode for 3 turns. After Turbo Mode ends, returns to Patch Mode.\n\nApplies Nightmarish Shroud to all allied units and inflicts Toxic Inundation to the closest enemy target for 1 turn.",
       "icon": "assets/images/characters/mechty/ult-icon.png",
-      "range_image": "assets/images/characters/mechty/ult-range.png"
+      "range_image": "assets/images/characters/mechty/ult-range.png",
+      "range": "Self"
     },
     {
       "name": "Mysterious Nap",
@@ -87,7 +93,8 @@
       "effect_area": "Target",
       "description": "At the start of battle, Mechty enters Patch Mode, and applies Nightmare Form to all allied units.",
       "icon": "assets/images/characters/mechty/passive.png",
-      "range_image": "assets/images/characters/mechty/passive-range.png"
+      "range_image": "assets/images/characters/mechty/passive-range.png",
+      "range": "Self"
     }
   ],
   "fortification": [
@@ -234,7 +241,8 @@
   "images": {
     "portrait": "assets/images/characters/mechty/portrait.png",
     "avatar": "assets/images/characters/mechty/avatar.png",
-    "class_icon": "assets/images/class/support.png"
+    "class_icon": "assets/images/class/support.png",
+    "portrait_webp": "assets/images/characters/mechty/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
   "server": "global"
