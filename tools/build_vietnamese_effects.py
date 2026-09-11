@@ -19,6 +19,10 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from tools.effects_catalog import effect_id
+
 DATA_DIR = ROOT / "data"
 CHAR_DIR = DATA_DIR / "characters"
 WEAPONS_FILE = DATA_DIR / "weapons.json"
@@ -308,6 +312,7 @@ EFFECT_NAMES: Dict[str, str] = {
     "Coordinated Hunting": "Săn Bắn Phối Hợp",
     "Cover Order": "Lệnh Che Chắn",
     "Covering Mode": "Chế Độ Viện Hộ",
+    "Liquid N2 Fang": "Châm Độc Nitơ Lỏng",
     "Command Mode": "Chế Độ Chỉ Huy",
     "Demolition Order": "Lệnh Phá Hủy",
     "Deep-Rooted Bonds": "Liên Kết Sâu Đậm",
@@ -439,6 +444,16 @@ EFFECT_NAMES: Dict[str, str] = {
 # 2. EXACT IN-GAME & REFINED EFFECT TRANSLATIONS
 # ==============================================================================
 EXACT_IN_GAME: Dict[str, Tuple[str, str, str]] = {
+    "Covering Mode": [
+        "Chế Độ Viện Hộ",
+        "Đơn vị phe ta gây ST Băng Kết cho đơn vị địch có hiệu ứng loại Khiên tăng 20%. TL Bạo Kích của bản thân tăng 20%. Trước khi đơn vị địch trong phạm vi 8 ô xung quanh chủ động tấn công, tiến hành 1 lần Chặn Đánh, gây ST bằng 60% Tấn Công loại ST Băng Kết và 4 điểm ST Ổn Định, và tích lũy 20% điểm ST lần này lên Bình Chướng Băng của tất cả đơn vị đồng minh, mỗi hiệp tối đa kích hoạt 3 lần. Không thể giải trừ.",
+        "buff"
+    ],
+    "Liquid N2 Fang": [
+        "Châm Độc Nitơ Lỏng",
+        "Áp dụng Chứng Hạ Nhiệt lên đơn vị địch trong phạm vi 4 ô xung quanh. Trước khi đơn vị địch trong phạm vi chịu tấn công, nếu chưa có Hàn Ý, trừ HP bằng 500% Tấn Công của Alva và chuyển thành Hàn Ý, tối đa trừ HP xuống còn 1 điểm, mỗi đơn vị kích hoạt tối đa 1 lần trong 1 hiệp lớn. Tồn tại tối đa 1 cái trong cùng thời điểm. Nếu Khiên của đơn vị địch bị đánh phá trong phạm vi 8 ô xung quanh Alva, Alva sẽ tấn công đơn vị đó 1 lần, gây ra ST Băng Kết bằng 40% lượng tích lũy hấp thu Khiên.",
+        "effect"
+    ],
     "Movement Down I": [
         "Di Chuyển Giảm I",
         "Tầm Di Chuyển giảm 1 ô. Thuộc loại Debuff Di Chuyển.",
@@ -2132,6 +2147,7 @@ def run_build() -> int:
 
     # Build Vietnamese Effects Catalog
     vi_effects_db: Dict[str, Any] = {}
+    effect_ids = {name: effect_id(name) for name in en_effects}
     for name_en, desc_en in en_effects.items():
         name_vi, desc_vi, eff_type = translate_effect_tuple(name_en, desc_en)
 
@@ -2141,22 +2157,18 @@ def run_build() -> int:
             if other_en != name_en and other_en not in subs_en and len(other_en) > 2:
                 subs_en.append(other_en)
 
-        subs_vi = [EFFECT_NAMES.get(s, s) for s in subs_en]
-
         effect_entry = {
+            "id": effect_ids[name_en],
             "name": name_vi,
             "name_en": name_en,
             "desc": desc_vi,
             "desc_en": desc_en,
             "type": eff_type,
-            "sub_effects": subs_en,
-            "sub_effects_vi": subs_vi,
+            "sub_effect_ids": [effect_ids[sub] for sub in subs_en],
         }
-        # Indexed by both English and Vietnamese names
-        vi_effects_db[name_en] = effect_entry
-        vi_effects_db[name_vi] = effect_entry
+        vi_effects_db[effect_ids[name_en]] = effect_entry
 
-    print(f"Compiled {len(vi_effects_db) // 2} status effects into dual-index catalog.")
+    print(f"Compiled {len(vi_effects_db)} status effects into ID-keyed catalog.")
 
     # Save to data/effects_vi.json
     EFFECTS_VI_JSON.write_text(json.dumps(vi_effects_db, ensure_ascii=False, indent=2), encoding="utf-8")

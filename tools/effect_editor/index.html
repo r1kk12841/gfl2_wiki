@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GFL2 Effect Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Effect Editor</h1>
+      <p>Sửa bản dịch hiệu ứng, đồng bộ chỉ mục và file ngôn ngữ.</p>
+    </div>
+    <div class="actions">
+      <span id="save-state" role="status">Chưa thay đổi</span>
+      <button id="save" type="button" disabled>Lưu thay đổi</button>
+    </div>
+  </header>
+
+  <main>
+    <aside>
+      <label class="search-label" for="search">Tìm hiệu ứng</label>
+      <input id="search" type="search" placeholder="Tên Anh hoặc Việt…" autocomplete="off">
+      <div id="count"></div>
+      <nav id="effect-list" aria-label="Danh sách hiệu ứng"></nav>
+    </aside>
+
+    <section id="workspace" hidden>
+      <div class="split">
+        <article class="panel english">
+          <div class="panel-title"><span>EN</span> Nguồn tiếng Anh</div>
+          <label>Tên hiệu ứng<input id="name-en" readonly></label>
+          <label>Mô tả<textarea id="desc-en" readonly></textarea></label>
+        </article>
+        <article class="panel vietnamese">
+          <div class="panel-title"><span>VI</span> Bản dịch tiếng Việt</div>
+          <label>Tên hiệu ứng<input id="name-vi" maxlength="160"></label>
+          <label>Mô tả<textarea id="desc-vi"></textarea></label>
+        </article>
+      </div>
+
+      <div class="meta-grid">
+        <label>Loại
+          <select id="effect-type">
+            <option value="buff">Buff</option>
+            <option value="debuff">Debuff</option>
+            <option value="effect">Effect</option>
+          </select>
+        </label>
+        <div class="reference-box">
+          <strong>Hiệu ứng con</strong>
+          <div id="sub-effects" class="chips"></div>
+        </div>
+        <div class="reference-box">
+          <strong>Được dùng bởi</strong>
+          <div id="referenced-by" class="chips"></div>
+          <small>Quan hệ dùng ID ổn định; đổi tên không làm đứt chỉ mục liên quan.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="empty-state">
+      <h2>Chọn một hiệu ứng</h2>
+      <p>Tiếng Anh giữ nguyên. Chỉnh tên, mô tả hoặc loại bên tiếng Việt.</p>
+    </section>
+  </main>
+
+  <div id="toast" role="alert" aria-live="assertive"></div>
+  <script src="app.js"></script>
+</body>
+</html>

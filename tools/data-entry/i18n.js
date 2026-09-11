@@ -23,7 +23,7 @@ const DATA_ENTRY_I18N = {
     btn_clear_char: '✕ New / Clear',
 
     // Action buttons
-    btn_save_disk: '💾 Save to disk',
+    btn_save_disk: '💾 Update source JSON',
     btn_download_json: '⬇ Download JSON',
     btn_load_json: '📂 Load JSON',
     btn_excel_autofill: '✨ Auto-fill from Excel',
@@ -181,7 +181,7 @@ const DATA_ENTRY_I18N = {
     btn_clear_char: '✕ Tạo mới / Xóa trắng',
 
     // Action buttons
-    btn_save_disk: '💾 Lưu vào máy',
+    btn_save_disk: '💾 Cập nhật JSON gốc',
     btn_download_json: '⬇ Tải tệp JSON',
     btn_load_json: '📂 Mở tệp JSON',
     btn_excel_autofill: '✨ Tự động điền từ Excel',
@@ -409,6 +409,7 @@ function t(key, lang = 'en') {
 }
 
 window.DATA_ENTRY_I18N = DATA_ENTRY_I18N;
+window.TERMS = TERMS;
 window.mapTerm = mapTerm;
 window.getTermList = getTermList;
 window.t = t;

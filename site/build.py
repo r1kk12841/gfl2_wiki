@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from tools.validate import validate_all
+from tools.effects_catalog import browser_catalog, canonicalize_effects, effect_id
 
 DATA_DIR = ROOT / "data"
 ASSETS_DIR = ROOT / "assets"
@@ -37,17 +38,21 @@ DEFAULT_SITE_URL = "https://r1kk12841.github.io/gfl2_wiki"
 SITE_URL = os.environ.get("GFL2_SITE_URL", DEFAULT_SITE_URL).rstrip("/")
 
 EFFECTS_DATA: dict[str, str] = {}
+EFFECT_IDS_BY_NAME: dict[str, str] = {}
 EFFECTS_PATTERN: re.Pattern | None = None
 
 
 
 def load_effects() -> None:
     """Load effects dictionary from assets/effects.json and build regex."""
-    global EFFECTS_DATA, EFFECTS_PATTERN
+    global EFFECTS_DATA, EFFECTS_PATTERN, EFFECT_IDS_BY_NAME
     effects_file = ASSETS_DIR / "effects.json"
     if effects_file.exists():
         try:
             EFFECTS_DATA = json.loads(effects_file.read_text(encoding="utf-8"))
+            localized_file = DATA_DIR / "effects_vi.json"
+            localized = canonicalize_effects(json.loads(localized_file.read_text(encoding="utf-8-sig"))) if localized_file.exists() else {}
+            EFFECT_IDS_BY_NAME = {entry["name_en"]: key for key, entry in localized.items()}
             sorted_keys = sorted(EFFECTS_DATA.keys(), key=len, reverse=True)
             pattern_str = r'\b(' + '|'.join(re.escape(k) for k in sorted_keys) + r')\b'
             EFFECTS_PATTERN = re.compile(pattern_str)
@@ -65,9 +70,10 @@ def generate_effects_js(output_file: Path) -> None:
 
     if effects_vi_file.exists():
         try:
-            data = json.loads(effects_vi_file.read_text(encoding="utf-8"))
-            output_file.write_text(f"// Auto-generated GFL2 dual-language effects database\nwindow.GFL2_EFFECTS = {json.dumps(data, ensure_ascii=False, indent=2)};\n", encoding="utf-8")
-            print(f"Generated {output_file.name} with {len(data)} dual-index effect entries.")
+            data = canonicalize_effects(json.loads(effects_vi_file.read_text(encoding="utf-8-sig")))
+            payload = browser_catalog(data)
+            output_file.write_text(f"// Auto-generated GFL2 ID-keyed effects database\nwindow.GFL2_EFFECTS = {json.dumps(payload, ensure_ascii=False, indent=2)};\n", encoding="utf-8")
+            print(f"Generated {output_file.name} with {len(data)} ID-keyed effect entries.")
             return
         except Exception as e:
             print(f"Warning: Failed to load effects_vi.json: {e}")
@@ -103,13 +109,19 @@ def generate_effects_js(output_file: Path) -> None:
                             subs.append(other)
                             queue.append(other)
 
-            data[name] = {
+            current_id = effect_id(name)
+            data[current_id] = {
+                "id": current_id,
+                "name": name,
+                "name_en": name,
                 "desc": desc,
+                "desc_en": desc,
                 "type": eff_type,
-                "sub_effects": subs
+                "sub_effect_ids": [effect_id(sub) for sub in subs]
             }
 
-        output_file.write_text(f"// Auto-generated GFL2 effects database\nwindow.GFL2_EFFECTS = {json.dumps(data, ensure_ascii=False, indent=2)};\n", encoding="utf-8")
+        payload = browser_catalog(data)
+        output_file.write_text(f"// Auto-generated GFL2 ID-keyed effects database\nwindow.GFL2_EFFECTS = {json.dumps(payload, ensure_ascii=False, indent=2)};\n", encoding="utf-8")
         print(f"Generated {output_file.name} with {len(data)} effect entries.")
     except Exception as e:
         print(f"Warning: Failed to generate effects-data.js: {e}")
@@ -170,6 +182,7 @@ def render_effects_filter(text: Any) -> Markup:
             desc = EFFECTS_DATA.get(name, "")
             escaped_name = html.escape(name, quote=True)
             escaped_desc = html.escape(desc, quote=True)
+            escaped_id = html.escape(EFFECT_IDS_BY_NAME.get(name, effect_id(name)), quote=True)
             desc_lower = desc.lower()
             if "debuff" in desc_lower:
                 eff_type = "debuff"
@@ -177,7 +190,7 @@ def render_effects_filter(text: Any) -> Markup:
                 eff_type = "buff"
             else:
                 eff_type = "effect"
-            return f'<span class="effect-trigger effect-{eff_type}" data-effect="{escaped_name}" data-type="{eff_type}" data-desc="{escaped_desc}" tabindex="0">{name}</span>'
+            return f'<span class="effect-trigger effect-{eff_type}" data-effect-id="{escaped_id}" data-effect="{escaped_name}" data-type="{eff_type}" data-desc="{escaped_desc}" tabindex="0">{name}</span>'
 
         result = EFFECTS_PATTERN.sub(repl, escaped_text)
     else:

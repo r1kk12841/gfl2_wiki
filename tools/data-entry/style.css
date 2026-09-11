@@ -155,15 +155,26 @@ body {
   line-height: 1;
 }
 
-.lang-switcher-btn .lang-indicator {
-  display: inline-block;
+.lang-switcher-btn .lang-opt {
   padding: 1px 6px;
   border-radius: 4px;
-  background: var(--accent);
-  color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.05em;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+}
+
+.lang-switcher-btn .lang-opt.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.lang-switcher-btn .lang-divider {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  opacity: 0.6;
 }
 
 /* ── Form pane ────────────────────────────────────────────── */

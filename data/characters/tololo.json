@@ -135,7 +135,8 @@
           "cooldown": "0 turns",
           "confectance_cost": 0,
           "range": "Self",
-          "effect_area": "Target"
+          "effect_area": "Target",
+          "icon": "assets/images/characters/tololo/summon1-passive2-icon.png"
         }
       ]
     }

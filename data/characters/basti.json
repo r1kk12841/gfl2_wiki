@@ -95,7 +95,7 @@
       "effect_area": "Target",
       "description": "At the start of the turn, gains 1 point of Confectance Index.\nAt the start of battle, creates Toxic Mist tiles for 2 turns on the tiles where all allied Dolls are located. After moving, leaves Toxic Mist tiles within a 1-tile radius around herself for 2 turns.\nIf an enemy target is standing on an allied Toxic Mist tile, it gains Sloppy Grimace.\nWhen Cutie Pie is summoned and at the start of the turn, if allied units are on allied Toxic Mist tiles, they gain Mark of Comrades and Attack Up II for 2 turns.",
       "icon": "assets/images/characters/basti/passive-icon.png",
-      "range_image": "assets/images/characters/basti/passive-rangre.png"
+      "range_image": "assets/images/characters/basti/passive-range.png"
     }
   ],
   "fortification": [

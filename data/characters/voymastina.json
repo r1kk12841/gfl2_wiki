@@ -45,7 +45,9 @@
       "confectance_cost": 0,
       "range": 8,
       "effect_area": "3",
-      "description": "Selects an enemy target within a 8 tile radius and deals AoE Physical damage equivalent to 120% ATK to all enemies within a 3 tile radius of the target\n\nPassive: When enemies within Attack Range receives Targeted damage from allies, performs an instance of Action Support, dealing AoE Physical damage equivalent to 100% ATK and 3 Stability to all enemies within a 3 tile radius of the target. This effect can be triggered once per round"
+      "description": "Selects an enemy target within a 8 tile radius and deals AoE Physical damage equivalent to 120% ATK to all enemies within a 3 tile radius of the target\n\nPassive: When enemies within Attack Range receives Targeted damage from allies, performs an instance of Action Support, dealing AoE Physical damage equivalent to 100% ATK and 3 Stability to all enemies within a 3 tile radius of the target. This effect can be triggered once per round",
+      "icon": "assets/images/characters/voymastina/skill2-icon.png",
+      "range_image": "assets/images/characters/voymastina/skill2-range.png"
     },
     {
       "name": "Eye of the White Mastiff",
@@ -57,7 +59,9 @@
       "confectance_cost": 0,
       "range": "Self",
       "effect_area": "8",
-      "description": "Voymastina gains Wolf Eye System for 2 rounds (Duration decreases at the end of the current round). After skill usage, gains Extra Command\n\nPassive: At the start of the battle, deals Physical damage equivalent to 100% ATK that ignores Cover and 3 Stability to the 5 nearest enemies on the entire field. Voymastina is immune to all damage and fixed damage, lasting till the effects of the Passive has been triggered"
+      "description": "Voymastina gains Wolf Eye System for 2 rounds (Duration decreases at the end of the current round). After skill usage, gains Extra Command\n\nPassive: At the start of the battle, deals Physical damage equivalent to 100% ATK that ignores Cover and 3 Stability to the 5 nearest enemies on the entire field. Voymastina is immune to all damage and fixed damage, lasting till the effects of the Passive has been triggered",
+      "icon": "assets/images/characters/voymastina/skill3-icon.png",
+      "range_image": "assets/images/characters/voymastina/skill3-range.png"
     },
     {
       "name": "Pile Bunker",
@@ -71,8 +75,8 @@
       "confectance_cost": 0,
       "range": 1,
       "effect_area": "--",
-      "icon": "assets/images/characters/voymastina/skill2-icon.png",
-      "range_image": "assets/images/characters/voymastina/skill2-range.png",
+      "icon": "assets/images/characters/voymastina/ult-icon.png",
+      "range_image": "assets/images/characters/voymastina/ult-range.png",
       "ammo_type": "Melee",
       "description": "Selects a direction and deals AoE melee Physical damage equivalent to 200% ATK to all enemies within a 1x2 tile radius in the selected direction. After skill usage, gains Additional Movement\n\nPassive: When enemies within Attack Range receives Targeted damage from allies, performs an instance of Action Support, charging to an empty tile within a 2 tile radius of the target, and dealing targeted melee Physical damage equivalent to 150% ATK that ignores Cover and 3 Stability to the target. If there are no empty tiles, shoots at the target to deal damage instead. This effect can be triggered once per round"
     },
@@ -87,8 +91,8 @@
       "confectance_cost": 0,
       "effect_area": "Target",
       "description": "Voymastina is immune to movement displacement and movement debuffs, does not receive protection from Cover, but reduces damage taken by 30%. When Stability is more than 0, reduces damage taken by 80% instead\n\nWhen dealing Physical damage, ignores 50% of the target's DEF. After using active skills or basic attack, increases Confectance Index by 2 points. If Confectance Index is at max, consumes all of it and gains Predation Protocol",
-      "icon": "assets/images/characters/voymastina/skill3-icon.png",
-      "range_image": "assets/images/characters/voymastina/skill3-range.png",
+      "icon": "assets/images/characters/voymastina/passive-icon.png",
+      "range_image": "assets/images/characters/voymastina/passive-range.png",
       "range": "Self"
     }
   ],

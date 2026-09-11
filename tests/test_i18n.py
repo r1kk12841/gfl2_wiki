@@ -94,10 +94,10 @@ def test_effects_vi_data():
     data = json.loads(i18n_path.read_text(encoding="utf-8"))
     assert "effects" in data, "Must contain 'effects' dictionary"
     effects = data["effects"]
-    assert "Shelter" in effects, "Must contain English key"
-    assert "Nơi Trú Ẩn" in effects, "Must contain Vietnamese key"
-    assert effects["Shelter"]["name"] == "Nơi Trú Ẩn"
-    assert "Bảo Vệ Độ Ổn Định" in effects["Shelter"]["desc"]
+    shelter = next(effect for effect in effects.values() if effect["name_en"] == "Shelter")
+    assert shelter["id"] in effects, "Effect must be keyed by stable ID"
+    assert shelter["name"] == "Nơi Trú Ẩn"
+    assert "Bảo Vệ Độ Ổn Định" in shelter["desc"]
 
 
 def test_no_unresolved_placeholders():
@@ -288,4 +288,3 @@ def test_weapons_card_translation_and_zero_english():
         if tr:
             matches = en_detector.findall(tr)
             assert not matches, f"Weapon '{slug}' trait contains English words: {matches} in: '{tr}'"
-

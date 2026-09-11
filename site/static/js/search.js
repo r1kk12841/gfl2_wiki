@@ -286,6 +286,8 @@
 
   // Status Effect Interactive Popover Controller
   function initEffectPopovers() {
+    if (document.documentElement.dataset.effectPopoversReady === 'true') return;
+    document.documentElement.dataset.effectPopoversReady = 'true';
     let popover = null;
     let activeTrigger = null;
     let hideTimer = null;
@@ -322,18 +324,30 @@
       return String(str).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
+    function currentLanguage() {
+      try {
+        return localStorage.getItem('gfl2_lang') || 'en';
+      } catch (_) {
+        return document.documentElement.lang === 'vi' ? 'vi' : 'en';
+      }
+    }
+
     function formatDescHTML(desc, subEffects) {
       if (!desc) return '';
       let text = escapeHTML(desc);
 
       // 1. Highlight referenced sub-effects in text
       if (subEffects && subEffects.length > 0) {
-        subEffects.forEach(subName => {
-          const subData = (window.GFL2_EFFECTS && window.GFL2_EFFECTS[subName]) || {};
+        subEffects.forEach(subId => {
+          const subData = getEffectData('', subId) || {};
           const sType = subData.type || 'effect';
+          const subName = currentLanguage() === 'vi'
+            ? (subData.name || subData.name_en || '')
+            : (subData.name_en || subData.name || '');
+          if (!subName) return;
           const escapedSub = escapeHTML(subName);
-          const regex = new RegExp('\\b' + escapeRegex(escapedSub) + '\\b', 'g');
-          text = text.replace(regex, `<span class="popover-subeffect-mention sub-${sType}">${escapedSub}</span>`);
+          const regex = new RegExp(`(?<=^|[\\s,.:;!?'"\\(\\[\\{“‘])(${escapeRegex(escapedSub)})(?=[\\s,.:;!?'"\\)\\]\\}”’]|$)`, 'gi');
+          text = text.replace(regex, `<span class="popover-subeffect-mention sub-${sType}">$1</span>`);
         });
       }
 
@@ -388,17 +402,35 @@
       pop.style.left = `${Math.round(left)}px`;
     }
 
+    function getEffectData(name, id = '') {
+      if (!window.GFL2_EFFECTS) return null;
+      const byId = window.GFL2_EFFECTS.byId || window.GFL2_EFFECTS;
+      if (id && byId[id]) return byId[id];
+      if (!name) return null;
+      const trimmed = String(name).trim();
+      const index = window.GFL2_EFFECTS.nameIndex;
+      const ids = index && index[trimmed.toLocaleLowerCase()];
+      if (ids && ids.length) return byId[ids[0]] || null;
+      const lower = trimmed.toLocaleLowerCase();
+      for (const entry of Object.values(byId)) {
+        if (!entry || typeof entry !== 'object') continue;
+        if (String(entry.name_en || '').toLocaleLowerCase() === lower || String(entry.name || '').toLocaleLowerCase() === lower) return entry;
+      }
+      return null;
+    }
+
     function showPopover(trigger) {
       clearTimeout(hideTimer);
       activeTrigger = trigger;
       const pop = getPopoverEl();
 
-      const isVi = (localStorage.getItem('gfl2_lang') || 'en') === 'vi';
+      const isVi = currentLanguage() === 'vi';
       const name = trigger.getAttribute('data-effect') || '';
+      const effectId = trigger.getAttribute('data-effect-id') || '';
       let desc = trigger.getAttribute('data-desc') || '';
       let type = trigger.getAttribute('data-type') || 'effect';
 
-      const effectObj = (window.GFL2_EFFECTS && window.GFL2_EFFECTS[name]) ? window.GFL2_EFFECTS[name] : null;
+      const effectObj = getEffectData(name, effectId);
       let displayTitle = name;
       if (effectObj) {
         if (isVi) {
@@ -415,16 +447,16 @@
         : (type === 'buff' ? 'Buff' : (type === 'debuff' ? 'Debuff' : 'Status Effect'));
 
       // Resolve referenced sub-effects
-      const subEffects = effectObj ? (isVi && effectObj.sub_effects_vi && effectObj.sub_effects_vi.length > 0 ? effectObj.sub_effects_vi : (effectObj.sub_effects || [])) : [];
+      const subEffects = effectObj ? (effectObj.sub_effect_ids || []) : [];
       let subEffectsHTML = '';
 
       if (subEffects.length > 0 && window.GFL2_EFFECTS) {
         const cards = [];
-        subEffects.forEach(subName => {
-          const subData = window.GFL2_EFFECTS[subName];
+        subEffects.forEach(subId => {
+          const subData = getEffectData('', subId);
           if (subData) {
             const sType = subData.type || 'effect';
-            const sTitle = isVi ? (subData.name || subName) : (subData.name_en || subName);
+            const sTitle = isVi ? (subData.name || subData.name_en) : (subData.name_en || subData.name);
             const sLabel = isVi
               ? (sType === 'buff' ? 'Buff' : (sType === 'debuff' ? 'Debuff' : 'Hiệu Ứng'))
               : (sType === 'buff' ? 'Buff' : (sType === 'debuff' ? 'Debuff' : 'Status Effect'));
@@ -481,21 +513,21 @@
 
     // Event Delegation
     document.addEventListener('mouseover', (e) => {
-      const trigger = e.target.closest('.effect-trigger');
+      const trigger = e.target instanceof Element ? e.target.closest('.effect-trigger') : null;
       if (trigger) {
         showPopover(trigger);
       }
     });
 
     document.addEventListener('mouseout', (e) => {
-      const trigger = e.target.closest('.effect-trigger');
+      const trigger = e.target instanceof Element ? e.target.closest('.effect-trigger') : null;
       if (trigger) {
         hidePopover();
       }
     });
 
     document.addEventListener('click', (e) => {
-      const trigger = e.target.closest('.effect-trigger');
+      const trigger = e.target instanceof Element ? e.target.closest('.effect-trigger') : null;
       if (trigger) {
         if (activeTrigger === trigger && popover && popover.classList.contains('visible')) {
           hidePopover();
@@ -508,14 +540,14 @@
     });
 
     document.addEventListener('focusin', (e) => {
-      const trigger = e.target.closest('.effect-trigger');
+      const trigger = e.target instanceof Element ? e.target.closest('.effect-trigger') : null;
       if (trigger) {
         showPopover(trigger);
       }
     });
 
     document.addEventListener('focusout', (e) => {
-      const trigger = e.target.closest('.effect-trigger');
+      const trigger = e.target instanceof Element ? e.target.closest('.effect-trigger') : null;
       if (trigger) {
         hidePopover();
       }
@@ -568,13 +600,17 @@
   }
 
   // Boot
-  document.addEventListener('DOMContentLoaded', () => {
-    initRootPath();
-    loadSearchIndex();
-    initSearchInput();
-    initFilters();
-    initFaq();
+  function boot() {
+    // Keep popovers independent from failures in search/filter initialization.
     initEffectPopovers();
-    initMobileMenu();
-  });
+    try { initRootPath(); } catch (error) { console.warn('[search] initRootPath:', error); }
+    try { loadSearchIndex(); } catch (error) { console.warn('[search] loadSearchIndex:', error); }
+    try { initSearchInput(); } catch (error) { console.warn('[search] initSearchInput:', error); }
+    try { initFilters(); } catch (error) { console.warn('[search] initFilters:', error); }
+    try { initFaq(); } catch (error) { console.warn('[search] initFaq:', error); }
+    try { initMobileMenu(); } catch (error) { console.warn('[search] initMobileMenu:', error); }
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true });
+  else boot();
 })();

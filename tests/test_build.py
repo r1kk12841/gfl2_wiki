@@ -61,6 +61,7 @@ def test_effects_popover_integration(built_site: Path):
     content = andoris_html.read_text(encoding="utf-8")
     assert "effect-trigger" in content
     assert 'data-effect="Electro-Charge"' in content
+    assert 'data-effect-id="effect_' in content
     assert 'data-type="debuff"' in content
 
     css_path = built_site / "static" / "css" / "style.css"
@@ -93,7 +94,9 @@ def test_sub_effects_popover(built_site: Path):
     assert effects_js.exists(), "dist/static/js/effects-data.js missing"
     content = effects_js.read_text(encoding="utf-8")
     assert "window.GFL2_EFFECTS" in content
-    assert '"sub_effects"' in content
+    assert '"byId"' in content
+    assert '"nameIndex"' in content
+    assert '"sub_effect_ids"' in content
 
     andoris_html = built_site / "characters" / "andoris.html"
     assert "effects-data.js" in andoris_html.read_text(encoding="utf-8")

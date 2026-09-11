@@ -94,7 +94,8 @@
       "effect_area": "Target",
       "description": "At the start of the battle, gains Self-Diagnosis. This effect can be reactivated again after 3 rounds\n\nWhen allies with Positive Charge receives damage, Andoris shares 45% of the Initial Damage. When using an active attack against an enemy with Negative Charge, Andoris restores HP equivalent to 20% of self's max HP\n\nWhen receiving damage, restores HP equivalent to 5% of self's max HP, increases Confectance Index by 1 point, and applies 1 stack of Blunted Nerves for self and all Auto-Turret on the field. If Andoris is not under the protection of Cover, decreases Confectance Index by 1 point and decreases damage received by 20%",
       "icon": "assets/images/characters/andoris/passive.png",
-      "range": "Self"
+      "range": "Self",
+      "range_image": "assets/images/characters/andoris/passive-range.png"
     }
   ],
   "summons": [

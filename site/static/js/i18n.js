@@ -33,14 +33,36 @@
   }
 
   let VI_EFFECT_REGEX = null;
+  function effectEntries() {
+    if (!window.GFL2_EFFECTS) return [];
+    const byId = window.GFL2_EFFECTS.byId || window.GFL2_EFFECTS;
+    return Object.values(byId).filter((entry) => entry && typeof entry === 'object' && entry.name_en);
+  }
+
   function getViEffectRegex() {
     if (VI_EFFECT_REGEX) return VI_EFFECT_REGEX;
     if (!window.GFL2_EFFECTS) return null;
-    const names = Object.keys(window.GFL2_EFFECTS).filter(k => k.length > 1);
+    const ignoreShort = new Set(['Chi', 'Khí', 'Kéo', 'Rank', 'Sync', 'Pull', 'No Nê', 'Taryz']);
+    const names = [...new Set(effectEntries().map((entry) => entry.name).filter(k => k && k.length > 2 && !ignoreShort.has(k)))];
     names.sort((a, b) => b.length - a.length);
     if (names.length === 0) return null;
     VI_EFFECT_REGEX = new RegExp(`(?<=^|[\\s,.:;!?'"\\(\\[\\{“‘])(${names.map(escapeRegExp).join('|')})(?=[\\s,.:;!?'"\\)\\]\\}”’]|$)`, 'g');
     return VI_EFFECT_REGEX;
+  }
+
+  function findEffect(name, id = '') {
+    if (!window.GFL2_EFFECTS) return null;
+    const byId = window.GFL2_EFFECTS.byId || window.GFL2_EFFECTS;
+    if (id && byId[id]) return byId[id];
+    if (!name) return null;
+    const trimmed = String(name).trim();
+    const index = window.GFL2_EFFECTS.nameIndex;
+    const ids = index && index[trimmed.toLocaleLowerCase()];
+    if (ids && ids.length) return byId[ids[0]] || null;
+    const lower = trimmed.toLocaleLowerCase();
+    return effectEntries().find((entry) =>
+      String(entry.name_en).toLocaleLowerCase() === lower || String(entry.name).toLocaleLowerCase() === lower
+    ) || null;
   }
 
   function formatRichText(htmlStr) {
@@ -50,12 +72,14 @@
     htmlStr = htmlStr.replace(/<color=([^>]+)>(.*?)<\/color>/gi, (match, colorHex, innerText) => {
       const trimmed = innerText.trim();
       // Check if innerText is a status effect
-      if (window.GFL2_EFFECTS && window.GFL2_EFFECTS[trimmed]) {
-        const eff = window.GFL2_EFFECTS[trimmed];
+      const eff = findEffect(trimmed);
+      if (eff) {
         const effType = eff.type || 'effect';
         const effName = currentLang === 'vi' ? (eff.name || trimmed) : (eff.name_en || trimmed);
         const effDesc = currentLang === 'vi' ? (eff.desc || '') : (eff.desc_en || eff.desc || '');
-        return `<span class="effect-trigger effect-${effType}" data-effect="${escapeAttr(effName)}" data-type="${effType}" data-desc="${escapeAttr(effDesc)}" tabindex="0">${innerText}</span>`;
+        const effEn = eff.name_en || trimmed;
+        const descEn = eff.desc_en || eff.desc || '';
+        return `<span class="effect-trigger effect-${effType}" data-effect-id="${escapeAttr(eff.id)}" data-effect="${escapeAttr(effName)}" data-type="${effType}" data-desc="${escapeAttr(effDesc)}" data-effect-en="${escapeAttr(effEn)}" data-desc-en="${escapeAttr(descEn)}" data-text-en="${escapeAttr(effEn)}" tabindex="0">${innerText}</span>`;
       }
       // Check if innerText is a damage type
       for (const d of DMG_REGEXES) {
@@ -84,12 +108,14 @@
       // Wrap status effect mentions in plain text
       if (effRe && currentLang === 'vi') {
         s = s.replace(effRe, (match, effName) => {
-          const eff = window.GFL2_EFFECTS[effName];
+          const eff = findEffect(effName);
           if (eff) {
             const effType = eff.type || 'effect';
             const effTitle = eff.name || effName;
             const effDesc = eff.desc || '';
-            return `<span class="effect-trigger effect-${effType}" data-effect="${escapeAttr(effTitle)}" data-type="${effType}" data-desc="${escapeAttr(effDesc)}" tabindex="0">${effName}</span>`;
+            const effEn = eff.name_en || effName;
+            const descEn = eff.desc_en || eff.desc || '';
+            return `<span class="effect-trigger effect-${effType}" data-effect-id="${escapeAttr(eff.id)}" data-effect="${escapeAttr(effTitle)}" data-type="${effType}" data-desc="${escapeAttr(effDesc)}" data-effect-en="${escapeAttr(effEn)}" data-desc-en="${escapeAttr(descEn)}" data-text-en="${escapeAttr(effEn)}" tabindex="0">${effName}</span>`;
           }
           return match;
         });
@@ -571,8 +597,9 @@
       if (!el.dataset.textEn) el.dataset.textEn = el.textContent.trim();
       if (!el.dataset.descEn) el.dataset.descEn = el.getAttribute('data-desc') || '';
 
-      const eff = window.GFL2_EFFECTS[el.dataset.effectEn] || window.GFL2_EFFECTS[el.textContent.trim()];
+      const eff = findEffect(el.dataset.effectEn, el.dataset.effectId) || findEffect(el.textContent.trim());
       if (!eff) return;
+      el.dataset.effectId = eff.id;
 
       if (lang === 'vi') {
         const viName = eff.name || el.dataset.effectEn;
@@ -585,9 +612,15 @@
         }
         el.textContent = viName;
       } else {
-        el.setAttribute('data-effect', el.dataset.effectEn);
-        el.setAttribute('data-desc', el.dataset.descEn);
-        el.textContent = el.dataset.textEn;
+        const enName = eff.name_en || el.dataset.effectEn;
+        const enDesc = eff.desc_en || el.dataset.descEn;
+        el.setAttribute('data-effect', enName);
+        el.setAttribute('data-desc', enDesc);
+        if (eff.type) {
+          el.className = el.className.replace(/effect-(buff|debuff|effect)/g, `effect-${eff.type}`);
+          el.setAttribute('data-type', eff.type);
+        }
+        el.textContent = el.dataset.textEn || enName;
       }
     });
   }
@@ -610,20 +643,26 @@
     const bundle = getI18nBundle();
     if (!bundle) return;
 
-    translateStaticUI(bundle, lang);
-    translateClassAndPhaseBadges(bundle, lang);
-    translateCharacterDetail(bundle, lang);
-    translateWeaponDetail(bundle, lang);
-    translateWeaponCards(bundle, lang);
-    translateEffectTriggers(lang);
+    try { translateStaticUI(bundle, lang); } catch (e) { console.warn('[i18n] translateStaticUI:', e); }
+    try { translateClassAndPhaseBadges(bundle, lang); } catch (e) { console.warn('[i18n] translateClassAndPhaseBadges:', e); }
+    try { translateCharacterDetail(bundle, lang); } catch (e) { console.warn('[i18n] translateCharacterDetail:', e); }
+    try { translateWeaponDetail(bundle, lang); } catch (e) { console.warn('[i18n] translateWeaponDetail:', e); }
+    try { translateWeaponCards(bundle, lang); } catch (e) { console.warn('[i18n] translateWeaponCards:', e); }
+    try { translateEffectTriggers(lang); } catch (e) { console.warn('[i18n] translateEffectTriggers:', e); }
 
     // Broadcast change event
-    window.dispatchEvent(new CustomEvent('gfl2-lang-changed', { detail: { lang } }));
+    try {
+      window.dispatchEvent(new CustomEvent('gfl2-lang-changed', { detail: { lang } }));
+    } catch (e) {}
   }
 
   function toggleLanguage() {
     const nextLang = currentLang === 'en' ? 'vi' : 'en';
-    localStorage.setItem(STORAGE_KEY, nextLang);
+    try {
+      localStorage.setItem(STORAGE_KEY, nextLang);
+    } catch (e) {
+      console.warn('[i18n] localStorage inaccessible:', e);
+    }
     applyLanguage(nextLang);
   }
 
@@ -634,7 +673,11 @@
     },
     setLanguage: function (lang) {
       if (lang === 'vi' || lang === 'en') {
-        localStorage.setItem(STORAGE_KEY, lang);
+        try {
+          localStorage.setItem(STORAGE_KEY, lang);
+        } catch (e) {
+          console.warn('[i18n] localStorage inaccessible:', e);
+        }
         applyLanguage(lang);
       }
     },
@@ -643,7 +686,12 @@
 
   // Init on DOM ready
   function init() {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    let saved = null;
+    try {
+      saved = localStorage.getItem(STORAGE_KEY);
+    } catch (e) {
+      console.warn('[i18n] localStorage inaccessible:', e);
+    }
     if (saved === 'vi' || saved === 'en') {
       currentLang = saved;
     } else {
@@ -652,10 +700,17 @@
 
     const toggleBtn = document.getElementById('lang-toggle-btn');
     if (toggleBtn) {
-      toggleBtn.addEventListener('click', toggleLanguage);
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleLanguage();
+      });
     }
 
-    applyLanguage(currentLang);
+    try {
+      applyLanguage(currentLang);
+    } catch (e) {
+      console.error('[i18n] applyLanguage failed:', e);
+    }
   }
 
   if (document.readyState === 'loading') {

@@ -38,8 +38,9 @@ pip install -r requirements.txt
 Open the entry tool in your browser:
 
 ```bash
-python -m http.server 8000
+python tools/data_entry_server.py
 # then visit http://localhost:8000/tools/data-entry/
+# effect editor: http://localhost:8000/tools/effect_editor/
 ```
 
 1. Open a character tab in the source spreadsheet.

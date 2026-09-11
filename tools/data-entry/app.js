@@ -19,13 +19,16 @@ const RARITY_W_LIST = ['SSR', 'SR', 'R'];
 let EFFECTS_DATA = {}; // { "Effect Name": "description…", … }
 
 // ── Internationalization state & helpers ──────────────────────────────────
-let currentLang = localStorage.getItem('gfl2_lang') || 'en';
+let currentLang = 'en';
+try {
+  const savedLang = localStorage.getItem('gfl2_lang');
+  if (savedLang === 'vi' || savedLang === 'en') currentLang = savedLang;
+} catch (e) {
+  console.warn('localStorage not accessible:', e);
+}
 let VI_DATA = null;
 let CHARACTERS_INDEX = [];
-
-const t = (key, lang = currentLang) => (window.t ? window.t(key, lang) : key);
-const mapTerm = (term, cat, lang = currentLang) => (window.mapTerm ? window.mapTerm(term, cat, lang) : term);
-const getTermList = (cat, lang = currentLang) => (window.getTermList ? window.getTermList(cat, lang) : []);
+let loadedCharacterSlug = null;
 
 // ── Utility ───────────────────────────────────────────────────────────────
 const $ = id => document.getElementById(id);
@@ -223,12 +226,6 @@ function initCharacterTab() {
 
   // Image upload
   initImageUpload();
-
-  // Language switcher & i18n download
-  const langBtn = $('lang-toggle-btn');
-  if (langBtn) langBtn.addEventListener('click', toggleLanguage);
-  const btnDownloadI18n = $('btn-download-i18n');
-  if (btnDownloadI18n) btnDownloadI18n.addEventListener('click', downloadFullI18nVi);
 }
 
 // ── Glossary ───────────────────────────────────────────────────────────
@@ -777,55 +774,33 @@ async function saveToFileSystem() {
   const name = $('c-name').value.trim();
   if (!slug) { showToast(t('toast_slug_req', currentLang), 'err'); return; }
   if (!name) { showToast(t('toast_name_req', currentLang), 'err'); return; }
+  if (!loadedCharacterSlug) {
+    showToast(currentLang === 'vi' ? 'Hãy tải một nhân vật có sẵn trước khi cập nhật.' : 'Load an existing character before updating.', 'err', 4500);
+    return;
+  }
+  if (slug !== loadedCharacterSlug) {
+    showToast(currentLang === 'vi' ? 'Không thể đổi slug khi cập nhật file gốc.' : 'The slug cannot change while updating the source file.', 'err', 4500);
+    return;
+  }
 
-  if (currentLang === 'vi') {
-    const data = gatherCharacterVi(slug);
-    const json = JSON.stringify(compact(data), null, 2);
-
-    // Update in-memory VI_DATA
-    if (VI_DATA && VI_DATA.characters) {
-      VI_DATA.characters[slug] = data;
+  const data = compact(currentLang === 'vi' ? gatherCharacterVi(slug) : gatherCharacter());
+  try {
+    const response = await fetch(`/api/characters/${encodeURIComponent(loadedCharacterSlug)}?lang=${currentLang}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(result.error || `HTTP ${response.status}`);
+    if (currentLang === 'vi' && VI_DATA?.characters) {
+      VI_DATA.characters[loadedCharacterSlug] = {
+        ...(VI_DATA.characters[loadedCharacterSlug] || {}),
+        ...data,
+      };
     }
-
-    if ('showSaveFilePicker' in window) {
-      try {
-        const handle = await window.showSaveFilePicker({
-          suggestedName: `${slug}_vi.json`,
-          types: [{ description: 'JSON file', accept: { 'application/json': ['.json'] } }],
-          startIn: 'documents',
-        });
-        const writable = await handle.createWritable();
-        await writable.write(json);
-        await writable.close();
-        showToast(`${t('toast_saved', 'vi')} ${slug}_vi.json`, 'ok');
-      } catch (e) {
-        if (e.name !== 'AbortError') showToast(`Save failed: ${e.message}`, 'err');
-      }
-    } else {
-      downloadFile(`${slug}_vi.json`, json);
-      showToast(`${t('toast_saved', 'vi')} (download fallback) ${slug}_vi.json`, 'ok');
-    }
-  } else {
-    const data = gatherCharacter();
-    const json = orderedStringify(compact(data), CHAR_KEY_ORDER);
-    if ('showSaveFilePicker' in window) {
-      try {
-        const handle = await window.showSaveFilePicker({
-          suggestedName: `${data.slug}.json`,
-          types: [{ description: 'JSON file', accept: { 'application/json': ['.json'] } }],
-          startIn: 'documents',
-        });
-        const writable = await handle.createWritable();
-        await writable.write(json);
-        await writable.close();
-        showToast(`${t('toast_saved', 'en')} ${data.slug}.json`, 'ok');
-      } catch (e) {
-        if (e.name !== 'AbortError') showToast(`Save failed: ${e.message}`, 'err');
-      }
-    } else {
-      downloadFile(`${data.slug}.json`, json);
-      showToast(`${t('toast_saved', 'en')} (download fallback) ${data.slug}.json`, 'ok');
-    }
+    showToast(`${t('toast_saved', currentLang)} ${result.path}`, 'ok', 4000);
+  } catch (e) {
+    showToast(`${currentLang === 'vi' ? 'Cập nhật thất bại' : 'Update failed'}: ${e.message}. ${currentLang === 'vi' ? 'Hãy chạy tools/data_entry_server.py.' : 'Run tools/data_entry_server.py.'}`, 'err', 6500);
   }
 }
 
@@ -903,11 +878,13 @@ async function loadCharacterBySlug(slug) {
 
       if (viChar) {
         populateCharacterFormVi(slug, viChar, enData);
+        loadedCharacterSlug = slug;
         showToast(`${t('toast_loaded', 'vi')}: ${viChar.name || slug}`, 'ok');
         return;
       }
       if (enData) {
         populateCharacterForm(enData);
+        loadedCharacterSlug = slug;
         showToast(`Chưa có bản dịch tiếng Việt cho ${enData.name || slug}, đã tải dữ liệu gốc để dịch.`, 'ok');
         return;
       }
@@ -917,6 +894,7 @@ async function loadCharacterBySlug(slug) {
     if (!res.ok) throw new Error(`${slug}.json not found`);
     const data = await res.json();
     populateCharacterForm(data);
+    loadedCharacterSlug = slug;
     showToast(`${t('toast_loaded', currentLang)}: ${data.name}`, 'ok');
   } catch (e) {
     showToast(`Could not load ${slug}: ${e.message}`, 'err');
@@ -1052,6 +1030,7 @@ function loadCharacter(e) {
     try {
       const data = JSON.parse(ev.target.result);
       populateCharacterForm(data);
+      loadedCharacterSlug = data.slug || null;
       showToast(`Loaded: ${data.name || file.name}`, 'ok');
     } catch {
       showToast('Invalid JSON file', 'err');
@@ -1064,6 +1043,7 @@ function loadCharacter(e) {
 function clearCharacterForm() {
   if (!confirm('Clear all character data? This cannot be undone.')) return;
   resetCharacterForm();
+  loadedCharacterSlug = null;
   showToast('Form cleared', 'ok');
 }
 
@@ -1481,22 +1461,32 @@ function makeEffectInserter(getTA) {
 // ── Language Toggle & UI Translation ─────────────────────────────────────
 async function ensureViDataLoaded() {
   if (VI_DATA) return VI_DATA;
+  if (window.GFL2_I18N_VI) {
+    VI_DATA = window.GFL2_I18N_VI;
+    return VI_DATA;
+  }
   try {
     const res = await fetch('../../data/i18n_vi.json');
     if (res.ok) {
       VI_DATA = await res.json();
     }
   } catch (e) {
-    console.warn('Could not load i18n_vi.json:', e.message);
+    console.warn('Could not load i18n_vi.json via fetch:', e.message);
+  }
+  if (!VI_DATA && window.GFL2_I18N_VI) {
+    VI_DATA = window.GFL2_I18N_VI;
   }
   return VI_DATA;
 }
 
 function updateLangButton(lang) {
-  const btnText = $('lang-btn-text');
-  if (btnText) {
-    btnText.textContent = lang.toUpperCase();
-  }
+  document.querySelectorAll('#lang-toggle-btn .lang-opt').forEach(opt => {
+    if (opt.getAttribute('data-lang') === lang) {
+      opt.classList.add('active');
+    } else {
+      opt.classList.remove('active');
+    }
+  });
   const btn = $('lang-toggle-btn');
   if (btn) {
     btn.title = t('switch_lang_title', lang);
@@ -1529,15 +1519,37 @@ function populateFormSelects(lang = currentLang) {
   });
 }
 
+function initGlobalControls() {
+  const langBtn = $('lang-toggle-btn');
+  if (langBtn && !langBtn.dataset.bound) {
+    langBtn.dataset.bound = 'true';
+    langBtn.addEventListener('click', (e) => {
+      if (e) e.preventDefault();
+      toggleLanguage();
+    });
+  }
+  const btnDownloadI18n = $('btn-download-i18n');
+  if (btnDownloadI18n && !btnDownloadI18n.dataset.bound) {
+    btnDownloadI18n.dataset.bound = 'true';
+    btnDownloadI18n.addEventListener('click', downloadFullI18nVi);
+  }
+}
+
 async function toggleLanguage() {
   const newLang = currentLang === 'en' ? 'vi' : 'en';
-  localStorage.setItem('gfl2_lang', newLang);
+  try {
+    localStorage.setItem('gfl2_lang', newLang);
+  } catch (e) {
+    console.warn('localStorage not accessible:', e);
+  }
   await applyLanguage(newLang);
   showToast(t(newLang === 'vi' ? 'toast_switched_vi' : 'toast_switched_en', newLang), 'ok');
 }
+window.toggleLanguage = toggleLanguage;
 
 async function applyLanguage(lang) {
   currentLang = lang;
+  window.currentLang = lang;
   updateLangButton(lang);
 
   // 1. Static text elements with data-i18n
@@ -1660,23 +1672,44 @@ document.addEventListener('DOMContentLoaded', () => {
       console.warn('Could not load assets/effects.json — Insert Effect will be empty.');
     })
     .finally(async () => {
-      if (currentLang === 'vi') {
-        await ensureViDataLoaded();
+      try {
+        console.log('[Boot] Starting init sequence…');
+        if (currentLang === 'vi') {
+          console.log('[Boot] Loading VI data…');
+          await ensureViDataLoaded();
+        }
+
+        console.log('[Boot] initGlobalControls…');
+        initGlobalControls();
+
+        console.log('[Boot] populateFormSelects…');
+        populateFormSelects(currentLang);
+
+        console.log('[Boot] initTabs…');
+        initTabs();
+        console.log('[Boot] initCharacterTab…');
+        initCharacterTab();
+        console.log('[Boot] initWeaponTab…');
+        initWeaponTab();
+        console.log('[Boot] initFaqTab…');
+        initFaqTab();
+        console.log('[Boot] initExcelAutofill…');
+        initExcelAutofill();
+
+        console.log('[Boot] applyLanguage…');
+        await applyLanguage(currentLang);
+
+        console.log('[Boot] refreshPreview…');
+        refreshPreview();
+        console.log('[Boot] ✅ Init complete.');
+      } catch (err) {
+        console.error('[Boot] ❌ Init failed:', err);
+        // Show visible error so it's not a silent failure
+        const banner = document.createElement('div');
+        banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#7f1d1d;color:#fca5a5;padding:12px 16px;font-family:monospace;font-size:13px;white-space:pre-wrap;';
+        banner.textContent = `⚠ Data Entry Tool boot error — open DevTools (F12) for details:\n${err.message}\n${err.stack}`;
+        document.body.prepend(banner);
       }
-
-      // Initialise selects
-      populateFormSelects(currentLang);
-
-      initTabs();
-      initCharacterTab();
-      initWeaponTab();
-      initFaqTab();
-      initExcelAutofill();
-
-      // Apply initial language
-      await applyLanguage(currentLang);
-
-      refreshPreview();
     });
 });
 

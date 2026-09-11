@@ -150,7 +150,8 @@
           "confectance_cost": 0,
           "range": "WIP",
           "effect_area": "WIP",
-          "description": "At the end of this unit's action, perform Surveillance on the entire map. When an enemy unit uses a basic attack or an active attack, damage them for 40% of own attack. This effect can trigger 1 time per turn.\n\nThis passive is only unlocked after reaching Vertebrae 5"
+          "description": "At the end of this unit's action, perform Surveillance on the entire map. When an enemy unit uses a basic attack or an active attack, damage them for 40% of own attack. This effect can trigger 1 time per turn.\n\nThis passive is only unlocked after reaching Vertebrae 5",
+          "range_image": "assets/images/characters/papasha/summon1-passive3-range.png"
         }
       ],
       "image": "assets/images/characters/papasha/summon1.png"

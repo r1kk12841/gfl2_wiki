@@ -96,7 +96,9 @@
       "confectance_cost": 0,
       "effect_area": "Target",
       "description": "Damage dealt by all Dolls who use Sniper Rifles is increased by 10%.\nAt the start of battle, gains Thermal Conduction. When Loreley is on the field, Embers from Thermal Conduction is upgraded into Glowing Embers, which lasts for 2 global rounds.\nAt the start of the round, Loreley gains 2 points of Confectance Index. At the end of her action, if Hunter - Type II is present, Loreley also gains Additional Command. Can be triggered once per round.\nBefore an allied unit takes damage, Loreley grants them Flawless Blaze, allowing them to nullify that instance of damage. Can be triggered up to 3 times per round.",
-      "range": "Self"
+      "range": "Self",
+      "icon": "assets/images/characters/loreley/passive-icon.png",
+      "range_image": "assets/images/characters/loreley/passive-range.png"
     }
   ],
   "fortification": [

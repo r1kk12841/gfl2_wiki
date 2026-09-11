@@ -57,11 +57,13 @@ UI_DICTIONARY = {
     "label_phase": "Thuộc Tính",
     "label_weapon": "Vũ Khí",
     "label_weapon_type": "Loại Vũ Khí",
+    "label_server": "Máy Chủ",
     "filter_all_classes": "Tất Cả Lớp",
     "filter_all_rarities": "Tất Cả Độ Hiếm",
     "filter_all_phases": "Tất Cả Thuộc Tính",
     "filter_all_weapons": "Tất Cả Vũ Khí",
     "filter_all_types": "Tất Cả Loại",
+    "filter_all_servers": "Tất Cả Máy Chủ",
     "filter_count_suffix": "nhân vật",
     "weapon_filter_count_suffix": "vũ khí",
     "dolls_page_title": "Nhân Vật Tác Chiến",
@@ -106,6 +108,8 @@ UI_DICTIONARY = {
     # Tag translations
     "tags": {
         "Basic Attack": "Đánh Thường",
+        "Skill": "Chủ Động",
+        "Ultimate": "Quyết Thắng",
         "Active": "Chủ Động",
         "Passive": "Bị Động",
         "Buff": "Cường Hóa",
@@ -113,7 +117,11 @@ UI_DICTIONARY = {
         "Targeted": "Chỉ Định",
         "AoE": "Phạm Vi",
         "Healing": "Trị Liệu",
-        "Shield": "Tạo Khiên"
+        "Shield": "Tạo Khiên",
+        "Summon": "Triệu Hồi",
+        "Mobility": "Chuyển Vị",
+        "Melee": "Cận Chiến",
+        "Support": "Chi Viện"
     },
 
     # Classes
@@ -157,11 +165,22 @@ UI_DICTIONARY = {
 
     # Rarities
     "rarities": {
+        "Elite": "Tinh Nhuệ",
+        "Standard": "Tiêu Chuẩn",
+        "SSR": "SSR",
+        "SR": "SR",
+        "R": "R"
+    },
+    "rarities_filter": {
         "Elite": "Tinh Nhuệ (SSR)",
         "Standard": "Tiêu Chuẩn (SR)",
         "SSR": "SSR",
         "SR": "SR",
         "R": "R"
+    },
+    "servers": {
+        "cn": "Trung Quốc",
+        "global": "Quốc Tế"
     }
 }
 
@@ -339,8 +358,127 @@ def translate_basic_attack_fallback(text: str, element_vi: str) -> str:
     return text
 
 
+def numeric_tokens(text: str) -> Set[str]:
+    """Return gameplay numbers while treating 3 and 3.0 as the same token."""
+    result: Set[str] = set()
+    # Color markup contains hex fragments such as ``#f26c1c`` which must not be
+    # interpreted as gameplay values 26 and 1.
+    plain = re.sub(r"\{\d+\}", "", clean_markup(text or ""))
+    for token in re.findall(r"\b\d+(?:\.\d+)?\b", plain):
+        result.add(token.rstrip("0").rstrip(".") if "." in token else token)
+    return result
+
+
+def numeric_signature(text: str) -> Tuple[str, ...]:
+    """Numeric signature that preserves repeated gameplay values."""
+    plain = re.sub(r"\{\d+\}", "", clean_markup(text or ""))
+    values = []
+    for token in re.findall(r"\b\d+(?:\.\d+)?\b", plain):
+        values.append(token.rstrip("0").rstrip(".") if "." in token else token)
+    return tuple(sorted(values))
+
+
+def localized_match_score(
+    english: str,
+    vietnamese: str,
+    *,
+    element_vi: str = "",
+    anchor_bonus: int = 0,
+) -> int:
+    """Score structural agreement without relying on translated prose."""
+    en_pcts = set(re.findall(r"\b\d+(?:\.\d+)?%", english or ""))
+    vi_pcts = set(re.findall(r"\b\d+(?:\.\d+)?%", vietnamese or ""))
+    if en_pcts and not en_pcts.intersection(vi_pcts):
+        return -1000
+    if not en_pcts and vi_pcts:
+        return -1000
+
+    en_nums = numeric_tokens(english)
+    vi_nums = numeric_tokens(vietnamese)
+    common = en_nums.intersection(vi_nums)
+    missing = en_nums - vi_nums
+    extra = vi_nums - en_nums
+    score = anchor_bonus + 18 * len(en_pcts.intersection(vi_pcts)) + 5 * len(common)
+    score -= 9 * len(missing) + 3 * min(len(extra), 8)
+    if en_nums and en_nums == vi_nums:
+        score += 22
+    if en_pcts and en_pcts == vi_pcts:
+        score += 18
+    if element_vi and element_vi in vietnamese:
+        score += 10
+    concepts = {
+        "attack": ("Tấn Công",),
+        "defense": ("Phòng Thủ",),
+        "shield": ("Khiên",),
+        "stability": ("Ổn Định",),
+        "freeze": ("Băng Kết",),
+        "frost": ("Băng", "Sương"),
+        "burn": ("Thiêu Đốt",),
+        "electric": ("Dẫn Điện",),
+        "corrosion": ("Ăn Mòn",),
+        "physical": ("Vật Lý",),
+        "critical": ("Bạo Kích",),
+        "brumal barrier": ("Bình Chướng Băng", "Khiên"),
+        "battle prep": ("Chuẩn Bị Tác Chiến",),
+        "liquid n2 fang": ("Châm Độc Nitơ Lỏng",),
+        "tile": (" ô",),
+        "turn": ("hiệp",),
+        "cleanse": ("giải trừ",),
+        "summon": ("triệu hồi", "Vật Triệu Hồi"),
+        "support attack": ("tấn công chi viện",),
+        "counterattack": ("phản kích",),
+        "interception": ("phục kích",),
+        "movement": ("Di Chuyển",),
+        "healing": ("hồi phục", "trị liệu"),
+        "stack": ("lớp",),
+        "enemy": ("địch",),
+        "allies": ("đồng minh",),
+        "ally": ("đồng minh",),
+        "buff": ("Buff", "hiệu ứng tăng cường"),
+        "target": ("mục tiêu",),
+        "dispel": ("giải trừ",),
+    }
+    english_low = (english or "").casefold()
+    for english_term, vietnamese_terms in concepts.items():
+        if english_term in english_low:
+            score += 10 if any(term.casefold() in vietnamese.casefold() for term in vietnamese_terms) else -12
+    return score
+
+
+def key_semantic_match(english: str, vietnamese: str) -> bool:
+    """Require most explicit gameplay concepts to agree for global key matches."""
+    concepts = {
+        "shield": ("Khiên",),
+        "stability": ("Ổn Định",),
+        "freeze": ("Băng Kết",),
+        "frost": ("Băng", "Sương"),
+        "stack": ("lớp",),
+        "enemy": ("địch",),
+        "allies": ("đồng minh",),
+        "tile": (" ô",),
+        "turn": ("hiệp",),
+        "dispel": ("giải trừ",),
+        "summon": ("triệu hồi", "Vật Triệu Hồi"),
+        "critical": ("Bạo Kích",),
+    }
+    english_low = (english or "").casefold()
+    expected = [values for term, values in concepts.items() if term in english_low]
+    if len(expected) < 2:
+        return True
+    vietnamese_low = vietnamese.casefold()
+    matched = sum(
+        any(value.casefold() in vietnamese_low for value in values)
+        for values in expected
+    )
+    return matched / len(expected) >= 0.75
+
+
 def extract_all() -> int:
     print("=== Extracting Vietnamese Localization Data ===")
+
+    previous_bundle: Dict[str, Any] = {}
+    if OUTPUT_JSON.exists():
+        previous_bundle = json.loads(OUTPUT_JSON.read_text(encoding="utf-8"))
 
     if not LANG_FILE.exists():
         print(f"Error: {LANG_FILE} does not exist.")
@@ -358,6 +496,7 @@ def extract_all() -> int:
     kieu_cu_map: Dict[str, str] = {}
     pct_to_cids: Dict[str, List[int]] = {}
     cid_to_data: Dict[int, Tuple[str, Set[str], Set[str]]] = {}
+    num_signature_to_cids: Dict[Tuple[str, ...], List[int]] = {}
     key_headers: Dict[int, Tuple[str, str, str]] = {}  # cid -> (prefix, key_name, desc_cand)
 
     for it in raw_data:
@@ -400,6 +539,18 @@ def extract_all() -> int:
                 if p not in pct_to_cids:
                     pct_to_cids[p] = []
                 pct_to_cids[p].append(idx)
+
+        if any(
+            term in txt
+            for term in (
+                "Tấn Công", "Phòng Thủ", "Ổn Định", "Băng Kết", "Thiêu Đốt",
+                "Dẫn Điện", "Ăn Mòn", "Vật Lý", "Bạo Kích", "hồi phục",
+                "giải trừ", "triệu hồi", "Khiên", " ô", "hiệp",
+            )
+        ):
+            signature = numeric_signature(txt)
+            if signature:
+                num_signature_to_cids.setdefault(signature, []).append(idx)
 
     print(f"Indexed {len(id_to_text)} texts, {len(cid_to_data)} lines with %, {len(key_headers)} key headers.")
 
@@ -518,10 +669,6 @@ def extract_all() -> int:
                     if d in cid_to_data or d in id_to_text:
                         candidate_cids.add(d)
 
-            for pct in s_pcts:
-                if pct in pct_to_cids:
-                    candidate_cids.update(pct_to_cids[pct])
-
             best_cid = None
             best_score = -100
             for cid in candidate_cids:
@@ -531,16 +678,11 @@ def extract_all() -> int:
                 if not txt:
                     continue
 
-                comm_pcts = s_pcts.intersection(vi_pcts)
-                if s_pcts and not comm_pcts:
+                score = localized_match_score(
+                    s_desc_en, txt, element_vi=elem_vi, anchor_bonus=25
+                )
+                if score <= -1000:
                     continue
-                if not s_pcts and vi_pcts:
-                    continue
-
-                score = len(comm_pcts) * 25
-                if s_pcts and comm_pcts == s_pcts:
-                    score += 20
-                score += len(s_nums.intersection(vi_nums)) * 3
 
                 vi_tiles = set(re.findall(r"\b(\d+)\s*ô\b", txt))
                 if s_tiles:
@@ -550,20 +692,19 @@ def extract_all() -> int:
                 if s_turns:
                     score += len(s_turns.intersection(vi_turns)) * 12
 
-                if elem_vi and elem_vi in txt:
-                    score += 15
                 if is_aoe and "AoE" in txt:
                     score += 8
-                for aid in char_anchors:
-                    if abs(cid - aid) < 300:
-                        score += 25
-                        break
 
                 if score > best_score:
                     best_score = score
                     best_cid = cid
 
-            if best_cid and best_score >= 25:
+            basic_attack = "Basic Attack" in s_tags_en or s_idx == 0
+            exact_basic_numbers = (
+                best_cid is not None
+                and numeric_tokens(s_desc_en) == numeric_tokens(id_to_text[best_cid])
+            )
+            if best_cid and best_score >= 35 and (not basic_attack or exact_basic_numbers):
                 used_skill_cids.add(best_cid)
                 s_desc_vi = id_to_text[best_cid]
                 # Look for skill name at best_cid - 1 or best_cid - 2
@@ -575,7 +716,7 @@ def extract_all() -> int:
                         break
 
             # Fallback for Basic Attack
-            if not s_desc_vi and ("Basic Attack" in s_tags_en or s_idx == 0):
+            if not s_desc_vi and basic_attack:
                 s_desc_vi = translate_basic_attack_fallback(s_desc_en, elem_vi)
                 s_name_vi = "Bắn Thường" if not s_name_vi else s_name_vi
 
@@ -640,11 +781,6 @@ def extract_all() -> int:
                     if d in id_to_text:
                         candidate_cids.add(d)
 
-            if f_pcts:
-                for pct in f_pcts:
-                    if pct in pct_to_cids:
-                        candidate_cids.update(pct_to_cids[pct])
-
             best_cid = None
             best_score = -100
             for cid in candidate_cids:
@@ -654,22 +790,13 @@ def extract_all() -> int:
                 if any(txt.startswith(p) for p in ["Khóa ", "Skin-", "Rương", "Hộp", "“...", "Tham khảo"]):
                     continue
 
-                comm_pcts = f_pcts.intersection(vi_pcts)
-                if f_pcts and not comm_pcts:
+                score = localized_match_score(
+                    f_eff, txt, element_vi=elem_vi, anchor_bonus=20
+                )
+                if score <= -1000:
                     continue
-                if not f_pcts and vi_pcts:
-                    continue
-
-                score = len(comm_pcts) * 20
-                if f_pcts and comm_pcts == f_pcts:
-                    score += 15
-                score += len(f_nums.intersection(vi_nums)) * 3
                 if any(k in txt for k in ["Hệ số ST tăng", "nhận hiệu ứng mới", "đổi thành", "giải trừ", "Tầm bắn", "nhận thêm", "Bản thân hồi phục"]):
                     score += 10
-                for aid in char_anchors:
-                    if abs(cid - aid) < 300:
-                        score += 20
-                        break
                 if any(kn in txt for kn in known_skill_names_vi):
                     score += 25
 
@@ -677,7 +804,7 @@ def extract_all() -> int:
                     best_score = score
                     best_cid = cid
 
-            if best_cid and best_score >= 15:
+            if best_cid and best_score >= 32:
                 used_fort_cids.add(best_cid)
                 f_eff_vi = id_to_text[best_cid]
             else:
@@ -705,6 +832,59 @@ def extract_all() -> int:
 
         # 3.4 Translate Keys
         vi_keys = []
+        used_key_cids: Set[int] = set()
+
+        def best_local_key(
+            entries: List[Tuple[int, str, str]], english_effect: str, prefix: str
+        ) -> Tuple[int, str, str] | None:
+            scored = [
+                (localized_match_score(english_effect, entry[2]), entry)
+                for entry in entries
+                if entry[0] not in used_key_cids and entry[2]
+                and numeric_signature(english_effect) == numeric_signature(entry[2])
+                and key_semantic_match(english_effect, entry[2])
+            ]
+            if scored:
+                score, entry = max(scored, key=lambda item: (item[0], -item[1][0]))
+                if score >= 28:
+                    used_key_cids.add(entry[0])
+                    return entry
+
+            signature = numeric_signature(english_effect)
+            global_scored = []
+            candidate_ids = list(num_signature_to_cids.get(signature, []))
+            # Vietnamese often writes an explicit "1" for English "each/a/an".
+            with_implicit_one = tuple(sorted((*signature, "1")))
+            candidate_ids.extend(num_signature_to_cids.get(with_implicit_one, []))
+            for cid in dict.fromkeys(candidate_ids):
+                if cid in used_key_cids:
+                    continue
+                candidate = id_to_text[cid]
+                if not key_semantic_match(english_effect, candidate):
+                    continue
+                score = localized_match_score(english_effect, candidate)
+                if en_name.casefold() in candidate.casefold():
+                    score += 12
+                if any(abs(cid - anchor) < 300 for anchor in char_anchors):
+                    score += 20
+                global_scored.append((score, cid, candidate))
+            if not global_scored:
+                return None
+            score, cid, candidate = max(global_scored, key=lambda item: (item[0], -item[1]))
+            if score < 40:
+                return None
+            title = clean_markup(id_to_text.get(cid - 1, ""))
+            if (
+                not title
+                or len(title) > 55
+                or numeric_tokens(title)
+                or "/" in title
+                or title.casefold().startswith(("chủ động", "bị động", "quyết thắng"))
+            ):
+                title = ""
+            used_key_cids.add(cid)
+            return cid, f"{prefix}{title}" if title else prefix.rstrip("-"), candidate
+
         for k_idx, k in enumerate(cdata.get("keys", [])):
             k_name = k.get("name", "")
             k_eff = k.get("effect", "")
@@ -720,29 +900,28 @@ def extract_all() -> int:
                 k_name_vi = "Khóa Tương Thích"
                 k_eff_vi = translate_stat_expression(k_eff)
                 k_mat_vi = translate_key_fallback(k_mat)
-            elif k_name.startswith("Fixed Key") and len(local_fixed_keys) >= 6:
-                # Match sequentially from character's anchor block
-                f_idx = k_idx if k_idx < len(local_fixed_keys) else 0
-                k_name_vi = local_fixed_keys[f_idx][1]
-                cand_eff = local_fixed_keys[f_idx][2]
-                if cand_eff and not any(cand_eff.startswith(p) for p in ["Khóa ", "Skin-", "Rương", "Hộp", "“...", "Tham khảo"]):
-                    k_eff_vi = cand_eff
+            elif k_name.startswith("Fixed Key"):
+                matched_key = best_local_key(local_fixed_keys, k_eff, "Khóa Cố Định-")
+                if matched_key:
+                    _, k_name_vi, k_eff_vi = matched_key
                 else:
                     k_eff_vi = translate_key_fallback(k_eff)
                 k_mat_vi = translate_key_fallback(k_mat)
-            elif "Common Key" in k_name and local_common_keys:
-                k_name_vi = local_common_keys[0][1]
-                cand_eff = local_common_keys[0][2]
-                if cand_eff and not any(cand_eff.startswith(p) for p in ["Khóa ", "Skin-", "Rương", "Hộp", "“...", "Tham khảo"]):
-                    k_eff_vi = cand_eff
+            elif "Common Key" in k_name:
+                common_parts = [part.strip() for part in k_eff.split("/", 1)]
+                match_effect = common_parts[-1]
+                matched_key = best_local_key(local_common_keys, match_effect, "Khóa Chung-")
+                if matched_key:
+                    _, k_name_vi, k_eff_vi = matched_key
+                    if len(common_parts) == 2:
+                        k_eff_vi = f"{translate_stat_expression(common_parts[0])} / {k_eff_vi}"
                 else:
                     k_eff_vi = translate_key_fallback(k_eff)
                 k_mat_vi = translate_key_fallback(k_mat)
-            elif "Expansion Key" in k_name and local_expansion_keys:
-                k_name_vi = local_expansion_keys[0][1]
-                cand_eff = local_expansion_keys[0][2]
-                if cand_eff and not any(cand_eff.startswith(p) for p in ["Khóa ", "Skin-", "Rương", "Hộp", "“...", "Tham khảo"]):
-                    k_eff_vi = cand_eff
+            elif "Expansion Key" in k_name:
+                matched_key = best_local_key(local_expansion_keys, k_eff, "Khóa Mở Rộng-")
+                if matched_key:
+                    _, k_name_vi, k_eff_vi = matched_key
                 else:
                     k_eff_vi = translate_key_fallback(k_eff)
                 k_mat_vi = translate_key_fallback(k_mat)
@@ -878,9 +1057,13 @@ def extract_all() -> int:
     # 4. Construct Full I18n Bundle
     i18n_bundle = {
         "ui": UI_DICTIONARY,
-        "weapons": weapons_i18n,
+        # This extractor is authoritative for character strings only. Preserve
+        # the curated weapon catalog produced by build_vietnamese_effects.py.
+        "weapons": previous_bundle.get("weapons", weapons_i18n),
         "characters": chars_i18n,
     }
+    if "effects" in previous_bundle:
+        i18n_bundle["effects"] = previous_bundle["effects"]
 
     # Save to data/i18n_vi.json
     print(f"\nWriting to {OUTPUT_JSON.relative_to(ROOT)}...")

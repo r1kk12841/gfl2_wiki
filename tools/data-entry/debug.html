@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Debug Data Entry</title></head>
+<body>
+<h2>Debug Console</h2>
+<pre id="out" style="background:#111;color:#0f0;padding:16px;font-size:12px;max-height:80vh;overflow:auto"></pre>
+<script>
+const out = document.getElementById('out');
+function log(...args) {
+  out.textContent += args.map(a => typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a)).join(' ') + '\n';
+}
+window.onerror = (msg, src, line, col, err) => {
+  out.textContent += `\n[ERROR] ${msg}\n  at ${src}:${line}:${col}\n  ${err?.stack || ''}\n`;
+  return false;
+};
+window.onunhandledrejection = e => {
+  out.textContent += `\n[UNHANDLED PROMISE] ${e.reason}\n  ${e.reason?.stack || ''}\n`;
+};
+
+log('Loading i18n.js...');
+</script>
+<script src="i18n.js" onerror="log('FAILED to load i18n.js')"></script>
+<script>
+log('i18n.js loaded. window.t:', typeof window.t);
+log('window.getTermList:', typeof window.getTermList);
+log('window.DATA_ENTRY_I18N:', typeof window.DATA_ENTRY_I18N);
+log('');
+log('Loading app.js...');
+</script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"
+  onerror="log('FAILED to load SheetJS CDN')"></script>
+<script src="app.js" onerror="log('FAILED to load app.js')"></script>
+<script>
+log('app.js loaded.');
+log('typeof initTabs:', typeof initTabs);
+log('typeof initCharacterTab:', typeof initCharacterTab);
+log('typeof initWeaponTab:', typeof initWeaponTab);
+log('typeof initFaqTab:', typeof initFaqTab);
+log('typeof initExcelAutofill:', typeof initExcelAutofill);
+log('typeof applyLanguage:', typeof applyLanguage);
+log('typeof populateFormSelects:', typeof populateFormSelects);
+log('');
+log('--- DOMContentLoaded will fire next ---');
+</script>
+</body>
+</html>
