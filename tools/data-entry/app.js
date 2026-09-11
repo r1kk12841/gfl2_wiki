@@ -1231,7 +1231,7 @@ function refreshImagePaths(slug) {
   const base = slug ? `assets/images/characters/${slug}/` : 'assets/images/characters/<slug>/';
   const clsVal = $('c-class').value;
   const clsEn = mapTerm(clsVal, 'classes', 'en');
-  const classFile = clsEn ? `${clsEn.toLowerCase()}.png` : '<class>.png';
+  const classFile = clsEn ? `${clsEn}.png` : '<class>.png';
   $('c-img-portrait').value = `${base}portrait.png`;
   $('c-img-classicon').value = `assets/images/class/${classFile}`;
 }

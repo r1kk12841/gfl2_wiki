@@ -238,7 +238,7 @@
   "images": {
     "portrait": "assets/images/characters/welrod/portrait.png",
     "avatar": "assets/images/characters/welrod/avatar.png",
-    "class_icon": "assets/images/class/bulwark.png",
+    "class_icon": "assets/images/class/Bulwark.png",
     "portrait_webp": "assets/images/characters/welrod/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",

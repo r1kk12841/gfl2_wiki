@@ -6,6 +6,7 @@ Exits with code 1 if any file fails validation.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -480,6 +481,22 @@ def _check_asset_path(path_str: str | None, context: str, errors: list[str]) -> 
     full_path = ROOT / path_str
     if not full_path.exists():
         errors.append(f"[{context}] Asset file does not exist: '{path_str}'")
+        return
+
+    # Verify exact casing for cross-platform compatibility (Windows vs Linux CI)
+    curr = ROOT
+    for p in parts:
+        if curr.exists():
+            try:
+                entries = os.listdir(curr)
+                if p not in entries:
+                    matches = [e for e in entries if e.lower() == p.lower()]
+                    if matches:
+                        errors.append(f"[{context}] Asset file case mismatch: expected '{matches[0]}' but got '{p}' in '{path_str}'")
+                        return
+            except OSError:
+                pass
+        curr = curr / p
 
 
 # ─────────────────────────────────────────────────────────────────────────

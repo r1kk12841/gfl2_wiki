@@ -493,7 +493,7 @@ def parse_character_sheet(ws: Any, online_meta: dict[str, dict]) -> dict:
     # Images
     images = {
         "portrait": f"assets/images/characters/{slug}/portrait.png",
-        "class_icon": f"assets/images/class/{c_class.lower()}.png",
+        "class_icon": f"assets/images/class/{c_class}.png",
     }
 
     char_dict = {

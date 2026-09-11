@@ -251,7 +251,7 @@
   "images": {
     "portrait": "assets/images/characters/ullrid/portrait.png",
     "avatar": "assets/images/characters/ullrid/avatar.png",
-    "class_icon": "assets/images/class/vanguard.png",
+    "class_icon": "assets/images/class/Vanguard.png",
     "portrait_webp": "assets/images/characters/ullrid/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",

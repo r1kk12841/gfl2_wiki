@@ -238,7 +238,7 @@
   "images": {
     "portrait": "assets/images/characters/loreley/portrait.png",
     "avatar": "assets/images/characters/loreley/avatar.png",
-    "class_icon": "assets/images/class/support.png",
+    "class_icon": "assets/images/class/Support.png",
     "portrait_webp": "assets/images/characters/loreley/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",

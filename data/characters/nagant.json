@@ -244,7 +244,7 @@
   "images": {
     "portrait": "assets/images/characters/nagant/portrait.png",
     "avatar": "assets/images/characters/nagant/avatar.png",
-    "class_icon": "assets/images/class/support.png",
+    "class_icon": "assets/images/class/Support.png",
     "portrait_webp": "assets/images/characters/nagant/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",

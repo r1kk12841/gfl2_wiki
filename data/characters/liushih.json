@@ -280,7 +280,7 @@
   "images": {
     "portrait": "assets/images/characters/liushih/portrait.png",
     "avatar": "assets/images/characters/liushih/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png",
+    "class_icon": "assets/images/class/Sentinel.png",
     "portrait_webp": "assets/images/characters/liushih/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",

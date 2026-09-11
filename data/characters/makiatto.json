@@ -250,7 +250,7 @@
   "images": {
     "portrait": "assets/images/characters/makiatto/portrait.png",
     "avatar": "assets/images/characters/makiatto/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png",
+    "class_icon": "assets/images/class/Sentinel.png",
     "portrait_webp": "assets/images/characters/makiatto/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",

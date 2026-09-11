@@ -266,7 +266,7 @@
   "images": {
     "portrait": "assets/images/characters/eagletta/portrait.png",
     "avatar": "assets/images/characters/eagletta/avatar.png",
-    "class_icon": "assets/images/class/sentinel.png",
+    "class_icon": "assets/images/class/Sentinel.png",
     "portrait_webp": "assets/images/characters/eagletta/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",

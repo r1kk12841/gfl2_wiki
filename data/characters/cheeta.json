@@ -241,7 +241,7 @@
   "images": {
     "portrait": "assets/images/characters/cheeta/portrait.png",
     "avatar": "assets/images/characters/cheeta/avatar.png",
-    "class_icon": "assets/images/class/support.png",
+    "class_icon": "assets/images/class/Support.png",
     "portrait_webp": "assets/images/characters/cheeta/portrait.webp"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
