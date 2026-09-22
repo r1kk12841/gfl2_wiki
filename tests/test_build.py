@@ -176,11 +176,21 @@ def test_andoris_images_remapped(built_site: Path):
 
 
 def test_server_badges_and_filters(built_site: Path):
-    cn_dolls = {"asteria", "eagletta", "faelynn", "koleda", "mityl", "soppo", "welrod", "cecilia"}
+    character_servers = set()
     for p in CHAR_DIR.glob("*.json"):
         cdata = json.loads(p.read_text(encoding="utf-8"))
-        expected_server = "cn" if p.stem in cn_dolls else "global"
-        assert cdata.get("server") == expected_server, f"Doll {p.stem} has wrong server: {cdata.get('server')}"
+        server = cdata.get("server")
+        assert server in {"global", "cn"}, f"Doll {p.stem} has invalid server: {server}"
+        character_servers.add(server)
+
+        # Character data is the source of truth. The generated detail page must
+        # follow edits made through the data-entry tool instead of a hard-coded
+        # list of dolls assigned to each server.
+        detail_html = (built_site / "characters" / f"{p.stem}.html").read_text(encoding="utf-8")
+        assert f'badge-server-{server}' in detail_html
+        assert f'data-doll-server="{server}"' in detail_html
+
+    assert character_servers == {"global", "cn"}
 
     # Characters index has filter and badges
     char_index = (built_site / "characters" / "index.html").read_text(encoding="utf-8")
@@ -197,15 +207,6 @@ def test_server_badges_and_filters(built_site: Path):
     assert 'data-server="cn"' in weapons_index
     assert "badge-server-cn" in weapons_index
     assert "badge-server-global" in weapons_index
-
-    # Detail pages have badges
-    asteria_html = (built_site / "characters" / "asteria.html").read_text(encoding="utf-8")
-    assert 'badge-server-cn' in asteria_html
-    assert 'data-doll-server="cn"' in asteria_html
-
-    groza_html = (built_site / "characters" / "groza.html").read_text(encoding="utf-8")
-    assert 'badge-server-global' in groza_html
-    assert 'data-doll-server="global"' in groza_html
 
     # Search index includes server
     search_idx = json.loads((built_site / "search-index.json").read_text(encoding="utf-8"))

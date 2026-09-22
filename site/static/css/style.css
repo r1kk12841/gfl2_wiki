@@ -2430,12 +2430,17 @@ table.data-table tr:hover td {
   bottom: calc(100% + 8px);
   z-index: 1000;
   display: none;
-  width: min(360px, calc(100vw - 24px));
-  max-height: calc(100vh - 24px);
-  padding: 0.7rem;
+  width: min(440px, calc(100vw - 24px));
+  max-height: min(520px, 85vh);
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 240, 255, 0.4) transparent;
   color: var(--text-primary);
-  background: var(--bg-card);
-  border: 1px solid var(--border-focus);
+  background: rgba(11, 17, 29, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 240, 255, 0.4);
   border-radius: var(--radius-md);
   box-shadow: 0 10px 34px rgba(0,0,0,0.68);
   white-space: normal;
@@ -2450,47 +2455,104 @@ table.data-table tr:hover td {
   position: fixed;
   bottom: auto;
   display: block;
+  pointer-events: auto;
 }
 .guide-weapon-popover {
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 0.35rem 0.65rem;
+  display: none;
 }
 .guide-inline-weapon:hover > .guide-weapon-popover,
 .guide-inline-weapon:focus > .guide-weapon-popover,
-.guide-inline-weapon:focus-within > .guide-weapon-popover { display: grid; }
-.guide-weapon-popover.is-open { display: grid; }
+.guide-inline-weapon:focus-within > .guide-weapon-popover { display: block; }
+.guide-weapon-popover.is-open { display: block; }
+.guide-popover-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px 9px;
+  background: rgba(11, 17, 29, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.guide-popover-title {
+  min-width: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.guide-popover-badge {
+  flex: 0 0 auto;
+  padding: 2px 6px;
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  border-radius: 3px;
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.15);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.guide-popover-badge-skill {
+  color: #c8a7ff;
+  border-color: rgba(168, 85, 247, 0.45);
+  background: rgba(168, 85, 247, 0.16);
+}
+.guide-popover-body {
+  display: block;
+  padding: 12px 14px 14px;
+}
+.guide-popover-body.has-media {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+}
 .guide-weapon-popover-image {
-  grid-row: 1 / span 2;
-  width: 92px;
-  height: 68px;
+  width: 112px;
+  height: 84px;
   object-fit: contain;
   border-radius: 5px;
   background: rgba(0,0,0,0.3);
 }
-.guide-weapon-popover-name { align-self: end; font-weight: 750; color: #39a9ff; }
+.guide-skill-popover-image {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.3);
+}
+.guide-skill-popover .guide-popover-body.has-media {
+  grid-template-columns: 72px minmax(0, 1fr);
+}
+.guide-weapon-popover-name { color: #fff; }
 .guide-weapon-popover-desc {
-  color: var(--text-secondary);
-  font-size: 0.75rem;
-  line-height: 1.4;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
-.guide-skill-popover { width: min(420px, calc(100vw - 24px)); }
-.guide-skill-popover-name {
   display: block;
-  margin-bottom: 0.35rem;
-  color: #c8a7ff;
-  font-weight: 750;
 }
+.guide-skill-popover { width: min(460px, calc(100vw - 24px)); }
+.guide-skill-popover-name {
+  color: #fff;
+}
+.guide-popover-desc,
 .guide-skill-popover-desc {
   display: block;
-  max-height: min(240px, calc(100vh - 80px));
-  overflow: auto;
-  color: var(--text-secondary);
-  font-size: 0.78rem;
-  line-height: 1.5;
+  min-width: 0;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  line-height: 1.55;
   white-space: pre-line;
   overflow-wrap: anywhere;
+}
+@media (max-width: 520px) {
+  .guide-popover-body.has-media,
+  .guide-skill-popover .guide-popover-body.has-media {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+  .guide-weapon-popover-image,
+  .guide-skill-popover-image {
+    width: 64px;
+    height: 56px;
+  }
 }

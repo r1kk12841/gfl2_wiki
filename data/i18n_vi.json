@@ -7958,7 +7958,7 @@
         },
         {
           "name": "Ân Tứ Nữ Vương",
-          "description": "ST tất cả Doll dùng <color=#3487e0>Súng Bắn Tỉa</color> gây ra tăng <color=#f26c1c>10%</color>.\nVào trận nhận Truyền Nhiệt Năng. Khi Loreley có mặt trên trận, hiệu ứng của <color=#3487e0>Truyền Nhiệt Năng</color> là <color=#3487e0>Tàn Tro</color> sẽ tăng cấp thành <color=#3487e0>Tàn Tro Lửa Rực</color>, duy trì <color=#f26c1c>2 hiệp lớn</color>.\nKhi bắt đầu hiệp lớn, bản thân nhận <color=#f26c1c>2 điểm</color> Chỉ Số Nhiên Liệu. Khi kết thúc hành động, nếu trên trận tồn tại <color=#3487e0>Thợ Săn-II</color>, bản thân nhận <color=#3487e0>Chỉ Lệnh Bổ Sung</color>, mỗi hiệp kích hoạt <color=#f26c1c>1 lần</color>.\nTrước khi đồng minh nhận sát thương, Loreley ban tặng <color=#3487e0>Lửa Cháy Hoàn Hảo</color>, kích hoạt tối đa <color=#f26c1c>3 lần</color> mỗi hiệp.",
+          "description": "ST tất cả Doll dùng Súng Bắn Tỉa gây ra tăng <color=#f26c1c>10%</color>.\nVào trận nhận Truyền Nhiệt Năng. Khi Loreley có mặt trên trận, hiệu ứng của <color=#3487e0>Truyền Nhiệt Năng</color> là <color=#3487e0>Tàn Tro</color> sẽ tăng cấp thành <color=#3487e0>Tàn Tro Lửa Rực</color>, duy trì <color=#f26c1c>2 hiệp lớn</color>.\nKhi bắt đầu hiệp lớn, bản thân nhận <color=#f26c1c>2 điểm</color> Chỉ Số Nhiên Liệu. Khi kết thúc hành động, nếu trên trận tồn tại <color=#3487e0>Thợ Săn-II</color>, bản thân nhận <color=#3487e0>Chỉ Lệnh Bổ Sung</color>, mỗi hiệp kích hoạt <color=#f26c1c>1 lần</color>.\nTrước khi đồng minh nhận sát thương, Loreley ban tặng <color=#3487e0>Lửa Cháy Hoàn Hảo</color>, kích hoạt tối đa <color=#f26c1c>3 lần</color> mỗi hiệp.",
           "tags": [
             "Bị Động",
             "Cường Hóa"
@@ -9813,51 +9813,56 @@
       "skills": [
         {
           "name": "Cú Bắn Tích Lũy",
+          "description": "Chọn 1 mục tiêu địch <color=#f26c1c>trong phạm vi 6 ô xung quanh</color>, gây ST Vật Lý bằng <color=#f26c1c>80%</color> Tấn Công.",
           "tags": [
             "Đánh Thường",
             "Chỉ Định"
           ],
-          "description": "Chọn 1 mục tiêu địch <color=#f26c1c>trong phạm vi 6 ô xung quanh</color>, gây ST Vật Lý bằng <color=#f26c1c>80%</color> Tấn Công."
+          "en_name": "Shooting Instinct"
         },
         {
           "name": "Áp Chế Toàn Diện",
+          "description": "Chọn 1 ô <color=#f26c1c>trong phạm vi 8 ô xung quanh</color> và gây <color=#e52955FF>ST Cộng Hưởng</color> AoE bằng <color=#f26c1c>120%</color> Tấn Công lên toàn bộ kẻ địch trong phạm vi 3×3 ô. Nếu OTs-14 đang ở trạng thái <color=#3487e0>Chỉ Lệnh Yểm Hộ</color>, lượng sát thương tích lũy bởi <color=#3487e0>Chế Độ Chỉ Huy</color> tăng <color=#f26c1c>25%</color> sau khi dùng kỹ năng. Nếu đang ở <color=#3487e0>Chỉ Lệnh Bạo Phá</color>, cứ mỗi 15% ST Bạo Kích ban đầu, sát thương gây ra tăng <color=#f26c1c>15%</color> và hệ số sát thương được nhân đôi.",
           "tags": [
             "Chủ Động",
-            "AoE"
+            "Phạm Vi"
           ],
-          "description": "Chọn 1 ô <color=#f26c1c>trong phạm vi 8 ô xung quanh</color> và gây <color=#e52955FF>ST Cộng Hưởng</color> AoE bằng <color=#f26c1c>120%</color> Tấn Công lên toàn bộ kẻ địch trong phạm vi 3×3 ô. Nếu OTs-14 đang ở trạng thái <color=#3487e0>Chỉ Lệnh Yểm Hộ</color>, lượng sát thương tích lũy bởi <color=#3487e0>Chế Độ Chỉ Huy</color> tăng <color=#f26c1c>25%</color> sau khi dùng kỹ năng. Nếu đang ở <color=#3487e0>Chỉ Lệnh Bạo Phá</color>, cứ mỗi 15% ST Bạo Kích ban đầu, sát thương gây ra tăng <color=#f26c1c>15%</color> và hệ số sát thương được nhân đôi."
+          "en_name": "Total Suppression"
         },
         {
           "name": "Lệnh Tác Chiến",
+          "description": "Chọn chuyển đổi giữa <color=#3487e0>Chỉ Lệnh Yểm Hộ</color> và <color=#3487e0>Chỉ Lệnh Bạo Phá</color>. Nhận <color=#3487e0>Chỉ Lệnh Bổ Sung</color>. Kỹ năng này không tiêu hao lượt hành động và có thể thi triển 1 lần mỗi hiệp.",
           "tags": [
             "Chủ Động",
             "Cường Hóa"
           ],
-          "description": "Chọn chuyển đổi giữa <color=#3487e0>Chỉ Lệnh Yểm Hộ</color> và <color=#3487e0>Chỉ Lệnh Bạo Phá</color>. Nhận <color=#3487e0>Chỉ Lệnh Bổ Sung</color>. Kỹ năng này không tiêu hao lượt hành động và có thể thi triển 1 lần mỗi hiệp."
+          "en_name": "Perfect Adaptation"
         },
         {
           "name": "Càn Quét Tầm Xa",
+          "description": "Chọn một hướng và gây <color=#e52955FF>ST Cộng Hưởng</color> AoE bằng <color=#f26c1c>150%</color> Tấn Công lên toàn bộ kẻ địch trong khu vực hình chữ nhật 3×10 ô phía trước theo hướng đã chọn. Tiêu hao toàn bộ Chỉ Số Nhiên Liệu, cứ mỗi 1 điểm tiêu hao thêm sẽ tăng <color=#f26c1c>10%</color> sát thương gây ra và tăng <color=#f26c1c>1 điểm</color> ST Ổn Định.",
           "tags": [
-            "Tuyệt Kỹ",
-            "AoE"
+            "Phạm Vi"
           ],
-          "description": "Chọn một hướng và gây <color=#e52955FF>ST Cộng Hưởng</color> AoE bằng <color=#f26c1c>150%</color> Tấn Công lên toàn bộ kẻ địch trong khu vực hình chữ nhật 3×10 ô phía trước theo hướng đã chọn. Tiêu hao toàn bộ Chỉ Số Nhiên Liệu, cứ mỗi 1 điểm tiêu hao thêm sẽ tăng <color=#f26c1c>10%</color> sát thương gây ra và tăng <color=#f26c1c>1 điểm</color> ST Ổn Định."
+          "en_name": "Sundering Demolition"
         },
         {
           "name": "Chiến Thuật Bậc Thầy",
+          "description": "Khi bắt đầu trận chiến, OTs-14 tự động kích hoạt Tái Tạo Tế Bào và vào trạng thái <color=#3487e0>Chỉ Lệnh Yểm Hộ</color>.<br>Khi kết thúc hành động, nếu KN Quyết Thắng chưa được kích hoạt, ST tích lũy từ Chỉ Lệnh Yểm Hộ sẽ chuyển thành <color=#f26c1c>1 điểm</color> Mạch Xung Quá Tải.<br>\nKhi kết thúc hành động, nếu ở trạng thái <color=#3487e0>Chỉ Lệnh Bạo Phá</color>, chuyển sang <color=#3487e0>Chỉ Lệnh Yểm Hộ</color>.",
           "tags": [
             "Bị Động",
             "Cường Hóa"
           ],
-          "description": "Khi bắt đầu trận chiến, OTs-14 tự động vào trạng thái <color=#3487e0>Chỉ Lệnh Yểm Hộ</color>. Khi đồng minh trong phạm vi 6 ô bị tấn công, OTs-14 thực hiện <color=#3487e0>Yểm Hộ</color>, giảm <color=#f26c1c>30%</color> sát thương phải chịu cho đồng minh đó. Mỗi hiệp kích hoạt tối đa 2 lần.\n\nKhi ở trạng thái <color=#3487e0>Chỉ Lệnh Bạo Phá</color>, sát thương gây ra tăng <color=#f26c1c>25%</color> và tỷ lệ bạo kích tăng <color=#f26c1c>20%</color>."
+          "en_name": "Boojum Effect"
         },
         {
           "name": "Bộc Phá Chí Mạng",
+          "description": "Chọn 1 ô trong phạm vi 3-10 ô phía trước bản thân, gây ST Cộng Hưởng AoE bằng <color=#f26c1c>150%</color> Tấn Công lên toàn bộ kẻ địch trong phạm vi 3 ô quanh ô đã chọn. Tiêu hao 1 <color=#3487e0>Mạch Xung Quá Tải</color> để gây thêm <color=#f26c1c>ST Cố Định</color> bằng <color=#f26c1c>10%</color> lượng sát thương tích lũy của <color=#3487e0>Mạch Xung Quá Tải</color> đã tiêu hao.",
           "tags": [
             "Đánh Thường",
             "Chủ Động"
           ],
-          "description": "Chọn 1 ô trong phạm vi 3-10 ô phía trước bản thân, gây ST Cộng Hưởng AoE bằng <color=#f26c1c>150%</color> Tấn Công lên toàn bộ kẻ địch trong phạm vi 3 ô quanh ô đã chọn. Tiêu hao 1 <color=#3487e0>Mạch Xung Quá Tải</color> để gây thêm sát thương cố định bằng <color=#f26c1c>10%</color> lượng sát thương tích lũy của <color=#3487e0>Mạch Xung Quá Tải</color> đã tiêu hao."
+          "en_name": "Critical Blast"
         }
       ],
       "fortification": [
@@ -9895,7 +9900,7 @@
           "tier": 6,
           "level": 2,
           "skill": "Chiến Thuật Bậc Thầy",
-          "effect": "Kỹ năng chủ động Áp Chế Toàn Diện tạo các ô địa hình Giai Đoạn cấp 1 trong <color=#f26c1c>2 hiệp</color> trong phạm vi hiệu lực nếu có bất kỳ Tái Cấu Trúc Giai Đoạn nào đang kích hoạt. <color=#3487e0>Tái Tạo - 0</color> không tạo ô địa hình.\nCường hóa các hiệu ứng của <color=#3487e0>Tái Tạo Tế Bào</color>:\n<color=#3487e0>Tái Tạo - Thiêu Đốt</color> - Hóa giải <color=#f26c1c>1</color> Debuff khi đồng đội nhận Tàn Tro;\n<color=#3487e0>Tái Tạo - Dẫn Điện</color> - Khi một đơn vị địch rơi vào trạng thái Sụp Đổ Ổn Định, toàn bộ đồng minh hồi phục <color=#f26c1c>1 điểm</color> Chỉ Số Ổn Định;\n<color=#3487e0>Tái Tạo - Băng Kết</color> - Khi một đồng minh gây sát thương, tăng Tấn Công của họ bằng <color=#f26c1c>10%</color> giá trị lá chắn;\n<color=#3487e0>Tái Tạo - Ăn Mòn</color> - Kỹ năng chủ động Áp Chế Toàn Diện kích hoạt toàn bộ Debuff thuộc tính Ăn Mòn của các đơn vị địch trong phạm vi hiệu lực;\n<color=#3487e0>Tái Tạo - Hóa Lỏng</color> - Với mỗi đơn vị đồng minh, tất cả Vật Triệu Hồi Thực Thể tăng <color=#f26c1c>1%</color> Tấn Công và <color=#f26c1c>1%</color> HP tối đa;\n<color=#3487e0>Tái Tạo - 0</color> - Chỉ Lệnh Bạo Phá tăng Tấn Công thêm <color=#f26c1c>50%</color> thay vì 30%, bỏ qua <color=#f26c1c>5%</color> Phòng Thủ cho mỗi <color=#f26c1c>15%</color> ST Bạo Kích ban đầu."
+          "effect": "Kỹ năng chủ động Áp Chế Toàn Diện tạo các ô địa hình Giai Đoạn cấp 1 trong <color=#f26c1c>2 hiệp</color> trong phạm vi hiệu lực nếu có bất kỳ Tái Cấu Trúc Giai Đoạn nào đang kích hoạt.<br><color=#3487e0>Tái Tạo - 0</color> không tạo ô địa hình.<br>\nCường hóa các hiệu ứng của <color=#3487e0>Tái Tạo Tế Bào</color>:<br>\n<color=#3487e0>Tái Tạo - Thiêu Đốt</color> - Hóa giải <color=#f26c1c>1</color> Debuff khi đồng đội nhận Tàn Tro;<br>\n<color=#3487e0>Tái Tạo - Dẫn Điện</color> - Khi một đơn vị địch rơi vào trạng thái Sụp Đổ Ổn Định, toàn bộ đồng minh hồi phục <color=#f26c1c>1 điểm</color> Chỉ Số Ổn Định;<br>\n<color=#3487e0>Tái Tạo - Băng Kết</color> - Khi một đồng minh gây sát thương, tăng Tấn Công của họ bằng <color=#f26c1c>10%</color> giá trị lá chắn;<br>\n<color=#3487e0>Tái Tạo - Ăn Mòn</color> - Kỹ năng chủ động Áp Chế Toàn Diện kích hoạt toàn bộ Debuff thuộc tính Ăn Mòn của các đơn vị địch trong phạm vi hiệu lực;<br>\n<color=#3487e0>Tái Tạo - Hóa Lỏng</color> - Với mỗi đơn vị đồng minh, tất cả Vật Triệu Hồi Thực Thể tăng <color=#f26c1c>1%</color> Tấn Công và <color=#f26c1c>1%</color> HP tối đa;<br>\n<color=#3487e0>Tái Tạo - 0</color> - Chỉ Lệnh Bạo Phá tăng Tấn Công thêm <color=#f26c1c>50%</color> thay vì 30%, bỏ qua <color=#f26c1c>5%</color> Phòng Thủ cho mỗi <color=#f26c1c>15%</color> ST Bạo Kích ban đầu."
         }
       ],
       "neural_helix": [
@@ -9939,39 +9944,39 @@
       "keys": [
         {
           "name": "Khóa Cố Định 1 - Kỷ Luật Quân Đội",
-          "level": 20,
+          "level": "20",
           "effect": "Khi bắt đầu trận chiến, tăng <color=#f26c1c>2 điểm</color> Chỉ Số Nhiên Liệu.",
-          "materials": "3\n\n\n3000"
+          "materials": "33000"
         },
         {
           "name": "Khóa Cố Định 2 - Tiên Phong Chắn Đạn",
-          "level": 20,
+          "level": "20",
           "effect": "Khi thực hiện Yểm Hộ, hồi phục HP bằng <color=#f26c1c>15%</color> Tấn Công cho mục tiêu được bảo vệ.",
-          "materials": "3\n\n\n3000"
+          "materials": "33000"
         },
         {
           "name": "Khóa Cố Định 3 - Hỏa Lực Đồng Loạt",
-          "level": 30,
+          "level": "30",
           "effect": "Khi ở trạng thái Chỉ Lệnh Bạo Phá, ST AoE gây ra tăng thêm <color=#f26c1c>15%</color>.",
-          "materials": "3\n\n\n8000"
+          "materials": "38000"
         },
         {
           "name": "Khóa Cố Định 4 - Chuyển Trạng Thái Nhanh",
-          "level": 30,
+          "level": "30",
           "effect": "Sau khi thi triển Lệnh Tác Chiến, nhận thêm 3 ô Di Chuyển Thêm trong hiệp đó.",
-          "materials": "3\n\n\n8000"
+          "materials": "38000"
         },
         {
           "name": "Khóa Cố Định 5 - Bản Lĩnh Chỉ Huy",
-          "level": 40,
+          "level": "40",
           "effect": "Tất cả đồng minh trong phạm vi 3 ô quanh OTs-14 nhận tăng <color=#f26c1c>10%</color> Tấn Công và <color=#f26c1c>10%</color> Phòng Thủ.",
-          "materials": "3\n\n\n12000"
+          "materials": "312000"
         },
         {
           "name": "Khóa Cố Định 6 - Chiến Lược Áp Đảo",
-          "level": 40,
+          "level": "40",
           "effect": "Khi tấn công kẻ địch đang chịu debuff, sát thương gây ra tăng <color=#f26c1c>15%</color>.",
-          "materials": "3\n\n\n12000"
+          "materials": "312000"
         },
         {
           "name": "Khóa Tương Thích - Niềm Tin Sắt Đá",
@@ -9981,7 +9986,7 @@
         },
         {
           "name": "Khóa Chung - Tác Chiến Phối Hợp",
-          "level": 40,
+          "level": "40",
           "effect": "Tấn Công +5.0% / Khi ở gần đồng minh trong phạm vi 2 ô, sát thương tăng <color=#f26c1c>10%</color>.",
           "materials": "None"
         }
@@ -16794,7 +16799,7 @@
     },
     "effect_bbb69c2d08e3": {
       "id": "effect_bbb69c2d08e3",
-      "name": "Xung Hỏa Lân Hỏa",
+      "name": "Xung Lân Hỏa",
       "name_en": "Pyro Pulse",
       "desc": "Khiến tất cả kẻ địch trong phạm vi 5 ô xung quanh chịu ST Thiêu Đốt AoE bằng 40% Tấn Công, giải trừ 1 Debuff của tất cả đồng minh, hồi phục 2 điểm Chỉ Số Ổn Định và khiến mục tiêu nhận 3 điểm Lửa Thiêu Đốt.",
       "desc_en": "Deals Aoe Burn damage equivalent to 40% ATK to all enemies within 5 tile radius, dispels 1 debuff from all allies, recovers 2 Stability points to all allies, grants 3 Searing Flame points.",

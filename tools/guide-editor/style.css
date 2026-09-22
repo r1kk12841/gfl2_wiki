@@ -292,7 +292,8 @@ textarea.block-input { min-height: 70px; resize: vertical; line-height: 1.55; }
   z-index: 1000;
   display: none;
   width: min(360px, calc(100vw - 24px));
-  max-height: calc(100vh - 24px);
+  max-height: min(520px, 85vh);
+  overflow-y: auto;
   padding: 0.7rem;
   color: var(--text-primary);
   background: var(--bg-card);
@@ -302,7 +303,7 @@ textarea.block-input { min-height: 70px; resize: vertical; line-height: 1.55; }
   white-space: normal;
   text-align: left;
   text-decoration: none;
-  pointer-events: none;
+  pointer-events: auto;
 }
 .guide-inline-ref:hover > .guide-ref-popover,
 .guide-inline-ref:focus > .guide-ref-popover,
@@ -325,12 +326,11 @@ textarea.block-input { min-height: 70px; resize: vertical; line-height: 1.55; }
 .guide-weapon-popover-name { align-self: end; font-weight: 750; color: #39a9ff; }
 .guide-weapon-popover-desc {
   color: var(--text-secondary);
-  font-size: 0.75rem;
-  line-height: 1.4;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  max-height: min(360px, 70vh);
+  overflow-y: auto;
+  white-space: pre-line;
 }
 .guide-skill-popover { width: min(420px, calc(100vw - 24px)); }
 .guide-skill-popover-name { display: block; margin-bottom: 0.35rem; color: #c8a7ff; font-weight: 750; }

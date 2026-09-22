@@ -77,7 +77,12 @@ function weaponInlineHTML(slug) {
   const name = localized.name || wp?.name || slug;
   const imagePath = wp?.image || `assets/images/weapons/${wp?.name || slug}.png`;
   const description = localized.effect || localized.trait || name;
-  return `<a class="guide-inline-ref guide-inline-weapon" href="../weapons/${escHTML(slug)}.html"><img class="guide-inline-icon" src="../${escHTML(imagePath)}" alt="${escHTML(name)}">${escHTML(name)}<span class="guide-ref-popover guide-weapon-popover"><img class="guide-weapon-popover-image" src="../${escHTML(imagePath)}" alt=""><span class="guide-weapon-popover-name">${escHTML(name)}</span><span class="guide-weapon-popover-desc">${escHTML(description)}</span></span></a>`;
+  const fullDescription = [
+    localized.stats ? `Chỉ số\n${localized.stats}` : '',
+    localized.trait ? `Đặc tính\n${localized.trait}` : '',
+    localized.effect ? `Hiệu ứng\n${localized.effect}` : description,
+  ].filter(Boolean).join('\n\n');
+  return `<a class="guide-inline-ref guide-inline-weapon" href="../weapons/${escHTML(slug)}.html"><img class="guide-inline-icon" src="../${escHTML(imagePath)}" alt="${escHTML(name)}">${escHTML(name)}<span class="guide-ref-popover guide-weapon-popover"><img class="guide-weapon-popover-image" src="../${escHTML(imagePath)}" alt=""><span class="guide-weapon-popover-name">${escHTML(name)}</span><span class="guide-weapon-popover-desc">${escHTML(fullDescription)}</span></span></a>`;
 }
 
 function stripGameMarkup(value) {
@@ -94,7 +99,16 @@ function skillInlineHTML(charSlug, skillIdx, summonIdx = null) {
     ? `<img class="guide-inline-icon" src="../${escHTML(skill.icon)}" alt="${escHTML(skill.name)}">`
     : '';
   const description = stripGameMarkup(skill.description || '');
-  return `<span class="guide-inline-ref guide-inline-skill" tabindex="0">${icon}${escHTML(skill.name)}<span class="guide-ref-popover guide-skill-popover"><span class="guide-skill-popover-name">${escHTML(skill.name)}</span><span class="guide-skill-popover-desc">${escHTML(description)}</span></span></span>`;
+  const tags = (skill.tags || []).join(' · ');
+  const metadata = [
+    tags,
+    skill.cooldown != null ? `Hồi chiêu: ${skill.cooldown}` : '',
+    skill.confectance_cost != null ? `Nhiên liệu: ${skill.confectance_cost}` : '',
+    skill.range != null ? `Tầm bắn: ${skill.range}` : '',
+    skill.stability_damage != null ? `ST Ổn Định: ${skill.stability_damage}` : '',
+  ].filter(Boolean).join('  •  ');
+  const fullDescription = [metadata, description].filter(Boolean).join('\n\n');
+  return `<span class="guide-inline-ref guide-inline-skill" tabindex="0">${icon}${escHTML(skill.name)}<span class="guide-ref-popover guide-skill-popover"><span class="guide-skill-popover-name">${escHTML(skill.name)}</span><span class="guide-skill-popover-desc">${escHTML(fullDescription)}</span></span></span>`;
 }
 
 function localizedWeapon(slug) {

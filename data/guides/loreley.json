@@ -41,39 +41,44 @@
       "rows": [
         [
           "V0",
-          "Đầy đủ bộ kit cơ bản: Triệu hồi Hunter Type-II, buff Tàn Lửa, miễn nhiễm sát thương 3 lần/hiệp, xóa debuff và sạc Stability liên tục.",
+          "Đầy đủ bộ kit cơ bản: Triệu hồi <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Thợ Săn-II: Khi tạo nhận 8 điểm Lửa Thiêu Đốt, và khiến tất cả đơn vị phe ta nhận Thủy Triều Rực Lửa trong 3 hiệp lớn. Khi Loreley kết thúc hành động, giải phóng Xung Lân Hỏa. ST Thiêu Đốt tất cả kẻ địch trong phạm vi 5 ô xung quanh Thợ Săn-II phải chịu tăng 15%.\" data-effect-id=\"effect_02a8c2402c1a\" data-effect=\"Thợ Săn-II\" data-effect-en=\"Hunter Type - II\" data-text-en=\"Hunter Type - II\" data-type=\"buff\" data-desc=\"Khi tạo nhận 8 điểm Lửa Thiêu Đốt, và khiến tất cả đơn vị phe ta nhận Thủy Triều Rực Lửa trong 3 hiệp lớn. Khi Loreley kết thúc hành động, giải phóng Xung Lân Hỏa. ST Thiêu Đốt tất cả kẻ địch trong phạm vi 5 ô xung quanh Thợ Săn-II phải chịu tăng 15%.\" data-desc-en=\"Grants 8 Searing Flame points when summoned, apply Infernal Surge to all friendly units for 3 global rounds. At the end of Loreley action, a Pyro Pulse is released. Burn damage taken by all enemy units within a radius of 5 tiles around Hunter Type - II is increased by 15%.\" tabindex=\"0\">Thợ Săn-II</span>, buff <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Tàn Tro: ST Thiêu Đốt gây ra tăng 30% trong 2 hiệp và tăng vĩnh viễn 5% ST Bạo Kích (cộng dồn). Thuộc loại Buff Thiêu Đốt. Không thể giải trừ.\" data-effect-id=\"effect_f95951bd6069\" data-effect=\"Tàn Tro\" data-effect-en=\"Embers\" data-text-en=\"Embers\" data-type=\"buff\" data-desc=\"ST Thiêu Đốt gây ra tăng 30% trong 2 hiệp và tăng vĩnh viễn 5% ST Bạo Kích (cộng dồn). Thuộc loại Buff Thiêu Đốt. Không thể giải trừ.\" data-desc-en=\"Increases Burn damage dealt by 30% for 2 turns and permanently increases critical damage by 5%. Critical damage buff stacks. Considered a Burn buff. Cannot be dispelled.\" tabindex=\"0\">Tàn Tro</span>&nbsp;, miễn nhiễm sát thương 3 lần/hiệp, xóa debuff và sạc Ổn Định liên tục.",
           "Rất mạnh cho đội hình <span class=\"guide-text-burn\">Thiêu Đốt</span> cơ bản, đáp ứng hoàn hảo mọi nội dung thường."
         ],
         [
           "V1",
-          "Kích hoạt Vũ Điệu Cộng Sinh hồi 25% HP, 5 Stability và giải hiệu ứng Choáng. Robot phóng thêm 1 lần Pyro Pulse sau mỗi đòn đánh thường/kỹ năng.",
-          "Gia tăng sinh tồn cho team và đẩy nhanh tốc độ tích tầng Searing Flame."
+          "Kích hoạt <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Điệp Vũ Cộng Sinh: Ngăn chặn tử vong khi nhận sát thương chí mạng. Nếu một đồng đội khác tử vong khi hiệu ứng này đang kích hoạt, bản thân sẽ tử vong thay thế, duy trì 1 hiệp lớn. Buff Thiêu Đốt không thể giải trừ.\" data-effect-id=\"effect_53309dbd52e6\" data-effect=\"Điệp Vũ Cộng Sinh\" data-effect-en=\"Symbiotic Dance\" data-text-en=\"Symbiotic Dance\" data-type=\"buff\" data-desc=\"Ngăn chặn tử vong khi nhận sát thương chí mạng. Nếu một đồng đội khác tử vong khi hiệu ứng này đang kích hoạt, bản thân sẽ tử vong thay thế, duy trì 1 hiệp lớn. Buff Thiêu Đốt không thể giải trừ.\" data-desc-en=\"Preventing death when taking lethal damage. If another ally dies while this effect is active, the protected unit will die in its place.\" tabindex=\"0\">Điệp Vũ Cộng Sinh</span>&nbsp; hồi 25% HP, 5 Stability và giải hiệu ứng Choáng. Robot phóng thêm 1 lần&nbsp;<span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-debuff\" title=\"Xung Lân Hỏa: Khiến tất cả kẻ địch trong phạm vi 5 ô xung quanh chịu ST Thiêu Đốt AoE bằng 40% Tấn Công, giải trừ 1 Debuff của tất cả đồng minh, hồi phục 2 điểm Chỉ Số Ổn Định và khiến mục tiêu nhận 3 điểm Lửa Thiêu Đốt.\" data-effect-id=\"effect_bbb69c2d08e3\" data-effect=\"Xung Lân Hỏa\" data-effect-en=\"Pyro Pulse\" data-text-en=\"Pyro Pulse\" data-type=\"debuff\" data-desc=\"Khiến tất cả kẻ địch trong phạm vi 5 ô xung quanh chịu ST Thiêu Đốt AoE bằng 40% Tấn Công, giải trừ 1 Debuff của tất cả đồng minh, hồi phục 2 điểm Chỉ Số Ổn Định và khiến mục tiêu nhận 3 điểm Lửa Thiêu Đốt.\" data-desc-en=\"Deals Aoe Burn damage equivalent to 40% ATK to all enemies within 5 tile radius, dispels 1 debuff from all allies, recovers 2 Stability points to all allies, grants 3 Searing Flame points.\" tabindex=\"0\">Xung Lân Hỏa</span>&nbsp;sau mỗi đòn đánh thường/kỹ năng.",
+          "Gia tăng sinh tồn cho team và đẩy nhanh tốc độ tích tầng <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Lửa Thiêu Đốt: Có thể nạp năng lượng cho Truyền Nhiệt Năng.\" data-effect-id=\"effect_8066815f5668\" data-effect=\"Lửa Thiêu Đốt\" data-effect-en=\"Searing Flame\" data-text-en=\"Searing Flame\" data-type=\"effect\" data-desc=\"Có thể nạp năng lượng cho Truyền Nhiệt Năng.\" data-desc-en=\"Used to charge Thermal Conduction.\" tabindex=\"0\">Lửa Thiêu Đốt</span>."
         ],
         [
           "V2",
-          "Glowing Embers chuyển thành tăng 45% TOÀN BỘ SÁT THƯƠNG (bỏ hạn chế hệ lửa). Tăng số lần miễn nhiễm Flawless Blaze từ 3 lên 5 lần/hiệp. Extra Command đổi thành Extra Action (hồi ngay 1 lượt cooldown kỹ năng và thêm di chuyển).",
+          "<span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Tàn Tro Lửa Rực: ST Thiêu Đốt gây ra tăng 30%, ST gây ra tăng 15%, ST phải chịu giảm 15%; ST Bạo Kích tăng 5% (có thể tích tầng). Buff loại Thiêu Đốt không thể giải trừ.\" data-effect-id=\"effect_6197bedffc18\" data-effect=\"Tàn Tro Lửa Rực\" data-effect-en=\"Glowing Embers\" data-text-en=\"Glowing Embers\" data-type=\"buff\" data-desc=\"ST Thiêu Đốt gây ra tăng 30%, ST gây ra tăng 15%, ST phải chịu giảm 15%; ST Bạo Kích tăng 5% (có thể tích tầng). Buff loại Thiêu Đốt không thể giải trừ.\" data-desc-en=\"Burn damage dealt is increased by 30%, all damage dealt is increased by 15%, and the damage received is reduced by 15% for 2 turns; Critical damage is permanently increased by 5%. Critical damage buff stacks. Considered a Burn buff. Cannot be dispelled.\" tabindex=\"0\">Tàn Tro Lửa Rực</span>&nbsp;chuyển thành tăng 45% TOÀN BỘ SÁT THƯƠNG, bỏ hạn chế hệ lửa. Tăng số lần miễn nhiễm STtừ 3 lên 5 lần/hiệp. Extra Command đổi thành Extra Action, hồi ngay 1 lượt cooldown kỹ năng và thêm di chuyển.",
           "Biến Loreley thành Support đa năng, kẹp được vào mọi team Băng, Thủy, Ăn mòn..."
         ],
         [
           "V3",
-          "Robot tạo thêm 4 Searing Flame khi xuất hiện. Hệ số sát thương Pyro Pulse x2; mỗi lần phóng tăng 10% sát thương cho Loreley (tối đa 40%). Cấp khiên Flawless Blaze cho toàn đội.",
+          "Robot tạo thêm 4 <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Lửa Thiêu Đốt: Có thể nạp năng lượng cho Truyền Nhiệt Năng.\" data-effect-id=\"effect_8066815f5668\" data-effect=\"Lửa Thiêu Đốt\" data-effect-en=\"Searing Flame\" data-text-en=\"Searing Flame\" data-type=\"effect\" data-desc=\"Có thể nạp năng lượng cho Truyền Nhiệt Năng.\" data-desc-en=\"Used to charge Thermal Conduction.\" tabindex=\"0\">Lửa Thiêu Đốt</span>&nbsp;khi xuất hiện. Hệ số sát thương <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-debuff\" title=\"Xung Lân Hỏa: Khiến tất cả kẻ địch trong phạm vi 5 ô xung quanh chịu ST Thiêu Đốt AoE bằng 40% Tấn Công, giải trừ 1 Debuff của tất cả đồng minh, hồi phục 2 điểm Chỉ Số Ổn Định và khiến mục tiêu nhận 3 điểm Lửa Thiêu Đốt.\" data-effect-id=\"effect_bbb69c2d08e3\" data-effect=\"Xung Lân Hỏa\" data-effect-en=\"Pyro Pulse\" data-text-en=\"Pyro Pulse\" data-type=\"debuff\" data-desc=\"Khiến tất cả kẻ địch trong phạm vi 5 ô xung quanh chịu ST Thiêu Đốt AoE bằng 40% Tấn Công, giải trừ 1 Debuff của tất cả đồng minh, hồi phục 2 điểm Chỉ Số Ổn Định và khiến mục tiêu nhận 3 điểm Lửa Thiêu Đốt.\" data-desc-en=\"Deals Aoe Burn damage equivalent to 40% ATK to all enemies within 5 tile radius, dispels 1 debuff from all allies, recovers 2 Stability points to all allies, grants 3 Searing Flame points.\" tabindex=\"0\">Xung Lân Hỏa</span>&nbsp;tăng&nbsp;x2; mỗi lần phóng tăng 10% sát thương cho Loreley (tối đa 40%). Cấp khiên Flawless Blaze cho toàn đội.",
           "Nâng cấp sát thương cá nhân và khả năng phòng thủ đầu trận."
         ],
         [
           "V4",
-          "Kỹ năng 2 (Sultry Promise) tăng 30% sát thương, +1 ô phạm vi. Mỗi buff Burn trên người Loreley tăng 10% sát thương kỹ năng (tối đa 40%).",
+          "Kỹ năng 2 tăng 30% sát thương, +1 ô phạm vi. Mỗi buff <span class=\"guide-text-burn\">Thiêu Đốt</span> trên người Loreley tăng 10% sát thương kỹ năng (tối đa 40%).",
           "Gia tăng sát thương diện rộng dọn quái (AoE)."
         ],
         [
           "V5",
-          "Kỹ năng 1 (Burning Touch) bỏ qua 30% DEF mục tiêu; tăng thêm 60% sát thương nếu mục tiêu đứng trên ô Thiêu đốt.",
+          "Kỹ năng 1 bỏ qua 30% DEF mục tiêu; tăng thêm 60% sát thương nếu mục tiêu đứng trên ô Thiêu đốt.",
           "Tăng mạnh sát thương đơn mục tiêu."
         ],
         [
           "V6",
-          "Tăng thêm 1 điểm Searing Flame nhận vào cho toàn đội. Buff ATK từ Infernal Surge tăng lên 12%. Mức giảm sát thương của Glowing Embers tăng lên 30%.",
+          "Tăng thêm 1 điểm <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Lửa Thiêu Đốt: Có thể nạp năng lượng cho Truyền Nhiệt Năng.\" data-effect-id=\"effect_8066815f5668\" data-effect=\"Lửa Thiêu Đốt\" data-effect-en=\"Searing Flame\" data-text-en=\"Searing Flame\" data-type=\"effect\" data-desc=\"Có thể nạp năng lượng cho Truyền Nhiệt Năng.\" data-desc-en=\"Used to charge Thermal Conduction.\" tabindex=\"0\">Lửa Thiêu Đốt</span>&nbsp;nhận vào cho toàn đội. Buff ATK từ <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Thủy Triều Rực Lửa: Tấn Công tăng 6%. Buff thiêu đốt không thể giải trừ.\" data-effect-id=\"effect_5c055c56df1a\" data-effect=\"Thủy Triều Rực Lửa\" data-effect-en=\"Infernal Surge\" data-text-en=\"Infernal Surge\" data-type=\"buff\" data-desc=\"Tấn Công tăng 6%. Buff thiêu đốt không thể giải trừ.\" data-desc-en=\"Increases ATK by 6%. Considered a Burn type buff. Cannot be dispelled.\" tabindex=\"0\">Thủy Triều Rực Lửa</span>&nbsp;tăng lên 12%. Mức giảm sát thương của <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Lửa Cháy Hoàn Hảo: Khi gây ST Thiêu Đốt, bỏ qua 10% Phòng Thủ của mục tiêu. Thuộc loại Buff.\" data-effect-id=\"effect_deb25ad68d64\" data-effect=\"Lửa Cháy Hoàn Hảo\" data-effect-en=\"Flawless Blaze\" data-text-en=\"Flawless Blaze\" data-type=\"buff\" data-desc=\"Khi gây ST Thiêu Đốt, bỏ qua 10% Phòng Thủ của mục tiêu. Thuộc loại Buff.\" data-desc-en=\"Nullifies one instance of damage. Considered a Burn buff. Cannot be dispelled.\" tabindex=\"0\">Lửa Cháy Hoàn Hảo</span>&nbsp;tăng lên 30%.",
           "Dành cho Whale: Sát thương cá nhân chạm ngưỡng DPS-carry."
         ]
+      ],
+      "column_widths": [
+        180,
+        180,
+        180
       ]
     },
     {
@@ -95,24 +100,29 @@
       "rows": [
         [
           "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/tidal-nocturne.html\" target=\"_blank\" rel=\"noopener\"><br><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Tidal Nocturne.png\" alt=\"Dạ Khúc Thủy Triều\" loading=\"lazy\">Dạ Khúc Thủy Triều<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Tidal Nocturne.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Dạ Khúc Thủy Triều</span><span class=\"guide-weapon-popover-desc\">Tăng 5% ST Thiêu Đốt gây ra bởi tất cả đơn vị phe ta. Nếu bản thân sở hữu Tàn Lửa hoặc Tàn Lửa Rực Cháy, tăng 20%/25%/30%/35%/40%/45% ST Thiêu Đốt gây ra.\n\nKhi một đơn vị phe ta nhận Buff Thiêu Đốt, họ nhận Tăng Công II trong 2 vòng.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên mục tiêu có Debuff Thiêu Đốt. Nếu mục tiêu là ELID, tăng thêm 2.5% sát thương.</span></span></a><p>(Trấn)</p>",
-          "SSR",
+          "<span class=\"guide-align-center\">SSR</span>",
           "Vũ khí Trấn chuẩn (BiS): ATK cao nhất. Tăng 5% sát thương Burn toàn đội. Khi bất kỳ đồng minh nào nhận buff Burn, kích hoạt Attack Up II (+15% ATK) trong 2 lượt (duy trì 100% uptime toàn đội, cực kỳ giá trị cho sát thương DoT của Qiuhua)."
         ],
         [
           "<br><br><a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/bittersweet-caramel.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Bittersweet Caramel.png\" alt=\"Dư Vị Caramel Cháy\" loading=\"lazy\">Dư Vị Caramel Cháy<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Bittersweet Caramel.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Dư Vị Caramel Cháy</span><span class=\"guide-weapon-popover-desc\">Tăng 10%/12%/14%/16%/18%/20% ST Băng Kết gây ra. Với mỗi 4/4/3/3/2/2 lần gây sát thương ngoài hiệp của bản thân, tăng 10%/12%/14%/16%/18%/20% sát thương của đòn tấn công chủ động tiếp theo.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên đơn vị Paradeus. Nếu mục tiêu có Đóng Băng, tăng thêm 2.5%.</span></span></a>",
-          "SSR",
+          "<span class=\"guide-align-center\">SSR</span>",
           "Lựa chọn thay thế tốt nhất: Bỏ qua 10% DEF của mục tiêu, cộng thêm 10% xuyên giáp nếu kẻ địch dính debuff Băng (phù hợp khi kẹp Loreley V2 đi cùng team băng)."
         ],
         [
           "<br><a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/samosek.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Samosek.png\" alt=\"Samosek\" loading=\"lazy\">Samosek<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Samosek.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Samosek</span><span class=\"guide-weapon-popover-desc\">Sát thương giai đoạn tăng 10%/12%/14%/16%/18%/20%. ST Dẫn Điện tăng thêm 10%/12%/14%/16%/18%/20%.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên PMC. Nếu mục tiêu có Tê Liệt, tăng thêm 2.5%.</span></span></a>",
-          "SSR",
+          "<span class=\"guide-align-center\">SSR</span>",
           "Lựa chọn F2P tốt nhất: Bỏ qua 1 điểm Stability của địch; cộng thêm 1 điểm khi có buff Insight (Loreley duy trì Insight liên tục từ Chiêu 1). Tăng sát thương dị vị."
         ],
         [
           "Súng SR tím bất kỳ",
-          "SR",
+          "<span class=\"guide-align-center\">SR</span>",
           "Lựa chọn ngân sách đầu game, hoặc thiếu vũ khí SSR, giúp Loreley có đủ chỉ số cơ bản. Tuy ST giảm nhẹ nhưng bộ kỹ năng hỗ trợ vẫn vận hành hoàn chỉnh."
         ]
+      ],
+      "column_widths": [
+        80,
+        80,
+        180
       ]
     },
     {
@@ -134,14 +144,19 @@
       "rows": [
         [
           "Tăng Cường Nhiệt - Burn Boost<p><br></p>",
-          "Tăng 20% sát thương hệ Burn.",
+          "Tăng 20% sát thương hệ Thiêu Đốt.",
           "Bộ trang bị tối ưu nhất (BiS) cho Loreley trong đội hình thuần Hỏa."
         ],
         [
           "Đả Kích Dị Vị - Phase Strike",
           "Tăng sát thương thuộc tính nguyên tố.",
-          "Lựa chọn đa dụng dễ farm, dùng tốt khi linh hoạt đổi nhiều đội hình khác nhau."
+          "Lựa chọn đa dụng dễ farm, dùng tốt khi linh hoạt đổi nhiều đội hình và doll khác nhau cùng sử dụng."
         ]
+      ],
+      "column_widths": [
+        180,
+        180,
+        180
       ]
     },
     {
@@ -160,44 +175,50 @@
       "rows": [
         [
           "1",
-          "Hidden Passion",
+          "Nhiệt Huyết Bí Mật",
           "Bắt đầu trận nhận ngay 1 điểm Confectance và 10 tầng Searing Flame.",
           "BẮT BUỘC: Giúp sạc Ult và tích tầng Tàn Lửa Rực Cháy cực nhanh ngay từ hiệp 1."
         ],
         [
           "3",
-          "Intertwined Dreams",
+          "Mộng Quẩn Quanh",
           "Khi robot Hunter Type-II trên sân, toàn đội tăng 7% sát thương Burn.",
           "Buff sát thương ổn định, duy trì gần như 100% suốt trận đấu."
         ],
         [
           "4",
-          "The Gentleness of an Angel",
+          "Thiên Sứ Dịu Dàng",
           "Xóa 1 hiệu ứng có lợi (Buff) của mục tiêu trước khi tung đòn tấn công chủ động.",
           "Rất mạnh khi đối đầu Boss có khiên giáp, né tránh hoặc tăng công."
         ],
         [
           "2 (Thay thế)",
-          "Pain Threshold",
+          "Ngưỡng Đau Đớn",
           "Kỹ năng thụ động Pyro Pulse từ robot gây thêm trạng thái Overburn cho mục tiêu trong 1 hiệp.",
           "Dùng thay thế FK4 nếu đội hình thiếu nguồn kích hoạt Overburn."
         ],
         [
           "5 (Tình huống)",
-          "The Stride of a Devil",
-          "Nhận hiệu ứng Tăng 3 ô Di chuyển (Movement Up III) khi bắt đầu trận.",
+          "Bước Đi Ác Quỷ",
+          "Nhận hiệu ứng Tăng Di chuyển III khi bắt đầu trận.",
           "Dùng trong các bản đồ rộng cần tiếp cận mục tiêu nhanh."
         ]
+      ],
+      "column_widths": [
+        180,
+        180,
+        180,
+        180
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Khóa Chung & Khóa Hảo Cảm (Common & Affinity Keys)"
+      "text": "Khóa Chung"
     },
     {
       "type": "paragraph",
-      "html": "• <b>Khóa Chung (Common Key)</b>: Tiếng Thở Dài Thỏa Mãn(Khóa riêng của Loreley): Tăng 5% ATK; khi có buff Burn tăng thêm 10% CRIT Rate. Ngoài ra có thể tận dụng khóa chung của Ksenia, Sharkry hoặc Littara.<br>• <b>Khóa Hảo Cảm (Affinity Key)</b>: Chưa Giao Ước: <b>+3% ATK / HP / CRIT</b>; Đã&nbsp;&nbsp;Giao Ước: <b>+5% ATK / HP / CRIT</b>."
+      "html": "• <b>Khóa Chung -&nbsp;Tiếng Thở Dài Thỏa Mãn</b>&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Loreley\" href=\"../characters/loreley.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/avatar.png\" alt=\"Loreley\" loading=\"lazy\">Loreley</a>&nbsp;<p>• <b>Khóa Chung - Chuông Tang&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Vector\" href=\"../characters/vector.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/vector/avatar.png\" alt=\"Vector\" loading=\"lazy\">Vector</a>&nbsp;</b></p><p>• <b>Khóa Chung - Dư Huy&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Tololo\" href=\"../characters/tololo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/tololo/avatar.png\" alt=\"Tololo\" loading=\"lazy\">Tololo</a>&nbsp;</b><b></b></p>"
     },
     {
       "type": "heading",
@@ -219,7 +240,7 @@
     },
     {
       "type": "paragraph",
-      "html": "<b>Lưu ý thứ tự hành động:</b> Loreley luôn cần đi lượt <b>đầu tiên</b> trong đội hình để tạo địa hình Thiêu đốt, dựng robot Hunter Type-II cấp buff ATK và tích tầng trước khi các DPS xả sát thương."
+      "html": "<b>Lưu ý thứ tự hành động:</b> Loreley luôn cần đi lượt <b>đầu tiên</b> trong đội hình để tạo địa hình <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Thiêu Rụi: Áp dụng Điểm Yếu Thiêu Đốt lên kẻ địch đứng trên ô này. Khi kết thúc hành động, áp dụng Tràn Lửa và Tự Thiêu trong 2 hiệp lên kẻ địch kết thúc hành động trên khu vực. Ô địa hình loại Thiêu Đốt.\" data-effect-id=\"effect_309ecd97c70c\" data-effect=\"Thiêu Rụi\" data-effect-en=\"Incineration\" data-text-en=\"Incineration\" data-type=\"effect\" data-desc=\"Áp dụng Điểm Yếu Thiêu Đốt lên kẻ địch đứng trên ô này. Khi kết thúc hành động, áp dụng Tràn Lửa và Tự Thiêu trong 2 hiệp lên kẻ địch kết thúc hành động trên khu vực. Ô địa hình loại Thiêu Đốt.\" data-desc-en=\"Applies Burn weakness on the enemy standing on it. Applies Overburn and Conflagration that lasts for 2 turns on the enemy standing on it at the end of the action. This tile is considered as a Burn type tile\" tabindex=\"0\">Thiêu Rụi</span>, dựng robot Hunter Type-II cấp buff ATK và tích tầng trước khi các DPS xả sát thương."
     },
     {
       "type": "table",
@@ -239,6 +260,11 @@
           "Hiệp 1:&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Ân Điển Đau Đớn: Chọn 1 ô địa hình trống trong &lt;color=#f26c1c&gt;phạm vi 5 ô xung quanh&lt;/color&gt;, gây ST Thiêu Đốt AoE bằng &lt;color=#f26c1c&gt;90%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 3 ô xung quanh&lt;/color&gt; ô địa hình đó, đồng thời tạo ra ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt; và triệu hồi &lt;color=#3487e0&gt;Thợ Săn-II&lt;/color&gt; trong phạm vi đó. Nếu có &lt;color=#3487e0&gt;Thợ Săn-II&lt;/color&gt; tồn tại, triệu hồi lại ở vị trí mới. Áp dụng &lt;color=#3487e0&gt;Điệp Vũ Cộng Sinh&lt;/color&gt; cho bản thân và Doll dồng minh gần nhất và hủy bỏ hiệu ứng &lt;color=#3487e0&gt;Dẫn Dụ&lt;/color&gt; cho tất cả đơn vị đồng minh.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/ult-icon.png\" alt=\"Ân Điển Đau Đớn\" loading=\"lazy\">Ân Điển Đau Đớn</span>&nbsp; -&gt;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tuyên Cáo Trói Buộc: Chọn tất cả mục tiêu địch trong &lt;color=#f26c1c&gt;4 ô xung quanh&lt;/color&gt; gây ST bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công loại ST Thiêu Đốt, lượng ST này do tất cả mục tiêu trong phạm vi chia sẻ. Nếu bản thân có &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt;, lượng ST không san sẻ và tạo ra ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill3-icon.png\" alt=\"Tuyên Cáo Trói Buộc\" loading=\"lazy\">Tuyên Cáo Trói Buộc</span>&nbsp;<br>Hiệp 2, 3: <span class=\"guide-inline-ref guide-inline-skill\" title=\"Tuyên Cáo Trói Buộc: Chọn tất cả mục tiêu địch trong &lt;color=#f26c1c&gt;4 ô xung quanh&lt;/color&gt; gây ST bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công loại ST Thiêu Đốt, lượng ST này do tất cả mục tiêu trong phạm vi chia sẻ. Nếu bản thân có &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt;, lượng ST không san sẻ và tạo ra ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill3-icon.png\" alt=\"Tuyên Cáo Trói Buộc\" loading=\"lazy\">Tuyên Cáo Trói Buộc</span>&nbsp;-&gt;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Vết Sẹo Rực Cháy: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 9 ô xung quanh&lt;/color&gt;, gây ST Thiêu Đốt bằng &lt;color=#f26c1c&gt;130%&lt;/color&gt; Tấn Công. Nếu bản thân có &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt; hệ số ST nhân đôi, đồng thời nhận &lt;color=#3487e0&gt;Nhìn Thấu&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;2 hiệp&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill2-icon.png\" alt=\"Vết Sẹo Rực Cháy\" loading=\"lazy\">Vết Sẹo Rực Cháy</span>&nbsp;<br>-&gt;Lặp lại.",
           "Extra Action ở V2 tính là 1 hiệp mới giúp hồi ngay 1 lượt cooldown. Không cần dùng đánh thường nữa, xả kỹ năng liên tục."
         ]
+      ],
+      "column_widths": [
+        80,
+        229,
+        144
       ]
     },
     {
@@ -265,7 +291,7 @@
     },
     {
       "type": "paragraph",
-      "html": "• <b>Có nên roll không?:</b> <b>NÊN ROLL</b>. Loreley là mảnh ghép không thể thiếu của hệ Hỏa và là một trong những hỗ trợ toàn diện nhất game.<br>• <b>F2P / Thẻ tháng:</b> Dừng ở <b>V0</b> là đã đủ để gánh toàn bộ content team lửa, <b>V2R0 </b>nếu có thể.<br>• <b>Đua&nbsp;Meta:</b>&nbsp;<b>V2</b>&nbsp;kèm Trấn. <b>V6</b> tăng dmg với Whale."
+      "html": "• <b>Có nên roll không?:</b> <b>NÊN ROLL</b>. Loreley là mảnh ghép không thể thiếu của hệ Hỏa và là một trong những hỗ trợ đa năng nhất game khi lên V2.<br>• <b>F2P / Thẻ tháng:</b> Dừng ở <b>V0</b> là đã đủ để gánh toàn bộ content team lửa, <b>V2R0 </b>nếu có thể.<br>• <b>Đua&nbsp;Meta:</b>&nbsp;<b>V2</b>&nbsp;kèm Trấn. <b>V6</b> tăng dmg với Whale."
     }
   ]
 }

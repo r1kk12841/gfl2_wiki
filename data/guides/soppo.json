@@ -8,7 +8,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "Tổng quan (Overview)"
+      "text": "Tổng quan"
     },
     {
       "type": "char_card",
@@ -16,7 +16,7 @@
     },
     {
       "type": "paragraph",
-      "html": "<b>Soppo</b> là Sentinel song hệ&nbsp;<b>Băng Kết / Thiêu Đốt</b>, dùng Súng Trường Tấn Công và Đạn Vừa. Bộ kỹ năng đổi giữa <b>Chế Độ Chó Săn</b> và <b>Chế Độ Chó Điên</b>, tạo ô Băng Giá hoặc Thiêu Rụi, tích Ấn Săn cho Ult và dùng Nhân Tố Cuồng Bạo để tăng dần sức mạnh. Soppo mạnh nhất khi đội hình duy trì ô địa hình Dị Vị và đáp ứng điều kiện đồng đội Băng Kết hoặc Thiêu Đốt."
+      "html": "<b>Soppo</b> là Sentinel song hệ&nbsp;<b>Băng Kết / Thiêu Đốt</b>, dùng Súng Trường Tấn Công và Đạn Vừa. Bộ kỹ năng đổi giữa <b><span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Chế Độ Chó Săn: Khi ở dạng này, một số kỹ năng gây ST Băng Kết. Có thể chuyển sang Chế Độ Chó Điên.\" data-effect-id=\"effect_731a96515b90\" data-effect=\"Chế Độ Chó Săn\" data-effect-en=\"Hunting Hound Mode\" data-text-en=\"Hunting Hound Mode\" data-type=\"effect\" data-desc=\"Khi ở dạng này, một số kỹ năng gây ST Băng Kết. Có thể chuyển sang Chế Độ Chó Điên.\" data-desc-en=\"While in this state, certain skills deal Freeze damage. Can switch to Mad Dog Mode.\" tabindex=\"0\">Chế Độ Chó Săn</span>&nbsp;</b> và <b><span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Chế Độ Chó Điên: Khi ở dạng này, một số kỹ năng gây ST Thiêu Đốt. Có thể chuyển sang Chế Độ Chó Săn.\" data-effect-id=\"effect_5ae2c6eed3cb\" data-effect=\"Chế Độ Chó Điên\" data-effect-en=\"Mad Dog Mode\" data-text-en=\"Mad Dog Mode\" data-type=\"effect\" data-desc=\"Khi ở dạng này, một số kỹ năng gây ST Thiêu Đốt. Có thể chuyển sang Chế Độ Chó Săn.\" data-desc-en=\"While in this state, certain skills deal Burn damage. Can switch to Hunting Hound Mode.\" tabindex=\"0\">Chế Độ Chó Điên</span>&nbsp;</b>, tạo ô <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Sương Đông: Áp dụng hiệu ứng Ngưng Tụ kéo dài 2 lượt lên kẻ địch kết thúc lượt trên loại ô này. Kẻ địch đứng trên ô địa hình này sẽ được gán điểm yếu Băng Kết. Ô địa hình Băng Kết.\" data-effect-id=\"effect_6032a672e309\" data-effect=\"Sương Đông\" data-effect-en=\"Frost\" data-text-en=\"Frost\" data-type=\"effect\" data-desc=\"Áp dụng hiệu ứng Ngưng Tụ kéo dài 2 lượt lên kẻ địch kết thúc lượt trên loại ô này. Kẻ địch đứng trên ô địa hình này sẽ được gán điểm yếu Băng Kết. Ô địa hình Băng Kết.\" data-desc-en=\"Applies Frozen to enemy units which end their movement in this area for 2 turns. Enemy units in this area gain a weakness to Freeze damage and this area is considered as Freeze tiles.\" tabindex=\"0\">Sương Đông</span>&nbsp; hoặc <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Thiêu Rụi: Áp dụng Điểm Yếu Thiêu Đốt lên kẻ địch đứng trên ô này. Khi kết thúc hành động, áp dụng Tràn Lửa và Tự Thiêu trong 2 hiệp lên kẻ địch kết thúc hành động trên khu vực. Ô địa hình loại Thiêu Đốt.\" data-effect-id=\"effect_309ecd97c70c\" data-effect=\"Thiêu Rụi\" data-effect-en=\"Incineration\" data-text-en=\"Incineration\" data-type=\"effect\" data-desc=\"Áp dụng Điểm Yếu Thiêu Đốt lên kẻ địch đứng trên ô này. Khi kết thúc hành động, áp dụng Tràn Lửa và Tự Thiêu trong 2 hiệp lên kẻ địch kết thúc hành động trên khu vực. Ô địa hình loại Thiêu Đốt.\" data-desc-en=\"Applies Burn weakness on the enemy standing on it. Applies Overburn and Conflagration that lasts for 2 turns on the enemy standing on it at the end of the action. This tile is considered as a Burn type tile\" tabindex=\"0\">Thiêu Rụi</span>&nbsp;, tích Ấn Săn cho Ult và dùng <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Nhân Tố Cuồng Bạo: Tăng 5% sát thương Bạo Kích. Có thể cộng dồn. Thuộc loại Buff và không thể giải trừ.\" data-effect-id=\"effect_fb8802d4262c\" data-effect=\"Nhân Tố Cuồng Bạo\" data-effect-en=\"Rabid Factor\" data-text-en=\"Rabid Factor\" data-type=\"buff\" data-desc=\"Tăng 5% sát thương Bạo Kích. Có thể cộng dồn. Thuộc loại Buff và không thể giải trừ.\" data-desc-en=\"Increases critical damage dealt by 5%. Can stack up to 10 times. Considered a buff and cannot be cleansed.\" tabindex=\"0\">Nhân Tố Cuồng Bạo</span>&nbsp; để tăng dần sức mạnh. Soppo mạnh nhất khi đội hình duy trì ô địa hình Dị Vị và đáp ứng điều kiện đồng đội Băng Kết hoặc Thiêu Đốt."
     },
     {
       "type": "paragraph",
@@ -25,11 +25,11 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "Đột phá & Cung mệnh (Fortifications)"
+      "text": "Các Mốc Đầu Tư"
     },
     {
       "type": "paragraph",
-      "html": "<b>Điểm dừng:</b> <b>V0</b> đã có bộ kit hoàn chỉnh; <b>V1</b> là nâng cấp sớm hiệu quả nhất nhờ hệ số 130% và đổi Chỉ Lệnh Bổ Sung thành Tăng Hành Động ở Chế Độ Chó Săn. <b>V6</b> là mốc đầu tư cao, tăng tốc tích Nhân Tố và cường hóa toàn bộ cơ chế. Biểu đồ cộng đồng ước tính V1R1 đạt 117% và V6R1 đạt 288% sát thương tương đối so với V0R1; đây là benchmark đội hình cụ thể, không phải hệ số chính thức."
+      "html": "<b>Điểm dừng:</b> <b>V0</b> đã có bộ kit hoàn chỉnh; <b>V1</b> là nâng cấp sớm hiệu quả nhất nhờ hệ số 130% và đổi <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Chỉ Lệnh Bổ Sung: Có thể thực hiện các lệnh khác ngoài di chuyển.\" data-effect-id=\"effect_66241cc2ad8d\" data-effect=\"Chỉ Lệnh Bổ Sung\" data-effect-en=\"Extra Command\" data-text-en=\"Extra Command\" data-type=\"effect\" data-desc=\"Có thể thực hiện các lệnh khác ngoài di chuyển.\" data-desc-en=\"Commands other than movement can be executed.\" tabindex=\"0\">Chỉ Lệnh Bổ Sung</span>&nbsp; thành <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Tăng Hành Động: Có thể hành động nhiều lần trong hiệp đồng minh.\" data-effect-id=\"effect_22ef658d9460\" data-effect=\"Tăng Hành Động\" data-effect-en=\"Extra Action\" data-text-en=\"Extra Action\" data-type=\"buff\" data-desc=\"Có thể hành động nhiều lần trong hiệp đồng minh.\" data-desc-en=\"1 action can be taken.\" tabindex=\"0\">Tăng Hành Động</span>&nbsp; ở Chế Độ Chó Săn. <b>V6</b> là mốc đầu tư cao, tăng tốc tích Nhân Tố và cường hóa toàn bộ cơ chế. Biểu đồ cộng đồng ước tính V1R1 đạt 117% và V6R1 đạt 288% sát thương tương đối so với V0R1; đây là benchmark đội hình cụ thể, không phải hệ số chính thức."
     },
     {
       "type": "table",
@@ -46,12 +46,12 @@
         ],
         [
           "V1",
-          "<span class=\"guide-inline-ref guide-inline-skill\" title=\"Cắn Xé Ác Tính: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 6 ô&lt;/color&gt;, gây ST Băng Kết phạm vi bằng &lt;color=#f26c1c&gt;80%&lt;/color&gt; Tấn Công lên mục tiêu và tất cả mục tiêu địch trong bán kính &lt;color=#f26c1c&gt;3 ô&lt;/color&gt; xung quanh, đồng thời tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; duy trì &lt;color=#f26c1c&gt;2 hiệp&lt;/color&gt;. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, kỹ năng này chuyển sang gây ST Thiêu Đốt phạm vi và tạo các ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;. Soppo không nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill2-icon.png\" alt=\"Cắn Xé Ác Tính\" loading=\"lazy\">Cắn Xé Ác Tính</span>&nbsp;&nbsp;tăng hệ số lên 130%. Ở Chế Độ Chó Săn, nhận 2 Dấu Ấn sau tấn công và nhận Tăng Hành Động thay cho Chỉ Lệnh Bổ Sung.",
+          "<span class=\"guide-inline-ref guide-inline-skill\" title=\"Cắn Xé Ác Tính: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 6 ô&lt;/color&gt;, gây ST Băng Kết phạm vi bằng &lt;color=#f26c1c&gt;80%&lt;/color&gt; Tấn Công lên mục tiêu và tất cả mục tiêu địch trong bán kính &lt;color=#f26c1c&gt;3 ô&lt;/color&gt; xung quanh, đồng thời tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; duy trì &lt;color=#f26c1c&gt;2 hiệp&lt;/color&gt;. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, kỹ năng này chuyển sang gây ST Thiêu Đốt phạm vi và tạo các ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;. Soppo không nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill2-icon.png\" alt=\"Cắn Xé Ác Tính\" loading=\"lazy\">Cắn Xé Ác Tính</span>&nbsp;&nbsp;tăng hệ số lên 130%. Ở Chế Độ Chó Săn, nhận 2 Ấn Săn sau tấn công và nhận Tăng Hành Động thay cho Chỉ Lệnh Bổ Sung.",
           "Mốc giá trị cao nhất cho người muốn đầu tư ít."
         ],
         [
           "V2",
-          "<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tiếng Hú Đêm Trăng: Đáp xuống ô trống mang thuộc tính Băng Kết hoặc Thiêu Đốt được chọn trên chiến trường và áp dụng &lt;color=#3487e0&gt;Dấu Vết Tàn Sát&lt;/color&gt; cho tất cả Búp Bê đồng minh xung quanh trong bán kính &lt;color=#f26c1c&gt;8 ô&lt;/color&gt; (ngoại trừ bản thân Soppo) duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;, cho phép họ tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; xung quanh mục tiêu sau khi thực hiện tấn công chủ động; và sát thương gây ra cho các đơn vị địch đứng trên ô địa hình Dị Vị được tăng thêm. Sau kỹ năng này, Soppo chuyển sang &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;.\n\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, chuyển sang gây ST Thiêu Đốt phạm vi bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch xung quanh trong bán kính &lt;color=#f26c1c&gt;4 ô&lt;/color&gt;. Sát thương này được chia đều cho tất cả mục tiêu trong phạm vi hiệu lực. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Tăng Hành Động&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill3-icon.png\" alt=\"Tiếng Hú Đêm Trăng\" loading=\"lazy\">Tiếng Hú Đêm Trăng</span>&nbsp;&nbsp;gây 80% ATK lên 3 địch gần nhất khi đáp xuống ô Băng Giá/Thiêu Đốt; ô Tro Tàn gây cả Băng Kết lẫn Thiêu Đốt. Chế Độ Chó Điên nhận thêm 1 Dấu Ấn.",
+          "<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tiếng Hú Đêm Trăng: Đáp xuống ô trống mang thuộc tính Băng Kết hoặc Thiêu Đốt được chọn trên chiến trường và áp dụng &lt;color=#3487e0&gt;Dấu Vết Tàn Sát&lt;/color&gt; cho tất cả Búp Bê đồng minh xung quanh trong bán kính &lt;color=#f26c1c&gt;8 ô&lt;/color&gt; (ngoại trừ bản thân Soppo) duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;, cho phép họ tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; xung quanh mục tiêu sau khi thực hiện tấn công chủ động; và sát thương gây ra cho các đơn vị địch đứng trên ô địa hình Dị Vị được tăng thêm. Sau kỹ năng này, Soppo chuyển sang &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;.\n\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, chuyển sang gây ST Thiêu Đốt phạm vi bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch xung quanh trong bán kính &lt;color=#f26c1c&gt;4 ô&lt;/color&gt;. Sát thương này được chia đều cho tất cả mục tiêu trong phạm vi hiệu lực. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Tăng Hành Động&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill3-icon.png\" alt=\"Tiếng Hú Đêm Trăng\" loading=\"lazy\">Tiếng Hú Đêm Trăng</span>&nbsp;&nbsp;gây 80% ATK lên 3 địch gần nhất khi đáp xuống ô Băng Giá/Thiêu Đốt; ô Tro Tàn gây cả Băng Kết lẫn Thiêu Đốt. Chế Độ Chó Điên nhận thêm 1 Ấn Săn.",
           "Tăng burst dmg và tận dụng phản ứng ô Băng–Nhiệt."
         ],
         [
@@ -61,17 +61,17 @@
         ],
         [
           "V4",
-          "Buff điều kiện đội hình tăng sát thương lên 150%, không còn yêu cầu mục tiêu có debuff; nhận thêm 2 Dấu Ấn Vĩnh Viễn.",
+          "Buff điều kiện đội hình tăng sát thương lên 150%, không còn yêu cầu mục tiêu có debuff; nhận thêm 2 Ấn Săn vĩnh viễn.",
           "Nâng độ ổn định và bỏ điều kiện debuff khó duy trì."
         ],
         [
           "V5",
-          "Tuyệt Kỹ tăng lên số Dấu Ấn × 50% ATK; thêm 5% hệ số cho mỗi điểm Nhiên Liệu tiêu hao vượt mức, hồi 2 điểm sau dùng. Chặn Đánh tăng lên 60% và cho 2 Dấu Ấn.",
+          "Ult tăng lên số Dấu Ấn × 50% ATK; thêm 5% hệ số cho mỗi điểm Nhiên Liệu tiêu hao vượt mức, hồi 2 điểm sau dùng. Chặn Đánh tăng lên 60% và cho 2 Dấu Ấn.",
           "Bước nhảy lớn cho Ult và tích Dấu Ấn."
         ],
         [
           "V6",
-          "Đầu trận nhận 3 Nhân Tố, trần tăng 20 tầng, mỗi tấn công chủ động nhận thêm 1 tầng. Ở 20 tầng: Nhân Tố I bỏ qua 20% DEF, II tăng Băng Kết/Thiêu Đốt lên 10%, III tăng sát thương lên địch trên ô Dị Vị thành 30%.",
+          "Đầu trận nhận cả 3 Nhân Tố, trần tăng 20 tầng, mỗi tấn công chủ động nhận thêm 1 tầng. Ở 20 tầng: Nhân Tố I bỏ qua 20% DEF, II tăng Băng Kết/Thiêu Đốt lên 10%, III tăng sát thương lên địch trên ô Dị Vị thành 30%.",
           "Mốc tối đa dành cho đầu tư cao; ước tính V6R1 = 288% V0R1."
         ]
       ],
@@ -84,7 +84,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "Trang bị Vũ khí (Weapons)"
+      "text": "Vũ khí"
     },
     {
       "type": "paragraph",
@@ -133,7 +133,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "Phụ kiện & Chỉ số (Attachments)"
+      "text": "Phụ kiện & Chỉ số"
     },
     {
       "type": "paragraph",
@@ -232,7 +232,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "Dữ liệu Tái ĐỊnh Hình & Lõi"
+      "text": "Dữ liệu Tái Định Hình & Lõi"
     },
     {
       "type": "paragraph",

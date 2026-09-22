@@ -2502,7 +2502,7 @@
   },
   "effect_bbb69c2d08e3": {
     "id": "effect_bbb69c2d08e3",
-    "name": "Xung Hỏa Lân Hỏa",
+    "name": "Xung Lân Hỏa",
     "name_en": "Pyro Pulse",
     "desc": "Khiến tất cả kẻ địch trong phạm vi 5 ô xung quanh chịu ST Thiêu Đốt AoE bằng 40% Tấn Công, giải trừ 1 Debuff của tất cả đồng minh, hồi phục 2 điểm Chỉ Số Ổn Định và khiến mục tiêu nhận 3 điểm Lửa Thiêu Đốt.",
     "desc_en": "Deals Aoe Burn damage equivalent to 40% ATK to all enemies within 5 tile radius, dispels 1 debuff from all allies, recovers 2 Stability points to all allies, grants 3 Searing Flame points.",

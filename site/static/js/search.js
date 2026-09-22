@@ -617,6 +617,23 @@
       .trim();
   }
 
+  function formatGuideReferenceText(value) {
+    let text = stripGuideGameMarkup(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+    text = text.replace(/\b(Freeze\s+[Dd]amage|ST\s+Băng(?:\s+Kết)?|Sát\s+[Tt]hương\s+Băng(?:\s+Kết)?)\b/g, '<span class="dmg-freeze">$1</span>');
+    text = text.replace(/\b(Burn\s+[Dd]amage|ST\s+Thiêu\s+Đốt|Sát\s+[Tt]hương\s+Thiêu\s+Đốt)\b/g, '<span class="dmg-burn">$1</span>');
+    text = text.replace(/\b(Corrosion\s+[Dd]amage|ST\s+Ăn\s+Mòn|Sát\s+[Tt]hương\s+Ăn\s+Mòn)\b/g, '<span class="dmg-corrosion">$1</span>');
+    text = text.replace(/\b(Hydro\s+[Dd]amage|ST\s+Hóa\s+Lỏng|Sát\s+[Tt]hương\s+Hóa\s+Lỏng)\b/g, '<span class="dmg-hydro">$1</span>');
+    text = text.replace(/\b(Electric\s+[Dd]amage|ST\s+Dẫn\s+Điện|Sát\s+[Tt]hương\s+Dẫn\s+Điện)\b/g, '<span class="dmg-electric">$1</span>');
+    text = text.replace(/\b(Physical\s+[Dd]amage|ST\s+Vật\s+Lý|Sát\s+[Tt]hương\s+Vật\s+Lý)\b/g, '<span class="dmg-physical">$1</span>');
+    text = text.replace(/\b(?:\d+(?:\.\d+)?%(?:\s*\/\s*)?)+/g, '<span class="val-highlight">$&</span>');
+    return text;
+  }
+
   function ensureLegacySkillPopover(trigger) {
     if (!trigger.classList.contains('guide-inline-skill') || trigger.querySelector('.guide-skill-popover')) return;
     const legacyTitle = stripGuideGameMarkup(trigger.getAttribute('title') || '');
@@ -638,6 +655,92 @@
     if (!trigger.hasAttribute('tabindex')) trigger.setAttribute('tabindex', '0');
   }
 
+  function enhanceGuideReferencePopover(trigger) {
+    const popover = trigger.querySelector(':scope > .guide-ref-popover');
+    if (!popover || popover.dataset.enhanced === 'true') return popover;
+
+    const isWeapon = trigger.classList.contains('guide-inline-weapon');
+    const name = popover.querySelector(isWeapon ? '.guide-weapon-popover-name' : '.guide-skill-popover-name');
+    const description = popover.querySelector(isWeapon ? '.guide-weapon-popover-desc' : '.guide-skill-popover-desc');
+    const sourceImage = isWeapon
+      ? popover.querySelector('.guide-weapon-popover-image')
+      : trigger.querySelector(':scope > .guide-inline-icon');
+
+    const isVi = document.documentElement.lang.toLowerCase().startsWith('vi');
+    const catalog = window.GFL2_I18N_VI || {};
+    const ui = catalog.ui || {};
+    let resolvedDescription = description?.textContent?.trim() || '';
+    let badgeLabel = isWeapon ? (isVi ? 'Vũ khí' : 'Weapon') : (isVi ? 'Kỹ năng' : 'Skill');
+
+    if (isWeapon && isVi) {
+      const href = trigger.getAttribute('href') || '';
+      const slugMatch = href.match(/\/weapons\/([^/?#]+)\.html/i);
+      const weapon = slugMatch ? catalog.weapons?.[decodeURIComponent(slugMatch[1])] : null;
+      if (weapon) {
+        badgeLabel = [weapon.rarity, weapon.weapon_type].filter(Boolean).join(' · ') || badgeLabel;
+        resolvedDescription = [
+          weapon.stats ? `Chỉ số\n${weapon.stats}` : '',
+          weapon.trait ? `Đặc tính\n${weapon.trait}` : '',
+          weapon.effect ? `Hiệu ứng\n${weapon.effect}` : resolvedDescription,
+        ].filter(Boolean).join('\n\n');
+      }
+    } else if (!isWeapon && isVi) {
+      const skillName = name?.textContent?.trim() || '';
+      let skill = null;
+      for (const character of Object.values(catalog.characters || {})) {
+        const candidates = [
+          ...(character?.skills || []),
+          ...(character?.summons || []).flatMap(summon => summon?.skills || []),
+        ];
+        skill = candidates.find(item => item?.name === skillName);
+        if (skill) break;
+      }
+      if (skill) {
+        const tags = (skill.tags || []).map(tag => ui.tags?.[tag] || tag).filter(Boolean);
+        if (tags.length) badgeLabel = tags[0];
+        const metadata = [
+          tags.length > 1 ? tags.slice(1).join(' · ') : '',
+          skill.cooldown != null ? `Hồi chiêu: ${skill.cooldown}` : '',
+          skill.confectance_cost != null ? `Nhiên liệu: ${skill.confectance_cost}` : '',
+          skill.range != null ? `Tầm bắn: ${skill.range}` : '',
+          skill.stability_damage != null ? `ST Ổn Định: ${skill.stability_damage}` : '',
+        ].filter(Boolean).join('  •  ');
+        resolvedDescription = [metadata, stripGuideGameMarkup(skill.description || resolvedDescription)].filter(Boolean).join('\n\n');
+      }
+    }
+
+    const header = document.createElement('span');
+    header.className = 'guide-popover-header';
+    const title = document.createElement('span');
+    title.className = `guide-popover-title ${isWeapon ? 'guide-weapon-popover-name' : 'guide-skill-popover-name'}`;
+    title.textContent = name?.textContent?.trim() || trigger.textContent.trim();
+    const badge = document.createElement('span');
+    badge.className = `guide-popover-badge ${isWeapon ? 'guide-popover-badge-weapon' : 'guide-popover-badge-skill'}`;
+    badge.textContent = badgeLabel;
+    header.append(title, badge);
+
+    const body = document.createElement('span');
+    body.className = `guide-popover-body${sourceImage ? ' has-media' : ''}`;
+    if (sourceImage) {
+      const image = sourceImage.cloneNode(true);
+      image.className = isWeapon ? 'guide-weapon-popover-image' : 'guide-skill-popover-image';
+      image.setAttribute('aria-hidden', 'true');
+      image.alt = '';
+      body.append(image);
+    }
+    const desc = document.createElement('span');
+    desc.className = `guide-popover-desc ${isWeapon ? 'guide-weapon-popover-desc' : 'guide-skill-popover-desc'}`;
+    desc.innerHTML = formatGuideReferenceText(resolvedDescription);
+    body.append(desc);
+
+    popover.replaceChildren(header, body);
+    popover.dataset.enhanced = 'true';
+    popover.setAttribute('role', 'tooltip');
+    popover.setAttribute('aria-hidden', 'true');
+    popover.setAttribute('tabindex', '0');
+    return popover;
+  }
+
   function positionGuideReferencePopover(trigger) {
     const popover = trigger.querySelector(':scope > .guide-ref-popover');
     if (!popover) return;
@@ -655,36 +758,67 @@
     const top = Math.max(viewportPadding, Math.min(unclampedTop, window.innerHeight - popoverRect.height - viewportPadding));
     popover.style.left = `${Math.round(left)}px`;
     popover.style.top = `${Math.round(top)}px`;
+    popover.setAttribute('aria-hidden', 'false');
   }
 
   function hideGuideReferencePopover(trigger) {
     const popover = trigger.querySelector(':scope > .guide-ref-popover');
     if (!popover) return;
     popover.classList.remove('is-open');
+    popover.setAttribute('aria-hidden', 'true');
     popover.style.removeProperty('left');
     popover.style.removeProperty('top');
   }
 
   function initGuideReferencePopovers() {
     const triggers = document.querySelectorAll('.guide-inline-weapon, .guide-inline-skill');
+    const hideTimers = new WeakMap();
+    const hideDelay = 700;
+    function cancelScheduledHide(trigger) {
+      const timer = hideTimers.get(trigger);
+      if (timer) window.clearTimeout(timer);
+      hideTimers.delete(trigger);
+    }
+    function scheduleHide(trigger, delay = hideDelay) {
+      cancelScheduledHide(trigger);
+      hideTimers.set(trigger, window.setTimeout(() => {
+        hideTimers.delete(trigger);
+        hideGuideReferencePopover(trigger);
+      }, delay));
+    }
     triggers.forEach((trigger) => {
       ensureLegacySkillPopover(trigger);
       const existingPopover = trigger.querySelector(':scope > .guide-weapon-popover, :scope > .guide-skill-popover');
       if (existingPopover) existingPopover.classList.add('guide-ref-popover');
-      trigger.addEventListener('pointerenter', () => positionGuideReferencePopover(trigger));
-      trigger.addEventListener('pointerleave', () => hideGuideReferencePopover(trigger));
-      trigger.addEventListener('focusin', () => positionGuideReferencePopover(trigger));
+      const popover = enhanceGuideReferencePopover(trigger);
+      if (!popover) return;
+      popover.addEventListener('pointerenter', () => cancelScheduledHide(trigger));
+      popover.addEventListener('pointerleave', () => scheduleHide(trigger));
+      popover.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+      });
+      trigger.addEventListener('pointerenter', () => {
+        cancelScheduledHide(trigger);
+        positionGuideReferencePopover(trigger);
+      });
+      trigger.addEventListener('pointerleave', () => scheduleHide(trigger));
+      trigger.addEventListener('focusin', () => {
+        cancelScheduledHide(trigger);
+        positionGuideReferencePopover(trigger);
+      });
       trigger.addEventListener('focusout', (event) => {
-        if (!trigger.contains(event.relatedTarget)) hideGuideReferencePopover(trigger);
+        if (!trigger.contains(event.relatedTarget)) scheduleHide(trigger, 250);
       });
     });
     let repositionFrame = 0;
     function repositionVisibleGuideReferencePopovers() {
       repositionFrame = 0;
       triggers.forEach((trigger) => {
-        const isActive = trigger.matches(':hover') || trigger.contains(document.activeElement);
+        const popover = trigger.querySelector(':scope > .guide-ref-popover');
+        const isActive = trigger.matches(':hover') || popover?.matches(':hover') || trigger.contains(document.activeElement);
         if (isActive) positionGuideReferencePopover(trigger);
-        else hideGuideReferencePopover(trigger);
+        else scheduleHide(trigger);
       });
     }
     function scheduleGuideReferenceReposition() {

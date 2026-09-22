@@ -271,6 +271,23 @@ def test_inline_reference_popovers_are_formatted_and_viewport_safe() -> None:
     assert "existingPopover.classList.add('guide-ref-popover')" in site_js
 
 
+def test_guide_reference_popovers_are_scrollable_complete_and_hoverable() -> None:
+    site_css = (ROOT / "site" / "static" / "css" / "style.css").read_text(encoding="utf-8")
+    site_js = (ROOT / "site" / "static" / "js" / "search.js").read_text(encoding="utf-8")
+
+    open_rule = site_css.split(".guide-ref-popover.is-open", 1)[1].split("}", 1)[0]
+    weapon_desc_rule = site_css.split(".guide-weapon-popover-desc", 1)[1].split("}", 1)[0]
+    assert "pointer-events: auto" in open_rule
+    assert "overflow-y: auto" in site_css
+    assert "-webkit-line-clamp" not in weapon_desc_rule
+    assert "const hideDelay = 700" in site_js
+    assert "popover.addEventListener('pointerenter'" in site_js
+    assert "weapon.stats" in site_js
+    assert "weapon.trait" in site_js
+    assert "weapon.effect" in site_js
+    assert "stripGuideGameMarkup(skill.description" in site_js
+
+
 def test_guide_popover_runtime_is_cache_busted_and_has_css_fallback() -> None:
     base_template = (ROOT / "site" / "templates" / "base.html").read_text(encoding="utf-8")
     build = (ROOT / "site" / "build.py").read_text(encoding="utf-8")

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}GFL2: Exilium Wiki{% endblock %}</title>
-  <meta name="description" content="{% block description %}Comprehensive Tactical Doll and Weapon database for Girls' Frontline 2: Exilium.{% endblock %}">
+  <meta name="description"
+    content="{% block description %}Comprehensive Tactical Doll and Weapon database for Girls' Frontline 2: Exilium.{% endblock %}">
   {% if canonical_url %}
   <link rel="canonical" href="{{ canonical_url }}">
   <meta property="og:url" content="{{ canonical_url }}">
@@ -12,7 +14,8 @@
   <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
   <meta property="og:description" content="{% block og_description %}{{ self.description() }}{% endblock %}">
   <meta property="og:type" content="{% block og_type %}website{% endblock %}">
-  <meta property="og:image" content="{% block og_image %}{% if site_url %}{{ site_url }}/assets/images/characters/groza/portrait.webp{% else %}{{ rel_prefix }}assets/images/characters/groza/portrait.webp{% endif %}{% endblock %}">
+  <meta property="og:image"
+    content="{% block og_image %}{% if site_url %}{{ site_url }}/assets/images/characters/groza/portrait.webp{% else %}{{ rel_prefix }}assets/images/characters/groza/portrait.webp{% endif %}{% endblock %}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ self.og_title() }}">
   <meta name="twitter:description" content="{{ self.og_description() }}">
@@ -35,21 +38,28 @@
         <span class="brand-badge">EXILIUM</span>
       </a>
 
-      <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu"
+        aria-expanded="false" aria-controls="nav-links">☰</button>
 
       <ul class="nav-links" id="nav-links">
-        <li><a href="{{ rel_prefix }}index.html" class="nav-link {% if active_page == 'home' %}active{% endif %}" data-i18n="nav_home">Home</a></li>
-        <li><a href="{{ rel_prefix }}characters/index.html" class="nav-link {% if active_page == 'characters' %}active{% endif %}" data-i18n="nav_dolls">Dolls</a></li>
-        <li><a href="{{ rel_prefix }}weapons/index.html" class="nav-link {% if active_page == 'weapons' %}active{% endif %}" data-i18n="nav_weapons">Weapons</a></li>
-        <li><a href="{{ rel_prefix }}faq.html" class="nav-link {% if active_page == 'faq' %}active{% endif %}" data-i18n="nav_faq">FAQ</a></li>
-        <li><a href="{{ rel_prefix }}guides/index.html" class="nav-link {% if active_page == 'guides' %}active{% endif %}" data-i18n="nav_guides">Guides</a></li>
+        <li><a href="{{ rel_prefix }}index.html" class="nav-link {% if active_page == 'home' %}active{% endif %}"
+            data-i18n="nav_home">Home</a></li>
+        <li><a href="{{ rel_prefix }}characters/index.html"
+            class="nav-link {% if active_page == 'characters' %}active{% endif %}" data-i18n="nav_dolls">Dolls</a></li>
+        <li><a href="{{ rel_prefix }}weapons/index.html"
+            class="nav-link {% if active_page == 'weapons' %}active{% endif %}" data-i18n="nav_weapons">Weapons</a></li>
+        <li><a href="{{ rel_prefix }}faq.html" class="nav-link {% if active_page == 'faq' %}active{% endif %}"
+            data-i18n="nav_faq">FAQ</a></li>
+        <li><a href="{{ rel_prefix }}guides/index.html"
+            class="nav-link {% if active_page == 'guides' %}active{% endif %}" data-i18n="nav_guides">Guides</a></li>
       </ul>
 
       {% if active_page != 'home' %}{% include 'search_input.html' %}{% endif %}
 
       <!-- Language Switcher -->
       <div class="nav-lang-switcher">
-        <button id="lang-toggle-btn" class="lang-switcher-btn" type="button" aria-label="Switch Language" title="Switch Language / Đổi Ngôn Ngữ">
+        <button id="lang-toggle-btn" class="lang-switcher-btn" type="button" aria-label="Switch Language"
+          title="Switch Language / Đổi Ngôn Ngữ">
           <span class="lang-icon">🌐</span>
           <span class="lang-opt" data-lang="en">EN</span>
           <span class="lang-divider">/</span>
@@ -71,15 +81,19 @@
         <div class="footer-brand">
           <p class="footer-brand-title"><strong data-i18n="footer_title">Girls' Frontline 2: Exilium Wiki</strong></p>
           <p class="footer-desc" data-i18n="footer_desc">
-            Community-compiled data. Game names, trademarks, and assets belong to their respective rights holders.
+            Data source compiled by the GFL2 Community. All game assets &copy; MICA Team / Sunborn Network.
           </p>
         </div>
         <div class="footer-disclaimer-box">
           <p class="footer-legal-text" data-i18n="footer_legal">
-            Disclaimer &amp; copyright notice: This is an unofficial, non-commercial, fan-made wiki and is not affiliated with, sponsored by, or endorsed by MICA Team, Sunborn Network, or the game's publishers. Girls' Frontline 2: Exilium and related names, logos, characters, images, audio, and other game assets remain the property of their respective rights holders. Materials are used in a limited manner for commentary, criticism, reference, and gameplay guidance; no ownership of those materials is claimed. Rights holders may contact us to request attribution, correction, or removal.
+            Disclaimer: This website is an unofficial, non-commercial community wiki created for gameplay guides,
+            reference, and tactical analysis. Girls' Frontline 2: Exilium, related character designs, images, and
+            trademarks are the intellectual property of MICA Team / Sunborn Network Co., Ltd. Content is utilized under
+            Fair Use principles.
           </p>
           <p class="footer-contact">
-            <span class="footer-contact-label" data-i18n="footer_contact_label">Copyright, feedback &amp; inquiries:</span>
+            <span class="footer-contact-label" data-i18n="footer_contact_label">Copyright, feedback &amp;
+              inquiries:</span>
             <a href="mailto:tranminh280401@gmail.com" class="footer-email-link">tranminh280401@gmail.com</a>
           </p>
         </div>
@@ -101,4 +115,5 @@
   <script src="{{ rel_prefix }}static/js/search.js?v={{ asset_version }}"></script>
   {% block extra_scripts %}{% endblock %}
 </body>
+
 </html>
