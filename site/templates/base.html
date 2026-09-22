@@ -67,17 +67,30 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <div>
-        <p><strong data-i18n="footer_title">Girls' Frontline 2: Exilium Wiki</strong></p>
-        <p style="margin-top:0.25rem; font-size:0.75rem; color:var(--text-muted);" data-i18n="footer_desc">
-          Data source compiled by the GFL2 Community. All game assets &copy; MICA Team / Sunborn Network.
-        </p>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <p class="footer-brand-title"><strong data-i18n="footer_title">Girls' Frontline 2: Exilium Wiki</strong></p>
+          <p class="footer-desc" data-i18n="footer_desc">
+            Data source compiled by the GFL2 Community. All game assets &copy; MICA Team / Sunborn Network.
+          </p>
+        </div>
+        <div class="footer-disclaimer-box">
+          <p class="footer-legal-text" data-i18n="footer_legal">
+            Disclaimer: This website is an unofficial, non-commercial community wiki created for gameplay guides, reference, and tactical analysis. Girls' Frontline 2: Exilium, related character designs, images, and trademarks are the intellectual property of MICA Team / Sunborn Network Co., Ltd. Content is utilized under Fair Use principles.
+          </p>
+          <p class="footer-contact">
+            <span class="footer-contact-label" data-i18n="footer_contact_label">Copyright, feedback &amp; inquiries:</span>
+            <a href="mailto:contact.gfl2wiki@gmail.com" class="footer-email-link">contact.gfl2wiki@gmail.com</a>
+          </p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="{{ rel_prefix }}characters/index.html" data-i18n="footer_dolls">Tactical Dolls</a>
-        <a href="{{ rel_prefix }}weapons/index.html" data-i18n="footer_weapons">Armory</a>
-        <a href="{{ rel_prefix }}faq.html" data-i18n="footer_faq">FAQ</a>
-        <a href="https://dandegate.net/dolls" target="_blank" rel="noopener">Dandegate</a>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <a href="{{ rel_prefix }}characters/index.html" data-i18n="footer_dolls">Tactical Dolls</a>
+          <a href="{{ rel_prefix }}weapons/index.html" data-i18n="footer_weapons">Armory</a>
+          <a href="{{ rel_prefix }}faq.html" data-i18n="footer_faq">FAQ</a>
+          <a href="https://dandegate.net/dolls" target="_blank" rel="noopener">Dandegate</a>
+        </div>
       </div>
     </div>
   </footer>

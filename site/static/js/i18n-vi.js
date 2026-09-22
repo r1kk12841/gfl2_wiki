@@ -157,7 +157,9 @@ window.GFL2_I18N_VI = {
     "table_upgrade": "Hiệu ứng nâng cấp",
     "table_key": "Chìa khóa",
     "table_required": "Cấp yêu cầu",
-    "table_key_effect": "Hiệu ứng chìa khóa"
+    "table_key_effect": "Hiệu ứng chìa khóa",
+    "footer_legal": "Tuyên bố miễn trừ trách nhiệm & Bản quyền: Trang web này là cơ sở dữ liệu phi thương mại do cộng đồng người hâm mộ phát triển, phục vụ mục đích hướng dẫn, tra cứu thông tin và phân tích chiến thuật. Trò chơi Girls' Frontline 2: Exilium cùng hình ảnh, âm thanh, nhân vật và thương hiệu liên quan thuộc quyền sở hữu trí tuệ của MICA Team / Sunborn Network Co., Ltd. Mọi tài nguyên được trích dẫn và sử dụng theo nguyên tắc Sử Dụng Hợp Lý (Fair Use).",
+    "footer_contact_label": "Liên hệ & khiếu nại bản quyền:"
   },
   "weapons": {
     "guerno": {

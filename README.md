@@ -109,3 +109,10 @@ python -m piptools compile requirements.in -o requirements.txt
 ## Credits
 
 Source data compiled by the GFL2 community. See the `Home` tab of the source spreadsheet for full credits.
+
+## Disclaimer, Legal & Contact
+
+- **Copyright Notice**: Girls' Frontline 2: Exilium and all related assets, characters, artwork, audio, and trademarks are property of MICA Team / Sunborn Network Co., Ltd.
+- **Legal & Fair Use**: This website is an unofficial, non-commercial community wiki created for gameplay guides, reference, and tactical analysis. Content is utilized under Fair Use principles.
+- **Contact & Inquiries**: For copyright claims, corrections, or community inquiries, please reach out via email: [contact.gfl2wiki@gmail.com](mailto:contact.gfl2wiki@gmail.com).
+
