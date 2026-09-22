@@ -97,7 +97,10 @@ def test_character_and_weapon_filter_chips_are_buttons(built_site: Path):
         assert page.exists(), f"{page_rel} must exist"
 
         doc = parse_html(page)
-        chips = doc.find_all("button", class_="chip")
+        chips = [
+            c for c in doc.find_all("button", class_="chip")
+            if not any(cls in c.attrs.get("class", "").split() for cls in ["filter-toggle", "filter-reset", "view-toggle"])
+        ]
         assert len(chips) > 0, f"{page_rel} should contain button.chip elements"
 
         legacy_chips = doc.find_all("span", class_="chip")

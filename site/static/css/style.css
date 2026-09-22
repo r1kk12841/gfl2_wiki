@@ -710,7 +710,8 @@ a.badge-server:hover {
   gap: 0.4rem;
 }
 
-.chip {
+.chip,
+.filter-toolbar button {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
@@ -726,7 +727,8 @@ a.badge-server:hover {
   text-align: center;
 }
 
-.chip:hover {
+.chip:hover,
+.filter-toolbar button:hover {
   background: var(--bg-card-hover);
   color: var(--text-primary);
   border-color: rgba(255, 255, 255, 0.2);

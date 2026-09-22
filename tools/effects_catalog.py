@@ -278,6 +278,23 @@ EFFECT_ALIASES: dict[str, str] = {
     "rabid factor ii": "effect_d7b3752f7c62",
     "rabid factor iii": "effect_020d65de45b5",
     "boreal assault": "effect_a3b66642114a",
+    # Additional skill and effect aliases
+    "dẫn nhiệt": "effect_db167f6762f6",  # Truyền Nhiệt Năng / Thermal Conduction
+    "khói": "effect_028f2cb637bd",  # Ô địa hình Khói Mù / Smoke
+    "mưu tính định sẵn": "effect_ef41b94c55cb",  # Điểm Khảo Sát / Analytical Value
+    "dấu ấn tận diệt": "effect_c0be876334a8",  # Dấu Ấn Vận Rủi / Doom Mark
+    "vũ điệu cộng sinh": "effect_53309dbd52e6",  # Điệp Vũ Cộng Sinh / Symbiotic Dance
+    "xung lân hỏa": "effect_bbb69c2d08e3",  # Xung Hỏa Lân Hỏa / Pyro Pulse
+    "phòng ngự ban đầu": "effect_e102b22dc944",  # Phòng Thủ Tăng III / Defense Up III
+    "súng bắn tỉa": "effect_02a8c2402c1a",  # Thợ Săn-II / Hunter Type - II
+    "tiếng vàng điệu ngọc": "effect_221b75185057",  # Chỉnh Âm / Tuning
+    "âm vang mê hoặc": "effect_1c4b0835d885",  # Định Âm / Pitch Perfect
+    "giao thức gia cố": "effect_cf0a24df6173",  # Phụ Kiện Chịu Lực / Load-Bearing Parts
+    "giao thức phá dỡ": "effect_eda7bd6275a7",  # Khe Nứt Ứng Lực / Stress Fracture
+    "giao thức phá hủy": "effect_eda7bd6275a7",  # Khe Nứt Ứng Lực / Stress Fracture
+    "truy kích nanh thú": "effect_fa8f59c100ac",  # Ấn Săn / Hunting Mark
+    "cắn xé ác tính": "effect_fa8f59c100ac",  # Ấn Săn / Hunting Mark
+    "tiếng hú đêm trăng": "effect_725efe82415d",  # Dấu Ấn Săn Mồi Vĩnh Viễn / Permanent Hunting Mark
 }
 
 

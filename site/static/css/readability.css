@@ -42,7 +42,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 .doll-name { font-size: 1rem; }
 .doll-meta { font-size: .8125rem; flex-wrap: wrap; }
 .filter-toolbar { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .75rem; }
-.filter-toolbar .chip { min-height: 44px; }
+.filter-toolbar button { min-height: 44px; }
 .filter-reset:disabled { opacity: .55; cursor: default; }
 .view-toggle { margin-left: auto; }
 .view-toggle[aria-pressed="true"] { border-color: var(--accent-cyan); color: var(--accent-cyan); }
