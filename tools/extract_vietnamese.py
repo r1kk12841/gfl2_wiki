@@ -35,7 +35,7 @@ UI_DICTIONARY = {
     "brand_sub": "EXILIUM",
     "search_placeholder": "Tìm kiếm nhân vật, vũ khí…",
     "footer_title": "Girls' Frontline 2: Exilium Wiki — Tham khảo dữ liệu cộng đồng.",
-    "footer_desc": "Dữ liệu được tổng hợp bởi cộng đồng GFL2. Mọi tài nguyên trò chơi thuộc bản quyền của MICA Team / Sunborn Network.",
+    "footer_desc": "Dữ liệu do cộng đồng GFL2 tổng hợp. Tên trò chơi, nhãn hiệu và tài sản trò chơi thuộc về các chủ thể quyền tương ứng.",
     "footer_dolls": "Nhân Vật Tác Chiến",
     "footer_weapons": "Kho Vũ Khí",
     "footer_faq": "Hỏi Đáp",

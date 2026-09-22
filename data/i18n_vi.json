@@ -7,7 +7,7 @@
     "brand_sub": "EXILIUM",
     "search_placeholder": "Tìm kiếm nhân vật, vũ khí…",
     "footer_title": "Girls' Frontline 2: Exilium Wiki — Tham khảo dữ liệu cộng đồng.",
-    "footer_desc": "Dữ liệu được tổng hợp bởi cộng đồng GFL2. Mọi tài nguyên trò chơi thuộc bản quyền của MICA Team / Sunborn Network.",
+    "footer_desc": "Dữ liệu do cộng đồng GFL2 tổng hợp. Tên trò chơi, nhãn hiệu và tài sản trò chơi thuộc về các chủ thể quyền tương ứng.",
     "footer_dolls": "Nhân Vật Tác Chiến",
     "footer_weapons": "Kho Vũ Khí",
     "footer_faq": "Hỏi Đáp",
@@ -157,7 +157,7 @@
     "table_key": "Chìa khóa",
     "table_required": "Cấp yêu cầu",
     "table_key_effect": "Hiệu ứng chìa khóa",
-    "footer_legal": "Tuyên bố miễn trừ trách nhiệm & Bản quyền: Trang web này là cơ sở dữ liệu phi thương mại do cộng đồng người hâm mộ phát triển, phục vụ mục đích hướng dẫn, tra cứu thông tin và phân tích chiến thuật. Trò chơi Girls' Frontline 2: Exilium cùng hình ảnh, âm thanh, nhân vật và thương hiệu liên quan thuộc quyền sở hữu trí tuệ của MICA Team / Sunborn Network Co., Ltd. Mọi tài nguyên được trích dẫn và sử dụng theo nguyên tắc Sử Dụng Hợp Lý (Fair Use).",
+    "footer_legal": "Tuyên bố miễn trừ trách nhiệm & bản quyền: Đây là wiki phi chính thức, phi thương mại do người hâm mộ thực hiện; không liên kết, được tài trợ hoặc xác nhận bởi MICA Team, Sunborn Network hay các nhà phát hành trò chơi. Girls' Frontline 2: Exilium cùng tên gọi, logo, nhân vật, hình ảnh, âm thanh và các tài sản trò chơi liên quan thuộc về các chủ thể quyền tương ứng. Tài liệu chỉ được sử dụng ở phạm vi giới hạn cho mục đích bình luận, phê bình, tra cứu và hướng dẫn trò chơi; trang web không tuyên bố quyền sở hữu đối với các tài liệu đó. Chủ thể quyền có thể liên hệ để yêu cầu ghi nguồn, chỉnh sửa hoặc gỡ bỏ.",
     "footer_contact_label": "Liên hệ & khiếu nại bản quyền:"
   },
   "weapons": {

@@ -112,7 +112,6 @@ Source data compiled by the GFL2 community. See the `Home` tab of the source spr
 
 ## Disclaimer, Legal & Contact
 
-- **Copyright Notice**: Girls' Frontline 2: Exilium and all related assets, characters, artwork, audio, and trademarks are property of MICA Team / Sunborn Network Co., Ltd.
-- **Legal & Fair Use**: This website is an unofficial, non-commercial community wiki created for gameplay guides, reference, and tactical analysis. Content is utilized under Fair Use principles.
-- **Contact & Inquiries**: For copyright claims, corrections, or community inquiries, please reach out via email: [contact.gfl2wiki@gmail.com](mailto:contact.gfl2wiki@gmail.com).
-
+- **Copyright Notice**: Girls' Frontline 2: Exilium and related names, logos, characters, artwork, audio, and other game assets remain the property of their respective rights holders.
+- **Legal Notice**: This is an unofficial, non-commercial, fan-made wiki and is not affiliated with, sponsored by, or endorsed by MICA Team, Sunborn Network, or the game's publishers. Materials are used in a limited manner for commentary, criticism, reference, and gameplay guidance; no ownership of those materials is claimed. Whether a particular use qualifies for a copyright exception depends on the applicable law and the specific circumstances.
+- **Contact & Inquiries**: Rights holders and community members may request attribution, correction, or removal via [tranminh280401@gmail.com](mailto:tranminh280401@gmail.com).

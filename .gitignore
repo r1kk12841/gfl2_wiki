@@ -27,3 +27,5 @@ image/
 *.lock
 data/.editor-write.lock
 scratch_*.py
+.agent/
+.agents/
