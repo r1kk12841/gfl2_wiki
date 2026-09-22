@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GFL2 Exilium Wiki — Editor Tools Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --card-border: #30363d;
+      --card-hover-border: #58a6ff;
+      --text: #c9d1d9;
+      --text-heading: #f0f6fc;
+      --text-muted: #8b949e;
+      --primary: #238636;
+      --primary-hover: #2ea043;
+      --accent: #58a6ff;
+      --danger: #f85149;
+      --status-ok: #3fb950;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      max-width: 680px;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      color: var(--text-heading);
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      background: rgba(48, 54, 61, 0.4);
+      border: 1px solid var(--card-border);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #dbab09;
+      box-shadow: 0 0 8px currentColor;
+    }
+
+    .status-ok .status-dot { background: var(--status-ok); color: var(--status-ok); }
+    .status-error .status-dot { background: var(--danger); color: var(--danger); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+      gap: 1.5rem;
+      max-width: 1020px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      border-color: var(--card-hover-border);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .card-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .banner-warning {
+      background: rgba(248, 81, 73, 0.15);
+      border: 1px solid var(--danger);
+      color: #ff7b72;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      max-width: 680px;
+      width: 100%;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      display: none;
+    }
+
+    .banner-warning code {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    footer {
+      margin-top: 3.5rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GFL2 Editor Tools Hub</h1>
+    <p class="subtitle">Trung tâm quản trị nội dung dữ liệu cho Girls' Frontline 2: Exilium Wiki</p>
+    <div id="status-badge" class="status-badge">
+      <span class="status-dot"></span>
+      <span id="status-text">Đang kiểm tra kết nối server…</span>
+    </div>
+  </header>
+
+  <div id="wrong-server-banner" class="banner-warning">
+    <strong>⚠️ Cảnh báo:</strong> Bạn đang mở Hub từ static server hoặc sai origin. Hãy chạy lệnh sau trong terminal và mở URL <code>127.0.0.1:8000</code>:
+    <div style="margin-top: 0.5rem;"><code>.venv\Scripts\python.exe tools\start_editors.py</code></div>
+  </div>
+
+  <main class="grid">
+    <a href="/tools/data-entry/index.html" class="card">
+      <div>
+        <div class="card-icon">📋</div>
+        <h2 class="card-title">Data Entry Tool</h2>
+        <p class="card-desc">Chỉnh sửa thông số nhân vật, kỹ năng, tra cứu đối chiếu song ngữ EN và VI, đồng bộ bundle nhân vật an toàn.</p>
+      </div>
+      <span class="card-action">Mở Data Entry &rarr;</span>
+    </a>
+
+    <a href="/tools/effect_editor/index.html" class="card">
+      <div>
+        <div class="card-icon">✨</div>
+        <h2 class="card-title">Effect Editor</h2>
+        <p class="card-desc">Quản lý danh mục hiệu ứng, chỉnh sửa bản dịch tiếng Việt, phân loại buff/debuff và thêm/xóa hiệu ứng con liên kết.</p>
+      </div>
+      <span class="card-action">Mở Effect Editor &rarr;</span>
+    </a>
+
+    <a href="/tools/guide-editor/index.html" class="card">
+      <div>
+        <div class="card-icon">📖</div>
+        <h2 class="card-title">Guide Editor</h2>
+        <p class="card-desc">Soạn thảo cẩm nang chiến thuật, hướng dẫn nâng cấp tâm trí, trang bị và đội hình chiến thuật cho nhân vật.</p>
+      </div>
+      <span class="card-action">Mở Guide Editor &rarr;</span>
+    </a>
+  </main>
+
+  <footer>
+    <p>Origin: <code>127.0.0.1:8000</code> &bull; Unified Transaction Engine &bull; GFL2 Community</p>
+  </footer>
+
+  <script>
+    async function checkHealth() {
+      const badge = document.getElementById('status-badge');
+      const text = document.getElementById('status-text');
+      const banner = document.getElementById('wrong-server-banner');
+
+      try {
+        const resp = await fetch('/api/health', { cache: 'no-store' });
+        if (!resp.ok) throw new Error('Status ' + resp.status);
+        const data = await resp.json();
+        if (data && data.service === 'gfl2-editor-server') {
+          badge.className = 'status-badge status-ok';
+          text.textContent = 'Đã kết nối Editor Server v' + data.api_version;
+          banner.style.display = 'none';
+          return;
+        }
+        throw new Error('Service mismatch');
+      } catch (err) {
+        badge.className = 'status-badge status-error';
+        text.textContent = 'Chưa kết nối Editor Server';
+        banner.style.display = 'block';
+      }
+    }
+
+    checkHealth();
+  </script>
+</body>
+</html>

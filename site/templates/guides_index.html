@@ -4,8 +4,8 @@
 {% block description %}Character guides for Girls' Frontline 2: Exilium.{% endblock %}
 
 {% block content %}
-<h1 style="font-size:1.75rem; font-weight:800; margin-bottom:0.5rem;">Tactical Doll Guides</h1>
-<p style="color:var(--text-muted); margin-bottom:1.75rem;">Community-written guides for GFL2: Exilium characters.</p>
+<h1 style="font-size:1.75rem; font-weight:800; margin-bottom:0.5rem;" data-i18n="guides_title">Tactical Doll Guides</h1>
+<p style="color:var(--text-muted); margin-bottom:1.75rem;" data-i18n="guides_intro">Community-written guides for GFL2: Exilium characters.</p>
 
 {% if guides %}
 <div class="guide-index-grid">
@@ -19,10 +19,10 @@
     <div class="guide-index-info">
       <span class="guide-index-title">{{ g.title }}</span>
       {% if ch %}
-      <span class="guide-index-meta">{{ ch.name }} &middot; {{ ch.class }}</span>
+      <span class="guide-index-meta">{{ ch.name }} &middot; <span data-doll-class="{{ ch.class }}">{{ ch.class }}</span></span>
       {% endif %}
       {% if g.last_updated %}
-      <span class="guide-index-date">Updated {{ g.last_updated }}</span>
+      <span class="guide-index-date"><span data-i18n="guide_last_updated">Last updated:</span> {{ g.last_updated }}</span>
       {% endif %}
     </div>
   </a>

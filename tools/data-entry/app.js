@@ -110,7 +110,7 @@ const CHAR_KEY_ORDER = [
   'slug', 'name', 'class', 'rarity', 'phase', 'weapon_type', 'ammo_type',
   'signature_weapon', 'stats', 'skill_attribute', 'weakness', 'stability_gauge',
   'movement_speed', 'effects_glossary', 'skills', 'summons', 'fortification', 'neural_helix',
-  'keys', 'images', 'source_notes'
+  'keys', 'images', 'source_notes', 'server'
 ];
 function orderedStringify(obj, keyOrder = null) {
   function replacer(key, value) { return value; }
@@ -183,6 +183,7 @@ function initCharacterTab() {
   $('c-class').addEventListener('change', () => {
     refreshImagePaths($('c-slug').value);
   });
+  $('c-server')?.addEventListener('change', refreshPreview);
 
   // Wire all basic-info inputs to preview
   document.querySelectorAll('#tab-character input, #tab-character select, #tab-character textarea')
@@ -205,6 +206,7 @@ function initCharacterTab() {
     'Affinity Key', 'Common Key', 'Expansion Key'
   ];
   KEY_NAMES.forEach((n, idx) => addKeyRow(n, idx < 6 ? '' : n === 'Affinity Key' ? 'Affinity Lvl 5' : ''));
+  $('btn-add-key').addEventListener('click', () => addKeyRow());
 
   // Action buttons
   $('btn-save-char').addEventListener('click', saveToFileSystem);
@@ -226,6 +228,42 @@ function initCharacterTab() {
 
   // Image upload
   initImageUpload();
+
+  // Server health gate
+  checkDataEntryServerGate();
+}
+
+async function checkDataEntryServerGate() {
+  const banner = $('server-gate-banner');
+  const btnSave = $('btn-save-char');
+  try {
+    const resp = await fetch('/api/health', { cache: 'no-store' });
+    const contentType = resp.headers.get('Content-Type') || '';
+    if (!resp.ok || !contentType.includes('application/json')) {
+      throw new Error('Không phải editor server');
+    }
+    const data = await resp.json();
+    if (data.service !== 'gfl2-editor-server' || !data.capabilities?.includes('characters')) {
+      throw new Error('Server thiếu capability characters');
+    }
+    if (banner) banner.style.display = 'none';
+    if (btnSave) btnSave.disabled = false;
+  } catch (err) {
+    if (banner) {
+      banner.style.display = 'block';
+      banner.innerHTML = `
+        <div style="background: rgba(248, 81, 73, 0.15); border: 1px solid #f85149; color: #ff7b72; padding: 12px 16px; border-radius: 8px; margin: 12px 0; font-size: 14px; line-height: 1.5;">
+          <strong>⚠️ Cảnh báo kết nối:</strong> Không thể kết nối tới Editor Server (có thể đang mở từ static server).<br>
+          Nút "Save to disk" tạm thời bị vô hiệu hóa. Hãy chạy lệnh trong terminal:
+          <div style="margin-top: 6px;"><code style="background: rgba(0,0,0,0.5); padding: 3px 6px; border-radius: 4px; font-family: monospace;">.venv\\Scripts\\python.exe tools\\start_editors.py</code></div>
+        </div>
+      `;
+    }
+    if (btnSave) {
+      btnSave.disabled = true;
+      btnSave.title = 'Vui lòng chạy tools/start_editors.py để kích hoạt lưu vào đĩa.';
+    }
+  }
 }
 
 // ── Glossary ───────────────────────────────────────────────────────────
@@ -269,14 +307,17 @@ function addSkillCard(data = {}) {
   const tagField = el('div', { cls: 'field' });
   tagField.append(el('label', { 'data-i18n': 'skill_tags' }, t('skill_tags', currentLang)));
   const tagGrid = el('div', { cls: 'tag-grid', id: `${id}-tags` });
+  const selectedTags = Array.isArray(data.tags)
+    ? data.tags.filter(tag => typeof tag === 'string' && tag.trim()).map(tag => tag.trim().toLowerCase())
+    : [];
   (window.TERMS ? window.TERMS.tags : []).forEach(item => {
     const label = currentLang === 'vi' ? item.vi : item.en;
     const pill = el('span', { cls: 'tag-pill' }, label);
     pill.dataset.tagEn = item.en;
     pill.dataset.tagVi = item.vi;
-    const isSelected = data.tags?.some(tStr =>
-      tStr.toLowerCase() === item.en.toLowerCase() ||
-      tStr.toLowerCase() === item.vi.toLowerCase()
+    const isSelected = selectedTags.some(tag =>
+      tag === item.en.toLowerCase() ||
+      tag === item.vi.toLowerCase()
     );
     if (isSelected) pill.classList.add('selected');
     pill.addEventListener('click', () => { pill.classList.toggle('selected'); refreshPreview(); });
@@ -653,6 +694,7 @@ function gatherCharacter() {
     neural_helix,
     keys,
     images,
+    server: $('c-server')?.value || 'global',
     source_notes: $('c-source-notes').value.trim() || null,
   };
 }
@@ -745,7 +787,8 @@ function gatherCharacterVi(slug = $('c-slug').value.trim()) {
     neural_helix,
     keys,
     summons: summons.length ? summons : [],
-    server: $('c-source-notes').value.trim() || 'global'
+    server: $('c-server')?.value || 'global',
+    source_notes: $('c-source-notes').value.trim() || null
   };
 }
 
@@ -800,7 +843,7 @@ async function saveToFileSystem() {
     }
     showToast(`${t('toast_saved', currentLang)} ${result.path}`, 'ok', 4000);
   } catch (e) {
-    showToast(`${currentLang === 'vi' ? 'Cập nhật thất bại' : 'Update failed'}: ${e.message}. ${currentLang === 'vi' ? 'Hãy chạy tools/data_entry_server.py.' : 'Run tools/data_entry_server.py.'}`, 'err', 6500);
+    showToast(`${currentLang === 'vi' ? 'Cập nhật thất bại' : 'Update failed'}: ${e.message}. ${currentLang === 'vi' ? 'Hãy chạy .venv\\Scripts\\python.exe tools/start_editors.py.' : 'Run tools/start_editors.py.'}`, 'err', 6500);
   }
 }
 
@@ -1051,6 +1094,7 @@ function resetCharacterForm() {
   ['c-name', 'c-slug', 'c-sig-weapon', 'c-skill-attr', 'c-weakness',
     'c-stab-gauge', 'c-move-speed', 'c-source-notes'].forEach(id => { $(id).value = ''; });
   ['c-class', 'c-rarity', 'c-phase', 'c-weapon-type', 'c-ammo-type'].forEach(id => { $(id).value = ''; });
+  if ($('c-server')) $('c-server').value = 'global';
   ['c-hp', 'c-atk', 'c-def'].forEach(id => { $(id).value = ''; });
   $('glossary-list').innerHTML = '';
   $('skills-list').innerHTML = '';
@@ -1093,6 +1137,7 @@ function populateCharacterForm(d) {
   if (d.weakness) $('c-weakness').value = mapTerm(d.weakness, 'phases', currentLang);
   if (d.stability_gauge) $('c-stab-gauge').value = d.stability_gauge;
   if (d.movement_speed) $('c-move-speed').value = d.movement_speed;
+  if ($('c-server')) $('c-server').value = (d.server || 'global').toLowerCase();
   if (d.source_notes) $('c-source-notes').value = d.source_notes;
   (d.effects_glossary || []).forEach(t => addGlossaryRow(t));
 
@@ -1153,7 +1198,8 @@ function populateCharacterFormVi(slug, viChar, enData = null) {
   if (viChar.ammo_type) $('c-ammo-type').value = mapTerm(viChar.ammo_type, 'ammo_types', currentLang);
   if (viChar.signature_weapon) $('c-sig-weapon').value = viChar.signature_weapon;
   if (viChar.weakness) $('c-weakness').value = mapTerm(viChar.weakness, 'phases', currentLang);
-  if (viChar.server) $('c-source-notes').value = viChar.server;
+  if ($('c-server')) $('c-server').value = (viChar.server || enData?.server || 'global').toLowerCase();
+  if (viChar.source_notes) $('c-source-notes').value = viChar.source_notes;
 
   // Stats from enData
   if (enData?.stats) {

@@ -21,3 +21,12 @@ def test_browser_name_index_keeps_duplicate_names_as_separate_ids():
     payload = browser_catalog({"effect_a": first, "effect_b": second})
 
     assert payload["nameIndex"]["ẩn nấp"] == ["effect_a", "effect_b"]
+
+
+def test_browser_name_index_resolves_aliases():
+    shelter = {"id": "effect_a8fbb45be7f6", "name": "Yểm Hộ", "name_en": "Shelter", "desc": "", "desc_en": "", "type": "buff", "sub_effect_ids": []}
+    payload = browser_catalog({"effect_a8fbb45be7f6": shelter})
+
+    assert "nơi trú ẩn" in payload["nameIndex"]
+    assert payload["nameIndex"]["nơi trú ẩn"] == ["effect_a8fbb45be7f6"]
+

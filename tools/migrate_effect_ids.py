@@ -30,14 +30,13 @@ def main() -> int:
         BACKUP_PATH.write_text(json.dumps(legacy, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     i18n = json.loads(I18N_PATH.read_text(encoding="utf-8-sig"))
-    i18n["effects"] = effects
-    EFFECTS_PATH.write_text(json.dumps(effects, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    I18N_PATH.write_text(json.dumps(i18n, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    I18N_JS_PATH.write_text(
-        "// Auto-generated Vietnamese Localization Bundle for GFL2: Exilium Wiki\n"
-        f"window.GFL2_I18N_VI = {json.dumps(i18n, ensure_ascii=False, indent=2)};\n",
-        encoding="utf-8",
-    )
+    from tools.editor_core.bundle import stage_i18n_bundle
+    from tools.editor_core.transaction import RepositoryTransaction
+
+    tx = RepositoryTransaction(ROOT)
+    with tx:
+        stage_i18n_bundle(ROOT, tx, i18n_bundle=i18n, effects_data=effects)
+        tx.commit()
     print(f"Migrated {len(effects)} effects; backup: {BACKUP_PATH.relative_to(ROOT)}")
     return 0
 

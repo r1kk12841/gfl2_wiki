@@ -8,7 +8,7 @@ import threading
 from pathlib import Path
 from typing import Any
 
-from tools.effects_catalog import canonicalize_effects
+from tools.effects_catalog import canonicalize_effects, effect_id
 
 
 ALLOWED_TYPES = {"buff", "debuff", "effect"}
@@ -61,6 +61,65 @@ class EffectStore:
             rows.append(row)
         return sorted(rows, key=lambda item: item["name_en"].casefold())
 
+    def create_effect(self, data: dict[str, Any]) -> dict[str, Any]:
+        with self._lock:
+            effects = self._read_json(self.effects_path)
+            i18n = self._read_json(self.i18n_path)
+            canonical = self._canonical_entries(effects)
+
+            name_en = str(data.get("name_en", "")).strip()
+            name = str(data.get("name", "")).strip()
+            desc = str(data.get("desc", "")).strip()
+            desc_en = str(data.get("desc_en", "")).strip()
+            new_type = str(data.get("type", "effect")).strip().lower()
+
+            if not name_en:
+                raise EffectValidationError("Tên tiếng Anh không được để trống.")
+            if not name:
+                raise EffectValidationError("Tên tiếng Việt không được để trống.")
+            if not desc:
+                raise EffectValidationError("Mô tả tiếng Việt không được để trống.")
+            if new_type not in ALLOWED_TYPES:
+                raise EffectValidationError("Loại hiệu ứng phải là buff, debuff hoặc effect.")
+
+            eff_id = effect_id(name_en)
+            if eff_id in canonical or any(e["name_en"].casefold() == name_en.casefold() for e in canonical.values()):
+                raise EffectValidationError(f"Hiệu ứng tiếng Anh '{name_en}' đã tồn tại.")
+
+            clean_subs: list[str] = []
+            if "sub_effect_ids" in data:
+                sub_ids = data["sub_effect_ids"]
+                if not isinstance(sub_ids, list):
+                    raise EffectValidationError("sub_effect_ids phải là danh sách ID.")
+                for sid in sub_ids:
+                    if not isinstance(sid, str) or not sid.strip():
+                        continue
+                    sid = sid.strip()
+                    if sid not in canonical:
+                        raise EffectValidationError(f"Hiệu ứng con ID '{sid}' không tồn tại.")
+                    if sid not in clean_subs:
+                        clean_subs.append(sid)
+
+            new_entry = {
+                "id": eff_id,
+                "name": name,
+                "name_en": name_en,
+                "desc": desc,
+                "desc_en": desc_en or desc,
+                "type": new_type,
+                "sub_effect_ids": clean_subs,
+            }
+
+            updated_effects = copy.deepcopy(canonical)
+            updated_effects[eff_id] = new_entry
+
+            updated_i18n = copy.deepcopy(i18n)
+            updated_i18n["effects"] = updated_effects
+            self._write_outputs(updated_effects, updated_i18n)
+            return {
+                "effect": next(row for row in self.list_effects() if row["id"] == eff_id),
+            }
+
     def update_effect(self, effect_id: str, changes: dict[str, Any]) -> dict[str, Any]:
         with self._lock:
             effects = self._read_json(self.effects_path)
@@ -81,6 +140,24 @@ class EffectStore:
 
             updated_entry = copy.deepcopy(canonical[effect_id])
             updated_entry.update({"name": new_name, "desc": new_desc, "type": new_type})
+
+            if "sub_effect_ids" in changes:
+                sub_ids = changes["sub_effect_ids"]
+                if not isinstance(sub_ids, list):
+                    raise EffectValidationError("sub_effect_ids phải là danh sách ID.")
+                if effect_id in sub_ids:
+                    raise EffectValidationError("Không thể tự tham chiếu chính mình làm hiệu ứng con.")
+                clean_subs: list[str] = []
+                for sid in sub_ids:
+                    if not isinstance(sid, str) or not sid.strip():
+                        continue
+                    sid = sid.strip()
+                    if sid not in canonical:
+                        raise EffectValidationError(f"Hiệu ứng con ID '{sid}' không tồn tại.")
+                    if sid not in clean_subs:
+                        clean_subs.append(sid)
+                updated_entry["sub_effect_ids"] = clean_subs
+
             updated_effects = copy.deepcopy(canonical)
             updated_effects[effect_id] = updated_entry
             renamed_reference_sources = {

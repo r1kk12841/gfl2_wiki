@@ -33,15 +33,20 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Data Entry (Phase 2)
+## Editor Tools
 
-Open the entry tool in your browser:
+Khởi động Unified Editor Server cho cả 3 công cụ (Data Entry, Effect Editor, Guide Editor):
 
 ```bash
-python tools/data_entry_server.py
-# then visit http://localhost:8000/tools/data-entry/
-# effect editor: http://localhost:8000/tools/effect_editor/
+.venv\Scripts\python.exe tools/start_editors.py
+# hoặc entrypoint wrapper: python tools/data_entry_server.py
+# Hub tập trung: http://127.0.0.1:8000/tools/index.html
+# Data entry: http://127.0.0.1:8000/tools/data-entry/index.html
+# Effect editor: http://127.0.0.1:8000/tools/effect_editor/index.html
+# Guide editor: http://127.0.0.1:8000/tools/guide-editor/index.html
 ```
+
+> **Lưu ý**: Địa chỉ chính thức luôn dùng `127.0.0.1`, không trộn lẫn với `localhost`. Lệnh `python -m http.server` chỉ dùng xem preview site tĩnh trong `dist/`, tuyệt đối không dùng để chạy các editor tools.
 
 1. Open a character tab in the source spreadsheet.
 2. Fill in the form (Basic Info → Skills → Fortification → Neural Helix → Keys).

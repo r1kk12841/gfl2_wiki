@@ -14,7 +14,9 @@ CN_WEAPONS = {
     "sopmod-2-tactical-rifle",
     "retired-sopmod-2-tactical-rifle",
     "welrod-mk-ii",
-    "retired-welrod-mk-ii"
+    "retired-welrod-mk-ii",
+    "silent-conviction",
+    "snotra"
 }
 
 def tag_characters():
@@ -78,14 +80,16 @@ def update_i18n_vi():
     for slug, wdata in bundle.get("weapons", {}).items():
         wdata["server"] = "cn" if slug in CN_WEAPONS else "global"
 
-    with open(i18n_path, "w", encoding="utf-8") as f:
-        json.dump(bundle, f, indent=2, ensure_ascii=False)
-        f.write("\n")
+    root = Path(__file__).resolve().parents[1]
+    import sys
+    sys.path.insert(0, str(root))
+    from tools.editor_core.bundle import stage_i18n_bundle
+    from tools.editor_core.transaction import RepositoryTransaction
 
-    # Also update site/static/js/i18n-vi.js
-    js_path = Path("site/static/js/i18n-vi.js")
-    js_content = f"// Auto-generated Vietnamese localization bundle\nwindow.GFL2_I18N_VI = {json.dumps(bundle, ensure_ascii=False, indent=2)};\n"
-    js_path.write_text(js_content, encoding="utf-8")
+    tx = RepositoryTransaction(root)
+    with tx:
+        stage_i18n_bundle(root, tx, i18n_bundle=bundle)
+        tx.commit()
     print("i18n_vi.json and i18n-vi.js updated with server translations.")
 
 if __name__ == "__main__":

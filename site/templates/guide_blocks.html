@@ -1,0 +1,102 @@
+<div class="guide-layout">
+{% if guide.blocks|selectattr('type', 'equalto', 'heading')|list %}
+<details class="guide-toc" open>
+  <summary data-i18n="contents_title">On this page</summary>
+  <nav aria-label="Guide sections">
+  {% for block in guide.blocks %}{% if block.type == 'heading' %}
+    <a href="#guide-section-{{ loop.index }}">{{ block.text }}</a>
+  {% endif %}{% endfor %}
+  </nav>
+</details>
+{% endif %}
+<div class="guide-content">
+{% for block in guide.blocks %}
+  {%- if block.type == 'heading' -%}
+    <h{{ block.level }} id="guide-section-{{ loop.index }}">{{ block.text }}</h{{ block.level }}>
+  {%- elif block.type == 'paragraph' -%}
+    <div class="guide-paragraph">{{ block.html | safe }}</div>
+  {%- elif block.type == 'link' -%}
+    <p><a href="{{ block.url }}" target="_blank" rel="noopener" class="guide-link">{{ block.text or block.url }}</a></p>
+  {%- elif block.type == 'char_card' -%}
+    {%- set card_char = chars_by_slug.get(block.slug) -%}
+    {% if card_char %}
+    <a href="{{ rel_prefix }}characters/{{ card_char.slug }}.html" class="guide-char-card">
+      <img src="{{ rel_prefix }}assets/images/characters/{{ card_char.slug }}/avatar.png"
+           alt="{{ card_char.name }}" onerror="this.style.display='none'" />
+      <div class="guide-char-card-info">
+        <span class="guide-char-card-name">{{ card_char.name }}</span>
+        <span class="guide-char-card-meta"><span data-doll-class="{{ card_char.class }}">{{ card_char.class }}</span> &middot; <span data-doll-phase="{{ card_char.phase }}">{{ card_char.phase }}</span></span>
+      </div>
+    </a>
+    {% endif %}
+  {%- elif block.type == 'weapon_card' -%}
+    {%- set card_weapon = weapons_by_slug.get(block.slug) -%}
+    {% if card_weapon %}
+    <div class="guide-weapon-card">
+      <img src="{{ rel_prefix }}{{ card_weapon.images.weapon }}"
+           alt="{{ card_weapon.name }}" onerror="this.style.display='none'" />
+      <div class="guide-char-card-info">
+        <span class="guide-char-card-name">{{ card_weapon.name }}</span>
+        <span class="guide-char-card-meta">{{ card_weapon.weapon_type }} &middot; {{ card_weapon.rarity }}</span>
+      </div>
+    </div>
+    {% endif %}
+  {%- elif block.type == 'skill_ref' -%}
+    {%- set ref_char = chars_by_slug.get(block.char) -%}
+    {%- if ref_char and ref_char.skills -%}
+      {%- set sk = ref_char.skills[block.skill_idx] if block.skill_idx < ref_char.skills|length else None -%}
+      {% if sk %}
+      <span class="effect-trigger effect-effect guide-skill-chip"
+            data-effect="{{ sk.name }}"
+            data-type="effect"
+            data-desc="{{ sk.description or '' }}"
+            tabindex="0">
+        {% if sk.icon %}<img src="{{ rel_prefix }}{{ sk.icon }}" class="guide-skill-chip-icon" alt="" onerror="this.style.display='none'" />{% endif %}
+        {{ sk.name }}
+      </span>
+      {% endif %}
+    {%- endif -%}
+  {%- elif block.type == 'summon_skill_ref' -%}
+    {%- set ref_char = chars_by_slug.get(block.char) -%}
+    {%- if ref_char and ref_char.summons -%}
+      {%- set summon = ref_char.summons[block.summon_idx] if block.summon_idx < ref_char.summons|length else None -%}
+      {%- if summon and summon.skills -%}
+        {%- set sk = summon.skills[block.skill_idx] if block.skill_idx < summon.skills|length else None -%}
+        {% if sk %}
+        <span class="effect-trigger effect-effect guide-skill-chip"
+              data-effect="{{ sk.name }}"
+              data-type="effect"
+              data-desc="{{ sk.description or '' }}"
+              tabindex="0">
+          {% if sk.icon %}<img src="{{ rel_prefix }}{{ sk.icon }}" class="guide-skill-chip-icon" alt="" onerror="this.style.display='none'" />{% endif %}
+          {{ sk.name }} <small style="opacity:0.6">({{ summon.name }})</small>
+        </span>
+        {% endif %}
+      {%- endif -%}
+    {%- endif -%}
+  {%- elif block.type == 'table' -%}
+    <div class="guide-table-scroll">
+    <table class="guide-table"{% if block.column_widths %} style="width: {{ block.column_widths | sum }}px; min-width: 100%; table-layout: fixed"{% endif %}>
+      {% if block.column_widths %}<colgroup>
+        {% for width in block.column_widths %}<col style="width: {{ width | int }}px">{% endfor %}
+      </colgroup>{% endif %}
+      <thead><tr>
+        {% for h in block.headers %}<th>{{ h }}</th>{% endfor %}
+      </tr></thead>
+      <tbody>
+        {% for row in block.rows %}<tr>
+          {% for cell in row %}<td>{{ cell | safe }}</td>{% endfor %}
+        </tr>{% endfor %}
+      </tbody>
+    </table>
+    </div>
+  {%- elif block.type == 'image' -%}
+    <figure class="guide-figure">
+      <img src="{{ rel_prefix }}{{ block.src }}" alt="{{ block.caption or '' }}" class="guide-img" onerror="this.style.display='none'" />
+      {% if block.caption %}<figcaption>{{ block.caption }}</figcaption>{% endif %}
+    </figure>
+  {%- endif -%}
+{% endfor %}
+</div>
+
+</div>

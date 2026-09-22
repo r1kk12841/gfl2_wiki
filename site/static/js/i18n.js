@@ -14,7 +14,7 @@
     { regex: /\b(Burn\s+[Dd]amage|ST\s+Thiêu\s+Đốt)\b/g, cls: 'dmg-burn' },
     { regex: /\b(Corrosion\s+[Dd]amage|ST\s+Ăn\s+Mòn)\b/g, cls: 'dmg-corrosion' },
     { regex: /\b(Hydro\s+[Dd]amage|ST\s+Hóa\s+Lỏng)\b/g, cls: 'dmg-hydro' },
-    { regex: /\b(Electric\s+[Dd]amage|ST\s+Dẫn\s+Điện|ST\s+Điện)\b/g, cls: 'dmg-electric' },
+    { regex: /\b(Electric\s+[Dd]amage|ST\s+Dẫn\s+Điện|Sát\s+[Tt]hương\s+Dẫn\s+Điện|ST\s+Điện\s+Từ|ST\s+Điện)\b/g, cls: 'dmg-electric' },
     { regex: /\b(Physical\s+[Dd]amage|ST\s+Vật\s+Lý)\b/g, cls: 'dmg-physical' },
     { regex: /\b([Ff]ixed\s+[Dd]amage|[Rr]eal\s+[Dd]amage|ST\s+cố\s+định|ST\s+Chuẩn\s+Xác)\b/g, cls: 'dmg-fixed' },
     { regex: /\b([Ss]tability\s+[Dd]amage|ST\s+Ổn\s+Định)\b/g, cls: 'dmg-stability' }
@@ -83,7 +83,9 @@
       }
       // Check if innerText is a damage type
       for (const d of DMG_REGEXES) {
+        d.regex.lastIndex = 0;
         if (d.regex.test(innerText)) {
+          d.regex.lastIndex = 0;
           return innerText.replace(d.regex, `<span class="${d.cls}">$1</span>`);
         }
       }
@@ -100,6 +102,7 @@
       if (!parts[i]) continue;
       let s = parts[i];
       for (const d of DMG_REGEXES) {
+        d.regex.lastIndex = 0;
         s = s.replace(d.regex, `<span class="${d.cls}">$1</span>`);
       }
       s = s.replace(PERCENT_REGEX, '<span class="val-highlight">$&</span>');
@@ -268,6 +271,15 @@
       targetSpan.textContent = lang === 'vi' ? (ui.ammo_types[atKey] || atKey) : el.dataset.origEn;
     });
 
+    // Ammo Types on filter chips
+    document.querySelectorAll('.filter-chip[data-ammotype]').forEach((el) => {
+      const atKey = el.getAttribute('data-ammotype');
+      if (!atKey) return;
+      const targetSpan = el.querySelector('span') || el;
+      if (!el.dataset.origEn) el.dataset.origEn = targetSpan.textContent.trim();
+      targetSpan.textContent = lang === 'vi' ? (ui.ammo_types[atKey] || atKey) : el.dataset.origEn;
+    });
+
     // 6. Skill Tags
     document.querySelectorAll('[data-tag]').forEach((el) => {
       const tagKey = el.getAttribute('data-tag');
@@ -351,10 +363,18 @@
     }
 
     // Fortifications
+    document.querySelectorAll('[data-upgrade-tier]').forEach((el) => {
+      if (!el.dataset.origEnHtml) el.dataset.origEnHtml = el.innerHTML;
+      const tier = Number(el.dataset.upgradeTier);
+      const upgrade = (cdata.fortification || []).find((f) => Number(f.tier) === tier);
+      el.innerHTML = lang === 'vi' && upgrade?.effect
+        ? formatRichText(upgrade.effect)
+        : el.dataset.origEnHtml;
+    });
     if (cdata.fortification && cdata.fortification.length > 0) {
       document.querySelectorAll('tr[data-fort-tier]').forEach((tr) => {
         const tier = parseInt(tr.getAttribute('data-fort-tier'), 10);
-        const fdata = cdata.fortification.find((f) => f.tier === tier || f.level === tier);
+        const fdata = cdata.fortification.find((f) => f.tier === tier) || cdata.fortification.find((f) => f.level === tier);
         if (!fdata) return;
 
         // Target skill name

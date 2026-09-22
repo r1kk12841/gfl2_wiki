@@ -412,6 +412,29 @@ class GuideTableBlock(StrictModel):
     type: Literal["table"]
     headers: list[str] = Field(default_factory=list)
     rows: list[list[str]] = Field(default_factory=list)
+    column_widths: Optional[list[int]] = None
+
+    @field_validator("rows")
+    @classmethod
+    def validate_cell_html(cls, rows):
+        dangerous = ["<script", "javascript:", "onload=", "onerror=", "onclick=", "<iframe", "<style", "<object", "<embed"]
+        for row in rows:
+            for cell in row:
+                lowered = cell.lower()
+                for marker in dangerous:
+                    if marker in lowered:
+                        raise ValueError(f"Dangerous content detected in table cell HTML: '{marker}'")
+        return rows
+
+    @model_validator(mode="after")
+    def validate_column_widths(self):
+        if self.column_widths is None:
+            return self
+        if len(self.column_widths) != len(self.headers):
+            raise ValueError("column_widths must contain exactly one width per table header")
+        if any(width < 80 or width > 1200 for width in self.column_widths):
+            raise ValueError("Each table column width must be between 80 and 1200 pixels")
+        return self
 
 
 class GuideImageBlock(StrictModel):

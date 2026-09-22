@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GFL2 Wiki — Guide Editor</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20260916-table-resize-1" />
 </head>
 <body>
 <div id="app">
@@ -17,25 +17,80 @@
         <option value="">— Character —</option>
       </select>
       <input type="text" id="guide-title" class="header-title-inp" placeholder="Guide title…" autocomplete="off" />
+      <input type="text" id="guide-author" class="header-author-inp" placeholder="Tác giả" autocomplete="off" />
+      <input type="date" id="guide-date" class="header-date-inp" aria-label="Ngày cập nhật" />
     </div>
     <div class="header-actions">
-      <button class="btn btn-secondary" id="btn-load-guide">📂 Load JSON</button>
-      <button class="btn btn-primary" id="btn-save-guide">💾 Save JSON</button>
-      <a class="btn btn-secondary" href="../data-entry/index.html" target="_blank" style="text-decoration:none;">← Data Entry</a>
+      <button class="btn btn-secondary" id="btn-load-existing">Mở guide nhân vật</button>
+      <button class="btn btn-secondary" id="btn-use-template">Tạo theo mẫu Loreley</button>
+      <button class="btn btn-secondary" id="btn-load-guide">📂 Mở tệp JSON</button>
+      <button class="btn btn-secondary" id="btn-download-guide">⬇ Tải tệp JSON</button>
+      <button class="btn btn-primary" id="btn-save-guide">💾 Cập nhật JSON gốc</button>
+      <a class="btn btn-secondary" href="../index.html" style="text-decoration:none;">← Editor Hub</a>
     </div>
     <input type="file" id="file-load-guide" accept=".json" style="display:none" />
   </header>
 
+  <div id="server-gate-banner" style="display:none;"></div>
+
   <!-- TOOLBAR -->
   <div id="toolbar">
+    <div class="quick-format" aria-label="Quick Format">
+      <span class="quick-format-label">Quick Format</span>
+      <button type="button" class="format-btn" id="fmt-undo" title="Hoàn tác (Ctrl+Z)">↶</button>
+      <button type="button" class="format-btn" id="fmt-redo" title="Làm lại (Ctrl+Y)">↷</button>
+      <select id="fmt-font-size" class="format-select" title="Cỡ chữ" aria-label="Cỡ chữ">
+        <option value="">Cỡ chữ</option>
+        <option value="guide-font-small">Nhỏ</option>
+        <option value="guide-font-large">Lớn</option>
+        <option value="guide-font-xlarge">Rất lớn</option>
+      </select>
+      <button type="button" class="format-btn" id="fmt-bold" title="In đậm (Ctrl+B)"><b>B</b></button>
+      <button type="button" class="format-btn" id="fmt-italic" title="In nghiêng (Ctrl+I)"><i>I</i></button>
+      <button type="button" class="format-btn" id="fmt-underline" title="Gạch dưới (Ctrl+U)"><u>U</u></button>
+      <select id="fmt-text-color" class="format-select" title="Màu chữ" aria-label="Màu chữ">
+        <option value="">Màu chữ</option>
+        <optgroup label="Màu cơ bản">
+          <option value="guide-text-red">Đỏ</option>
+          <option value="guide-text-orange">Cam</option>
+          <option value="guide-text-blue">Xanh dương</option>
+          <option value="guide-text-green">Xanh lá</option>
+        </optgroup>
+        <optgroup label="Nguyên tố">
+          <option value="guide-text-burn">Thiêu đốt</option>
+          <option value="guide-text-electric">Dẫn điện</option>
+          <option value="guide-text-hydro">Hóa lỏng</option>
+          <option value="guide-text-corrosion">Ăn mòn</option>
+          <option value="guide-text-physical">Vật lý</option>
+          <option value="guide-text-freeze">Băng kết</option>
+          <option value="guide-text-resonance">Cộng hưởng</option>
+        </optgroup>
+      </select>
+      <select id="fmt-highlight" class="format-select" title="Màu highlight" aria-label="Màu highlight">
+        <option value="">Highlight</option>
+        <option value="guide-highlight-yellow">Vàng</option>
+        <option value="guide-highlight-green">Xanh lá</option>
+        <option value="guide-highlight-blue">Xanh dương</option>
+        <option value="guide-highlight-pink">Hồng</option>
+      </select>
+      <button type="button" class="format-btn" id="fmt-align-left" title="Căn trái">≡</button>
+      <button type="button" class="format-btn" id="fmt-align-center" title="Căn giữa">≡</button>
+      <button type="button" class="format-btn" id="fmt-align-right" title="Căn phải">≡</button>
+      <button type="button" class="format-btn format-btn-wide" id="fmt-ul" title="Danh sách dấu chấm">• List</button>
+      <button type="button" class="format-btn format-btn-wide" id="fmt-ol" title="Danh sách đánh số">1. List</button>
+      <button type="button" class="format-btn" id="fmt-link" title="Chèn liên kết">🔗</button>
+      <button type="button" class="format-btn" id="fmt-clear" title="Xóa định dạng">Tx</button>
+    </div>
+    <div class="toolbar-sep"></div>
     <button class="toolbar-btn" id="tb-heading" title="Insert Heading"><span class="tb-icon">H</span> Heading</button>
     <button class="toolbar-btn" id="tb-paragraph" title="Insert Paragraph"><span class="tb-icon">¶</span> Paragraph</button>
     <div class="toolbar-sep"></div>
-    <button class="toolbar-btn" id="tb-char-card" title="Insert Character Card"><span class="tb-icon">👤</span> Char Card</button>
-    <button class="toolbar-btn" id="tb-weapon-card" title="Insert Weapon Card"><span class="tb-icon">🔫</span> Weapon Card</button>
+    <button class="toolbar-btn" id="tb-char-card" title="Chèn nhân vật vào vùng đang soạn"><span class="tb-icon">👤</span> Character</button>
+    <button class="toolbar-btn" id="tb-weapon-card" title="Chèn vũ khí vào vùng đang soạn"><span class="tb-icon">🔫</span> Weapon</button>
     <div class="toolbar-sep"></div>
-    <button class="toolbar-btn" id="tb-skill-ref" title="Insert Skill Reference"><span class="tb-icon">⚡</span> Skill Ref</button>
+    <button class="toolbar-btn" id="tb-skill-ref" title="Chèn kỹ năng vào vùng đang soạn"><span class="tb-icon">⚡</span> Skill</button>
     <button class="toolbar-btn" id="tb-summon-ref" title="Insert Summon Skill Reference"><span class="tb-icon">🤖</span> Summon Skill</button>
+    <button class="toolbar-btn" id="tb-effect-ref" title="Chèn hiệu ứng liên quan tới nhân vật đang làm guide"><span class="tb-icon">✦</span> Hiệu ứng</button>
     <div class="toolbar-sep"></div>
     <button class="toolbar-btn" id="tb-table" title="Insert Table"><span class="tb-icon">⊞</span> Table</button>
     <button class="toolbar-btn" id="tb-image" title="Insert Image"><span class="tb-icon">🖼</span> Image</button>
@@ -115,14 +170,17 @@
     <div class="modal-title" id="modal-skill-title">⚡ Insert Skill Reference</div>
     <div class="modal-field">
       <label>Character</label>
+      <input type="search" id="modal-skill-char-search" placeholder="Tìm nhân vật…" autocomplete="off" />
       <select id="modal-skill-char"></select>
     </div>
     <div class="modal-field" id="modal-skill-summon-field" style="display:none">
       <label>Summon</label>
+      <input type="search" id="modal-skill-summon-search" placeholder="Tìm triệu hồi…" autocomplete="off" />
       <select id="modal-skill-summon"></select>
     </div>
     <div class="modal-field">
       <label id="modal-skill-label">Skill</label>
+      <input type="search" id="modal-skill-pick-search" placeholder="Tìm kỹ năng…" autocomplete="off" />
       <select id="modal-skill-pick"></select>
     </div>
     <div class="modal-footer">
@@ -132,12 +190,29 @@
   </div>
 </div>
 
+<!-- EFFECT REF MODAL -->
+<div id="modal-effect" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title" id="modal-effect-title">✦ Chèn hiệu ứng liên quan</div>
+    <div class="modal-field">
+      <label>Hiệu ứng tiếng Việt</label>
+      <input type="search" id="modal-effect-search" placeholder="Tìm hiệu ứng…" autocomplete="off" />
+      <select id="modal-effect-pick"></select>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="modal-effect-cancel">Hủy</button>
+      <button class="btn btn-primary" id="modal-effect-ok">Chèn</button>
+    </div>
+  </div>
+</div>
+
 <!-- CHAR CARD MODAL -->
 <div id="modal-char-card" class="modal-overlay" style="display:none">
   <div class="modal-box">
-    <div class="modal-title">👤 Insert Character Card</div>
+    <div class="modal-title">👤 Chèn nhân vật vào vùng đang soạn</div>
     <div class="modal-field">
       <label>Character</label>
+      <input type="search" id="modal-char-card-search" placeholder="Tìm nhân vật…" autocomplete="off" />
       <select id="modal-char-card-sel"></select>
     </div>
     <div class="modal-footer">
@@ -150,9 +225,10 @@
 <!-- WEAPON CARD MODAL -->
 <div id="modal-weapon-card" class="modal-overlay" style="display:none">
   <div class="modal-box">
-    <div class="modal-title">🔫 Insert Weapon Card</div>
+    <div class="modal-title">🔫 Chèn vũ khí vào vùng đang soạn</div>
     <div class="modal-field">
       <label>Weapon</label>
+      <input type="search" id="modal-weapon-card-search" placeholder="Tìm vũ khí theo tên Việt hoặc Anh…" autocomplete="off" />
       <select id="modal-weapon-card-sel"></select>
     </div>
     <div class="modal-footer">
@@ -181,6 +257,8 @@
   </div>
 </div>
 
-<script src="app.js"></script>
+<script src="template.js"></script>
+<script src="rich-text.js"></script>
+<script src="app.js?v=20260916-table-resize-1"></script>
 </body>
 </html>

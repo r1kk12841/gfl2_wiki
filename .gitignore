@@ -23,3 +23,7 @@ assets/LangPackageTableVtviData_decoded.json
 # Miscellaneous local files
 Hỏi đáp.txt
 image/
+.edge_temp/
+*.lock
+data/.editor-write.lock
+scratch_*.py

@@ -16,7 +16,7 @@ WEAPONS_FILE = ROOT / "data" / "weapons.json"
 
 def test_every_character_has_existing_portrait_webp():
     char_files = list(CHAR_DIR.glob("*.json"))
-    assert len(char_files) == 64
+    assert len(char_files) == 65
     for cf in char_files:
         data = json.loads(cf.read_text(encoding="utf-8"))
         images = data.get("images", {})
@@ -54,3 +54,10 @@ def test_output_directory_size_limit(built_site: Path):
     total_mib = total_bytes / (1024 * 1024)
     # Clean build without root image/ must be under 135 MiB
     assert total_mib < 135.0, f"Output directory size too large: {total_mib:.2f} MiB (expected < 135 MiB without image/)"
+
+
+def test_transience_uses_its_dandegate_alias_image_instead_of_general_liu():
+    weapons = json.loads(WEAPONS_FILE.read_text(encoding="utf-8"))
+    transience = next(weapon for weapon in weapons if weapon["slug"] == "transience")
+
+    assert transience["images"]["weapon"] == "assets/images/weapons/Shadow Runner.png"

@@ -1,0 +1,372 @@
+{
+  "slug": "soppo",
+  "char_slug": "soppo",
+  "title": "Hướng dẫn toàn diện Soppo: Lối chơi, Trang bị & Đội hình",
+  "last_updated": "2026-09-14",
+  "author": "GFL2 Wiki VN & Community",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tổng quan (Overview)"
+    },
+    {
+      "type": "char_card",
+      "slug": "soppo"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Soppo</b> là Sentinel song hệ&nbsp;<b>Băng Kết / Thiêu Đốt</b>, dùng Súng Trường Tấn Công và Đạn Vừa. Bộ kỹ năng đổi giữa <b>Chế Độ Chó Săn</b> và <b>Chế Độ Chó Điên</b>, tạo ô Băng Giá hoặc Thiêu Rụi, tích Ấn Săn cho Ult và dùng Nhân Tố Cuồng Bạo để tăng dần sức mạnh. Soppo mạnh nhất khi đội hình duy trì ô địa hình Dị Vị và đáp ứng điều kiện đồng đội Băng Kết hoặc Thiêu Đốt."
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Cách vận hành cốt lõi:</b><br>• <b>Chế Độ Chó Săn:</b> các kỹ năng chính gây ST Băng Kết;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Cắn Xé Ác Tính: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 6 ô&lt;/color&gt;, gây ST Băng Kết phạm vi bằng &lt;color=#f26c1c&gt;80%&lt;/color&gt; Tấn Công lên mục tiêu và tất cả mục tiêu địch trong bán kính &lt;color=#f26c1c&gt;3 ô&lt;/color&gt; xung quanh, đồng thời tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; duy trì &lt;color=#f26c1c&gt;2 hiệp&lt;/color&gt;. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, kỹ năng này chuyển sang gây ST Thiêu Đốt phạm vi và tạo các ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;. Soppo không nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill2-icon.png\" alt=\"Cắn Xé Ác Tính\" loading=\"lazy\">Cắn Xé Ác Tính</span>&nbsp; tạo ô Băng Giá và có Chỉ Lệnh Bổ Sung ở V0.<br>• <b>Chế Độ Chó Điên:</b> chuyển phần lớn sát thương sang Thiêu Đốt, tạo ô Thiêu Rụi;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tiếng Hú Đêm Trăng: Đáp xuống ô trống mang thuộc tính Băng Kết hoặc Thiêu Đốt được chọn trên chiến trường và áp dụng &lt;color=#3487e0&gt;Dấu Vết Tàn Sát&lt;/color&gt; cho tất cả Búp Bê đồng minh xung quanh trong bán kính &lt;color=#f26c1c&gt;8 ô&lt;/color&gt; (ngoại trừ bản thân Soppo) duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;, cho phép họ tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; xung quanh mục tiêu sau khi thực hiện tấn công chủ động; và sát thương gây ra cho các đơn vị địch đứng trên ô địa hình Dị Vị được tăng thêm. Sau kỹ năng này, Soppo chuyển sang &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;.\n\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, chuyển sang gây ST Thiêu Đốt phạm vi bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch xung quanh trong bán kính &lt;color=#f26c1c&gt;4 ô&lt;/color&gt;. Sát thương này được chia đều cho tất cả mục tiêu trong phạm vi hiệu lực. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Tăng Hành Động&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill3-icon.png\" alt=\"Tiếng Hú Đêm Trăng\" loading=\"lazy\">Tiếng Hú Đêm Trăng</span>&nbsp; trở thành đòn AoE và cấp Tăng Hành Động.<br>• <b>Ấn Săn:</b> tài nguyên độc quyền được&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Cú Vồ Chí Mạng: Tiêu hao toàn bộ số tầng &lt;color=#3487e0&gt;Ấn Săn&lt;/color&gt; và gây ST Băng Kết phạm vi bằng số tầng Ấn Săn × &lt;color=#f26c1c&gt;30%&lt;/color&gt; Tấn Công lên các mục tiêu trong bán kính &lt;color=#f26c1c&gt;6 ô&lt;/color&gt;. Nếu đòn đánh này trúng mục tiêu địch đang đứng trên ô địa hình Dị Vị, gây thêm &lt;color=#f26c1c&gt;1 lần&lt;/color&gt; ST Băng Kết bằng &lt;color=#f26c1c&gt;50%&lt;/color&gt; Tấn Công lên mục tiêu đó. Sau kỹ năng này, Soppo chuyển sang &lt;color=#3487e0&gt;Chế Độ Chó Săn&lt;/color&gt;.\n\nBị động: Trước khi đơn vị địch xung quanh &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; tung đòn tấn công chủ động, kích hoạt &lt;color=#3487e0&gt;Chặn Đánh&lt;/color&gt; lên chúng, gây ST Băng Kết bằng &lt;color=#f26c1c&gt;30%&lt;/color&gt; Tấn Công và &lt;color=#f26c1c&gt;4 điểm&lt;/color&gt; ST Ổn Định. Chỉ có thể kích hoạt tối đa &lt;color=#f26c1c&gt;1 lần&lt;/color&gt; mỗi hiệp.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/ult-icon.png\" alt=\"Cú Vồ Chí Mạng\" loading=\"lazy\">Cú Vồ Chí Mạng</span>&nbsp; tiêu hao để tăng hệ số sát thương. Ấn Săn vĩnh viễn không bị tiêu hao.<br>• <b>Nhân Tố Cuồng Bạo:</b> mỗi tầng tăng 5% ST Bạo Kích. Các mốc 4/6/8 tầng mở Nhân Tố I/II/III; V6 nâng trần lên 20 tầng và cường hóa cả ba hiệu ứng.<br>• <b>Dấu Vết Sát Phạt:</b> buff đồng đội do&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tiếng Hú Đêm Trăng: Đáp xuống ô trống mang thuộc tính Băng Kết hoặc Thiêu Đốt được chọn trên chiến trường và áp dụng &lt;color=#3487e0&gt;Dấu Vết Tàn Sát&lt;/color&gt; cho tất cả Búp Bê đồng minh xung quanh trong bán kính &lt;color=#f26c1c&gt;8 ô&lt;/color&gt; (ngoại trừ bản thân Soppo) duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;, cho phép họ tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; xung quanh mục tiêu sau khi thực hiện tấn công chủ động; và sát thương gây ra cho các đơn vị địch đứng trên ô địa hình Dị Vị được tăng thêm. Sau kỹ năng này, Soppo chuyển sang &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;.\n\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, chuyển sang gây ST Thiêu Đốt phạm vi bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch xung quanh trong bán kính &lt;color=#f26c1c&gt;4 ô&lt;/color&gt;. Sát thương này được chia đều cho tất cả mục tiêu trong phạm vi hiệu lực. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Tăng Hành Động&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill3-icon.png\" alt=\"Tiếng Hú Đêm Trăng\" loading=\"lazy\">Tiếng Hú Đêm Trăng</span>&nbsp;cấp. Trước khi tấn công, buff tạo ô Sương Đông quanh mục tiêu; sát thương lên địch đứng trên ô Dị Vị tăng 20%."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Đột phá & Cung mệnh (Fortifications)"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Điểm dừng:</b> <b>V0</b> đã có bộ kit hoàn chỉnh; <b>V1</b> là nâng cấp sớm hiệu quả nhất nhờ hệ số 130% và đổi Chỉ Lệnh Bổ Sung thành Tăng Hành Động ở Chế Độ Chó Săn. <b>V6</b> là mốc đầu tư cao, tăng tốc tích Nhân Tố và cường hóa toàn bộ cơ chế. Biểu đồ cộng đồng ước tính V1R1 đạt 117% và V6R1 đạt 288% sát thương tương đối so với V0R1; đây là benchmark đội hình cụ thể, không phải hệ số chính thức."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mốc",
+        "Hiệu ứng chính",
+        "Đánh giá"
+      ],
+      "rows": [
+        [
+          "V0",
+          "Kỹ năng cơ bản.",
+          "Điểm dừng tiết kiệm; đủ chơi đội Băng Kết hoặc Thiêu Đốt."
+        ],
+        [
+          "V1",
+          "<span class=\"guide-inline-ref guide-inline-skill\" title=\"Cắn Xé Ác Tính: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 6 ô&lt;/color&gt;, gây ST Băng Kết phạm vi bằng &lt;color=#f26c1c&gt;80%&lt;/color&gt; Tấn Công lên mục tiêu và tất cả mục tiêu địch trong bán kính &lt;color=#f26c1c&gt;3 ô&lt;/color&gt; xung quanh, đồng thời tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; duy trì &lt;color=#f26c1c&gt;2 hiệp&lt;/color&gt;. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, kỹ năng này chuyển sang gây ST Thiêu Đốt phạm vi và tạo các ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;. Soppo không nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill2-icon.png\" alt=\"Cắn Xé Ác Tính\" loading=\"lazy\">Cắn Xé Ác Tính</span>&nbsp;&nbsp;tăng hệ số lên 130%. Ở Chế Độ Chó Săn, nhận 2 Dấu Ấn sau tấn công và nhận Tăng Hành Động thay cho Chỉ Lệnh Bổ Sung.",
+          "Mốc giá trị cao nhất cho người muốn đầu tư ít."
+        ],
+        [
+          "V2",
+          "<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tiếng Hú Đêm Trăng: Đáp xuống ô trống mang thuộc tính Băng Kết hoặc Thiêu Đốt được chọn trên chiến trường và áp dụng &lt;color=#3487e0&gt;Dấu Vết Tàn Sát&lt;/color&gt; cho tất cả Búp Bê đồng minh xung quanh trong bán kính &lt;color=#f26c1c&gt;8 ô&lt;/color&gt; (ngoại trừ bản thân Soppo) duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;, cho phép họ tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; xung quanh mục tiêu sau khi thực hiện tấn công chủ động; và sát thương gây ra cho các đơn vị địch đứng trên ô địa hình Dị Vị được tăng thêm. Sau kỹ năng này, Soppo chuyển sang &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;.\n\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, chuyển sang gây ST Thiêu Đốt phạm vi bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch xung quanh trong bán kính &lt;color=#f26c1c&gt;4 ô&lt;/color&gt;. Sát thương này được chia đều cho tất cả mục tiêu trong phạm vi hiệu lực. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Tăng Hành Động&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill3-icon.png\" alt=\"Tiếng Hú Đêm Trăng\" loading=\"lazy\">Tiếng Hú Đêm Trăng</span>&nbsp;&nbsp;gây 80% ATK lên 3 địch gần nhất khi đáp xuống ô Băng Giá/Thiêu Đốt; ô Tro Tàn gây cả Băng Kết lẫn Thiêu Đốt. Chế Độ Chó Điên nhận thêm 1 Dấu Ấn.",
+          "Tăng burst dmg và tận dụng phản ứng ô Băng–Nhiệt."
+        ],
+        [
+          "V3",
+          "Dấu Vết Tàn Sát mở rộng vùng tạo Sương Đông thêm 2 ô và cho Soppo 1 Nhân Tố trước tấn công chủ động.&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tiếng Hú Đêm Trăng: Đáp xuống ô trống mang thuộc tính Băng Kết hoặc Thiêu Đốt được chọn trên chiến trường và áp dụng &lt;color=#3487e0&gt;Dấu Vết Tàn Sát&lt;/color&gt; cho tất cả Búp Bê đồng minh xung quanh trong bán kính &lt;color=#f26c1c&gt;8 ô&lt;/color&gt; (ngoại trừ bản thân Soppo) duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;, cho phép họ tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; xung quanh mục tiêu sau khi thực hiện tấn công chủ động; và sát thương gây ra cho các đơn vị địch đứng trên ô địa hình Dị Vị được tăng thêm. Sau kỹ năng này, Soppo chuyển sang &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;.\n\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, chuyển sang gây ST Thiêu Đốt phạm vi bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch xung quanh trong bán kính &lt;color=#f26c1c&gt;4 ô&lt;/color&gt;. Sát thương này được chia đều cho tất cả mục tiêu trong phạm vi hiệu lực. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Tăng Hành Động&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill3-icon.png\" alt=\"Tiếng Hú Đêm Trăng\" loading=\"lazy\">Tiếng Hú Đêm Trăng</span>&nbsp; ở Chế Độ Chó Điên tăng lên 150%, cộng sát thương theo cấp ô.",
+          "Cải thiện tốc độ tích tầng, hỗ trợ đội và sát thương trên ô Dị Vị."
+        ],
+        [
+          "V4",
+          "Buff điều kiện đội hình tăng sát thương lên 150%, không còn yêu cầu mục tiêu có debuff; nhận thêm 2 Dấu Ấn Vĩnh Viễn.",
+          "Nâng độ ổn định và bỏ điều kiện debuff khó duy trì."
+        ],
+        [
+          "V5",
+          "Tuyệt Kỹ tăng lên số Dấu Ấn × 50% ATK; thêm 5% hệ số cho mỗi điểm Nhiên Liệu tiêu hao vượt mức, hồi 2 điểm sau dùng. Chặn Đánh tăng lên 60% và cho 2 Dấu Ấn.",
+          "Bước nhảy lớn cho Ult và tích Dấu Ấn."
+        ],
+        [
+          "V6",
+          "Đầu trận nhận 3 Nhân Tố, trần tăng 20 tầng, mỗi tấn công chủ động nhận thêm 1 tầng. Ở 20 tầng: Nhân Tố I bỏ qua 20% DEF, II tăng Băng Kết/Thiêu Đốt lên 10%, III tăng sát thương lên địch trên ô Dị Vị thành 30%.",
+          "Mốc tối đa dành cho đầu tư cao; ước tính V6R1 = 288% V0R1."
+        ]
+      ],
+      "column_widths": [
+        180,
+        180,
+        180
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Trang bị Vũ khí (Weapons)"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Capitoline</b> là lựa chọn sát thương chủ động tốt nhất theo test từ cộng đồng. <b>Tiếng Gầm Xé Trời</b> là Trấn của Soppo và bám sát cơ chế AoE + tạo ô. Chênh lệch benchmark giữa Capitoline và Trấn Soppo chỉ khoảng 1% trong đội hình thử nghiệm của tác giả ảnh, nên không nên xem đây là chênh lệch tuyệt đối cho mọi đội."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Vũ khí",
+        "Ưu điểm",
+        "Khuyến nghị"
+      ],
+      "rows": [
+        [
+          "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/capitoline.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Capitoline.png\" alt=\"Capitoline\" loading=\"lazy\">Capitoline<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Capitoline.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Capitoline</span><span class=\"guide-weapon-popover-desc\">Sát thương gây ra bởi tấn công chủ động tăng 20%/24%/28%/32%/36%/40%. Nếu kỹ năng chủ động không gây sát thương, Tấn Công tăng 10%/12%/14%/16%/18%/20% trong vòng hiện tại.\n\nKỹ Năng Khắc Ấn: Sát thương gây ra lên mục tiêu có Debuff tăng 2.5%, và sát thương gây ra lên Tập Đoàn Orlog tăng 2.5%.</span></span></a>",
+          "Tăng 20% sát thương kỹ năng chủ động ở R1. Nếu kỹ năng chủ động không gây sát thương, tăng 10% ATK trong hiệp hiện tại.",
+          "Ngang trấn, giá trị cao vì dùng được cho nhiều DPS AR."
+        ],
+        [
+          "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/skysunderer-s-howl.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Skysunderer's Howl.png\" alt=\"Tiếng Gầm Xé Trời\" loading=\"lazy\">Tiếng Gầm Xé Trời<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Skysunderer's Howl.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Tiếng Gầm Xé Trời</span><span class=\"guide-weapon-popover-desc\">ST AoE gây ra tăng 20/24/28/32/36/40%. Sau khi tạo ô Băng Kết hoặc Thiêu Đốt, ST Băng Kết và ST Thiêu Đốt gây ra tăng 10/12/14/16/18/20% trong 1 hiệp.\n\nKỹ Năng Khắc Ấn: Sát thương gây ra lên mục tiêu có Debuff Thiêu Đốt hoặc Debuff Băng Kết tăng 2.5%. Sát thương gây ra lên ELID tăng 2.5%.</span></span></a>",
+          "Tăng 20% sát thương AoE ở R1. Sau khi tạo ô Băng Giá hoặc Thiêu Đốt, tăng 10% ST Băng Kết và Thiêu Đốt trong 1 hiệp.",
+          "Khớp bộ kit nhất; chọn khi muốn đầu tư riêng cho Soppo."
+        ],
+        [
+          "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/golden-melody.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Golden Melody.png\" alt=\"Khúc Hoàng Kim\" loading=\"lazy\">Khúc Hoàng Kim<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Golden Melody.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Khúc Hoàng Kim</span><span class=\"guide-weapon-popover-desc\">Tăng 10%/10%/15%/20%/20%/20% sát thương gây ra. Khi nhận Buff, tăng 10%/15%/15%/15%/20%/20% sát thương gây ra bởi Tấn Công Chi Viện tiếp theo, nhận 1/1/1/1/1/2 tầng, tối đa 2/2/3/3/4/4 tầng.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên ELID. Nếu mục tiêu không được che chắn bởi Vật Cản, tăng thêm 2.5%.</span></span></a>",
+          "Tăng 10% sát thương ở R1; phần tăng sát thương Hỗ Trợ ít phù hợp hơn vì Soppo dùng Chặn Đánh thay vì Hành Động Chi Viện.",
+          "Dùng nếu đã sở hữu và không có nhiều tài nguyên hay lựa chọn tốt hơn; không nên roll riêng cho Soppo."
+        ],
+        [
+          "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/planeta.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Planeta.png\" alt=\"Thiên Thể\" loading=\"lazy\">Thiên Thể<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Planeta.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Thiên Thể</span><span class=\"guide-weapon-popover-desc\">Khi hạ gục kẻ địch hoặc sau khi Hành Động Thêm (bao gồm Hành Động Thêm, Di Chuyển Thêm và Chỉ Huy Thêm) kết thúc, sát thương gây ra bởi kỹ năng chủ động tăng 4%/5%/5%/5%/5%/5% 1/1/2/2/2/3 lần, cộng dồn tối đa 5/5/6/7/8/8 lần. Sau khi đạt 5/5/6/7/8/8 tầng, nhận 2/3/3/3/3/4 ô Di Chuyển Thêm sau khi tấn công chủ động.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên ELID. Nếu đơn vị ở mức Ổn Định tối đa, tăng thêm 2.5%.</span></span></a>",
+          "Tích tăng sát thương kỹ năng chủ động sau khi kết liễu hoặc kết thúc Tăng Hành Động/Chỉ Lệnh Bổ Sung.",
+          "Phương án thay thế mạnh khi hành động nhiều."
+        ],
+        [
+          "AR SR có ATK/Crit",
+          "Giữ chỉ số nền và không khóa vận hành bộ kỹ năng.",
+          "Lựa chọn ngân sách; thay bằng SSR sẵn có khi đủ tài nguyên."
+        ]
+      ],
+      "column_widths": [
+        180,
+        180,
+        180
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Phụ kiện & Chỉ số (Attachments)"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Bộ khuyến nghị:</b>&nbsp;Ưu tiên&nbsp;<b>Phase Strike(Đả Kích Dị Vị) </b>nếu không muốn farm 2 set. Tùy đội ùng <b>Freeze Boost (Cường Hóa Băng)</b> hoặc <b>Burn Boost (Cường Hóa Nhiệt)</b> theo dạng và đội hình chính."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Ưu tiên",
+        "Chỉ số",
+        "Ghi chú"
+      ],
+      "rows": [
+        [
+          "1",
+          "ATK%",
+          "Nguồn tăng sát thương ổn định nhất cho toàn bộ hệ số kỹ năng."
+        ],
+        [
+          "2",
+          "ATK",
+          "Bổ sung sau ATK%; hữu ích khi chỉ số nền chưa cao."
+        ],
+        [
+          "3",
+          "TL Bạo Kích",
+          "Ưu tiên đến ngưỡng ổn định khoảng 60–70% trước buff."
+        ],
+        [
+          "4",
+          "ST Bạo Kích",
+          "Nhân Tố Cuồng Bạo đã cấp nhiều ST Bạo Kích, nên ưu tiên sau TL Bạo Kích."
+        ]
+      ],
+      "column_widths": [
+        180,
+        180,
+        180
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Khóa Cố Định (Fixed Keys)"
+    },
+    {
+      "type": "paragraph",
+      "html": "Thiết lập khuyến nghị: <b>1 + 5 + 6</b>. Đổi <b>6</b> sang <b>2</b> khi đội không kích hoạt Đòn Đánh Ngoài Lượt hoặc cần giải buff boss."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Khóa",
+        "Hiệu ứng"
+      ],
+      "rows": [
+        [
+          "1-Đây Là Địa Bàn Của Ta",
+          "Đầu trận nhận 2 tầng Nhân Tố Cuồng Bạo."
+        ],
+        [
+          "5-Sát ý Cuống Nhiệt",
+          "Khi Soppo có Khiên, ST Thiêu Đốt và Băng Kết tăng 10%."
+        ],
+        [
+          "6-Phối Hợp Nhóm",
+          "Sau Đòn Đánh Ngoài Lượt của đồng minh, nhận Thế Công Rực Lửa I hoặc Xung Kích Băng Kết tương ứng trong 2 hiệp nếu chưa có."
+        ],
+        [
+          "2-Vẫn Muốn Bị Cắn Nữa À?",
+          "Sau khi đánh mục tiêu trên ô Dị Vị, giải 1 buff của mục tiêu."
+        ],
+        [
+          "3-Địa Ngục Hàn Băng",
+          "Đầu hiệp tạo ô Băng Giá trong bán kính 4 ô quanh Soppo trong 2 hiệp."
+        ],
+        [
+          "4-Liếm Vết Thương",
+          "Khi chịu sát thương trên ô Dị Vị, giảm 10% sát thương và 1 ST Ổn Định nhận vào."
+        ]
+      ],
+      "column_widths": [
+        180,
+        180
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Khóa Chung Đề Xuất"
+    },
+    {
+      "type": "paragraph",
+      "html": "• <b>Tiếng Gọi Hoang Dã - <a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp;</b><p>• <b>Shipper Siêu Hạng - <a class=\"guide-inline-ref guide-inline-character\" title=\"Sakura\" href=\"../characters/sakura.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/sakura/avatar.png\" alt=\"Sakura\" loading=\"lazy\">Sakura</a>&nbsp;</b></p><p>• <b>Kỳ Tích Vĩ Đại -<a class=\"guide-inline-ref guide-inline-character\" title=\"Lewis\" href=\"../characters/lewis.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/lewis/avatar.png\" alt=\"Lewis\" loading=\"lazy\">Lewis</a>&nbsp;</b></p><p></p>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Dữ liệu Tái ĐỊnh Hình & Lõi"
+    },
+    {
+      "type": "paragraph",
+      "html": "Ưu tiên nút tăng <b>ATK</b>, <b>TL Bạo Kích</b> và sát thương Dị Vị/Băng Kết/Thiêu Đốt. Vì Nhân Tố Cuồng Bạo tự cấp nhiều ST Bạo Kích, tránh dồn quá nhiều dòng ST Bạo Kích trước khi TL Bạo Kích đủ ổn định. Cấu hình hoa phụ thuộc đội hình."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Chu kỳ Kỹ năng (Rotation)"
+    },
+    {
+      "type": "paragraph",
+      "html": "Bảng dưới chép lại rotation 7 hiệp từ infographic. <b>K1</b> = <span class=\"guide-inline-ref guide-inline-skill\" title=\"Cắn Xé Ác Tính: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 6 ô&lt;/color&gt;, gây ST Băng Kết phạm vi bằng &lt;color=#f26c1c&gt;80%&lt;/color&gt; Tấn Công lên mục tiêu và tất cả mục tiêu địch trong bán kính &lt;color=#f26c1c&gt;3 ô&lt;/color&gt; xung quanh, đồng thời tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; duy trì &lt;color=#f26c1c&gt;2 hiệp&lt;/color&gt;. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, kỹ năng này chuyển sang gây ST Thiêu Đốt phạm vi và tạo các ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;. Soppo không nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill2-icon.png\" alt=\"Cắn Xé Ác Tính\" loading=\"lazy\">Cắn Xé Ác Tính</span>&nbsp;, <b>K2</b> = <span class=\"guide-inline-ref guide-inline-skill\" title=\"Tiếng Hú Đêm Trăng: Đáp xuống ô trống mang thuộc tính Băng Kết hoặc Thiêu Đốt được chọn trên chiến trường và áp dụng &lt;color=#3487e0&gt;Dấu Vết Tàn Sát&lt;/color&gt; cho tất cả Búp Bê đồng minh xung quanh trong bán kính &lt;color=#f26c1c&gt;8 ô&lt;/color&gt; (ngoại trừ bản thân Soppo) duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;, cho phép họ tạo các ô địa hình &lt;color=#3487e0&gt;Băng Giá&lt;/color&gt; xung quanh mục tiêu sau khi thực hiện tấn công chủ động; và sát thương gây ra cho các đơn vị địch đứng trên ô địa hình Dị Vị được tăng thêm. Sau kỹ năng này, Soppo chuyển sang &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;.\n\nNếu Soppo đang ở &lt;color=#3487e0&gt;Chế Độ Chó Điên&lt;/color&gt;, chuyển sang gây ST Thiêu Đốt phạm vi bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch xung quanh trong bán kính &lt;color=#f26c1c&gt;4 ô&lt;/color&gt;. Sát thương này được chia đều cho tất cả mục tiêu trong phạm vi hiệu lực. Sau kỹ năng này, Soppo thực hiện đòn đánh thường Nanh Săn Mồi lên mục tiêu địch gần nhất &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; và nhận &lt;color=#3487e0&gt;Tăng Hành Động&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/skill3-icon.png\" alt=\"Tiếng Hú Đêm Trăng\" loading=\"lazy\">Tiếng Hú Đêm Trăng</span>&nbsp;, <b>Ult</b> = <span class=\"guide-inline-ref guide-inline-skill\" title=\"Cú Vồ Chí Mạng: Tiêu hao toàn bộ số tầng &lt;color=#3487e0&gt;Ấn Săn&lt;/color&gt; và gây ST Băng Kết phạm vi bằng số tầng Ấn Săn × &lt;color=#f26c1c&gt;30%&lt;/color&gt; Tấn Công lên các mục tiêu trong bán kính &lt;color=#f26c1c&gt;6 ô&lt;/color&gt;. Nếu đòn đánh này trúng mục tiêu địch đang đứng trên ô địa hình Dị Vị, gây thêm &lt;color=#f26c1c&gt;1 lần&lt;/color&gt; ST Băng Kết bằng &lt;color=#f26c1c&gt;50%&lt;/color&gt; Tấn Công lên mục tiêu đó. Sau kỹ năng này, Soppo chuyển sang &lt;color=#3487e0&gt;Chế Độ Chó Săn&lt;/color&gt;.\n\nBị động: Trước khi đơn vị địch xung quanh &lt;color=#f26c1c&gt;trong phạm vi 8 ô&lt;/color&gt; tung đòn tấn công chủ động, kích hoạt &lt;color=#3487e0&gt;Chặn Đánh&lt;/color&gt; lên chúng, gây ST Băng Kết bằng &lt;color=#f26c1c&gt;30%&lt;/color&gt; Tấn Công và &lt;color=#f26c1c&gt;4 điểm&lt;/color&gt; ST Ổn Định. Chỉ có thể kích hoạt tối đa &lt;color=#f26c1c&gt;1 lần&lt;/color&gt; mỗi hiệp.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/ult-icon.png\" alt=\"Cú Vồ Chí Mạng\" loading=\"lazy\">Cú Vồ Chí Mạng</span>&nbsp;. Điều chỉnh mục tiêu và vị trí ô theo trận thực tế."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mốc",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "H7"
+      ],
+      "rows": [
+        [
+          "V0+",
+          "K1 + K2",
+          "K2 + K1",
+          "K2 + Ult",
+          "K1 + K2",
+          "K2 + K1",
+          "K2 + K1",
+          "K2 + Ult"
+        ],
+        [
+          "V0 - team lửa",
+          "K1 + K2",
+          "K2 + K1",
+          "K2 + K1",
+          "K2 + K1",
+          "K2 + K1",
+          "K2 + K1",
+          "K2 + Ult"
+        ],
+        [
+          "V6",
+          "K1 + K2",
+          "K2 + K1",
+          "K2 + K1",
+          "K2 + Ult",
+          "K1 + K2",
+          "K2 + K1",
+          "K2 + Ult"
+        ],
+        [
+          "V6 - cùng Alva V2",
+          "K1 + K2",
+          "K2 + K1",
+          "K2 + Ult",
+          "K1 + K2",
+          "K2 + Ult",
+          "K1 + K2",
+          "K2 + Ult"
+        ]
+      ],
+      "column_widths": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Đội hình đề xuất (Team Compositions)"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Đội Băng Kết / ô phản ứng:</b> <b><a class=\"guide-inline-ref guide-inline-character\" title=\"Alva\" href=\"../characters/alva.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/avatar.png\" alt=\"Alva\" loading=\"lazy\">Alva</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Loreley\" href=\"../characters/loreley.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/avatar.png\" alt=\"Loreley\" loading=\"lazy\">Loreley</a>&nbsp; V2 /&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Dushevnaya\" href=\"../characters/dushevnaya.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/dushevnaya/avatar.png\" alt=\"Dushevnaya\" loading=\"lazy\">Dushevnaya</a>&nbsp;V0 + <a class=\"guide-inline-ref guide-inline-character\" title=\"Robella\" href=\"../characters/robella.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/robella/avatar.png\" alt=\"Robella\" loading=\"lazy\">Robella</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"OTs-14\" href=\"../characters/ots-14.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/ots-14/avatar.png\" alt=\"OTs-14\" loading=\"lazy\">OTs-14</a>&nbsp;</b>"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Đội băng tương lai:</b> <b><a class=\"guide-inline-ref guide-inline-character\" title=\"Alva\" href=\"../characters/alva.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/avatar.png\" alt=\"Alva\" loading=\"lazy\">Alva</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Eagletta\" href=\"../characters/eagletta.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/eagletta/avatar.png\" alt=\"Eagletta\" loading=\"lazy\">Eagletta</a>&nbsp; +<a class=\"guide-inline-ref guide-inline-character\" title=\"Robella\" href=\"../characters/robella.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/robella/avatar.png\" alt=\"Robella\" loading=\"lazy\">Robella</a>&nbsp;/<a class=\"guide-inline-ref guide-inline-character\" title=\"Asteria\" href=\"../characters/asteria.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/asteria/avatar.png\" alt=\"Asteria\" loading=\"lazy\">Asteria</a>&nbsp; V6 + </b><a class=\"guide-inline-ref guide-inline-character\" title=\"OTs-14\" href=\"../characters/ots-14.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/ots-14/avatar.png\" alt=\"OTs-14\" loading=\"lazy\">OTs-14</a>"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Đội Thiêu Đốt:</b>&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp;<b>+&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Loreley\" href=\"../characters/loreley.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/avatar.png\" alt=\"Loreley\" loading=\"lazy\">Loreley</a>&nbsp; +&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Lewis\" href=\"../characters/lewis.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/lewis/avatar.png\" alt=\"Lewis\" loading=\"lazy\">Lewis</a>&nbsp; +&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Vector\" href=\"../characters/vector.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/vector/avatar.png\" alt=\"Vector\" loading=\"lazy\">Vector</a>&nbsp; +&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"OTs-14\" href=\"../characters/ots-14.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/ots-14/avatar.png\" alt=\"OTs-14\" loading=\"lazy\">OTs-14</a>&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Alva\" href=\"../characters/alva.html\" target=\"_blank\" rel=\"noopener\"><br></a></b>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tổng kết"
+    },
+    {
+      "type": "paragraph",
+      "html": "• <b>F2P:</b> V0 đủ dùng; V1 là nâng cấp sớm đáng giá nếu còn tài nguyên.<br>• <b>Đầu tư vừa:</b> cân nhắc V1 trước Trấn. <a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/capitoline.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Capitoline.png\" alt=\"Capitoline\" loading=\"lazy\">Capitoline<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Capitoline.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Capitoline</span><span class=\"guide-weapon-popover-desc\">Sát thương gây ra bởi tấn công chủ động tăng 20%/24%/28%/32%/36%/40%. Nếu kỹ năng chủ động không gây sát thương, Tấn Công tăng 10%/12%/14%/16%/18%/20% trong vòng hiện tại.\n\nKỹ Năng Khắc Ấn: Sát thương gây ra lên mục tiêu có Debuff tăng 2.5%, và sát thương gây ra lên Tập Đoàn Orlog tăng 2.5%.</span></span></a>&nbsp; có hiệu quả benchmark tương đương và linh hoạt hơn nếu đã sở hữu.<br>• <b>Đầu tư cao:</b> V6 mở trần 20 stack Nhân Tố, tăng tốc tích tầng và cường hóa mạnh cả ba buff.<br>• <b>Điểm mạnh:</b> sát thương kép, cơ động theo ô, AoE, Chặn Đánh, hỗ trợ ô cho đồng đội.<br>• <b>Điểm yếu:</b> vận hành phụ thuộc dạng, ô địa hình, thứ tự hành động và điều kiện đội hình."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Nguồn tham khảo"
+    },
+    {
+      "type": "link",
+      "url": "https://gf2-bbs.exiliumgf.com/threadInfo?id=122802&hash_flag=5",
+      "text": "Bài hướng dẫn Soppo trên cộng đồng chính thức GFL2"
+    },
+    {
+      "type": "link",
+      "url": "https://refittingroom.app/characters/soppo",
+      "text": "Refitting Room — Soppo build và dữ liệu kỹ năng"
+    },
+    {
+      "type": "link",
+      "url": "https://loadoutgg.com/girls-frontline-2-exilium/characters/soppo/",
+      "text": "LoadoutGG — Soppo character guide"
+    },
+    {
+      "type": "link",
+      "url": "https://tlnd.cc/blog/en/girls-frontline-exilium/soppo",
+      "text": "TLND — Soppo build, fortification và team"
+    },
+    {
+      "type": "link",
+      "url": "https://thekonnetwork.com/soppo-gfl2-guide/",
+      "text": "The Kon Network — Soppo Freeze/Burn guide"
+    }
+  ]
+}

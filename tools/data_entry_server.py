@@ -195,15 +195,17 @@ class DataEntryHandler(SimpleHTTPRequestHandler):
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="GFL2 local editor server")
+    parser = argparse.ArgumentParser(description="GFL2 local editor server (Wrapper)")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--no-browser", action="store_true")
     args = parser.parse_args()
-    server = ThreadingHTTPServer((args.host, args.port), DataEntryHandler)
+
+    from tools.editor_server import create_editor_server
+    server = create_editor_server(ROOT, host=args.host, port=args.port)
     url = f"http://{args.host}:{server.server_port}/tools/data-entry/index.html"
     print(f"Data entry tool: {url}")
-    print(f"Effect editor: http://{args.host}:{server.server_port}/tools/effect_editor/")
+    print(f"Editor Hub: http://{args.host}:{server.server_port}/tools/index.html")
     if not args.no_browser:
         webbrowser.open(url)
     try:

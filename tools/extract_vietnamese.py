@@ -62,6 +62,7 @@ UI_DICTIONARY = {
     "filter_all_rarities": "Tất Cả Độ Hiếm",
     "filter_all_phases": "Tất Cả Thuộc Tính",
     "filter_all_weapons": "Tất Cả Vũ Khí",
+    "filter_all_ammo_types": "Tất Cả Loại Đạn",
     "filter_all_types": "Tất Cả Loại",
     "filter_all_servers": "Tất Cả Máy Chủ",
     "filter_count_suffix": "nhân vật",
@@ -1065,15 +1066,15 @@ def extract_all() -> int:
     if "effects" in previous_bundle:
         i18n_bundle["effects"] = previous_bundle["effects"]
 
-    # Save to data/i18n_vi.json
+    # Save to data/i18n_vi.json and site/static/js/i18n-vi.js atomically
     print(f"\nWriting to {OUTPUT_JSON.relative_to(ROOT)}...")
-    OUTPUT_JSON.write_text(json.dumps(i18n_bundle, ensure_ascii=False, indent=2), encoding="utf-8")
+    from tools.editor_core.bundle import stage_i18n_bundle
+    from tools.editor_core.transaction import RepositoryTransaction
 
-    # Save to site/static/js/i18n-vi.js
-    print(f"Writing to {OUTPUT_JS.relative_to(ROOT)}...")
-    OUTPUT_JS.parent.mkdir(parents=True, exist_ok=True)
-    js_content = f"// Auto-generated Vietnamese Localization Bundle for GFL2: Exilium Wiki\nwindow.GFL2_I18N_VI = {json.dumps(i18n_bundle, ensure_ascii=False, indent=2)};\n"
-    OUTPUT_JS.write_text(js_content, encoding="utf-8")
+    tx = RepositoryTransaction(ROOT)
+    with tx:
+        stage_i18n_bundle(ROOT, tx, i18n_bundle=i18n_bundle)
+        tx.commit()
 
     print(f"✅ Successfully exported Vietnamese localization ({OUTPUT_JSON.stat().st_size // 1024} KB).")
     return 0

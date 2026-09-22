@@ -25,6 +25,41 @@ def test_core_pages_generated(built_site: Path):
     assert (built_site / "search-index.json").exists(), "dist/search-index.json missing"
 
 
+def test_homepage_branding_balanced_classes_and_featured_dolls(built_site: Path):
+    home = (built_site / "index.html").read_text(encoding="utf-8")
+    css = (built_site / "static" / "css" / "style.css").read_text(encoding="utf-8")
+
+    assert "GF2: Lưu Đày Wiki Tiếng Việt (beta)" in home
+    assert 'class="class-nav-grid"' in home
+    assert 'class="class-nav-card"' in home
+    assert ".class-nav-grid" in css
+    assert ".class-nav-card" in css
+
+    featured_slugs = ["soppo", "loreley", "alva", "ots-14", "voymastina", "klukai"]
+    featured_positions = [home.index(f'characters/{slug}.html') for slug in featured_slugs]
+    assert featured_positions == sorted(featured_positions)
+    assert home.count('class="doll-card ') == len(featured_slugs)
+
+
+def test_character_quick_filters_use_class_phase_and_ammo_icons():
+    template = (ROOT / "site" / "templates" / "character_index.html").read_text(encoding="utf-8")
+    css = (ROOT / "site" / "static" / "css" / "style.css").read_text(encoding="utf-8")
+    search_js = (ROOT / "site" / "static" / "js" / "search.js").read_text(encoding="utf-8")
+
+    assert "assets/images/class/{{ cls }}.png" in template
+    assert "assets/images/phase/{{ ph }}.png" in template
+    for ammo_asset in ["LightAmmo.png", "MediumAmmo.png", "HeavyAmmo.png", "ShotgunAmmo.png", "Melee.png"]:
+        assert ammo_asset in template
+        assert (ROOT / "assets" / "images" / "ammo" / ammo_asset).exists()
+
+    assert 'data-filter="ammo_type"' in template
+    assert 'data-ammo_type="{{ doll.ammo_type }}"' in template
+    assert "ammo_type: 'all'" in search_js
+    assert ".filter-chip-icon" in css
+    for phase in ["physical", "burn", "hydro", "electric", "freeze", "corrosion", "resonance"]:
+        assert f".phase-chip.phase-{phase}" in css
+
+
 def test_static_assets_copied(built_site: Path):
     assert (built_site / "static" / "css" / "style.css").exists()
     assert (built_site / "static" / "js" / "search.js").exists()
@@ -141,7 +176,7 @@ def test_andoris_images_remapped(built_site: Path):
 
 
 def test_server_badges_and_filters(built_site: Path):
-    cn_dolls = {"asteria", "eagletta", "faelynn", "koleda", "mityl", "soppo", "welrod"}
+    cn_dolls = {"asteria", "eagletta", "faelynn", "koleda", "mityl", "soppo", "welrod", "cecilia"}
     for p in CHAR_DIR.glob("*.json"):
         cdata = json.loads(p.read_text(encoding="utf-8"))
         expected_server = "cn" if p.stem in cn_dolls else "global"
@@ -279,3 +314,39 @@ def test_no_windows_local_paths_in_output(built_site: Path):
         assert "C:\\" not in content, f"Windows local path 'C:\\' found in {html_file.name}"
         assert "D:\\" not in content, f"Windows local path 'D:\\' found in {html_file.name}"
         assert "file:///" not in content, f"file:/// URI found in {html_file.name}"
+
+
+def test_fortification_skill_icons(built_site: Path):
+    import re
+
+    char_files = list(CHAR_DIR.glob("*.json"))
+    assert len(char_files) > 0
+    img_tag_pattern = re.compile(r'<img\b[^>]*\bclass="[^"]*fort-skill-icon[^"]*"[^>]*>')
+    src_pattern = re.compile(r'src="([^"]+)"')
+
+    for cf in char_files:
+        html_file = built_site / "characters" / f"{cf.stem}.html"
+        assert html_file.exists(), f"Missing HTML for character {cf.stem}"
+        content = html_file.read_text(encoding="utf-8")
+        tags = img_tag_pattern.findall(content)
+        # All characters in the game have 6 fortification tiers
+        assert len(tags) == 6, f"{html_file.name} expected 6 fort-skill-icon images, found {len(tags)}"
+        for tag in tags:
+            m = src_pattern.search(tag)
+            assert m, f"No src in img tag: {tag}"
+            clean_src = m.group(1).lstrip("../").lstrip("/")
+            assert (built_site / clean_src).exists(), f"Skill icon in {html_file.name} not found in output: {clean_src}"
+
+
+def test_helix_stats_and_materials_removed(built_site: Path):
+    char_files = list(CHAR_DIR.glob("*.json"))
+    assert len(char_files) > 0
+
+    for cf in char_files:
+        html_file = built_site / "characters" / f"{cf.stem}.html"
+        assert html_file.exists(), f"Missing HTML for character {cf.stem}"
+        content = html_file.read_text(encoding="utf-8")
+        assert "data-helix-node" not in content, f"Found neural helix stat node in {html_file.name}"
+        assert "Stat Enhancements" not in content, f"Found Stat Enhancements in {html_file.name}"
+        assert "data-key-materials" not in content, f"Found data-key-materials in {html_file.name}"
+        assert "<th>Materials</th>" not in content, f"Found <th>Materials</th> in {html_file.name}"

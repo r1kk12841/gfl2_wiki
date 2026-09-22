@@ -18,7 +18,7 @@
   "movement_speed": "6 tiles",
   "skills": [
     {
-      "name": "Assault Shot",
+      "name": "Ambush",
       "tags": [
         "Basic Attack",
         "Targeted"
@@ -34,7 +34,7 @@
       "ammo_type": "Light Ammo"
     },
     {
-      "name": "Arc Shadow of the Gray Mouse",
+      "name": "Squirrel's Hologram",
       "tags": [
         "Active",
         "Tile",
@@ -68,7 +68,7 @@
       "range": "--"
     },
     {
-      "name": "Void Fitting",
+      "name": "Null Convergence",
       "tags": [
         "Ultimate",
         "Tile",
@@ -101,8 +101,8 @@
   ],
   "summons": [
     {
-      "name": "Personal Hologram",
-      "description": "Holographic projection that mimics actions and triggers Fitting Resonance at the end of allied turn.",
+      "name": "Hologram - Clone",
+      "description": "Holographic clone created by Mityl that mimics actions and triggers Convergence Resonance at the end of allied turn.",
       "stats": {
         "hp": "100% of Mityl's initial HP",
         "atk": "100% of Mityl's initial ATK",
@@ -112,7 +112,7 @@
       "movement_speed": "6 tiles",
       "skills": [
         {
-          "name": "Arc Shadow Assault",
+          "name": "Hologram Strike",
           "description": "Selects 1 enemy target within 6 tiles and deals Hydro damage equal to 100% of attack to it.",
           "icon": "assets/images/characters/mityl/summon1-skill1-icon.png",
           "range_image": "assets/images/characters/mityl/summon1-skill1-range.png",
@@ -143,6 +143,19 @@
         }
       ],
       "image": "assets/images/characters/mityl/summon1.png"
+    },
+    {
+      "name": "Hologram - Mimic",
+      "description": "Mimic Hologram created from an enemy target that inherits its appearance and basic properties.",
+      "stats": {
+        "hp": "100% of Mityl's initial HP",
+        "atk": "100% of Mityl's initial ATK",
+        "def": "100% of Mityl's initial DEF"
+      },
+      "stability_gauge": "9 points",
+      "movement_speed": "6 tiles",
+      "skills": [],
+      "image": "assets/images/characters/mityl/summon1.png"
     }
   ],
   "fortification": [
@@ -154,13 +167,13 @@
     },
     {
       "tier": 2,
-      "skill": "Arc Shadow of the Gray Mouse",
+      "skill": "Squirrel's Hologram",
       "level": 2,
       "effect": "Each time Fitting Resonance is cast, Holograms gain 1 stack of Untouchable. The damage multiplier of Personal Hologram’s basic attack Arc Shadow Assault is increased to 120% ATK."
     },
     {
       "tier": 3,
-      "skill": "Void Fitting",
+      "skill": "Null Convergence",
       "level": 2,
       "effect": "The range of created Tideway tiles is expanded to a 7-tile radius. The ATK increase from Saturation Overflow is increased to 40% and also applies to Holograms. If Fitting Resonance triggers a total of 4 or more times during the current turn, Saturation Overflow does not consume its duration."
     },

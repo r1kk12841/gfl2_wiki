@@ -1,0 +1,264 @@
+{
+  "slug": "alva",
+  "char_slug": "alva",
+  "title": "Hướng dẫn toàn diện Alva: Lối chơi, Trang bị & Đội hình Băng Kết",
+  "last_updated": "2026-09-15",
+  "author": "ZB GFL2 Pull Guide (@myzenabear) & GFL2 Wiki VN",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tổng quan & Vai trò cốt lõi"
+    },
+    {
+      "type": "char_card",
+      "slug": "alva"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Alva</b> là Doll Hỗ Trợ hệ <b><span class=\"guide-text-freeze\">Băng Kết</span></b>, sử dụng vũ khí Súng Trường Tấn Công và Đạn Vừa. Alva vừa cung cấp lượng Khiên dồi dào cho đồng minh, chuyển HP địch thành Khiên, vừa gây sát thương Băng đơn mục tiêu thông qua&nbsp;<span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Chặn Đánh: Tiến hành 1 lần tấn công; không thể bị kích hoạt bởi Chặn Đánh, Phản Kích hoặc Tấn Công Chi Viện.\" data-effect-id=\"effect_e1db8d557124\" data-effect=\"Chặn Đánh\" data-effect-en=\"Interception\" data-text-en=\"Interception\" data-type=\"buff\" data-desc=\"Tiến hành 1 lần tấn công; không thể bị kích hoạt bởi Chặn Đánh, Phản Kích hoặc Tấn Công Chi Viện.\" data-desc-en=\"Performs an attack; cannot be triggered by Interceptions, Counterattacks or Action Supports.\" tabindex=\"0\">Chặn Đánh</span>&nbsp; tới 3 lần mỗi hiệp khi ở <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Chế độ Viện Hộ: Đơn vị phe ta gây ST Băng Kết cho đơn vị địch có hiệu ứng loại Khiên tăng 20%. TL Bạo Kích của bản thân tăng 20%. Trước khi đơn vị địch trong phạm vi 8 ô xung quanh chủ động tấn công, tiến hành 1 lần Chặn Đánh, gây ST bằng 60% Tấn Công loại ST Băng Kết và 4 điểm ST Ổn Định, và tích lũy 20% điểm ST lần này lên Bình Chướng Băng của tất cả đơn vị đồng minh, mỗi hiệp tối đa kích hoạt 3 lần. Không thể giải trừ.\" data-effect-id=\"effect_bdd5ce840b14\" data-effect=\"Chế độ Viện Hộ\" data-effect-en=\"Covering Mode\" data-text-en=\"Covering Mode\" data-type=\"buff\" data-desc=\"Đơn vị phe ta gây ST Băng Kết cho đơn vị địch có hiệu ứng loại Khiên tăng 20%. TL Bạo Kích của bản thân tăng 20%. Trước khi đơn vị địch trong phạm vi 8 ô xung quanh chủ động tấn công, tiến hành 1 lần Chặn Đánh, gây ST bằng 60% Tấn Công loại ST Băng Kết và 4 điểm ST Ổn Định, và tích lũy 20% điểm ST lần này lên Bình Chướng Băng của tất cả đơn vị đồng minh, mỗi hiệp tối đa kích hoạt 3 lần. Không thể giải trừ.\" data-desc-en=\"Increases Freeze damage dealt by allies towards enemies with Shield effects by 20%. Increases CRIT rate by 20% for self. Before enemies within a 8 tile radius performs an active attack, launches Interception, dealing Freeze damage equivalent to 60% ATK and 4 Stability Damage, and converts 20% of the damage dealt into Brumal Barrier for all allies. Can be triggered up to 3 times per round\" tabindex=\"0\">Chế độ Viện Hộ&nbsp;</span>và tăng sát thương của dồng minh lên dịch có Khiên."
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Các cơ chế chiến đấu then chốt:</b><br>• <b><span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Lá Chắn Giá Rét: Được coi là một Khiên. Lượng hấp thu bằng 200% Tấn Công ban đầu của Alva. Khi người sở hữu gây ST Băng Kết, cứ mỗi 1000 HP Khiên sở hữu, tăng 1.5% sát thương gây ra. Khi người sở hữu nhận sát thương, áp dụng 1 lớp Ngưng Tụ trong 1 hiệp. Có thể được coi là một Lá Chắn Hàn Sương. Buff loại Băng Kết và không thể giải trừ.\" data-effect-id=\"effect_8b31ca0d370b\" data-effect=\"Lá Chắn Giá Rét\" data-effect-en=\"Brumal Barrier\" data-text-en=\"Brumal Barrier\" data-type=\"buff\" data-desc=\"Được coi là một Khiên. Lượng hấp thu bằng 200% Tấn Công ban đầu của Alva. Khi người sở hữu gây ST Băng Kết, cứ mỗi 1000 HP Khiên sở hữu, tăng 1.5% sát thương gây ra. Khi người sở hữu nhận sát thương, áp dụng 1 lớp Ngưng Tụ trong 1 hiệp. Có thể được coi là một Lá Chắn Hàn Sương. Buff loại Băng Kết và không thể giải trừ.\" data-desc-en=\"Considered a Shield. Absorption amount is equal to 200% of Alva's initial attack. When the holder deals Freeze damage, for every 1000 Shield HP held, increases damage dealt by 1.5%. When the holder receives damage, applies 1 stack of Frozen for 1 turn. This effect is treated as a Frost Barrier. This is considered as a Freeze type effect and cannot be dispelled\" tabindex=\"0\">Lá Chắn Giá Rét</span>&nbsp;:</b> Nội tại của Alva tăng 30% lượng Khiên từ đồng minh. Mọi khiên đồng minh nhận được đều chuyển hóa thành <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Lá Chắn Giá Rét: Được coi là một Khiên. Lượng hấp thu bằng 200% Tấn Công ban đầu của Alva. Khi người sở hữu gây ST Băng Kết, cứ mỗi 1000 HP Khiên sở hữu, tăng 1.5% sát thương gây ra. Khi người sở hữu nhận sát thương, áp dụng 1 lớp Ngưng Tụ trong 1 hiệp. Có thể được coi là một Lá Chắn Hàn Sương. Buff loại Băng Kết và không thể giải trừ.\" data-effect-id=\"effect_8b31ca0d370b\" data-effect=\"Lá Chắn Giá Rét\" data-effect-en=\"Brumal Barrier\" data-text-en=\"Brumal Barrier\" data-type=\"buff\" data-desc=\"Được coi là một Khiên. Lượng hấp thu bằng 200% Tấn Công ban đầu của Alva. Khi người sở hữu gây ST Băng Kết, cứ mỗi 1000 HP Khiên sở hữu, tăng 1.5% sát thương gây ra. Khi người sở hữu nhận sát thương, áp dụng 1 lớp Ngưng Tụ trong 1 hiệp. Có thể được coi là một Lá Chắn Hàn Sương. Buff loại Băng Kết và không thể giải trừ.\" data-desc-en=\"Considered a Shield. Absorption amount is equal to 200% of Alva's initial attack. When the holder deals Freeze damage, for every 1000 Shield HP held, increases damage dealt by 1.5%. When the holder receives damage, applies 1 stack of Frozen for 1 turn. This effect is treated as a Frost Barrier. This is considered as a Freeze type effect and cannot be dispelled\" tabindex=\"0\">Lá Chắn Giá Rét</span>. Không chỉ hấp thụ sát thương, Khiên này còn là buff tấn công cực mạnh: tăng sát thương <span class=\"guide-text-freeze\">Băng Kết</span> và ST Bạo Kích cho địch sở hữu Khiên dựa theo lượng HP Khiên.<br>• <b><span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Châm Độc Nitơ Lỏng: Áp dụng Chứng Hạ Nhiệt lên đơn vị địch trong phạm vi 4 ô xung quanh. Trước khi đơn vị địch trong phạm vi chịu tấn công, nếu chưa có Hàn Ý, trừ HP bằng 500% Tấn Công của Alva và chuyển thành Hàn Ý, tối đa trừ HP xuống còn 1 điểm, mỗi đơn vị kích hoạt tối đa 1 lần trong 1 hiệp lớn. Tồn tại tối đa 1 cái trong cùng thời điểm. Nếu Khiên của đơn vị địch bị đánh phá trong phạm vi 8 ô xung quanh Alva, Alva sẽ tấn công đơn vị đó 1 lần, gây ra ST Băng Kết bằng 40% lượng tích lũy hấp thu Khiên.\" data-effect-id=\"effect_2ca8bef9572d\" data-effect=\"Châm Độc Nitơ Lỏng\" data-effect-en=\"Liquid N2 Fang\" data-text-en=\"Liquid N2 Fang\" data-type=\"effect\" data-desc=\"Áp dụng Chứng Hạ Nhiệt lên đơn vị địch trong phạm vi 4 ô xung quanh. Trước khi đơn vị địch trong phạm vi chịu tấn công, nếu chưa có Hàn Ý, trừ HP bằng 500% Tấn Công của Alva và chuyển thành Hàn Ý, tối đa trừ HP xuống còn 1 điểm, mỗi đơn vị kích hoạt tối đa 1 lần trong 1 hiệp lớn. Tồn tại tối đa 1 cái trong cùng thời điểm. Nếu Khiên của đơn vị địch bị đánh phá trong phạm vi 8 ô xung quanh Alva, Alva sẽ tấn công đơn vị đó 1 lần, gây ra ST Băng Kết bằng 40% lượng tích lũy hấp thu Khiên.\" data-desc-en=\"Applies Hypothermia to all enemies within a 4 tile radius. Before enemies within range are attacked, if the enemy does not have Hoarfrost, converts a portion of its HP equivalent to 500% of Alva's ATK into Hoarfrost. This can only reduce HP to a minimum of 1, and can only trigger once per enemy per round. Only one Liquid N2 Fang can exist. When an enemy within range has its Shield broken, if the enemy is within a 8 tile radius of Alva, Alva performs an attack, dealing Freeze damage equivalent to 40% of the Shield HP\" tabindex=\"0\">Châm Độc Nitơ Lỏng</span>&nbsp;:</b> Triệu hồi vật thể tồn tại 3 hiệp, gây sát thương <span class=\"guide-text-freeze\">Băng Kết</span> AoE và sát thương Vững Chắc (Stability damage) dựa trên lượng Chỉ Số Nhiên Liệu (CI) tiêu hao, đồng thời gán hiệu ứng <b>Hạ Thân Nhiệt (Hypothermia)</b> khiến kẻ địch nhận thêm sát thương Băng Kết.<br>• <b><span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Chế độ Viện Hộ: Đơn vị phe ta gây ST Băng Kết cho đơn vị địch có hiệu ứng loại Khiên tăng 20%. TL Bạo Kích của bản thân tăng 20%. Trước khi đơn vị địch trong phạm vi 8 ô xung quanh chủ động tấn công, tiến hành 1 lần Chặn Đánh, gây ST bằng 60% Tấn Công loại ST Băng Kết và 4 điểm ST Ổn Định, và tích lũy 20% điểm ST lần này lên Bình Chướng Băng của tất cả đơn vị đồng minh, mỗi hiệp tối đa kích hoạt 3 lần. Không thể giải trừ.\" data-effect-id=\"effect_bdd5ce840b14\" data-effect=\"Chế độ Viện Hộ\" data-effect-en=\"Covering Mode\" data-text-en=\"Covering Mode\" data-type=\"buff\" data-desc=\"Đơn vị phe ta gây ST Băng Kết cho đơn vị địch có hiệu ứng loại Khiên tăng 20%. TL Bạo Kích của bản thân tăng 20%. Trước khi đơn vị địch trong phạm vi 8 ô xung quanh chủ động tấn công, tiến hành 1 lần Chặn Đánh, gây ST bằng 60% Tấn Công loại ST Băng Kết và 4 điểm ST Ổn Định, và tích lũy 20% điểm ST lần này lên Bình Chướng Băng của tất cả đơn vị đồng minh, mỗi hiệp tối đa kích hoạt 3 lần. Không thể giải trừ.\" data-desc-en=\"Increases Freeze damage dealt by allies towards enemies with Shield effects by 20%. Increases CRIT rate by 20% for self. Before enemies within a 8 tile radius performs an active attack, launches Interception, dealing Freeze damage equivalent to 60% ATK and 4 Stability Damage, and converts 20% of the damage dealt into Brumal Barrier for all allies. Can be triggered up to 3 times per round\" tabindex=\"0\">Chế độ Viện Hộ</span>&nbsp; &amp; <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Chặn Đánh: Tiến hành 1 lần tấn công; không thể bị kích hoạt bởi Chặn Đánh, Phản Kích hoặc Tấn Công Chi Viện.\" data-effect-id=\"effect_e1db8d557124\" data-effect=\"Chặn Đánh\" data-effect-en=\"Interception\" data-text-en=\"Interception\" data-type=\"buff\" data-desc=\"Tiến hành 1 lần tấn công; không thể bị kích hoạt bởi Chặn Đánh, Phản Kích hoặc Tấn Công Chi Viện.\" data-desc-en=\"Performs an attack; cannot be triggered by Interceptions, Counterattacks or Action Supports.\" tabindex=\"0\">Chặn Đánh</span>&nbsp;:</b> Bật qua Kỹ năng 2 hoặc Kỹ năng 1 (từ V1). Khi ở trạng thái này, Alva kích hoạt <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Chặn Đánh: Tiến hành 1 lần tấn công; không thể bị kích hoạt bởi Chặn Đánh, Phản Kích hoặc Tấn Công Chi Viện.\" data-effect-id=\"effect_e1db8d557124\" data-effect=\"Chặn Đánh\" data-effect-en=\"Interception\" data-text-en=\"Interception\" data-type=\"buff\" data-desc=\"Tiến hành 1 lần tấn công; không thể bị kích hoạt bởi Chặn Đánh, Phản Kích hoặc Tấn Công Chi Viện.\" data-desc-en=\"Performs an attack; cannot be triggered by Interceptions, Counterattacks or Action Supports.\" tabindex=\"0\">Chặn Đánh</span>&nbsp;lên tới 3 lần mỗi hiệp khi kẻ địch hành động, gây sát thương <span class=\"guide-text-freeze\">Băng Kết</span>, trừ điểm Ổn Định của địch và hồi phục khiên <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Lá Chắn Giá Rét: Được coi là một Khiên. Lượng hấp thu bằng 200% Tấn Công ban đầu của Alva. Khi người sở hữu gây ST Băng Kết, cứ mỗi 1000 HP Khiên sở hữu, tăng 1.5% sát thương gây ra. Khi người sở hữu nhận sát thương, áp dụng 1 lớp Ngưng Tụ trong 1 hiệp. Có thể được coi là một Lá Chắn Hàn Sương. Buff loại Băng Kết và không thể giải trừ.\" data-effect-id=\"effect_8b31ca0d370b\" data-effect=\"Lá Chắn Giá Rét\" data-effect-en=\"Brumal Barrier\" data-text-en=\"Brumal Barrier\" data-type=\"buff\" data-desc=\"Được coi là một Khiên. Lượng hấp thu bằng 200% Tấn Công ban đầu của Alva. Khi người sở hữu gây ST Băng Kết, cứ mỗi 1000 HP Khiên sở hữu, tăng 1.5% sát thương gây ra. Khi người sở hữu nhận sát thương, áp dụng 1 lớp Ngưng Tụ trong 1 hiệp. Có thể được coi là một Lá Chắn Hàn Sương. Buff loại Băng Kết và không thể giải trừ.\" data-desc-en=\"Considered a Shield. Absorption amount is equal to 200% of Alva's initial attack. When the holder deals Freeze damage, for every 1000 Shield HP held, increases damage dealt by 1.5%. When the holder receives damage, applies 1 stack of Frozen for 1 turn. This effect is treated as a Frost Barrier. This is considered as a Freeze type effect and cannot be dispelled\" tabindex=\"0\">Lá Chắn Giá Rét</span>&nbsp; cho đồng đội.<br>• <b>Chỉ Số Nhiên Liệu (CI) &amp; <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Chuẩn Bị: Hiệu ứng độc quyền của Alva. Có thể cộng dồn và không thể giải trừ.\" data-effect-id=\"effect_c1c6f271df52\" data-effect=\"Chuẩn Bị\" data-effect-en=\"Battle Prep\" data-text-en=\"Battle Prep\" data-type=\"effect\" data-desc=\"Hiệu ứng độc quyền của Alva. Có thể cộng dồn và không thể giải trừ.\" data-desc-en=\"Exclusive effect for Alva. Can be stacked and cannot be dispelled.\" tabindex=\"0\">Chuẩn Bị</span>&nbsp;:</b> Tài nguyên xoay tua kỹ năng của Alva. Khóa Cố Định 2 cho phép vào trận có ngay 3 điểm CI và 3 tầng Chuẩn Bị Tác Chiến để thi triển combo Kỹ năng 1 nhận ngay <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Chỉ Lệnh Bổ Sung: Có thể thực hiện các lệnh khác ngoài di chuyển.\" data-effect-id=\"effect_66241cc2ad8d\" data-effect=\"Chỉ Lệnh Bổ Sung\" data-effect-en=\"Extra Command\" data-text-en=\"Extra Command\" data-type=\"effect\" data-desc=\"Có thể thực hiện các lệnh khác ngoài di chuyển.\" data-desc-en=\"Commands other than movement can be executed.\" tabindex=\"0\">Chỉ Lệnh Bổ Sung</span>."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Mốc Khuyến Nghị Roll"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Thứ tự ưu tiên rút thẻ:</b> <b>V0 &gt; R1 (Trấn <a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/6p33.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/6P33.png\" alt=\"6P33\" loading=\"lazy\">6P33<span class=\"guide-ref-popover guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/6P33.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">6P33</span><span class=\"guide-weapon-popover-desc\">Khi đồng minh gây ST Băng Kết, tăng 10%/12%/14%/16%/18%/20% ST Bạo Kích. Khi bản thân có Lá Chắn, tăng 10%/12%/14%/16%/18%/20% sát thương gây ra.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên đơn vị Tập Đoàn Girard. Nếu mục tiêu có Debuff Băng Kết, tăng thêm 2.5% sát thương gây ra.</span></span></a>&nbsp;) &gt; V1 &gt; V2 → V6</b>.<br>• <b>Trấn 6P33 mang lại giá trị cao hơn bản sao V1:</b> Người chơi nên ưu tiên lấy Trấn R1 trước khi nghĩ đến việc nâng V1.<br>• <b>V0R1 là mốc chuẩn hoàn chỉnh:</b> Alva ở V0R1 đã đáp ứng 100% chức năng thiết yếu của một Core Support hệ Băng.<br>• <b>V1 và V2 là các nâng cấp đón đầu tương lai (future-proof):</b> Giúp tối ưu hóa vòng lặp kỹ năng và hồi CI liên tục cho các DPS Băng thế hệ mới."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mốc Đột Phá",
+        "Benchmark (Re-Tempest)",
+        "Đánh giá & Khuyến nghị"
+      ],
+      "rows": [
+        [
+          "V0R1",
+          "100% (Chuẩn)",
+          "Mốc F2P hoàn hảo, đủ sức gánh toàn bộ đội hình Băng Kết qua mọi nội dung khó."
+        ],
+        [
+          "V1R1",
+          "108% (+8%)",
+          "Cải thiện vận hành: rút gọn vòng lặp kỹ năng, vào ngay trạng thái Yểm Hộ từ lượt 1 mà không cần dùng Ult"
+        ],
+        [
+          "V2R1",
+          "119% (+11%)",
+          "Mốc vàng cho meta tương lai: giải quyết bài toán thiếu hụt CI cho các Doll Băng dùng chiêu 0 hồi chiêu như <a class=\"guide-inline-ref guide-inline-character\" title=\"Robella\" href=\"../characters/robella.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/robella/avatar.png\" alt=\"Robella\" loading=\"lazy\">Robella</a>&nbsp;, <a class=\"guide-inline-ref guide-inline-character\" title=\"Helen\" href=\"../characters/helen.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/helen/avatar.png\" alt=\"Helen\" loading=\"lazy\">Helen</a>&nbsp;, <a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp; hay <a class=\"guide-inline-ref guide-inline-character\" title=\"Eagletta\" href=\"../characters/eagletta.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/eagletta/avatar.png\" alt=\"Eagletta\" loading=\"lazy\">Eagletta</a>&nbsp;."
+        ],
+        [
+          "V3R1",
+          "124% (+5%)",
+          "Gia tăng độ dày khiên và chuyển hóa trực tiếp độ dày khiên thành sát thương bạo kích cho DPS."
+        ],
+        [
+          "V4R1",
+          "124% (Tiện ích)",
+          "Gia tăng độ sinh tồn và khả năng hồi phục khiên thụ động liên tục trong suốt trận đấu."
+        ],
+        [
+          "V5R1",
+          "159% (+35%)",
+          "Tăng sát thương toàn đội: debuff tăng 40% sát thương Băng Kết."
+        ],
+        [
+          "V6R1",
+          "191% (+32%)",
+          "Mốc đầu tư dành cho Whale: Mở rộng tối đa khả năng buff."
+        ],
+        [
+          "V6R6",
+          "210% (+19%)",
+          "Cực hạn sức mạnh của đội hình Băng Kết."
+        ]
+      ],
+      "column_widths": [
+        180,
+        180,
+        180
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Trang bị Vũ Khí (Weapons)"
+    },
+    {
+      "type": "paragraph",
+      "html": "Trấn độc quyền <b>6P33</b> là mảnh ghép hoàn hảo nhất cho Alva nhờ khả năng buff thẳng Sát thương Bạo Kích và Sát thương Băng Kết cho toàn đội khi có Khiên. Nếu chưa có Trấn, các khẩu AR SSR khác hoặc Nikonova 94 (AN-94) là các phương án thay thế khả dĩ."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Vũ khí",
+        "Cấp bậc",
+        "Đánh giá & Khuyến nghị"
+      ],
+      "rows": [
+        [
+          "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/6p33.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/6P33.png\" alt=\"6P33\" loading=\"lazy\">6P33<span class=\"guide-ref-popover guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/6P33.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">6P33</span><span class=\"guide-weapon-popover-desc\">Khi đồng minh gây ST Băng Kết, tăng 10%/12%/14%/16%/18%/20% ST Bạo Kích. Khi bản thân có Lá Chắn, tăng 10%/12%/14%/16%/18%/20% sát thương gây ra.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên đơn vị Tập Đoàn Girard. Nếu mục tiêu có Debuff Băng Kết, tăng thêm 2.5% sát thương gây ra.</span></span></a>",
+          "<span class=\"guide-align-center\">SSR (Trấn Alva)</span>",
+          "Best-in-Slot (BiS) tuyệt đối. Đem lại giá trị vượt trội so với việc roll bản sao V1, ưu tiên sở hữu ngay từ R1."
+        ],
+        [
+          "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/golden-melody.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Golden Melody.png\" alt=\"Khúc Hoàng Kim\" loading=\"lazy\">Khúc Hoàng Kim<span class=\"guide-ref-popover guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Golden Melody.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Khúc Hoàng Kim</span><span class=\"guide-weapon-popover-desc\">Tăng 10%/10%/15%/20%/20%/20% sát thương gây ra. Khi nhận Buff, tăng 10%/15%/15%/15%/20%/20% sát thương gây ra bởi Tấn Công Chi Viện tiếp theo, nhận 1/1/1/1/1/2 tầng, tối đa 2/2/3/3/4/4 tầng.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên ELID. Nếu mục tiêu không được che chắn bởi Vật Cản, tăng thêm 2.5%.</span></span></a>",
+          "<span class=\"guide-align-center\">SSR (Trấn QJ)</span>",
+          "Lựa chọn thay thế SSR tốt nhất nếu đã có sẵn từ banner QJ; chỉ số ATK cao giúp tăng độ dày khiên của Alva."
+        ],
+        [
+          "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/planeta.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Planeta.png\" alt=\"Thiên Thể\" loading=\"lazy\">Thiên Thể<span class=\"guide-ref-popover guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Planeta.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Thiên Thể</span><span class=\"guide-weapon-popover-desc\">Khi hạ gục kẻ địch hoặc sau khi Hành Động Thêm (bao gồm Hành Động Thêm, Di Chuyển Thêm và Chỉ Huy Thêm) kết thúc, sát thương gây ra bởi kỹ năng chủ động tăng 4%/5%/5%/5%/5%/5% 1/1/2/2/2/3 lần, cộng dồn tối đa 5/5/6/7/8/8 lần. Sau khi đạt 5/5/6/7/8/8 tầng, nhận 2/3/3/3/3/4 ô Di Chuyển Thêm sau khi tấn công chủ động.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên ELID. Nếu đơn vị ở mức Ổn Định tối đa, tăng thêm 2.5%.</span></span></a>&nbsp;<br>",
+          "<span class=\"guide-align-center\">SSR (Trấn Tololo)</span>",
+          "Phương án chỉ số tốt nếu thừa từ Tololo, tận dụng được kích hoạt Thêm Lệnh từ Kỹ năng 1."
+        ],
+        [
+          "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/nikonova-94.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Nikonova 94.png\" alt=\"Nikonova 94\" loading=\"lazy\">Nikonova 94<span class=\"guide-ref-popover guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Nikonova 94.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Nikonova 94</span><span class=\"guide-weapon-popover-desc\">Khi bản thân có Lá Chắn, tăng 10%/12%/14%/16%/18%/20% sát thương gây ra.</span></span></a>",
+          "<span class=\"guide-align-center\">SR</span>",
+          "Lựa chọn ngân sách / F2P tốt nhất. Dễ dàng tinh luyện R6, kích hoạt nội tại tăng sát thương 100% thời gian nhờ khiên tự tạo."
+        ]
+      ],
+      "column_widths": [
+        164,
+        165,
+        180
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Chỉ số & Phụ kiện"
+    },
+    {
+      "type": "paragraph",
+      "html": "• <b>Bộ phụ kiện đề xuất:</b>&nbsp;<b>Cường Hóa&nbsp;Băng</b>&nbsp;là lựa chọn tối ưu nhất để gia tăng toàn bộ lượng sát thương nguyên tố Băng và hỗ trợ đội. <b>Đả Kích Dị Vị</b>&nbsp;là phương án thay thế dễ cày trong giai đoạn đầu.<br>• <b>Thứ tự ưu tiên dòng phụ:</b> <b>Tấn Công % (ATK%) &gt; Tấn Công (ATK) &gt; ST Bạo Kích / ST Bạo Kích</b>.<br><i>Lưu ý:</i> Lượng hấp thụ của Khiên Băng Sương tỷ lệ trực tiếp với chỉ số Tấn công của Alva, do đó dòng <b>ATK%</b> luôn mang giá trị kép (vừa tăng sát thương cá nhân, vừa tăng trần khiên bảo hộ cho đồng đội)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Vòng Lặp Vận Hành"
+    },
+    {
+      "type": "paragraph",
+      "html": "Vòng lặp kỹ năng của Alva phụ thuộc chặt chẽ vào mốc Đột Phá V0 hay V1:<br>• <b>Kỹ năng 1 (Frosted Echo):</b> Kỹ năng tiêu hao CI, triệu hồi Răng Nanh Nitơ Lỏng và tiêu hao 3 tầng Chuẩn Bị Tác Chiến để nhận Thêm Lệnh (Extra Command).<br>• <b>Kỹ năng 2 (Snow Wolf's Heart):</b> Tấn công đơn mục tiêu và đưa Alva vào Chế độ Yểm Hộ trong 3 hiệp (bắt buộc ở V0 để kích hoạt phản kích).<br>• <b>Tuyệt Kỹ (Nix Requiem):</b> Tiêu hao toàn bộ CI gây sát thương đơn mục tiêu (ở V2 hồi 1 CI cho toàn bộ đồng đội Băng)."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mốc Đột Phá",
+        "Trình tự vòng lặp (Rotation)"
+      ],
+      "rows": [
+        [
+          "V0 + Khóa 2",
+          "<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><br></span></span><span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill3-icon.png\" alt=\"Vang Vọng Sương Đông\" loading=\"lazy\">Vang Vọng Sương Đông<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Vang Vọng Sương Đông</span><span class=\"guide-skill-popover-desc\">Chọn 1 ô trống trong phạm vi 8 ô xung quanh, tiêu hao tất cả Chỉ Số Nhiên Liệu. Cứ tiêu hao 1 điểm Chỉ Số Nhiên Liệu, gây ST Băng Kết AoE bằng 15% Tấn Công và 1 điểm ST Ổn Định cho tất cả kẻ địch trong phạm vi 4 ô xung quanh ô đã chọn, đồng thời triệu hồi Châm Độc Nitơ Lỏng, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại).\n\nNếu Alva có 3 lớp Chuẩn Bị sau khi dùng kỹ năng, tiêu hao 3 lớp Chuẩn Bị và nhận Chỉ Lệnh Bổ Sung.</span></span></span>&nbsp;&amp;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill2-icon.png\" alt=\"Trái Tim Sói Tuyết\" loading=\"lazy\">Trái Tim Sói Tuyết<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Trái Tim Sói Tuyết</span><span class=\"guide-skill-popover-desc\">Bản thân vào Chế Độ Viện Hộ, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại). Chọn 1 mục tiêu địch trong phạm vi 8 ô xung quanh, gây ST Băng Kết bằng 100% Tấn Công.</span></span></span>&nbsp; →&nbsp; <span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/ult-icon.png\" alt=\"Khúc Trấn Hồn Vùng Tuyết\" loading=\"lazy\">Khúc Trấn Hồn Vùng Tuyết<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Khúc Trấn Hồn Vùng Tuyết</span><span class=\"guide-skill-popover-desc\">Chọn 1 mục tiêu địch trong phạm vi 8 ô xung quanh, tiêu hao toàn bộ Chỉ Số Nhiên Liệu. Cứ tiêu hao 1 điểm Chỉ Số Nhiên Liệu, gây ST Băng Kết bằng 30% Tấn Công và 1 điểm ST Ổn Định.</span></span></span>&nbsp;/&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill3-icon.png\" alt=\"Vang Vọng Sương Đông\" loading=\"lazy\">Vang Vọng Sương Đông<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Vang Vọng Sương Đông</span><span class=\"guide-skill-popover-desc\">Chọn 1 ô trống trong phạm vi 8 ô xung quanh, tiêu hao tất cả Chỉ Số Nhiên Liệu. Cứ tiêu hao 1 điểm Chỉ Số Nhiên Liệu, gây ST Băng Kết AoE bằng 15% Tấn Công và 1 điểm ST Ổn Định cho tất cả kẻ địch trong phạm vi 4 ô xung quanh ô đã chọn, đồng thời triệu hồi Châm Độc Nitơ Lỏng, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại).\n\nNếu Alva có 3 lớp Chuẩn Bị sau khi dùng kỹ năng, tiêu hao 3 lớp Chuẩn Bị và nhận Chỉ Lệnh Bổ Sung.</span></span></span>&nbsp;X2 → <span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill3-icon.png\" alt=\"Vang Vọng Sương Đông\" loading=\"lazy\">Vang Vọng Sương Đông<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Vang Vọng Sương Đông</span><span class=\"guide-skill-popover-desc\">Chọn 1 ô trống trong phạm vi 8 ô xung quanh, tiêu hao tất cả Chỉ Số Nhiên Liệu. Cứ tiêu hao 1 điểm Chỉ Số Nhiên Liệu, gây ST Băng Kết AoE bằng 15% Tấn Công và 1 điểm ST Ổn Định cho tất cả kẻ địch trong phạm vi 4 ô xung quanh ô đã chọn, đồng thời triệu hồi Châm Độc Nitơ Lỏng, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại).\n\nNếu Alva có 3 lớp Chuẩn Bị sau khi dùng kỹ năng, tiêu hao 3 lớp Chuẩn Bị và nhận Chỉ Lệnh Bổ Sung.</span></span></span>&nbsp;&amp;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill2-icon.png\" alt=\"Trái Tim Sói Tuyết\" loading=\"lazy\">Trái Tim Sói Tuyết<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Trái Tim Sói Tuyết</span><span class=\"guide-skill-popover-desc\">Bản thân vào Chế Độ Viện Hộ, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại). Chọn 1 mục tiêu địch trong phạm vi 8 ô xung quanh, gây ST Băng Kết bằng 100% Tấn Công.</span></span></span>&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"></span>&nbsp;→&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill3-icon.png\" alt=\"Vang Vọng Sương Đông\" loading=\"lazy\">Vang Vọng Sương Đông<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Vang Vọng Sương Đông</span><span class=\"guide-skill-popover-desc\">Chọn 1 ô trống trong phạm vi 8 ô xung quanh, tiêu hao tất cả Chỉ Số Nhiên Liệu. Cứ tiêu hao 1 điểm Chỉ Số Nhiên Liệu, gây ST Băng Kết AoE bằng 15% Tấn Công và 1 điểm ST Ổn Định cho tất cả kẻ địch trong phạm vi 4 ô xung quanh ô đã chọn, đồng thời triệu hồi Châm Độc Nitơ Lỏng, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại).\n\nNếu Alva có 3 lớp Chuẩn Bị sau khi dùng kỹ năng, tiêu hao 3 lớp Chuẩn Bị và nhận Chỉ Lệnh Bổ Sung.</span></span></span>&nbsp;/&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/ult-icon.png\" alt=\"Khúc Trấn Hồn Vùng Tuyết\" loading=\"lazy\">Khúc Trấn Hồn Vùng Tuyết<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Khúc Trấn Hồn Vùng Tuyết</span><span class=\"guide-skill-popover-desc\">Chọn 1 mục tiêu địch trong phạm vi 8 ô xung quanh, tiêu hao toàn bộ Chỉ Số Nhiên Liệu. Cứ tiêu hao 1 điểm Chỉ Số Nhiên Liệu, gây ST Băng Kết bằng 30% Tấn Công và 1 điểm ST Ổn Định.</span></span></span>&nbsp;→ <span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill3-icon.png\" alt=\"Vang Vọng Sương Đông\" loading=\"lazy\">Vang Vọng Sương Đông<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Vang Vọng Sương Đông</span><span class=\"guide-skill-popover-desc\">Chọn 1 ô trống trong phạm vi 8 ô xung quanh, tiêu hao tất cả Chỉ Số Nhiên Liệu. Cứ tiêu hao 1 điểm Chỉ Số Nhiên Liệu, gây ST Băng Kết AoE bằng 15% Tấn Công và 1 điểm ST Ổn Định cho tất cả kẻ địch trong phạm vi 4 ô xung quanh ô đã chọn, đồng thời triệu hồi Châm Độc Nitơ Lỏng, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại).\n\nNếu Alva có 3 lớp Chuẩn Bị sau khi dùng kỹ năng, tiêu hao 3 lớp Chuẩn Bị và nhận Chỉ Lệnh Bổ Sung.</span></span></span>&nbsp;&amp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill2-icon.png\" alt=\"Trái Tim Sói Tuyết\" loading=\"lazy\">Trái Tim Sói Tuyết<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Trái Tim Sói Tuyết</span><span class=\"guide-skill-popover-desc\">Bản thân vào Chế Độ Viện Hộ, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại). Chọn 1 mục tiêu địch trong phạm vi 8 ô xung quanh, gây ST Băng Kết bằng 100% Tấn Công.</span></span></span>"
+        ],
+        [
+          "V1+",
+          "Không cần sử dụng&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill2-icon.png\" alt=\"Trái Tim Sói Tuyết\" loading=\"lazy\">Trái Tim Sói Tuyết<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Trái Tim Sói Tuyết</span><span class=\"guide-skill-popover-desc\">Bản thân vào Chế Độ Viện Hộ, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại). Chọn 1 mục tiêu địch trong phạm vi 8 ô xung quanh, gây ST Băng Kết bằng 100% Tấn Công.</span></span></span>&nbsp;nữa. Thay thế bằng&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/ult-icon.png\" alt=\"Khúc Trấn Hồn Vùng Tuyết\" loading=\"lazy\">Khúc Trấn Hồn Vùng Tuyết<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Khúc Trấn Hồn Vùng Tuyết</span><span class=\"guide-skill-popover-desc\">Chọn 1 mục tiêu địch trong phạm vi 8 ô xung quanh, tiêu hao toàn bộ Chỉ Số Nhiên Liệu. Cứ tiêu hao 1 điểm Chỉ Số Nhiên Liệu, gây ST Băng Kết bằng 30% Tấn Công và 1 điểm ST Ổn Định.</span></span></span>&nbsp;hoặc&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" tabindex=\"0\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/skill3-icon.png\" alt=\"Vang Vọng Sương Đông\" loading=\"lazy\">Vang Vọng Sương Đông<span class=\"guide-ref-popover guide-skill-popover\"><span class=\"guide-skill-popover-name\">Vang Vọng Sương Đông</span><span class=\"guide-skill-popover-desc\">Chọn 1 ô trống trong phạm vi 8 ô xung quanh, tiêu hao tất cả Chỉ Số Nhiên Liệu. Cứ tiêu hao 1 điểm Chỉ Số Nhiên Liệu, gây ST Băng Kết AoE bằng 15% Tấn Công và 1 điểm ST Ổn Định cho tất cả kẻ địch trong phạm vi 4 ô xung quanh ô đã chọn, đồng thời triệu hồi Châm Độc Nitơ Lỏng, duy trì 3 hiệp lớn (thời gian duy trì giảm khi kết thúc hiệp hiện tại).\n\nNếu Alva có 3 lớp Chuẩn Bị sau khi dùng kỹ năng, tiêu hao 3 lớp Chuẩn Bị và nhận Chỉ Lệnh Bổ Sung.</span></span></span>"
+        ]
+      ],
+      "column_widths": [
+        80,
+        180
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Khóa Cố Định & Khóa Chung đề xuất"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Khóa Cố Định",
+        "Tên Khóa",
+        "Đánh giá & Khuyến nghị"
+      ],
+      "rows": [
+        [
+          "Khóa 2",
+          "Chuyên Gia Hậu Cần",
+          "<b>Bắt buộc:</b> Đây là khóa then chốt cho phép Alva kích hoạt&nbsp;<span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Chế độ Viện Hộ: Đơn vị phe ta gây ST Băng Kết cho đơn vị địch có hiệu ứng loại Khiên tăng 20%. TL Bạo Kích của bản thân tăng 20%. Trước khi đơn vị địch trong phạm vi 8 ô xung quanh chủ động tấn công, tiến hành 1 lần Chặn Đánh, gây ST bằng 60% Tấn Công loại ST Băng Kết và 4 điểm ST Ổn Định, và tích lũy 20% điểm ST lần này lên Bình Chướng Băng của tất cả đơn vị đồng minh, mỗi hiệp tối đa kích hoạt 3 lần. Không thể giải trừ.\" data-effect-id=\"effect_bdd5ce840b14\" data-effect=\"Chế độ Viện Hộ\" data-effect-en=\"Covering Mode\" data-text-en=\"Covering Mode\" data-type=\"buff\" data-desc=\"Đơn vị phe ta gây ST Băng Kết cho đơn vị địch có hiệu ứng loại Khiên tăng 20%. TL Bạo Kích của bản thân tăng 20%. Trước khi đơn vị địch trong phạm vi 8 ô xung quanh chủ động tấn công, tiến hành 1 lần Chặn Đánh, gây ST bằng 60% Tấn Công loại ST Băng Kết và 4 điểm ST Ổn Định, và tích lũy 20% điểm ST lần này lên Bình Chướng Băng của tất cả đơn vị đồng minh, mỗi hiệp tối đa kích hoạt 3 lần. Không thể giải trừ.\" data-desc-en=\"Increases Freeze damage dealt by allies towards enemies with Shield effects by 20%. Increases CRIT rate by 20% for self. Before enemies within a 8 tile radius performs an active attack, launches Interception, dealing Freeze damage equivalent to 60% ATK and 4 Stability Damage, and converts 20% of the damage dealt into Brumal Barrier for all allies. Can be triggered up to 3 times per round\" tabindex=\"0\">Chế độ Viện Hộ</span>&nbsp;&nbsp;và nhận <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Chỉ Lệnh Bổ Sung: Có thể thực hiện các lệnh khác ngoài di chuyển.\" data-effect-id=\"effect_66241cc2ad8d\" data-effect=\"Chỉ Lệnh Bổ Sung\" data-effect-en=\"Extra Command\" data-text-en=\"Extra Command\" data-type=\"effect\" data-desc=\"Có thể thực hiện các lệnh khác ngoài di chuyển.\" data-desc-en=\"Commands other than movement can be executed.\" tabindex=\"0\">Chỉ Lệnh Bổ Sung</span>&nbsp; ngay từ lượt đầu tiên."
+        ],
+        [
+          "Khóa 6",
+          "Thấu Xương",
+          "<b>Rất mạnh:</b> Hỗ trợ phá vỡ thanh Ổn Định nhanh hơn."
+        ],
+        [
+          "Khóa 4",
+          "Tài Năng Nở Muộn",
+          "Cung cấp thêm 18% Tấn công duy trì, gián tiếp gia tăng độ dày khiên bảo hộ toàn đội."
+        ],
+        [
+          "Khóa 5",
+          "Chỉnh Đốn Lực Lượng",
+          "<i>Tùy chọn thay thế:</i> Đem lại khả năng giải buff khi cần."
+        ],
+        [
+          "Khóa 1",
+          "Người Đi Trên Tuyết",
+          "<i>Tùy chọn thay thế:</i> Hữu ích trong các đội hình cần phủ kín địa hình ô <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Sương Đông: Áp dụng hiệu ứng Ngưng Tụ kéo dài 2 lượt lên kẻ địch kết thúc lượt trên loại ô này. Kẻ địch đứng trên ô địa hình này sẽ được gán điểm yếu Băng Kết. Ô địa hình Băng Kết.\" data-effect-id=\"effect_6032a672e309\" data-effect=\"Sương Đông\" data-effect-en=\"Frost\" data-text-en=\"Frost\" data-type=\"effect\" data-desc=\"Áp dụng hiệu ứng Ngưng Tụ kéo dài 2 lượt lên kẻ địch kết thúc lượt trên loại ô này. Kẻ địch đứng trên ô địa hình này sẽ được gán điểm yếu Băng Kết. Ô địa hình Băng Kết.\" data-desc-en=\"Applies Frozen to enemy units which end their movement in this area for 2 turns. Enemy units in this area gain a weakness to Freeze damage and this area is considered as Freeze tiles.\" tabindex=\"0\">Sương Đông</span>&nbsp;."
+        ]
+      ],
+      "column_widths": [
+        180,
+        180,
+        180
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "• <b>Khóa Chung - Tâm Nhãn&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Alva\" href=\"../characters/alva.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/avatar.png\" alt=\"Alva\" loading=\"lazy\">Alva</a>&nbsp;</b><br>• <b>Khóa Chung - Đàm Phán Công Khiên&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Qiongjiu\" href=\"../characters/qiongjiu.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/qiongjiu/avatar.png\" alt=\"Qiongjiu\" loading=\"lazy\">Qiongjiu</a>&nbsp;</b><p>• <b>Khóa Chung - Hộ Thể Chính Nghĩa&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Robella\" href=\"../characters/robella.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/robella/avatar.png\" alt=\"Robella\" loading=\"lazy\">Robella</a>&nbsp;</b><b></b></p>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Đội Hình Đề Xuất"
+    },
+    {
+      "type": "paragraph",
+      "html": "• Team Băng cũ, tận dụng nếu đã sở hữu nhân vật:&nbsp;<b><a class=\"guide-inline-ref guide-inline-character\" title=\"Alva\" href=\"../characters/alva.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/avatar.png\" alt=\"Alva\" loading=\"lazy\">Alva</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Robella\" href=\"../characters/robella.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/robella/avatar.png\" alt=\"Robella\" loading=\"lazy\">Robella</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Dushevnaya\" href=\"../characters/dushevnaya.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/dushevnaya/avatar.png\" alt=\"Dushevnaya\" loading=\"lazy\">Dushevnaya</a>&nbsp;/&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Makiatto\" href=\"../characters/makiatto.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/makiatto/avatar.png\" alt=\"Makiatto\" loading=\"lazy\">Makiatto</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Helen\" href=\"../characters/helen.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/helen/avatar.png\" alt=\"Helen\" loading=\"lazy\">Helen</a>&nbsp;(V6) /&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"OTs-14\" href=\"../characters/ots-14.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/ots-14/avatar.png\" alt=\"OTs-14\" loading=\"lazy\">OTs-14</a>&nbsp;</b><p>• Team Băng mới cùng Doll tương lai:&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Alva\" href=\"../characters/alva.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/avatar.png\" alt=\"Alva\" loading=\"lazy\">Alva</a>&nbsp;+&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Robella\" href=\"../characters/robella.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/robella/avatar.png\" alt=\"Robella\" loading=\"lazy\">Robella</a>&nbsp;/&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Dushevnaya\" href=\"../characters/dushevnaya.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/dushevnaya/avatar.png\" alt=\"Dushevnaya\" loading=\"lazy\">Dushevnaya</a>&nbsp;/&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Loreley\" href=\"../characters/loreley.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/avatar.png\" alt=\"Loreley\" loading=\"lazy\">Loreley</a>&nbsp;V2R1&nbsp;+&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp;/ <a class=\"guide-inline-ref guide-inline-character\" title=\"Asteria\" href=\"../characters/asteria.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/asteria/avatar.png\" alt=\"Asteria\" loading=\"lazy\">Asteria</a>&nbsp;+&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"OTs-14\" href=\"../characters/ots-14.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/ots-14/avatar.png\" alt=\"OTs-14\" loading=\"lazy\">OTs-14</a></p>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Một Số Lưu Ý"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>1. Điểm dừng gacha V2:</b> Sau khi đạt mốc V2, bạn hoàn toàn có thể yên tâm dừng lại và tích lũy vé quay để đón các DPS Băng Kết chủ lực trong các phiên bản kế tiếp.<br><b>2. Giá trị V2 với Doll Băng thế hệ mới:</b> Nội tại V2 hồi CI cho toàn đội Băng là cơ chế hữu ích cho các Doll sở hữu kỹ năng tốn nhiều CI và thời gian hồi chiêu 0 hiệp. <i>Đặc biệt lưu ý:</i> Nếu sở hữu Robella V6, bạn cần kiểm soát và quản lý tốt số tầng <b>Xác Định&nbsp;Điểm Yếu</b>&nbsp;để tối ưu hóa tài nguyên.<br><b>3. Tương tác đặc biệt với <a class=\"guide-inline-ref guide-inline-character\" title=\"Makiatto\" href=\"../characters/makiatto.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/makiatto/avatar.png\" alt=\"Makiatto\" loading=\"lazy\">Makiatto</a>&nbsp; V2:</b> Nếu sở hữu Makiatto V2, trong khoảng thời gian chiêu cuối của Makiatto đang trong thời gian hồi chiêu, người chơi có thể chủ động chuyển liên kết của Robella sang cho Alva. Khi ở <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Chế độ Viện Hộ: Đơn vị phe ta gây ST Băng Kết cho đơn vị địch có hiệu ứng loại Khiên tăng 20%. TL Bạo Kích của bản thân tăng 20%. Trước khi đơn vị địch trong phạm vi 8 ô xung quanh chủ động tấn công, tiến hành 1 lần Chặn Đánh, gây ST bằng 60% Tấn Công loại ST Băng Kết và 4 điểm ST Ổn Định, và tích lũy 20% điểm ST lần này lên Bình Chướng Băng của tất cả đơn vị đồng minh, mỗi hiệp tối đa kích hoạt 3 lần. Không thể giải trừ.\" data-effect-id=\"effect_bdd5ce840b14\" data-effect=\"Chế độ Viện Hộ\" data-effect-en=\"Covering Mode\" data-text-en=\"Covering Mode\" data-type=\"buff\" data-desc=\"Đơn vị phe ta gây ST Băng Kết cho đơn vị địch có hiệu ứng loại Khiên tăng 20%. TL Bạo Kích của bản thân tăng 20%. Trước khi đơn vị địch trong phạm vi 8 ô xung quanh chủ động tấn công, tiến hành 1 lần Chặn Đánh, gây ST bằng 60% Tấn Công loại ST Băng Kết và 4 điểm ST Ổn Định, và tích lũy 20% điểm ST lần này lên Bình Chướng Băng của tất cả đơn vị đồng minh, mỗi hiệp tối đa kích hoạt 3 lần. Không thể giải trừ.\" data-desc-en=\"Increases Freeze damage dealt by allies towards enemies with Shield effects by 20%. Increases CRIT rate by 20% for self. Before enemies within a 8 tile radius performs an active attack, launches Interception, dealing Freeze damage equivalent to 60% ATK and 4 Stability Damage, and converts 20% of the damage dealt into Brumal Barrier for all allies. Can be triggered up to 3 times per round\" tabindex=\"0\">Chế độ Viện Hộ</span>&nbsp;, Alva có thể Chặn Đánh tới 3 lần mỗi hiệp, giúp tận dụng tối đa số lần kích hoạt sát thương bổ sung ngoài lượt.<br><b>4. Tính linh hoạt của <a class=\"guide-inline-ref guide-inline-character\" title=\"Dushevnaya\" href=\"../characters/dushevnaya.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/dushevnaya/avatar.png\" alt=\"Dushevnaya\" loading=\"lazy\">Dushevnaya</a>&nbsp;:</b> Dushevnaya là hỗ trợ debuff Băng tuyệt vời, nhưng có thể linh hoạt thay thế bằng một Hỗ trợ khác kết hợp khả năng giải hiệu ứng bất lợi (Cleanser) tùy theo đòi hỏi của cơ chế ải.<br><b>5. Vị trí DPS của <a class=\"guide-inline-ref guide-inline-character\" title=\"Makiatto\" href=\"../characters/makiatto.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/makiatto/avatar.png\" alt=\"Makiatto\" loading=\"lazy\">Makiatto</a>&nbsp;:</b> Makiatto hiện tại đã quá cũ, hoàn toàn có thể thay thế bằng các DPS Băng Kết mới như&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp;và&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Eagletta\" href=\"../characters/eagletta.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/eagletta/avatar.png\" alt=\"Eagletta\" loading=\"lazy\">Eagletta</a>&nbsp;mà không làm ảnh hưởng đến vận hành của Alva.<br><b>6. Lưu ý về <a class=\"guide-inline-ref guide-inline-character\" title=\"Helen\" href=\"../characters/helen.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/helen/avatar.png\" alt=\"Helen\" loading=\"lazy\">Helen</a>&nbsp;:</b> Chỉ nên đưa Helen vào đội hình Băng Kết nếu Helen đã đạt mốc <b>V6</b> để tận dụng tối đa cơ chế nạp CI và sốc sát thương khiên; nếu chưa đạt V6, Helen sẽ không tối ưu bằng các lựa chọn khác."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tổng Kết & Lời Khuyên Gacha"
+    },
+    {
+      "type": "paragraph",
+      "html": "• <b>Người chơi F2P:</b>&nbsp;Roll Alva V0 và cố gắng lấy Trấn 6P33 (V0R1). Mốc này đã đủ mang lại giá trị cốt lõi của Alva.<br>• <b>Người chơi nạp vừa:</b> Mốc <b>V1R1</b> hoặc <b>V2R1</b> là các điểm dừng lý tưởng nhất, giúp trải nghiệm xoay kỹ năng mượt mà vượt bậc và đảm bảo giá trị lâu dài cho toàn bộ hệ Băng.<br>• <b>Đầu tư cao (Whale):</b> Mốc <b>V5R1</b> (tăng 40% sát thương Băng nhận vào) và <b>V6R1</b> (nhân đôi toàn bộ chỉ số buff khiên) giúp Alva cải thiện DPS cho cả team.<br>• <b>Ưu điểm:</b> Tạo khiên dày, tăng mạnh ST Băng Kết &amp; Bạo Kích, phản kích 3 lần/hiệp, phá Vững Chắc nhanh, sạc CI cho đồng đội.<br>• <b>Nhược điểm:</b> Phụ thuộc vào vũ khí Trấn 6P33 để đạt tối đa tiềm năng buff; cần quản lý tốt nhịp kỹ năng và Chặn Đánh của team để giữ trạng thái Yểm Hộ."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Nguồn tham khảo & Credits"
+    },
+    {
+      "type": "link",
+      "url": "https://www.youtube.com/watch?v=N2IoTIF1oGU",
+      "text": "Video phân tích chuyên sâu Alva: Dupes, Build & Teams Guide (YouTube)"
+    },
+    {
+      "type": "link",
+      "url": "https://www.facebook.com/myzenabear",
+      "text": "ZB GFL2 Pull Guide (@myzenabear / Zenabear Frontline)"
+    }
+  ]
+}

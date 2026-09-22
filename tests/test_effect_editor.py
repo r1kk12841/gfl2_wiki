@@ -110,3 +110,54 @@ def test_existing_shared_vietnamese_name_remains_two_distinct_ids(tmp_path: Path
     updated = json.loads(effects_path.read_text(encoding="utf-8"))
     assert updated["effect_shield"]["desc"] == "Mô tả mới."
     assert updated["effect_barrier"]["name_en"] == "Barrier"
+
+
+def test_create_effect_success(tmp_path: Path):
+    effects_path, i18n_path = _write_fixture(tmp_path)
+    store = EffectStore(effects_path, i18n_path)
+
+    result = store.create_effect({
+        "name_en": "Attack Boost I",
+        "name": "Tăng Tấn Công I",
+        "desc_en": "Attack is boosted by 10%.",
+        "desc": "Tấn Công tăng 10%.",
+        "type": "buff",
+        "sub_effect_ids": ["effect_shield"],
+    })
+
+    effects = json.loads(effects_path.read_text(encoding="utf-8"))
+    i18n = json.loads(i18n_path.read_text(encoding="utf-8"))
+
+    new_id = result["effect"]["id"]
+    assert new_id.startswith("effect_")
+    assert new_id in effects
+    assert effects[new_id]["name_en"] == "Attack Boost I"
+    assert effects[new_id]["name"] == "Tăng Tấn Công I"
+    assert effects[new_id]["sub_effect_ids"] == ["effect_shield"]
+    assert i18n["effects"][new_id]["name"] == "Tăng Tấn Công I"
+
+
+def test_create_effect_validations(tmp_path: Path):
+    effects_path, i18n_path = _write_fixture(tmp_path)
+    store = EffectStore(effects_path, i18n_path)
+
+    # Empty name_en
+    with pytest.raises(EffectValidationError, match="tiếng Anh"):
+        store.create_effect({"name_en": "", "name": "A", "desc": "B", "type": "buff"})
+
+    # Duplicate name_en
+    with pytest.raises(EffectValidationError, match="đã tồn tại"):
+        store.create_effect({"name_en": "Shield", "name": "Khiên 2", "desc": "B", "type": "buff"})
+
+    # Empty name_vi
+    with pytest.raises(EffectValidationError, match="tiếng Việt"):
+        store.create_effect({"name_en": "New Effect", "name": "", "desc": "B", "type": "buff"})
+
+    # Empty desc
+    with pytest.raises(EffectValidationError, match="Mô tả"):
+        store.create_effect({"name_en": "New Effect", "name": "Mới", "desc": "", "type": "buff"})
+
+    # Invalid type
+    with pytest.raises(EffectValidationError, match="Loại hiệu ứng"):
+        store.create_effect({"name_en": "New Effect", "name": "Mới", "desc": "Mô tả", "type": "invalid"})
+

@@ -2365,14 +2365,15 @@ def run_build() -> int:
 
     print(f"Translated traits, effects, and stats for {weapons_translated_count} weapons.")
 
-    # 5. Save updated data/i18n_vi.json
+    # 5. Save updated data/i18n_vi.json and site/static/js/i18n-vi.js atomically
     print(f"\nWriting updated bundle to {I18N_JSON.relative_to(ROOT)}...")
-    I18N_JSON.write_text(json.dumps(i18n_bundle, ensure_ascii=False, indent=2), encoding="utf-8")
+    from tools.editor_core.bundle import stage_i18n_bundle
+    from tools.editor_core.transaction import RepositoryTransaction
 
-    # 6. Save updated site/static/js/i18n-vi.js
-    print(f"Writing updated client script to {I18N_JS.relative_to(ROOT)}...")
-    js_content = f"// Auto-generated Vietnamese Localization Bundle for GFL2: Exilium Wiki\nwindow.GFL2_I18N_VI = {json.dumps(i18n_bundle, ensure_ascii=False, indent=2)};\n"
-    I18N_JS.write_text(js_content, encoding="utf-8")
+    tx = RepositoryTransaction(ROOT)
+    with tx:
+        stage_i18n_bundle(ROOT, tx, i18n_bundle=i18n_bundle)
+        tx.commit()
 
     print(f"✅ Successfully exported full Vietnamese localization bundle ({I18N_JSON.stat().st_size // 1024} KB).")
     return 0

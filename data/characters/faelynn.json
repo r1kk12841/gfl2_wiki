@@ -34,7 +34,7 @@
       "range_image": "assets/images/characters/faelynn/skill1-range.png"
     },
     {
-      "name": "Triple Maul",
+      "name": "Triple Maule",
       "tags": [
         "Active",
         "AoE",
@@ -100,7 +100,7 @@
       "range": "Self"
     },
     {
-      "name": "Hunting Instinct I",
+      "name": "Hunter's Instinct I",
       "tags": [
         "Active",
         "AoE"
@@ -116,7 +116,7 @@
       "ammo_type": "Corrosion"
     },
     {
-      "name": "Hunting Instinct II",
+      "name": "Hunter's Instinct II",
       "tags": [
         "Active",
         "AoE"
@@ -132,7 +132,7 @@
       "ammo_type": "Corrosion"
     },
     {
-      "name": "Hunting Instinct III",
+      "name": "Hunter's Instinct III",
       "tags": [
         "Active",
         "AoE"

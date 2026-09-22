@@ -1,47 +1,32 @@
 {% extends "base.html" %}
 
-{% block title %}GFL2: Exilium Wiki — Tactical Dolls & Armory{% endblock %}
+{% block title %}GF2: Lưu Đày Wiki Tiếng Việt (beta){% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
 <section class="hero">
-  <div class="hero-tag" data-i18n="hero_tag">OPERATIONAL DATABASE</div>
-  <h1 class="hero-title">Girls' Frontline 2: Exilium</h1>
-  <p class="hero-desc" data-i18n="hero_desc">
-    Complete tactical intelligence database covering Tactical Dolls, Armory statistics, Fortification upgrades, Neural Helix keys, and status mechanics.
-  </p>
-
-  <div class="hero-stats">
-    <div class="stat-item">
-      <span class="stat-val">{{ dolls|length }}</span>
-      <span class="stat-label" data-i18n="hero_stat_dolls">Tactical Dolls</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-val">{{ weapons|length }}</span>
-      <span class="stat-label" data-i18n="hero_stat_weapons">Weapons</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-val">4</span>
-      <span class="stat-label" data-i18n="hero_stat_classes">Tactical Classes</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-val">7</span>
-      <span class="stat-label" data-i18n="hero_stat_phases">Elemental Phases</span>
-    </div>
-  </div>
+  <h1 class="hero-title">GF2: Lưu Đày Wiki <small>beta</small></h1>
+  <p class="hero-desc" data-i18n="home_intro">Look up Dolls, skills, weapons and combat guides.</p>
+  {% include 'search_input.html' %}
+  <nav class="quick-links" aria-label="Database">
+    <a href="{{ rel_prefix }}characters/index.html"><span data-i18n="nav_dolls">Dolls</span><strong>{{ dolls|length }}</strong></a>
+    <a href="{{ rel_prefix }}weapons/index.html"><span data-i18n="nav_weapons">Weapons</span><strong>{{ weapons|length }}</strong></a>
+    <a href="{{ rel_prefix }}guides/index.html" data-i18n="nav_guides">Guides</a>
+    <a href="{{ rel_prefix }}faq.html" data-i18n="nav_faq">FAQ</a>
+  </nav>
 </section>
 
 <!-- Quick Class Navigation -->
-<div style="margin-bottom: 3rem;">
+<div style="margin-bottom: 2rem;">
   <h2 class="detail-section-title" data-i18n="home_classes_title">Tactical Classes</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+  <div class="class-nav-grid">
     {% for cls in ['Bulwark', 'Vanguard', 'Support', 'Sentinel'] %}
-    <a href="{{ rel_prefix }}characters/index.html?class={{ cls }}" style="text-decoration:none;">
-      <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.25rem; display:flex; align-items:center; gap:1rem; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='var(--accent-cyan)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--border-subtle)'; this.style.transform='none';">
+    <a href="{{ rel_prefix }}characters/index.html?class={{ cls }}" class="class-nav-link">
+      <div class="class-nav-card">
         <img src="{{ rel_prefix }}assets/images/class/{{ cls }}.png" alt="{{ cls }}" style="width:44px; height:44px; object-fit:contain;">
         <div>
           <h3 style="color:var(--text-primary); font-size:1.1rem; font-weight:700;" data-doll-class="{{ cls }}">{{ cls }}</h3>
-          <p style="color:var(--text-muted); font-size:0.8rem;">
+          <p style="color:var(--text-muted); font-size:0.875rem;" data-i18n="class_desc_{{ cls|lower }}">
             {% if cls == 'Bulwark' %}Defense & Stability Protection{% endif %}
             {% if cls == 'Vanguard' %}High Mobility & Flanking Assault{% endif %}
             {% if cls == 'Support' %}Tactical Utility & Healing{% endif %}
@@ -88,7 +73,7 @@
       <div class="doll-card-body">
         <div class="doll-name">{{ doll.name }}</div>
         <div class="doll-meta">
-          <span style="color:var(--accent-cyan)">{{ doll.phase }}</span> &bull; <span>{{ doll.weapon_type }}</span>
+          <span data-doll-phase="{{ doll.phase }}">{{ doll.phase }}</span> &bull; <span data-doll-weapontype="{{ doll.weapon_type }}">{{ doll.weapon_type }}</span>
         </div>
       </div>
     </a>

@@ -9,6 +9,7 @@ and emits search-index.json for client-side search.
 from __future__ import annotations
 
 from datetime import datetime, timezone
+import hashlib
 import html
 from html.parser import HTMLParser
 import json
@@ -49,14 +50,32 @@ def load_effects() -> None:
     effects_file = ASSETS_DIR / "effects.json"
     if effects_file.exists():
         try:
-            EFFECTS_DATA = json.loads(effects_file.read_text(encoding="utf-8"))
+            raw_data = json.loads(effects_file.read_text(encoding="utf-8"))
             localized_file = DATA_DIR / "effects_vi.json"
             localized = canonicalize_effects(json.loads(localized_file.read_text(encoding="utf-8-sig"))) if localized_file.exists() else {}
-            EFFECT_IDS_BY_NAME = {entry["name_en"]: key for key, entry in localized.items()}
-            sorted_keys = sorted(EFFECTS_DATA.keys(), key=len, reverse=True)
+
+            EFFECTS_DATA = {}
+            EFFECT_IDS_BY_NAME = {}
+            for key, entry in localized.items():
+                name_en = entry.get("name_en")
+                if name_en:
+                    EFFECT_IDS_BY_NAME[name_en] = entry["id"]
+                    EFFECTS_DATA[name_en] = entry.get("desc_en") or entry.get("desc") or ""
+
+            for key, entry in raw_data.items():
+                if isinstance(entry, dict):
+                    name_en = entry.get("name_en")
+                    if name_en and name_en not in EFFECT_IDS_BY_NAME:
+                        EFFECT_IDS_BY_NAME[name_en] = entry.get("id", key)
+                        EFFECTS_DATA[name_en] = entry.get("desc_en") or entry.get("desc") or ""
+                elif isinstance(entry, str) and key not in EFFECT_IDS_BY_NAME:
+                    EFFECT_IDS_BY_NAME[key] = effect_id(key)
+                    EFFECTS_DATA[key] = entry
+
+            sorted_keys = sorted(EFFECT_IDS_BY_NAME.keys(), key=len, reverse=True)
             pattern_str = r'\b(' + '|'.join(re.escape(k) for k in sorted_keys) + r')\b'
             EFFECTS_PATTERN = re.compile(pattern_str)
-            print(f"Loaded {len(EFFECTS_DATA)} status effects from assets/effects.json.")
+            print(f"Loaded {len(EFFECT_IDS_BY_NAME)} status effects for HTML markup.")
         except Exception as e:
             print(f"Warning: Failed to load effects.json: {e}")
 
@@ -130,14 +149,14 @@ def generate_effects_js(output_file: Path) -> None:
 
 # Damage types regex mapping to Dandegate colors
 DMG_PATTERNS = [
-    (re.compile(r'\b(Freeze\s+[Dd]amage)\b'), 'dmg-freeze'),
-    (re.compile(r'\b(Burn\s+[Dd]amage)\b'), 'dmg-burn'),
-    (re.compile(r'\b(Corrosion\s+[Dd]amage)\b'), 'dmg-corrosion'),
-    (re.compile(r'\b(Hydro\s+[Dd]amage)\b'), 'dmg-hydro'),
-    (re.compile(r'\b(Electric\s+[Dd]amage)\b'), 'dmg-electric'),
-    (re.compile(r'\b(Physical\s+[Dd]amage)\b'), 'dmg-physical'),
-    (re.compile(r'\b([Ff]ixed\s+[Dd]amage|[Rr]eal\s+[Dd]amage)\b'), 'dmg-fixed'),
-    (re.compile(r'\b([Ss]tability\s+[Dd]amage)\b'), 'dmg-stability'),
+    (re.compile(r'\b(Freeze\s+[Dd]amage|ST\s+Băng\s+Kết|ST\s+Băng)\b'), 'dmg-freeze'),
+    (re.compile(r'\b(Burn\s+[Dd]amage|ST\s+Thiêu\s+Đốt)\b'), 'dmg-burn'),
+    (re.compile(r'\b(Corrosion\s+[Dd]amage|ST\s+Ăn\s+Mòn)\b'), 'dmg-corrosion'),
+    (re.compile(r'\b(Hydro\s+[Dd]amage|ST\s+Hóa\s+Lỏng)\b'), 'dmg-hydro'),
+    (re.compile(r'\b(Electric\s+[Dd]amage|ST\s+Dẫn\s+Điện|Sát\s+[Tt]hương\s+Dẫn\s+Điện|ST\s+Điện\s+Từ|ST\s+Điện)\b'), 'dmg-electric'),
+    (re.compile(r'\b(Physical\s+[Dd]amage|ST\s+Vật\s+Lý)\b'), 'dmg-physical'),
+    (re.compile(r'\b([Ff]ixed\s+[Dd]amage|[Rr]eal\s+[Dd]amage|ST\s+cố\s+định|ST\s+Chuẩn\s+Xác)\b'), 'dmg-fixed'),
+    (re.compile(r'\b([Ss]tability\s+[Dd]amage|ST\s+Ổn\s+Định)\b'), 'dmg-stability'),
 ]
 
 # Percentages e.g. 80%, 100%, or chained 5%/6%/7%/8%/9%/15%
@@ -200,6 +219,59 @@ def render_effects_filter(text: Any) -> Markup:
     return Markup(result)
 
 
+FORT_SKILL_ALIASES: dict[str, str] = {
+    "medical contigency": "medical contingency",
+    "pre-op preparation": "surgical preparation",
+    "pre op preparation": "surgical preparation",
+    "unyielding chi": "grand aura",
+    "sweet stockpile": "sweets stockpile",
+    "reliable cover fire": "reliable cover",
+    "absolute mental defence": "absolute mental defense",
+    "silent breakthrough": "joint breakthrough",
+    "makeup organisation": "makeup organization",
+    "annihilation star": "morte lumina",
+}
+
+
+def normalize_skill_name(s: str) -> str:
+    return s.strip().lower().replace("-", " ").replace("’", "'")
+
+
+def enrich_doll_fortifications(doll: dict) -> None:
+    """Attach skill icons to each fortification item based on skill name match."""
+    # Keep source upgrades separate from the base description; never guess a rewrite.
+    for skill in doll.get("skills", []):
+        name = normalize_skill_name(skill.get("name", ""))
+        name = FORT_SKILL_ALIASES.get(name, name)
+        skill["level_upgrades"] = []
+        for fort in doll.get("fortification", []):
+            target = normalize_skill_name(fort.get("skill", ""))
+            target = FORT_SKILL_ALIASES.get(target, target)
+            if name and name == target and str(fort.get("level")) in {"2", "3"}:
+                skill["level_upgrades"].append(fort)
+        skill["level_upgrades"].sort(key=lambda item: (int(item["level"]), int(item["tier"])))
+    skill_map: dict[str, str] = {}
+    for s in doll.get("skills", []):
+        if s.get("name") and s.get("icon"):
+            skill_map[normalize_skill_name(s["name"])] = s["icon"]
+    for sm in doll.get("summons", []):
+        for s in sm.get("skills", []):
+            if s.get("name") and s.get("icon"):
+                skill_map[normalize_skill_name(s["name"])] = s["icon"]
+
+    for fort in doll.get("fortification", []):
+        raw_name = fort.get("skill", "")
+        norm = normalize_skill_name(raw_name)
+        target = FORT_SKILL_ALIASES.get(norm, norm)
+        icon = skill_map.get(target)
+        if not icon:
+            for k, ic in skill_map.items():
+                if k in target or target in k:
+                    icon = ic
+                    break
+        fort["skill_icon"] = icon
+
+
 def load_data() -> tuple[list[dict], list[dict], list[dict]]:
     """Load and sort characters, weapons, and FAQ entries."""
     char_dir = DATA_DIR / "characters"
@@ -208,6 +280,7 @@ def load_data() -> tuple[list[dict], list[dict], list[dict]]:
         for p in sorted(char_dir.glob("*.json")):
             try:
                 data = json.loads(p.read_text(encoding="utf-8"))
+                enrich_doll_fortifications(data)
                 dolls.append(data)
             except Exception as e:
                 print(f"Warning: Failed to parse {p.name}: {e}")
@@ -228,6 +301,21 @@ def load_data() -> tuple[list[dict], list[dict], list[dict]]:
     rarity_order = {"SSR": 0, "SR": 1, "R": 2}
     weapons.sort(key=lambda w: (rarity_order.get(w.get("rarity", ""), 9), w.get("name", "").lower()))
 
+    # Enrich dolls with signature weapon image path for template rendering
+    weapon_name_to_img: dict[str, str] = {}
+    for w in weapons:
+        img = (w.get("images") or {}).get("weapon", "")
+        name = (w.get("name") or "").strip()
+        slug = (w.get("slug") or "").strip()
+        if name and img:
+            weapon_name_to_img[name.lower()] = img
+        if slug and img:
+            weapon_name_to_img[slug.lower()] = img
+
+    for d in dolls:
+        sig = (d.get("signature_weapon") or "").strip()
+        d["sig_weapon_image"] = weapon_name_to_img.get(sig.lower(), "")
+
     # FAQ
     faq_file = DATA_DIR / "faq.json"
     faq_entries = []
@@ -240,8 +328,26 @@ def load_data() -> tuple[list[dict], list[dict], list[dict]]:
     return dolls, weapons, faq_entries
 
 
-ALLOWED_GUIDE_TAGS = {"b", "strong", "i", "em", "u", "span", "code", "br", "a"}
-ALLOWED_GUIDE_ATTRS = {"class", "href", "target", "rel", "title", "data-effect", "data-type", "data-desc", "tabindex"}
+ALLOWED_GUIDE_TAGS = {"b", "strong", "i", "em", "u", "span", "code", "br", "a", "p", "ul", "ol", "li", "img"}
+ALLOWED_GUIDE_ATTRS = {"class", "href", "target", "rel", "title", "src", "alt", "loading", "data-effect", "data-type", "data-desc", "tabindex"}
+ALLOWED_GUIDE_CLASSES = {
+    "guide-text-red", "guide-text-orange", "guide-text-blue", "guide-text-green",
+    "guide-text-burn", "guide-text-electric", "guide-text-hydro", "guide-text-corrosion",
+    "guide-text-physical", "guide-text-freeze", "guide-text-resonance",
+    "guide-highlight-yellow", "guide-highlight-green", "guide-highlight-blue", "guide-highlight-pink",
+    "guide-font-small", "guide-font-large", "guide-font-xlarge",
+    "guide-align-left", "guide-align-center", "guide-align-right",
+    "guide-inline-ref", "guide-inline-character", "guide-inline-weapon",
+    "guide-inline-skill", "guide-inline-effect", "guide-inline-icon",
+    "guide-ref-popover", "guide-weapon-popover", "guide-weapon-popover-image",
+    "guide-weapon-popover-name", "guide-weapon-popover-desc",
+    "guide-skill-popover", "guide-skill-popover-name", "guide-skill-popover-desc",
+    "effect-trigger", "effect-buff", "effect-debuff", "effect-effect",
+}
+
+
+def is_safe_guide_image_src(value: str) -> bool:
+    return bool(re.fullmatch(r"(?:(?:\.\./)+|\./|/)?assets/images/[^<>]+", value.strip(), re.IGNORECASE))
 
 
 class GuideHTMLSanitizer(HTMLParser):
@@ -258,13 +364,19 @@ class GuideHTMLSanitizer(HTMLParser):
                     continue
                 if k_lower == "href" and (v.strip().lower().startswith("javascript:") or v.strip().lower().startswith("data:") or v.strip().lower().startswith("vbscript:")):
                     continue
-                if k_lower in ALLOWED_GUIDE_ATTRS or k_lower.startswith("data-"):
+                if k_lower == "src" and not is_safe_guide_image_src(v):
+                    continue
+                if k_lower == "class":
+                    safe_classes = [name for name in v.split() if name in ALLOWED_GUIDE_CLASSES]
+                    if safe_classes:
+                        safe_attrs.append(f'class="{html.escape(" ".join(safe_classes))}"')
+                elif k_lower in ALLOWED_GUIDE_ATTRS or k_lower.startswith("data-"):
                     safe_attrs.append(f'{k}="{html.escape(v)}"')
             attr_str = (" " + " ".join(safe_attrs)) if safe_attrs else ""
             self.result.append(f"<{tag}{attr_str}>")
 
     def handle_endtag(self, tag):
-        if tag.lower() in ALLOWED_GUIDE_TAGS and tag.lower() != "br":
+        if tag.lower() in ALLOWED_GUIDE_TAGS and tag.lower() not in {"br", "img"}:
             self.result.append(f"</{tag}>")
 
     def handle_data(self, data):
@@ -302,6 +414,11 @@ def load_guides(dolls: list[dict]) -> list[dict]:
             for block in g.get("blocks", []):
                 if block.get("type") == "paragraph" and "html" in block:
                     block["html"] = sanitize_guide_html(block["html"])
+                elif block.get("type") == "table":
+                    block["rows"] = [
+                        [sanitize_guide_html(cell) for cell in row]
+                        for row in block.get("rows", [])
+                    ]
             guides.append(g)
         except Exception as e:
             raise RuntimeError(f"Failed to parse guide {p.name}: {e}") from e
@@ -362,12 +479,15 @@ def generate_search_index(dolls: list[dict], weapons: list[dict], guides: list[d
             "image": w.get("images", {}).get("weapon", "")
         })
 
+    doll_server_map = {d.get("slug"): (d.get("server") or "global").lower() for d in dolls}
     for g in guides:
+        char_server = doll_server_map.get(g.get("char_slug"), "global")
         search_records.append({
             "name": g.get("title", ""),
             "slug": g.get("slug", ""),
             "category": "guide",
             "char_slug": g.get("char_slug", ""),
+            "server": char_server,
             "url": f"guides/{g.get('slug')}.html",
         })
 
@@ -479,10 +599,23 @@ def build_site(output_dir: Path | None = None) -> int:
             autoescape=jinja2.select_autoescape(["html", "xml"])
         )
         env.filters["render_effects"] = render_effects_filter
+        asset_inputs = (
+            STATIC_DIR / "css" / "style.css",
+            STATIC_DIR / "css" / "readability.css",
+            STATIC_DIR / "js" / "search.js",
+            STATIC_DIR / "js" / "i18n-vi.js",
+            STATIC_DIR / "js" / "i18n.js",
+            DATA_DIR / "effects_vi.json",
+        )
+        asset_digest = hashlib.sha256()
+        for asset_path in asset_inputs:
+            asset_digest.update(asset_path.read_bytes())
+        env.globals["asset_version"] = asset_digest.hexdigest()[:12]
 
         # Build lookup dicts for guide rendering
         chars_by_slug = {d.get("slug"): d for d in dolls}
         weapons_by_slug = {w.get("slug"): w for w in weapons}
+        guides_by_char = {g.get("char_slug"): g for g in guides if g.get("char_slug")}
 
         # Subdirectories in target_dir
         (target_dir / "characters").mkdir(parents=True, exist_ok=True)
@@ -499,6 +632,9 @@ def build_site(output_dir: Path | None = None) -> int:
         rendered_pages: list[str] = []
 
         # Render Home (index.html)
+        featured_slugs = ["soppo", "loreley", "alva", "ots-14", "voymastina", "klukai"]
+        dolls_by_slug = {doll["slug"]: doll for doll in dolls}
+        featured_dolls = [dolls_by_slug[slug] for slug in featured_slugs if slug in dolls_by_slug]
         home_tmpl = env.get_template("home.html")
         home_html = home_tmpl.render(
             active_page="home",
@@ -507,7 +643,7 @@ def build_site(output_dir: Path | None = None) -> int:
             canonical_url=f"{SITE_URL}/index.html",
             dolls=dolls,
             weapons=weapons,
-            featured_dolls=dolls[:8]
+            featured_dolls=featured_dolls
         )
         (target_dir / "index.html").write_text(home_html, encoding="utf-8")
         rendered_pages.append("index.html")
@@ -527,12 +663,16 @@ def build_site(output_dir: Path | None = None) -> int:
         # Render Each Character Detail (characters/{slug}.html)
         char_tmpl = env.get_template("character.html")
         for d in dolls:
+            char_guide = guides_by_char.get(d["slug"])
             char_html = char_tmpl.render(
                 active_page="characters",
                 rel_prefix="../",
                 site_url=SITE_URL,
                 canonical_url=f"{SITE_URL}/characters/{d['slug']}.html",
-                doll=d
+                doll=d,
+                guide=char_guide,
+                chars_by_slug=chars_by_slug,
+                weapons_by_slug=weapons_by_slug,
             )
             (target_dir / "characters" / f"{d['slug']}.html").write_text(char_html, encoding="utf-8")
             rendered_pages.append(f"characters/{d['slug']}.html")

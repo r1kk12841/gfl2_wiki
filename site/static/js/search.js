@@ -141,7 +141,8 @@
 
         const subtitle = document.createElement('div');
         subtitle.className = 'search-subtitle';
-        subtitle.textContent = `${r.category === 'doll' ? 'Doll' : 'Weapon'} • ${r.rarity || ''} • ${r.class || r.weapon_type || ''}`;
+        const category = r.category === 'doll' ? (isVi ? 'Nhân vật' : 'Doll') : r.category === 'guide' ? (isVi ? 'Hướng dẫn' : 'Guide') : (isVi ? 'Vũ khí' : 'Weapon');
+        subtitle.textContent = [category, r.rarity, r.class || r.weapon_type].filter(Boolean).join(' • ');
 
         info.append(title, subtitle);
         a.append(thumb, info);
@@ -190,68 +191,78 @@
 
   // Filter logic for Character Index & Weapons Index
   function initFilters() {
-    const activeFilters = {
-      class: 'all',
-      rarity: 'all',
-      phase: 'all',
-      weapon_type: 'all',
-      server: 'all'
-    };
-
-    const chips = document.querySelectorAll('.chip[data-filter]');
-    const cards = document.querySelectorAll('[data-card-item]');
-
-    if (chips.length === 0 || cards.length === 0) return;
-
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        const filterType = chip.dataset.filter;
-        const filterVal = chip.dataset.value;
-
-        // Toggle within same group and update ARIA states
-        const groupChips = document.querySelectorAll(`.chip[data-filter="${filterType}"]`);
-        groupChips.forEach(c => {
-          c.classList.remove('active');
-          c.setAttribute('aria-pressed', 'false');
-        });
-        chip.classList.add('active');
-        chip.setAttribute('aria-pressed', 'true');
-
-        activeFilters[filterType] = filterVal;
-
-        // Filter cards
-        let visibleCount = 0;
-        cards.forEach(card => {
-          let match = true;
-          for (let [fKey, fVal] of Object.entries(activeFilters)) {
-            if (fVal && fVal !== 'all') {
-              const cardVal = card.dataset[fKey];
-              if (cardVal !== fVal) {
-                match = false;
-                break;
-              }
-            }
-          }
-          if (match) {
-            card.style.display = '';
-            visibleCount++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-
-        const countEl = document.getElementById('filter-count');
-        if (countEl) {
-          const isVi = (window.GFL2_I18N && window.GFL2_I18N.current === 'vi') || document.documentElement.lang === 'vi';
-          if (isVi) {
-            countEl.textContent = `${visibleCount} mục`;
-          } else {
-            countEl.textContent = `${visibleCount} item${visibleCount === 1 ? '' : 's'}`;
-          }
-        }
+    const panel = document.getElementById('catalog-filters');
+    const toolbar = document.querySelector('.filter-toolbar');
+    const cards = [...document.querySelectorAll('[data-card-item]')];
+    if (!panel || !toolbar || !cards.length) return;
+    const chips = [...panel.querySelectorAll('[data-filter]')];
+    const active = { class: 'all', rarity: 'all', phase: 'all', weapon_type: 'all', ammo_type: 'all', server: 'all' };
+    const toggle = toolbar.querySelector('.filter-toggle');
+    const reset = toolbar.querySelector('.filter-reset');
+    const count = document.getElementById('filter-count');
+    const params = new URLSearchParams(location.search);
+    const mobile = matchMedia('(max-width: 768px)');
+    toolbar.hidden = false;
+    panel.classList.add('filters-enhanced');
+    if (document.getElementById('dolls-container')) {
+      panel.querySelectorAll('.filter-group').forEach(group => {
+        const key = group.querySelector('[data-filter]')?.dataset.filter;
+        if (['rarity', 'weapon_type', 'ammo_type'].includes(key)) group.classList.add('filter-extra');
       });
+    } else {
+      panel.querySelector('[data-filter="server"]')?.closest('.filter-group').classList.add('filter-extra');
+    }
+    const empty = document.createElement('p');
+    empty.className = 'catalog-empty';
+    empty.setAttribute('role', 'status');
+    panel.after(empty);
+    function setOpen(open) {
+      panel.classList.toggle('filters-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    }
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    function render(writeUrl = false) {
+      let visible = 0;
+      cards.forEach(card => {
+        const match = Object.entries(active).every(([key, value]) => value === 'all' || card.dataset[key] === value);
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      chips.forEach(chip => {
+        const selected = (active[chip.dataset.filter] || 'all') === chip.dataset.value;
+        chip.classList.toggle('active', selected);
+        chip.setAttribute('aria-pressed', String(selected));
+      });
+      const total = Object.values(active).filter(value => value !== 'all').length;
+      toolbar.querySelector('[data-filter-total]').textContent = String(total);
+      reset.disabled = total === 0;
+      const vi = document.documentElement.lang === 'vi';
+      if (count) { count.textContent = vi ? `${visible} mục` : `${visible} items`; count.setAttribute('role', 'status'); }
+      empty.hidden = visible !== 0;
+      empty.textContent = vi ? 'Không có kết quả. Hãy xóa hoặc thay đổi bộ lọc.' : 'No results. Clear or change the filters.';
+      if (writeUrl) {
+        const url = new URL(location.href);
+        Object.entries(active).forEach(([key, value]) => value === 'all' ? url.searchParams.delete(key) : url.searchParams.set(key, value));
+        history.replaceState(null, '', url);
+      }
+    }
+    chips.forEach(chip => {
+      const key = chip.dataset.filter;
+      if (!(key in active)) active[key] = 'all';
+      if (params.get(key) === chip.dataset.value) active[key] = chip.dataset.value;
+      chip.addEventListener('click', () => { active[key] = chip.dataset.value; render(true); });
     });
-
+    reset.addEventListener('click', () => { Object.keys(active).forEach(key => { active[key] = 'all'; }); render(true); });
+    // Reflect translated counts without coupling to the language switcher's internals.
+    new MutationObserver(() => render()).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    mobile.addEventListener('change', () => setOpen(false));
+    const view = toolbar.querySelector('.view-toggle');
+    if (view) view.addEventListener('click', () => {
+      const compact = view.getAttribute('aria-pressed') !== 'true';
+      view.setAttribute('aria-pressed', String(compact));
+      document.getElementById('weapons-container').classList.toggle('is-list', compact);
+    });
+    render();
   }
 
   // FAQ Accordion with semantic HTML & ARIA
@@ -356,7 +367,7 @@
       text = text.replace(/\b(Burn\s+[Dd]amage|ST\s+Thiêu\s+Đốt|Sát\s+[Tt]hương\s+Thiêu\s+Đốt)\b/g, '<span class="dmg-burn">$1</span>');
       text = text.replace(/\b(Corrosion\s+[Dd]amage|ST\s+Ăn\s+Mòn|Sát\s+[Tt]hương\s+Ăn\s+Mòn)\b/g, '<span class="dmg-corrosion">$1</span>');
       text = text.replace(/\b(Hydro\s+[Dd]amage|ST\s+Hóa\s+Lỏng|Sát\s+[Tt]hương\s+Hóa\s+Lỏng)\b/g, '<span class="dmg-hydro">$1</span>');
-      text = text.replace(/\b(Electric\s+[Dd]amage|ST\s+Dẫn\s+Điện|Sát\s+[Tt]hương\s+Dẫn\s+Điện)\b/g, '<span class="dmg-electric">$1</span>');
+      text = text.replace(/\b(Electric\s+[Dd]amage|ST\s+Dẫn\s+Điện|Sát\s+[Tt]hương\s+Dẫn\s+Điện|ST\s+Điện\s+Từ|ST\s+Điện)\b/g, '<span class="dmg-electric">$1</span>');
       text = text.replace(/\b(Physical\s+[Dd]amage|ST\s+Vật\s+Lý|Sát\s+[Tt]hương\s+Vật\s+Lý)\b/g, '<span class="dmg-physical">$1</span>');
       text = text.replace(/\b([Ff]ixed\s+[Dd]amage|[Rr]eal\s+[Dd]amage|ST\s+cố\s+định|ST\s+Chuẩn|Sát\s+[Tt]hương\s+cố\s+định|Sát\s+[Tt]hương\s+Chuẩn)\b/g, '<span class="dmg-fixed">$1</span>');
       text = text.replace(/\b([Ss]tability\s+[Dd]amage|ST\s+Ổn\s+Định|Sát\s+[Tt]hương\s+Ổn\s+Định|Chỉ\s+Số\s+Ổn\s+Định|Độ\s+Ổn\s+Định)\b/g, '<span class="dmg-stability">$1</span>');
@@ -599,8 +610,96 @@
     });
   }
 
+  function stripGuideGameMarkup(value) {
+    return String(value || '')
+      .replace(/<\/?color(?:=[^>]+)?>/gi, '')
+      .replace(/\r\n?/g, '\n')
+      .trim();
+  }
+
+  function ensureLegacySkillPopover(trigger) {
+    if (!trigger.classList.contains('guide-inline-skill') || trigger.querySelector('.guide-skill-popover')) return;
+    const legacyTitle = stripGuideGameMarkup(trigger.getAttribute('title') || '');
+    if (!legacyTitle) return;
+    const separator = legacyTitle.indexOf(':');
+    const name = separator >= 0 ? legacyTitle.slice(0, separator).trim() : trigger.textContent.trim();
+    const description = separator >= 0 ? legacyTitle.slice(separator + 1).trim() : legacyTitle;
+    const popover = document.createElement('span');
+    popover.className = 'guide-ref-popover guide-skill-popover';
+    const nameEl = document.createElement('span');
+    nameEl.className = 'guide-skill-popover-name';
+    nameEl.textContent = name;
+    const descEl = document.createElement('span');
+    descEl.className = 'guide-skill-popover-desc';
+    descEl.textContent = description;
+    popover.append(nameEl, descEl);
+    trigger.append(popover);
+    trigger.removeAttribute('title');
+    if (!trigger.hasAttribute('tabindex')) trigger.setAttribute('tabindex', '0');
+  }
+
+  function positionGuideReferencePopover(trigger) {
+    const popover = trigger.querySelector(':scope > .guide-ref-popover');
+    if (!popover) return;
+    const viewportPadding = 12;
+    popover.classList.add('is-open');
+    popover.style.left = `${viewportPadding}px`;
+    popover.style.top = `${viewportPadding}px`;
+    const triggerRect = trigger.getBoundingClientRect();
+    const popoverRect = popover.getBoundingClientRect();
+    const preferredLeft = triggerRect.left + (triggerRect.width - popoverRect.width) / 2;
+    const left = Math.max(viewportPadding, Math.min(preferredLeft, window.innerWidth - popoverRect.width - viewportPadding));
+    const preferredTop = triggerRect.top - popoverRect.height - 8;
+    const belowTop = triggerRect.bottom + 8;
+    const unclampedTop = preferredTop >= viewportPadding ? preferredTop : belowTop;
+    const top = Math.max(viewportPadding, Math.min(unclampedTop, window.innerHeight - popoverRect.height - viewportPadding));
+    popover.style.left = `${Math.round(left)}px`;
+    popover.style.top = `${Math.round(top)}px`;
+  }
+
+  function hideGuideReferencePopover(trigger) {
+    const popover = trigger.querySelector(':scope > .guide-ref-popover');
+    if (!popover) return;
+    popover.classList.remove('is-open');
+    popover.style.removeProperty('left');
+    popover.style.removeProperty('top');
+  }
+
+  function initGuideReferencePopovers() {
+    const triggers = document.querySelectorAll('.guide-inline-weapon, .guide-inline-skill');
+    triggers.forEach((trigger) => {
+      ensureLegacySkillPopover(trigger);
+      const existingPopover = trigger.querySelector(':scope > .guide-weapon-popover, :scope > .guide-skill-popover');
+      if (existingPopover) existingPopover.classList.add('guide-ref-popover');
+      trigger.addEventListener('pointerenter', () => positionGuideReferencePopover(trigger));
+      trigger.addEventListener('pointerleave', () => hideGuideReferencePopover(trigger));
+      trigger.addEventListener('focusin', () => positionGuideReferencePopover(trigger));
+      trigger.addEventListener('focusout', (event) => {
+        if (!trigger.contains(event.relatedTarget)) hideGuideReferencePopover(trigger);
+      });
+    });
+    let repositionFrame = 0;
+    function repositionVisibleGuideReferencePopovers() {
+      repositionFrame = 0;
+      triggers.forEach((trigger) => {
+        const isActive = trigger.matches(':hover') || trigger.contains(document.activeElement);
+        if (isActive) positionGuideReferencePopover(trigger);
+        else hideGuideReferencePopover(trigger);
+      });
+    }
+    function scheduleGuideReferenceReposition() {
+      if (repositionFrame) return;
+      repositionFrame = window.requestAnimationFrame(repositionVisibleGuideReferencePopovers);
+    }
+    window.addEventListener('resize', scheduleGuideReferenceReposition);
+    window.addEventListener('scroll', scheduleGuideReferenceReposition, { passive: true });
+  }
+
   // Boot
   function boot() {
+    if (matchMedia('(max-width: 900px)').matches) {
+      document.querySelectorAll('.guide-toc').forEach(toc => { toc.open = false; });
+    }
     // Keep popovers independent from failures in search/filter initialization.
     initEffectPopovers();
     try { initRootPath(); } catch (error) { console.warn('[search] initRootPath:', error); }
@@ -609,6 +708,7 @@
     try { initFilters(); } catch (error) { console.warn('[search] initFilters:', error); }
     try { initFaq(); } catch (error) { console.warn('[search] initFaq:', error); }
     try { initMobileMenu(); } catch (error) { console.warn('[search] initMobileMenu:', error); }
+    try { initGuideReferencePopovers(); } catch (error) { console.warn('[search] initGuideReferencePopovers:', error); }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true });

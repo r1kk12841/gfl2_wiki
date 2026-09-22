@@ -70,19 +70,41 @@ class EffectEditorHandler(SimpleHTTPRequestHandler):
         except OSError as exc:
             self._send_json({"error": f"Không thể ghi dữ liệu: {exc}"}, HTTPStatus.INTERNAL_SERVER_ERROR)
 
+    def do_POST(self) -> None:
+        path = urlparse(self.path).path
+        if path == "/api/effects":
+            try:
+                size = int(self.headers.get("Content-Length", "0"))
+                if size <= 0 or size > 100_000:
+                    raise EffectValidationError("Nội dung tạo không hợp lệ.")
+                payload = json.loads(self.rfile.read(size).decode("utf-8"))
+                if not isinstance(payload, dict):
+                    raise EffectValidationError("Nội dung tạo phải là JSON object.")
+                result = STORE.create_effect(payload)
+                self._send_json(result, HTTPStatus.CREATED)
+            except (EffectValidationError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+                self._send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)
+            except OSError as exc:
+                self._send_json({"error": f"Không thể ghi dữ liệu: {exc}"}, HTTPStatus.INTERNAL_SERVER_ERROR)
+            return
+        self._send_json({"error": "Không tìm thấy API."}, HTTPStatus.NOT_FOUND)
+
     def log_message(self, format: str, *args: object) -> None:
         print(f"[{self.log_date_time_string()}] {format % args}")
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="GFL2 Vietnamese effect editor")
+    parser = argparse.ArgumentParser(description="GFL2 Vietnamese effect editor (Wrapper)")
     parser.add_argument("--host", default="127.0.0.1")
-    parser.add_argument("--port", type=int, default=8765)
+    parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--no-browser", action="store_true")
     args = parser.parse_args()
-    server = ThreadingHTTPServer((args.host, args.port), EffectEditorHandler)
-    url = f"http://{args.host}:{server.server_port}"
+
+    from tools.editor_server import create_editor_server
+    server = create_editor_server(ROOT, host=args.host, port=args.port)
+    url = f"http://{args.host}:{server.server_port}/tools/effect_editor/index.html"
     print(f"Effect editor: {url}")
+    print(f"Editor Hub: http://{args.host}:{server.server_port}/tools/index.html")
     print("Nhấn Ctrl+C để dừng.")
     if not args.no_browser:
         webbrowser.open(url)

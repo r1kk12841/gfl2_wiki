@@ -1,0 +1,276 @@
+{
+  "slug": "cecilia",
+  "name": "Cecilia",
+  "class": "Sentinel",
+  "rarity": "Elite",
+  "phase": "Burn",
+  "weapon_type": "Assault Rifle",
+  "ammo_type": "Medium Ammo",
+  "signature_weapon": "Snotra",
+  "stats": {
+    "hp": 2030,
+    "atk": 722,
+    "def": 577
+  },
+  "skill_attribute": "Burn",
+  "weakness": "Corrosion",
+  "stability_gauge": "9 points",
+  "movement_speed": "6 tiles",
+  "skills": [
+    {
+      "name": "Words of Comfort",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects one enemy target within 8 tiles and deals Physical damage equal to 80% of attack to it.",
+      "icon": "assets/images/characters/cecilia/skill1-icon.png",
+      "range_image": "assets/images/characters/cecilia/skill1-range.png",
+      "ammo_type": "Medium Ammo"
+    },
+    {
+      "name": "Words of Comfort - AoE",
+      "tags": [
+        "Basic Attack",
+        "AoE"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "5x5 tiles",
+      "description": "Select an enemy target within 8 tiles and deals AoE Burn damage equal to 70% of attack to all enemy targets within a 5x5 tile area of it. Applies Overburn and Irritable for 2 turns and generates Incineration tiles for 2 turns.",
+      "icon": "assets/images/characters/cecilia/skill2-icon.png",
+      "range_image": "assets/images/characters/cecilia/skill2-range.png",
+      "ammo_type": "Medium Ammo"
+    },
+    {
+      "name": "Words of Comfort - Targeted",
+      "tags": [
+        "Basic Attack",
+        "Targeted"
+      ],
+      "stability_damage": 3,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within 8 tiles and deals Burn damage equal to 100% of attack to it.\n\nApplies Overburn for 2 turns.\n\nGains Self-Suggestion for 3 turns.",
+      "icon": "assets/images/characters/cecilia/skill3-icon.png",
+      "range_image": "assets/images/characters/cecilia/skill3-range.png",
+      "ammo_type": "Medium Ammo"
+    },
+    {
+      "name": "Safety First Principle",
+      "tags": [
+        "Passive",
+        "Buff",
+        "Support"
+      ],
+      "stability_damage": null,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": null,
+      "effect_area": null,
+      "description": "At the start of battle, gains Thermal Conduction. When a basic attack or Support Action deals AoE damage, gains 6 points of Searing Flame. When a basic attack or Support Action deals targeted damage, gains 3 points of Searing Flame.\n\nWhen gaining Resilient Mind, it converts into an equal amount of Fortified Mind for 2 rounds.\n\nWhen an enemy unit within range takes targeted damage from an ally, if Cecilia has Words of Comfort - AoE or Words of Comfort - Targeted, expends 3 points of Confectance Index and performs 1 instance of Support Action to it, dealing the same skill effect of the current Words of Comfort. This can be triggered up to 3 times per round.\n\nAfter the Support Action resolves, gains 1 stack of Dedicated Effort for 2 turns and Resilient Mind for 2 rounds. The absorption amount of Resilient Mind is 50% of the applier's attack, up to a maximum of 100% of the target's max HP, and cannot stack; and applies Mutual Resonance to other allied units for 2 turns.\n\nFor each instance of Support Action performed, at the start of the next round, gains 3 points of Confectance Index.\n\nWhen [doll:centaureissi] is on the field, the damage and healing she deals are increased by 100%, the damage multipliers of Cecilia's basic attack and her Support Action are increased by 30%. Cecilia can also gain Watchful Eye applied by [doll:centaureissi].",
+      "icon": "assets/images/characters/cecilia/skill4-icon.png",
+      "range_image": "assets/images/characters/cecilia/skill4-range.png",
+      "ammo_type": "Medium Ammo"
+    },
+    {
+      "name": "Constructive Mediation",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": null,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": null,
+      "effect_area": null,
+      "description": "Basic attack Words of Comfort becomes Words of Comfort - AoE for 1 round.\n\nGains Extra Command and grants Resilient Mind to all allied Dolls for 2 rounds. Resilient Mind absorbs damage equal to 50% of the caster's attack, up to 100% of the target's max HP. Does not stack.\n\nThis skill or the active skill Desensitization Tactics can be used at most 1 time per round.",
+      "icon": "assets/images/characters/cecilia/skill5-icon.png",
+      "range_image": "assets/images/characters/cecilia/skill5-range.png",
+      "ammo_type": "Medium Ammo"
+    },
+    {
+      "name": "Desensitization Tactics",
+      "tags": [
+        "Active",
+        "Buff"
+      ],
+      "stability_damage": null,
+      "cooldown": "0 turns",
+      "confectance_cost": 0,
+      "range": null,
+      "effect_area": null,
+      "description": "Basic attack Words of Comfort changes to Words of Comfort - Targeted for 1 round.\n\nGains Extra Command and grants Resilient Mind to all allied Dolls for 2 rounds. Resilient Mind absorbs damage equal to 50% of the caster's attack, up to 100% of the target's max HP. Does not stack.\n\nThis skill or the active skill Constructive Mediation can be used at most 1 time per round.",
+      "icon": "assets/images/characters/cecilia/skill6-icon.png",
+      "range_image": "assets/images/characters/cecilia/skill6-range.png",
+      "ammo_type": "Medium Ammo"
+    },
+    {
+      "name": "Reconciliation",
+      "tags": [
+        "Ultimate",
+        "Targeted"
+      ],
+      "stability_damage": 5,
+      "cooldown": "2 turns",
+      "confectance_cost": 0,
+      "range": 8,
+      "effect_area": "Target",
+      "description": "Selects an enemy target within 8 tiles and deals Burn damage equal to 130% of attack to it.\n\nGains Extra Command.\n\nFor each basic attack or Support Action performed, the damage multiplier of the next usage of this skill is increased by 25%.",
+      "icon": "assets/images/characters/cecilia/skill7-icon.png",
+      "range_image": "assets/images/characters/cecilia/skill7-range.png",
+      "ammo_type": "Medium Ammo"
+    }
+  ],
+  "fortification": [
+    {
+      "tier": 1,
+      "skill": "Constructive Mediation",
+      "level": 2,
+      "effect": "The damage multiplier of Words of Comfort - AoE is increased to 100%.\n\nThe effects of Irritable is enhanced: Damage taken from Cecilia is increased to 60%."
+    },
+    {
+      "tier": 2,
+      "skill": "Desensitization Tactics",
+      "level": 2,
+      "effect": "The damage multiplier of Words of Comfort - Targeted is increased to 130% and generates Incineration tiles within 2 tiles for 2 turns.\n\nThe effects of Self-Suggestion is enhanced: Burn damage dealt is increased by 30%, critical rate is increased by 50%, critical damage is increased by 50%."
+    },
+    {
+      "tier": 3,
+      "skill": "Reconciliation",
+      "level": 2,
+      "effect": "Damage multiplier is increased to 160%, and the damage multiplier boost is increased to 50%.\n\nBefore the skill resolves, applies Fragile II to the target for 2 turns.\n\nCooldown time is reduced by 1 turn."
+    },
+    {
+      "tier": 4,
+      "skill": "Safety First Principle",
+      "level": 2,
+      "effect": "Damage dealt by Support Action is increased by 40% and stability damage dealt is increased by 2 points.\n\nThe effects of Mutual Resonance is enhanced: Burn damage dealt by Out-of-Turn Attack is increased by 30% and stability damage taken is reduced by 1 point."
+    },
+    {
+      "tier": 5,
+      "skill": "Reconciliation",
+      "level": 3,
+      "effect": "If basic attack Words of Comfort is used after this skill resolves, the damage dealt is increased by 100%. When possessing Fortified Mind, critical rate is increased by 100% and critical damage is increased by 50%, stacking up to 2 times."
+    },
+    {
+      "tier": 6,
+      "skill": "Safety First Principle",
+      "level": 3,
+      "effect": "The stack limit of Dedicated Effort is increased to 10 stacks.\n\nWhen an enemy unit within range takes targeted damage from an allied unit, Cecilia gains 1 stack of Dedicated Effort for 2 turns.\n\nIf Cecilia's critical rate is greater than 100%, the excess critical rate is converted to an equal percentage of basic attack damage multiplier."
+    }
+  ],
+  "neural_helix": [
+    {
+      "node": "Enhancement 1",
+      "level": 1,
+      "effect": "ATK +36\nDEF +21",
+      "materials": "20\n\n\n1000"
+    },
+    {
+      "node": "Enhancement 2",
+      "level": 1,
+      "effect": "HP +245\nDEF +24",
+      "materials": "30\n\n\n2000"
+    },
+    {
+      "node": "Enhancement 3",
+      "level": 1,
+      "effect": "ATK +42\nDEF +27",
+      "materials": "40\n\n\n3000"
+    },
+    {
+      "node": "Enhancement 4",
+      "level": 1,
+      "effect": "HP +326\nATK +48",
+      "materials": "50\n\n\n4000"
+    },
+    {
+      "node": "Enhancement 5",
+      "level": 1,
+      "effect": "ATK +54\nDEF +33",
+      "materials": "60\n\n\n5000"
+    },
+    {
+      "node": "Enhancement 6",
+      "level": 1,
+      "effect": "HP +408\nATK +60\nDEF +39",
+      "materials": "80\n\n\n6000"
+    }
+  ],
+  "keys": [
+    {
+      "name": "Fixed Key 1 - Emotional Stability",
+      "level": 20,
+      "effect": "Gains 3 points of Confectance Index at the start of the battle.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/cecilia/fixed (1).png"
+    },
+    {
+      "name": "Fixed Key 2 - Affinity Charm",
+      "level": 20,
+      "effect": "Before making a basic attack, cleanses 1 buff from the enemy target.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/cecilia/fixed (2).png"
+    },
+    {
+      "name": "Fixed Key 3 - Graceful Turn",
+      "level": 30,
+      "effect": "After using the basic attack Words of Comfort, gains 4 tiles of Additional Movement and cleanses 1 debuff from self.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/cecilia/fixed (3).png"
+    },
+    {
+      "name": "Fixed Key 4 - Harmless Disguise",
+      "level": 30,
+      "effect": "After action ends, gains Resilient Mind for 2 rounds.\n\nThe absorption amount of Resilient Mind is 50% of the applier's attack, up to a maximum of 100% of the target's max HP.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/cecilia/fixed (4).png"
+    },
+    {
+      "name": "Fixed Key 5 - Fatal Insight",
+      "level": 40,
+      "effect": "When possessing Fortified Mind, Burn damage dealt from Out-of-Turn Attack is increased by 15%.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/cecilia/fixed (5).png"
+    },
+    {
+      "name": "Fixed Key 6 - Self-Motivation",
+      "level": 40,
+      "effect": "Before dealing AoE damage, gains Coverage Boost II for 2 turns.\n\nBefore dealing targeted damage, gains Targeted Attack Boost II  for 2 turns.",
+      "materials": "3\n\n\n3000",
+      "image": "assets/images/characters/cecilia/fixed (6).png"
+    },
+    {
+      "name": "Affinity Key - ASMR Therapy",
+      "level": 20,
+      "effect": "",
+      "materials": null,
+      "image": "assets/images/characters/cecilia/affi.png"
+    },
+    {
+      "name": "Common Key - Understanding Is My Strength",
+      "level": 40,
+      "effect": "While this unit has Shield effects, Burn damage dealt is increased by 10%.",
+      "materials": null,
+      "image": "assets/images/characters/cecilia/common.png"
+    }
+  ],
+  "images": {
+    "portrait": "assets/images/characters/cecilia/portrait.png",
+    "avatar": "assets/images/characters/cecilia/avatar.png",
+    "class_icon": "assets/images/class/Sentinel.png",
+    "portrait_webp": "assets/images/characters/cecilia/portrait.webp"
+  },
+  "source_notes": "Standardized from Dandegate.net database",
+  "server": "cn"
+}

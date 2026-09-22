@@ -6,7 +6,7 @@
 {% block content %}
 <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
   <div>
-    <h1 style="font-size:2.2rem; font-weight:800; color:var(--text-primary);" data-i18n="dolls_page_title">Tactical Dolls</h1>
+    <h1 style="font-size:2rem; font-weight:800; color:var(--text-primary);" data-i18n="dolls_page_title">Tactical Dolls</h1>
     <p style="color:var(--text-secondary); font-size:0.95rem;" data-i18n="dolls_page_subtitle">Browse and filter operational combat Dolls.</p>
   </div>
   <div id="filter-count" style="color:var(--accent-cyan); font-weight:700; font-size:0.9rem;">
@@ -15,14 +15,22 @@
 </div>
 
 <!-- Filter Section -->
-<section class="filter-section">
+<div class="filter-toolbar" hidden>
+  <button type="button" class="chip filter-toggle" aria-expanded="false" aria-controls="catalog-filters"><span data-i18n="filters_title">Filters</span> <span data-filter-total>0</span></button>
+  <button type="button" class="chip filter-reset" data-i18n="filters_reset">Clear filters</button>
+  {% if active_page == 'weapons' %}<button type="button" class="chip view-toggle" aria-pressed="false" data-i18n="view_compact">Compact list</button>{% endif %}
+</div>
+<section class="filter-section" id="catalog-filters">
   <!-- Class Filter -->
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_class">Class</span>
     <div class="filter-chips">
-      <button type="button" class="chip active" data-filter="class" data-value="all" aria-pressed="true" data-i18n="filter_all_classes">All Classes</button>
+      <button type="button" class="chip filter-chip active" data-filter="class" data-value="all" aria-pressed="true" data-i18n="filter_all_classes">All Classes</button>
       {% for cls in ['Bulwark', 'Vanguard', 'Support', 'Sentinel'] %}
-      <button type="button" class="chip" data-filter="class" data-value="{{ cls }}" aria-pressed="false" data-cls="{{ cls }}">{{ cls }}</button>
+      <button type="button" class="chip filter-chip" data-filter="class" data-value="{{ cls }}" aria-pressed="false" data-cls="{{ cls }}">
+        <img class="filter-chip-icon" src="{{ rel_prefix }}assets/images/class/{{ cls }}.png" alt="" aria-hidden="true">
+        <span>{{ cls }}</span>
+      </button>
       {% endfor %}
     </div>
   </div>
@@ -31,9 +39,9 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_rarity">Rarity</span>
     <div class="filter-chips">
-      <button type="button" class="chip active" data-filter="rarity" data-value="all" aria-pressed="true" data-i18n="filter_all_rarities">All Rarities</button>
-      <button type="button" class="chip" data-filter="rarity" data-value="Elite" aria-pressed="false" data-rarity="Elite">Elite (SSR)</button>
-      <button type="button" class="chip" data-filter="rarity" data-value="Standard" aria-pressed="false" data-rarity="Standard">Standard (SR)</button>
+      <button type="button" class="chip filter-chip active" data-filter="rarity" data-value="all" aria-pressed="true" data-i18n="filter_all_rarities">All Rarities</button>
+      <button type="button" class="chip filter-chip" data-filter="rarity" data-value="Elite" aria-pressed="false" data-rarity="Elite"><span>Elite (SSR)</span></button>
+      <button type="button" class="chip filter-chip" data-filter="rarity" data-value="Standard" aria-pressed="false" data-rarity="Standard"><span>Standard (SR)</span></button>
     </div>
   </div>
 
@@ -41,9 +49,12 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_phase">Phase</span>
     <div class="filter-chips">
-      <button type="button" class="chip active" data-filter="phase" data-value="all" aria-pressed="true" data-i18n="filter_all_phases">All Phases</button>
+      <button type="button" class="chip filter-chip active" data-filter="phase" data-value="all" aria-pressed="true" data-i18n="filter_all_phases">All Phases</button>
       {% for ph in ['Physical', 'Burn', 'Hydro', 'Electric', 'Freeze', 'Corrosion', 'Resonance'] %}
-      <button type="button" class="chip" data-filter="phase" data-value="{{ ph }}" aria-pressed="false" data-phase="{{ ph }}">{{ ph }}</button>
+      <button type="button" class="chip filter-chip phase-chip phase-{{ ph|lower }}" data-filter="phase" data-value="{{ ph }}" aria-pressed="false" data-phase="{{ ph }}">
+        <img class="filter-chip-icon" src="{{ rel_prefix }}assets/images/phase/{{ ph }}.png" alt="" aria-hidden="true">
+        <span>{{ ph }}</span>
+      </button>
       {% endfor %}
     </div>
   </div>
@@ -52,9 +63,23 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_weapon">Weapon</span>
     <div class="filter-chips">
-      <button type="button" class="chip active" data-filter="weapon_type" data-value="all" aria-pressed="true" data-i18n="filter_all_weapons">All Weapons</button>
+      <button type="button" class="chip filter-chip active" data-filter="weapon_type" data-value="all" aria-pressed="true" data-i18n="filter_all_weapons">All Weapons</button>
       {% for wt in ['Assault Rifle', 'SMG', 'Shotgun', 'MG', 'Sniper Rifle', 'Handgun', 'Blade'] %}
-      <button type="button" class="chip" data-filter="weapon_type" data-value="{{ wt }}" aria-pressed="false" data-weapontype="{{ wt }}">{{ wt }}</button>
+      <button type="button" class="chip filter-chip" data-filter="weapon_type" data-value="{{ wt }}" aria-pressed="false" data-weapontype="{{ wt }}"><span>{{ wt }}</span></button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Ammo Type Filter -->
+  <div class="filter-group">
+    <span class="filter-label" data-i18n="stat_ammo_type">Ammo Type</span>
+    <div class="filter-chips">
+      <button type="button" class="chip filter-chip active" data-filter="ammo_type" data-value="all" aria-pressed="true" data-i18n="filter_all_ammo_types">All Ammo Types</button>
+      {% for ammo, icon in [('Light Ammo', 'LightAmmo.png'), ('Medium Ammo', 'MediumAmmo.png'), ('Heavy Ammo', 'HeavyAmmo.png'), ('Shotgun Ammo', 'ShotgunAmmo.png'), ('Melee', 'Melee.png')] %}
+      <button type="button" class="chip filter-chip" data-filter="ammo_type" data-value="{{ ammo }}" aria-pressed="false" data-ammotype="{{ ammo }}">
+        <img class="filter-chip-icon" src="{{ rel_prefix }}assets/images/ammo/{{ icon }}" alt="" aria-hidden="true">
+        <span>{{ ammo }}</span>
+      </button>
       {% endfor %}
     </div>
   </div>
@@ -63,9 +88,9 @@
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_server">Server</span>
     <div class="filter-chips">
-      <button type="button" class="chip active" data-filter="server" data-value="all" aria-pressed="true" data-i18n="filter_all_servers">All Servers</button>
-      <button type="button" class="chip" data-filter="server" data-value="global" aria-pressed="false" data-server="global">Global</button>
-      <button type="button" class="chip" data-filter="server" data-value="cn" aria-pressed="false" data-server="cn">CN Server</button>
+      <button type="button" class="chip filter-chip active" data-filter="server" data-value="all" aria-pressed="true" data-i18n="filter_all_servers">All Servers</button>
+      <button type="button" class="chip filter-chip" data-filter="server" data-value="global" aria-pressed="false" data-server="global"><span>Global</span></button>
+      <button type="button" class="chip filter-chip" data-filter="server" data-value="cn" aria-pressed="false" data-server="cn"><span>CN Server</span></button>
     </div>
   </div>
 </section>
@@ -81,6 +106,7 @@
      data-rarity="{{ doll.rarity }}"
      data-phase="{{ doll.phase }}"
      data-weapon_type="{{ doll.weapon_type }}"
+     data-ammo_type="{{ doll.ammo_type }}"
      data-server="{{ (doll.server or 'global')|lower }}">
     <div class="doll-thumb-wrapper">
       <div class="doll-badges-overlay">

@@ -19,8 +19,9 @@ def test_i18n_vi_json_exists_and_valid():
     assert "ui" in data, "Must contain 'ui' dictionary"
     assert "weapons" in data, "Must contain 'weapons' dictionary"
     assert "characters" in data, "Must contain 'characters' dictionary"
-    assert len(data["weapons"]) == 187, "Must contain all 187 weapons"
-    assert len(data["characters"]) == 64, "Must contain all 64 characters"
+    weapons = json.loads((ROOT / "data" / "weapons.json").read_text(encoding="utf-8"))
+    assert len(data["weapons"]) == len(weapons), "Must contain every weapon"
+    assert len(data["characters"]) == 65, "Must contain all 65 characters"
     assert data["ui"]["nav_home"] == "Trang Chủ"
     assert data["ui"]["nav_dolls"] == "Nhân Vật"
     assert data["ui"]["nav_weapons"] == "Vũ Khí"
@@ -55,6 +56,30 @@ def test_base_template_has_switcher_and_scripts():
     assert "i18n.js" in base_html
 
 
+def test_faq_content_and_page_chrome_are_vietnamese():
+    faq_entries = json.loads((ROOT / "data" / "faq.json").read_text(encoding="utf-8"))
+    faq_template = (ROOT / "site" / "templates" / "faq.html").read_text(encoding="utf-8")
+
+    assert len(faq_entries) == 7
+    assert faq_entries[0]["question"] == "Girls' Frontline 2: Exilium là game gì?"
+    assert faq_entries[-1]["question"] == "Vũ Khí Trấn là gì?"
+    assert "Câu Hỏi Thường Gặp" in faq_template
+    assert "Các khái niệm chiến thuật và cơ chế quan trọng" in faq_template
+
+
+def test_i18n_scripts_are_cache_busted_from_content_hash(built_site: Path):
+    page = (built_site / "characters" / "alva.html").read_text(encoding="utf-8")
+    matches = re.findall(r'static/js/(?:i18n-vi|i18n)\.js\?v=([0-9a-f]{12})', page)
+    assert len(matches) == 2
+    assert len(set(matches)) == 1
+
+
+def test_dist_bundle_contains_latest_official_translations(built_site: Path):
+    bundle = (built_site / "static" / "js" / "i18n-vi.js").read_text(encoding="utf-8")
+    assert '"name": "Chạm Vào Băng Kết"' in bundle
+    assert '"name": "Tia Lửa Rực Rỡ"' in bundle
+
+
 def test_character_template_has_i18n_hooks():
     char_html = (ROOT / "site" / "templates" / "character.html").read_text(encoding="utf-8")
     assert "data-char-slug" in char_html
@@ -67,6 +92,12 @@ def test_character_template_has_i18n_hooks():
     assert 'data-i18n="stat_ammo_type"' in char_html
     assert 'data-i18n="stat_signature_weapon"' in char_html
     assert 'data-i18n="skills_section_title"' in char_html
+
+
+def test_fortification_translation_prefers_tier_over_level():
+    engine = (ROOT / "site" / "static" / "js" / "i18n.js").read_text(encoding="utf-8")
+    expected = "cdata.fortification.find((f) => f.tier === tier) || cdata.fortification.find((f) => f.level === tier)"
+    assert expected in engine
 
 
 def test_weapon_template_has_i18n_hooks():
@@ -96,7 +127,7 @@ def test_effects_vi_data():
     effects = data["effects"]
     shelter = next(effect for effect in effects.values() if effect["name_en"] == "Shelter")
     assert shelter["id"] in effects, "Effect must be keyed by stable ID"
-    assert shelter["name"] == "Nơi Trú Ẩn"
+    assert shelter["name"] == "Yểm Hộ"
     assert "Bảo Vệ Độ Ổn Định" in shelter["desc"]
 
 
@@ -118,7 +149,7 @@ def test_summons_vi_localization():
     andoris = data["characters"]["andoris"]
     assert "summons" in andoris and len(andoris["summons"]) > 0
     sm = andoris["summons"][0]
-    assert sm["name"] == "Ụ Pháo Tự Động"
+    assert sm["name"] == "Pháo Tự Hành"
     assert "không thể di chuyển" in sm["description"]
     assert "HP ban đầu của Andoris" in sm["stats"]["hp"]
 
@@ -131,7 +162,8 @@ def test_weapons_vi_localization():
     i18n_path = ROOT / "data" / "i18n_vi.json"
     data = json.loads(i18n_path.read_text(encoding="utf-8"))
     weapons = data["weapons"]
-    assert len(weapons) == 187
+    source_weapons = json.loads((ROOT / "data" / "weapons.json").read_text(encoding="utf-8"))
+    assert len(weapons) == len(source_weapons)
     sample_w = weapons.get("guerno")
     assert sample_w is not None
     assert "đầy HP" in sample_w["trait"] or "Buff" in sample_w["trait"]
@@ -189,7 +221,7 @@ def test_all_summon_skills_localized():
             assert not re.search(r"\{[0-9]+\}", sk.get("name", "")), f"Placeholder found in {slug} summon skill name"
             assert not re.search(r"\{[0-9]+\}", sk.get("description", "")), f"Placeholder found in {slug} summon skill description"
     
-    assert total_skills == 23, f"Expected 23 summon skills, found {total_skills}"
+    assert total_skills == 25, f"Expected 25 summon skills, found {total_skills}"
 
 
 def test_effects_zero_english_contamination():
@@ -216,7 +248,8 @@ def test_effects_zero_english_contamination():
         matches = en_detector.findall(desc_vi)
         assert not matches, f"Effect '{name_en}' contains English words: {matches} in desc: '{desc_vi}'"
     
-    assert len(seen) == 381, f"Expected 381 unique effects, checked {len(seen)}"
+    assert len(seen) == 407, f"Expected 407 unique effects, checked {len(seen)}"
+
 
 
 def test_summon_skill_template_and_js_hooks(built_site: Path):

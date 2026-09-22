@@ -18,13 +18,56 @@
     </div>
   </header>
 
+  <div id="server-gate-banner" style="padding: 0 18px;" hidden></div>
+
   <main>
     <aside>
+      <button type="button" id="btn-new-effect" class="btn-new-effect">+ Thêm hiệu ứng mới</button>
       <label class="search-label" for="search">Tìm hiệu ứng</label>
       <input id="search" type="search" placeholder="Tên Anh hoặc Việt…" autocomplete="off">
       <div id="count"></div>
       <nav id="effect-list" aria-label="Danh sách hiệu ứng"></nav>
     </aside>
+
+    <!-- Modal thêm hiệu ứng mới -->
+    <div id="new-effect-modal" class="picker-overlay" hidden>
+      <div class="picker-dialog new-effect-dialog">
+        <div class="picker-header">
+          <strong>Thêm hiệu ứng mới</strong>
+          <button type="button" id="close-new-modal-btn" class="btn-close" aria-label="Đóng">&times;</button>
+        </div>
+        <form id="new-effect-form">
+          <label>
+            Tên tiếng Anh (EN) <span class="req-star">*</span>
+            <input type="text" id="new-name-en" placeholder="vd: Attack Boost I" required autocomplete="off">
+          </label>
+          <label>
+            Tên tiếng Việt (VI) <span class="req-star">*</span>
+            <input type="text" id="new-name-vi" placeholder="vd: Tăng Tấn Công I" required autocomplete="off">
+          </label>
+          <label>
+            Mô tả tiếng Anh (EN)
+            <textarea id="new-desc-en" placeholder="vd: Attack is increased by 10%..."></textarea>
+          </label>
+          <label>
+            Mô tả tiếng Việt (VI) <span class="req-star">*</span>
+            <textarea id="new-desc-vi" placeholder="vd: Tấn Công tăng 10%..." required></textarea>
+          </label>
+          <label>
+            Loại
+            <select id="new-effect-type">
+              <option value="buff">Buff</option>
+              <option value="debuff">Debuff</option>
+              <option value="effect" selected>Effect</option>
+            </select>
+          </label>
+          <div class="modal-actions">
+            <button type="button" id="cancel-new-effect-btn" class="btn-subtle">Hủy</button>
+            <button type="submit" id="submit-new-effect-btn" class="btn-submit">Tạo hiệu ứng</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <section id="workspace" hidden>
       <div class="split">
@@ -49,8 +92,22 @@
           </select>
         </label>
         <div class="reference-box">
-          <strong>Hiệu ứng con</strong>
+          <div class="reference-header">
+            <strong>Hiệu ứng con</strong>
+            <button type="button" id="add-sub-effect-btn" class="btn-subtle" title="Thêm hiệu ứng con mới">+ Thêm hiệu ứng con</button>
+          </div>
           <div id="sub-effects" class="chips"></div>
+
+          <div id="sub-effect-picker" class="picker-overlay" hidden>
+            <div class="picker-dialog">
+              <div class="picker-header">
+                <strong>Thêm hiệu ứng con</strong>
+                <button type="button" id="close-picker-btn" class="btn-close" aria-label="Đóng">&times;</button>
+              </div>
+              <input type="search" id="picker-search" placeholder="Lọc theo tên EN hoặc VI…" autocomplete="off">
+              <div id="picker-list" class="picker-list"></div>
+            </div>
+          </div>
         </div>
         <div class="reference-box">
           <strong>Được dùng bởi</strong>
@@ -67,6 +124,6 @@
   </main>
 
   <div id="toast" role="alert" aria-live="assertive"></div>
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>

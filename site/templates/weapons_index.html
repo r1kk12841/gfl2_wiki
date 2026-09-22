@@ -6,7 +6,7 @@
 {% block content %}
 <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
   <div>
-    <h1 style="font-size:2.2rem; font-weight:800; color:var(--text-primary);" data-i18n="weapons_page_title">Armory</h1>
+    <h1 style="font-size:2rem; font-weight:800; color:var(--text-primary);" data-i18n="weapons_page_title">Armory</h1>
     <p style="color:var(--text-secondary); font-size:0.95rem;" data-i18n="weapons_page_subtitle">Tactical weapon systems and armaments database.</p>
   </div>
   <div id="filter-count" style="color:var(--accent-cyan); font-weight:700; font-size:0.9rem;">
@@ -15,7 +15,12 @@
 </div>
 
 <!-- Filters -->
-<section class="filter-section">
+<div class="filter-toolbar" hidden>
+  <button type="button" class="chip filter-toggle" aria-expanded="false" aria-controls="catalog-filters"><span data-i18n="filters_title">Filters</span> <span data-filter-total>0</span></button>
+  <button type="button" class="chip filter-reset" data-i18n="filters_reset">Clear filters</button>
+  {% if active_page == 'weapons' %}<button type="button" class="chip view-toggle" aria-pressed="false" data-i18n="view_compact">Compact list</button>{% endif %}
+</div>
+<section class="filter-section" id="catalog-filters">
   <!-- Rarity Filter -->
   <div class="filter-group">
     <span class="filter-label" data-i18n="label_rarity">Rarity</span>

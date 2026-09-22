@@ -18,7 +18,7 @@
   "movement_speed": "6 tiles",
   "skills": [
     {
-      "name": "Predator's Pursuit",
+      "name": "Hunting Fang",
       "tags": [
         "Basic Attack",
         "Targeted"
@@ -29,61 +29,48 @@
       "confectance_cost": 0,
       "range": 8,
       "effect_area": "Target",
-      "description": "Selects 1 enemy target within 8 tiles and deals Freeze damage equal to 80% of attack to them. Soppo gains Confectance Index and 2 points of Predator Mark. If Soppo is in Feral Form, this attack deals Burn damage instead.",
-      "icon": "assets/images/characters/soppo/skill1-icon.png",
-      "range_image": "assets/images/characters/soppo/skill1-range.png"
+      "description": "Deals Freeze damage equal to 80% of attack to the target. Soppo gains Confectance Index and 2 points of Hunting Mark, which is her personal mark. If Soppo is in Mad Dog Mode, this skill instead deals Burn damage.\n\n[Mad Dog Mode]: In this state, certain skills deal Burn damage. Can switch to [Hunting Hound Mode].\n[Hunting Hound Mode]: In this state, certain skills deal Freeze damage. Can switch to [Mad Dog Mode]."
     },
     {
-      "name": "Ferocious Bite",
+      "name": "Vicious Bite",
       "tags": [
         "Active",
-        "AoE",
-        "Tile"
+        "AoE"
       ],
+      "ammo_type": "Medium Ammo",
       "stability_damage": 3,
       "cooldown": "1 turns",
       "confectance_cost": 0,
       "range": 6,
       "effect_area": "3",
-      "description": "Selects 1 enemy target within 6 tiles, dealing AoE Freeze damage equal to 80% of attack to the target and all enemy targets within a 3-tile radius around it, and creates Frost tiles for 2 turns. After skill usage, use the basic attack Predator's Pursuit on the nearest enemy target within 8 tiles and gains Extra Command.\nIf in Feral Form, deals AoE Burn damage instead, creates Incineration tiles, and no longer gains Extra Command.",
-      "icon": "assets/images/characters/soppo/skill2-icon.png",
-      "range_image": "assets/images/characters/soppo/skill2-range.png",
-      "ammo_type": "Medium Ammo"
+      "description": "Deals AoE Freeze damage equal to 80% of attack to the target and all enemy targets within a 3-tile radius around it, generating Frost tiles for 2 turns. After this skill, Soppo performs the basic attack Hunting Fang on the nearest enemy target within 8 tiles and gains Extra Command.\n\nIf Soppo is in Mad Dog Mode, this skill instead deals AoE Burn damage and generates Incineration tiles. Soppo does not gain Extra Command."
     },
     {
-      "name": "Midnight Howl",
+      "name": "Lunar Howl",
       "tags": [
         "Active",
-        "Targeted"
+        "AoE"
       ],
       "stability_damage": 0,
       "cooldown": "1 turns",
       "confectance_cost": 0,
       "effect_area": "8",
-      "description": "Selects any empty Freeze-type or Burn-type tile anywhere on the battlefield, moves onto that tile, and applies Slaughter Trail to all allied Dolls within an 8-tile radius around the user (excluding self) for 3 turns. After skill usage, switches to Feral Form.\n\nIf in Feral Form, deals AoE Burn damage equal to 120% of attack to all enemy targets within a 4-tile radius instead. This damage is evenly split among all targets within the area. After skill usage, Soppo use the basic attack Predator's Pursuit on the nearest enemy target within 8 tiles and gains Extra Action.",
-      "icon": "assets/images/characters/soppo/skill3-icon.png",
-      "range_image": "assets/images/characters/soppo/skill3-range.png",
-      "range": "Full map"
+      "description": "Lands on the selected empty Freeze or Burn tile within the battlefield and applies Slaughtertrail to all nearby allied Dolls within an 8-tile radius (excluding Soppo herself) for 3 turns, allowing them to generate Frost tiles around the target after performing an active attack; and damage dealt to enemy units on phase tiles is increased. After this skill, Soppo switches to Mad Dog Mode.\n\nIf Soppo is in Mad Dog Mode, instead deals AoE Burn damage equal to 120% of attack to all enemy targets nearby within a 4-tile radius. This damage is shared evenly among all targets within the effective area. After this skill, Soppo performs the basic attack Hunting Fang on the nearest enemy target within 8 tiles and gains Extra Action."
     },
     {
-      "name": "Deadly Pounce",
+      "name": "Fatal Pounce",
       "tags": [
-        "Ultimate",
-        "AoE",
-        "Interception"
+        "AoE"
       ],
+      "ammo_type": "Medium Ammo",
       "stability_damage": 5,
       "cooldown": "2 turns",
       "confectance_cost": 4,
       "effect_area": "6",
-      "description": "Selects all enemy targets within a 6-tile radius, consumes all Predator Mark stacks, and deals AoE Freeze damage equal to number of Predator Mark stacks × 30% of attack. If this attack hits an enemy target standing on an phase tile, deals an additional 1 instance of Freeze damage equal to 50% of attack to that target. After skill usage, switches to Hunter Form.\n\nPassive: Before an enemy unit within 8 tiles performs an active attack, triggers Interception against it, dealing Freeze damage equal to 30% of attack and 4 points of stability damage. Can trigger at most once per turn.",
-      "icon": "assets/images/characters/soppo/ult-icon.png",
-      "range_image": "assets/images/characters/soppo/ult-range.png",
-      "ammo_type": "Medium Ammo",
-      "range": "Self"
+      "description": "Selects all enemy targets within a 6-tile radius, expends all stacks of Hunting Mark, and deals AoE Freeze damage equal to number of Hunting Mark stacks × 30% of attack. If this attack hits enemy targets on phase tiles, additionally deals Freeze damage equal to 50% of attack to them. After this skill, Soppo switches to Hunting Hound Mode.\n\nPassive: Before nearby enemy units within 8 tiles launch an active attack, performs Interception on them, dealing Freeze damage equal to 30% of attack and 4 points of stability damage. Can trigger at most once per turn."
     },
     {
-      "name": "Mad Dog Syndrome",
+      "name": "Vampup Syndrome",
       "tags": [
         "Passive"
       ],
@@ -91,48 +78,45 @@
       "cooldown": "0 turns",
       "confectance_cost": 0,
       "effect_area": "Target",
-      "description": "At the start of battle, enters Hunter Form; consumes 3 points of own Confectance Index and gains Frost Barrier for 3 turns. Frost Barrier absorbs damage equal to 65% of initial attack, up to a maximum of 60% of max HP.\n\nAt the start of battle, if there are 3 or more allied Burn Dolls (excluding self), then while in Hunter Form, the damage dealt by the basic attack Predator's Pursuit and the active skill Ferocious Bite to enemy targets afflicted with Burn-type debuffs is increased by 100%; if there are 3 or more allied Freeze Dolls (excluding self), then while in Feral Form, the damage dealt by the above skills as well as the active skill Midnight Howl to enemy targets afflicted with Freeze-type debuffs is increased by 100%.\nIf neither condition is met, gains 2 stacks of Permanent Predator Mark.\n\nAfter use an active skill, gains 1 stack of Berserk Factor, up to a maximum of 10 stacks. At 4 stacks of Berserk Factor, gains Berserk Factor I; at 6 stacks of Berserk Factor, gains Berserk Factor II; at 8 or more stacks of Berserk Factor, gains Berserk Factor III.",
-      "icon": "assets/images/characters/soppo/passive.png",
-      "range_image": "assets/images/characters/soppo/passive-range.png",
-      "range": "Self"
+      "description": "At the start of the battle, Soppo begins in Hunting Hound Mode and expends Confectance Index (consumes 3 points of own Confectance Index) to gain a Frost Barrier for 3 turns. Frost Barrier absorbs damage equal to 65% of initial attack, up to a maximum of 60% of max HP.\n\nAt the start of the battle, if there are 3 or more allied Burn attributed Dolls on the battlefield (excluding Soppo herself), then when she uses the basic attack Hunting Fang or the active skill Vicious Bite and is in Hunting Hound Mode, damage dealt to enemy targets with Burn debuffs is increased by 100%. If there are 3 or more allied Freeze attributed Dolls on the battlefield (excluding Soppo herself), then when she uses the abovementioned skills or the active skill Lunar Howl and is in Mad Dog Mode, damage dealt to enemy targets with Freeze debuffs is increased by 100%. If neither condition is met, Soppo gains 2 stacks of Permanent Hunting Mark.\n\nAfter performing an active attack, Soppo gains Rabid Factor, increasing her critical damage dealt (up to a maximum of 10 stacks). When she has 4 stacks of Rabid Factor, she gains Rabid Factor I. When she has 6 stacks of Rabid Factor, she gains Rabid Factor II. When she has 8 or more stacks of Rabid Factor, she gains Rabid Factor III.\n\n[Rabid Factor I]: When attacking an enemy target on a phase tile with active attacks, ignores 10% of the target's defense. For each level of the tile, ignores an additional 10% of the target's defense.\n[Rabid Factor II]: For each Freeze or Burn buff on Soppo, Freeze and Burn damage dealt is increased by 5%.\n[Rabid Factor III]: Before dealing damage, generates Frost tiles around the target. If Soppo is in Mad Dog Mode, instead generates Incineration tiles. Damage dealt to enemy targets on phase tiles is increased by 15%. For each level of the tile, damage dealt is further increased by 10%."
     }
   ],
   "fortification": [
     {
       "tier": 1,
-      "skill": "Ferocious Bite",
+      "skill": "Vicious Bite",
       "level": 2,
-      "effect": "The damage multiplier is increased to 130%. \nIf in Hunter Form, gains 2 stacks of Predator Mark after attacking, and gains Extra Action instead of Extra Command."
+      "effect": "The damage multiplier is increased to 130%.\nIf in Hunting Hound Mode, gains 2 stacks of Hunting Mark after attacking, and gains Extra Action instead of Extra Command."
     },
     {
       "tier": 2,
-      "skill": "Midnight Howl",
+      "skill": "Lunar Howl",
       "level": 2,
-      "effect": "After moving onto the target tile, if that tile is an Freeze-type or Burn-type tile, deals Freeze damage or Burn damage equal to 80% of attack to the 3 nearest enemy targets within 8 tiles.\nIf that tile is an Ashen (Freeze-Burn) tile, instead deals 1 instance of Freeze damage and 1 instance of Burn damage, each equal to 80% of attack, to the 3 nearest enemy targets within 8 tiles.\nIf in Feral Form, gains 1 stack of Predator Mark after skill usage."
+      "effect": "After moving onto the target tile, if that tile is a Freeze or Burn tile, deals Freeze damage or Burn damage equal to 80% of attack to the 3 nearest enemy targets within 8 tiles.\nIf that tile is an Ashen (Freeze-Burn) tile, instead deals 1 instance of Freeze damage and 1 instance of Burn damage, each equal to 80% of attack, to the 3 nearest enemy targets within 8 tiles.\nIf in Mad Dog Mode, gains 1 stack of Hunting Mark after skill usage."
     },
     {
       "tier": 3,
-      "skill": "Midnight Howl",
+      "skill": "Lunar Howl",
       "level": 3,
-      "effect": "The effect of Slaughter Trail is enhanced: the range for creating Frost tiles is increased by 2 tiles; before performing an active attack, Soppo gains 1 stack of Berserk Factor.\nIf in Feral Form, the damage multiplier is increased to 150%. If the enemy target is standing on a Level 1 tile, the damage is increased by 10%; for every 1 tile level, the damage is further increased by 10%."
+      "effect": "The effect of Slaughtertrail is enhanced: the range for creating Frost tiles is increased by 2 tiles; before performing an active attack, Soppo gains 1 stack of Rabid Factor.\nIf in Mad Dog Mode, the damage multiplier is increased to 150%. If the enemy target is standing on a Level 1 tile, the damage is increased by 10%; for every 1 tile level, the damage is further increased by 10%."
     },
     {
       "tier": 4,
-      "skill": "Mad Dog Syndrome",
+      "skill": "Vampup Syndrome",
       "level": 2,
-      "effect": "The damage increase from team conditions against enemy targets is raised to 150% and no longer requires the target to have any debuffs. The number of Permanent Predator Mark stacks gained is increased by 2."
+      "effect": "The damage increase from team conditions against enemy targets is raised to 150% and no longer requires the target to have any debuffs. The number of Permanent Hunting Mark stacks gained is increased by 2."
     },
     {
       "tier": 5,
-      "skill": "Deadly Pounce",
+      "skill": "Fatal Pounce",
       "level": 2,
-      "effect": "The multiplier is increased to number of Predator Mark stacks × 50% of attack. When using this skill, consumes all Confectance Index; for each additional 1 point of Confectance Index consumed, the base multiplier is increased by 5%. After skill usage, restores 2 points of Confectance Index.\nAfter triggering Interception, gains 2 stacks of Predator Mark. The damage multiplier of Interception is increased to 60%."
+      "effect": "The multiplier is increased to number of Hunting Mark stacks × 50% of attack. When using this skill, consumes all Confectance Index; for each additional 1 point of Confectance Index consumed, the base multiplier is increased by 5%. After skill usage, restores 2 points of Confectance Index.\nAfter triggering Interception, gains 2 stacks of Hunting Mark. The damage multiplier of Interception is increased to 60%."
     },
     {
       "tier": 6,
-      "skill": "Mad Dog Syndrome",
+      "skill": "Vampup Syndrome",
       "level": 3,
-      "effect": "At the start of battle, gains 3 stacks of Berserk Factor.\nThe maximum number of Berserk Factor stacks is increased to 20, and after performing an active attack, the number of Berserk Factor stacks gained is additionally increased by 1.\nIn addition, when Berserk Factor reaches 20 stacks, its effects are enhanced:\nBerserk Factor I — when actively attacking an enemy target standing on an phase tile, defense ignore is increased to 20%;\nBerserk Factor II — the increase to Freeze damage and Burn damage is raised to 10%;\nBerserk Factor III — when attacking an enemy target standing on an phase tile, the damage increase is raised to 30%."
+      "effect": "At the start of battle, gains 3 stacks of Rabid Factor.\nThe maximum number of Rabid Factor stacks is increased to 20, and after performing an active attack, the number of Rabid Factor stacks gained is additionally increased by 1.\nIn addition, when Rabid Factor reaches 20 stacks, its effects are enhanced:\nRabid Factor I — when actively attacking an enemy target standing on a phase tile, defense ignore is increased to 20%;\nRabid Factor II — the increase to Freeze damage and Burn damage is raised to 10%;\nRabid Factor III — when attacking an enemy target standing on a phase tile, the damage increase is raised to 30%."
     }
   ],
   "neural_helix": [
@@ -140,103 +124,93 @@
       "node": "Enhancement 1",
       "level": 1,
       "effect": "ATK +39\nDEF +21",
-      "materials": "20\n\n\n1000"
+      "materials": "201000"
     },
     {
       "node": "Enhancement 2",
       "level": 20,
       "effect": "HP +82\nATK +5.0%",
-      "materials": "20\n\n\n2000"
+      "materials": "202000"
     },
     {
       "node": "Enhancement 3",
       "level": 25,
       "effect": "ATK +48\nDEF +29",
-      "materials": "40\n\n\n4000"
+      "materials": "404000"
     },
     {
       "node": "Enhancement 4",
       "level": 30,
       "effect": "HP +113\nATK +5.0%",
-      "materials": "80\n\n\n8000"
+      "materials": "808000"
     },
     {
       "node": "Enhancement 5",
       "level": 35,
       "effect": "ATK +56\nDEF +38",
-      "materials": "120\n\n\n10000"
+      "materials": "12010000"
     },
     {
       "node": "Enhancement 6",
       "level": 40,
       "effect": "ATK +64\nHP +147",
-      "materials": "160\n\n\n12000"
+      "materials": "16012000"
     }
   ],
   "keys": [
     {
       "name": "Fixed Key 1 - This Is My Turf",
-      "level": 20,
-      "effect": "At the start of battle, gains 2 stacks of Berserk Factor.",
-      "materials": "3\n\n\n3000",
-      "image": "assets/images/characters/soppo/fixed (1).png"
+      "level": "20",
+      "materials": "33000",
+      "effect": "At the start of the battle, gains Rabid Factor."
     },
     {
-      "name": "Fixed Key 2 - Want Another Bite?",
-      "level": 20,
-      "effect": "After attacking an enemy target standing on an phase tile, dispels 1 buff from the target.",
-      "materials": "3\n\n\n3000",
-      "image": "assets/images/characters/soppo/fixed (2).png"
+      "name": "Fixed Key 2 - Beware of Sopdog",
+      "level": "20",
+      "materials": "33000",
+      "effect": "After attacking enemy targets on phase tiles, cleanses a buff from them."
     },
     {
-      "name": "Fixed Key 3 - Frozen Hell",
-      "level": 30,
-      "effect": "At the start of the turn, creates Frost tiles within a 4-tile radius around the user for 2 turns.",
-      "materials": "3\n\n\n8000",
-      "image": "assets/images/characters/soppo/fixed (3).png"
+      "name": "Fixed Key 3 - Cocytus",
+      "level": "30",
+      "materials": "38000",
+      "effect": "At the start of the turn, Soppo generates [Frost] tiles around of herself."
     },
     {
-      "name": "Fixed Key 4 - Territorial Recovery",
-      "level": 30,
-      "effect": "When taking damage while standing on an phase tile, damage taken is reduced by 10%, and stability damage taken is reduced by 1 point.",
-      "materials": "3\n\n\n8000",
-      "image": "assets/images/characters/soppo/fixed (4).png"
+      "name": "Fixed Key 4 - Licking Wounds",
+      "level": "30",
+      "materials": "38000",
+      "effect": "If Soppo takes damage while she is on a phase tile, damage and stability damage taken is reduced."
     },
     {
-      "name": "Fixed Key 5 - Killing Frenzy",
-      "level": 40,
-      "effect": "While the Soppo has a shield, increases Burn damage and Freeze damage dealt by 10%.",
-      "materials": "3\n\n\n12000",
-      "image": "assets/images/characters/soppo/fixed (5).png"
+      "name": "Fixed Key 5 - Unfettered Bloodlust",
+      "level": "40",
+      "materials": "312000",
+      "effect": "When Soppo has a shield, Freeze damage and Burn damage dealt is increased."
     },
     {
-      "name": "Fixed Key 6 - Pack Synergy",
-      "level": 40,
-      "effect": "After an allied unit (excluding Soppo) performs an out-of-turn attack, if the user does not have Blazing Assault I or Frost Assault, gains the corresponding effect for 2 turns.",
-      "materials": "3\n\n\n12000",
-      "image": "assets/images/characters/soppo/fixed (6).png"
+      "name": "Fixed Key 6 - Group Coordination",
+      "level": "40",
+      "materials": "312000",
+      "effect": "After an allied unit (excluding Soppo herself) performs an out-of-turn attack, Soppo gains any missing effects among [Blazing Assault I] and [Boreal Assault]."
     },
     {
       "name": "Affinity Key - Frolic chord",
       "level": "-",
-      "effect": "ATK +3%, HP +3%, CRIT +3%",
       "materials": "Unlocked at Affinity Lvl 5",
-      "image": "assets/images/characters/soppo/affi.png"
+      "effect": "ATK +3%, HP +3%, CRIT +3%"
     },
     {
       "name": "Common Key - Call of the Wild",
-      "level": 40,
-      "effect": "CRIT +5.0% / When attacking an enemy target standing on an Freeze-type or Burn-type tile, phase damage dealt is increased by 10%.",
+      "level": "40",
       "materials": "None",
-      "image": "assets/images/characters/soppo/common.png"
+      "effect": "When attacking an enemy unit on a Freeze or Burn tile, phase damage dealt is increased."
     }
   ],
   "images": {
     "portrait": "assets/images/characters/soppo/portrait.png",
-    "avatar": "assets/images/characters/soppo/avatar.png",
-    "class_icon": "assets/images/class/Sentinel.png",
-    "portrait_webp": "assets/images/characters/soppo/portrait.webp"
+    "class_icon": "assets/images/class/Sentinel.png"
   },
   "source_notes": "Extracted from GFL2 Official Release Info Compilation.xlsx with online Dandegate/gfl2.help enrichment.",
-  "server": "cn"
+  "server": "global"
 }

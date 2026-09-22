@@ -3,21 +3,20 @@
 Tool cục bộ để sửa bản dịch hiệu ứng tiếng Việt.
 
 ```bash
-python tools/data_entry_server.py
+.venv\Scripts\python.exe tools/start_editors.py
 ```
 
-Mở `http://127.0.0.1:8000/tools/effect_editor/`.
+Mở `http://127.0.0.1:8000/tools/effect_editor/index.html`.
 
 Không dùng `python -m http.server`: static server không cung cấp API lưu dữ liệu.
 
-Server riêng vẫn dùng được qua `python tools/effect_editor/server.py` tại cổng `8765`.
-
-Khi lưu, tool cập nhật đồng thời:
+Khi lưu, tool cập nhật đồng thời qua giao dịch nguyên tử (`RepositoryTransaction`):
 
 - `data/effects_vi.json`
 - mục `effects` trong `data/i18n_vi.json`
 - `site/static/js/i18n-vi.js`
-- quan hệ `sub_effect_ids` vẫn giữ nguyên khi đổi tên, kể cả khi nhiều hiệu ứng trùng tên
+- Quản lý hiệu ứng con: Hỗ trợ thêm hiệu ứng con mới qua nút "+ Thêm hiệu ứng con" và gỡ bỏ bằng nút `×` trên chip.
+- Quan hệ `sub_effect_ids` và `referenced_by` được tự động tính toán và bảo toàn bằng ID ổn định.
 
 Catalog dùng khóa `effect_<sha1>` ổn định. API cập nhật theo ID:
 

@@ -37,6 +37,9 @@
       <!-- ─────────────────── CHARACTER TAB ─────────────────── -->
       <div class="tab-content active" id="tab-character">
 
+        <!-- Server Gate Warning Banner -->
+        <div id="server-gate-banner" style="display: none;"></div>
+
         <!-- Load Existing Character -->
         <div class="char-selector-bar">
           <span class="char-selector-label" data-i18n="load_existing">📋 Load existing:</span>
@@ -93,6 +96,13 @@
                 <label for="c-phase"><span data-i18n="field_phase">Phase</span> <span class="req">*</span></label>
                 <select id="c-phase">
                   <option value="" data-i18n="placeholder_select">— select —</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="c-server"><span data-i18n="field_server">Server</span> <span class="req">*</span></label>
+                <select id="c-server">
+                  <option value="global" data-i18n="server_global">Global</option>
+                  <option value="cn" data-i18n="server_cn">CN Server</option>
                 </select>
               </div>
             </div>
@@ -220,6 +230,7 @@
           <div class="card-body">
             <p class="text-muted" data-i18n="sec_keys_desc">Fixed Keys 1–6, Affinity Key, Common Key, Expansion Key.</p>
             <div class="repeat-list" id="keys-list"></div>
+            <button class="btn-add" id="btn-add-key" data-i18n="btn_add_key">+ Add Key</button>
           </div>
         </section>
 

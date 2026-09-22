@@ -1,0 +1,271 @@
+{
+  "slug": "loreley",
+  "char_slug": "loreley",
+  "title": "Hướng dẫn toàn diện Loreley (DSR-50): Lối chơi, Trang bị & Đội hình",
+  "last_updated": "2026-09-14",
+  "author": "Community",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tổng quan"
+    },
+    {
+      "type": "char_card",
+      "slug": "loreley"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Loreley (DSR-50)</b> là doll Hỗ Trợ (Support) kiêm Sub-DPS cốt lõi thuộc tính <b><span class=\"guide-text-red\">Thiêu Đốt</span></b>, sử dụng vũ khí Súng Bắn Tỉa (SR). Từ mốc&nbsp;<b>V2</b>, Loreley chuyển mình thành một trong những <b>Support đa năng</b>&nbsp;hàng đầu, có thể ghép vào bất kỳ đội hình nguyên tố nào."
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Các cơ chế chiến đấu cốt lõi:</b><br>• <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Truyền Nhiệt Năng: Tích lũy Lửa Thiêu Đốt để nạp năng lượng. Khi Lửa Thiêu Đốt đạt 35 điểm, tiêu hao toàn bộ điểm Lửa Thiêu Đốt và áp dụng Tàn Tro cho tất cả các đơn vị đồng minh, duy trì 2 hiệp.\" data-effect-id=\"effect_db167f6762f6\" data-effect=\"Truyền Nhiệt Năng\" data-effect-en=\"Thermal Conduction\" data-text-en=\"Thermal Conduction\" data-type=\"effect\" data-desc=\"Tích lũy Lửa Thiêu Đốt để nạp năng lượng. Khi Lửa Thiêu Đốt đạt 35 điểm, tiêu hao toàn bộ điểm Lửa Thiêu Đốt và áp dụng Tàn Tro cho tất cả các đơn vị đồng minh, duy trì 2 hiệp.\" data-desc-en=\"Uses Searing Flame as a value counter. When Searing Flame reaches 35 stacks, consumes all points of Searing Flame and applies Ember to all allied units.\" tabindex=\"0\">Truyền Nhiệt Năng</span>&nbsp;: tích lũy&nbsp;<span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-effect\" title=\"Lửa Thiêu Đốt: Có thể nạp năng lượng cho Truyền Nhiệt Năng.\" data-effect-id=\"effect_8066815f5668\" data-effect=\"Lửa Thiêu Đốt\" data-effect-en=\"Searing Flame\" data-text-en=\"Searing Flame\" data-type=\"effect\" data-desc=\"Có thể nạp năng lượng cho Truyền Nhiệt Năng.\" data-desc-en=\"Used to charge Thermal Conduction.\" tabindex=\"0\">Lửa Thiêu Đốt</span>&nbsp;<b>(Searing Flame)</b>. Khi đạt 35 tầng, kích hoạt <b>Tàn Tro Lửa Rực (Glowing Embers)</b>: tăng 30% sát thương Burn, 15% tất cả sát thương (tổng 45% cho Burn), giảm 15% sát thương nhận vào trong 2 lượt, đồng thời cộng dồn vĩnh viễn <b>+5% Sát thương Bạo kích, </b>có thể stack <b>vô hạn lần</b>.<br>• Triệu hồi&nbsp;<span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Thợ Săn-II: Khi tạo nhận 8 điểm Lửa Thiêu Đốt, và khiến tất cả đơn vị phe ta nhận Thủy Triều Rực Lửa trong 3 hiệp lớn. Khi Loreley kết thúc hành động, giải phóng Xung Lân Hỏa. ST Thiêu Đốt tất cả kẻ địch trong phạm vi 5 ô xung quanh Thợ Săn-II phải chịu tăng 15%.\" data-effect-id=\"effect_02a8c2402c1a\" data-effect=\"Thợ Săn-II\" data-effect-en=\"Hunter Type - II\" data-text-en=\"Hunter Type - II\" data-type=\"buff\" data-desc=\"Khi tạo nhận 8 điểm Lửa Thiêu Đốt, và khiến tất cả đơn vị phe ta nhận Thủy Triều Rực Lửa trong 3 hiệp lớn. Khi Loreley kết thúc hành động, giải phóng Xung Lân Hỏa. ST Thiêu Đốt tất cả kẻ địch trong phạm vi 5 ô xung quanh Thợ Săn-II phải chịu tăng 15%.\" data-desc-en=\"Grants 8 Searing Flame points when summoned, apply Infernal Surge to all friendly units for 3 global rounds. At the end of Loreley action, a Pyro Pulse is released. Burn damage taken by all enemy units within a radius of 5 tiles around Hunter Type - II is increased by 15%.\" tabindex=\"0\">Thợ Săn-II</span>&nbsp;: cấp ngay 8 tầng Searing Flame, buff <b>Thủy Triều Rực Lửa (Infernal Surge)</b> (+6% ATK toàn đội trong 3 hiệp), tăng 15% sát thương Burn kẻ địch nhận trong phạm vi 5 ô. Cuối mỗi hành động của Loreley, robot tự động phóng <b>Xung Lân Hỏa (Pyro Pulse)</b>: gây 40% ATK sát thương<span class=\"guide-text-burn\"> Thiêu Đốt&nbsp;</span><span>AoE, giải 1 debuff, hồi 2 điểm Stability cho toàn đội và cấp 3 tầng Searing Flame.</span><p>• <span class=\"guide-inline-ref guide-inline-effect effect-trigger effect-buff\" title=\"Lửa Cháy Hoàn Hảo: Khi gây ST Thiêu Đốt, bỏ qua 10% Phòng Thủ của mục tiêu. Thuộc loại Buff.\" data-effect-id=\"effect_deb25ad68d64\" data-effect=\"Lửa Cháy Hoàn Hảo\" data-effect-en=\"Flawless Blaze\" data-text-en=\"Flawless Blaze\" data-type=\"buff\" data-desc=\"Khi gây ST Thiêu Đốt, bỏ qua 10% Phòng Thủ của mục tiêu. Thuộc loại Buff.\" data-desc-en=\"Nullifies one instance of damage. Considered a Burn buff. Cannot be dispelled.\" tabindex=\"0\">Lửa Cháy Hoàn Hảo</span>&nbsp;: Miễn nhiễm hoàn toàn 1 lần sát thương cho đồng minh trước khi bị đánh trúng ,tối đa 3 lần/hiệp ở V0, tăng lên 5 lần/hiệp ở V2.<br></p><span class=\"guide-inline-ref guide-inline-skill\" title=\"Queen’s Largesse: Damage dealt by all Dolls who use Sniper Rifles is increased by 10%.\nAt the start of battle, gains Thermal Conduction. When Loreley is on the field, Embers from Thermal Conduction is upgraded into Glowing Embers, which lasts for 2 global rounds.\nAt the start of the round, Loreley gains 2 points of Confectance Index. At the end of her action, if Hunter - Type II is present, Loreley also gains Additional Command. Can be triggered once per round.\nBefore an allied unit takes damage, Loreley grants them Flawless Blaze, allowing them to nullify that instance of damage. Can be triggered up to 3 times per round.\"><br></span><span class=\"guide-inline-ref guide-inline-skill\" title=\"Ân Tứ Nữ Vương: ST tất cả Doll dùng &lt;color=#3487e0&gt;Súng Bắn Tỉa&lt;/color&gt; gây ra tăng &lt;color=#f26c1c&gt;10%&lt;/color&gt;.\nVào trận nhận Truyền Nhiệt Năng. Khi Loreley có mặt trên trận, hiệu ứng của &lt;color=#3487e0&gt;Truyền Nhiệt Năng&lt;/color&gt; là &lt;color=#3487e0&gt;Tàn Tro&lt;/color&gt; sẽ tăng cấp thành &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;2 hiệp lớn&lt;/color&gt;.\nKhi bắt đầu hiệp lớn, bản thân nhận &lt;color=#f26c1c&gt;2 điểm&lt;/color&gt; Chỉ Số Nhiên Liệu. Khi kết thúc hành động, nếu trên trận tồn tại &lt;color=#3487e0&gt;Thợ Săn-II&lt;/color&gt;, bản thân nhận &lt;color=#3487e0&gt;Chỉ Lệnh Bổ Sung&lt;/color&gt;, mỗi hiệp kích hoạt &lt;color=#f26c1c&gt;1 lần&lt;/color&gt;.\nTrước khi đồng minh nhận sát thương, Loreley ban tặng &lt;color=#3487e0&gt;Lửa Cháy Hoàn Hảo&lt;/color&gt;, kích hoạt tối đa &lt;color=#f26c1c&gt;3 lần&lt;/color&gt; mỗi hiệp.\">•&nbsp;<img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/passive-icon.png\" alt=\"Ân Tứ Nữ Vương\" loading=\"lazy\">Ân Tứ Nữ Vương</span>&nbsp;: Tăng 10% sát thương cho tất cả Doll súng bắn tỉa; hồi 2 Nhiên Liệu mỗi đầu hiệp; nhận thêm lệnh đánh khi robot còn trên sân."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Mốc Đầu tư (Fortifications)"
+    },
+    {
+      "type": "paragraph",
+      "html": "Khuyến nghị dừng ở <b>V0</b> (team lửa cơ bản) hoặc dốc tài nguyên lên <b>V2</b> (mọi đội hình). Mốc <b>V2R1</b>&nbsp;là điểm dừng hoàn hảo và mang lại hiệu quả/đầu tư cao nhất."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Cấp độ",
+        "Chi tiết hiệu ứng",
+        "Đánh giá & Khuyến nghị"
+      ],
+      "rows": [
+        [
+          "V0",
+          "Đầy đủ bộ kit cơ bản: Triệu hồi Hunter Type-II, buff Tàn Lửa, miễn nhiễm sát thương 3 lần/hiệp, xóa debuff và sạc Stability liên tục.",
+          "Rất mạnh cho đội hình <span class=\"guide-text-burn\">Thiêu Đốt</span> cơ bản, đáp ứng hoàn hảo mọi nội dung thường."
+        ],
+        [
+          "V1",
+          "Kích hoạt Vũ Điệu Cộng Sinh hồi 25% HP, 5 Stability và giải hiệu ứng Choáng. Robot phóng thêm 1 lần Pyro Pulse sau mỗi đòn đánh thường/kỹ năng.",
+          "Gia tăng sinh tồn cho team và đẩy nhanh tốc độ tích tầng Searing Flame."
+        ],
+        [
+          "V2",
+          "Glowing Embers chuyển thành tăng 45% TOÀN BỘ SÁT THƯƠNG (bỏ hạn chế hệ lửa). Tăng số lần miễn nhiễm Flawless Blaze từ 3 lên 5 lần/hiệp. Extra Command đổi thành Extra Action (hồi ngay 1 lượt cooldown kỹ năng và thêm di chuyển).",
+          "Biến Loreley thành Support đa năng, kẹp được vào mọi team Băng, Thủy, Ăn mòn..."
+        ],
+        [
+          "V3",
+          "Robot tạo thêm 4 Searing Flame khi xuất hiện. Hệ số sát thương Pyro Pulse x2; mỗi lần phóng tăng 10% sát thương cho Loreley (tối đa 40%). Cấp khiên Flawless Blaze cho toàn đội.",
+          "Nâng cấp sát thương cá nhân và khả năng phòng thủ đầu trận."
+        ],
+        [
+          "V4",
+          "Kỹ năng 2 (Sultry Promise) tăng 30% sát thương, +1 ô phạm vi. Mỗi buff Burn trên người Loreley tăng 10% sát thương kỹ năng (tối đa 40%).",
+          "Gia tăng sát thương diện rộng dọn quái (AoE)."
+        ],
+        [
+          "V5",
+          "Kỹ năng 1 (Burning Touch) bỏ qua 30% DEF mục tiêu; tăng thêm 60% sát thương nếu mục tiêu đứng trên ô Thiêu đốt.",
+          "Tăng mạnh sát thương đơn mục tiêu."
+        ],
+        [
+          "V6",
+          "Tăng thêm 1 điểm Searing Flame nhận vào cho toàn đội. Buff ATK từ Infernal Surge tăng lên 12%. Mức giảm sát thương của Glowing Embers tăng lên 30%.",
+          "Dành cho Whale: Sát thương cá nhân chạm ngưỡng DPS-carry."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Vũ khí"
+    },
+    {
+      "type": "paragraph",
+      "html": "Khuyến nghị ưu tiên lấy Trấn <a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/tidal-nocturne.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Tidal Nocturne.png\" alt=\"Dạ Khúc Thủy Triều\" loading=\"lazy\">Dạ Khúc Thủy Triều<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Tidal Nocturne.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Dạ Khúc Thủy Triều</span><span class=\"guide-weapon-popover-desc\">Tăng 5% ST Thiêu Đốt gây ra bởi tất cả đơn vị phe ta. Nếu bản thân sở hữu Tàn Lửa hoặc Tàn Lửa Rực Cháy, tăng 20%/25%/30%/35%/40%/45% ST Thiêu Đốt gây ra.\n\nKhi một đơn vị phe ta nhận Buff Thiêu Đốt, họ nhận Tăng Công II trong 2 vòng.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên mục tiêu có Debuff Thiêu Đốt. Nếu mục tiêu là ELID, tăng thêm 2.5% sát thương.</span></span></a>&nbsp;sau khi đạt V0 hoặc V2 để tối ưu hóa khả năng buff công cho toàn đội.<a class=\"guide-inline-ref guide-inline-weapon\" title=\"Hoa Hồng Chạng Vạng: Khi các đơn vị đồng minh gây ST Dẫn Điện hoặc Sát thương cận chiến, ST Bạo Kích tăng 10%/12%/14%/16%/18%/20% và sát thương gây ra tăng 10%/12%/14%/16%/18%/20% (chỉ áp dụng 1 lần khi thỏa mãn đồng thời nhiều điều kiện).\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên mục tiêu có Debuff Dẫn Điện và tăng 2.5% sát thương gây ra lên ELID.\" href=\"../weapons/twilight-rose.html\" target=\"_blank\" rel=\"noopener\"><br></a><a class=\"guide-inline-ref guide-inline-weapon\" title=\"Quy Tắc Gai Nhọn: Trước khi tấn công, với mỗi Debuff trên kẻ địch, tăng 3%/4%/5%/7%/8%/9% sát thương gây ra, tối đa lên đến 18%/24%/30%/35%/40%/45%. Nếu gây ST Ăn Mòn, tăng 10% ST Ăn Mòn gây ra.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên đơn vị PMC. Nếu mục tiêu có Debuff Ăn Mòn, tăng thêm 2.5% sát thương gây ra.\" href=\"../weapons/thorn-criterion.html\" target=\"_blank\" rel=\"noopener\"><br><br></a>"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Vũ khí",
+        "Độ hiếm",
+        "Phân tích & Hiệu quả"
+      ],
+      "rows": [
+        [
+          "<a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/tidal-nocturne.html\" target=\"_blank\" rel=\"noopener\"><br><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Tidal Nocturne.png\" alt=\"Dạ Khúc Thủy Triều\" loading=\"lazy\">Dạ Khúc Thủy Triều<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Tidal Nocturne.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Dạ Khúc Thủy Triều</span><span class=\"guide-weapon-popover-desc\">Tăng 5% ST Thiêu Đốt gây ra bởi tất cả đơn vị phe ta. Nếu bản thân sở hữu Tàn Lửa hoặc Tàn Lửa Rực Cháy, tăng 20%/25%/30%/35%/40%/45% ST Thiêu Đốt gây ra.\n\nKhi một đơn vị phe ta nhận Buff Thiêu Đốt, họ nhận Tăng Công II trong 2 vòng.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên mục tiêu có Debuff Thiêu Đốt. Nếu mục tiêu là ELID, tăng thêm 2.5% sát thương.</span></span></a><p>(Trấn)</p>",
+          "SSR",
+          "Vũ khí Trấn chuẩn (BiS): ATK cao nhất. Tăng 5% sát thương Burn toàn đội. Khi bất kỳ đồng minh nào nhận buff Burn, kích hoạt Attack Up II (+15% ATK) trong 2 lượt (duy trì 100% uptime toàn đội, cực kỳ giá trị cho sát thương DoT của Qiuhua)."
+        ],
+        [
+          "<br><br><a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/bittersweet-caramel.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Bittersweet Caramel.png\" alt=\"Dư Vị Caramel Cháy\" loading=\"lazy\">Dư Vị Caramel Cháy<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Bittersweet Caramel.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Dư Vị Caramel Cháy</span><span class=\"guide-weapon-popover-desc\">Tăng 10%/12%/14%/16%/18%/20% ST Băng Kết gây ra. Với mỗi 4/4/3/3/2/2 lần gây sát thương ngoài hiệp của bản thân, tăng 10%/12%/14%/16%/18%/20% sát thương của đòn tấn công chủ động tiếp theo.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên đơn vị Paradeus. Nếu mục tiêu có Đóng Băng, tăng thêm 2.5%.</span></span></a>",
+          "SSR",
+          "Lựa chọn thay thế tốt nhất: Bỏ qua 10% DEF của mục tiêu, cộng thêm 10% xuyên giáp nếu kẻ địch dính debuff Băng (phù hợp khi kẹp Loreley V2 đi cùng team băng)."
+        ],
+        [
+          "<br><a class=\"guide-inline-ref guide-inline-weapon\" href=\"../weapons/samosek.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/weapons/Samosek.png\" alt=\"Samosek\" loading=\"lazy\">Samosek<span class=\"guide-weapon-popover\"><img class=\"guide-weapon-popover-image\" src=\"../assets/images/weapons/Samosek.png\" loading=\"lazy\"><span class=\"guide-weapon-popover-name\">Samosek</span><span class=\"guide-weapon-popover-desc\">Sát thương giai đoạn tăng 10%/12%/14%/16%/18%/20%. ST Dẫn Điện tăng thêm 10%/12%/14%/16%/18%/20%.\n\nKỹ Năng Khắc Ấn: Tăng 2.5% sát thương gây ra lên PMC. Nếu mục tiêu có Tê Liệt, tăng thêm 2.5%.</span></span></a>",
+          "SSR",
+          "Lựa chọn F2P tốt nhất: Bỏ qua 1 điểm Stability của địch; cộng thêm 1 điểm khi có buff Insight (Loreley duy trì Insight liên tục từ Chiêu 1). Tăng sát thương dị vị."
+        ],
+        [
+          "Súng SR tím bất kỳ",
+          "SR",
+          "Lựa chọn ngân sách đầu game, hoặc thiếu vũ khí SSR, giúp Loreley có đủ chỉ số cơ bản. Tuy ST giảm nhẹ nhưng bộ kỹ năng hỗ trợ vẫn vận hành hoàn chỉnh."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Phụ kiện & Chỉ số (Attachments)"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Thứ tự ưu tiên dòng phụ:</b> <code>ATK% &gt; Flat ATK &gt; CRIT Rate &gt; CRIT DMG</code><br><b>Chỉ số mục tiêu (Endgame):</b> ATK: <b>4,200+</b> | CRIT Rate: <b>100%</b> | CRIT DMG: <b>135%+</b>"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bộ phụ kiện",
+        "Hiệu ứng set",
+        "Ghi chú"
+      ],
+      "rows": [
+        [
+          "Tăng Cường Nhiệt - Burn Boost<p><br></p>",
+          "Tăng 20% sát thương hệ Burn.",
+          "Bộ trang bị tối ưu nhất (BiS) cho Loreley trong đội hình thuần Hỏa."
+        ],
+        [
+          "Đả Kích Dị Vị - Phase Strike",
+          "Tăng sát thương thuộc tính nguyên tố.",
+          "Lựa chọn đa dụng dễ farm, dùng tốt khi linh hoạt đổi nhiều đội hình khác nhau."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Khóa Cố Định (Fixed Keys)"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Khóa",
+        "Tên Khóa",
+        "Hiệu ứng",
+        "Vai trò"
+      ],
+      "rows": [
+        [
+          "1",
+          "Hidden Passion",
+          "Bắt đầu trận nhận ngay 1 điểm Confectance và 10 tầng Searing Flame.",
+          "BẮT BUỘC: Giúp sạc Ult và tích tầng Tàn Lửa Rực Cháy cực nhanh ngay từ hiệp 1."
+        ],
+        [
+          "3",
+          "Intertwined Dreams",
+          "Khi robot Hunter Type-II trên sân, toàn đội tăng 7% sát thương Burn.",
+          "Buff sát thương ổn định, duy trì gần như 100% suốt trận đấu."
+        ],
+        [
+          "4",
+          "The Gentleness of an Angel",
+          "Xóa 1 hiệu ứng có lợi (Buff) của mục tiêu trước khi tung đòn tấn công chủ động.",
+          "Rất mạnh khi đối đầu Boss có khiên giáp, né tránh hoặc tăng công."
+        ],
+        [
+          "2 (Thay thế)",
+          "Pain Threshold",
+          "Kỹ năng thụ động Pyro Pulse từ robot gây thêm trạng thái Overburn cho mục tiêu trong 1 hiệp.",
+          "Dùng thay thế FK4 nếu đội hình thiếu nguồn kích hoạt Overburn."
+        ],
+        [
+          "5 (Tình huống)",
+          "The Stride of a Devil",
+          "Nhận hiệu ứng Tăng 3 ô Di chuyển (Movement Up III) khi bắt đầu trận.",
+          "Dùng trong các bản đồ rộng cần tiếp cận mục tiêu nhanh."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Khóa Chung & Khóa Hảo Cảm (Common & Affinity Keys)"
+    },
+    {
+      "type": "paragraph",
+      "html": "• <b>Khóa Chung (Common Key)</b>: Tiếng Thở Dài Thỏa Mãn(Khóa riêng của Loreley): Tăng 5% ATK; khi có buff Burn tăng thêm 10% CRIT Rate. Ngoài ra có thể tận dụng khóa chung của Ksenia, Sharkry hoặc Littara.<br>• <b>Khóa Hảo Cảm (Affinity Key)</b>: Chưa Giao Ước: <b>+3% ATK / HP / CRIT</b>; Đã&nbsp;&nbsp;Giao Ước: <b>+5% ATK / HP / CRIT</b>."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Dữ liệu Tái Định Hình & Lõi :"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Chỉ số chính 6 vị trí hoa:</b><br>• <b>2x Hiệp Lực Tấn Công(Lv6)</b>: +1% ATK toàn đội mỗi vị trí.<br>• <b>2x Chiến Ý Sục Sôi (Lv6)</b>: +1.8% ATK và HP cá nhân.<br>• <b>1x Cường Hóa Tấn Công (Lv6)</b>: +3.6% ATK cá nhân.<br>• <b>1x Annular Defense / Flex</b>: Đáp ứng điều kiện kích hoạt Imagoform nhánh thủ."
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Ưu tiên dòng phụ (Substats):</b> <code>Cộng Hưởng Phong Huyết Lv5 &gt; Cường Hóa Thiêu Đốt / Trọng Kích Thiêu Đốt &gt; Truy Kích Phá Ổn Định &gt; Hiệp Lực Thiêu Đốt</code>."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Chu kỳ Kỹ năng (Rotation)"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Lưu ý thứ tự hành động:</b> Loreley luôn cần đi lượt <b>đầu tiên</b> trong đội hình để tạo địa hình Thiêu đốt, dựng robot Hunter Type-II cấp buff ATK và tích tầng trước khi các DPS xả sát thương."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mốc Đột Phá",
+        "Vòng lặp kỹ năng (Rotation)",
+        "Chi tiết vận hành"
+      ],
+      "rows": [
+        [
+          "V0 - V1",
+          "Hiệp 1:&nbsp;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Ân Điển Đau Đớn: Chọn 1 ô địa hình trống trong &lt;color=#f26c1c&gt;phạm vi 5 ô xung quanh&lt;/color&gt;, gây ST Thiêu Đốt AoE bằng &lt;color=#f26c1c&gt;90%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 3 ô xung quanh&lt;/color&gt; ô địa hình đó, đồng thời tạo ra ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt; và triệu hồi &lt;color=#3487e0&gt;Thợ Săn-II&lt;/color&gt; trong phạm vi đó. Nếu có &lt;color=#3487e0&gt;Thợ Săn-II&lt;/color&gt; tồn tại, triệu hồi lại ở vị trí mới. Áp dụng &lt;color=#3487e0&gt;Điệp Vũ Cộng Sinh&lt;/color&gt; cho bản thân và Doll dồng minh gần nhất và hủy bỏ hiệu ứng &lt;color=#3487e0&gt;Dẫn Dụ&lt;/color&gt; cho tất cả đơn vị đồng minh.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/ult-icon.png\" alt=\"Ân Điển Đau Đớn\" loading=\"lazy\">Ân Điển Đau Đớn</span>&nbsp;-&gt;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tuyên Cáo Trói Buộc: Chọn tất cả mục tiêu địch trong &lt;color=#f26c1c&gt;4 ô xung quanh&lt;/color&gt; gây ST bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công loại ST Thiêu Đốt, lượng ST này do tất cả mục tiêu trong phạm vi chia sẻ. Nếu bản thân có &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt;, lượng ST không san sẻ và tạo ra ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill3-icon.png\" alt=\"Tuyên Cáo Trói Buộc\" loading=\"lazy\">Tuyên Cáo Trói Buộc</span>&nbsp;<br>Hiệp 2:&nbsp;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Vết Sẹo Rực Cháy: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 9 ô xung quanh&lt;/color&gt;, gây ST Thiêu Đốt bằng &lt;color=#f26c1c&gt;130%&lt;/color&gt; Tấn Công. Nếu bản thân có &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt; hệ số ST nhân đôi, đồng thời nhận &lt;color=#3487e0&gt;Nhìn Thấu&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;2 hiệp&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill2-icon.png\" alt=\"Vết Sẹo Rực Cháy\" loading=\"lazy\">Vết Sẹo Rực Cháy</span>&nbsp;-&gt;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Khúc Dạo Đầu Trừng Phạt: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 7 ô xung quanh&lt;/color&gt;, gây ST Vật Lý bằng &lt;color=#f26c1c&gt;80%&lt;/color&gt; Tấn Công.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill1-icon.png\" alt=\"Khúc Dạo Đầu Trừng Phạt\" loading=\"lazy\">Khúc Dạo Đầu Trừng Phạt</span>&nbsp;<br>Hiệp 3:&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tuyên Cáo Trói Buộc: Chọn tất cả mục tiêu địch trong &lt;color=#f26c1c&gt;4 ô xung quanh&lt;/color&gt; gây ST bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công loại ST Thiêu Đốt, lượng ST này do tất cả mục tiêu trong phạm vi chia sẻ. Nếu bản thân có &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt;, lượng ST không san sẻ và tạo ra ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill3-icon.png\" alt=\"Tuyên Cáo Trói Buộc\" loading=\"lazy\">Tuyên Cáo Trói Buộc</span>&nbsp; -&gt; <span class=\"guide-inline-ref guide-inline-skill\" title=\"Khúc Dạo Đầu Trừng Phạt: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 7 ô xung quanh&lt;/color&gt;, gây ST Vật Lý bằng &lt;color=#f26c1c&gt;80%&lt;/color&gt; Tấn Công.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill1-icon.png\" alt=\"Khúc Dạo Đầu Trừng Phạt\" loading=\"lazy\">Khúc Dạo Đầu Trừng Phạt</span>&nbsp;<p>-&gt; Lặp lại.</p>",
+          "Nội tại hồi 2 Confectance/hiệp nên Ult xoay tua sau mỗi 3 hiệp. Sử dụng đòn đánh thường xen kẽ kích bắn support."
+        ],
+        [
+          "V2 trở lên",
+          "Hiệp 1:&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Ân Điển Đau Đớn: Chọn 1 ô địa hình trống trong &lt;color=#f26c1c&gt;phạm vi 5 ô xung quanh&lt;/color&gt;, gây ST Thiêu Đốt AoE bằng &lt;color=#f26c1c&gt;90%&lt;/color&gt; Tấn Công lên tất cả mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 3 ô xung quanh&lt;/color&gt; ô địa hình đó, đồng thời tạo ra ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt; và triệu hồi &lt;color=#3487e0&gt;Thợ Săn-II&lt;/color&gt; trong phạm vi đó. Nếu có &lt;color=#3487e0&gt;Thợ Săn-II&lt;/color&gt; tồn tại, triệu hồi lại ở vị trí mới. Áp dụng &lt;color=#3487e0&gt;Điệp Vũ Cộng Sinh&lt;/color&gt; cho bản thân và Doll dồng minh gần nhất và hủy bỏ hiệu ứng &lt;color=#3487e0&gt;Dẫn Dụ&lt;/color&gt; cho tất cả đơn vị đồng minh.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/ult-icon.png\" alt=\"Ân Điển Đau Đớn\" loading=\"lazy\">Ân Điển Đau Đớn</span>&nbsp; -&gt;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Tuyên Cáo Trói Buộc: Chọn tất cả mục tiêu địch trong &lt;color=#f26c1c&gt;4 ô xung quanh&lt;/color&gt; gây ST bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công loại ST Thiêu Đốt, lượng ST này do tất cả mục tiêu trong phạm vi chia sẻ. Nếu bản thân có &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt;, lượng ST không san sẻ và tạo ra ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill3-icon.png\" alt=\"Tuyên Cáo Trói Buộc\" loading=\"lazy\">Tuyên Cáo Trói Buộc</span>&nbsp;<br>Hiệp 2, 3: <span class=\"guide-inline-ref guide-inline-skill\" title=\"Tuyên Cáo Trói Buộc: Chọn tất cả mục tiêu địch trong &lt;color=#f26c1c&gt;4 ô xung quanh&lt;/color&gt; gây ST bằng &lt;color=#f26c1c&gt;120%&lt;/color&gt; Tấn Công loại ST Thiêu Đốt, lượng ST này do tất cả mục tiêu trong phạm vi chia sẻ. Nếu bản thân có &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt;, lượng ST không san sẻ và tạo ra ô địa hình &lt;color=#3487e0&gt;Thiêu Rụi&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;3 hiệp&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill3-icon.png\" alt=\"Tuyên Cáo Trói Buộc\" loading=\"lazy\">Tuyên Cáo Trói Buộc</span>&nbsp;-&gt;&nbsp;<span class=\"guide-inline-ref guide-inline-skill\" title=\"Vết Sẹo Rực Cháy: Chọn 1 mục tiêu địch &lt;color=#f26c1c&gt;trong phạm vi 9 ô xung quanh&lt;/color&gt;, gây ST Thiêu Đốt bằng &lt;color=#f26c1c&gt;130%&lt;/color&gt; Tấn Công. Nếu bản thân có &lt;color=#3487e0&gt;Tàn Tro Lửa Rực&lt;/color&gt; hệ số ST nhân đôi, đồng thời nhận &lt;color=#3487e0&gt;Nhìn Thấu&lt;/color&gt;, duy trì &lt;color=#f26c1c&gt;2 hiệp&lt;/color&gt;.\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/skill2-icon.png\" alt=\"Vết Sẹo Rực Cháy\" loading=\"lazy\">Vết Sẹo Rực Cháy</span>&nbsp;<br>-&gt;Lặp lại.",
+          "Extra Action ở V2 tính là 1 hiệp mới giúp hồi ngay 1 lượt cooldown. Không cần dùng đánh thường nữa, xả kỹ năng liên tục."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Đội hình đề xuất (Team Compositions)"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>1. Đội hình Thuần Hỏa:</b><p></p><ul><li>Hiện tại:&nbsp;</li></ul><a class=\"guide-inline-ref guide-inline-character\" title=\"Lewis\" href=\"../characters/lewis.html\" target=\"_blank\" rel=\"noopener\"></a><a class=\"guide-inline-ref guide-inline-character\" title=\"Loreley\" href=\"../characters/loreley.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/avatar.png\" alt=\"Loreley\" loading=\"lazy\">Loreley</a><span>+<a class=\"guide-inline-ref guide-inline-character\" title=\"Lewis\" href=\"../characters/lewis.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/lewis/avatar.png\" alt=\"Lewis\" loading=\"lazy\">Lewis</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Vector\" href=\"../characters/vector.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/vector/avatar.png\" alt=\"Vector\" loading=\"lazy\">Vector</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Qiuhua\" href=\"../characters/qiuhua.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/qiuhua/avatar.png\" alt=\"Qiuhua\" loading=\"lazy\">Qiuhua</a>&nbsp;+ <a class=\"guide-inline-ref guide-inline-character\" title=\"Qiongjiu\" href=\"../characters/qiongjiu.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/qiongjiu/avatar.png\" alt=\"Qiongjiu\" loading=\"lazy\">Qiongjiu</a>&nbsp;/<a class=\"guide-inline-ref guide-inline-character\" title=\"Sakura\" href=\"../characters/sakura.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/sakura/avatar.png\" alt=\"Sakura\" loading=\"lazy\">Sakura</a>.</span><p></p><p></p><ul><li><span>Tương Lai:</span></li></ul><a class=\"guide-inline-ref guide-inline-character\" title=\"Loreley\" href=\"../characters/loreley.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/avatar.png\" alt=\"Loreley\" loading=\"lazy\">Loreley</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Cecilia\" href=\"../characters/cecilia.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/cecilia/avatar.png\" alt=\"Cecilia\" loading=\"lazy\">Cecilia</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Centaureissi\" href=\"../characters/centaureissi.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/centaureissi/avatar.png\" alt=\"Centaureissi\" loading=\"lazy\">Centaureissi</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Lewis\" href=\"../characters/lewis.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/lewis/avatar.png\" alt=\"Lewis\" loading=\"lazy\">Lewis</a>&nbsp;/<a class=\"guide-inline-ref guide-inline-character\" title=\"Qiongjiu\" href=\"../characters/qiongjiu.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/qiongjiu/avatar.png\" alt=\"Qiongjiu\" loading=\"lazy\">Qiongjiu</a>&nbsp;/<a class=\"guide-inline-ref guide-inline-character\" title=\"Asteria\" href=\"../characters/asteria.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/asteria/avatar.png\" alt=\"Asteria\" loading=\"lazy\">Asteria</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Vector\" href=\"../characters/vector.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/vector/avatar.png\" alt=\"Vector\" loading=\"lazy\">Vector</a>&nbsp;/<a class=\"guide-inline-ref guide-inline-character\" title=\"OTs-14\" href=\"../characters/ots-14.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/ots-14/avatar.png\" alt=\"OTs-14\" loading=\"lazy\">OTs-14</a>&nbsp;<br><p></p>"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>2. Đội hình Lai Thủy - Hỏa:</b><br><a class=\"guide-inline-ref guide-inline-character\" title=\"Loreley\" href=\"../characters/loreley.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/avatar.png\" alt=\"Loreley\" loading=\"lazy\">Loreley</a>&nbsp;&nbsp;V2 +&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Lewis\" href=\"../characters/lewis.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/lewis/avatar.png\" alt=\"Lewis\" loading=\"lazy\">Lewis</a>&nbsp; V2 + <a class=\"guide-inline-ref guide-inline-character\" title=\"Springfield\" href=\"../characters/springfield.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/springfield/avatar.png\" alt=\"Springfield\" loading=\"lazy\">Springfield</a>&nbsp; + <a class=\"guide-inline-ref guide-inline-character\" title=\"Tololo\" href=\"../characters/tololo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/tololo/avatar.png\" alt=\"Tololo\" loading=\"lazy\">Tololo</a>&nbsp;V4 / <a class=\"guide-inline-ref guide-inline-character\" title=\"Liushih\" href=\"../characters/liushih.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/liushih/avatar.png\" alt=\"Liushih\" loading=\"lazy\">Liushih</a>&nbsp;+ <a class=\"guide-inline-ref guide-inline-character\" title=\"Nikketa\" href=\"../characters/nikketa.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/nikketa/avatar.png\" alt=\"Nikketa\" loading=\"lazy\">Nikketa</a>&nbsp;.<br>"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>3. Đội hình Băng:</b><p></p><ul><li>Hiện tại:</li></ul><a class=\"guide-inline-ref guide-inline-character\" title=\"Loreley\" href=\"../characters/loreley.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/avatar.png\" alt=\"Loreley\" loading=\"lazy\">Loreley</a>&nbsp;&nbsp;V2 +&nbsp;<a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><br></a><a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Robella\" href=\"../characters/robella.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/robella/avatar.png\" alt=\"Robella\" loading=\"lazy\">Robella</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Alva\" href=\"../characters/alva.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/avatar.png\" alt=\"Alva\" loading=\"lazy\">Alva</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Dushevnaya\" href=\"../characters/dushevnaya.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/dushevnaya/avatar.png\" alt=\"Dushevnaya\" loading=\"lazy\">Dushevnaya</a>&nbsp;<p></p><p></p><ul><li>Tương lai:</li></ul><a class=\"guide-inline-ref guide-inline-character\" title=\"Loreley\" href=\"../characters/loreley.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/loreley/avatar.png\" alt=\"Loreley\" loading=\"lazy\">Loreley</a>&nbsp;V2 +<a class=\"guide-inline-ref guide-inline-character\" title=\"Soppo\" href=\"../characters/soppo.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/soppo/avatar.png\" alt=\"Soppo\" loading=\"lazy\">Soppo</a>&nbsp;/<a class=\"guide-inline-ref guide-inline-character\" title=\"Asteria\" href=\"../characters/asteria.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/asteria/avatar.png\" alt=\"Asteria\" loading=\"lazy\">Asteria</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Eagletta\" href=\"../characters/eagletta.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/eagletta/avatar.png\" alt=\"Eagletta\" loading=\"lazy\">Eagletta</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"Alva\" href=\"../characters/alva.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/alva/avatar.png\" alt=\"Alva\" loading=\"lazy\">Alva</a>&nbsp;+<a class=\"guide-inline-ref guide-inline-character\" title=\"OTs-14\" href=\"../characters/ots-14.html\" target=\"_blank\" rel=\"noopener\"><img class=\"guide-inline-icon\" src=\"../assets/images/characters/ots-14/avatar.png\" alt=\"OTs-14\" loading=\"lazy\">OTs-14</a>&nbsp;<br><p></p>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tổng kết & Lời khuyên Gacha (Verdict)"
+    },
+    {
+      "type": "paragraph",
+      "html": "• <b>Có nên roll không?:</b> <b>NÊN ROLL</b>. Loreley là mảnh ghép không thể thiếu của hệ Hỏa và là một trong những hỗ trợ toàn diện nhất game.<br>• <b>F2P / Thẻ tháng:</b> Dừng ở <b>V0</b> là đã đủ để gánh toàn bộ content team lửa, <b>V2R0 </b>nếu có thể.<br>• <b>Đua&nbsp;Meta:</b>&nbsp;<b>V2</b>&nbsp;kèm Trấn. <b>V6</b> tăng dmg với Whale."
+    }
+  ]
+}

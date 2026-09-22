@@ -24,7 +24,7 @@
   <span style="color: var(--text-primary);" data-weapon-name="{{ weapon.name }}">{{ weapon.name }}</span>
 </nav>
 
-<section class="char-header" data-weapon-slug="{{ weapon.slug }}" style="grid-template-columns: 320px 1fr;">
+<section class="char-header" data-weapon-slug="{{ weapon.slug }}" >
   <div class="weapon-img-box" style="height: 260px; background:rgba(0,0,0,0.3); border-radius:var(--radius-md);">
     <img src="{{ rel_prefix }}{{ weapon.images.weapon }}"
          alt="{{ weapon.name }}"
@@ -36,9 +36,15 @@
   <div class="char-main-info">
     <div>
       <div class="char-tags-row">
-        <span class="badge badge-{{ weapon.rarity|lower }}" data-weapon-rarity="{{ weapon.rarity }}">{{ weapon.rarity }}</span>
-        <span class="badge badge-class" data-weapon-type="{{ weapon.weapon_type }}">{{ weapon.weapon_type }}</span>
-        <span class="badge badge-server badge-server-{{ (weapon.server or 'global')|lower }}" data-weapon-server="{{ (weapon.server or 'global')|lower }}">{{ 'CN' if (weapon.server or 'global')|lower == 'cn' else 'Global' }}</span>
+        <span class="badge badge-fixed badge-{{ weapon.rarity|lower }}" data-weapon-rarity="{{ weapon.rarity }}">
+          <span>{{ weapon.rarity }}</span>
+        </span>
+        <span class="badge badge-fixed badge-class" data-weapon-type="{{ weapon.weapon_type }}">
+          <span>{{ weapon.weapon_type }}</span>
+        </span>
+        <a href="{{ rel_prefix }}weapons/index.html?server={{ (weapon.server or 'global')|lower }}" class="badge badge-fixed badge-server badge-server-{{ (weapon.server or 'global')|lower }}" data-weapon-server="{{ (weapon.server or 'global')|lower }}">
+          <span>{{ 'CN' if (weapon.server or 'global')|lower == 'cn' else 'Global' }}</span>
+        </a>
       </div>
 
       <h1 class="char-name-heading" data-weapon-name="{{ weapon.name }}">{{ weapon.name }}</h1>
@@ -70,7 +76,7 @@
     <h2 style="font-size:1.15rem; font-weight:700; color:var(--text-primary); margin-bottom:0.75rem; display:flex; align-items:center; gap:0.5rem;">
       <span style="color:var(--accent-cyan)">◈</span> <span data-i18n="weapon_trait_title">Weapon Trait</span>
     </h2>
-    <div class="weapon-trait-desc" style="font-size:0.95rem; color:#cbd5e1; line-height:1.6; white-space:pre-line;">
+    <div class="weapon-trait-desc" style="font-size:1rem; color:#cbd5e1; line-height:1.6; white-space:pre-line;">
       {{ weapon.trait | render_effects }}
     </div>
   </div>
@@ -81,7 +87,7 @@
     <h2 style="font-size:1.15rem; font-weight:700; color:var(--text-primary); margin-bottom:0.75rem; display:flex; align-items:center; gap:0.5rem;">
       <span style="color:var(--accent-cyan)">◈</span> <span data-i18n="weapon_effect_title">Imprint / Passive Effect</span>
     </h2>
-    <div class="weapon-effect-desc" style="font-size:0.95rem; color:#cbd5e1; line-height:1.6; white-space:pre-line;">
+    <div class="weapon-effect-desc" style="font-size:1rem; color:#cbd5e1; line-height:1.6; white-space:pre-line;">
       {{ weapon.effect | render_effects }}
     </div>
   </div>

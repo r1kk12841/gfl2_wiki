@@ -25,7 +25,7 @@
 </nav>
 
 <!-- Doll Header Card -->
-<section class="char-header" data-char-slug="{{ doll.slug }}">
+<section class="char-header" data-char-slug="{{ doll.slug }}" data-rarity="{{ doll.rarity|lower }}">
   <div class="char-portrait-box">
     <picture>
       {% if doll.images and doll.images.portrait_webp %}
@@ -42,24 +42,30 @@
 
   <div class="char-main-info">
     <div class="char-title-row">
-      <div class="char-tags-row">
-        <span class="badge badge-{{ doll.rarity|lower }}" data-doll-rarity="{{ doll.rarity }}">{{ doll.rarity }}</span>
-        <span class="badge badge-class" data-doll-class="{{ doll.class }}">
-          <img src="{{ rel_prefix }}assets/images/class/{{ doll.class }}.png" alt="" style="width:14px; height:14px; display:inline-block; vertical-align:middle; margin-right:4px;">
-          <span>{{ doll.class }}</span>
-        </span>
-        <span class="badge" data-doll-phase="{{ doll.phase }}" style="background:rgba(255,255,255,0.06); color:var(--text-primary);">
-          <img src="{{ rel_prefix }}assets/images/phase/{{ doll.phase }}.png" alt="" style="width:14px; height:14px; display:inline-block; vertical-align:middle; margin-right:4px;" onerror="this.style.display='none';">
-          <span>{{ doll.phase }}</span>
-        </span>
-        <span class="badge badge-server badge-server-{{ (doll.server or 'global')|lower }}" data-doll-server="{{ (doll.server or 'global')|lower }}">{{ 'CN' if (doll.server or 'global')|lower == 'cn' else 'Global' }}</span>
-      </div>
-
+      <!-- Avatar + name first -->
       <div style="display:flex; align-items:center; gap:0.9rem;">
         {% if doll.images and doll.images.avatar %}
         <img src="{{ rel_prefix }}{{ doll.images.avatar }}" alt="{{ doll.name }}" class="char-avatar-img" onerror="this.style.display='none';">
         {% endif %}
         <h1 class="char-name-heading" style="margin:0;">{{ doll.name }}</h1>
+      </div>
+
+      <!-- Larger tags below name, right above stats grid -->
+      <div class="char-tags-row">
+        <span class="badge badge-fixed badge-{{ doll.rarity|lower }}" data-doll-rarity="{{ doll.rarity }}">
+          <span>{{ doll.rarity }}</span>
+        </span>
+        <span class="badge badge-fixed badge-class" data-doll-class="{{ doll.class }}">
+          <img src="{{ rel_prefix }}assets/images/class/{{ doll.class }}.png" alt="" class="badge-icon" width="24" height="24">
+          <span>{{ doll.class }}</span>
+        </span>
+        <span class="badge badge-fixed badge-phase" data-doll-phase="{{ doll.phase }}">
+          <img src="{{ rel_prefix }}assets/images/phase/{{ doll.phase }}.png" alt="" class="badge-icon" width="24" height="24" onerror="this.style.display='none';">
+          <span>{{ doll.phase }}</span>
+        </span>
+        <a href="{{ rel_prefix }}characters/index.html?server={{ (doll.server or 'global')|lower }}" class="badge badge-fixed badge-server badge-server-{{ (doll.server or 'global')|lower }}" data-doll-server="{{ (doll.server or 'global')|lower }}">
+          <span>{{ 'CN' if (doll.server or 'global')|lower == 'cn' else 'Global' }}</span>
+        </a>
       </div>
     </div>
 
@@ -89,7 +95,12 @@
       </div>
       <div class="stat-box">
         <span class="stat-box-label" data-i18n="stat_weakness">Weakness</span>
-        <span class="stat-box-val" data-doll-weakness="{{ doll.weakness }}" style="font-size:1rem; color:var(--phase-burn);">{{ doll.weakness or '-' }}</span>
+        <div class="stat-box-val stat-box-ammo" data-doll-weakness="{{ doll.weakness }}" style="color:var(--phase-burn);">
+          {% if doll.weakness %}
+          <img src="{{ rel_prefix }}assets/images/phase/{{ doll.weakness }}.png" alt="{{ doll.weakness }}" class="ammo-type-icon" onerror="this.style.display='none';">
+          {% endif %}
+          <span>{{ doll.weakness or '-' }}</span>
+        </div>
       </div>
       <div class="stat-box">
         <span class="stat-box-label" data-i18n="stat_weapon_type">Weapon Type</span>
@@ -110,16 +121,19 @@
       </div>
       {% endif %}
       {% if doll.signature_weapon %}
-      <div class="stat-box">
+      <div class="stat-box stat-box-sig-full">
         <span class="stat-box-label" data-i18n="stat_signature_weapon">Signature Weapon</span>
-        <div class="stat-box-val stat-box-sig">
+        <div class="stat-sig-val-row">
           <a href="{{ rel_prefix }}weapons/index.html#{{ doll.signature_weapon|lower|replace(' ', '-') }}" class="sig-weapon-link">
             <span data-doll-sigweapon="{{ doll.signature_weapon }}">{{ doll.signature_weapon }}</span>
+            {% if doll.sig_weapon_image %}
+            <img src="{{ rel_prefix }}{{ doll.sig_weapon_image }}" alt="{{ doll.signature_weapon }}" class="sig-weapon-thumb" onerror="this.style.display='none';">
+            {% endif %}
           </a>
         </div>
       </div>
       {% else %}
-      <div class="stat-box">
+      <div class="stat-box stat-box-sig-full">
         <span class="stat-box-label" data-i18n="stat_signature_weapon">Signature Weapon</span>
         <span class="stat-box-val">-</span>
       </div>
@@ -128,9 +142,24 @@
   </div>
 </section>
 
+<!-- Navigation Tabs -->
+<div class="char-tabs-nav" role="tablist">
+  <button type="button" class="char-tab-btn active" data-tab="info" role="tab" aria-selected="true" data-i18n="tab_info">Information</button>
+  <button type="button" class="char-tab-btn" data-tab="guide" role="tab" aria-selected="false" data-i18n="tab_guide">Guide</button>
+</div>
+
+<!-- Tab: Information -->
+<div id="tab-pane-info" class="char-tab-pane active" role="tabpanel">
+
+<nav class="section-links" aria-label="Character sections">
+  <a href="#skills" data-i18n="skills_section_title">Combat Skills</a>
+  {% if doll.summons %}<a href="#summons" data-i18n="summons_section_title">Entity Summons</a>{% endif %}
+  {% if doll.fortification %}<a href="#fortifications" data-i18n="skill_fort_tier">Fortification</a>{% endif %}
+  {% if doll['keys'] %}<a href="#helix-keys" data-i18n="keys_section_title">Helix Keys</a>{% endif %}
+</nav>
 <!-- Skills Section -->
 <section style="margin-bottom: 3rem;">
-  <h2 class="detail-section-title" data-i18n="skills_section_title">Combat Skills</h2>
+  <h2 id="skills" class="detail-section-title" data-i18n="skills_section_title">Combat Skills</h2>
   <div class="skills-grid">
     {% for skill in doll.skills %}
     <div class="skill-card" data-skill-idx="{{ loop.index0 }}">
@@ -172,7 +201,24 @@
           {% endif %}
         </div>
 
+        {% if skill.level_upgrades %}
+        <div class="skill-base-level">Lv.1 · <span data-i18n="skill_base_level">Base skill</span></div>
+        {% endif %}
         <div class="skill-desc" data-skill-desc="{{ loop.index0 }}">{{ skill.description | render_effects }}</div>
+        {% if skill.level_upgrades %}
+        <div class="skill-levels">
+          <p class="skill-level-note" data-i18n="skill_upgrade_note">Changes from fortification; read alongside the base skill and earlier upgrades.</p>
+          {% for upgrade in skill.level_upgrades %}
+          <details class="skill-level-preview">
+            <summary>Lv.{{ upgrade.level }} <span>· <span data-i18n="skill_fort_tier">Fortification</span> {{ upgrade.tier }}</span></summary>
+            <div class="skill-upgrade-body">
+              <div class="skill-desc" data-upgrade-tier="{{ upgrade.tier }}">{{ upgrade.effect | render_effects }}</div>
+              <a class="skill-upgrade-source" href="#fortification-{{ upgrade.tier }}"><span data-i18n="skill_upgrade_source">View fortification</span> {{ upgrade.tier }}</a>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
 
       {% if skill.range_image %}
@@ -188,7 +234,7 @@
 <!-- Summons Section (if present) -->
 {% if doll.summons %}
 <section style="margin-bottom: 3rem;">
-  <h2 class="detail-section-title" data-i18n="summons_section_title">Entity Summons</h2>
+  <h2 id="summons" class="detail-section-title" data-i18n="summons_section_title">Entity Summons</h2>
   <div class="skills-grid">
     {% for summon in doll.summons %}
     <div class="skill-card" data-summon-card="{{ loop.index0 }}" style="border-left: 3px solid var(--accent-cyan);">
@@ -205,7 +251,7 @@
       </div>
 
       {% if summon.description %}
-      <div class="skill-desc summon-desc" data-summon-desc style="margin: 0.6rem 0; font-size: 0.92rem;">
+      <div class="skill-desc summon-desc" data-summon-desc style="margin: 0.6rem 0; font-size: 1rem;">
         {{ summon.description | render_effects }}
       </div>
       {% endif %}
@@ -258,7 +304,7 @@
             <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.35rem;">
               <strong style="color:var(--text-primary); font-size:1rem;" data-summon-skill-name>{{ s_skill.name }}</strong>
             </div>
-            <div class="skill-desc" style="font-size:0.88rem;" data-summon-skill-desc>{{ s_skill.description | render_effects }}</div>
+            <div class="skill-desc" style="font-size:1rem;" data-summon-skill-desc>{{ s_skill.description | render_effects }}</div>
           </div>
           {% if s_skill.range_image %}
           <div class="skill-range-preview summon-skill-range-preview" title="Range Pattern">
@@ -278,22 +324,29 @@
 <!-- Fortification (Vertebrae Upgrade) -->
 {% if doll.fortification %}
 <section style="margin-bottom: 3rem;">
-  <h2 class="detail-section-title" data-i18n="fortifications_section_title">Fortification (Vertebrae Upgrades)</h2>
+  <h2 id="fortifications" class="detail-section-title" data-i18n="fortifications_section_title">Fortification (Vertebrae Upgrades)</h2>
   <div class="table-wrapper">
     <table class="data-table">
       <thead>
         <tr>
-          <th style="width: 80px;">Tier</th>
-          <th style="width: 220px;">Target Skill</th>
-          <th style="width: 100px;">Level</th>
-          <th>Upgrade Effect</th>
+          <th style="width: 80px;" data-i18n="table_tier">Tier</th>
+          <th style="width: 250px;" data-i18n="table_skill">Target Skill</th>
+          <th style="width: 100px;" data-i18n="table_level">Level</th>
+          <th data-i18n="table_upgrade">Upgrade Effect</th>
         </tr>
       </thead>
       <tbody>
         {% for fort in doll.fortification %}
-        <tr data-fort-tier="{{ fort.tier }}">
-          <td><strong style="color:var(--accent-cyan)">Tier {{ fort.tier }}</strong></td>
-          <td><strong data-fort-skill="{{ fort.tier }}">{{ fort.skill }}</strong></td>
+        <tr id="fortification-{{ fort.tier }}" data-fort-tier="{{ fort.tier }}">
+          <td><strong style="color:var(--accent-cyan)"><span data-i18n="table_tier">Tier</span> {{ fort.tier }}</strong></td>
+          <td>
+            <div style="display:flex; align-items:center; gap:0.65rem;">
+              {% if fort.skill_icon %}
+              <img src="{{ rel_prefix }}{{ fort.skill_icon }}" alt="" class="skill-icon-img fort-skill-icon" style="width:30px; height:30px; border-radius:4px; object-fit:contain; flex-shrink:0; background:rgba(0,0,0,0.25);" onerror="this.style.display='none';">
+              {% endif %}
+              <strong data-fort-skill="{{ fort.tier }}">{{ fort.skill }}</strong>
+            </div>
+          </td>
           <td>{{ fort.level if fort.level is not none else '-' }}</td>
           <td style="line-height:1.5;" data-fort-effect="{{ fort.tier }}">{{ fort.effect | render_effects }}</td>
         </tr>
@@ -304,54 +357,17 @@
 </section>
 {% endif %}
 
-<!-- Neural Helix & Keys -->
-{% if doll.neural_helix or doll['keys'] %}
+<!-- Neural Helix Keys -->
+{% if doll['keys'] %}
 <section style="margin-bottom: 3rem;">
-  <h2 class="detail-section-title" data-i18n="neural_helix_section_title">Neural Helix &amp; Keys</h2>
-
-  {% if doll.neural_helix %}
-  <h3 style="font-size:1.05rem; font-weight:700; margin-bottom:0.75rem; color:var(--text-secondary);" data-i18n="helix_stats_subtitle">Stat Enhancements</h3>
+  <h2 id="helix-keys" class="detail-section-title" data-i18n="keys_section_title">Helix Keys</h2>
   <div class="table-wrapper">
     <table class="data-table">
       <thead>
         <tr>
-          <th style="width: 180px;">Node</th>
-          <th style="width: 100px;">Req. Level</th>
-          <th>Stat Enhancement</th>
-          <th style="width: 200px;">Materials</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for node in doll.neural_helix %}
-        <tr data-helix-idx="{{ loop.index0 }}">
-          <td>
-            <div style="display:flex; align-items:center; gap:0.75rem;">
-              {% if node.image %}
-              <img src="{{ rel_prefix }}{{ node.image }}" alt="" class="node-icon-img" onerror="this.style.display='none';">
-              {% endif %}
-              <strong data-helix-node="{{ loop.index0 }}">{{ node.node }}</strong>
-            </div>
-          </td>
-          <td>Lv. {{ node.level if node.level is not none else '-' }}</td>
-          <td style="white-space:pre-line;" data-helix-effect="{{ loop.index0 }}">{{ node.effect | render_effects }}</td>
-          <td style="font-size:0.8rem; color:var(--text-muted); white-space:pre-line;">{{ node.materials or '-' }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
-  {% endif %}
-
-  {% if doll['keys'] %}
-  <h3 style="font-size:1.05rem; font-weight:700; margin:1.5rem 0 0.75rem; color:var(--text-secondary);" data-i18n="keys_section_title">Helix Keys</h3>
-  <div class="table-wrapper">
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th style="width: 260px;">Key</th>
-          <th style="width: 110px;">Req. Level</th>
-          <th>Key Effect</th>
-          <th style="width: 180px;">Materials</th>
+          <th style="width: 280px;" data-i18n="table_key">Key</th>
+          <th style="width: 110px;" data-i18n="table_required">Req. Level</th>
+          <th data-i18n="table_key_effect">Key Effect</th>
         </tr>
       </thead>
       <tbody>
@@ -367,14 +383,72 @@
           </td>
           <td>{{ key.level if key.level is not none else '-' }}</td>
           <td style="line-height:1.5;" data-key-effect="{{ loop.index0 }}">{{ key.effect | render_effects }}</td>
-          <td style="font-size:0.8rem; color:var(--text-muted); white-space:pre-line;" data-key-materials="{{ loop.index0 }}">{{ key.materials or '-' }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
-  {% endif %}
 </section>
 {% endif %}
+</div>
 
+<!-- Tab: Guide -->
+<div id="tab-pane-guide" class="char-tab-pane" role="tabpanel" style="display: none;">
+  {% if guide %}
+    {% if guide.last_updated %}
+    <div class="guide-meta-banner">
+      <span data-i18n="guide_last_updated">Last updated:</span> {{ guide.last_updated }}
+    </div>
+    {% endif %}
+    {% include "guide_blocks.html" %}
+  {% else %}
+    <div class="guide-empty-state">
+      <div class="guide-empty-icon">📖</div>
+      <h3 data-i18n="guide_empty_title">No Guide Available</h3>
+      <p data-i18n="guide_empty_desc">There is currently no combat guide available for this doll.</p>
+    </div>
+  {% endif %}
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+(function() {
+  const tabBtns = document.querySelectorAll('.char-tab-btn');
+  const panes = {
+    info: document.getElementById('tab-pane-info'),
+    guide: document.getElementById('tab-pane-guide')
+  };
+
+  function switchTab(target) {
+    tabBtns.forEach(btn => {
+      const isActive = btn.dataset.tab === target;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    Object.keys(panes).forEach(k => {
+      if (panes[k]) {
+        const isTarget = k === target;
+        panes[k].style.display = isTarget ? '' : 'none';
+        panes[k].classList.toggle('active', isTarget);
+      }
+    });
+  }
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tab = btn.dataset.tab;
+      switchTab(tab);
+      if (history.replaceState) {
+        history.replaceState(null, '', tab === 'guide' ? '#guide' : '#info');
+      }
+    });
+  });
+
+  if (window.location.hash === '#guide' || window.location.hash.startsWith('#guide-section-')) {
+    switchTab('guide');
+  }
+})();
+</script>
 {% endblock %}
